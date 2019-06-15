@@ -1,0 +1,6 @@
+perceptron _neuralnet_sample
+===============================================================================================
+
+.. raw:: html
+   :file: html/_neuralnet_sample.html
+

@@ -1,0 +1,43 @@
+CRLF
+=========
+
+ユニバーサル改行モード
+------------------------
+
+carriage return
+*****************
+
+windows \r\n
+
+キャリッジリターン（英: carriage return、CR、復帰）
+
+line feed
+**********
+
+mac　pycharm では自動的にLF \n
+
+
+ラインフィード（英: line feed、LF、狭義の改行）またはニューライン
+
+（newline、line break または end-of-line、EOL）
+
+CR
+****
+
+旧mac
+
+
+
+
+
+
+
+
+
+.. code-block:: python
+
+    import os
+
+    test_str = 'kaozchweb.com'
+
+    print(test_str.replace('.', os.linesep))

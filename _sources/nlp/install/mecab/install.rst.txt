@@ -1,0 +1,61 @@
+mecab install
+===============
+
+環境変数
+---------
+
+C:\Program Files\MeCab\bin
+
+C:\Program Files\MeCab\etc\mecab-ipadic-neologd
+
+Python3でMeCab on Windows
+---------------------------
+
+http://oita.oika.me/2018/05/03/python3-mecab-on-windows/
+
+
+Python 64bit check
+---------------------
+
+.. literalinclude:: 64bitcheck.py
+
+http://www.curict.com/development/Python/language/Python_32_or_64bit.html
+
+mecab-ipadic-NEologdを使う
+---------------------------
+
+https://github.com/neologd/mecab-ipadic-neologd
+
+http://tadaoyamaoka.hatenablog.com/entry/2017/04/24/205509
+
+NEologd 辞書 を Windows 用 MeCab に導入して Python で使う方法
+
+https://qiita.com/ChenZheChina/items/42f1fcc763e88cb02cca
+
+mecab-windows
+----------------
+
+
+yukino ikegami
+
+https://qiita.com/yukinoi?page=2
+
+64bit install
+
+https://github.com/ikegami-yukino/mecab/releases/tag/v0.996
+
+Sphinxの分かち書きアルゴリズムにMeCabを使用する
+--------------------------------------------------
+
+https://dev.classmethod.jp/tool/sphinx-using-mecab/
+
+Sphinxのインデックス作成時にMeCabのユーザー辞書を利用する
+------------------------------------------------------------
+
+https://dev.classmethod.jp/tool/sphinx-index-using-mecab-userdic/
+
+Sphinx doc
+------------
+
+http://www.sphinx-doc.org/ja/stable/config.html
+

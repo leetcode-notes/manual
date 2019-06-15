@@ -1,0 +1,6 @@
+restaurant-revenue restaurant-revenue-1st-place-solution
+===============================================================================================
+
+.. raw:: html
+   :file: html/restaurant-revenue-1st-place-solution.html
+

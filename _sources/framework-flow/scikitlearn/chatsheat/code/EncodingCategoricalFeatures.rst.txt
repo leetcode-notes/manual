@@ -1,0 +1,6 @@
+chatsheat EncodingCategoricalFeatures
+===============================================================================================
+
+.. raw:: html
+   :file: html/EncodingCategoricalFeatures.html
+

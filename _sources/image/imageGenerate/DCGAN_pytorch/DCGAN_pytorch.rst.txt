@@ -1,0 +1,33 @@
+DCGAN PyTorch
+=============================
+
+Tool
+---------
+pytorch=1.1.0=py3.6_cuda90_cudnn7_1
+
+opencv-python==3.4.4.19
+
+前処理
+--------
+
+animdanbol からスクレイピングした画像を顔アップ、80*80、JPGの画像に
+変換して使用
+
+画像生成コード
+-----------------
+
+.. toctree::
+	code/imagegenerate
+
+生成できた画像gif
+
+.. figure:: code/ganimg.gif
+
+生成できた画像jpg
+
+.. figure:: code/ganimg.jpg
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://qiita.com/phyblas/items/bcab394e1387f15f66ee

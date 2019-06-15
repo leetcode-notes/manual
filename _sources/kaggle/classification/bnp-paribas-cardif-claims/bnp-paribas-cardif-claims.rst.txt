@@ -1,0 +1,57 @@
+bnp-paribas-cardif-claims
+=============================
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+• データ数
+    train : 114321 (正例: 87021, 負例: 27300)
+    test  : 114393
+
+• 説明変数
+    量的：114
+    質的：19
+    変数名は匿名化
+    欠損多数あり
+
+
+My Score
+---------------
+
+0.46270
+
+評価方法
+-----------
+
+二値分類 binary-classification
+
+logloss
+
+提出方法
+---------
+
+study kernel
+--------------
+
+Likelihood Encoding
+CatBoost
+
+scikit-learn に実装されている決定木分析
+
+scikit-learn では決定木を用いた分類器は、sklearn.tree.DecisionTreeClassifier というクラス
+
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://www.kaggle.com/kernels/scriptcontent/189628/download
+
+http://localhost:8888/tree/kaggle/bnp-paribas-cardif-claims/code/extratreesclassifier-score-0-45-v5.py
+
+https://nycdatascience.com/blog/student-works/bnp-claims/https://nycdatascience.com/blog/student-works/bnp-claims/

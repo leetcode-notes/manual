@@ -1,0 +1,10 @@
+.. _class:
+
+class
+=================
+
+default setting
++++++++++++++++++++
+
+.. literalinclude:: paiza.py
+

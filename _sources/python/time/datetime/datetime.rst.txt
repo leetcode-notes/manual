@@ -1,0 +1,38 @@
+.. _datetime:
+
+datetime
+==================
+
+https://qiita.com/argius/items/0cfc822d378ab77f06b5
+
+フォルダ用日付作成
+-------------------
+.. literalinclude:: dateforfoldermake.py
+
+平成何年？
+--------------------
+
+.. literalinclude:: heisei.py
+
+
+現在の年　下二桁
+------------------------------------
+
+.. literalinclude:: heisei_2digits.py
+
+
+maya ファイル比較
+----------------------------------------
+
+.. literalinclude:: maya_fileconv.py
+
+
+日付・日時の増減
+---------------------------------------------------------
+
+.. literalinclude:: relativedelta.py
+
+2つの日付を1日ずつずらしてrelativedeltaの結果を調べる
+---------------------------------------------------------
+
+.. literalinclude:: relativedelta.py

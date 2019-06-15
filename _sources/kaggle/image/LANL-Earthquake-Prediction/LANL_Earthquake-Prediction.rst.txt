@@ -1,0 +1,30 @@
+kaggle LANL-Earthquake-Prediction
+=====================================
+
+Andrew Lukyanenko 832
+---------------------------
+
+Earthquakes FE. More features and samples
+
+https://www.kaggle.com/artgor/earthquakes-fe-more-features-and-samples
+
+http://localhost:8888/tree/kaggle/LANL-Earthquake-Prediction/code/earthquakes-fe-more-features-and-samples.ipynb
+
+Seismic data EDA and baseline
+
+http://localhost:8888/tree/kaggle/LANL-Earthquake-Prediction/code/seismic-data-eda-and-baseline.ipynb
+
+Allnia star 327
+------------------
+
+https://www.kaggle.com/allunia/shaking-earth
+
+http://localhost:8888/tree/kaggle/LANL-Earthquake-Prediction/code/shaking-earth.ipynb
+
+
+
+http://localhost:8888/tree/kaggle/LANL-Earthquake-Prediction/code/benchmark-program-explained.ipynb
+
+【翻訳】scikit-learn 0.18 User Guide 1.4. サポートベクターマシン
+
+https://qiita.com/nazoking@github/items/2b16be7f7eac940f2e6a

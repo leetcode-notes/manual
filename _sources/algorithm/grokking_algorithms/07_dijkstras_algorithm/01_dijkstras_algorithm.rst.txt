@@ -1,0 +1,6 @@
+grokking_algorithms 01_dijkstras_algorithm
+===============================================================================================
+
+.. raw:: html
+   :file: html/01_dijkstras_algorithm.html
+

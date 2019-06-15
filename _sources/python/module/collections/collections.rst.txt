@@ -1,0 +1,8 @@
+collections
+=============================
+
+.. literalinclude:: collections_counter.py
+
+.. literalinclude:: collections_counter.py
+
+.. literalinclude:: collections_most_common.py

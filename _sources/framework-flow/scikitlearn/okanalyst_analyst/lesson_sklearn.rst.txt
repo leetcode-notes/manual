@@ -1,0 +1,6 @@
+scikitlearn lesson_sklearn
+===============================================================================================
+
+.. raw:: html
+   :file: html/lesson_sklearn.html
+

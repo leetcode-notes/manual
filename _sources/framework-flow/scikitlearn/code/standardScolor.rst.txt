@@ -1,0 +1,6 @@
+scikitlearn standardScolor
+===============================================================================================
+
+.. raw:: html
+   :file: html/standardScolor.html
+

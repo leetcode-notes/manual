@@ -1,0 +1,124 @@
+Various Tools
+#################
+
+
+.. figure:: mk_various_tools.png
+   :width: 400px
+
+
+機能
+******************************************
+
+
+UI編集用ツール、レンダリングウィンドウリセットツール
+
+
+.. figure:: mk_various_tools_view.png
+   :width: 300px
+
+
+
+ViewPortTool
+**************
+
+#. **AllCloseWindow**：
+
+    スクリプトで開いているウィンドウ、アウトライナ等フローティングしている
+    全ウィンドウ閉じます
+
+
+#. **ViewWindow**
+                                                         
+    別ウィンドウで下画像の新規ビューを開きます。
+    カメラ保存、viewport設定の保存が可能です。                            
+
+
+.. figure:: viewwindow.png
+   :width: 600px
+
+
+.. _RenderResetTool:
+
+RenderResetTool
+*****************
+
+.. figure:: mk_various_tools_renderreset.png
+   :width: 300px
+
+#. **Scene Reload**
+
+    Boxに何も入っていない場合、シーン情報が読み込まれていません。
+    ボタンを押してReloadしてください。
+
+#. **Save as a new scene under the following name**
+
+    シーンをリセットした後のファイル名を決定します。
+
+
+#. **Reset the Scene**
+
+    選択しているノードを上Boxのファイル名で新規シーンとして保存します。
+
+    以下各種設定をリセットします。
+
+    #. メンタルレイ、ソフトウェアレンダー等のウィンドウが壊れた際
+
+    #. レンダーレイヤー作成ツールが途中で止まる際、修復します。
+
+    #. レンダリングが止まる。
+
+
+.. figure:: warning.png
+   :width: 300px
+
+
+.. warning::
+
+    ファイルを選択しているかどうか、上記画像の確認メッセージを表示します。
+    書き出したいモデルを選択していればをYESを押してください。
+
+
+
+.. figure:: normal_reset.png
+   :width: 300px
+
+
+
+ModelRestTools
+*****************
+
+#. **normalReset**：
+
+
+    法線情報（ハードエッジ、スムースエッジ）を保ったまま、モデル情報をリセットします。
+
+
+
+ReferenceTools
+*****************
+
+Reference Name Space Rename
+++++++++++++++++++++++++++++
+
+
+.. _Reference Rename:
+
+
+リファレンスネームスペースを変更します。
+
+.. figure:: reference_rename.png
+   :width: 300px
+
+#. **Reference Model list Reload**
+
+    Boxに何も入っていない場合、シーン情報が読み込まれていません。
+    ボタンを押してReloadしてください。
+
+#. **Rename Under Box's Name**
+
+    変更したい名前を入力してください。
+
+#. **Reference Model NameSpace Rename**
+
+    Rename Under Box's Nameの名前にリファレンスネームスペース、ノード名を変更します。
+

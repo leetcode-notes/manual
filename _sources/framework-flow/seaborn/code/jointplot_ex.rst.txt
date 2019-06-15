@@ -1,0 +1,43 @@
+jointplot
+===============
+
+.. code-block:: python
+
+    seaborn.jointplot(x, y, data=None, kind='scatter', stat_func=<function pearsonr>,
+                      color=None, size=6, ratio=5, space=0.2, dropna=True, xlim=None,
+                      ylim=None, joint_kws=None, marginal_kws=None, annot_kws=None,
+                      **kwargs)
+
+
+x, y	データをベクトルで指定、または、データセットの列名を文字列で指定。
+
+data	描画に用いるデータフレーム。出力対象の列名は上記 x と y で指定します。
+
+kind	プロットの種類。以下から指定する。
+
+"scatter" : 散布図
+
+"reg": 散布図と回帰直線
+
+"resid": y 軸に回帰直線からの残差 (誤差) を出力する
+
+"kde": カーネル密度推定を用いた等高線風の図
+
+"hex": 六角形のヒートマップ
+
+stat_func	散布図の右上に表示する統計量を計算する関数。入力パラメータは、(x, y) の 2 値であり、出力は (統計量, p 値) で構成される必要があります。
+
+color	各要素をプロットする際に用いる matplotlib の色名を指定。
+
+size	図のサイズを数値で指定。
+
+ratio : numeric, optional	Ratio of joint axes size to marginal axes height.
+
+space	散布図と散布図の外側に出力するヒストグラムの間の空きスペースの大きさを数値で指定する。
+
+dropna	True に設定すると、欠損値を乗り除きます。
+
+xlim, ylim	x軸、y軸の下限、上限をタプル (下限, 条件) で指定。
+
+joint_kws, marginal_kws, annot_kws	プロットに用いる各種オプションをディクショナリで指定。
+

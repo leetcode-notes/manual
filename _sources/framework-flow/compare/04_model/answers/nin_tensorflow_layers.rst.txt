@@ -1,0 +1,6 @@
+04_model nin_tensorflow_layers
+===============================================================================================
+
+.. raw:: html
+   :file: html/nin_tensorflow_layers.html
+

@@ -1,0 +1,16 @@
+Ensemble
+==========
+
+https://mlwave.com/kaggle-ensembling-guide/
+
+数式的な説明は『Kaggle Ensembling Guide』に記載があるので割愛しますが、それぞれのモデルの悪い部分を補完し合い、全体として良い予測結果が得られています。
+
+「Avito Demand Prediction Challenge」（31stから9thへ）
+
+
+
+最終的には9位となったこのコンペについて、Koheiさんがアンサンブルに関して解法を説明しました。
+
+単体モデルのベストスコアはprivate LBで31位相当でしたが、アンサンブルの技法の一つ「Stacked Generalization」を実施した結果、15位まで精度が向上したそうです。さらにpublic LBのスコアを用いて重みを計算し「Blenging」を実施した結果、最終的な9位のモデルが誕生したとのことでした。
+
+詳細は発表資料をご覧いただければと思いますが、この「黒魔術」的な手法に会場は大いに盛り上がりました。

@@ -1,0 +1,22 @@
+Rename Tool
+################
+
+
+.. figure:: rename.png
+   :width: 300px
+
+使用方法
+
+rename_selectcomp
+-------------------
+
+
+.. figure:: rename_selectcomp.png
+   :width: 200px
+
+
+* 選択しているフッテージの名前を変更します。
+
+.. note::
+    複数選択可　
+

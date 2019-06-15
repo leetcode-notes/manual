@@ -1,0 +1,16 @@
+screiping
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+
+bs4
+----
+
+http://python.zombie-hunting-club.com/entry/2017/11/08/192731
+
+https://hibiki-press.tech/learn_prog/python/scraping_with_bs4/2061

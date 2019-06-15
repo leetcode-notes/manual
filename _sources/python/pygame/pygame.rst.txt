@@ -1,0 +1,11 @@
+.. _pygame:
+
+pygame
+=========
+
+
+pygame test
+----------------------------------
+
+.. literalinclude:: pygame.py
+

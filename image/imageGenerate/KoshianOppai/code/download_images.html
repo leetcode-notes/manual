@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>imageGenerate download_images &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="ml scratch スクラッチでの実装" href="../KoshianOppai.html"/>
+        <link rel="next" title="NeuralStyleTransfer" href="../../NeuralStyleTransfer/NeuralStyleTransfer.html"/>
+        <link rel="prev" title="ml scratch スクラッチでの実装" href="../KoshianOppai.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../image.html">image</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../imgGene.html">image（画像生成）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../DCGAN_keras/DCGAN_keras.html">DCGAN keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DCGAN_pytorch/DCGAN_pytorch.html">DCGAN PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DCGAN_tensorflow/DCGAN_tensorflow.html">DCGAN tensorflow</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../KoshianOppai.html">ml scratch スクラッチでの実装</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">imageGenerate download_images</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../NeuralStyleTransfer/NeuralStyleTransfer.html">NeuralStyleTransfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RandomErasing/RandomErasing.html">RandomErasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UNet/UNet.html">Unet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multitask/multitask.html">multi task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transfer-learning/transfer-learning.html">transfer learning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageOther/image.html">image（その他）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageSelect/imageSelect.html">image（画像選択）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../image.html">image</a> &raquo;</li>
+      
+        <li><a href="../../imgGene.html">image（画像生成）</a> &raquo;</li>
+      
+        <li><a href="../KoshianOppai.html">ml scratch スクラッチでの実装</a> &raquo;</li>
+      
+    <li>imageGenerate download_images</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/image/imageGenerate/KoshianOppai/code/download_images.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="imagegenerate-download-images">
+<h1>imageGenerate download_images<a class="headerlink" href="#imagegenerate-download-images" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># oppai_meta.jsonから必要なファイルをダウンロードする</span>
+
+<span class="c1"># 【要】pixivpy3</span>
+<span class="c1"># https://github.com/upbit/pixivpy</span>
+<span class="c1"># !pip install pixivpy --upgrade</span>
+
+<span class="c1"># 【注意】pixiv.jsonにはPixivのidとパスワードが記載されるので不特定多数に公開しないように注意すること</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="k">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="nn">pixivpy3</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">set_login_attribute</span><span class="p">(</span><span class="n">pixiv_id</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    PixivにログインするユーザーのID、パスワードを設定</span>
+<span class="sd">    pixiv_id : PixivID（プロフィール画面→ユーザー設定→pixiv ID [user_…]の値）</span>
+<span class="sd">    password : Pixivのログインパスワード</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;pixiv_id&quot;</span><span class="p">:</span> <span class="n">pixiv_id</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">password</span>
+    <span class="p">}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pixiv.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Pixivにログインし、セッションを獲得する</span>
+<span class="sd">    出力：AppPixivAPIによるセッション</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;pixiv.json&quot;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;pixiv.jsonが存在しません。「set_login_attribute」を先に呼んでください&quot;</span><span class="p">)</span>
+    
+    <span class="n">_aapi</span> <span class="o">=</span> <span class="n">AppPixivAPI</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pixiv.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+    <span class="n">keys</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="s2">&quot;pixiv_id&quot;</span> <span class="ow">in</span> <span class="n">keys</span> <span class="ow">or</span> <span class="ow">not</span> <span class="s2">&quot;password&quot;</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;pixiv.jsonのキーが不正です&quot;</span><span class="p">)</span>
+
+    <span class="n">_aapi</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="o">*</span><span class="n">settings</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">_aapi</span>
+
+<span class="k">def</span> <span class="nf">download_all</span><span class="p">(</span><span class="n">aapi_session</span><span class="p">,</span> <span class="n">meta_data_path</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">meta_data_path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;meta_data_pathで指定されたoppai_meta.jsonが存在しません : &quot;</span><span class="o">+</span><span class="n">meta_data_path</span><span class="p">)</span>
+
+    <span class="n">base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_dir</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">base_dir</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;images&quot;</span> <span class="ow">and</span> <span class="n">base_dir</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;oppai_dataset&quot;</span><span class="p">:</span>
+        <span class="n">base_dir</span> <span class="o">=</span> <span class="n">base_dir</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">base_dir</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">base_dir</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;oppai_dataset&quot;</span><span class="p">:</span>
+        <span class="n">base_dir</span> <span class="o">=</span> <span class="n">base_dir</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">dest_dir</span> <span class="o">=</span> <span class="s2">&quot;R:/dataset/image/pixiv/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_dir</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;oppai_dataset&quot;</span><span class="p">,</span> <span class="s2">&quot;images&quot;</span><span class="p">])</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">dest_dir</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">dest_dir</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">meta_data_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+
+    <span class="n">trial_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">success_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">meta</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">aapi_session</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;image_url&quot;</span><span class="p">],</span> <span class="n">path</span><span class="o">=</span><span class="n">dest_dir</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">success_cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="n">trial_cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">if</span> <span class="n">trial_cnt</span> <span class="o">&gt;=</span> <span class="mi">30</span><span class="p">:</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">trial_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">success_cnt</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">meta</span><span class="p">),</span> <span class="s2">&quot;件のダウンロードが完了しました&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># set_login_attribute(&quot;your pixiv id&quot;, &quot;your pixiv password&quot;)</span>
+    <span class="n">session</span> <span class="o">=</span> <span class="n">login</span><span class="p">()</span>
+    <span class="c1"># with open(&quot;oppai_dataset/oppai_meta.json&quot;) as f:</span>
+    <span class="c1">#     for column in f:</span>
+    <span class="c1">#         print(column)</span>
+    <span class="n">download_all</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="s2">&quot;oppai_dataset/oppai_meta.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../NeuralStyleTransfer/NeuralStyleTransfer.html" class="btn btn-neutral float-right" title="NeuralStyleTransfer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../KoshianOppai.html" class="btn btn-neutral" title="ml scratch スクラッチでの実装" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

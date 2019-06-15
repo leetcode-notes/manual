@@ -1,0 +1,6 @@
+05_semaseg transposeconv_tensorflow_slim
+===============================================================================================
+
+.. raw:: html
+   :file: html/transposeconv_tensorflow_slim.html
+

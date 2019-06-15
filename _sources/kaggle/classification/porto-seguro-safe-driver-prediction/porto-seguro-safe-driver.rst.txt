@@ -1,0 +1,15 @@
+porto-seguro-safe-driver
+=============================
+
+https://www.kaggle.com/c/porto-seguro-safe-driver-prediction
+
+データの種類とタスク
+--------------------------
+
+テーブルデータを用いた２クラス分類問題
+
+評価方法
+----------
+
+標準化ジニ係数（Normalized Gini Coefficient）
+

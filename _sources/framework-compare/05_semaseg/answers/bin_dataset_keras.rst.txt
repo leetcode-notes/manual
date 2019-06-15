@@ -1,0 +1,6 @@
+05_semaseg bin_dataset_keras
+===============================================================================================
+
+.. raw:: html
+   :file: html/bin_dataset_keras.html
+

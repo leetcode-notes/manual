@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第2章: UNIXコマンドの基礎 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="2_unix nlp100_10_1" href="code/nlp100_10_1.html"/>
+        <link rel="prev" title="1_basic nlp100_09_2" href="../1_basic/code/nlp100_09_2.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第2章: UNIXコマンドの基礎</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">10. 行数のカウント</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">11. タブをスペースに置換</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#col1-txt-2col2-txt">12. 1列目をcol1.txtに，2列目をcol2.txtに保存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#col1-txtcol2-txt">13. col1.txtとcol2.txtをマージ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#n">14. 先頭からN行を出力</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">15. 末尾のN行を出力</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">16. ファイルをN分割する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">17. １列目の文字列の異なり</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">18. 各行を3コラム目の数値の降順にソート</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第2章: UNIXコマンドの基礎</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/2_unix/2_unix.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unix">
+<h1>第2章: UNIXコマンドの基礎<a class="headerlink" href="#unix" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>hightemp.txtは，日本の最高気温の記録を「都道府県」「地点」「℃」「日」のタブ区切り形式で格納したファイルである．以下の処理を行うプログラムを作成し，hightemp.txtを入力ファイルとして実行せよ．さらに，同様の処理をUNIXコマンドでも実行し，プログラムの実行結果を確認せよ．</p>
+<div class="section" id="id1">
+<h2>10. 行数のカウント<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>行数をカウントせよ．確認にはwcコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_10_1.html">2_unix nlp100_10_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>11. タブをスペースに置換<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_11_1.html">2_unix nlp100_11_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="col1-txt-2col2-txt">
+<h2>12. 1列目をcol1.txtに，2列目をcol2.txtに保存<a class="headerlink" href="#col1-txt-2col2-txt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_12_1.html">2_unix nlp100_12_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="col1-txtcol2-txt">
+<h2>13. col1.txtとcol2.txtをマージ<a class="headerlink" href="#col1-txtcol2-txt" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>12で作ったcol1.txtとcol2.txtを結合し，元のファイルの1列目と2列目をタブ区切りで並べたテキストファイルを作成せよ．確認にはpasteコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_13_1.html">2_unix nlp100_13_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="n">
+<h2>14. 先頭からN行を出力<a class="headerlink" href="#n" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>自然数Nをコマンドライン引数などの手段で受け取り，入力のうち先頭のN行だけを表示せよ．確認にはheadコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_14_1.html">2_unix nlp100_14_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>15. 末尾のN行を出力<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_15_1.html">2_unix nlp100_15_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>16. ファイルをN分割する<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>自然数Nをコマンドライン引数などの手段で受け取り，入力のファイルを行単位でN分割せよ．同様の処理をsplitコマンドで実現せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_16_1.html">2_unix nlp100_16_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>17. １列目の文字列の異なり<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはsort, uniqコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_17_1.html">2_unix nlp100_17_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>18. 各行を3コラム目の数値の降順にソート<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_18_1.html">2_unix nlp100_18_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_19_1.html">2_unix nlp100_19_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_19_2.html">2_unix nlp100_19_2</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_10_1.html" class="btn btn-neutral float-right" title="2_unix nlp100_10_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../1_basic/code/nlp100_09_2.html" class="btn btn-neutral" title="1_basic nlp100_09_2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

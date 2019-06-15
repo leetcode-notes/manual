@@ -1,0 +1,5 @@
+MPlug
+=======
+
+https://area.autodesk.jp/column/tutorial/maya_atoz/attribute_plug/
+

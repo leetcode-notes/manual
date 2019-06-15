@@ -1,0 +1,6 @@
+titanic code titanic-data-science-solutions
+===============================================================================================
+
+.. raw:: html
+   :file: code/html/titanic-data-science-solutions.html
+

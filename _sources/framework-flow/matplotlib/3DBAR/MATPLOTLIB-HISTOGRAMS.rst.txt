@@ -1,0 +1,6 @@
+matplotlib MATPLOTLIB-HISTOGRAMS
+===============================================================================================
+
+.. raw:: html
+   :file: html/MATPLOTLIB-HISTOGRAMS.html
+

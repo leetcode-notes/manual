@@ -1,0 +1,6 @@
+keras sequential-dense-activation
+===============================================================================================
+
+.. raw:: html
+   :file: html/sequential-dense-activation.html
+

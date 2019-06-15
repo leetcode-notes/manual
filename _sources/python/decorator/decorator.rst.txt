@@ -1,0 +1,102 @@
+decorator
+######################
+
+
+機能
+******************************************
+
+
+
+decorator使用例1
+*****************
+
+
+.. code:: python
+
+     def tag(f):
+         def _wrapper(content):
+             print('<h2>')
+             r = f(content)
+             print('</h2>')
+             return r
+         return _wrapper
+
+     # @tag
+     def f(content):
+         print(content)
+
+     f = tag(f)
+     f("test")
+
+
+decorator使用例2(引数あり)
+***************************
+
+.. code:: python
+
+     def tag(name):
+         def _tag(f):
+             def _wrapper(content):
+                 print('<{}>'.format(name))
+                 r = f(content)
+                 print('</{}>'.format(name))
+                 return r
+             return _wrapper
+         return _tag
+
+     # @tag("h2")
+     def f(content):
+         print(content)
+
+
+decorator使用例(contextlib)
+***************************
+
+.. code:: python
+
+     @contextlib.contextmanager
+     def tag(name):
+         print('<{}>'.format(name))
+         yield
+         print('<{}>'.format(name))
+
+     @tag('h2')
+     def f(content):
+         print(content)
+
+     f('test')
+
+decorator使用例(contextlib_with)
+*********************************
+
+.. code:: python
+
+     @contextlib.contextmanager
+     def tag(name):
+         print('<{}>'.format(name))
+         yield
+         print('<{}>'.format(name))
+
+     with tag('h2'):
+         print('test')
+
+
+decorator使用例(contextlib_with_ネスト)
+*****************************************
+
+.. code:: python
+
+     @contextlib.contextmanager
+     def tag(name):
+         print('<{}>'.format(name))
+         yield
+         print('<{}>'.format(name))
+
+     def f():
+         print('test0')
+         with tag('h2'):
+             print('test2')
+             with tag('h3'):####ネストできる######
+                 print('test3')
+         with tag('h4'):
+             print('test4')

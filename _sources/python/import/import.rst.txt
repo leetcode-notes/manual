@@ -1,0 +1,38 @@
+import
+=================
+
+about import
++++++++++++++++++++++++++++++++
+
+.. literalinclude:: aboutimport.py
+
+
+importでtryを使う方法
++++++++++++++++++++++++++++++++
+
+.. literalinclude:: importError.py
+
+
+flicrからの画像のダウンロード
++++++++++++++++++++++++++++++++
+
+.. literalinclude:: importError.py
+
+BuiltinFunction
+-------------------------
+
+BuiltinFunction
++++++++++++++++++++++++++++++++
+
+.. literalinclude:: BuiltinFunction.py
+
+
+printに色付ける
++++++++++++++++++++++++++++++++
+
+.. literalinclude:: termcolor.py
+
+default dict if文を書かなくてもいい
+++++++++++++++++++++++++++++++++++++++
+
+.. literalinclude:: defaultdict.py

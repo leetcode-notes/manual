@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>yagami350 kaggle_memo &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="feature engineering" href="../feature-engineering.html"/>
+        <link rel="next" title="feature select 特徴選択" href="../../feature-select/featureselect.html"/>
+        <link rel="prev" title="about feature engineering" href="../code/study-feature-engineering.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GBDT/GBDT.html">GBDT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../feature-engineering.html">feature engineering</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../code/2-months-train-1-month-public-1-day-private.html">feature-engineering code 2-months-train-1-month-public-1-day-private</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/adversarial-validation.html">feature-engineering code adversarial-validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/study-feature-engineering.html">about feature engineering</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">yagami350 kaggle_memo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">特徴エンジニアリングについて</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../feature-engineering.html">feature engineering</a> &raquo;</li>
+      
+    <li>yagami350 kaggle_memo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/feature-engineering/study/kaggle_memo.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="yagami350-kaggle-memo">
+<h1>yagami350 kaggle_memo<a class="headerlink" href="#yagami350-kaggle-memo" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>This is my memorandum for kaggle competition. Sorry, only in Japanese. I'm not a profrssional data scientist, so the contents may be inaccurate.</p>
+<div class="section" id="id1">
+<h2>特徴エンジニアリングについて<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>まずは、素うどんのXGBoostにかけて、plot_importance, feature_importances_を確認する。しかる後に、各特徴量をF-SCOREの高い順にExploratory Data Analysis (EDA)を行い、データに対する感覚を掴む。特徴量の数が少ないのであれば、初めからEDA。</p></li>
+<li><p>情報を含まないcolumnsを除く。[Kaggle Kernel: [R](<a class="reference external" href="https://www.kaggle.com/zfturbo/santander-customer-satisfaction/to-the-top-v3">https://www.kaggle.com/zfturbo/santander-customer-satisfaction/to-the-top-v3</a>), [Python](<a class="reference external" href="https://www.kaggle.com/yuansun/santander-customer-satisfaction/lb-0-84-for-starters">https://www.kaggle.com/yuansun/santander-customer-satisfaction/lb-0-84-for-starters</a>)]</p></li>
+<li><p>標準偏差が0の説明変数 (constant cols) を除く。</p></li>
+<li><p>重複した説明変数 (duplicated cols) を1つだけ残して他を除く。</p></li>
+<li><p>相関係数が1である説明変数の組 (perfectly correlated cols) を探し、1つだけ残して他を除く。</p></li>
+<li><p>各列について、値が0である説明変数の数を数えて、合計値を追加の説明変数として加える (count 0 per row)。逆に0でないものの合計をとることもある。割と定石らしい。</p></li>
+<li><p>カテゴリカル変数を、ダミー変数に変換する。</p></li>
+<li><p>カテゴリカル変数を、目的変数のそのカテゴリにおける平均値（期待値）に変換する。これはLikelihood EncodingあるいはBayesian Encoding（Multinomial Naive Bayesにかけるのと同じなので）と呼ばれる手法である。</p></li>
+<li><p>Target Based Featureであるため、out-of-fold prediction (Leave-One-Out等) にしないとLeakしてしまうことがあるので注意が必要である。ただし、これによるLeakが気になるケースでは用いないほうが良いだろう。</p></li>
+<li><p>Likelihood Encodingは、1~数回しか観測されないようなレアなカテゴリ値が多数あると成り立たない。out-of-fold predictionにしないともろにLeakするし、out-of-fold predictionにすると今度は観測されなかったことになってしまう。Pseudo-observationを加えるという手もあるが、筋が良いとは言えない気がする。基本的には曜日などのように、どのカテゴリ値も十分な観測数があって、out-of-foldしようがしまいが分布に影響がほぼないようなケースでの適用が望ましいと思う。</p></li>
+<li><p>上記のような理由でLikelihood Encodingが適用できない場合、count encodingが有効な場合がある。これはそのカテゴリ値をとる頻度に変換する手法である（value_countsする）。</p></li>
+<li><p>主成分分析 (PCA) の上位いくつかを追加の特徴量として加える。PCAの追加は冗長に思えるが、これが有効となりうる説明としては、Kaggleの数値系コンペで主力となるXGBoostなどの決定木の眷属が軸に斜めの表現を不得手（表現できないわけではないのだが、PCAで回転した方が効率的）としていることに起因しているようだ。</p></li>
+<li><p>特徴が全く同じで目的変数が異なるペアをノイズとして除いても良い場合がある。</p></li>
+<li><p>多クラス分類において、各クラスに対する確率をナイーブベイズライクに見積もったものを追加する (Facebook Vの2nd, [3rd place solution](<a class="reference external" href="https://www.kaggle.com/rsakata/facebook-v-predicting-check-ins/3rd-place-solution-simple-version/code">https://www.kaggle.com/rsakata/facebook-v-predicting-check-ins/3rd-place-solution-simple-version/code</a>))。</p></li>
+<li><p>時系列データにおいて、曜日や時刻などの周期性のある特徴量を円周上に配置し、cos, sinに分解することで、それらの循環連続性を表現する [[Kaggle Kernel](<a class="reference external" href="https://www.kaggle.com/zeroblue/facebook-v-predicting-check-ins/mad-scripts-battle-z/code">https://www.kaggle.com/zeroblue/facebook-v-predicting-check-ins/mad-scripts-battle-z/code</a>)]。</p></li>
+<li><p>時系列データにおいて、曜日や時刻などの周期性のある特徴量に対して、例えば、{0:日曜日, 1:月曜日, 2:火曜日, 3:水曜日, 4:木曜日, 5:金曜日, 6:土曜日}のようになっているときに、{-2:金曜日, -1:土曜日, 0:日曜日, 1:月曜日, 2:火曜日, 3:水曜日, 4:木曜日, 5:金曜日, 6:土曜日, 7:日曜日, 8:月曜日}といった具合に両端をのばす（その分だけ列が増えることになる）。これにより、kNNなどで、両端の近さを表現しているようだ。 [[Kaggle Kernel](<a class="reference external" href="https://www.kaggle.com/ma350365879/facebook-v-predicting-check-ins/script-competition-facebook-v/code">https://www.kaggle.com/ma350365879/facebook-v-predicting-check-ins/script-competition-facebook-v/code</a>)]</p></li>
+<li><p>時系列データにおいて、近いイベントほど重みを大きくするのが有効な場合がある。</p></li>
+<li><p>予測に必要な値（事前分布など）にXGBoostなどの予測値を代入する。</p></li>
+<li><p>Expediaコンペのように各idと行き先の「座標」を勾配降下法などによって求め、得られる大圏距離を特徴量に追加するなどの手法がある。大掛かりな特徴エンジニアリングだが、Expediaでは極めて効果的だったようだ。</p></li>
+<li><p>k-NearestNeighborsによって観測された近傍点の数を特徴量として追加する（Facebook Predict check-insの1st place Winner’s solution）。</p></li>
+<li><p>大規模だがローカリティの強いデータは分割して分散処理が有効である。その際はtraining dataのグリッドをオーバーラップさせると情報損失を抑えられる (Facebook V)。</p></li>
+</ul>
+<p>## Hyper Parameterの調整について
+- GridSearchCVを用いる。
+- RandomizedSearchCVを用いる。
+- hyperoptを用いる。</p>
+<p>## Ensembleについて
+- 何はともあれ、[KAGGLE ENSEMBLING GUIDE](<a class="reference external" href="http://mlwave.com/kaggle-ensembling-guide/">http://mlwave.com/kaggle-ensembling-guide/</a>)
+- １層目の予測器群のCVによって生成したpredict_probaを特徴として用いる２層目の予測器群を構築する。元の特徴を併せて用いる場合と用いない場合の両方がある。これをStacked Generalizationと呼ぶ。初出は1992年の同名の論文であるが、Netflix PrizeやKDD Cup, Kaggle等の競技主導で発展した手法であり、現在の主なEnsemble方法らしい [[元論文](<a class="reference external" href="http://www.machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf">http://www.machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf</a>)], [[Code](<a class="reference external" href="https://github.com/nejumi/tools_for_kaggle/blob/master/stacked_generalization2.py">https://github.com/nejumi/tools_for_kaggle/blob/master/stacked_generalization2.py</a>)]。
+- Stackingと似たものにBlendingというものもある。シンプルで扱いやすいが、クロスしないのでデータの一部を捨てることになる。BlendingとStackingを同じ意味で用語として区別しないこともある。
+- 単体でPoorでもEnsembleで化けることがあるらしいので、捨てないこと。
+- Baggingによる改良が望めないか調べる。
+- 複数の予測器による予測の加重平均を取ることで、改良が望めないか調べる。Averagingは単純だが強力な手法である。XGBoostとRandomForestは相性が良いことが経験的に知られている。また、これらにNeural NetworkやSVM, kNNなどを加えるのが良い。これは、XGBoost/RandomForestはTree Baseのために決定境界が特徴軸に平行な矩形になるが、Neural Networkなどは曲線（曲面）となるため（よりdiverseな予測器群のensembleになるため）である。
+- Averagingは単純平均の他にも、N乗平均、対数平均など試してみると良いかもしれない。[[Kaggle](<a class="reference external" href="https://www.kaggle.com/c/santander-customer-satisfaction/discussion/20783#119355">https://www.kaggle.com/c/santander-customer-satisfaction/discussion/20783#119355</a>)]
+- 評価関数がMAP&#64;kの場合、候補に重みを設定した上でSubmission同士のensembleが有効である。その場合、終盤のensembleに備えてMAP&#64;j, j&gt;kで予測・保存しておくと良い（ただし、可能であるならProbabilityのaveragingの方が当然好ましい） [[Kaggle Kernel](<a class="reference external" href="https://www.kaggle.com/c/facebook-v-predicting-check-ins/discussion/21265">https://www.kaggle.com/c/facebook-v-predicting-check-ins/discussion/21265</a>)]。
+- その他、論理和をとることが有効な場合がある。</p>
+<p>## Deep Learningについて
+- Deep Learning主体の画像系コンペ等は通常の数値データ系コンペとは多少やることが変わってくるため、コンペで得た知見とテクニックをここに追記していく予定。
+- 基本は、矩形回帰⇒キーポイント検出⇒アフィン変換による整列処理⇒分類で、いずれも教師あり学習。これはRight Whale RecognitionのWinning solutionでも同様であった。
+- 矩形回帰もmulti-box対応が必要になると急に難度が跳ね上がる。その場合はYOLO等の手法を参照のこと。
+- 矩形回帰やキーポイント検出に用いる座標データは、特に提供されない限りは自分で画像から作成する必要がある。これをannotationというが、そのための便利なannotation toolが色々公開されているので、利用すると良い ([Sloth](<a class="reference external" href="http://sloth.readthedocs.io/en/latest/index.html">http://sloth.readthedocs.io/en/latest/index.html</a>)や[Object Marker](<a class="reference external" href="https://github.com/takmin/ObjectMarker">https://github.com/takmin/ObjectMarker</a>)等)。
+- ImageNetで予め学習済みのpre-trainedモデルを用いると良い。これを転移学習、(あるいはNNの場合は特にfine tuning)という。その際は、出力側の全結合層を当該課題に適したものに交換し、畳み込み層をフリーズしてAdamあたりで訓練⇒フリーズを出力側からちょっとずつ解除し、低learning rateのSGDあたりでじわじわ再訓練（fine tuning）する。いきなり全体を訓練すると畳み込み層の特徴抽出機能が崩壊するので注意。
+- 全結合層→畳み込み層の変換が有効だったりするらしい。
+- pre-trainedモデルは様々なものが公開されているので、それらのensembleを行うのが定石。代表的なところでは、Kerasに標準で実装されているものだけでも、VGG16, VGG19, InceptionV3, Xception, ResNet50等。
+- pre-trainedモデルの選択には、[arXiv:1605.07678](https://arxiv.org/abs/1605.07678)を参照すると良いかもしれない。InceptionV3あたりがバランス良い？
+- Deep LearningはBaggingやAveragingの効果が特に大きいので、必ず行うこと。
+- Averagingを行う際に、全体を単純に加重平均するのではなく、Confusion Matrixから得た洞察を元にcolumnごとに独立に実施することでout-perform出来たとの報告あり[[State Farm](https://www.kaggle.com/c/state-farm-distracted-driver-detection/discussion/22906)]。
+- 元画像の鏡像や回転・変形画像、ノイズやぼかしの付加によってデータを水増しする。これによって元画像のみで訓練するよりもロバストなモデルを構築できる。これをData Augmentationという。ただし、水増しデータがロバストの域を超えて外れ値になってしまうと、逆に精度を落としうるので注意。なお、KerasにはData Augmentationを逐次行いながら画像を生成してくれるImageDataGeneratorという便利で省メモリな機能がある。
+- 回帰による検出と分類を多段階にせず、一段階で高速に行う手法がある (Fast R-CNN, Faster R-CNN, YOLO, SSD等)。複雑なアーキテクチャであるが、おいおい理解すべきだろう。
+- 入力画像のサイズは、色々変えてみて人間の目で識別可能かどうかを試して見ると良い。ただし、人間の識別方法が最適でない場合もあるようで、上記の方法も確実ではないようだ。
+- 数値データと同様に画像系でもsemi-supervised learningは多くの場合で有効である。
+- テストデータに対するpseudo-labelingを行う場合にはk foldに分けて、予測対象以外のfoldに対するpseudo labelを用いる手法が有効らしい (Cross pseudo-labeling)。これは分類器がpseudo -labelの丸暗記を行うのを防ぐためであり、iwiwi氏がState Farmで用いた手法である。
+- 動画のキャプチャを課題に用いている場合、kNNで静止画から動画に復元できてしまう(State Farm)。
+- 単に高確信度データに対してだけpseudo-labelingするだけでなく、低確信度データまで含めてpseudo-labelingしてしまい、「とあるモデルによるpseudo-labelを予測するという事前学習」とみなしてモデルを学習しておく手法がある。これにより、目的のタスクに近い事前学習によるpre-trained modelを得られたのと同様のご利益が得られる可能性がある。得られた重みを初期値として、その後にちゃんと教師ありでfine-tuningする。
+- denoising autoencoderによる事前学習もよく知られている。ImageNetによるpre-trained modelが主流になってあまり使用されなくなってはいるようだ。
+- 活性化関数はReLUが標準的。PReLUは良いが、データ数が少ない場合には過学習しがちである（データから負側勾配を学習するので）。RReLUが性能良いらしいが、KerasでもChainerでも未実装である。[[arXiv](https://arxiv.org/abs/1505.00853)]
+- Deep learningでは特に過学習しやすく、その対策が重要である。出力側の構造を無駄に複雑にしない、dropout、batch normalization、early_stopping、正則化などで対処すること。
+- 予測時にテストデータに対してRandom 10 croppingを行い、Averagingすると良い。その際にmulti-scaleにするとより効果的である。</p>
+<p>## Leakageについて
+- 悲しいことであるが、KaggleにおいてもLeakageは度々発生している。機械学習のコンペとしては無意味で不毛な行為だが、こうしたLeakageに対処し、取り込むことを迫られる場合もある。
+- LeaderBoardのスコアに著しい不連続性が発生している場合、Leakage起因である可能性がある。
+- row_Idをfeatureに加えてみて、それが予測上意味を持ってしまっている場合、それ自身もLeakageであると同時に、より重大なLeakageの予兆である可能性がある。
+- 色々なfeatureの組み合わせでsort_valuesをしてみると見つかる可能性がある（Telstra, [BOSCH](<a class="reference external" href="https://www.kaggle.com/mmueller/bosch-production-line-performance/road-2-0-4/code">https://www.kaggle.com/mmueller/bosch-production-line-performance/road-2-0-4/code</a>)など）。
+- 通常の機械学習アルゴリズムでは、データ全体中での各行の統計的な分布の中での位置はモデル化してくれるが、前後の行との関係性や何行目にあるかなど、csvファイル中での空間的な位置に関する情報はモデルに反映されない。このタイプのLeakageはTelstraやTalkingData、BOSCHなどで確認されている。
+- ただし、前後の行との関係性に基づくFeatureを作る場合は注意が必要である。前後の行を2回参照すると自分自身を参照することになるため、特にTarget-based featureを用いている場合にはLeakする場合がある。
+- モチベーション的に厳しいものがあるが、Data Exploration の練習と思って取り組むしかない。</p>
+<p>## その他
+- Neural NetworkやSVMなど、StandardScalarなどによってデータの標準化がされていないと精度が出ない予測器も多い。逆にXGBoostやRandomForest等はその辺は気にしていないようだ (木なので)。
+かといって、何も考えずに平均を引いてはならない。疎行列がいきなり密行列になってメモリに乗らなくなったりしかねない。
+- Public Leader Boardに過学習しかねないので注意のこと。自分のLocal CVを信じること。 あるいは、LocalとPublicをデータサイズよって加重平均するのも手。[[BreakfastPirate氏らのDiscussion](<a class="reference external" href="https://www.kaggle.com/c/bosch-production-line-performance/discussion/24864#141838">https://www.kaggle.com/c/bosch-production-line-performance/discussion/24864#141838</a>)]
+- ただし、DSTLやQuoraのようにテストデータにダミーが含まれる場合もあり、その場合にLocalとPublicで加重平均をしてしまうとPublicを過大評価することになってしまう。
+- 大きすぎるLocal scoreの向上は手元でのLeakageの可能性大のため、気をつけること。そこを深堀りしてしまうと、大幅に時間を無駄にしてしまう。
+- 序盤はensembleによる安易なスコアアップは控えること。時間と余裕があるうちに、他の多くの人はやらないような独創的な手法を模索すべき。人と同じアプローチは後から取り入れれば良く、また終盤戦を勝ち残るための優位性になりえない。
+- 裏技チックではあるが、testデータに対するsemi-supervised learningは現状で主要な差別化ポイントの一つである。[[Code](<a class="reference external" href="https://github.com/nejumi/tools_for_kaggle/blob/master/semi_supervised_learner.py">https://github.com/nejumi/tools_for_kaggle/blob/master/semi_supervised_learner.py</a>)]
+- ただし、昨今のKaggleではこれができてしまうこと自体が実課題に対応できないモデルを生む原因の一つとして問題視されており、今後は変わっていくと予想される。
+- EXCEL等でデータをスプレッドシートとして眺めて分析するのも、意外と有効である。重要箇所を色づけして眺めたり、targetの積算値を眺めたりしてパターンが無いか調べたりする（BOSCHコンペでの[radder氏の指摘](<a class="reference external" href="https://www.kaggle.com/c/bosch-production-line-performance/discussion/24065#138106">https://www.kaggle.com/c/bosch-production-line-performance/discussion/24065#138106</a>)。EXCELも馬鹿にはできない）。
+- ダウンロードしたtrain.csv, test.csvの特徴量はあくまで主催者が用意したひとつの断面でしかない。最適であるとは限らないし、実際大抵はそうではない。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../feature-select/featureselect.html" class="btn btn-neutral float-right" title="feature select 特徴選択" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../code/study-feature-engineering.html" class="btn btn-neutral" title="about feature engineering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

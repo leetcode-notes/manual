@@ -1,0 +1,8 @@
+scientist_statistics datascience
+===========================================================================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

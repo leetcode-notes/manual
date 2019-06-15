@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>multi task &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="image（画像生成）" href="../imgGene.html"/>
+        <link rel="next" title="multitask check_dataset" href="dataset/check_dataset.html"/>
+        <link rel="prev" title="UNet mywaifu_coloring_" href="../UNet/code/mywaifu_coloring_.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../image.html">image</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../imgGene.html">image（画像生成）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../DCGAN_keras/DCGAN_keras.html">DCGAN keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DCGAN_pytorch/DCGAN_pytorch.html">DCGAN PyTorch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DCGAN_tensorflow/DCGAN_tensorflow.html">DCGAN tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../KoshianOppai/KoshianOppai.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../NeuralStyleTransfer/NeuralStyleTransfer.html">NeuralStyleTransfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../RandomErasing/RandomErasing.html">RandomErasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UNet/UNet.html">Unet</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">multi task</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tool">Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dataset">dataset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">データ前処理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">データセット確認コード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">画像生成コード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#link-jupyter">Link(参考リンク・jupyterリンク等)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../transfer-learning/transfer-learning.html">transfer learning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../imageOther/image.html">image（その他）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../imageSelect/imageSelect.html">image（画像選択）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../image.html">image</a> &raquo;</li>
+      
+        <li><a href="../imgGene.html">image（画像生成）</a> &raquo;</li>
+      
+    <li>multi task</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/image/imageGenerate/multitask/multitask.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="multi-task">
+<h1>multi task<a class="headerlink" href="#multi-task" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>顔写真の性別と年齢の推定</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項⽬</p></th>
+<th class="head"><p>タスク</p></th>
+<th class="head"><p>損失関数</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>性別</p></td>
+<td><p>分類</p></td>
+<td><p>平均⼆乗誤差（MSE）</p></td>
+</tr>
+<tr class="row-odd"><td><p>年齢</p></td>
+<td><p>回帰</p></td>
+<td><p>交差エントロピー（binary_crossentropy）</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="tool">
+<h2>Tool<a class="headerlink" href="#tool" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Google Collaboratory TPUを使用</p></li>
+<li><p>tensorflo6w</p></li>
+<li><p>Keras</p></li>
+</ul>
+</div>
+<div class="section" id="dataset">
+<h2>dataset<a class="headerlink" href="#dataset" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>顔画像から年齢・性別を推定するためのデータセットIMDB-WIKI</p>
+<p><a class="reference external" href="https://qiita.com/yu4u/items/a2410f46669c5f20ee8e">https://qiita.com/yu4u/items/a2410f46669c5f20ee8e</a></p>
+</div>
+<div class="section" id="id1">
+<h2>データ前処理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>異常なデータのフィルタリング [62328 -&gt; 42089]</p></li>
+<li><p>年齢：5歳以上100歳以下、データミスがあり、負の年齢や1歳の大人の画像、2000歳近い人物もいる</p></li>
+<li><p>性別：性別不明は除外</p></li>
+<li><p>顔スコア：クロップされた顔画像がどれだけ確からしいか。顔画像以外も含まれるのでそれを除外</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>データセット確認コード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataset/check_dataset.html">multitask check_dataset</a></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>前処理<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>異常データの取り除き</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dataset/data_preprocess.html">multitask data_preprocess</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>画像生成コード<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/train_wiki.html">multitask train_wiki</a></li>
+</ul>
+</div>
+<p>npzとして保存</p>
+<div class="section" id="test">
+<h3>test<a class="headerlink" href="#test" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>テスト画像</p></th>
+<th class="head"><p>結果</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="figure align-center">
+<img alt="../../../_images/abe.jpg" src="../../../_images/abe.jpg" />
+</div>
+</td>
+<td><p>安倍首相</p>
+<p>0.99994934</p>
+<p>54.147484</p>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="figure align-center">
+<img alt="../../../_images/curie.jpg" src="../../../_images/curie.jpg" />
+</div>
+</td>
+<td><p>キューリー夫人</p>
+<p>1.0446004e-03</p>
+<p>2.8291485e+01</p>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-center">
+<img alt="../../../_images/facelady0511.jpg" src="../../../_images/facelady0511.jpg" />
+</div>
+</td>
+<td><p>フリー写真</p>
+<p>0.08041736</p>
+<p>26.345034</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="link-jupyter">
+<h2>Link(参考リンク・jupyterリンク等)<a class="headerlink" href="#link-jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dataset/check_dataset.html" class="btn btn-neutral float-right" title="multitask check_dataset" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../UNet/code/mywaifu_coloring_.html" class="btn btn-neutral" title="UNet mywaifu_coloring_" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+.. _GAN:
+
+GAN
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+参考
+
+mirror GAN テキストから画像作成
+
+https://qiita.com/komiya-m/items/5eb4fabf648ec44e03d3
+https://github.com/komiya-m/MirrorGAN

@@ -1,0 +1,61 @@
+Corporacion-Favorita-Grocery-Sales-Forecasting
+=================================================
+
+https://www.kaggle.com/c/favorita-grocery-sales-forecasting
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+Normalized Weighted Root Mean Squared Logarithmic Error
+
+正規化 重み付き二乗平均平方根対数エラー
+
+提出方法
+---------
+
+
+
+My Score
+---------------
+
+0.51678
+
+study kernel
+--------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+1st solution
+
+https://www.kaggle.com/c/favorita-grocery-sales-forecasting/discussion/47582
+
+https://github.com/sjvasquez/web-traffic-forecasting/blob/master/cnn.py
+
+https://www.kaggle.com/senkin13/lstm-starter/code
+
+2nd place solution
+
+https://www.kaggle.com/c/favorita-grocery-sales-forecasting/discussion/47568
+
+3rd place solution
+
+https://www.kaggle.com/c/favorita-grocery-sales-forecasting/discussion/47560
+

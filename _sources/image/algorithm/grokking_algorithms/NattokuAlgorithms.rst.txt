@@ -1,0 +1,36 @@
+.. _Nattoku:
+
+NattokuAlgorythms
+===================
+
+.. literalinclude:: 01_introduction_to_algorithms/01_binary_search.py
+
+.. literalinclude:: 02_selection_sort/01_selection_sort.py
+
+.. literalinclude:: 03_recursion/01_countdown.py
+
+.. literalinclude:: 03_recursion/02_greet.py
+
+.. literalinclude:: 03_recursion/03_factorial.py
+
+.. literalinclude:: 04_quicksort/01_loop_sum.py
+
+.. literalinclude:: 04_quicksort/02_recursive_sum.py
+
+.. literalinclude:: 04_quicksort/03_recursive_count.py
+
+.. literalinclude:: 04_quicksort/04_recursive_max.py
+
+.. literalinclude:: 04_quicksort/05_quicksort.py
+
+.. literalinclude:: 05_hash_tables/01_price_of_groceries.py
+
+.. literalinclude:: 05_hash_tables/02_check_voter.py
+
+.. literalinclude:: 06_breadth-first_search/01_breadth-first_search.py
+
+.. literalinclude:: 07_dijkstras_algorithm/01_dijkstras_algorithm.py
+
+.. literalinclude:: 08_greedy_algorithms/01_set_covering.py
+
+.. literalinclude:: 09_dynamic_programming/01_longest_common_subsequence.py

@@ -1,0 +1,45 @@
+Studio Library
+######################
+
+
+.. figure:: mp_StudioLibrary.png
+   :width: 400px
+
+
+機能
+******************************************
+
+アニメーション共有ツール
+
+共有場所
+++++++++++++++++++++
+G:/05_tool/share
+
+使用方法
+***********
+
+
+https://www.studiolibrary.com/
+
+
+tutorial動画
++++++++++++++++++++
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/CJvxlGpYc1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+How to use poses
++++++++++++++++++++
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/lpaWrT7VXfM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+How to use mirror tables
+++++++++++++++++++++++++++
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/kCv0XleJfjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

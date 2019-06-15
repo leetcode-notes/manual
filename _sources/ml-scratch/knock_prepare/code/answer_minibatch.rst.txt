@@ -1,0 +1,6 @@
+03_prepare answer_minibatch
+===============================================================================================
+
+.. raw:: html
+   :file: html/answer_minibatch.html
+

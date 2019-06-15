@@ -1,0 +1,79 @@
+command
+===========
+
+環境変数
+-------------
+
+
+%UserProfile%\Anaconda3\Scripts
+
+%UserProfile%\Anaconda3
+
+コマンド一覧
+-------------
+
+仮想環境作成
+__________________
+
+conda create -n name python=version anaconda
+
+name:任意の仮想環境名
+version:pythonのバージョンの指定
+
+作成した仮想環境一覧の表示
+______________________________
+
+conda info -e
+
+作成した仮想環境に入る
+source activate name
+name:作成した仮想環境名
+
+現在の仮想環境から出る
+________________________
+
+source deacrivate
+仮想環境の削除
+conda remove -n name -all
+name:削除する仮想環境名
+
+現在の仮想環境名前変更
+________________________
+
+conda create -n NEW_NAME --clone PREVIOUS_NAME
+conda remove -n PREVIOUS_NAME --all
+
+anacondaのアップデート
+________________________
+
+conda update conda
+
+現在の仮想環境のパッケージ確認
+conda list
+インストール可能なパッケージの検索
+conda search package
+package:パッケージ名
+
+パッケージのインストール
+conda install package
+package:パッケージ名
+
+パッケージのアップデート
+conda update package
+package:パッケージ名
+
+全てのパッケージのアップデート
+conda update --all
+パッケージのアンインストール
+conda uninstall package
+package:パッケージ名
+
+使われていないパッケージ及びキャッシュの削除
+conda clean --all
+pythonのアップデート
+3.6.0や3.6.1から3.6.2にする場合
+
+conda update python
+3.5系や3.6系から3.7系へアップデートする場合
+
+conda install python=3.7

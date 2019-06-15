@@ -1,0 +1,40 @@
+costa-rican-household-poverty-prediction
+============================================
+
+コンペ概要
+------------
+
+https://www.kaggle.com/c/costa-rican-household-poverty-prediction
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+提出方法
+---------
+
+study kernel
+--------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+https://www.kaggle.com/willkoehrsen/a-complete-introduction-and-walkthrough
+
+
+A Complete Introduction and Walkthrough
+
+https://www.kaggle.com/kernels/scriptcontent/5196152/download
+
+初心者によるKaggleメモ#3 本当に社会福祉援助が必要な世帯は？
+
+https://qiita.com/simonritchie/items/6d883f7e69980a4c8927

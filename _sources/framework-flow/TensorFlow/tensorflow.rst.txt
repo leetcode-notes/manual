@@ -1,0 +1,80 @@
+TensorFlow
+=============
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+Scikit-learnにはランダムフォレストやサポートベクターマシンなど、
+機械学習の手法がそのまま使える形で用意されています。
+対してTensorFlowは、NumpyやPandasに感覚は近く、手法を実装するために利用をするものです。
+
+携帯性 ・スケーラビリティ
+----------------------------
+
+TensorFlowはデスクトップ、サーバー、モバイルなどあらゆるプラットフォーム上で
+同一のコードで実行することができます。
+CPUからGPUへの切り替えもコードの書き換え無しでできます。
+完成した学習モデルのモバイルへの移植にも優れています。
+
+TensorBoard
+--------------
+
+TensorFlow内のあらゆるデータを可視化するときに便利なのがTensorBoardです。
+TensorBoardはTensorFlowをインストールするときに一緒に付属する可視化ツールです。
+TensorFlowで構築したデータフロー図を図面化することができます。
+他にもコスト関数や評価指標をプロットしたり、学習過程でのテンソルの変化をヒストグラムにしたり、
+実行時間やメモリ使用量などの学習に関するメタデータを集計したり、画像を表示するなどができます。
+
+コミュニティ
+---------------
+
+TensorFlowはコミュニティが大きく、サポート体制が充実しています。
+
+なにかわからないことがあれば公式ページで世界中の人に質問したり、
+
+同じようなトラブルを抱えた人の質問への回答を見ることができます。
+
+また、グーグルによって管理されているので、今後もアップデートを通して性能が向上していくことが期待できます。
+
+code
+------
+
+.. toctree::
+	code/logistic-regression
+
+.. toctree::
+	code/sess-assign
+
+.. figure:: 1.png
+
+.. figure:: 2.png
+
+.. toctree::
+	code/tensor-flow-codeexa
+
+参考リンク
+-------------
+
+https://qiita.com/yanosen_jp/items/70e6d6afc36e1c0a3ef3
+
+
+tesnsorflow 2.0 install
+_________________________
+
+https://dev.infohub.cc/tensorflow2-alpha-gpu/
+
+公式doccument
+
+https://github.com/tensorflow/docs
+
+TensorFlow モデル & ドキュメント 【ClassCat® AI Research】 AI ビジネス導入トータルサポート
+
+http://tensorflow.classcat.com/2018/09/06/tensorflow-tutorials-images-pix2pix/
+
+pix2pix
+
+https://github.com/affinelayer/pix2pix-tensorflow-models
+

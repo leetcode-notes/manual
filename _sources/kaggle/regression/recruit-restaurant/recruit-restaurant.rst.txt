@@ -1,0 +1,37 @@
+recruit-restaurant
+=============================
+
+https://www.kaggle.com/c/recruit-restaurant-visitor-forecasting
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+Root Mean Squared Error (RMSE)
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+1st Place Solution
+
+https://www.kaggle.com/kernels/scriptcontent/2368383/download
+

@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>janome &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="install" href="../install.html"/>
+        <link rel="next" title="mecab install" href="../mecab/install.html"/>
+        <link rel="prev" title="Python manual" href="../code/spaCy.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Gesyori100knock/Gesyori.html">言語処理 knockout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../install.html">install</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../code/nltk.html">nltk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/spaCy.html">Python manual</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">janome</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mecab-python">mecab python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#udemey-nlp-bot">udemey nlp_bot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mecab/install.html">mecab install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wordbatch/wordbatch.html">文章特徴抽出ライブラリWordBatch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../install.html">install</a> &raquo;</li>
+      
+    <li>janome</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/install/janome/janome.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="janome">
+<h1>janome<a class="headerlink" href="#janome" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="mecab-python">
+<h2>mecab python<a class="headerlink" href="#mecab-python" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>分かち書き</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: UTF-8 -*-</span>
+<span class="kn">from</span> <span class="nn">janome.tokenizer</span> <span class="k">import</span> <span class="n">Tokenizer</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;あたしはPythonのプログラムです&#39;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+<span class="n">tokens</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+    <span class="c1">## 形態素の見出しを取り出す</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">surface</span><span class="p">)</span>
+    <span class="c1">## 品詞を取り出す</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">part_of_speech</span><span class="p">)</span>
+    <span class="c1">## 活用型の部分を取り出す</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">infl_type</span><span class="p">)</span>
+    <span class="c1">## 原型を取り出す</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">base_form</span><span class="p">)</span>
+    <span class="c1">## 読みの部分を取得する</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">reading</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>マルコフ連鎖</p>
+<p>Janome v0.3 documentation (ja)</p>
+<p><a class="reference external" href="https://mocobeta.github.io/janome/">https://mocobeta.github.io/janome/</a></p>
+<p>sphinx</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_search_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;sphinx.search.ja.JanomeSplitter&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;user_dic_enc&#39;</span><span class="p">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;user_dic&#39;</span><span class="p">:</span> <span class="s1">&#39;/path/to/mecab.dic&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;lib&#39;</span><span class="p">:</span> <span class="s1">&#39;/path/to/libmecab.so&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">user_dict</span> <span class="o">=</span> <span class="n">UserDictionary</span><span class="p">(</span><span class="s2">&quot;userdic.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;utf8&quot;</span><span class="p">,</span> <span class="s2">&quot;ipadic&quot;</span><span class="p">,</span> <span class="n">sysdic</span><span class="o">.</span><span class="n">connections</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="udemey-nlp-bot">
+<h2>udemey nlp_bot<a class="headerlink" href="#udemey-nlp-bot" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1"># # 形態素解析</span>
+<span class="c1"># 形態素解析とは、自然言語を形態素にまで分割することです。  </span>
+<span class="c1"># 形態素とは、言葉が意味を持つまとまりの単語の最小単位のことです。  </span>
+<span class="c1"># 今回は、形態素解析を用いて単語に分割します。  </span>
+
+<span class="c1"># ## Janomeのインストール</span>
+<span class="c1"># Janomeは日本語の形態素解析が可能なツールです。  </span>
+<span class="c1"># Janomeは以下のコマンドでインストール可能です。  </span>
+<span class="c1">#</span>
+<span class="c1"># **pip install janome**</span>
+<span class="c1">#</span>
+<span class="c1"># Janomeを使って形態素解析を行いましょう。  </span>
+<span class="c1"># Tokenizerをインポートします。  </span>
+
+<span class="c1"># +</span>
+<span class="kn">from</span> <span class="nn">janome.tokenizer</span> <span class="k">import</span> <span class="n">Tokenizer</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;すもももももももものうち&quot;</span>
+
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+<span class="c1"># -</span>
+
+<span class="c1"># ## 分かち書き</span>
+<span class="c1"># Janomeを使って分かち書きを行います。  </span>
+<span class="c1"># 分かち書きとは、文章を単語ごとに分割することです。  </span>
+<span class="c1"># `tokenize`の際に引数を`wakati=True`にすることで、各単語をリストに格納できます。</span>
+
+<span class="c1"># +</span>
+<span class="kn">from</span> <span class="nn">janome.tokenizer</span> <span class="k">import</span> <span class="n">Tokenizer</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;すもももももももものうち&quot;</span>
+
+<span class="n">word_list</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">wakati</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
+<span class="c1"># -</span>
+
+<span class="c1"># ## コーパスを分かち書き</span>
+<span class="c1"># 前回前処理を行った「我輩は猫である」に対して、分かち書きを行います。  </span>
+
+<span class="c1"># +</span>
+<span class="kn">from</span> <span class="nn">janome.tokenizer</span> <span class="k">import</span> <span class="n">Tokenizer</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;wagahai_list.pickle&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">wagahai_list</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">wagahai_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">wakati</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<span class="c1"># -</span>
+
+<span class="c1"># collectionsを使うことで、各単語の出現回数をカウントすることができます。</span>
+
+<span class="c1"># +</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">Tokenizer</span><span class="p">()</span>
+
+<span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">wagahai_list</span><span class="p">:</span>
+    <span class="n">words</span> <span class="o">+=</span> <span class="n">t</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">wakati</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># リストwordsに全ての単語を入れる</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># -</span>
+
+<span class="c1"># ## 課題:</span>
+<span class="c1"># 前回の課題で前処理した「銀河鉄道の夜」で各単語数をカウントしてみましょう。</span>
+
+
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mecab/install.html" class="btn btn-neutral float-right" title="mecab install" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../code/spaCy.html" class="btn btn-neutral" title="Python manual" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

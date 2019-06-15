@@ -1,0 +1,15 @@
+FaceRecognition
+=====================
+
+DeepFaceRecognition
+----------------------
+
+https://note.mu/koichirot11/n/ne4c5fc706362
+
+
+CNNを使った画像認識
+----------------------
+
+https://qiita.com/k_eita/items/a50a4cae0aa2598422e4
+
+

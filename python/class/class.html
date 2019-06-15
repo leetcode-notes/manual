@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>class &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../index.html"/>
+        <link rel="up" title="Python" href="../index.html"/>
+        <link rel="next" title="closure" href="../closure/closure.html"/>
+        <link rel="prev" title="ui" href="../UI/UI.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UI/UI.html">ui</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#default-setting">default setting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../index.html">Python</a> &raquo;</li>
+      
+    <li>class</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/class/class.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class">
+<span id="id1"></span><h1>class<a class="headerlink" href="#class" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="default-setting">
+<h2>default setting<a class="headerlink" href="#default-setting" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#####クラスメソッド#####</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="n">__charactor_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Player</span><span class="o">.</span><span class="n">__charactor_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;人で、スライムを攻撃した。&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">Player</span><span class="o">.</span><span class="n">__charactor_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Player</span><span class="o">.</span><span class="n">__charactor_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;番目のプレイヤー、&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;が登場した。&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃した！&quot;</span><span class="p">)</span>
+        
+    <span class="c1">##summary = classmethod(summary)    </span>
+
+<span class="k">class</span> <span class="nc">Wizard</span><span class="p">(</span><span class="n">Player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;魔法使い&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__spell</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;に炎を放った！&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__spell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ズバーン！&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== パーティーでスライムと戦う ===&quot;</span><span class="p">)</span>
+<span class="n">hero</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;勇者&quot;</span><span class="p">)</span>
+<span class="n">warrior</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">)</span>
+<span class="n">wizard</span> <span class="o">=</span> <span class="n">Wizard</span><span class="p">()</span>
+
+<span class="n">party</span> <span class="o">=</span> <span class="p">[</span><span class="n">hero</span><span class="p">,</span> <span class="n">warrior</span><span class="p">,</span> <span class="n">wizard</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">party</span><span class="p">:</span>
+    <span class="n">member</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+<span class="n">Player</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+
+
+<span class="c1">#########################</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃した！&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Wizard</span><span class="p">(</span><span class="n">Player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;魔法使い&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__spell</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;に炎を放った！&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__spell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ズバーン！&quot;</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== パーティーでスライムと戦う ===&quot;</span><span class="p">)</span>
+<span class="n">hero</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;勇者&quot;</span><span class="p">)</span>
+<span class="c1"># hero.attack(&quot;スライム&quot;)</span>
+<span class="n">warrior</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">)</span>
+<span class="n">wizard</span> <span class="o">=</span> <span class="n">Wizard</span><span class="p">()</span>
+
+<span class="n">party</span> <span class="o">=</span> <span class="p">[</span><span class="n">hero</span><span class="p">,</span> <span class="n">warrior</span><span class="p">,</span> <span class="n">wizard</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">party</span><span class="p">:</span>
+    <span class="n">member</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># wizard.__spell()</span>
+
+
+
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃した！&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Wizard</span><span class="p">(</span><span class="n">Player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;魔法使い&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__spell</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は、&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;に炎を放った！&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__spell</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ズバーン！&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== パーティーでスライムと戦う ===&quot;</span><span class="p">)</span>
+<span class="n">hero</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;勇者&quot;</span><span class="p">)</span>
+<span class="c1"># hero.attack(&quot;スライム&quot;)</span>
+<span class="n">warrior</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">)</span>
+<span class="n">wizard</span> <span class="o">=</span> <span class="n">Wizard</span><span class="p">()</span>
+
+<span class="n">party</span> <span class="o">=</span> <span class="p">[</span><span class="n">hero</span><span class="p">,</span> <span class="n">warrior</span><span class="p">,</span> <span class="n">wizard</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">party</span><span class="p">:</span>
+    <span class="n">member</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+<span class="c1"># wizard.__spell()</span>
+<span class="n">wizard</span><span class="o">.</span><span class="n">_Wizard__spell</span><span class="p">()</span>
+
+
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># RPGの攻撃シーン</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃した&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Warrior</span><span class="p">(</span><span class="n">Player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を猛攻撃した&quot;</span><span class="p">)</span>
+
+
+<span class="n">team</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Player</span><span class="p">(</span><span class="s2">&quot;勇者&quot;</span><span class="p">))</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Player</span><span class="p">(</span><span class="s2">&quot;魔法使い&quot;</span><span class="p">))</span>
+<span class="n">warrior</span> <span class="o">=</span> <span class="n">Warrior</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">)</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">warrior</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">team</span><span class="p">:</span>
+    <span class="n">person</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># アクセス制限を理解する</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">weapon</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job</span> <span class="o">=</span> <span class="n">job</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__weapon</span> <span class="o">=</span> <span class="n">weapon</span>
+
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">job</span> <span class="o">+</span> <span class="s2">&quot;は荒野を歩いていた&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__weapon</span> <span class="o">+</span> <span class="s2">&quot;で&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃&quot;</span><span class="p">)</span>
+
+
+<span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">,</span> <span class="s2">&quot;剣&quot;</span><span class="p">)</span>
+<span class="n">player1</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+<span class="c1"># player1.__attack(&quot;スライム&quot;) #プライベート変数class内のみで使用可能ｓ</span>
+<span class="c1"># print(player1.__weapon) #プライベート変数</span>
+
+
+<span class="c1"># リストに対してメソッドを実行する</span>
+
+<span class="n">team</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;勇者&quot;</span><span class="p">,</span> <span class="s2">&quot;戦士&quot;</span><span class="p">,</span> <span class="s2">&quot;魔法使い&quot;</span><span class="p">,</span> <span class="s2">&quot;忍者&quot;</span><span class="p">]</span>
+<span class="c1"># この下に、インデックス3に「盗賊」を追加して、リストを表示する処理を記述する</span>
+
+<span class="n">team</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;盗賊&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">team</span><span class="p">)</span>
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># 文字列に対してメソッドを実行する</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="c1"># この下に、msgが全て小文字かどうかを表示する処理を記述する</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># 文字列とリストのメソッドを使ってみよう</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;pYthon&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+
+<span class="n">players</span> <span class="o">=</span> <span class="s2">&quot;勇者,戦士,魔法使い,忍者&quot;</span>
+<span class="nb">list</span> <span class="o">=</span> <span class="n">players</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="nb">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;忍者&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;霧島&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># クラスで、引数と戻り値のあるメソッドを作る</span>
+
+<span class="k">class</span> <span class="nc">Item</span><span class="p">:</span>
+    <span class="n">tax</span> <span class="o">=</span> <span class="mf">1.08</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="n">quantity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span>
+
+    <span class="k">def</span> <span class="nf">total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">quantity</span> <span class="o">*</span> <span class="n">Item</span><span class="o">.</span><span class="n">tax</span><span class="p">)</span>
+
+
+<span class="n">apple</span> <span class="o">=</span> <span class="n">Item</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">apple</span><span class="o">.</span><span class="n">total</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;合計金額は&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;円です&quot;</span><span class="p">)</span>
+
+<span class="n">orange</span> <span class="o">=</span> <span class="n">Item</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;合計金額は&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">orange</span><span class="o">.</span><span class="n">total</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;円です&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># RPGの攻撃シーン</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;を攻撃した&quot;</span><span class="p">)</span>
+
+<span class="n">team</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Player</span><span class="p">(</span><span class="s2">&quot;勇者&quot;</span><span class="p">))</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">))</span>
+<span class="n">team</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Player</span><span class="p">(</span><span class="s2">&quot;魔法使い&quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">team</span><span class="p">:</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">attack</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># 変数をクラスで管理する</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">job</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">job</span> <span class="o">=</span> <span class="n">job</span>
+
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">job</span> <span class="o">+</span> <span class="s2">&quot;は荒野を歩いていた&quot;</span><span class="p">)</span>
+
+<span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s2">&quot;戦士&quot;</span><span class="p">)</span>
+<span class="n">player1</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+
+<span class="c1"># coding: utf-8</span>
+<span class="c1"># RPGの敵クラスを作る</span>
+
+<span class="k">class</span> <span class="nc">Enemy</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">attack</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;は勇者を攻撃した&quot;</span><span class="p">)</span>
+
+<span class="n">enemies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">enemies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Enemy</span><span class="p">(</span><span class="s2">&quot;スライム&quot;</span><span class="p">))</span>
+<span class="n">enemies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Enemy</span><span class="p">(</span><span class="s2">&quot;モンスター&quot;</span><span class="p">))</span>
+<span class="n">enemies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Enemy</span><span class="p">(</span><span class="s2">&quot;ドラゴン&quot;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+    <span class="n">enemy</span><span class="o">.</span><span class="n">attack</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../closure/closure.html" class="btn btn-neutral float-right" title="closure" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../UI/UI.html" class="btn btn-neutral" title="ui" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

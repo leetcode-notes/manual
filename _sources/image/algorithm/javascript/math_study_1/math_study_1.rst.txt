@@ -1,0 +1,33 @@
+.. _math_study:
+
+math_study_1
+================
+
+
+q02
+--------------------------------
+
+.. literalinclude:: q02.js
+
+q03 ローマ数字の返還
+--------------------------------
+
+.. literalinclude:: q03.js
+
+q04 2桁の数字に対する点灯数を返す
+----------------------------------
+
+.. literalinclude:: q04_1.js
+
+
+.. literalinclude:: q04_2.js
+
+
+q05 pascal
+----------------------------------
+
+.. literalinclude:: q05.js
+
+.. literalinclude:: q05_pascal.js
+
+

@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DCGAN_tensorflow imageMakeGan &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="DCGAN tensorflow" href="../DCGAN_tensorflow.html"/>
+        <link rel="next" title="ml scratch スクラッチでの実装" href="../../KoshianOppai/KoshianOppai.html"/>
+        <link rel="prev" title="DCGAN tensorflow" href="../DCGAN_tensorflow.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../image.html">image</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../imgGene.html">image（画像生成）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../DCGAN_keras/DCGAN_keras.html">DCGAN keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DCGAN_pytorch/DCGAN_pytorch.html">DCGAN PyTorch</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../DCGAN_tensorflow.html">DCGAN tensorflow</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../DCGAN_tensorflow.html#tool">Tool</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../DCGAN_tensorflow.html#id1">画像生成コード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../DCGAN_tensorflow.html#link-jupyter">Link(参考リンク・jupyterリンク等)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../KoshianOppai/KoshianOppai.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../NeuralStyleTransfer/NeuralStyleTransfer.html">NeuralStyleTransfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RandomErasing/RandomErasing.html">RandomErasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../UNet/UNet.html">Unet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../multitask/multitask.html">multi task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transfer-learning/transfer-learning.html">transfer learning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageOther/image.html">image（その他）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageSelect/imageSelect.html">image（画像選択）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../image.html">image</a> &raquo;</li>
+      
+        <li><a href="../../imgGene.html">image（画像生成）</a> &raquo;</li>
+      
+        <li><a href="../DCGAN_tensorflow.html">DCGAN tensorflow</a> &raquo;</li>
+      
+    <li>DCGAN_tensorflow imageMakeGan</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/image/imageGenerate/DCGAN_tensorflow/code/imageMakeGan.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dcgan-tensorflow-imagemakegan">
+<h1>DCGAN_tensorflow imageMakeGan<a class="headerlink" href="#dcgan-tensorflow-imagemakegan" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1"># generate new kinds of pokemons</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">scipy.misc</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">slim</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">slim</span>
+
+<span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">CHANNEL</span> <span class="o">=</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">3</span>
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">EPOCH</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;Pokemon&#39;</span>
+<span class="n">newPoke_path</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span> <span class="o">+</span> <span class="n">version</span>
+
+<span class="k">def</span> <span class="nf">lrelu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">leak</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">leak</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> 
+ 
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">():</span>   
+    <span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+    <span class="c1"># parent = os.path.dirname(current_dir)</span>
+    <span class="n">pokemon_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s1">&#39;data_re&#39;</span><span class="p">)</span>
+    <span class="n">images</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">pokemon_dir</span><span class="p">):</span>
+        <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pokemon_dir</span><span class="p">,</span><span class="n">each</span><span class="p">))</span>
+    <span class="c1"># print images    </span>
+    <span class="n">all_images</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">convert_to_tensor</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+    
+    <span class="n">images_queue</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">slice_input_producer</span><span class="p">(</span>
+                                        <span class="p">[</span><span class="n">all_images</span><span class="p">])</span>
+                                        
+    <span class="n">content</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">images_queue</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">decode_jpeg</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">CHANNEL</span><span class="p">)</span>
+    <span class="c1"># sess1 = tf.Session()</span>
+    <span class="c1"># print sess1.run(image)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">random_flip_left_right</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">random_brightness</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">max_delta</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">random_contrast</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
+    <span class="c1"># noise = tf.Variable(tf.truncated_normal(shape = [HEIGHT,WIDTH,CHANNEL], dtype = tf.float32, stddev = 1e-3, name = &#39;noise&#39;)) </span>
+    <span class="c1"># print image.get_shape()</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">]</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">resize_images</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">set_shape</span><span class="p">([</span><span class="n">HEIGHT</span><span class="p">,</span><span class="n">WIDTH</span><span class="p">,</span><span class="n">CHANNEL</span><span class="p">])</span>
+    <span class="c1"># image = image + noise</span>
+    <span class="c1"># image = tf.transpose(image, perm=[2, 0, 1])</span>
+    <span class="c1"># print image.get_shape()</span>
+    
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">image</span> <span class="o">/</span> <span class="mf">255.0</span>
+    
+    <span class="n">iamges_batch</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">shuffle_batch</span><span class="p">(</span>
+                                    <span class="p">[</span><span class="n">image</span><span class="p">],</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                    <span class="n">num_threads</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="n">capacity</span> <span class="o">=</span> <span class="mi">200</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                    <span class="n">min_after_dequeue</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">num_images</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">iamges_batch</span><span class="p">,</span> <span class="n">num_images</span>
+
+<span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">random_dim</span><span class="p">,</span> <span class="n">is_train</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">c4</span><span class="p">,</span> <span class="n">c8</span><span class="p">,</span> <span class="n">c16</span><span class="p">,</span> <span class="n">c32</span><span class="p">,</span> <span class="n">c64</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">32</span> <span class="c1"># channel num</span>
+    <span class="n">s4</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">output_dim</span> <span class="o">=</span> <span class="n">CHANNEL</span>  <span class="c1"># RGB image</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;gen&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">scope</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">reuse</span><span class="p">:</span>
+            <span class="n">scope</span><span class="o">.</span><span class="n">reuse_variables</span><span class="p">()</span>
+        <span class="n">w1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s1">&#39;w1&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="n">random_dim</span><span class="p">,</span> <span class="n">s4</span> <span class="o">*</span> <span class="n">s4</span> <span class="o">*</span> <span class="n">c4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+                             <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">))</span>
+        <span class="n">b1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s1">&#39;b1&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="n">c4</span> <span class="o">*</span> <span class="n">s4</span> <span class="o">*</span> <span class="n">s4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+                             <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant_initializer</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+        <span class="n">flat_conv1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">w1</span><span class="p">),</span> <span class="n">b1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;flat_conv1&#39;</span><span class="p">)</span>
+         <span class="c1">#Convolution, bias, activation, repeat! </span>
+        <span class="n">conv1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">flat_conv1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">s4</span><span class="p">,</span> <span class="n">s4</span><span class="p">,</span> <span class="n">c4</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv1&#39;</span><span class="p">)</span>
+        <span class="n">bn1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv1</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn1&#39;</span><span class="p">)</span>
+        <span class="n">act1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">bn1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act1&#39;</span><span class="p">)</span>
+        <span class="c1"># 8*8*256</span>
+        <span class="c1">#Convolution, bias, activation, repeat! </span>
+        <span class="n">conv2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">(</span><span class="n">act1</span><span class="p">,</span> <span class="n">c8</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv2&#39;</span><span class="p">)</span>
+        <span class="n">bn2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv2</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn2&#39;</span><span class="p">)</span>
+        <span class="n">act2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">bn2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act2&#39;</span><span class="p">)</span>
+        <span class="c1"># 16*16*128</span>
+        <span class="n">conv3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">(</span><span class="n">act2</span><span class="p">,</span> <span class="n">c16</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv3&#39;</span><span class="p">)</span>
+        <span class="n">bn3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv3</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn3&#39;</span><span class="p">)</span>
+        <span class="n">act3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">bn3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act3&#39;</span><span class="p">)</span>
+        <span class="c1"># 32*32*64</span>
+        <span class="n">conv4</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">(</span><span class="n">act3</span><span class="p">,</span> <span class="n">c32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv4&#39;</span><span class="p">)</span>
+        <span class="n">bn4</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv4</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn4&#39;</span><span class="p">)</span>
+        <span class="n">act4</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">bn4</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act4&#39;</span><span class="p">)</span>
+        <span class="c1"># 64*64*32</span>
+        <span class="n">conv5</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">(</span><span class="n">act4</span><span class="p">,</span> <span class="n">c64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv5&#39;</span><span class="p">)</span>
+        <span class="n">bn5</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv5</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn5&#39;</span><span class="p">)</span>
+        <span class="n">act5</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">bn5</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act5&#39;</span><span class="p">)</span>
+        
+        <span class="c1">#128*128*3</span>
+        <span class="n">conv6</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">(</span><span class="n">act5</span><span class="p">,</span> <span class="n">output_dim</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv6&#39;</span><span class="p">)</span>
+        <span class="c1"># bn6 = tf.contrib.layers.batch_norm(conv6, is_training=is_train, epsilon=1e-5, decay = 0.9,  updates_collections=None, scope=&#39;bn6&#39;)</span>
+        <span class="n">act6</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">conv6</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;act6&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">act6</span>
+
+
+<span class="k">def</span> <span class="nf">discriminator</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">is_train</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">c2</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">c8</span><span class="p">,</span> <span class="n">c16</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">512</span>  <span class="c1"># channel num: 64, 128, 256, 512</span>
+    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;dis&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">scope</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">reuse</span><span class="p">:</span>
+            <span class="n">scope</span><span class="o">.</span><span class="n">reuse_variables</span><span class="p">()</span>
+
+        <span class="c1">#Convolution, activation, bias, repeat! </span>
+        <span class="n">conv1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                 <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv1&#39;</span><span class="p">)</span>
+        <span class="n">bn1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv1</span><span class="p">,</span> <span class="n">is_training</span> <span class="o">=</span> <span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span> <span class="o">=</span> <span class="s1">&#39;bn1&#39;</span><span class="p">)</span>
+        <span class="n">act1</span> <span class="o">=</span> <span class="n">lrelu</span><span class="p">(</span><span class="n">conv1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;act1&#39;</span><span class="p">)</span>
+         <span class="c1">#Convolution, activation, bias, repeat! </span>
+        <span class="n">conv2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">act1</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                 <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv2&#39;</span><span class="p">)</span>
+        <span class="n">bn2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv2</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn2&#39;</span><span class="p">)</span>
+        <span class="n">act2</span> <span class="o">=</span> <span class="n">lrelu</span><span class="p">(</span><span class="n">bn2</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;act2&#39;</span><span class="p">)</span>
+        <span class="c1">#Convolution, activation, bias, repeat! </span>
+        <span class="n">conv3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">act2</span><span class="p">,</span> <span class="n">c8</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                 <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv3&#39;</span><span class="p">)</span>
+        <span class="n">bn3</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv3</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn3&#39;</span><span class="p">)</span>
+        <span class="n">act3</span> <span class="o">=</span> <span class="n">lrelu</span><span class="p">(</span><span class="n">bn3</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;act3&#39;</span><span class="p">)</span>
+         <span class="c1">#Convolution, activation, bias, repeat! </span>
+        <span class="n">conv4</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">act3</span><span class="p">,</span> <span class="n">c16</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;SAME&quot;</span><span class="p">,</span>
+                                 <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">),</span>
+                                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;conv4&#39;</span><span class="p">)</span>
+        <span class="n">bn4</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">(</span><span class="n">conv4</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="n">is_train</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">decay</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>  <span class="n">updates_collections</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;bn4&#39;</span><span class="p">)</span>
+        <span class="n">act4</span> <span class="o">=</span> <span class="n">lrelu</span><span class="p">(</span><span class="n">bn4</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;act4&#39;</span><span class="p">)</span>
+       
+        <span class="c1"># start from act4</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">act4</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]))</span>
+        <span class="n">fc1</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">act4</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dim</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;fc1&#39;</span><span class="p">)</span>
+      
+        
+        <span class="n">w2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s1">&#39;w2&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="n">fc1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+                             <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.02</span><span class="p">))</span>
+        <span class="n">b2</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">get_variable</span><span class="p">(</span><span class="s1">&#39;b2&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
+                             <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">constant_initializer</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+
+        <span class="c1"># wgan just get rid of the sigmoid</span>
+        <span class="n">logits</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">fc1</span><span class="p">,</span> <span class="n">w2</span><span class="p">),</span> <span class="n">b2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;logits&#39;</span><span class="p">)</span>
+        <span class="c1"># dcgan</span>
+        <span class="n">acted_out</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">logits</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">logits</span> <span class="c1">#, acted_out</span>
+
+
+<span class="k">def</span> <span class="nf">train</span><span class="p">():</span>
+    <span class="n">random_dim</span> <span class="o">=</span> <span class="mi">100</span>
+    
+    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">):</span>
+        <span class="c1">#real and fake image placholders</span>
+        <span class="n">real_image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">CHANNEL</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;real_image&#39;</span><span class="p">)</span>
+        <span class="n">random_input</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">random_dim</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;rand_input&#39;</span><span class="p">)</span>
+        <span class="n">is_train</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">bool</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;is_train&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># wgan</span>
+    <span class="n">fake_image</span> <span class="o">=</span> <span class="n">generator</span><span class="p">(</span><span class="n">random_input</span><span class="p">,</span> <span class="n">random_dim</span><span class="p">,</span> <span class="n">is_train</span><span class="p">)</span>
+    
+    <span class="n">real_result</span> <span class="o">=</span> <span class="n">discriminator</span><span class="p">(</span><span class="n">real_image</span><span class="p">,</span> <span class="n">is_train</span><span class="p">)</span>
+    <span class="n">fake_result</span> <span class="o">=</span> <span class="n">discriminator</span><span class="p">(</span><span class="n">fake_image</span><span class="p">,</span> <span class="n">is_train</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">d_loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">fake_result</span><span class="p">)</span> <span class="o">-</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">real_result</span><span class="p">)</span>  <span class="c1"># This optimizes the discriminator.</span>
+    <span class="n">g_loss</span> <span class="o">=</span> <span class="o">-</span><span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">fake_result</span><span class="p">)</span>  <span class="c1"># This optimizes the generator.</span>
+            
+
+    <span class="n">t_vars</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">trainable_variables</span><span class="p">()</span>
+    <span class="n">d_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">t_vars</span> <span class="k">if</span> <span class="s1">&#39;dis&#39;</span> <span class="ow">in</span> <span class="n">var</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+    <span class="n">g_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">var</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">t_vars</span> <span class="k">if</span> <span class="s1">&#39;gen&#39;</span> <span class="ow">in</span> <span class="n">var</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+    <span class="n">trainer_d</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">RMSPropOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">2e-4</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">d_loss</span><span class="p">,</span> <span class="n">var_list</span><span class="o">=</span><span class="n">d_vars</span><span class="p">)</span>
+    <span class="n">trainer_g</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">RMSPropOptimizer</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">2e-4</span><span class="p">)</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">g_loss</span><span class="p">,</span> <span class="n">var_list</span><span class="o">=</span><span class="n">g_vars</span><span class="p">)</span>
+    <span class="c1"># clip discriminator weights</span>
+    <span class="n">d_clip</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">clip_by_value</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">))</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d_vars</span><span class="p">]</span>
+
+    
+    <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span>
+    <span class="n">image_batch</span><span class="p">,</span> <span class="n">samples_num</span> <span class="o">=</span> <span class="n">process_data</span><span class="p">()</span>
+    
+    <span class="n">batch_num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">samples_num</span> <span class="o">/</span> <span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">total_batch</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+    <span class="n">saver</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Saver</span><span class="p">()</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">())</span>
+    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">local_variables_initializer</span><span class="p">())</span>
+    <span class="c1"># continue training</span>
+    <span class="n">save_path</span> <span class="o">=</span> <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="s2">&quot;/tmp/model.ckpt&quot;</span><span class="p">)</span>
+    <span class="n">ckpt</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;./model/&#39;</span> <span class="o">+</span> <span class="n">version</span><span class="p">)</span>
+    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">save_path</span><span class="p">)</span>
+    <span class="n">coord</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Coordinator</span><span class="p">()</span>
+    <span class="n">threads</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">start_queue_runners</span><span class="p">(</span><span class="n">sess</span><span class="o">=</span><span class="n">sess</span><span class="p">,</span> <span class="n">coord</span><span class="o">=</span><span class="n">coord</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training sample num:</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">samples_num</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;batch size: </span><span class="si">%d</span><span class="s1">, batch num per epoch: </span><span class="si">%d</span><span class="s1">, epoch num: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">batch_num</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;start training...&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCH</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running epoch </span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">EPOCH</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_num</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">d_iters</span> <span class="o">=</span> <span class="mi">5</span>
+            <span class="n">g_iters</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="n">train_noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">random_dim</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d_iters</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                <span class="n">train_image</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">image_batch</span><span class="p">)</span>
+                <span class="c1">#wgan clip weights</span>
+                <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">d_clip</span><span class="p">)</span>
+                
+                <span class="c1"># Update the discriminator</span>
+                <span class="n">_</span><span class="p">,</span> <span class="n">dLoss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">trainer_d</span><span class="p">,</span> <span class="n">d_loss</span><span class="p">],</span>
+                                    <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">random_input</span><span class="p">:</span> <span class="n">train_noise</span><span class="p">,</span> <span class="n">real_image</span><span class="p">:</span> <span class="n">train_image</span><span class="p">,</span> <span class="n">is_train</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+
+            <span class="c1"># Update the generator</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">g_iters</span><span class="p">):</span>
+                <span class="c1"># train_noise = np.random.uniform(-1.0, 1.0, size=[batch_size, random_dim]).astype(np.float32)</span>
+                <span class="n">_</span><span class="p">,</span> <span class="n">gLoss</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="n">trainer_g</span><span class="p">,</span> <span class="n">g_loss</span><span class="p">],</span>
+                                    <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">random_input</span><span class="p">:</span> <span class="n">train_noise</span><span class="p">,</span> <span class="n">is_train</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+
+            <span class="c1"># print &#39;train:[%d/%d],d_loss:%f,g_loss:%f&#39; % (i, j, dLoss, gLoss)</span>
+            
+        <span class="c1"># save check point every 500 epoch</span>
+        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">500</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;./model/&#39;</span> <span class="o">+</span> <span class="n">version</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./model/&#39;</span> <span class="o">+</span> <span class="n">version</span><span class="p">)</span>
+            <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="s1">&#39;./model/&#39;</span> <span class="o">+</span><span class="n">version</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>  
+        <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">50</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># save images</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">newPoke_path</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">newPoke_path</span><span class="p">)</span>
+            <span class="n">sample_noise</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">[</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">random_dim</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+            <span class="n">imgtest</span> <span class="o">=</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">fake_image</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">random_input</span><span class="p">:</span> <span class="n">sample_noise</span><span class="p">,</span> <span class="n">is_train</span><span class="p">:</span> <span class="kc">False</span><span class="p">})</span>
+            <span class="c1"># imgtest = imgtest * 255.0</span>
+            <span class="c1"># imgtest.astype(np.uint8)</span>
+            <span class="n">save_images</span><span class="p">(</span><span class="n">imgtest</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="p">,</span><span class="n">newPoke_path</span> <span class="o">+</span> <span class="s1">&#39;/epoch&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">)</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;train:[</span><span class="si">%d</span><span class="s1">],d_loss:</span><span class="si">%f</span><span class="s1">,g_loss:</span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">dLoss</span><span class="p">,</span> <span class="n">gLoss</span><span class="p">))</span>
+    <span class="n">coord</span><span class="o">.</span><span class="n">request_stop</span><span class="p">()</span>
+    <span class="n">coord</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">threads</span><span class="p">)</span>
+
+
+<span class="c1"># def test():</span>
+    <span class="c1"># random_dim = 100</span>
+    <span class="c1"># with tf.variable_scope(&#39;input&#39;):</span>
+        <span class="c1"># real_image = tf.placeholder(tf.float32, shape = [None, HEIGHT, WIDTH, CHANNEL], name=&#39;real_image&#39;)</span>
+        <span class="c1"># random_input = tf.placeholder(tf.float32, shape=[None, random_dim], name=&#39;rand_input&#39;)</span>
+        <span class="c1"># is_train = tf.placeholder(tf.bool, name=&#39;is_train&#39;)</span>
+    
+    <span class="c1"># # wgan</span>
+    <span class="c1"># fake_image = generator(random_input, random_dim, is_train)</span>
+    <span class="c1"># real_result = discriminator(real_image, is_train)</span>
+    <span class="c1"># fake_result = discriminator(fake_image, is_train, reuse=True)</span>
+    <span class="c1"># sess = tf.InteractiveSession()</span>
+    <span class="c1"># sess.run(tf.global_variables_initializer())</span>
+    <span class="c1"># variables_to_restore = slim.get_variables_to_restore(include=[&#39;gen&#39;])</span>
+    <span class="c1"># print(variables_to_restore)</span>
+    <span class="c1"># saver = tf.train.Saver(variables_to_restore)</span>
+    <span class="c1"># ckpt = tf.train.latest_checkpoint(&#39;./model/&#39; + version)</span>
+    <span class="c1"># saver.restore(sess, ckpt)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">train</span><span class="p">()</span>
+    <span class="c1"># test()</span>
+
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../KoshianOppai/KoshianOppai.html" class="btn btn-neutral float-right" title="ml scratch スクラッチでの実装" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../DCGAN_tensorflow.html" class="btn btn-neutral" title="DCGAN tensorflow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

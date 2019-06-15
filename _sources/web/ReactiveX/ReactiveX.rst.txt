@@ -1,0 +1,12 @@
+.. _ReactiveX:
+
+ReactiveX
+=============================
+
+https://github.com/ReactiveX/RxPY/blob/develop/notebooks/Getting%20Started.ipynb
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

@@ -1,0 +1,10 @@
+.. _javascript_algorithm:
+
+javascript algorithm
+=====================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

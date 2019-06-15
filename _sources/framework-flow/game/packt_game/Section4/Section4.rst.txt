@@ -1,0 +1,113 @@
+packt_game Section4
+================================================================================
+
+packt_game Section4 Video1_1_Space
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_1_Space.py
+
+packt_game Section4 Video1_2_numpy
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_2_numpy.py
+
+packt_game Section4 Video1_3_draw
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_3_draw.py
+
+packt_game Section4 Video1_4_3D_flying_stick
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_4_3D_flying_stick.py
+
+packt_game Section4 Video1_5_3D_flying_stick_center
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_5_3D_flying_stick_center.py
+
+packt_game Section4 Video1_6_3D_triangle
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video1_6_3D_triangle.py
+
+packt_game Section4 Video2_1_Before_refactoring
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_1_Before_refactoring.py
+
+packt_game Section4 Video2_2_Refactorings
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_2_Refactorings.py
+
+packt_game Section4 Video2_3_Refactorings_classes
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_3_Refactorings_classes.py
+
+packt_game Section4 Video2_4_Base_classes
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_4_Base_classes.py
+
+packt_game Section4 Video2_5_Class_flying_stick
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_5_Class_flying_stick.py
+
+packt_game Section4 Video2_6_Starship
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_6_Starship.py
+
+packt_game Section4 Video2_7_Asteroids
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_7_Asteroids.py
+
+packt_game Section4 Video2_8_All_in_space
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video2_8_All_in_space.py
+
+packt_game Section4 Video3_1_Enable_Starship
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video3_1_Enable_Starship.py
+
+packt_game Section4 Video3_2_Asteroids
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video3_2_Asteroids.py
+
+packt_game Section4 Video3_3_Asteroids_random
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video3_3_Asteroids_random.py
+
+packt_game Section4 Video4_1_Collisions
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video4_1_Collisions.py
+
+packt_game Section4 Video4_2_Collisions_random
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video4_2_Collisions_random.py
+
+packt_game Section4 Video4_3_Weapon
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video4_3_Weapon.py
+
+packt_game Section4 Video4_4_Weapon_multiple
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video4_4_Weapon_multiple.py
+
+packt_game Section4 Video4_5_Starship_no_collisions
+---------------------------------------------------------------------------
+
+.. literalinclude:: Video4_5_Starship_no_collisions.py
+

@@ -1,0 +1,10 @@
+matplotlib
+=============================
+
+.. note:: jupyter notebook表示用 %matplotlib inline
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

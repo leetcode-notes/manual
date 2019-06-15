@@ -1,0 +1,6 @@
+quickdraw-doodle-recognition quickdrow
+===============================================================================================
+
+.. raw:: html
+   :file: html/quickdrow.html
+

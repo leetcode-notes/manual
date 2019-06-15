@@ -1,0 +1,18 @@
+scikitlearn
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+Scikit-learn で線形回帰
+-------------------------
+
+https://scikit-learn.org/stable/index.html
+
+ROC-AUC
+________
+
+https://note.nkmk.me/python-sklearn-roc-curve-auc-score/

@@ -1,0 +1,16 @@
+pandas
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+.. figure:: pandas1.png
+   :width: 400px
+
+.. figure:: pandas2.png
+   :width: 400px
+
+

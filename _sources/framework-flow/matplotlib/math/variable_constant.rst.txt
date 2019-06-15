@@ -1,0 +1,6 @@
+matplotlib variable_constant
+===============================================================================================
+
+.. raw:: html
+   :file: html/variable_constant.html
+

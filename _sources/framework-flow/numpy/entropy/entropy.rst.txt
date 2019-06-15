@@ -1,0 +1,4 @@
+entropy
+==========
+
+.. literalinclude:: average_entropy.py

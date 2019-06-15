@@ -1,0 +1,27 @@
+Pokemon GAN
+=============================
+
+.. list-table:: 訓練画像
+   :widths: 15 10
+   :header-rows: 1
+
+   * - 1
+     - 2
+   * - .. figure:: data/0.png
+          :width: 100px
+     - .. figure:: data/10.png
+          :width: 100px
+   * - .. figure:: data/11.png
+          :width: 100px
+     - .. figure:: data/12.png
+          :width: 100px
+   * - .. figure:: data/13.png
+          :width: 100px
+     - .. figure:: data/14.png
+          :width: 100px
+
+
+
+.. figure:: epoch4400.jpg
+
+.. figure:: epoch4250.jpg

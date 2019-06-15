@@ -1,0 +1,23 @@
+code
+======
+
+.. figure:: matplotlib.png
+   :width: 400px
+
+箱ひげ図
+-----------
+
+.. literalinclude:: boxplot.py
+
+%matplotlib inline jupyter notebookで使用する際は必要
+
+欠損値
+---------
+
+https://note.nkmk.me/python-pandas-nan-dropna-fillna/
+
+
+add_subplot
+--------------
+
+.. figure:: add_subplot.py

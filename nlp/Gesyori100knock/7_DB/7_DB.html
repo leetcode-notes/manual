@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第7章: データベース &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="7_DB nlp100_60_1" href="code/nlp100_60_1.html"/>
+        <link rel="prev" title="6_english nlp100_59_1" href="../6_english/code/nlp100_59_1.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第7章: データベース</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kvs">60. KVSの構築</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">61. KVSの検索</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">62. KVS内の反復処理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">63. オブジェクトを値に格納したKVS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mongodb">64. MongoDBの構築</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">65. MongoDBの検索</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">66. 検索件数の取得</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">67. 複数のドキュメントの取得</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">68. ソート</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web">69. Webアプリケーションの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第7章: データベース</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/7_DB/7_DB.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>第7章: データベース<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>artist.json.gzは，オープンな音楽データベースMusicBrainzの中で，アーティストに関するものをJSON形式に変換し，gzip形式で圧縮したファイルである．このファイルには，1アーティストに関する情報が1行にJSON形式で格納されている．JSON形式の概要は以下の通りである．</p>
+<p>フィールド   型       内容      例
+id      ユニーク識別子 整数      20660
+gid     グローバル識別子        文字列     &quot;ecf9f3a3-35e9-4c58-acaa-e707fba45060&quot;
+name    アーティスト名 文字列     &quot;Oasis&quot;
+sort_name       アーティスト名（辞書順整列用） 文字列     &quot;Oasis&quot;
+area    活動場所    文字列     &quot;United Kingdom&quot;
+aliases 別名      辞書オブジェクトのリスト
+aliases[].name  別名      文字列     &quot;オアシス&quot;
+aliases[].sort_name     別名（整列用） 文字列     &quot;オアシス&quot;
+begin   活動開始日   辞書
+begin.year      活動開始年   整数      1991
+begin.month     活動開始月   整数
+begin.date      活動開始日   整数
+end     活動終了日   辞書
+end.year        活動終了年   整数      2009
+end.month       活動終了月   整数      8
+end.date        活動終了日   整数      28
+tags    タグ      辞書オブジェクトのリスト
+tags[].count    タグ付けされた回数       整数      1
+tags[].value    タグ内容    文字列     &quot;rock&quot;
+rating  レーティング  辞書オブジェクト
+rating.count    レーティングの投票数      整数      13
+rating.value    レーティングの値（平均値）   整数      86
+artist.json.gzのデータをKey-Value-Store (KVS) およびドキュメント志向型データベースに格納・検索することを考える．KVSとしては，LevelDB，Redis，KyotoCabinet等を用いよ．ドキュメント志向型データベースとして，MongoDBを採用したが，CouchDBやRethinkDB等を用いてもよい．</p>
+<div class="section" id="kvs">
+<h2>60. KVSの構築<a class="headerlink" href="#kvs" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Key-Value-Store (KVS) を用い，アーティスト名（name）から活動場所（area）を検索するためのデータベースを構築せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_60_1.html">7_DB nlp100_60_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>61. KVSの検索<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>60で構築したデータベースを用い，特定の（指定された）アーティストの活動場所を取得せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_61_1.html">7_DB nlp100_61_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>62. KVS内の反復処理<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>60で構築したデータベースを用い，活動場所が「Japan」となっているアーティスト数を求めよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_62_1.html">7_DB nlp100_62_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>63. オブジェクトを値に格納したKVS<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>KVSを用い，アーティスト名（name）からタグと被タグ数（タグ付けされた回数）のリストを検索するためのデータベースを構築せよ．さらに，ここで構築したデータベースを用い，アーティスト名からタグと被タグ数を検索せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_63_1.html">7_DB nlp100_63_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mongodb">
+<h2>64. MongoDBの構築<a class="headerlink" href="#mongodb" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アーティスト情報（artist.json.gz）をデータベースに登録せよ．さらに，次のフィールドでインデックスを作成せよ: name, aliases.name, tags.value, rating.value</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_64_1.html">7_DB nlp100_64_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>65. MongoDBの検索<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>MongoDBのインタラクティブシェルを用いて，&quot;Queen&quot;というアーティストに関する情報を取得せよ．さらに，これと同様の処理を行うプログラムを実装せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_65_1.html">7_DB nlp100_65_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>66. 検索件数の取得<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>MongoDBのインタラクティブシェルを用いて，活動場所が「Japan」となっているアーティスト数を求めよ．</p>
+</div>
+<div class="section" id="id7">
+<h2>67. 複数のドキュメントの取得<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>特定の（指定した）別名を持つアーティストを検索せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_67_1.html">7_DB nlp100_67_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>68. ソート<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&quot;dance&quot;というタグを付与されたアーティストの中でレーティングの投票数が多いアーティスト・トップ10を求めよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_68_1.html">7_DB nlp100_68_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="web">
+<h2>69. Webアプリケーションの作成<a class="headerlink" href="#web" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ユーザから入力された検索条件に合致するアーティストの情報を表示するWebアプリケーションを作成せよ．アーティスト名，アーティストの別名，タグ等で検索条件を指定し，アーティスト情報のリストをレーティングの高い順などで整列して表示せよ．</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_60_1.html" class="btn btn-neutral float-right" title="7_DB nlp100_60_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../6_english/code/nlp100_59_1.html" class="btn btn-neutral" title="6_english nlp100_59_1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

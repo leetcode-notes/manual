@@ -1,0 +1,13 @@
+pyperclip code
+===================
+
+pyperclip code pyperclip1
+---------------------------------------------------------------------------
+
+.. literalinclude:: pyperclip1.py
+
+pyperclip code pyperclip2
+---------------------------------------------------------------------------
+
+.. literalinclude:: pyperclip2.py
+

@@ -1,0 +1,6 @@
+PRML SVMclassification
+===============================================================================================
+
+.. raw:: html
+   :file: html/SVMclassification.html
+

@@ -1,0 +1,25 @@
+.. _extensions:
+
+for
+=================
+
+range
+-------------
+
+.. literalinclude:: for_range.py
+
+enumerate
+-------------
+
+.. literalinclude:: for_enumerate.py
+
+zip
+-------------
+
+.. literalinclude:: for_zip.py
+
+
+内包表記
+------------
+
+.. literalinclude:: for_comprehension.py

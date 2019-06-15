@@ -1,0 +1,30 @@
+metric 評価基準
+=============================================
+
+classification metrics
+------------------------
+
+accuracy_score 精度
+
+    accuracy_score(y_true_label, y_pred_label)
+
+confusion_matrix 混同⾏列
+
+    print(confusion_matrix(y_true_label, y_pred_label))
+
+RegressinMatrix
+------------------
+
+MeanAbsoluteError
+
+MeanSquaredError
+
+R**2Score
+
+loss function 損失関数
+---------------------------------------
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+

@@ -1,0 +1,6 @@
+category OneHotEncoder
+===============================================================================================
+
+.. raw:: html
+   :file: html/OneHotEncoder.html
+

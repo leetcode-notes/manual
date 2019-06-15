@@ -1,0 +1,8 @@
+Machine Learnning
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

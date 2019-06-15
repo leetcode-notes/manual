@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>やさしく学ぶ 機械学習を理解するための数学のきほん &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../index.html"/>
+        <link rel="up" title="ml scratch スクラッチでの実装" href="../ml-sctatch.html"/>
+        <link rel="next" title="math_basic classification1_perceptron" href="code/classification1_perceptron.html"/>
+        <link rel="prev" title="ml scratch スクラッチでの実装" href="../ml-sctatch.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ml-sctatch.html">ml scratch スクラッチでの実装</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">やさしく学ぶ 機械学習を理解するための数学のきほん</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">パーセプトロン</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/classification1_perceptron.html">math_basic classification1_perceptron</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ロジスティック回帰</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/classification2_logistic_regression.html">math_basic classification2_logistic_regression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">ロジスティック回帰 線形分離不可能な分類</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/classification3_logistic_polynomial_regression.html">math_basic classification3_logistic_polynomial_regression</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">ロジスティック回帰　確率的勾配降下法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/classification4_logistic_regression_sgd.html">math_basic classification4_logistic_regression_sgd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#regression">回帰(regression)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/regression1_linear.html">math_basic regression1_linear</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">多項式回帰</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/regression2_polynomial.html">math_basic regression2_polynomial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">回帰 確率的勾配降下法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/regression3_sgd.html">math_basic regression3_sgd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">正則化を適用した実装</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/regularization.html">math_basic regularization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../01_math/math_for_ai.html">math for ai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_cnn/cnn.html">cnn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/scratch_demo.html">ml-scratch scratch_demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../knock_perceptron/perceptron.html">kanock perceptron パーセプトロン</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../knock_prepare/prepare.html">knock 03 準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../knock_theory2/theory2.html">knock 02 機械学習理論</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../ml-sctatch.html">ml scratch スクラッチでの実装</a> &raquo;</li>
+      
+    <li>やさしく学ぶ 機械学習を理解するための数学のきほん</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/ml-scratch/00_math_basic/math_basic.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>やさしく学ぶ 機械学習を理解するための数学のきほん<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>パーセプトロン<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/classification1_perceptron.html">math_basic classification1_perceptron</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>ロジスティック回帰<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/classification2_logistic_regression.html">math_basic classification2_logistic_regression</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ロジスティック回帰 線形分離不可能な分類<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/classification3_logistic_polynomial_regression.html">math_basic classification3_logistic_polynomial_regression</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ロジスティック回帰　確率的勾配降下法<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/classification4_logistic_regression_sgd.html">math_basic classification4_logistic_regression_sgd</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="regression">
+<h2>回帰(regression)<a class="headerlink" href="#regression" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/regression1_linear.html">math_basic regression1_linear</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>多項式回帰<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/regression2_polynomial.html">math_basic regression2_polynomial</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>回帰 確率的勾配降下法<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/regression3_sgd.html">math_basic regression3_sgd</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>正則化を適用した実装<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/regularization.html">math_basic regularization</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/classification1_perceptron.html" class="btn btn-neutral float-right" title="math_basic classification1_perceptron" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ml-sctatch.html" class="btn btn-neutral" title="ml scratch スクラッチでの実装" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

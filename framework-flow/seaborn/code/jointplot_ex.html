@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jointplot &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="seaborn" href="../seaborn.html"/>
+        <link rel="next" title="yellowbrick" href="../../yellowbrick/yellowbrick.html"/>
+        <link rel="prev" title="seaborn jointplot" href="jointplot.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../framework.html">framework workflow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../CUDA/CUDA.html">CUDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ensemble/Ensemble.html">Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GA/GeneticAlgorithm.html">GeneticAlgorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../PyTorch/PyTorch.html">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TensorFlow/tensorflow.html">TensorFlow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../anaconda/anaconda.html">anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collab/collab.html">collaboratory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jupyter/jupyter.html">jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keras/keras.html">keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../matplotlib/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metrics/metrics.html">metrics 評価関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../numpy/numpy.html">numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pandas/pandas.html">pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scikitlearn/scikitlearn.html">scikitlearn</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../seaborn.html">seaborn</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="base.html">seaborn code base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jointplot.html">seaborn jointplot</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">jointplot</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../yellowbrick/yellowbrick.html">yellowbrick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../framework.html">framework workflow</a> &raquo;</li>
+      
+        <li><a href="../seaborn.html">seaborn</a> &raquo;</li>
+      
+    <li>jointplot</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/framework-flow/seaborn/code/jointplot_ex.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jointplot">
+<h1>jointplot<a class="headerlink" href="#jointplot" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">stat_func</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">pearsonr</span><span class="o">&gt;</span><span class="p">,</span>
+                  <span class="n">color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">space</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">dropna</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                  <span class="n">ylim</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">joint_kws</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">marginal_kws</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">annot_kws</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                  <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>x, y    データをベクトルで指定、または、データセットの列名を文字列で指定。</p>
+<p>data    描画に用いるデータフレーム。出力対象の列名は上記 x と y で指定します。</p>
+<p>kind    プロットの種類。以下から指定する。</p>
+<p>&quot;scatter&quot; : 散布図</p>
+<p>&quot;reg&quot;: 散布図と回帰直線</p>
+<p>&quot;resid&quot;: y 軸に回帰直線からの残差 (誤差) を出力する</p>
+<p>&quot;kde&quot;: カーネル密度推定を用いた等高線風の図</p>
+<p>&quot;hex&quot;: 六角形のヒートマップ</p>
+<p>stat_func       散布図の右上に表示する統計量を計算する関数。入力パラメータは、(x, y) の 2 値であり、出力は (統計量, p 値) で構成される必要があります。</p>
+<p>color   各要素をプロットする際に用いる matplotlib の色名を指定。</p>
+<p>size    図のサイズを数値で指定。</p>
+<p>ratio : numeric, optional       Ratio of joint axes size to marginal axes height.</p>
+<p>space   散布図と散布図の外側に出力するヒストグラムの間の空きスペースの大きさを数値で指定する。</p>
+<p>dropna  True に設定すると、欠損値を乗り除きます。</p>
+<p>xlim, ylim      x軸、y軸の下限、上限をタプル (下限, 条件) で指定。</p>
+<p>joint_kws, marginal_kws, annot_kws      プロットに用いる各種オプションをディクショナリで指定。</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../yellowbrick/yellowbrick.html" class="btn btn-neutral float-right" title="yellowbrick" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jointplot.html" class="btn btn-neutral" title="seaborn jointplot" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

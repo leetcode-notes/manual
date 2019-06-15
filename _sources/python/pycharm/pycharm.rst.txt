@@ -1,0 +1,111 @@
+pychram
+===================
+
+
+Tools → Create Setup.py
++++++++++++++++++++++++++++
+
+Tools → Run Setup → sdist
+
+command line skip
+
+
+Recent Locations
+--------------------
+
+Ctrl + Shift + E
+
+.. figure:: PycharmShortcut.png
+   :width: 800px
+
+
+| Setting0
+
+.. |Item0000| image:: ./setting/0000.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0000|
+      - ShowMethods Separates
+
+| Setting1
+
+.. |Item0001| image:: ./setting/0001.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0001|
+      - | 
+
+| Setting2
+
+.. |Item0002| image:: ./setting/0002.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0002|
+      - マイルストーンの作成
+
+.. |Item0003| image:: ./setting/0003.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0003|
+      - 期限の作成
+
+.. |Item0004| image:: ./setting/0004.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0004|
+      - 期限の作成
+
+
+.. |Item0005| image:: ./setting/0005.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0005|
+      - | Anacondaのインストール
+
+.. |Item0006| image:: ./setting/0006.png
+    :width: 400px
+
+.. list-table::
+    :header-rows: 1
+
+    * - 名前
+      - 内容
+
+    * - |Item0006|
+      - | Anaconda Navigatorを一度開くと設定完了

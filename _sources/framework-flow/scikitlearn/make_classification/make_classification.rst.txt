@@ -1,0 +1,6 @@
+scikitlearn make_classification make_classification
+===============================================================================================
+
+.. raw:: html
+   :file: html/make_classification.html
+

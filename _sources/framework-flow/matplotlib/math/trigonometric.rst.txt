@@ -1,0 +1,6 @@
+matplotlib trigonometric
+===============================================================================================
+
+.. raw:: html
+   :file: html/trigonometric.html
+

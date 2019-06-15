@@ -1,0 +1,6 @@
+theory2 neuralnet_classification
+===============================================================================================
+
+.. raw:: html
+   :file: html/neuralnet_classification.html
+

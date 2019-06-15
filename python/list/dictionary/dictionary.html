@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>dictionary &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="リスト・タプル・辞書" href="../list.html"/>
+        <link rel="next" title="list-comparison" href="../list-comparison/list-comparison.html"/>
+        <link rel="prev" title="リスト・タプル・辞書" href="../list.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../list.html">リスト・タプル・辞書</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">dictionary</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">内包表記</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">順番変わらない</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">辞書の数を更新</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">辞書の要素を追加</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">辞書の値の最大値・最小値とそのキーを取得</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../list-comparison/list-comparison.html">list-comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../list/list.html">list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tupple/tupple.html">tupple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../unpack/unpack.html">unpack</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../list.html">リスト・タプル・辞書</a> &raquo;</li>
+      
+    <li>dictionary</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/list/dictionary/dictionary.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dictionary">
+<h1>dictionary<a class="headerlink" href="#dictionary" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>内包表記<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">]</span>
+<span class="n">dic</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">dic</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">:</span> <span class="n">n</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>順番変わらない<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+
+<span class="n">input_lines</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="n">dic</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">input_lines</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">:</span>
+        <span class="n">dic</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dic</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">value</span><span class="p">,</span><span class="n">item</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>辞書の数を更新<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 文房具ごとの在庫数</span>
+<span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ボールペン&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+         <span class="s1">&#39;ノート&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+         <span class="s1">&#39;のり&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">item</span> <span class="o">=</span> <span class="s1">&#39;ボールペン&#39;</span>
+<span class="n">items</span><span class="p">[</span><span class="n">item</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">5</span>
+
+<span class="k">for</span> <span class="n">item</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">items</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>辞書の要素を追加<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skills</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;職業&quot;</span><span class="p">:</span><span class="s2">&quot;戦士&quot;</span><span class="p">,</span> <span class="s2">&quot;体力&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;魔法力&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;ゴールド&quot;</span><span class="p">:</span><span class="mi">380</span><span class="p">}</span>
+<span class="c1"># この下で、辞書にデータを追加してみよう</span>
+<span class="n">skills</span><span class="p">[</span><span class="s2">&quot;属性&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;炎&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skills</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="id5">
+<h3>辞書に要素を更新する<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skills</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;職業&quot;</span><span class="p">:</span><span class="s2">&quot;戦士&quot;</span><span class="p">,</span> <span class="s2">&quot;体力&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;魔法力&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;ゴールド&quot;</span><span class="p">:</span><span class="mi">380</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skills</span><span class="p">)</span>
+<span class="c1"># この下で、ハッシュを更新してみよう</span>
+<span class="n">skills</span><span class="p">[</span><span class="s2">&quot;職業&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;魔法使い&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skills</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>辞書に要素を更新する<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skills</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;職業&quot;</span><span class="p">:</span><span class="s2">&quot;戦士&quot;</span><span class="p">,</span> <span class="s2">&quot;体力&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;魔法力&quot;</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;ゴールド&quot;</span><span class="p">:</span><span class="mi">380</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skills</span><span class="p">)</span>
+<span class="c1"># この下で、ハッシュを更新してみよう</span>
+<span class="n">skills</span><span class="p">[</span><span class="s2">&quot;職業&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;魔法使い&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">skills</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>辞書をループで処理する<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemies</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ザコ&quot;</span><span class="p">:</span><span class="s2">&quot;スライム&quot;</span><span class="p">,</span> <span class="s2">&quot;中ボス&quot;</span><span class="p">:</span><span class="s2">&quot;ドラゴン&quot;</span><span class="p">,</span> <span class="s2">&quot;ラスボス&quot;</span><span class="p">:</span><span class="s2">&quot;魔王&quot;</span><span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">enemies</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">enemies</span><span class="p">[</span><span class="s2">&quot;中ボス&quot;</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">rank</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">enemies</span><span class="p">[</span><span class="n">rank</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;が、あらわれた！&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">enemy</span><span class="p">)</span> <span class="ow">in</span> <span class="n">enemies</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">rank</span> <span class="o">+</span> <span class="s2">&quot;の&quot;</span> <span class="o">+</span> <span class="n">enemy</span> <span class="o">+</span> <span class="s2">&quot;が、あらわれた！&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>辞書の値の最大値・最小値とそのキーを取得<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="key">
+<h3>辞書のキー（key）の最大値・最小値を取得<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">}</span>
+
+<span class="n">max_v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">max_v</span><span class="p">)</span>
+<span class="c1"># 100</span>
+<span class="n">source</span><span class="p">:</span> <span class="n">dict_value_max_min</span><span class="o">.</span><span class="n">py</span>
+
+<span class="n">min_v</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">min_v</span><span class="p">)</span>
+<span class="c1"># 20</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="value">
+<h3>辞書の値（value）の最大値・最小値を取得<a class="headerlink" href="#value" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">max_v</span><span class="p">)</span>
+<span class="c1"># 100</span>
+<span class="n">source</span><span class="p">:</span> <span class="n">dict_value_max_min</span><span class="o">.</span><span class="n">py</span>
+
+<span class="n">min_v</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">min_v</span><span class="p">)</span>
+<span class="c1"># 20</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>辞書の値が最大・最小となるキーを取得<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_k</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">max_k</span><span class="p">)</span>
+<span class="c1"># a</span>
+
+<span class="n">min_k</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">min_k</span><span class="p">)</span>
+<span class="c1"># b</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h3>辞書の値が最大・最小となるキーと値を同時に取得<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_kv</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">max_kv</span><span class="p">)</span>
+<span class="c1"># (&#39;a&#39;, 100)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">max_kv</span><span class="p">))</span>
+<span class="c1"># &lt;class &#39;tuple&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unpack">
+<h3>タプルの　<a class="reference internal" href="../unpack/unpack.html#id1"><span class="std std-ref">unpack</span></a> を利用して、それぞれ別々の変数に代入することもできる。<a class="headerlink" href="#unpack" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_k</span><span class="p">,</span> <span class="n">max_v</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">max_k</span><span class="p">)</span>
+<span class="c1"># a</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">max_v</span><span class="p">)</span>
+<span class="c1"># 100</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../list-comparison/list-comparison.html" class="btn btn-neutral float-right" title="list-comparison" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../list.html" class="btn btn-neutral" title="リスト・タプル・辞書" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

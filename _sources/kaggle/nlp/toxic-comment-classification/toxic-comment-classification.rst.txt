@@ -1,0 +1,37 @@
+toxic-comment-classification
+=============================
+
+有毒コメント分類の課題
+
+コンペ概要
+------------
+
+jigsawとGoogleが創設したConversation AIチーム主催
+
+有害なコメントへのタグ付けコンペ
+
+データ Wikipediaのtalk pageのコメント
+
+データの種類とタスク
+---------------------
+
+多ラベル分類問題(Multilabel classification）
+
+クラスは6種類(toxic, severe_toxic, obscene, threat, insult, identity_hate)
+
+評価方法
+-----------
+
+6種のクラスそれぞれの所属確率を以下のように出力
+
+多クラス分類問題ではない
+
+各クラスの予測確率の和が１である必要はない
+
+提出方法
+---------
+
+study kernel
+--------------
+
+http://localhost:8888/tree/kaggle/nlp/toxic-comment-classification/code/stop-the-s-toxic-comments-eda.ipynb

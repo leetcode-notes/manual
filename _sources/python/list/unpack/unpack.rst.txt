@@ -1,0 +1,100 @@
+unpack
+#################
+
+.. _unpack:
+
+
+辞書の値が最大・最小となるキーと値を同時に取得
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+..   code-block:: python
+
+     max_kv = max(d.items(), key=lambda x: x[1])
+     print(max_kv)
+     # ('a', 100)
+
+     print(type(max_kv))
+     # <class 'tuple'>
+
+
+アスタリスク*を使ったアンパック
++++++++++++++++++++++++++++++++++++
+
+
+..   code-block:: python
+
+    t = (0, 1, 2, 3, 4)
+    a, b, *c = t
+
+    print(a)
+    print(b)
+    print(c)
+    # 0
+    # 1
+    # [2, 3, 4]
+
+    print(type(c))
+    # <class 'list'>
+
+    a, *b, c = t
+
+    print(a)
+    print(b)
+    print(c)
+    # 0
+    # [1, 2, 3]
+    # 4
+
+    *a, b, c = t
+
+    print(a)
+    print(b)
+    print(c)
+    # [0, 1, 2]
+    # 3
+    # 4
+
+
+*がつけられるのは一つだけ。*がついた変数が複数あると要素を何個ずつ振り分けるか判断できないのでエラーSyntaxErrorになる。*
+
+.. code-block:: python
+
+    # *a, b, *c = t
+    # SyntaxError: two starred expressions in assignment
+
+
+*がついた変数に代入される要素が一つだけでもリストとして代入されるので注意。*
+
+
+.. code-block:: python
+
+    t = (0, 1, 2)
+
+    a, b, *c = t
+
+    print(a)
+    print(b)
+    print(c)
+    # 0
+    # 1
+    # [2]
+
+    print(type(c))
+    # <class 'list'>
+    source: tuple_list_unpack.py
+
+余分の要素がない場合は空のリストが代入される。
+
+
+.. code-block:: python
+
+    a, b, c, *d = t
+
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    # 0
+    # 1
+    # 2
+    # []

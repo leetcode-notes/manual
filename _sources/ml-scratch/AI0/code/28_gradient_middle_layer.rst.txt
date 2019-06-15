@@ -1,0 +1,6 @@
+AI0 28_gradient_middle_layer
+===============================================================================================
+
+.. raw:: html
+   :file: html/28_gradient_middle_layer.html
+

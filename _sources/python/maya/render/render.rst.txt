@@ -1,0 +1,13 @@
+Render Setting Maya
+======================
+
+default setting
++++++++++++++++++++
+
+.. literalinclude:: defaultsettings.py
+
+
+Aspect Ratio
++++++++++++++++++++++++
+
+.. literalinclude:: aspectratio.py

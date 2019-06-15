@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第4章: 形態素解析 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="4_morpho nlp100_30_1" href="code/nlp100_30_1.html"/>
+        <link rel="prev" title="3_Re nlp100_29_1" href="../3_Re/code/nlp100_29_1.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第4章: 形態素解析</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">30. 形態素解析結果の読み込み</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">31. 動詞</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">32. 動詞の原形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">33. サ変名詞</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ab">34. 「AのB」</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">35. 名詞の連接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">36. 単語の出現頻度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">37. 頻度上位10語</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">38. ヒストグラム</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zipf">39. Zipfの法則</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第4章: 形態素解析</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/4_morpho/4_morpho.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>第4章: 形態素解析<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>夏目漱石の小説『吾輩は猫である』の文章（neko.txt）をMeCabを使って形態素解析し，その結果をneko.txt.mecabというファイルに保存せよ．このファイルを用いて，以下の問に対応するプログラムを実装せよ．</p>
+<p>なお，問題37, 38, 39はmatplotlibもしくはGnuplotを用いるとよい．</p>
+<div class="section" id="id2">
+<h2>30. 形態素解析結果の読み込み<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>形態素解析結果（neko.txt.mecab）を読み込むプログラムを実装せよ．ただし，各形態素は表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）をキーとするマッピング型に格納し，1文を形態素（マッピング型）のリストとして表現せよ．第4章の残りの問題では，ここで作ったプログラムを活用せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_30_1.html">4_morpho nlp100_30_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>31. 動詞<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>動詞の表層形をすべて抽出せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_31_1.html">4_morpho nlp100_31_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>32. 動詞の原形<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>動詞の原形をすべて抽出せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_32_1.html">4_morpho nlp100_32_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_32_2.html">4_morpho nlp100_32_2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>33. サ変名詞<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サ変接続の名詞をすべて抽出せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_33_1.html">4_morpho nlp100_33_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_33_2.html">4_morpho nlp100_33_2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="ab">
+<h2>34. 「AのB」<a class="headerlink" href="#ab" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>2つの名詞が「の」で連結されている名詞句を抽出せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_34_1.html">4_morpho nlp100_34_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>35. 名詞の連接<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>名詞の連接（連続して出現する名詞）を最長一致で抽出せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_35_1.html">4_morpho nlp100_35_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>36. 単語の出現頻度<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>文章中に出現する単語とその出現頻度を求め，出現頻度の高い順に並べよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_36_1.html">4_morpho nlp100_36_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>37. 頻度上位10語<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>出現頻度が高い10語とその出現頻度をグラフ（例えば棒グラフなど）で表示せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_37_1.html">4_morpho nlp100_37_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>38. ヒストグラム<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>単語の出現頻度のヒストグラム（横軸に出現頻度，縦軸に出現頻度をとる単語の種類数を棒グラフで表したもの）を描け．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_38_1.html">4_morpho nlp100_38_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="zipf">
+<h2>39. Zipfの法則<a class="headerlink" href="#zipf" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>単語の出現頻度順位を横軸，その出現頻度を縦軸として，両対数グラフをプロットせよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_39_1.html">4_morpho nlp100_39_1</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_30_1.html" class="btn btn-neutral float-right" title="4_morpho nlp100_30_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../3_Re/code/nlp100_29_1.html" class="btn btn-neutral" title="3_Re nlp100_29_1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

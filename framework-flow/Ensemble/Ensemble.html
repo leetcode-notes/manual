@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ensemble &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../index.html"/>
+        <link rel="up" title="framework workflow" href="../framework.html"/>
+        <link rel="next" title="GeneticAlgorithm" href="../GA/GeneticAlgorithm.html"/>
+        <link rel="prev" title="CUDA" href="../CUDA/CUDA.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../framework.html">framework workflow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../CUDA/CUDA.html">CUDA</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GA/GeneticAlgorithm.html">GeneticAlgorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PyTorch/PyTorch.html">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TensorFlow/tensorflow.html">TensorFlow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../anaconda/anaconda.html">anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collab/collab.html">collaboratory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jupyter/jupyter.html">jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keras/keras.html">keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metrics/metrics.html">metrics 評価関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../numpy/numpy.html">numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pandas/pandas.html">pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scikitlearn/scikitlearn.html">scikitlearn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../seaborn/seaborn.html">seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../yellowbrick/yellowbrick.html">yellowbrick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../framework.html">framework workflow</a> &raquo;</li>
+      
+    <li>Ensemble</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/framework-flow/Ensemble/Ensemble.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ensemble">
+<h1>Ensemble<a class="headerlink" href="#ensemble" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="https://mlwave.com/kaggle-ensembling-guide/">https://mlwave.com/kaggle-ensembling-guide/</a></p>
+<p>数式的な説明は『Kaggle Ensembling Guide』に記載があるので割愛しますが、それぞれのモデルの悪い部分を補完し合い、全体として良い予測結果が得られています。</p>
+<p>「Avito Demand Prediction Challenge」（31stから9thへ）</p>
+<p>最終的には9位となったこのコンペについて、Koheiさんがアンサンブルに関して解法を説明しました。</p>
+<p>単体モデルのベストスコアはprivate LBで31位相当でしたが、アンサンブルの技法の一つ「Stacked Generalization」を実施した結果、15位まで精度が向上したそうです。さらにpublic LBのスコアを用いて重みを計算し「Blenging」を実施した結果、最終的な9位のモデルが誕生したとのことでした。</p>
+<p>詳細は発表資料をご覧いただければと思いますが、この「黒魔術」的な手法に会場は大いに盛り上がりました。</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../GA/GeneticAlgorithm.html" class="btn btn-neutral float-right" title="GeneticAlgorithm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../CUDA/CUDA.html" class="btn btn-neutral" title="CUDA" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

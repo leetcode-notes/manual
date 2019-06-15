@@ -1,0 +1,12 @@
+maya charm
+=============================
+
+.. figure:: MayaCharm/docs/MayaCharm3_EditPort.png
+
+.. figure:: MayaCharm/docs/MayaCharm3_RunConfig.png
+
+.. figure:: MayaCharm/docs/MayaCharm3_Settings.png
+
+.. figure:: MayaCharm/docs/mc_attach_to_proc.png
+
+https://github.com/cmcpasserby/MayaCharm

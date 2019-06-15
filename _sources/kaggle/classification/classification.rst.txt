@@ -1,0 +1,12 @@
+classification competition
+============================================================
+
+Binary classification 2値分類等
+
+マルチクラス分類 categorical_crossentropy
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

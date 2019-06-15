@@ -1,0 +1,6 @@
+05_semaseg concat_tensorflow_slim
+===============================================================================================
+
+.. raw:: html
+   :file: html/concat_tensorflow_slim.html
+

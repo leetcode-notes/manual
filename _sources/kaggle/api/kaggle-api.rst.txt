@@ -1,0 +1,40 @@
+kaggle-api
+=============================
+
+code
+--------------
+
+kaggle competitions -h
+    kaggle competitionsのヘルプが表示
+
+kaggle competitions download -h
+    データをダウンロードするコマンドのヘルプを見る
+
+kaggle competitions list
+    コンペの一覧を取得
+
+kaggle competitions files -c titanic
+    タイタニックコンペのデータサイズ等を表示
+
+kaggle competitions files -c titanic
+    タイタニックコンペのデータサイズ等を表示
+
+kaggle competitions download -c titanic
+    タイタニックコンペのデータをダウンロード
+
+kaggle competitions submit -c titanic -f pred.csv -m test
+    タイタニックコンペにpred.csvをサブミット。メッセージはtest
+
+kaggle competitions submissions -c titanic
+    タイタニックコンペの自分のサブミット一覧を表示
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+http://www.currypurin.com/entry/2018/kaggle-api

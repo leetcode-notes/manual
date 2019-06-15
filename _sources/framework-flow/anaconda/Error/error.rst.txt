@@ -1,0 +1,29 @@
+Anaconda Error
+==================
+
+白い画面のまま起動しない
+---------------------------
+
+[Ctrl]キーを押しながら、画面の[リロード]ボタンを押すことで、
+
+スーパーリロードとなり、notebookの初期画面(ツリー)が正しく表示される
+
+https://qiita.com/TaroNakasendo/items/b03216c0e2b611f1823e
+
+vesionを確認する
+-------------------
+
+# notebookのバージョンを確認　(5.7.6で問題が起きているようです)
+conda list
+
+...
+nbformat                  4.4.0                    py37_0
+notebook                  5.7.6                    py37_0
+openssl                   1.1.1b               he774522_1
+...
+
+# notebookのバージョンを5.7.4にダウングレード
+conda install notebook=5.7.4
+
+# notebookを起動
+jupyter notebook

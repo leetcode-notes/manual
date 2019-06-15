@@ -1,0 +1,9 @@
+mercari-price
+=============================
+
+
+https://www.kaggle.com/c/mercari-price-suggestion-challenge
+
+https://www.codexa.net/kaggle-mercari-price-suggestion-challenge/
+
+https://lp-tech.net/articles/kJlwQ

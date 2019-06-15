@@ -1,0 +1,55 @@
+try
+=================
+
+.. literalinclude:: try_base.py
+
+.. literalinclude:: try_all1.py
+
+.. literalinclude:: try_all2.py
+
+#. ZeroDivisionError
+
+     例：ZeroDivisionError: division by zero
+     1/0のようにゼロで割ってしまったときに起きるエラー
+
+.. literalinclude:: zerodiv.py
+
+.. literalinclude:: zerodiv_traceback.py
+
+実行時エラーに表示
+
+.. literalinclude:: zerodiv_traceback.py
+
+
+#. NameError
+
+     例：NameError: name ‘hoge’ is not defined
+     定義していない変数を使ったときに起きるエラー
+
+.. literalinclude:: NameError.py
+
+#. AttributeError
+
+     例：AttributeError: type object ‘list’ has no attribute ‘fuga’
+     存在しない属性にアクセスしようとしたときに起きるエラー
+
+
+#. BaseException
+
+
+.. literalinclude:: BaseException.py
+
+
+
+.. code-block:: python
+
+    import contextlib
+    import os
+
+    try:
+        os.remove('somefile.tmp')
+    except FileNotFoundError:
+        print("file not found")
+
+    with contextlib.suppress(FileNotFoundError):
+        os.remove('somefile.tmp')

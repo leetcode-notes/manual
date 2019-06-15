@@ -1,0 +1,36 @@
+talking data
+=================
+
+https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+ area under the ROC curve ROC曲線下面積
+
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://www.kaggle.com/anokas/talkingdata-adtracking-eda
+

@@ -1,0 +1,6 @@
+07_nlp gru_tensorflow_slim
+===============================================================================================
+
+.. raw:: html
+   :file: html/gru_tensorflow_slim.html
+

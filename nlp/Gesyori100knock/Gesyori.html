@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>言語処理 knockout &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../index.html"/>
+        <link rel="up" title="nlp 自然言語処理" href="../nlp.html"/>
+        <link rel="next" title="第1章: 準備運動" href="1_basic/1_basic.html"/>
+        <link rel="prev" title="nlp 自然言語処理" href="../nlp.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">言語処理 knockout</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+    <li>言語処理 knockout</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/Gesyori.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="knockout">
+<span id="gesyori"></span><h1>言語処理 knockout<a class="headerlink" href="#knockout" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="http://www.cl.ecei.tohoku.ac.jp/nlp100/">http://www.cl.ecei.tohoku.ac.jp/nlp100/</a></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_basic/1_basic.html">第1章: 準備運動</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id2">00. 文字列の逆順</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id3">01. 「パタトクカシーー」</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id4">02. 「パトカー」＋「タクシー」＝「パタトクカシーー」</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id5">03. 円周率</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id6">04. 元素記号</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#n-gram">05. n-gram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id7">06. 集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id8">07. テンプレートによる文生成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#id9">08. 暗号文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_basic/1_basic.html#typoglycemia">09. Typoglycemia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id1">10. 行数のカウント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id2">11. タブをスペースに置換</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#col1-txt-2col2-txt">12. 1列目をcol1.txtに，2列目をcol2.txtに保存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#col1-txtcol2-txt">13. col1.txtとcol2.txtをマージ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#n">14. 先頭からN行を出力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id3">15. 末尾のN行を出力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id4">16. ファイルをN分割する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id5">17. １列目の文字列の異なり</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id6">18. 各行を3コラム目の数値の降順にソート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_unix/2_unix.html#id7">19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_Re/3_Re.html">第3章: 正規表現</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#json">20. JSONデータの読み込み</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id2">21. カテゴリ名を含む行を抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id3">22. カテゴリ名の抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id4">23. セクション構造</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id5">24. ファイル参照の抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id6">25. テンプレートの抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id7">26. 強調マークアップの除去</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#id8">27. 内部リンクの除去</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#mediawiki">28. MediaWikiマークアップの除去</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_Re/3_Re.html#url">29. 国旗画像のURLを取得する</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_morpho/4_morpho.html">第4章: 形態素解析</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id2">30. 形態素解析結果の読み込み</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id3">31. 動詞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id4">32. 動詞の原形</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id5">33. サ変名詞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#ab">34. 「AのB」</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id6">35. 名詞の連接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id7">36. 単語の出現頻度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id8">37. 頻度上位10語</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#id9">38. ヒストグラム</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_morpho/4_morpho.html#zipf">39. Zipfの法則</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_morph/5_morph.html">第5章: 係り受け解析</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id2">40. 係り受け解析結果の読み込み（形態素）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id3">41. 係り受け解析結果の読み込み（文節・係り受け）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id4">42. 係り元と係り先の文節の表示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id5">43. 名詞を含む文節が動詞を含む文節に係るものを抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id6">44. 係り受け木の可視化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id7">45. 動詞の格パターンの抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id8">46. 動詞の格フレーム情報の抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id9">47. 機能動詞構文のマイニング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id10">48. 名詞から根へのパスの抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_morph/5_morph.html#id11">49. 名詞間の係り受けパスの抽出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_english/6_english.html">第6章: 英語テキストの処理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id2">50. 文区切り</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id3">51. 単語の切り出し</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id4">52. ステミング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#tokenization">53. Tokenization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id5">54. 品詞タグ付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id6">55. 固有表現抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id7">56. 共参照解析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id8">57. 係り受け解析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#id9">58. タプルの抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_english/6_english.html#s">59. S式の解析</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_DB/7_DB.html">第7章: データベース</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#kvs">60. KVSの構築</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id2">61. KVSの検索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id3">62. KVS内の反復処理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id4">63. オブジェクトを値に格納したKVS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#mongodb">64. MongoDBの構築</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id5">65. MongoDBの検索</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id6">66. 検索件数の取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id7">67. 複数のドキュメントの取得</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#id8">68. ソート</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_DB/7_DB.html#web">69. Webアプリケーションの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_ML/8_ML.html">第8章: 機械学習</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id2">70. データの入手・整形</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id3">71. ストップワード</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id4">72. 素性抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id5">73. 学習</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id6">74. 予測</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id7">75. 素性の重み</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id8">76. ラベル付け</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id9">77. 正解率の計測</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id10">78. 5分割交差検定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_ML/8_ML.html#id11">79. 適合率-再現率グラフの描画</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id1">80. コーパスの整形</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id2">81. 複合語からなる国名への対処</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id3">82. 文脈の抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id4">83. 単語／文脈の頻度の計測</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id5">84. 単語文脈行列の作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id6">85. 主成分分析による次元圧縮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id7">86. 単語ベクトルの表示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id8">87. 単語の類似度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id9">88. 類似度の高い単語10件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_1/9_vec_1.html#id10">89. 加法構成性によるアナロジー</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#word2vec">90. word2vecによる学習</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#id1">91. アナロジーデータの準備</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#id2">92. アナロジーデータへの適用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#id3">93. アナロジータスクの正解率の計算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#wordsimilarity-353">94. WordSimilarity-353での類似度計算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#id4">95. WordSimilarity-353での評価</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#id5">96. 国名に関するベクトルの抽出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#k-means">97. k-meansクラスタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#ward">98. Ward法によるクラスタリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_vec_2/9_vec_2.html#t-sne">99. t-SNEによる可視化</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="1_basic/1_basic.html" class="btn btn-neutral float-right" title="第1章: 準備運動" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../nlp.html" class="btn btn-neutral" title="nlp 自然言語処理" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

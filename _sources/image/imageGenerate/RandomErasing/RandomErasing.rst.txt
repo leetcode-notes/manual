@@ -1,0 +1,27 @@
+RandomErasing
+================================
+
+Random Erasingは、画像にランダムな⼤きさ・位置のマスクを加えることで汎化性能を⾼めるData
+Augmentation⼿法
+
+Tool
+---------
+
+Google Collaboratory TPU
+
+DataSet
+----------
+
+CIFAR-10
+
+前処理
+--------
+
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+.. figure:: code/random_erasing.png

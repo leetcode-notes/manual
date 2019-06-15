@@ -1,0 +1,229 @@
+Maya UI
+*********
+
+ramp colorの数え方
+====================
+
+.. literalinclude:: rampcolor_num.py
+
+
+
+button
+=============
+
+.. code-block:: python
+
+     mes1 = 'text1\ntest2'
+     mes1 += 'text3\ntest4'
+     cmds.button(label=mes1.decode('UTF-8'),command=partial(self.CAG_layer_All,self))
+
+
+separator
+==========
+
+.. code-block:: python
+
+     cmds.separator(height=10,width=320, style='out')
+
+text
+==========
+
+.. code-block:: python
+
+     mes1 = 'text1\ntest2'
+     mes1 += 'text3\ntest4'
+     cmds.text(l=mes1.decode('UTF-8'),align='left')
+
+textField q
+==============
+
+.. code-block:: python
+
+    layernum = cmds.textField(self.rendname, q=True, tx=True)
+
+textField,textScrollList
+==========================
+
+
+.. code-block:: python
+
+     self.rendname = cmds.textField(tx="CAG_flyA")
+     #ams シングルセレクションモード
+     #dcc ダブルクリック selectCommand(sc)項目を選択したときに
+     self.CAGList = cmds.textScrollList(numberOfRows=8, allowMultiSelection=True,w=100,h=100,
+                                             append=KGS_CAGlist,sc=partial(self.textCAGselect,self), showIndexedItem=4)
+     def textCAGselect(self, *Args):
+        selGrp = cmds.textScrollList(self.CAGList, q=True, si=True)
+        cmds.select(selGrp)
+        nameary = []
+        for sel in selGrp:
+            nameary.append(sel.split(":")[0].replace("_ANM","").replace("_LAY",""))
+        cmds.textField(self.rendname, e=True, text="_".join(nameary))
+
+
+textScrollList
+==========================
+
+
+..   code-block:: python
+
+     #ams シングルセレクションモード
+     #dcc ダブルクリック selectCommand(sc)項目を選択したときに
+     self.scenes = cmds.textScrollList(ams=0,
+                    dcc=partial(self.OpenFolder1,self),sc=partial(self.getScenes,self))
+
+
+textScrollList q
+==========================
+
+
+..   code-block:: python
+
+     selScenes = cmds.textScrollList(self.scenes,query=True,si=True)[0]
+
+
+textScrollList ra
+==========================
+
+
+..   code-block:: python
+
+     ##一旦リセット####ra 全項目削除
+     cmds.textScrollList(self.cut, e=True, ra=True)
+
+textFieldButtonGrp q
+
+
+..   code-block:: python
+
+     getSceneDir = cmds.textFieldButtonGrp(self.scenesDir, q=True, text=True,fi=MenuSave[0])
+
+
+Right Click
+==========================
+
+
+..   code-block:: python
+
+
+     UseBackpop = cmds.popupMenu()
+     UseBackpopitem = cmds.menuItem(label="help2", c=partial(self.KGSFX_rendset_c246Q2, self))
+     UseBackpopitem = cmds.menuItem(label="help3", c=partial(self.KGSFX_rendset_c246Q3, self))
+
+
+Option var
+==========================
+
+
+..   code-block:: python
+
+     cmds.optionVar(sv=["Filename",selProjectName])
+
+     if cmds.optionVar(exists="Filename"):
+          ScenesFilename = cmds.optionVar(q="Filename")
+
+
+
+Option var Form
+==========================
+
+
+..   code-block:: python
+
+     ###UI
+     #######form_collapse#####################################################################
+     form_smoothsv = 1
+     if cmds.optionVar(exists="rd_form_smooth"):
+       form_smoothsv = cmds.optionVar(q="rd_form_smooth")
+       if form_smoothsv == "False":
+           form_smoothsv = 0
+       else:
+           form_smoothsv = 1
+     self.form_smooth = cmds.frameLayout(w=300, l='smooth', collapsable=1, bv=True, cl=form_smoothsv,
+                                         cc=partial(self.optionsave, self), ec=partial(self.optionsave, self))
+     #######form_collapse#####################################################################
+     ####def
+     def optionsave(self, *Args):
+        form_smoothsv = cmds.frameLayout(self.form_smooth, q=True, cl=True)
+        cmds.optionVar(sv=["rd_form_smooth", form_smoothsv])
+
+
+dialog
+====================
+
+.. literalinclude:: confirmDialog.py
+
+
+dialog
+==========================
+
+
+.. literalinclude:: confirmDialogYewNo.py
+
+
+
+radioButtonGrp
+==========================
+どのボタンがチェックされているかは q=True, select=True によって調べる
+
+..   code-block:: python
+
+     import maya.cmds
+
+     def makePrimitive():
+         selected = maya.cmds.radioButtonGrp('radioButtonGrp1', q=True, select=True)
+         if selected == 1:
+             maya.cmds.sphere()
+         elif selected == 2:
+             maya.cmds.nurbsCube()
+
+     windowName = maya.cmds.window(title='radioButtonGrp1')
+     maya.cmds.columnLayout()
+     maya.cmds.text(label='make Primitive')
+     maya.cmds.radioButtonGrp('radioButtonGrp1', numberOfRadioButtons=2,\
+         label='Primitive', labelArray2=('sphere', 'cube'), select=1)
+     maya.cmds.button(label='OK', command='makePrimitive()')
+     maya.cmds.button(label='Close', command=('maya.cmds.deleteUI("' + windowName + '")'))
+     maya.cmds.showWindow()
+
+     ####save######
+     form_numsv = 1
+     if cmds.optionVar(exists="rd_form_num"):
+       form_numsv = cmds.optionVar(q="rd_form_num")
+     self.form_num = cmds.radioButtonGrp(labelArray4=['1-100', '100-200', '200-300', '300-400'], select=int(form_numsv),
+                  cw4 = [80,80,80,80], numberOfRadioButtons=4,onc=partial(self.loadOpenedScnes, self))
+     ####save######
+     form_numsv = cmds.radioButtonGrp(self.form_num, q=True, select=True)
+     cmds.optionVar(sv=["rd_form_num", form_numsv])
+
+tabLayout
+================
+
+.. code-block:: python
+
+    import maya.cmds as cmds
+
+    def optionsave():
+        test = cmds.tabLayout(tabs,q=True,sti=True)
+        print test
+    cmds.window( widthHeight=(200, 150) )
+    form = cmds.formLayout()
+    tabs = cmds.tabLayout(innerMarginWidth=5, innerMarginHeight=5)
+    cmds.formLayout( form, edit=True, attachForm=((tabs, 'top', 0), (tabs, 'left', 0), (tabs, 'bottom', 0), (tabs, 'right', 0)) )
+
+    child1 = cmds.rowColumnLayout(numberOfColumns=2)
+    cmds.button()
+    cmds.button()
+    cmds.button()
+    cmds.setParent( '..' )
+
+    child2 = cmds.rowColumnLayout(numberOfColumns=2)
+    cmds.button()
+    cmds.button()
+    cmds.button()
+    cmds.setParent( '..' )
+
+    cmds.tabLayout(tabs,cc=optionsave, edit=True, tabLabel=((child1, 'One'), (child2, 'Two')))
+
+
+    cmds.showWindow()

@@ -1,0 +1,11 @@
+openCV
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+設定ファイル
+L:\machine\module\openCV\opencv\data\haarcascades

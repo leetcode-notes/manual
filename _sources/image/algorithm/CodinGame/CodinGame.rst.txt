@@ -1,0 +1,8 @@
+.. _CodinGame:
+
+CodinGame
+================
+
+CodinGame
+
+https://qiita.com/javacommons/items/86efba2d0ce6b2a21fb9

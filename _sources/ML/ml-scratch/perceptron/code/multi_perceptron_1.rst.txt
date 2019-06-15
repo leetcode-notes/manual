@@ -1,0 +1,6 @@
+perceptron multi_perceptron_1
+===============================================================================================
+
+.. raw:: html
+   :file: html/multi_perceptron_1.html
+

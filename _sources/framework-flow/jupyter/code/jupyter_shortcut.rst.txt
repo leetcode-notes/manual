@@ -1,0 +1,30 @@
+jupyter notebook
+=================
+
+shortcut
+---------------
+
+コマンドモードで「h」を押すと、ショートカットキー一覧が出ます。
+
+.. figure:: img/shortcut1.png
+   :width: 500px
+
+
+.. figure:: img/shortcut2.png
+   :width: 500px
+
+
+.. figure:: img/shortcut3.png
+   :width: 500px
+
+
+.. figure:: img/shortcut4.png
+   :width: 500px
+
+
+.. figure:: img/shortcut5.png
+   :width: 500px
+
+
+.. figure:: img/shortcut1.png
+   :width: 500px

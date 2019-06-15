@@ -1,0 +1,6 @@
+category OrdinalEncoder
+===============================================================================================
+
+.. raw:: html
+   :file: html/OrdinalEncoder.html
+

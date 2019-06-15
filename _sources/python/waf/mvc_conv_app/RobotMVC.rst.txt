@@ -1,0 +1,56 @@
+.. _robot-mvc:
+
+robot-mvc
+=============
+
+controller
+------------
+
++ conversation
+
+.. literalinclude:: controller/conversation.py
+
+dic
+------------
+
++ main
+
+.. literalinclude:: dic/main.py
+
+models
+------------
+
++ ranking
+
+.. literalinclude:: models/ranking.py
+
++ robot
+
+.. literalinclude:: models/robot.py
+
+
+views
+------------
+
++ console
+
+.. literalinclude:: views/console.py
+
+templates
+------------
+
++ good_by
+
+.. literalinclude:: templates/good_by.txt
+
++ greeting
+
+.. literalinclude:: templates/greeting.txt
+
++ hello
+
+.. literalinclude:: templates/hello.txt
+
++ which_restaurant
+
+.. literalinclude:: templates/which_restaurant.txt

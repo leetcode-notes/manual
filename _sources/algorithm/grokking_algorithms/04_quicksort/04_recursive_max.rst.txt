@@ -1,0 +1,6 @@
+grokking_algorithms 04_recursive_max
+===============================================================================================
+
+.. raw:: html
+   :file: html/04_recursive_max.html
+

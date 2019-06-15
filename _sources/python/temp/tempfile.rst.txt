@@ -1,0 +1,6 @@
+temp
+=================
+
+.. literalinclude:: tempfile.py
+
+.. literalinclude:: tempfile2.py

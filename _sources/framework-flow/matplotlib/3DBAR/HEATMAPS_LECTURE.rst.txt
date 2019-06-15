@@ -1,0 +1,6 @@
+matplotlib HEATMAPS_LECTURE
+===============================================================================================
+
+.. raw:: html
+   :file: html/HEATMAPS_LECTURE.html
+

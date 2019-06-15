@@ -1,0 +1,197 @@
+RE
+========
+
+メタ文字
+--------------
+
+.. raw:: html
+
+    <table>
+    <tbody>
+    <tr>
+    <td>メタ文字</td>
+    <td>説明</td>
+    <td>指定例</td>
+    <td>合致する</td>
+    </tr>
+    <tr>
+    <td>.</td>
+    <td>任意の一文字</td>
+    <td>a.c</td>
+    <td>abc, acc, aac</td>
+    </tr>
+    <tr>
+    <td>^</td>
+    <td>行の先頭</td>
+    <td>^abc</td>
+    <td>abcdef</td>
+    </tr>
+    <tr>
+    <td>$</td>
+    <td>行の末尾</td>
+    <td>abc$</td>
+    <td>defabc</td>
+    </tr>
+    <tr>
+    <td>*</td>
+    <td>0回以上の繰り返し</td>
+    <td>ab*</td>
+    <td>a, ab, abb, abbb</td>
+    </tr>
+    <tr>
+    <td>+</td>
+    <td>1回以上の繰り返し</td>
+    <td>ab+</td>
+    <td>ab, abb, abbb</td>
+    </tr>
+    <tr>
+    <td>?</td>
+    <td>0回または1回</td>
+    <td>ab?</td>
+    <td>a, ab</td>
+    </tr>
+    <tr>
+    <td>{m}</td>
+    <td>m回の繰り返し</td>
+    <td>a{3}</td>
+    <td>aaa</td>
+    </tr>
+    <tr>
+    <td>{m,n}</td>
+    <td>m〜n回の繰り返し</td>
+    <td>a{2, 4}</td>
+    <td>aa, aaa, aaaa</td>
+    </tr>
+    <tr>
+    <td>[★]</td>
+    <td>★のどれか1文字</td>
+    <td>[a-c]</td>
+    <td>a, b, c</td>
+    </tr>
+    <tr>
+    <td>★|★</td>
+    <td>★のどれか</td>
+    <td>a|b</td>
+    <td>a, b</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <h3>特殊シーケンス</h3>
+    <p>よく利用される正規表現のパターンは、特殊シーケンスと呼ばれます。</p>
+    <p>特殊シーケンスは、\（バックスラッシュ）を先頭に記載します。</p>
+    <table>
+    <tbody>
+    <tr>
+    <td>特殊シーケンス</td>
+    <td>説明</td>
+    <td>同じ意味の正規表現</td>
+    </tr>
+    <tr>
+    <td>\d</td>
+    <td>任意の数字</td>
+    <td>[0-9]</td>
+    </tr>
+    <tr>
+    <td>\D</td>
+    <td>任意の数字以外</td>
+    <td>[^0-9]</td>
+    </tr>
+    <tr>
+    <td>\s</td>
+    <td>任意の空白文字</td>
+    <td>[\t\n\r\f\v]</td>
+    </tr>
+    <tr>
+    <td>\S</td>
+    <td>任意の空白文字以外</td>
+    <td>[^\t\n\r\f\v]</td>
+    </tr>
+    <tr>
+    <td>\w</td>
+    <td>任意の英数字</td>
+    <td>[a-xA-Z0-9_]</td>
+    </tr>
+    <tr>
+    <td>\W</td>
+    <td>任意の英数字以外</td>
+    <td>[\a-xA-Z0-9_]</td>
+    </tr>
+    <tr>
+    <td>\A</td>
+    <td>文字列の先頭</td>
+    <td>^</td>
+    </tr>
+    <tr>
+    <td>\Z</td>
+    <td>文字列の末尾</td>
+    <td>&nbsp;$</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+改行以外の文字は、ドットです。
+--------------------------------------------
+
+
+直前の文字の0回以上の繰り返しは、アスタリスク
+-------------------------------------------------
+
+
+使用例
+*******
+
+5桁と7桁の番号を探す
+=====================
+
+7桁の数字で、3桁目のうしろにハイフンをいれても良い」というパターンは
+
+**\d{3}-?\d{4}$**
+
+で表現できます。
+
+
+re.match使用例
+=====================
+
+
+.. code-block:: python
+
+     import re
+
+     with open('input/location.csv', encoding='utf-8') as f:
+         for row in f:
+             row = row.strip()
+             columns = row.split(',')
+             if not re.match('\d{3}-?\d{2}(\d{2})?$',columns[1]):
+                 print(row)
+
+
+量指定子を2つ組み合わせて使うには()で括ります
+==============================================
+
+例: 66(7{2})? は 6677 または 66 にマッチします
+
+re.split
+=====================
+
+特定の文字で文字列を分割するのにも re.split を使用できます
+re.split(pattern, string) のように、第1引数は分割に使う文字列パターン、第2引数は対象の文字列データを指定します
+re.split は、分割できない場合にもリストを返します。例: re.split('-', 'hello') は ['hello'] を返します
+
+
+takeNo 使用例
+=====================
+
+
+..   code-block:: python
+
+     pathname = mel.eval('file -q -sn')
+     filename = os.path.basename(pathname)
+     direname = os.path.dirname(pathname)
+     SEARCH_PAT = '_[t]\d{2}'
+     sObj = re.search(SEARCH_PAT, filename)
+     if sObj:
+        cmds.setAttr("defaultRenderGlobals.imageFilePrefix", re.findall('_[t]\d{2}', filename)[0][1:] + "/%l/%l",
+                     type="string")

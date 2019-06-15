@@ -1,0 +1,13 @@
+algorythm_chatsheat
+========================
+
+https://qiita.com/sugulu/items/e3fc39f2e552f2355209
+
+.. figure:: algorythm_cheatsheat.png
+
+KMeans、MiniBatch-Kmeans（クラスタ分析）
+-----------------------------------------
+
+【Pythonとscikit-learnで機械学習：第9回】
+
+http://neuro-educator.com/ml9/

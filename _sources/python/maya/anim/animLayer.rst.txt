@@ -1,0 +1,15 @@
+
+animLayer
+##########
+
+maya animLayer
+****************
+
+
+.. literalinclude:: animLayer.py
+
+
+Spherical Coordinates with Warped Poles
+------------------------------------------
+
+https://medium.com/@k_serguei/spherical-coordinates-with-warped-poles-1b7f761541a6

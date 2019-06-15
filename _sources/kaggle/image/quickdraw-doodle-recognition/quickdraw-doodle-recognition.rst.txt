@@ -1,0 +1,41 @@
+quickdraw-doodle-recognition
+===============================
+
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+
+提出方法
+---------
+
+
+My Score
+---------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+study kernel
+--------------
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://www.kaggle.com/gaborfodor/greyscale-mobilenet-lb-0-892
+
+http://localhost:8888/tree/kaggle/quickdraw-doodle-recognition/code/greyscale-mobilenet-lb-0-892.ipynb

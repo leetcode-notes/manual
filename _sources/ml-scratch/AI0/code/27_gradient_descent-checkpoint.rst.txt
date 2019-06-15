@@ -1,0 +1,6 @@
+AI0 27_gradient_descent-checkpoint
+===============================================================================================
+
+.. raw:: html
+   :file: html/27_gradient_descent-checkpoint.html
+

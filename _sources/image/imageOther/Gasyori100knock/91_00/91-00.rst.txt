@@ -1,0 +1,49 @@
+91-00
+=============================
+
+.. toctree::
+   code/answer_91
+
+.. toctree::
+   code/answer_92
+
+.. toctree::
+   code/answer_93
+
+.. toctree::
+   code/answer_94
+
+.. toctree::
+   code/answer_95
+
+.. toctree::
+   code/answer_96
+
+.. toctree::
+   code/answer_97
+
+Q.98. 簡単な物体検出 (Step.2) スライディングウィンドウ + NN
+---------------------------------------------------------------
+
+NMS: Non-maximum suppressionという手法を用いて矩形の数を減らす。
+
+NMSとはスコアの高いBounding-boxのみを残す手法であり、アルゴリズムは以下の通り。
+
+Boundinb-boxの集合Bをスコアが高い順にソートする。
+スコアが最大のものをb0とする。
+b0と他のBounding-boxのIoUを計算する。IoUが閾値t以上のBounding-boxをBから削除する。
+B0は出力する集合Rに加え、Bから削除する。
+2-3をBがなくなるまで行う。
+Rを出力する。
+
+Q.98にNMS(閾値t=0.25)を組み込み、出力を描画
+
+
+.. toctree::
+   code/answer_98
+
+.. toctree::
+   code/answer_99
+
+.. toctree::
+   code/answer_100

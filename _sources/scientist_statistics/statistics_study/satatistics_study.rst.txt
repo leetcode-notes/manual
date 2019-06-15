@@ -1,0 +1,8 @@
+satatistics_study
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

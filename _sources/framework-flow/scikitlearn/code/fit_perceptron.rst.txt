@@ -1,0 +1,6 @@
+scikitlearn fit_perceptron
+===============================================================================================
+
+.. raw:: html
+   :file: html/fit_perceptron.html
+

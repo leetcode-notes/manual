@@ -1,0 +1,8 @@
+3_statistics
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

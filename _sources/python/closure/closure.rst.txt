@@ -1,0 +1,28 @@
+closure
+=================
+
+メタ文字
++++++++++++++++++++
+
+
+..   code-block:: python
+     :emphasize-lines: 2,3
+
+     def base(x):
+         def plus(y):
+             return x + y
+         return plus
+
+     plus = base(10)
+     print(plus(10))
+     print(plus(100))
+
+     ####iが書き換えられないように####
+     i = 10
+     def base():
+         def plus(y):
+             return i * y
+         return plus
+
+     print(plus(10))
+     print(plus(100))

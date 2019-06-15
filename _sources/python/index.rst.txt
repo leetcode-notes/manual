@@ -1,0 +1,15 @@
+Python
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+http://www.tohoho-web.com/python/index.html
+
+https://note.nkmk.me/
+
+https://twitter.com/nkmk_me
+

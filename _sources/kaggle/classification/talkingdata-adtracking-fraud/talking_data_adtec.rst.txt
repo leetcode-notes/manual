@@ -1,0 +1,48 @@
+talking_data_adtec
+=====================
+
+kaggle初心者の私が3ヶ月でソロゴールドを獲得した方法
+
+https://www.rco.recruit.co.jp/career/engineer/blog/kaggle_by_novice_engineer/
+
+courseraの講義でtarget encodingという手法を学んだので実装。
+
+
+https://www.coursera.org/learn/competitive-data-science
+
+更にcourseraの講義でkaggleの猛者によるハイパーパラメタの経験論を聞いたのでそれをもとに少し調整。 合わせてスコアがまあまあ伸びました。
+
+Neural Networkをtensorflowで組んでみましたがメモリが全然足りないのでとりあえず諦める。
+
+そろそろコンペ終了までの時間が気になり始め、確かtkmさんの動画で計画的にやることは重要みたいな事を言ってたので残り時間から逆算してTODOリストを作りました。
+
+戦略としてはこれ以上の特徴量エンジニアリングを捨てて、
+
+確実にスコアの伸びるパラメーター調整とモデルの配合(ensemble)をやることにしました。
+
+courseraの動画でパラメータを変えたモデルを配合するだけでスコアが伸びることが多い
+
+と学んだのでそれを試してみたかったのです。
+
+今回のコンペで力技の計算環境を整えることで次回以降にも活きると思ったという事情もあります。
+
+https://www.coursera.org/learn/competitive-data-science/lecture/7I3do/competition-mechanics
+
+
+Kaggle TalkingData Fraud Detection コンペの解法まとめ(基本編)
+----------------------------------------------------------------
+
+
+https://www.rco.recruit.co.jp/career/engineer/blog/kaggle_talkingdata_basic/
+
+
+共起行列
+---------------
+
+トピックモデルの応用
+-------------------------
+
+
+https://www.kaggle.com/cpmpml/ip-download-rates
+
+https://public-constructor.com/co-occurence-matrix-and-vector-cosine-similarity/

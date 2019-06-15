@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第1章: 準備運動 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="1_basic nlp100_00_1" href="code/nlp100_00_1.html"/>
+        <link rel="prev" title="言語処理 knockout" href="../Gesyori.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第1章: 準備運動</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">00. 文字列の逆順</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">01. 「パタトクカシーー」</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">02. 「パトカー」＋「タクシー」＝「パタトクカシーー」</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">03. 円周率</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">04. 元素記号</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#n-gram">05. n-gram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">06. 集合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">07. テンプレートによる文生成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">08. 暗号文</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#typoglycemia">09. Typoglycemia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第1章: 準備運動</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/1_basic/1_basic.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>第1章: 準備運動<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>00. 文字列の逆順<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>文字列&quot;stressed&quot;の文字を逆に（末尾から先頭に向かって）並べた文字列を得よ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_00_1.html">1_basic nlp100_00_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>01. 「パタトクカシーー」<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_01_1.html">1_basic nlp100_01_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>02. 「パトカー」＋「タクシー」＝「パタトクカシーー」<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_02_1.html">1_basic nlp100_02_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_02_2.html">1_basic nlp100_02_2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>03. 円周率<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&quot;Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.&quot;という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_03_1.html">1_basic nlp100_03_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>04. 元素記号<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_04_1.html">1_basic nlp100_04_1</a></li>
+</ul>
+</div>
+<p>&quot;Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.&quot;という文を単語に分解し，1, 5, 6, 7, 8, 9, 15, 16, 19番目の単語は先頭の1文字，それ以外の単語は先頭に2文字を取り出し，取り出した文字列から単語の位置（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．</p>
+</div>
+<div class="section" id="n-gram">
+<h2>05. n-gram<a class="headerlink" href="#n-gram" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，&quot;I am an NLPer&quot;という文から単語bi-gram，文字bi-gramを得よ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_05_1.html">1_basic nlp100_05_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>06. 集合<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>&quot;paraparaparadise&quot;と&quot;paragraph&quot;に含まれる文字bi-gramの集合を，それぞれ, XとYとして求め，XとYの和集合，積集合，差集合を求めよ．さらに，'se'というbi-gramがXおよびYに含まれるかどうかを調べよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_06_1.html">1_basic nlp100_06_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>07. テンプレートによる文生成<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>引数x, y, zを受け取り「x時のyはz」という文字列を返す関数を実装せよ．さらに，x=12, y=&quot;気温&quot;, z=22.4として，実行結果を確認せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_07_1.html">1_basic nlp100_07_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_07_2.html">1_basic nlp100_07_2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>08. 暗号文<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>与えられた文字列の各文字を，以下の仕様で変換する関数cipherを実装せよ．</p>
+<p>英小文字ならば(219 - 文字コード)の文字に置換
+その他の文字はそのまま出力
+この関数を用い，英語のメッセージを暗号化・復号化せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_08_1.html">1_basic nlp100_08_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="typoglycemia">
+<h2>09. Typoglycemia<a class="headerlink" href="#typoglycemia" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>スペースで区切られた単語列に対して，各単語の先頭と末尾の文字は残し，それ以外の文字の順序をランダムに並び替えるプログラムを作成せよ．ただし，長さが４以下の単語は並び替えないこととする．適当な英語の文（例えば&quot;I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind .&quot;）を与え，その実行結果を確認せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_09_1.html">1_basic nlp100_09_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_09_2.html">1_basic nlp100_09_2</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_00_1.html" class="btn btn-neutral float-right" title="1_basic nlp100_00_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../Gesyori.html" class="btn btn-neutral" title="言語処理 knockout" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

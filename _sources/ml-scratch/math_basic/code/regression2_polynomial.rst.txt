@@ -1,0 +1,6 @@
+math_basic regression2_polynomial
+===============================================================================================
+
+.. raw:: html
+   :file: html/regression2_polynomial.html
+

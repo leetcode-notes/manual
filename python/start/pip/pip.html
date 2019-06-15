@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pipinstall &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="start setup" href="../start.html"/>
+        <link rel="next" title="Cython" href="Cython/Cython.html"/>
+        <link rel="prev" title="ext" href="../ext/ext.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../start.html">start setup</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ext/ext.html">ext</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pipinstall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Cython/Cython.html">Cython</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../setup/setup.html">setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sys/sys.html">sys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../start.html">start setup</a> &raquo;</li>
+      
+    <li>pipinstall</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/start/pip/pip.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pipinstall">
+<span id="id1"></span><h1>pipinstall<a class="headerlink" href="#pipinstall" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">###ipywidgetsとBokeh使ってインタラクティブな可視化をする###</span>
+<span class="n">pipの場合</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">ipywidgets</span>
+<span class="n">jupyter</span> <span class="n">nbextension</span> <span class="n">enable</span> <span class="o">--</span><span class="n">py</span> <span class="n">widgetsnbextension</span>
+<span class="n">condaの場合</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ipywidgets</span>
+
+<span class="c1">###md###</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">recommonmark</span>
+
+<span class="c1">###複数ファイルにまたがったモジュールやパッケージをチェックできるツール###</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">pylint</span>
+
+<span class="c1">###python3###</span>
+<span class="n">_tflow_select</span><span class="o">-</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gpu</span>
+<span class="n">absl</span><span class="o">-</span><span class="n">py</span><span class="o">-</span><span class="mf">0.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">astor</span><span class="o">-</span><span class="mf">0.7</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">blas</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="n">mkl</span>
+<span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">-</span><span class="mf">2019.1</span><span class="o">.</span><span class="mi">23</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">certifi</span><span class="o">-</span><span class="mf">2019.3</span><span class="o">.</span><span class="mi">9</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">cffi</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36h7a1dbc1_1</span>
+<span class="n">click</span><span class="o">-</span><span class="mf">7.0</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">cudatoolkit</span><span class="o">-</span><span class="mf">9.0</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">cudnn</span><span class="o">-</span><span class="mf">7.1</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">cuda9</span><span class="o">.</span><span class="mi">0</span><span class="n">_0</span>
+<span class="n">flask</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36_1</span>
+<span class="n">freetype</span><span class="o">-</span><span class="mf">2.9</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">ha9979f8_1</span>
+<span class="n">gast</span><span class="o">-</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">graphviz</span><span class="o">-</span><span class="mf">2.38</span><span class="o">-</span><span class="n">hfd603c8_2</span>
+<span class="n">grpcio</span><span class="o">-</span><span class="mf">1.16</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36h351948d_1</span>
+<span class="n">h5py</span><span class="o">-</span><span class="mf">2.8</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36h3bdd7fb_2</span>
+<span class="n">hdf5</span><span class="o">-</span><span class="mf">1.10</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">hac2f561_1</span>
+<span class="n">icc_rt</span><span class="o">-</span><span class="mf">2019.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">h0cc432a_1</span>
+<span class="n">intel</span><span class="o">-</span><span class="n">openmp</span><span class="o">-</span><span class="mf">2019.1</span><span class="o">-</span><span class="mi">144</span>
+<span class="n">itsdangerous</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">jinja2</span><span class="o">-</span><span class="mf">2.10</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">jpeg</span><span class="o">-</span><span class="mi">9</span><span class="n">b</span><span class="o">-</span><span class="n">hb83a4c4_2</span>
+<span class="n">keras</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">keras</span><span class="o">-</span><span class="n">applications</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">keras</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">keras</span><span class="o">-</span><span class="n">preprocessing</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">5</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">libpng</span><span class="o">-</span><span class="mf">1.6</span><span class="o">.</span><span class="mi">36</span><span class="o">-</span><span class="n">h2a8f88b_0</span>
+<span class="n">libprotobuf</span><span class="o">-</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">h7bd577a_0</span>
+<span class="n">libtiff</span><span class="o">-</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">10</span><span class="o">-</span><span class="n">hb898794_2</span>
+<span class="n">markdown</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">markupsafe</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36he774522_0</span>
+<span class="n">mkl</span><span class="o">-</span><span class="mf">2019.1</span><span class="o">-</span><span class="mi">144</span>
+<span class="n">mkl_fft</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">py36h6288b17_0</span>
+<span class="n">mkl_random</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36h343c172_0</span>
+<span class="n">ninja</span><span class="o">-</span><span class="mf">1.8</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36he980bc4_1</span>
+<span class="n">numpy</span><span class="o">-</span><span class="mf">1.15</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">py36h19fb1c0_0</span>
+<span class="n">numpy</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="mf">1.15</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">py36hc3f5095_0</span>
+<span class="n">olefile</span><span class="o">-</span><span class="mf">0.46</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">openssl</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">1</span><span class="n">b</span><span class="o">-</span><span class="n">he774522_1</span>
+<span class="n">pillow</span><span class="o">-</span><span class="mf">5.4</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36hdc69c19_0</span>
+<span class="n">pip</span><span class="o">-</span><span class="mf">18.1</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">protobuf</span><span class="o">-</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36h33f27b4_0</span>
+<span class="n">pycparser</span><span class="o">-</span><span class="mf">2.19</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">python</span><span class="o">-</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">h9f7ef89_2</span>
+<span class="n">pytorch</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py3</span><span class="o">.</span><span class="mi">6</span><span class="n">_cuda90_cudnn7_1</span>
+<span class="n">pyyaml</span><span class="o">-</span><span class="mf">3.13</span><span class="o">-</span><span class="n">py36hfa6e2cd_0</span>
+<span class="n">scipy</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36h29ff71c_2</span>
+<span class="n">setuptools</span><span class="o">-</span><span class="mf">40.6</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">six</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">sqlite</span><span class="o">-</span><span class="mf">3.25</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">he774522_0</span>
+<span class="n">tensorboard</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36he025d50_0</span>
+<span class="n">tensorflow</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gpu_py36ha5f9131_0</span>
+<span class="n">tensorflow</span><span class="o">-</span><span class="n">base</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gpu_py36h6e53903_0</span>
+<span class="n">tensorflow</span><span class="o">-</span><span class="n">gpu</span><span class="o">-</span><span class="mf">1.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">h0d30ee6_0</span>
+<span class="n">termcolor</span><span class="o">-</span><span class="mf">1.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py36_1</span>
+<span class="n">tk</span><span class="o">-</span><span class="mf">8.6</span><span class="o">.</span><span class="mi">8</span><span class="o">-</span><span class="n">hfa6e2cd_0</span>
+<span class="n">torchvision</span><span class="o">-</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py_3</span>
+<span class="n">vc</span><span class="o">-</span><span class="mf">14.1</span><span class="o">-</span><span class="n">h0510ff6_4</span>
+<span class="n">vs2015_runtime</span><span class="o">-</span><span class="mf">14.15</span><span class="o">.</span><span class="mi">26706</span><span class="o">-</span><span class="n">h3a45250_0</span>
+<span class="n">werkzeug</span><span class="o">-</span><span class="mf">0.14</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">wheel</span><span class="o">-</span><span class="mf">0.32</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">py36_0</span>
+<span class="n">wincertstore</span><span class="o">-</span><span class="mf">0.2</span><span class="o">-</span><span class="n">py36h7fe50ca_0</span>
+<span class="n">xz</span><span class="o">-</span><span class="mf">5.2</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">h2fa13f4_4</span>
+<span class="n">yaml</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">hc54c509_2</span>
+<span class="n">zlib</span><span class="o">-</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">h62dcd97_3</span>
+<span class="n">zstd</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">h508b16e_0</span>
+
+
+<span class="c1">####PyQt4-4.11.4-cp27-cp27m-win32.whl認識しなかったため手動インストール</span>
+<span class="c1">####python のbit数の違い</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;face_recognition-1.2.3-py2.py3-none-any.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;PyQt4-4.11.4-cp27-cp27m-win32.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pywin32-223.1-cp27-cp27m-win32.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;beautifulsoup4-4.6.0-py2-none-any.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pathlib2-2.3.2-py2.py3-none-any.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;pathlib-1.0.1-py2.py3-none-any.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;requests-2.19.1-py2.py3-none-any.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;tkinter3000-1.1.1-cp27-cp27m-win32.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;py2exe-0.6.10a1-cp27-none-win32.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;cx_Freeze-5.1.1-cp27-cp27m-win32.whl&quot;</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="n">apiclient</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">google</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">client</span>
+
+<span class="n">pip</span> <span class="n">install</span> <span class="s2">&quot;beautifulsoup4-4.6.0-py3-none-any.whl&quot;</span>
+
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../../web/sphinx/sphinx.html#sphinx-markdown"><span class="std std-ref">sphinx markdown</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mayaは64bitバージョンのpython
+
+パッケージリストの表示
+pip list
+
+pip list --o
+更新あるよというパッケージだけが出力される
+
+パッケージのインストール
+pip install hogehoge
+python -m pip install --upgrade pip
+
+python -m pip install --force-reinstall --upgrade pip
+
+python -m pip install --force-reinstall --upgrade PyYAML
+
+アップグレードは-Uオプションを付ける
+pip install hogehoge -U
+
+アンインストール
+pip uninstall hogehoge
+
+#######################
+pip-reviewで一括アップデート
+
+pip install pip-review
+
+更新があるパッケージを表示
+
+pip-review
+微妙に文言は変わるがpip list -oと同じ結果が得られる。
+
+ipykernel==4.4.1 is available (you have 4.3.1)
+ipython==5.1.0 is available (you have 5.0.0)
+jupyter-client==4.4.0 is available (you have 4.3.0)
+jupyter-core==4.1.1 is available (you have 4.1.0)
+略
+--autoオプションを付けると更新があるパッケージを自動的に更新してくれる。
+
+pip-review --auto
+インタラクティブに更新を行う場合は--intaractiveオプションを付けて実行。これは更新する？しない？と聞いてくるので、お好みで更新ができる。
+
+pip-review --interactive
+あとはpip-review自体を忘れないようにしないと、、、、
+
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Cython/Cython.html">Cython</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Cython/Cython.html" class="btn btn-neutral float-right" title="Cython" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ext/ext.html" class="btn btn-neutral" title="ext" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

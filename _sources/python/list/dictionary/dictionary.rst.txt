@@ -1,0 +1,173 @@
+dictionary
+#################
+
+内包表記
+***********
+
+.. code:: python
+
+    a = ["a", "b", "c"]
+    b = ['d', 'e', 'f']
+    dic = {}
+    for m, n in zip(a, b):
+        dic[m] = n
+    print(dic)
+
+    d = {m: n for m, n in zip(a, b)}
+    print(d)
+
+順番変わらない
+***************
+
+.. code:: python
+
+    from collections import OrderedDict
+
+    input_lines = input().split(" ")
+    dic = OrderedDict()
+    for m in input_lines:
+        if not m in dic:
+            dic[m] = 1
+        else:
+            dic[m] += 1
+    for value,item in dic.items():
+        print(value,item)
+
+辞書の数を更新
+*****************
+
+.. code:: python
+
+    # 文房具ごとの在庫数
+    items = {'ボールペン': 12,
+             'ノート': 3,
+             'のり': 5}
+    item = 'ボールペン'
+    items[item] -= 5
+
+    for item, num in items.items():
+        print(item, num)
+
+辞書の要素を追加
+**************************
+
+..   code-block:: python
+
+     skills = {"職業":"戦士", "体力":100, "魔法力":200, "ゴールド":380}
+     # この下で、辞書にデータを追加してみよう
+     skills["属性"] = "炎"
+     print(skills)
+
+
+辞書に要素を更新する
+++++++++++++++++++++++++
+
+..   code-block:: python
+
+     skills = {"職業":"戦士", "体力":100, "魔法力":200, "ゴールド":380}
+     print(skills)
+     # この下で、ハッシュを更新してみよう
+     skills["職業"] = "魔法使い"
+     print(skills)
+
+
+辞書に要素を更新する
+++++++++++++++++++++++++
+
+..   code-block:: python
+
+     skills = {"職業":"戦士", "体力":100, "魔法力":200, "ゴールド":380}
+     print(skills)
+     # この下で、ハッシュを更新してみよう
+     skills["職業"] = "魔法使い"
+     print(skills)
+
+
+辞書をループで処理する
+++++++++++++++++++++++++
+
+..   code-block:: python
+
+     enemies = {"ザコ":"スライム", "中ボス":"ドラゴン", "ラスボス":"魔王"}
+     print(enemies)
+     print(enemies["中ボス"])
+
+     for rank in enemies:
+         print(enemies[rank] + "が、あらわれた！")
+     for (rank, enemy) in enemies.items():
+         print(rank + "の" + enemy + "が、あらわれた！")
+
+
+辞書の値の最大値・最小値とそのキーを取得
+******************************************
+
+辞書のキー（key）の最大値・最小値を取得
++++++++++++++++++++++++++++++++++++++++++
+
+..   code-block:: python
+
+     d = {'a': 100, 'b': 20, 'c': 50, 'd': 100, 'e': 80}
+
+     max_v = max(d.values())
+     print(max_v)
+     # 100
+     source: dict_value_max_min.py
+
+     min_v = min(d.values())
+     print(min_v)
+     # 20
+
+
+辞書の値（value）の最大値・最小値を取得
++++++++++++++++++++++++++++++++++++++++++
+
+
+..   code-block:: python
+
+     max_v = max(d.values())
+     print(max_v)
+     # 100
+     source: dict_value_max_min.py
+
+     min_v = min(d.values())
+     print(min_v)
+     # 20
+
+辞書の値が最大・最小となるキーを取得
++++++++++++++++++++++++++++++++++++++++++
+
+
+..   code-block:: python
+
+     max_k = max(d, key=d.get)
+     print(max_k)
+     # a
+
+     min_k = min(d, key=d.get)
+     print(min_k)
+     # b
+
+辞書の値が最大・最小となるキーと値を同時に取得
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+..   code-block:: python
+
+     max_kv = max(d.items(), key=lambda x: x[1])
+     print(max_kv)
+     # ('a', 100)
+
+     print(type(max_kv))
+     # <class 'tuple'>
+
+
+タプルの　:ref:`unpack <unpack>` を利用して、それぞれ別々の変数に代入することもできる。
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+..   code-block:: python
+
+    max_k, max_v = max(d.items(), key=lambda x: x[1])
+    print(max_k)
+    # a
+
+    print(max_v)
+    # 100

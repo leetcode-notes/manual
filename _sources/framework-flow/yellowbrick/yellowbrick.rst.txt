@@ -1,0 +1,34 @@
+yellowbrick
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+dataset ダウンロード
+----------------------
+
+$ python -m yellowbrick.download
+
+
+$ pip install yellowbrick
+
+Yellowbrickはアクティブなプロジェクトであり、より多くのビジュアライザーとアップデートで新しいリリースを定期的に公開しています。
+Yellowbrickを最新バージョンにアップグレードするには、pipを次のように使用します。
+
+$ pip install -U yellowbrick
+
+また、 -Uフラグを使用して、scickit-learn、matplotlib、またはYellowbrickで最新のバージョンにうまくいく他のサードパーティのユーティリティを更新することもできます。
+
+Anacondaを使用している場合（Windowsユーザには推奨）、condbrユーティリティを利用してYellowbrickをインストールすることができます。
+
+conda install -c districtdatalabs yellowbrick
+
+しかし、YellowbrickをLinuxにAnacondaとともにインストールする既知のバグがあることに注意してください。
+
+
+
+https://www.scikit-yb.org/en/latest/index.html
+

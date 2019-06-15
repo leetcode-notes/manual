@@ -1,0 +1,24 @@
+flask
+=============================
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+
+keras-picselect
+------------------
+
+cnnで作成した予測ファイルで画像判定webアプリ
+
+flaskを使用してローカル環境でテスト
+
+.. toctree::
+	keras-picselect/web_predictfile_keras
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+

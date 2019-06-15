@@ -1,0 +1,39 @@
+AfterEffectsTool manual
+========================
+
+toolフォルダ構成
+
+.. figure:: img/folder_05_tools.png
+   :width: 300px
+
+
+
+.. warning::
+
+    G:/05_tool/javascript/からの絶対パスで作成しているツールがあります。
+    全機能使用する為には移動しないで下さい。
+
+
+.. note::
+
+    以下ツールを使用して設定を行ってください。
+
+    G:/05_tool/javascript/jsxsetup/jsxsetup.exe
+
+:ref:`ツール使用方法 <AESETUP>`
+
+ツールセットアップ 説明動画
+-----------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8HXehi-xQ_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    */*
+
+

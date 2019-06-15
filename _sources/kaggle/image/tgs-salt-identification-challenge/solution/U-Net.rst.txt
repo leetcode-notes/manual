@@ -1,0 +1,189 @@
+U-Net
+=============================
+
+まずモデルについてですが、セグメンテーションで代表的なU-Net[1]を使用しました。
+
+論文中の下図のモデルに対して、以下のようにモデルを変更します。
+
+encoder: ResNet34
+decoder: conv3x3, BatchNorm2d, ReLU -> transposed conv -> concat
+
+.. figure:: U-Net.png
+
+
+model: resnet34(ImageNet pretrained) + u-net, remove max pooling
+image size: 128x128 (101x101 + edge padding)
+augmentation: horizontal flip, random shift/scale/rotate, random brightness/contrast
+optimizer: sgd(lr:0.01, momentum:0.9, weight_decay:1e-4)
+lr_scheduler: CosineAnnealingLR(T_max: 20, eta_min: 0.001)
+loss: Binary Cross Entropy
+TTA: horizontal flip
+model, loss, image sizeは今後変更していきますが、それ以外は最終日まで固定です。この手法でcross validationを行っていきますが、訓練画像は塩領域の大きさにばらつきがある（全く塩がない、９割以上塩など）ため、塩領域の大きさごとに訓練画像を以下のように分割します。
+
+salt_size == 0
+0 < salt_size <= 101*101 / 4
+101*101 / 4 < salt_size <= 101*101 / 2
+101*101 / 2 < salt_size <= 101*101*3 / 4
+101*101*3 / 4 < salt_size <= 101*101
+上記の方法で訓練画像を分割し、cross validationを行います。この手法でpublicLB 0.833でした。
+
+
+１ヶ月〜２ヶ月
+このあたりから、手法が大きく変わります。取り入れた手法は以下になります。
+
+Spatial and Channel Squeeze and Channel Excination[2]
+
+Feature Pyramid Attention for Semantic Segmentation[3]
+
+Snapshot Ensemble[4]
+ Lovasz Hinge Loss[5]
+
+以上の手法を簡単に紹介します。
+
+Spatial and Channel Squeeze and Channel Excination
+　特徴マップをチャンネルごとに適応的に重み付けを行うSENet[6]がありますが、本手法はSENetを拡張し、空間方向のアテンションを加えました。下図が提案手法です。下図上部が今回提案された空間方向のアテンション機構であるsSE(spatial Squeeze and Excination)です。H×W×Cの特徴マップに対し1×1の畳み込みを適用(Squeeze)し、特徴マップの全体的な特徴が抽出されたH×W×1のテンソル出力を出力します。出力されたテンソルに対し、シグモイド関数が適用(Exicination)され、特徴マップのピクセルごとの重みが出力される。このピクセルごとの重みを用いて特徴マップをスケーリングする。下図下部のcSE(channel Squeeze and Excination)はSENetで提案されたチャンネル毎の重みを用いた特徴マップのスケーリングです。提案手法ではsSE, cSEをそれぞれ特徴マップに適用し、足し合わせることで空間・チャンネル両方向のアテンションを実現しています。
+
+f:id:phalanks:20181222195824p:plain
+
+Feature Pyramid Attention for Semantic Segmentation
+　著者は従来のセグメンテーションモデルに対して、DeepLabのASPPモジュールはDilated convolutionにより局所的な情報が失われること、PSPNetのSpatial Pyramid Poolingはpoolingによりピクセルの位置情報が失われることを論文中で問題提起しています。この問題に対して、下図のようなFeature Pyramid Attentionを提案しました。32×32×Cの特徴マップに対して7×7, 5×5, 3×3の畳み込みを下図のようにピラミッド構造で適用し、足し合わせることで異なるスケールのコンテキストの情報を得られます。これを入力特徴マップに掛け合わせることでコンテキストに基づいた特徴選択を実現しています。
+
+f:id:phalanks:20181222211145p:plain
+
+FPAに加えて、Global Attention Upsample(GAU)を提案。下図のように、高レベルの特徴マップのコンテキストを用いて、低レベルの特徴マップに対してチャンネル毎に重み付けを行います。f:id:phalanks:20181222211632p:plain
+
+Snapshot Ensemble
+　複数のニューラルネットのアンサンブルは１つのニューラルネットよりも性能は向上しますが、計算コストが大きい問題があります。Snapshot Ensembleは１つのニューラルネットの学習において、複数の異なる局所解を得られるよう学習することで、計算コストを増やさずアンサンブルの効果を得られる手法です。
+
+　下図右が提案手法です。学習率を減らして局所解に近づけた後に、急激に学習率を上げて局所解から抜け出し再度学習を行うことで、先ほど得た局所解とは異なる局所解が得られます。このサイクルを繰り返して複数の異なる局所解を得ることがこの手法の狙いです。
+
+f:id:phalanks:20181223173307p:plain
+
+Lovasz Hinge Loss
+モデル構築・学習
+　この期間に様々なモデルを作りましたが、final submitに使用する３つのモデルを紹介します。
+
+・モデル1
+
+f:id:phalanks:20181223183808p:plain
+
+開始〜１ヶ月で紹介したベースモデルを改良しています。encoderのResNet34の各レイヤのトップにscSE Moduleを置いています。また、decoder側ではhypercolumnsを使用しています。
+　
+
+・モデル2
+
+f:id:phalanks:20181223184335p:plain
+
+モデル１のcenter blockをFPAに変更しました。それだけです。
+　
+
+・モデル3
+
+f:id:phalanks:20181223184547p:plain
+
+モデル2のdecoderをGAUに変更していますが、GAUを改良したGAUv2を使用しています。GAUv2は以下になります。
+
+f:id:phalanks:20181223191503p:plain
+
+チャンネル方向だけでなく空間方向のアテンションを取り入れました。
+
+　以上の３つのモデルを学習していきます。学習の詳細は以下になります。１ヶ月前のベースラインモデルの学習方法との異なる部分は太字表記しています。
+
+model-encoder: resnet34(ImageNet pretrained), remove max pooling
+image size: 128x128 (101x101 + edge padding)
+augmentation: horizontal flip, random shift/scale/rotate, random brightness/contrast
+optimizer: sgd(lr:0.01, momentum:0.9, weight_decay:1e-4)
+lr_scheduler: CosineAnnealingLR(T_max: 20, eta_min: 0.001)
+loss: Lovasz hinge loss
+6 snapshot ensembling (50epoch per cycle)
+TTA: horizontal flip
+上記の方法で学習を行いました。学習結果は以下になります。
+
+モデル１： publicLB 0.855
+モデル2: publicLB 0.858
+モデル3: publicLB 0.860
+bestfitting降臨
+　bestfitting氏が降臨しました。つまり、そういうことです。はい、その通りです。
+
+２ヶ月〜最終日
+　ついにコンペ終了まで１ヶ月です。計画していたとおり、テスト画像を活用して学習していきます。
+
+multi step pseudo labeling
+　pseudo labelingは反教師あり学習の１つで、テスト画像の予測結果のうち予測精度が高いテスト画像を訓練画像に追加する手法です。本来は予測精度が高いデータのみを使いますが、今回はすべてのデータを使用します。この手法はTensorFlow Speech Recognition ChallengeのLittle Boat氏の3rd place solutionを参考にしました。手法としては以下になります。
+
+pseudo labelだけでモデルを事前学習
+訓練画像を用いてモデルをfinetuning
+上記のようにpseudo labelのみを用いて学習することで、セグメンテーションタスクにおける地質画像を用いた事前学習済みモデルが得られます。しかし、この状態はpseudo labelにoverfitしています。なので訓練画像を用いてfinetuningを行います。
+
+　今回は上記の手法を２段階で行うmulti step pseudo labelingを行います。学習の流れは以下になります。
+
+訓練画像のみを用いてmodel1を学習、pseudo label作成
+1.で作成したpseudo label、訓練画像を用いてmodel2を学習、pseudo label作成
+2.で作成したpseudo label、訓練画像を用いてmodel3を２つ学習
+以上の流れで学習を行います。各学習を具体的に紹介します。述べてない部分はと同じです。
+
+・1. の学習
+
+    model: model1(encoder: ResNet34, remove maxpooling)
+
+　image_size: 256x256(resize 101x101 -> 224x224, edge padding)
+
+    loss: lovasz hinge loss
+
+    6 snapshot ensembling (50 epoch per each cycle)
+
+・2. の学習
+
+    model: model2(encoder: ResNet34, remove maxpooling)
+
+    image_size: 256x256(resize 101x101 -> 224x224, edge padding)
+
+    loss: lovasz hinge loss
+
+    pretrain with pseudo label: 150 epochs(50 epoch per each cycle), save best weight
+
+    finetune with train data: 6 snapshot ensembling (50 epoch per each cycle)
+
+・3. の学習（１つ目）
+
+    model: model3(encoder: ResNet18, remove maxpooling, conv7x7 -> conv3x3)
+
+    image_size: 128x128(edge padding)
+
+    loss: lovasz hinge loss
+
+    pretrain with pseudo label: 150 epochs(50 epoch per each cycle), save best weight
+
+    finetune with train data: 6 snapshot ensembling (50 epoch per each cycle)
+
+・3. の学習（2つ目）： １つ目との差異は太字で表記
+
+    model: model3(encoder: ResNet34, remove maxpooling, conv7x7 -> conv3x3)
+
+    image_size: 128x128(resize 101x101 -> 128x128)
+
+    loss: lovasz hinge loss
+
+    pretrain with pseudo label: 150 epochs(50 epoch per each cycle), save best weight
+
+    finetune with train data: 6 snapshot ensembling (50 epoch per each cycle)
+
+1.~3.の学習期間は約３週間です。この学習によるスコアは以下になります。
+
+モデル１: publicLB 0.858499 privateLB 0.875374(200位)
+モデル2: publicLB 0.873033 privateLB 0.890913(17位)
+モデル3 : publicLB 0.878516 privateLB 0.894651(７位)
+モデル2, モデル3のensemble: publicLB 0.878416 privateLB 0.895344(4位)
+モデル2とモデル3のensembleを最終的な予測として使いました。
+
+　１ヶ月前にこの学習を開始したので残りの期間はかなり暇でした。１日１回tensorboardを確認し、残りはキングダムハーツをしてました。
+
+チームマージ、data leak
+　モデル２の学習が終わったのが終了２週間前で、その時点での私の順位は７位でした。その時に当時６位のb.e.s.氏にチームマージを頼まれ、ノリでOKしました。記事のはじめにも書きましたが、チームマージ後の取り組みはこちらになります。興味のある方はどうぞ。
+
+
+
+　また、チームマージ後にデータリークがあることに気づきます。b.e.s.氏にslackで「パズルやったらスコア上がった笑」みたいなメッセージが送られてきて、「パズルってなんぞ？」ってなりました。１ヶ月前からキングダムハーツに熱中し、コンペのカーネル、ディスカッションを見ていなかったので、パズルの存在にこの段階で気づきます。パズルに関してはこちらのディスカッションに詳しく書いてます。クソみたいなリークです。控えめに言って○ねです。しかし、このパズルを私のsubmissionに適用することで（気づいたらb.e.s.が適用してた）privateLBが0.895344（4位）→0.896114（１位）に上がりました。終盤は参加者全員がこのパズルを死ぬ気でやってました。
+
+おわりに
+　計画通りに進めて優勝出来たのは良かったが、取り組みの過程では詰めが甘い部分が多々あったのでその点は反省して次に活かしたい。今回は画像コンペに参加しましたが、テーブルデータや音声、自然言語などのコンペにも参加していく予定です。

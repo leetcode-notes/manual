@@ -1,0 +1,111 @@
+LightGBM Takami Sato
+=========================
+
+LightGBM ハンズオン - もう一つのGradient Boostingライブラリ
+
+https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb
+
+NIPS2017読み会 LightGBM: A Highly Efficient Gradient Boosting Decision Tree
+
+1. NIPS2017論文紹介
+----------------------
+
+LightGBM: A Highly Efficient Gradient Boosting Decision Tree
+
+Takami Sato NIPS2017論文読み会@クックパッド 2018/1/27NIPS2017論文読み会@クックパッド 1
+
+2. アジェンダ • 導入＆近年の
+
+GBDTの状況
+
+• GBDTとは
+
+• LightGBMとは
+
+– GOSS (Gradient-based One-side Sampling)
+
+– EFB (Exclusive Feature Bundling)
+
+ • 数値実験
+
+• まとめ＆私見 2018/1/27NIPS2017論文読み会@クックパッド 2
+
+4. 宣伝: Kaggler Slackぜひ来てね！ 2018/1/27NIPS2017論文読み会@クックパッド 4 https://kaggler-ja.herokuapp.com/
+
+5. 2018/1/27NIPS2017論文読み会@クックパッド 5 今日はKaggleを席巻するGBDTの実装 LightGBMの論文を紹介します
+
+6. GBDT（Xgboost） がKaggleを席巻 （２０１６年） 2018/1/27NIPS2017論文読み会@クックパッド
+
+6 More than half of the winning solutions in machine learning challenges hosted at Kaggle adopt XGBoost
+
+http://www.kdnuggets.com/2016/03/xgboost-implementing-winningest-kaggle-algorithm-spark-flink.html
+
+7. Awesome XGBoost • Vlad Sandulescu, Mihai Chiru, 1st place of the KDD Cup 2016 competition. Link to the arxiv paper.
+
+• Marios Michailidis, Mathias Müller and HJ van Veen, 1st place of the Dato Truely Native? competition. Link to the Kaggle interview.
+
+• Vlad Mironov, Alexander Guschin, 1st place of the CERN LHCb experiment Flavour of Physics competition. Link to the Kaggle interview.
+
+• Josef Slavicek, 3rd place of the CERN LHCb experiment Flavour of Physics competition. Link to the Kaggle interview.
+
+• Mario Filho, Josef Feigl, Lucas, Gilberto, 1st place of the Caterpillar Tube Pricing competition. Link to the Kaggle interview.
+
+• Qingchen Wang, 1st place of the Liberty Mutual Property Inspection. Link to the Kaggle interview.
+
+• Chenglong Chen, 1st place of the Crowdflower Search Results Relevance. Link to the winning solution.
+
+ • Alexandre Barachant (“Cat”) and Rafał Cycoń (“Dog”), 1st place of the Grasp-and-Lift EEG Detection. Link to the Kaggle interview.
+
+ • Halla Yang, 2nd place of the Recruit Coupon Purchase Prediction Challenge. Link to the Kaggle interview.
+
+ • Owen Zhang, 1st place of the Avito Context Ad Clicks competition. Link to the Kaggle interview.
+
+ • Keiichi Kuroyanagi, 2nd place of the Airbnb New User Bookings. Link to the Kaggle interview.
+
+ • Marios Michailidis, Mathias Müller and Ning Situ, 1st place Homesite Quote Conversion. Link to the Kaggle interview.
+
+ 2018/1/27NIPS2017論文読み会@クックパッド
+
+7 Awesome XGBoost: Machine Learning Challenge Winning Solutions
+
+https://github.com/dmlc/xgboost/tree/master/demo#machine-learning-challenge-winning-solutions
+
+8. 現在いろんなGBDT実装が存在
+
+ • Scikit-learn • qGBRT • gbm on R • Spark MLLib • H2O • XGBoost • LightGBM • Catboost (本論文では比較されず) 2018/1/27NIPS2017論文読み会@クックパッド 8
+
+9. 現在いろんなGBDT実装が存在
+
+• Scikit-learn • qGBRT • gbm on R • Spark MLLib • H2O • XGBoost • LightGBM • Catboost (本論文では比較されず) 2018/1/27NIPS2017論文読み会@クックパッド
+
+9 xgboostが元論文で圧勝 [Chen+ 2016] 今回割愛するが、 経験的にはxgboostより遅く、 スコアも劇的に改善した経験はない。
+
+10. LightGBMは2017年末に登場してから一気にメジャーに 2018/1/27NIPS2017論文読み会@クックパッド 10 https://www.kdnuggets.com/2017/08/lessons-benchmarking-fast-machine-learning-algorithms.html 本論文が出る前から検証がされて、速度・精度共にxgboostを上回る
+11. LightGBMはいったいなんなのか？ 2018/1/27NIPS2017論文読み会@クックパッド 11 Decision Tree Random Forest Gradient Boosting Tree ?LightGBM 本論文を読み解いて解説します。
+12. ここから色々持ってきてます 2018/1/27NIPS2017論文読み会@クックパッド 12 XGBoostとかの詳しい解説はこちらを参照下さい。 https://www.slideshare.net/tkm2261/overview-of-tree-algorithms-from-decision-tree-to-xgboost
+13. 結論 LightGBM 2018/1/27NIPS2017論文読み会@クックパッド 13 = GBDT (Gradient Boosting Decision Tree) GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling) ＋ ＋ LightGBMはソフトウェア名ではなくアルゴリズム名
+14. 論文内表記 2018/1/27NIPS2017論文読み会@クックパッド 14 ただ正確にはXGBoost＋GOSS+EFBが正しいかも(後述)
+15. 論文内表記 2018/1/27NIPS2017論文読み会@クックパッド 15 論文の構成も １章: Introduction ２章: GBDT ３章: GOSS ４章: FEB ５章: 数値実験 なのでGBDTとGOSSとFEBがわかればLightGBMわかったといえる
+16. でも、、、 LightGBM 2018/1/27NIPS2017論文読み会@クックパッド 16 = GBDT (Gradient Boosting Decision Tree) GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling) ＋ ＋ GOSSってデフォルトだとoffだったり
+17. GBDTとは 2018/1/27NIPS2017論文読み会@クックパッド 17
+18. Gradient Boosting Decision Tree (GBDT) とは The Elements of Statistical Learning 2nd edition, p. 359 2018/1/27NIPS2017論文読み会@クックパッド 18 psedo-residual 各反復で負の勾配にフィットする学習を行う
+19. 決定木の分岐点の求め方 2018/1/27NIPS2017論文読み会@クックパッド 19 Pre-sorted Algorithm 特徴の値の中点やpercentile点など、 分岐となりえる点を列挙し分岐毎に探査。 正確だが重い Histogram-based Algorithm ヒストグラムを作ってそのビンを分岐単位とする。 早いが損失最小の分岐とは限らない。 Pre-sorted Algorithm Histogram-based Algorithm XGBoost ◯ （デフォルト） ◯ LightGBM ✕ ◯ qGBRT ✕ ◯ Scikit-learn ◯ ✕ Gbm on R ◯ ✕ ◆ 対応状況
+20. XGBoostとは GBDT自体の提案は２００1年 [Friedman 2001]、それにXGBoostは、 2018/1/27NIPS2017論文読み会@クックパッド 20 • 損失関数から直接の分岐スコアを求める手法を提案 • 疎な特徴に対する高速な分岐手法の提案 • スケールする圧倒的な実装
+21. GBDT自体の提案は２００1年 [Friedman 2001]、それにXGBoostは、 • 損失関数から直接の分岐スコアを求める手法を提案 • 疎な特徴に対する高速な分岐手法の提案 • スケールする圧倒的な実装 LightGBMは 2018/1/27NIPS2017論文読み会@クックパッド 21 XGBoostの多分一番の貢献 LightGBMにも引き継がれる LightGBMではまた別の方法で 疎構造を利用（EFB等） 後発の有利を活かしてLightGBMのほう が実装がキレイな気がする。 どちらも凄い開発者たち なのでXGBoost＋GOSS+EFBが感覚的には合う
+22. LightGBMとは 2018/1/27NIPS2017論文読み会@クックパッド 22
+23. LightGBMの特徴である 2018/1/27NIPS2017論文読み会@クックパッド 23 本発表ではこの後、 を順次解説していきます。 GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling)
+24. 木系学習器の学習を高速化するには 2018/1/27NIPS2017論文読み会@クックパッド 24 一般論として、木系学習器の学習を高速に行うには の２パターンが存在します • データを減らす • 特徴を減らす
+25. 木系学習器の学習を高速化するには 2018/1/27NIPS2017論文読み会@クックパッド 25 そのため各手法は こういう対応になっています。 • データを減らす • 特徴を減らす GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling)
+26. GOSS (Gradient-based One-side Sampling) • AdaBoostみたいにsample weightはGBDTにない • 各反復の勾配（疑似残差）で代用しよう • 十分勾配が小さいデータは無視して良さそう (well-trained) • 単純にデータを取り除くとデータの分布がおかしくなる • サンプリングした分を割り戻して整合性をとろう • 勾配の絶対値の上位𝑎 × 100 %と、 残りのデータの𝑏 × 100%をサンプリングして各反復で使用 サンプリングした側の勾配は 1−𝑎 𝑏 倍して使用 2018/1/27NIPS2017論文読み会@クックパッド 26 GOSSの思想
+27. 分岐スコアが分散の場合 2018/1/27NIPS2017論文読み会@クックパッド 27 左側分岐の分散 右側分岐の分散 この辺の決定木のアルゴリズムが思い出せない方は 次ページの例を参照 コレが分岐前の分散より 一番下がる分割を分岐点にする
+28. 参考：分岐スコアが分散の場合の分岐 2018/1/27NIPS2017論文読み会@クックパッド 28 Regression sex survived age female 1 29 male 1 1 female 0 2 male 0 30 female 0 25 male 1 48 female 1 63 male 0 39 female 1 53 male 0 71 Predict age of a person from Titanic Dataset. 491.0 calculate variances weighted average Variance sex Var #people male 524.56 5 female 466.24 5 survived Var #people 0 502.64 5 1 479.36 5 495.4 Varience: 498.29 7.29 Down 2.11 Down
+29. GOSSによる近似分岐スコア 2018/1/27NIPS2017論文読み会@クックパッド 29 勾配の大きいデータA 分散の小さいサンプリング されたデータB サンプリングした分 を割り戻し 左側分岐と同様 • 勾配の絶対値の上位𝑎 × 100 %と、 残りのデータの𝑏 × 100%をサンプリングして各反復で使用 サンプリングした側の勾配は 1−𝑎 𝑏 倍して使用
+30. GOSSによる近似誤差 2018/1/27NIPS2017論文読み会@クックパッド 30 • 分岐においてデータが両側に𝑂( 𝑛)個以上ある場合は、 第二項が支配的になる • つまり𝑂( 𝑛)で近似誤差は減っていくので、非常に良い近似との こと
+31. GOSSによる近似誤差 2018/1/27NIPS2017論文読み会@クックパッド 31 • 𝑎 = 0のときはランダムサンプリングとおなじになるが、 • 基本的に𝐶0,𝛽 > 𝐶 𝑎,𝛽−𝑎となる限りは誤差が小さくなる。 つまり単純なサンプリングよりは大体良い近似となりそう の場合
+32. 一般的な損失関数について 本論文では分散による分岐スコアしか扱って無いが、 おそらく内部ではXGBoostと同じ分岐スコアをつかってるはずなので 2018/1/27NIPS2017論文読み会@クックパッド 32 Gain of xgboost’s criterion when a node splits to 𝐿 𝐿 and 𝐿 𝑅 恐らくヘッシアンについても 同じ割り戻しの操作をする と思われる
+33. EFB (Exclusive Feature Bundling) • 分岐点の探索が一番重い。特徴の数だけやる必要 • 大規模データでは疎な特徴がとても多く、 非ゼロ要素のパターンに全く被りが無いことも多い(exclusive) （one-hot encodingした特徴等） • 非ゼロ要素が被らない特徴はまとめて(bundling)、 一つの特徴と扱っても特に問題は発生しない • まとめれば纏めるほど計算量は下がる 𝑂 #𝑑𝑎𝑡𝑎 × #𝑓𝑒𝑎𝑡𝑢𝑟𝑒 → 𝑂(#𝑑𝑎𝑡𝑎 × #𝑏𝑢𝑛𝑑𝑙𝑒) 2018/1/27NIPS2017論文読み会@クックパッド 33 EFBの思想
+34. Bundleの数を一番小さくしたい 出来る限り特徴を纏めるほど計算量は下がるが、 2018/1/27NIPS2017論文読み会@クックパッド 34 グラフ 𝐺 = (𝑉, 𝐸)を、 𝑉 : 特徴の集合 𝑒𝑖𝑗 ∈ 𝐸: 特徴iと特徴ｊの非ゼロ要素のパターンに全く被りが無い とすると、この問題はグラフ彩色問題と等価なのでNP-hard Theorem 4.1
+35. Boundle発見の貪欲法 • 基本アイデアはグラフの次数が多い特徴量から順にbundleを 作成していく貪欲法 • 『非ゼロ要素のパターンに全く被りが無い』ではなく、 ある一定の被りまでは許す • グラフの次数は特徴が多い場合に計算コストが重いので、 非ゼロ要素数の少ない順に貪欲法をする 『非ゼロ要素数の少ない』 ≒ 『被りが少ない』 • ヒストグラムのビンをずらしてbundleから各特徴へ復元出来る ようにする • 𝑂 #𝑓𝑒𝑎𝑡𝑢𝑟𝑒2 かかるが最初に一回やるだけなので問題ない 2018/1/27NIPS2017論文読み会@クックパッド 35
+36. 数値実験 2018/1/27NIPS2017論文読み会@クックパッド 36 LightGBM GBDT + BOSS + FEB lgb_baseline Without BOSS & FEB xgb_his Xgboost with histogram Algorithm xgb_exa Xgboost with Pre-sorted Algorithm • LightGBMが最も高速・高精度 • EFBが速度向上にかなり寄与
+37. GOSSとSGB（Stochastic Gradient Boosting）との比較 2018/1/27NIPS2017論文読み会@クックパッド 37 GOSSの方がsampling ratioに関わらず精度が高い
+38. まとめ＆私見 • LightGBM は GBDT + GOSS + EFB • GOSSで全データを走査せずに分岐スコアを算出 – でもLightGBMのデフォルトはgossがオフ。これは一体。。。 – 論文の理論解析がGOSSだけなので執筆上の都合かも • EFBで特徴量をまとめて計算量を削減 – EFBはhistogram-based algorithmと結びついているので、 LightGBMにpre-sorted algorithmはない • 速度を可能な限り上げるために実装を考えた感じが、 行間からにじみ出てておりKagglerとして感謝しかない 2018/1/27NIPS2017論文読み会@クックパッド 38

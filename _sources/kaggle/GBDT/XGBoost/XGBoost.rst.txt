@@ -1,0 +1,11 @@
+XGBoost
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+
+https://qiita.com/kenmatsu4/items/226f926d87de86c28089

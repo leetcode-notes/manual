@@ -1,0 +1,6 @@
+requests okinawa_weather
+===============================================================================================
+
+.. raw:: html
+   :file: html/okinawa_weather.html
+

@@ -1,0 +1,8 @@
+image competition
+=====================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

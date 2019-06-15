@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>DigitRcognizer &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="image competition" href="../image.html"/>
+        <link rel="next" title="machine kaggle Kuzushiji" href="../Kuzushiji/Kuzushiji.html"/>
+        <link rel="prev" title="image competition" href="../image.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GBDT/GBDT.html">GBDT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-engineering/feature-engineering.html">feature engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../image.html">image competition</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DigitRcognizer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">コンペ概要</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">データの種類とタスク</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">評価方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">提出方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my-score">My Score</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#study-kernel">study kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#link-jupyter">Link(参考リンク・jupyterリンク等)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Kuzushiji/Kuzushiji.html">machine kaggle Kuzushiji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LANL-Earthquake-Prediction/LANL_Earthquake-Prediction.html">kaggle LANL-Earthquake-Prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data-science-bowl-2018/data-science-bowl-2018.html">data-science-bowl-2018</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../imet-2019-fgvc6/imet.html">imet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../keras-pretrain-model-weights/keras-pretrain-model-weights.html">keras-pretrain-model-weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quickdraw-doodle-recognition/quickdraw-doodle-recognition.html">quickdraw-doodle-recognition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tagged-anime-illustrations/tagged-anime-illustrations.html">tagged-anime-illustrations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tgs-salt-identification-challenge/tgs-salt-identification-challenge.html">tgs-salt-identification-challenge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../image.html">image competition</a> &raquo;</li>
+      
+    <li>DigitRcognizer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/image/DigitRecognizer/DigitRecognizer.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="digitrcognizer">
+<h1>DigitRcognizer<a class="headerlink" href="#digitrcognizer" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="sidebar">
+<p class="sidebar-title">目次</p>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#id2" id="id6">コンペ概要</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id7">データの種類とタスク</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id8">評価方法</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id9">提出方法</a></p></li>
+<li><p><a class="reference internal" href="#my-score" id="id10">My Score</a></p></li>
+<li><p><a class="reference internal" href="#study-kernel" id="id11">study kernel</a></p></li>
+<li><p><a class="reference internal" href="#link-jupyter" id="id12">Link(参考リンク・jupyterリンク等)</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id6">コンペ概要</a><a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id7">データの種類とタスク</a><a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id8">評価方法</a><a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id9">提出方法</a><a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="my-score">
+<h2><a class="toc-backref" href="#id10">My Score</a><a class="headerlink" href="#my-score" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="study-kernel">
+<h2><a class="toc-backref" href="#id11">study kernel</a><a class="headerlink" href="#study-kernel" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="link-jupyter">
+<h2><a class="toc-backref" href="#id12">Link(参考リンク・jupyterリンク等)</a><a class="headerlink" href="#link-jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Introduction to CNN Keras - 0.997 (top 6%) star 2637</p>
+<p><a class="reference external" href="https://www.kaggle.com/yassineghouzam/introduction-to-cnn-keras-0-997-top-6">https://www.kaggle.com/yassineghouzam/introduction-to-cnn-keras-0-997-top-6</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Kuzushiji/Kuzushiji.html" class="btn btn-neutral float-right" title="machine kaggle Kuzushiji" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../image.html" class="btn btn-neutral" title="image competition" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

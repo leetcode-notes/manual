@@ -1,0 +1,6 @@
+scikitlearn lesson_predict_stock
+===============================================================================================
+
+.. raw:: html
+   :file: html/lesson_predict_stock.html
+

@@ -1,0 +1,6 @@
+05_semaseg semaseg_test_tensorflow_slim
+===============================================================================================
+
+.. raw:: html
+   :file: html/semaseg_test_tensorflow_slim.html
+

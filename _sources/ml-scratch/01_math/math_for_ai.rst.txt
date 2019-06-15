@@ -1,0 +1,10 @@
+.. _math_for_ai:
+
+math for ai
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

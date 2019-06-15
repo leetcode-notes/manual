@@ -1,0 +1,42 @@
+chatbot
+=============================
+
+宮沢賢治の小説をコーパスとして使用し、学習させたものを
+対話型アプリとして作成しました。
+次の文章を予測できるようにSeq2Seqのモデルを訓練しました。
+
+対話コーパスの前処理
+-----------------------
+
+.. toctree::
+
+    code/dialogue_corpus
+
+
+
+対話の学習
+---------------
+
+.. toctree::
+
+    code/learn_dialogue
+
+対話の検証
+-------------
+
+.. toctree::
+
+    code/test_dialogue
+
+
+Seq2Seqのモデルを使い、Jupyter Notebook上で賢治botを構築
+-----------------------------------------------------------
+
+.. toctree::
+
+    code/chatbot_jupyter
+
+参考リンク
+-------------
+
+https://www.udemy.com/ai-nlp-bot/learn/v4/overview

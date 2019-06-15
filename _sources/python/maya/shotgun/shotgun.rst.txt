@@ -1,0 +1,19 @@
+shotgun
+=========
+
+shotgun_training
+
+https://support.shotgunsoftware.com/hc/ja/articles/115002525494-SG-Learning-Developer-Training
+
+タブログ 初期設定
+
+https://tablogweb.wordpress.com/2018/05/24/shotgun-api%E3%80%80%E6%BA%96%E5%82%99/
+
+shotgun_unite3D
+https://pakapaza.shotgunstudio.com/projects/
+
+https://pakapaza.shotgunstudio.com/page/35#ApiUser_60
+
+Shotgun APIを使ってカスタムイベントを記録する
+
+https://qiita.com/it_ks/items/f2eefcdb2b0a5a421f23#%E5%82%99%E8%80%83

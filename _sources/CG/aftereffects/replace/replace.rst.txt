@@ -1,0 +1,21 @@
+Replace Tool
+#################
+
+extReplace
+---------------
+
+* 選択しているフッテージの拡張子を変更します。
+
+
+takeNoReplace
+---------------
+
+* 選択しているフッテージのtakeNoを変更します。
+
+例：変更前パス
+
+G:\03_shots\s01\c030\AE\3d_images\t01\rideGZP_A_COL\rideGZP_A_COL.****.png
+
+例：変更後パス
+
+G:\03_shots\s01\c030\AE\3d_images\t02\rideGZP_A_COL\rideGZP_A_COL.****.png

@@ -1,0 +1,10 @@
+music jenre
+=============================
+
+librosaを使用した音楽ジャンル分類
+-----------------------------------
+
+.. toctree::
+
+    code/Music_genre_classification
+

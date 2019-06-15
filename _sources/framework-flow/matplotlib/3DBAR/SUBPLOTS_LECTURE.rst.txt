@@ -1,0 +1,6 @@
+matplotlib SUBPLOTS_LECTURE
+===============================================================================================
+
+.. raw:: html
+   :file: html/SUBPLOTS_LECTURE.html
+

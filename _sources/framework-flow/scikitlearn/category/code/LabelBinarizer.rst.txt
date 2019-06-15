@@ -1,0 +1,6 @@
+category LabelBinarizer
+===============================================================================================
+
+.. raw:: html
+   :file: html/LabelBinarizer.html
+

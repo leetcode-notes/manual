@@ -1,0 +1,6 @@
+math_basic classification3_logistic_polynomial_regression
+===============================================================================================
+
+.. raw:: html
+   :file: html/classification3_logistic_polynomial_regression.html
+

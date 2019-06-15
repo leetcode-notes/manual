@@ -1,0 +1,9 @@
+start setup
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+

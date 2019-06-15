@@ -1,0 +1,5 @@
+Begginer 085Cotoshidama
+---------------------------------------------------------------------------
+
+.. literalinclude:: 085Cotoshidama.py
+

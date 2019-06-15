@@ -1,0 +1,42 @@
+PyTorch
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+参考リンク
+--------------
+
+pytorch超入門
+________________
+
+https://qiita.com/miyamotok0105/items/1fd1d5c3532b174720cd
+
+install
+____________
+
+https://pytorch.org/get-started/locally/#anaconda
+
+CUDA 9.0
+
+To install PyTorch via Anaconda, and you are using CUDA 9.0, use the following conda command:
+
+conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
+
+CUDA 8.x
+
+conda install pytorch torchvision cudatoolkit=8.0 -c pytorch
+
+CUDA 10.0
+
+conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
+
+
+conda install pytorch torchvision -c soumith
+win
+conda install -c peterjc123 pytorch
+

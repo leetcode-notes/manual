@@ -1,0 +1,32 @@
+71-80
+=============================
+
+.. toctree::
+   code/answer_71
+
+.. toctree::
+   code/answer_72
+
+.. toctree::
+   code/answer_73
+
+.. toctree::
+   code/answer_74
+
+.. toctree::
+   code/answer_75
+
+.. toctree::
+   code/answer_76
+
+.. toctree::
+   code/answer_77
+
+.. toctree::
+   code/answer_78
+
+.. toctree::
+   code/answer_79
+
+.. toctree::
+   code/answer_80

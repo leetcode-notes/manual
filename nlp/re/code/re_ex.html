@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RE &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="文字列操作 re" href="../re.html"/>
+        <link rel="next" title="re re_module" href="re_module.html"/>
+        <link rel="prev" title="re code preprocessing" href="preprocessing.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Gesyori100knock/Gesyori.html">言語処理 knockout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../re.html">文字列操作 re</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../re.html#code">code</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="AG_preprocessing.html">re AG_preprocessing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AG_regular_expression.html">re AG_regular_expression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_7_4_re_{}.html">re automatron_7_4_re_{}</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_re_7_3_multiple_groups.html">re automatron_re_7_3_multiple_groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_re_7_5_findall.html">re automatron_re_7_5_findall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_re_7_6_文字集合.html">re automatron_re_7_6_文字集合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_re_multiple_groups.html">re code automatron_re_multiple_groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="automatron_re_phone.html">re automatron_re_phone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="preprocessing.html">re code preprocessing</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">RE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">5桁と7桁の番号を探す</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#re-match">re.match使用例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">量指定子を2つ組み合わせて使うには()で括ります</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#re-split">re.split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#takeno">takeNo 使用例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="re_module.html">re re_module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../re.html#id1">参考サイト</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../re.html">文字列操作 re</a> &raquo;</li>
+      
+    <li>RE</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/re/code/re_ex.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="re">
+<h1>RE<a class="headerlink" href="#re" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>メタ文字<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<table>
+<tbody>
+<tr>
+<td>メタ文字</td>
+<td>説明</td>
+<td>指定例</td>
+<td>合致する</td>
+</tr>
+<tr>
+<td>.</td>
+<td>任意の一文字</td>
+<td>a.c</td>
+<td>abc, acc, aac</td>
+</tr>
+<tr>
+<td>^</td>
+<td>行の先頭</td>
+<td>^abc</td>
+<td>abcdef</td>
+</tr>
+<tr>
+<td>$</td>
+<td>行の末尾</td>
+<td>abc$</td>
+<td>defabc</td>
+</tr>
+<tr>
+<td>*</td>
+<td>0回以上の繰り返し</td>
+<td>ab*</td>
+<td>a, ab, abb, abbb</td>
+</tr>
+<tr>
+<td>+</td>
+<td>1回以上の繰り返し</td>
+<td>ab+</td>
+<td>ab, abb, abbb</td>
+</tr>
+<tr>
+<td>?</td>
+<td>0回または1回</td>
+<td>ab?</td>
+<td>a, ab</td>
+</tr>
+<tr>
+<td>{m}</td>
+<td>m回の繰り返し</td>
+<td>a{3}</td>
+<td>aaa</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>m〜n回の繰り返し</td>
+<td>a{2, 4}</td>
+<td>aa, aaa, aaaa</td>
+</tr>
+<tr>
+<td>[★]</td>
+<td>★のどれか1文字</td>
+<td>[a-c]</td>
+<td>a, b, c</td>
+</tr>
+<tr>
+<td>★|★</td>
+<td>★のどれか</td>
+<td>a|b</td>
+<td>a, b</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3>特殊シーケンス</h3>
+<p>よく利用される正規表現のパターンは、特殊シーケンスと呼ばれます。</p>
+<p>特殊シーケンスは、\（バックスラッシュ）を先頭に記載します。</p>
+<table>
+<tbody>
+<tr>
+<td>特殊シーケンス</td>
+<td>説明</td>
+<td>同じ意味の正規表現</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>任意の数字</td>
+<td>[0-9]</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>任意の数字以外</td>
+<td>[^0-9]</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>任意の空白文字</td>
+<td>[\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>任意の空白文字以外</td>
+<td>[^\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>任意の英数字</td>
+<td>[a-xA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>任意の英数字以外</td>
+<td>[\a-xA-Z0-9_]</td>
+</tr>
+<tr>
+<td>\A</td>
+<td>文字列の先頭</td>
+<td>^</td>
+</tr>
+<tr>
+<td>\Z</td>
+<td>文字列の末尾</td>
+<td>&nbsp;$</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id2">
+<h2>改行以外の文字は、ドットです。<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>直前の文字の0回以上の繰り返しは、アスタリスク<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h3>使用例<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>5桁と7桁の番号を探す<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>7桁の数字で、3桁目のうしろにハイフンをいれても良い」というパターンは</p>
+<p><strong>d{3}-?d{4}$</strong></p>
+<p>で表現できます。</p>
+</div>
+<div class="section" id="re-match">
+<h1>re.match使用例<a class="headerlink" href="#re-match" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input/location.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;\d{3}-?\d{2}(\d{2})?$&#39;</span><span class="p">,</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h1>量指定子を2つ組み合わせて使うには()で括ります<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>例: 66(7{2})? は 6677 または 66 にマッチします</p>
+</div>
+<div class="section" id="re-split">
+<h1>re.split<a class="headerlink" href="#re-split" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>特定の文字で文字列を分割するのにも re.split を使用できます
+re.split(pattern, string) のように、第1引数は分割に使う文字列パターン、第2引数は対象の文字列データを指定します
+re.split は、分割できない場合にもリストを返します。例: re.split('-', 'hello') は ['hello'] を返します</p>
+</div>
+<div class="section" id="takeno">
+<h1>takeNo 使用例<a class="headerlink" href="#takeno" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pathname</span> <span class="o">=</span> <span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s1">&#39;file -q -sn&#39;</span><span class="p">)</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+<span class="n">direname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">pathname</span><span class="p">)</span>
+<span class="n">SEARCH_PAT</span> <span class="o">=</span> <span class="s1">&#39;_[t]\d{2}&#39;</span>
+<span class="n">sObj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">SEARCH_PAT</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">sObj</span><span class="p">:</span>
+   <span class="n">cmds</span><span class="o">.</span><span class="n">setAttr</span><span class="p">(</span><span class="s2">&quot;defaultRenderGlobals.imageFilePrefix&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;_[t]\d{2}&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="s2">&quot;/%l/%l&quot;</span><span class="p">,</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="re_module.html" class="btn btn-neutral float-right" title="re re_module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="preprocessing.html" class="btn btn-neutral" title="re code preprocessing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

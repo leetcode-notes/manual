@@ -1,0 +1,6 @@
+RandomErasing random_erasing
+===============================================================================================
+
+.. raw:: html
+   :file: html/random_erasing.html
+

@@ -1,0 +1,6 @@
+PyTorch code DeepNeuralNetworks-MNIST
+===============================================================================================
+
+.. raw:: html
+   :file: html/DeepNeuralNetworks-MNIST.html
+

@@ -1,0 +1,53 @@
+PConv
+=============================
+
+Style Transferにおけるスタイルの合成とは、輪郭といったピクセルレベルの合成ではなく、
+画⾵といったより⾼いレベルでの合成。
+これが可能なのは、CNNが低次元から⾼次元への特徴量の変換を⾏っている為。
+
+Tool
+---------
+
+* Google Collaboratory TPUを使用
+
+* tensorflow
+
+* Keras
+
+* vgg19
+
+損失関数
+-----------
+
+Content-Loss
+    合成画像のピクセル値が、元の画像のピクセル値が同じになるような損失関数
+Style-Loss
+    合成画像の画⾵が、スタイル画像の画⾵と似るような損失関数
+
+6個の損失関数の合成
+_____________________
+
+* Valid Loss : マスク部分以外のy_true, y_predの⽐較
+
+* Hole Loss : マスク部分のy_true, y_predの⽐較
+
+* Perceptual Loss : VGG-16の特徴量の(y_true, y_pred)の距離＋(y_true, y_comp)の距離の⽐較
+
+* Style Loss 1 : VGG-16の特徴量のグラム⾏列のy_true, y_predの⽐較
+
+* Style Loss 2 : VGG-16の特徴量のグラム⾏列のy_true, y_compの⽐較
+
+* Total Variation Loss : マスク領域を平滑化したときの、maskとy_compの滑らかさの指標（後述）
+
+画像生成コード
+-----------------
+
+.. toctree::
+	code/svhn_pconv
+
+
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+

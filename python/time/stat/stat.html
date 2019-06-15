@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>stat ファイル更新日時の比較 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="time(時間系)" href="../time.html"/>
+        <link rel="next" title="数値・文字列・型" href="../../types/type.html"/>
+        <link rel="prev" title="datetime" href="../datetime/datetime.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../time.html">time(時間系)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../datetime/code.html">code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../datetime/datetime.html">datetime</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">stat ファイル更新日時の比較</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../time.html">time(時間系)</a> &raquo;</li>
+      
+    <li>stat ファイル更新日時の比較</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/time/stat/stat.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stat">
+<span id="id1"></span><h1>stat ファイル更新日時の比較<a class="headerlink" href="#stat" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>stat.ST_MODE
+Iノードの保護モード。</p>
+<p>stat.ST_INO
+Iノード番号。</p>
+<p>stat.ST_DEV
+Iノードが存在するデバイス。</p>
+<p>stat.ST_NLINK
+該当する Iノードへのリンク数。</p>
+<p>stat.ST_UID
+ファイルの所持者のユーザ ID。</p>
+<p>stat.ST_GID
+ファイルの所持者のグループ ID。</p>
+<p>stat.ST_SIZE
+通常ファイルではバイトサイズ; いくつかの特殊ファイルでは処理待ちのデータ量。</p>
+<p>stat.ST_ATIME
+最後にアクセスした時刻。</p>
+<p>stat.ST_MTIME
+最後に変更された時刻。</p>
+<p>stat.ST_CTIME
+オペレーティングシステムから返される&quot;ctime&quot;。
+あるOS(Unixなど)では最後にメタデータが更新された時間となり、
+別のOS(Windowsなど)では作成時間となります
+(詳細については各プラットフォームのドキュメントを参照してください)。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+<span class="n">stattime</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s1">&#39;stat_ex1.py&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span>
+<span class="nb">print</span> <span class="n">stattime</span>
+<span class="n">dtim</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="s1">&#39;stat_ex1.py&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+<span class="n">dcutime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">dtim</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y/%m/</span><span class="si">%d</span><span class="s1">  %H:%M:%S&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">dtim</span>
+<span class="nb">print</span> <span class="n">dcutime</span>
+<span class="nb">print</span> <span class="n">key</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+
+<span class="k">def</span> <span class="nf">copysmooth_up</span><span class="p">():</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">srcpath</span> <span class="o">=</span> <span class="s2">&quot;G:/02_assets/chara/&quot;</span>
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">srcpath</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;normal.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;smooth.txt&#39;</span><span class="p">]:</span>
+                <span class="n">srcpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+                <span class="n">dstpath</span> <span class="o">=</span> <span class="n">srcpath</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;02_assets&quot;</span><span class="p">,</span> <span class="s2">&quot;00_master/KGS/02_assets&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">srcpath</span><span class="p">):</span>
+                    <span class="n">stat_src</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">srcpath</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+                    <span class="n">last_modified_src</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat_src</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">dstpath</span><span class="p">):</span>
+                        <span class="n">stat_dst</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">dstpath</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+                        <span class="n">last_modified_dst</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat_dst</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">last_modified_src</span> <span class="o">&gt;</span> <span class="n">last_modified_dst</span><span class="p">:</span>
+                            <span class="c1"># print(last_modified_src.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))</span>
+                            <span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">srcpath</span><span class="p">,</span> <span class="n">dstpath</span><span class="p">)</span>
+                            <span class="n">mes1</span> <span class="o">=</span> <span class="s2">&quot;overwrited </span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">srcpath</span><span class="p">)</span>
+                            <span class="n">cmds</span><span class="o">.</span><span class="n">confirmDialog</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Confirm&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">mes1</span><span class="p">,</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">])</span>
+                            <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+                            <span class="nb">print</span>
+                            <span class="s2">&quot;1&quot;</span>
+                        <span class="k">elif</span> <span class="n">last_modified_src</span> <span class="o">==</span> <span class="n">last_modified_dst</span><span class="p">:</span>
+                            <span class="c1"># mes1 = &quot;2\n{}&quot;.format(srcpath)</span>
+                            <span class="c1"># cmds.confirmDialog(title=&#39;Confirm&#39;, message=mes1, button=[&#39;Close&#39;])</span>
+                            <span class="nb">print</span>
+                            <span class="s2">&quot;2&quot;</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="c1"># mes1 = &quot;3{}\n file is newer in 00_master &quot;.format(srcpath)</span>
+                            <span class="c1"># cmds.confirmDialog(title=&#39;Confirm&#39;, message=mes1, button=[&#39;Close&#39;])</span>
+                            <span class="nb">print</span>
+                            <span class="s2">&quot;3&quot;</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">dstpath</span><span class="p">)):</span>
+                            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">dstpath</span><span class="p">))</span>
+                        <span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">srcpath</span><span class="p">,</span> <span class="n">dstpath</span><span class="p">)</span>
+                        <span class="n">mes1</span> <span class="o">=</span> <span class="s2">&quot;copy </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">srcpath</span><span class="p">)</span>
+                        <span class="c1"># cmds.confirmDialog(title=&#39;Confirm&#39;, message=mes1, button=[&#39;Close&#39;])</span>
+    <span class="n">mes1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> file copyed&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="n">cmds</span><span class="o">.</span><span class="n">confirmDialog</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Confirm&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">mes1</span><span class="p">,</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">])</span>
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">renamefile</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">scnum</span><span class="p">):</span>
+    <span class="n">writepath</span> <span class="o">=</span> <span class="s1">&#39;G:/05_tool/renderset/&#39;</span> <span class="o">+</span> <span class="n">scnum</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">writepath</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">writepath</span><span class="p">)</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">writepath</span> <span class="o">+</span> <span class="n">scnum</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">{}</span><span class="s1">_renderset.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+        <span class="c1"># print filename</span>
+        <span class="n">stat_src</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">)</span>
+        <span class="n">last_modified_src</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">stat_src</span><span class="p">)</span>
+        <span class="c1"># print last_modified_src</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+        <span class="c1"># print dt</span>
+        <span class="k">if</span> <span class="n">last_modified_src</span> <span class="o">&gt;</span> <span class="n">dt</span><span class="p">:</span>
+            <span class="nb">print</span>
+            <span class="n">filename</span>
+            <span class="nb">print</span>
+            <span class="n">last_modified_src</span>
+        <span class="k">if</span> <span class="n">last_modified_src</span> <span class="o">&lt;</span> <span class="n">dt</span><span class="p">:</span>
+            <span class="c1"># print filename</span>
+            <span class="c1"># print last_modified_src</span>
+            <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;G:/05_tool/renderset/base.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+                    <span class="n">column</span> <span class="o">=</span> <span class="n">s</span>
+                    <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;c000&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span>
+                    <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;S00&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span> <span class="o">+</span> <span class="n">scnum</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                    <span class="n">fw</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+            <span class="n">fw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../types/type.html" class="btn btn-neutral float-right" title="数値・文字列・型" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../datetime/datetime.html" class="btn btn-neutral" title="datetime" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

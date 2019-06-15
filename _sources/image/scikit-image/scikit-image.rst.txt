@@ -1,0 +1,57 @@
+scikit-image
+=============================
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+導入とコンセプト
+-------------------
+
+画像は Numpy 配列 np.ndarray
+
+image:	np.ndarray
+
+pixels:配列の値: a[2, 3]
+
+channels:配列の次元
+
+image encoding:	dtype (np.uint8, np.uint16, np.float)
+
+filters:
+
+関数 (numpy, skimage, scipy)
+
+ソーベルフィルタ
+-------------------
+
+ソーベルフィルタ(Sobel filter)は、輪郭検出に用いられる空間フィルタです。
+
+ソーベルフィルタは、プレウィットフィルタ（Prewitt filter）を改良したものです。
+
+プレウィットフィルタは「平滑化フィルタ」と「微分フィルタ」を組み合わせることで、
+ノイズの影響を抑えながら輪郭を抽出します。
+
+その平滑化フィルタをかける際に「注目画素との距離に応じて重み付けを変化させた」ものが
+ソーベルフィルタです。
+これにより自然に平滑化を行うことが出来ます。
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://towardsdatascience.com/image-segmentation-using-pythons-scikit-image-module-533a61ecc980
+
+https://scikit-image.org/
+
+https://github.com/scikit-image/scikit-image.git
+
+http://www.turbare.net/transl/scipy-lecture-notes/packages/scikit-image/index.html

@@ -1,0 +1,32 @@
+Various Data UPTools
+######################
+
+
+.. figure:: mm_VariousDataup_tools.png
+   :width: 400px
+
+
+機能
+******************************************
+
+各種データアップツール
+
+
+使用方法
+***********
+
+
+.. figure:: 0000.png
+   :width: 300px
+
+
+#. **All Data Copy To MasterData**：
+
+    全キャラのrenderSet_smooth.txt、renderSet_normal.txtファイルを全て00_masterへアップします。更新日時が新しい物のみ上書きを行います。
+
+
+
+#. **All Data Copy From MasterData**
+
+    各キャラ毎のrenderSet_smooth.txt、renderSet_normal.txtファイルを00_masterから所定の位置へアップします。更新日時が新しい物のみ上書きを行います。
+

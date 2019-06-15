@@ -1,0 +1,6 @@
+Chi-squaredtest Chi-squaredtest
+===============================================================================================
+
+.. raw:: html
+   :file: html/Chi-squaredtest.html
+

@@ -1,0 +1,6 @@
+1_perceptron perceptron_sigmoid_bias
+===============================================================================================
+
+.. raw:: html
+   :file: html/perceptron_sigmoid_bias.html
+

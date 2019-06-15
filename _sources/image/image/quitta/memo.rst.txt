@@ -1,0 +1,115 @@
+quitta memo
+=============================
+
+流行りの画像生成技術GANを調査し、役に立つシナリオがないか考えてみる
+_______________________________________________________________________
+
+https://qiita.com/tomohiku/items/7fd8ef0d8f0ec5e60374
+
+画像系AI技術
+
+分類Classification
+______________________
+
+写真単位に分類する技術。写真の全体感で分類し、タグ付けしたりして使う。
+
+Object Detection
+
+写真の中の対象物を検出する技術。大量の写真の中から、「車」が写っている写真だけ抽出するとか。
+
+Semantic Segmentation
+
+写真に写っているものを範囲別に分ける。上の半分は空で、右側にはビル、下は道路、左には大型トラックとか範囲を判別する。自動運転関連でよくでてくる技術
+
+生成
+_______
+
+線画から主に景色を画像生成するGAN（分類のSemantic Segmentationの逆回しのような画像生成）
+
+pix2pix 2017/01~
+
+線画から画像生成する技術。画質が256ｘ256までで荒い。
+
+pix2pixHD 2017/12~ by NVIDIA
+
+pix2pixの解像度拡張版。2048×1024という高解像度で生成できる。
+
+gau GAN (SPADE) 2019/3~ by NVIDIA
+
+pix2pixHDの生成する画像の精度向上版。より本物に近い画像が生成できる。
+
+物体（主に顔）を生成し、その形状を弄る（顔年齢を変える等)ことができるGAN ※実在する人物の顔写真を弄ることもできる
+
+Star GAN 2017/11~
+
+大量の顔画像を学習し、架空の顔を生成する。また性別度合いや若さ度合いをパラメータで切替えられる。
+
+transparent latent-space GAN 2018/09~
+
+StarGANの亜種。使ってみてもStar GANより優れている点があるのかどうかわからない。しかし、紹介記事が多く知名度が高い。たぶんUIが良かったとかそういう理由で有名になったのだと思われる。確かにjupyterで使えるなどデモ使いやすさはStartGanよりいいかも。
+
+Style GAN 2019/02~ by NVIDIA
+
+高解像度かつ本物と見分けがつかない高品質な顔写真が生成できる。さらに車や動物、ベッドなど物体も生成できる。２つの写真を合成し、特徴を移植することができる。
+
+線画から顔を弄る（輪郭、メガネ）GAN (上記２パターンの特徴を足したようなGAN)
+
+SC-FE GAN 2019/02
+
+線画から顔を生成したり、顔をイラストで書き換えて、メガネを消したりアクセサリーをつけたりできる。
+
+２つの物体の特徴入れ替えるGAN
+
+Cycle GAN 2017/04~
+
+馬を縞馬に変えるなど、特徴を別の似た物体に移すことができる。
+
+Insta GAN 2018/11
+
+Cycle GANの改良版。Cycle GANの入れ替えは形状を変化させれないのに対して、こちらは形状を変えられる。とはいえ正直、まだ精度や解像度が低いかなという印象。これからに期待。
+
+服の生成に特化したファッション業界用のGAN
+
+Fashion GAN 2016/11
+
+服の着せ替えに特化したファッション業界用のGAN。
+
+
+http://localhost:8888/tree/framework-flow/artist/chainer-DCGAN
+
+「pix2pix」というスタイル変換手法では、塗り絵のように、輪郭がピッタリ合っているようなペア画像のみ変換可能。
+
+一方、CycleGANは厳密なペアでなくても、柔軟に変換可能な手法
+
+
+https://github.com/mattya/chainer-DCGAN
+
+https://github.com/soumith/dcgan.torch
+
+https://qiita.com/mattya/items/e5bfe5e04b9d2f0bbd47
+
+https://qiita.com/mattya/items/e5bfe5e04b9d2f0bbd47
+
+https://qiita.com/rezoolab/items/5cc96b6d31153e0c86bc
+
+
+GANはパラメータ調整が非常に難しいことで有名です（同じ生成モデルでいうとVAEがのほうが簡単）。実装が間違っていないのならパラメータの調整がうまくいっていないことが原因だと思われます。なのでいま実装されている元祖GANの実装例を調べてみて、それと同じデータセット、パラメータをご自身のモデルにいれてみて適切に出力が出るかを見てみると良いかもしれません。
+WGANやDCGAN等GANは派生型が非常に多いですが、どれもDiscriminatorとGeneratorを対立させる方法は同じです。なので一旦は今実装されている元祖GANを引き続き実装し、それをベースに派生手法について実装するのがわかりやすくていいかと思います。（私もその流れで学んでいきました。）
+
+
+Generating Large Images from Latent Vectors | 大トロ
+__________________________________________________________
+
+BLOG.OTORO.NET – Share
+
+関数によって抽象的な図を書くCPPNの学習に、最近のGAN/VAEを取り入れた記事。CPPNでは入力からピクセル単位で描画を行っていくが、この重みの学習にGAN、スタイルを与えるためにVAEで得られた表現を使用している。
+
+http://blog.otoro.net/2016/04/01/generating-large-images-from-latent-vectors/?utm_campaign=piqcy&utm_medium=email&utm_source=Revue%20newsletter
+
+https://github.com/hardmaru/cppn-gan-vae-tensorflow
+
+.. raw:: html
+
+    <video poster="https://cdn.rawgit.com/hardmaru/cppn-gan-vae-tensorflow/master/examples/output_sinusoid.gif" width="90%" height="90%" autoplay="autoplay" loop="" data-vscid="yolgdz6vl">
+      <source src="https://cdn.rawgit.com/hardmaru/cppn-gan-vae-tensorflow/master/examples/demo.webm" type="video/webm">
+    </video>

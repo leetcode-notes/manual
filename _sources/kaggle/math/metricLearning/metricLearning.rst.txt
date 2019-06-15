@@ -1,0 +1,17 @@
+metricLearning
+=============================
+
+
+https://copypaste-ds.hatenablog.com/entry/2019/03/01/164155
+
+.. figure:: metricLearning1.png
+
+.. figure:: metricLearning2.png
+
+.. figure:: metricLearning3.png
+
+.. figure:: metricLearning4.png
+
+.. figure:: metricLearning5.png
+
+

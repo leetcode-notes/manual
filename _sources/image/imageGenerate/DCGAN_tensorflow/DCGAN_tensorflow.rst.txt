@@ -1,0 +1,26 @@
+DCGAN tensorflow
+=============================
+
+Tool
+---------
+
+* tensorflow=1.12.0=gpu_py36
+
+* opencv-python==3.4.4.19
+
+* photoshop==CS6
+
+画像生成コード
+-----------------
+
+.. toctree::
+	code/imageMakeGan
+
+生成できた画像jpg
+
+.. figure:: code/trainimages.jpg
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://qiita.com/ryuta69/items/cb22847951c74c4968f9

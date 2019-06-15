@@ -1,0 +1,8 @@
+natural language processing competition
+=========================================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

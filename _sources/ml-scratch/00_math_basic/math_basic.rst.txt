@@ -1,0 +1,54 @@
+やさしく学ぶ 機械学習を理解するための数学のきほん
+========================================================
+
+パーセプトロン
+---------------
+
+.. toctree::
+	code/classification1_perceptron
+
+ロジスティック回帰
+---------------------
+
+.. toctree::
+	code/classification2_logistic_regression
+
+ロジスティック回帰 線形分離不可能な分類
+------------------------------------------------
+
+.. toctree::
+	code/classification3_logistic_polynomial_regression
+
+ロジスティック回帰　確率的勾配降下法
+------------------------------------------
+
+.. toctree::
+	code/classification4_logistic_regression_sgd
+
+回帰(regression)
+-------------------
+
+.. toctree::
+	code/regression1_linear
+
+多項式回帰
+------------
+
+.. toctree::
+	code/regression2_polynomial
+
+回帰 確率的勾配降下法
+-------------------------
+
+.. toctree::
+	code/regression3_sgd
+
+
+正則化を適用した実装
+---------------------------
+
+.. toctree::
+	code/regularization
+
+
+

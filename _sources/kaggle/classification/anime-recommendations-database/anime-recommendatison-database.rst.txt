@@ -1,0 +1,8 @@
+anime-recommendatison-database
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

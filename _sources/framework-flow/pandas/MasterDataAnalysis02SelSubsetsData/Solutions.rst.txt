@@ -1,0 +1,6 @@
+pandas MasterDataAnalysis02SelSubsetsData Solutions
+===============================================================================================
+
+.. raw:: html
+   :file: html/Solutions.html
+

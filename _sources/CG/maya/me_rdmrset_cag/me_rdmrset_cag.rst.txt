@@ -1,0 +1,144 @@
+Cagastel RendSet
+#################
+
+
+.. figure:: me_rdmrset_cag.png
+   :width: 400px
+
+
+機能
+******************************************
+
+
+カガステルのレンダーレイヤー作成、マスク作成、Smooth設定、Rendaring設定を行うことが出来ます。
+
+使用方法
+***********
+
+
+.. figure:: cagrendset.png
+   :width: 300px
+
+
+#. **Select Cagastel**：
+
+　カガステルの一覧が表示されています。
+　レンダーレイヤーに追加したいものを追加してください。
+
+
+#. **Select Light add to sdw render layer**：
+
+   選択しているライトをsdwレイヤーに追加します。
+
+   複数選択が可能です。
+
+
+#. **Select Cmaera Camera connect linemesh**
+
+   選択しているカメラをレンダリング可能な状態にします。
+
+   ラインをポリゴンメッシュ化した後、ラインとカメラをコネクトします。
+
+
+#. **RenderLayer Name**
+
+   下のBoxの名前を使用してレンダーレイヤーを作成します。
+   同じ名前のレンダーレイヤーがある際はそのレイヤーに追加していきます。
+
+
+#. **RenderLayer Kind**
+
+   #. ibl
+        imaged based lightingを使用したレンダーレイヤーを作成します。
+        シーン内のIBLSphereを全て追加します。
+        シーン内にIBLSphereがない場合は以下シーンを読み込み作成します。
+
+    .. note::
+        G:/05_tool/maya/scripts/KGS/fn/input/IBLenvset.ma
+
+
+   #. COL
+        通常は使用しないためデフォルトではオフにしています。
+   #. SDW
+        ツール内で選択しているモデルにlambet materialを適用してレンダーレイヤーを作成します。アルファモデルを除外します。ツール内で選択しているカガステルとライトを追加します。
+   #. Line
+        ツール内で選択しているモデルのLineをMeshにConvertし、カメラコネクトしたToonLineを作成します。またツール内で選択しているモデルにBlackHoleを適用します。
+   #. eye
+        目の中モデル以外をUseBackGroundマテリアルを適応してレンダーレイヤーを作成します。
+   #. wing-hep
+        羽、触覚モデル以外をUseBackGroundマテリアルを適応してレンダーレイヤーを作成します。
+   #. smooth+normal
+        選択しているモデルに法線情報、スムース情報を追加します。
+
+        Rendaring Toolsの :ref:`Smooth Normal <RenderToolSmoothNormal>` と同機能です。
+
+        .. _RenderLayerSmoothNormal:
+
+   #. UseBackGround
+        Lineレイヤーを作成する際にキャラに割り当てるBlackholeをUseBackGroundで割り当てます。
+
+
+   #. smooth(all mesh)
+        選択しているモデルにスムースを追加します。
+
+
+   #. hide model line remove
+        非表示になっているモデルを、全てラインから削除します。
+
+        Rndaring Toolsの :ref:`hide model line remove <RenderToolLine>` と同機能です。
+
+
+#. **Make RenderLayer**
+
+   設定した状態でレンダーレイヤーを作成します。
+
+.. note::
+
+    * モデル、カメラは必ず選択してください。
+    * ライトは、選択しなくても作成が可能です。
+
+
+共通部分使用方法
+******************
+
+カガステル、車、キャラクターレンダーレイヤー作成ツールの共通機能です。
+
+
+.. figure:: ../img/RendaringLayer_Common.png
+   :width: 300px
+
+
+#. **Render Layer All Delete**：
+
+　現在作成されているレンダーレイヤーを全て削除します。
+
+
+#. **Reset Render Layer**：
+
+　レンダーレイヤーエラーをリセットします。
+
+
+#. **Reset Scene**：
+
+　シーンをリセットします。レンダーレイヤーの作成、レンダリングにエラーが出る際に使用してください。
+
+  VariousToolsの  :ref:`Reset Scene <RenderResetTool>` と同機能です。
+
+#. **File Save**：
+
+　Boxの名前でファイルを保存します。
+
+
+
+.. figure:: ../img/RendaringLayer_Common_mask.png
+   :width: 300px
+
+#. **Render Window Reflesh**：
+
+　レンダーウィンドウをリセットします。
+
+
+#. **Add Mask Model**：
+
+　アクティブ状態のレンダーレイヤーに選択しているモデルをマスクモデルとして追加します。
+　マスクモデルにはBlackHoleマテリアルを適応します。

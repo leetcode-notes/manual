@@ -1,0 +1,6 @@
+04_model vgg19_tensorflow_layers
+===============================================================================================
+
+.. raw:: html
+   :file: html/vgg19_tensorflow_layers.html
+

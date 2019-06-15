@@ -1,0 +1,9 @@
+CUDA
+=============================
+
+CUDA version 確認
+
+nvcc -V
+
+http://chie8842.hatenablog.com/entry/2017/03/22/233627
+

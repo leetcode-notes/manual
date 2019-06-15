@@ -1,0 +1,6 @@
+pandas MasterDataAnalysis02SelSubsetsData 01_SelectingSubsetsofDatafromDataFrameswithjustthebrackets
+=========================================================================================================
+
+.. raw:: html
+   :file: html/01_SelectingSubsetsofDatafromDataFrameswithjustthebrackets.html
+

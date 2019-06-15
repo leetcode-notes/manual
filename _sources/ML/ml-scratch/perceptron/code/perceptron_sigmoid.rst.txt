@@ -1,0 +1,6 @@
+perceptron perceptron_sigmoid
+===============================================================================================
+
+.. raw:: html
+   :file: html/perceptron_sigmoid.html
+

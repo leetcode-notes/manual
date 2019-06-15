@@ -1,0 +1,6 @@
+PRML LogisticClassification
+===============================================================================================
+
+.. raw:: html
+   :file: html/LogisticClassification.html
+

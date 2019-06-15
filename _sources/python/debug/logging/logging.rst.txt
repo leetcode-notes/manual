@@ -1,0 +1,23 @@
+.. _logging:
+
+logging
+===============
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+参考サイト
+--------------
+
+   `侍エンジニア塾のオウンドメディア`_.
+
+.. _侍エンジニア塾のオウンドメディア: https://www.sejuku.net/blog/23149
+
+
+   `茶番と世間体Kaggle`_.
+
+.. _茶番と世間体Kaggle: http://icebee.hatenablog.com/entry/2018/12/16/221533

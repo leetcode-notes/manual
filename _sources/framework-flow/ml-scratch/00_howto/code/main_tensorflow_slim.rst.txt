@@ -1,0 +1,6 @@
+00_howto main_tensorflow_slim
+===============================================================================================
+
+.. raw:: html
+   :file: html/main_tensorflow_slim.html
+

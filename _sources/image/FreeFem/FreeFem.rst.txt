@@ -1,0 +1,15 @@
+Free Fem 流体計算
+=============================
+
+熱方程式
+----------
+
+.. figure:: wave2D01.gif
+
+.. toctree::
+	code/2_dim_wave
+
+参考サイト
+-----------
+
+https://qiita.com/wakabame/items/54e716d730fae2718d01

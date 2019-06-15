@@ -1,0 +1,6 @@
+pandas MasterDataAnalysis02SelSubsetsData 04_SelectingSubsetsofDatafromaSeries
+===============================================================================================
+
+.. raw:: html
+   :file: html/04_SelectingSubsetsofDatafromaSeries.html
+

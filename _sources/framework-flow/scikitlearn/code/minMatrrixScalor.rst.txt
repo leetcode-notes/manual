@@ -1,0 +1,6 @@
+scikitlearn minMatrrixScalor
+===============================================================================================
+
+.. raw:: html
+   :file: html/minMatrrixScalor.html
+

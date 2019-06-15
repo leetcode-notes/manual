@@ -1,0 +1,6 @@
+grokking_algorithms 01_price_of_groceries
+===============================================================================================
+
+.. raw:: html
+   :file: html/01_price_of_groceries.html
+

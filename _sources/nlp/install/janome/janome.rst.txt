@@ -1,0 +1,34 @@
+janome
+=============
+
+mecab python
+--------------------
+
+分かち書き
+
+.. literalinclude:: tokenizer.py
+
+
+マルコフ連鎖
+
+Janome v0.3 documentation (ja)
+
+https://mocobeta.github.io/janome/
+
+sphinx
+
+.. code-block:: python
+
+    html_search_options = {
+        'type': 'sphinx.search.ja.JanomeSplitter',
+        'user_dic_enc': 'utf-8',
+        'user_dic': '/path/to/mecab.dic',
+        'lib': '/path/to/libmecab.so',
+    }
+    user_dict = UserDictionary("userdic.csv", "utf8", "ipadic", sysdic.connections)
+
+udemey nlp_bot
+-------------------
+
+.. literalinclude:: AG06_morphological_analysis.py
+

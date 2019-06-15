@@ -1,0 +1,30 @@
+add
+=====
+
+目次作成　拡張機能
+---------------------
+
+.. code-block:: python
+
+    pip install jupyter_contrib_nbextensions
+    jupyter contrib nbextension install --user
+    jupyter nbextension enable codefolding/main
+    jupyter contrib nbextensions migrate
+
+https://qiita.com/hanon/items/1d00a1eac026af0389fb
+
+#拡張機能を止めたいときは、以下のコードを入力
+
+#jupyter nbextension disable codefolding/main
+
+| インストール後にJupyterを起動すると、Nbextensionsというタブが現れます。
+| 右下にあるTable of Contents(2)のチェックマークをクリックします。
+| チェックマークが付いていればアクティベーション完了
+
+
+jupytext pyファイル作成
+-------------------------
+
+.. literalinclude:: jupytext.txt
+
+https://qiita.com/cfiken/items/8455383f32ee19dfbba3

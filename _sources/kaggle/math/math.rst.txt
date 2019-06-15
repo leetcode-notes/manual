@@ -1,0 +1,8 @@
+math algorythm
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

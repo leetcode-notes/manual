@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>for &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="制御構文" href="../ControlSyntax.html"/>
+        <link rel="next" title="if" href="../if/ifnot.html"/>
+        <link rel="prev" title="制御構文" href="../ControlSyntax.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../ControlSyntax.html">制御構文</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">for</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#range">range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumerate">enumerate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zip">zip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">内包表記</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../if/ifnot.html">if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../print/print.html">print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../while/while.html">While</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../ControlSyntax.html">制御構文</a> &raquo;</li>
+      
+    <li>for</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/ControlSyntax/for/for.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="for">
+<span id="extensions"></span><h1>for<a class="headerlink" href="#for" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="range">
+<h2>range<a class="headerlink" href="#range" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="k">as</span> <span class="nn">mc</span>
+<span class="n">listKeys</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">sl</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">selSize</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">listKeys</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">selSize</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">selSize</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">listKeys</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">rescalar</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span>
+    <span class="n">mc</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">rescalar</span><span class="p">,</span><span class="n">rescalar</span><span class="p">,</span><span class="n">rescalar</span><span class="p">,</span><span class="n">listKeys</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">r</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">listKeys</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">node</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enumerate">
+<h2>enumerate<a class="headerlink" href="#enumerate" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#リストの中身をループで表示する</span>
+
+<span class="n">enemies</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;スライム&quot;</span><span class="p">,</span> <span class="s2">&quot;モンスター&quot;</span><span class="p">,</span> <span class="s2">&quot;ゾンビ&quot;</span><span class="p">,</span> <span class="s2">&quot;ドラゴン&quot;</span><span class="p">,</span> <span class="s2">&quot;魔王&quot;</span><span class="p">]</span>
+<span class="c1"># ここに、要素をループで表示するコードを記述する</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">enemy</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">enemies</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">番目の</span><span class="si">{}</span><span class="s2">が現れた&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">enemy</span><span class="p">))</span>    
+</pre></div>
+</div>
+</div>
+<div class="section" id="zip">
+<h2>zip<a class="headerlink" href="#zip" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">output_schedule</span><span class="p">(</span><span class="n">work_time_list</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;家庭教師アルバイトの予定を出力します&#39;&#39;&#39;</span>
+    <span class="n">day_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;月&#39;</span><span class="p">,</span> <span class="s1">&#39;火&#39;</span><span class="p">,</span> <span class="s1">&#39;水&#39;</span><span class="p">,</span> <span class="s1">&#39;木&#39;</span><span class="p">,</span> <span class="s1">&#39;金&#39;</span><span class="p">,</span> <span class="s1">&#39;土&#39;</span><span class="p">,</span> <span class="s1">&#39;日&#39;</span><span class="p">]</span>
+
+    <span class="n">total_work_time</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># ここにzipを使ったfor文を書きます</span>
+    <span class="k">for</span> <span class="n">day</span><span class="p">,</span> <span class="n">work_time</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">day_list</span><span class="p">,</span> <span class="n">work_time_list</span><span class="p">):</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">曜日の勤務時間: </span><span class="si">{}</span><span class="s1">時間&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">work_time</span><span class="p">))</span>
+
+        <span class="c1"># 労働時間を加算</span>
+        <span class="n">total_work_time</span> <span class="o">+=</span> <span class="n">work_time</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;今週の勤務予定時間: </span><span class="si">{}</span><span class="s1">時間&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_work_time</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;アルバイトする人の情報をoutput_scheduleに渡します&#39;&#39;&#39;</span>
+    <span class="c1"># 1日に何時間働けるかのリスト</span>
+    <span class="n">work_time_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+    <span class="n">output_schedule</span><span class="p">(</span><span class="n">work_time_list</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>内包表記<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2の0乗から9乗までのリスト</span>
+<span class="n">comprehension_0</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+
+<span class="n">comprehension_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">comprehension_3</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">comprehension_dict</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span>
+<span class="n">comprehension_dict2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">comprehension_dict2_2</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">}</span>
+
+<span class="n">norm_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">coin</span><span class="o">+</span><span class="n">metric</span> <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;bt_&#39;</span><span class="p">,</span> <span class="s1">&#39;eth_&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">,</span><span class="s1">&#39;Volume&#39;</span><span class="p">]]</span>
+
+<span class="n">comprehension_dict3</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span>
+<span class="c1">#&gt;&gt;&gt; {&#39;2&#39;: 2, 1: &#39;1&#39;, 3: &#39;3&#39;, 5: &#39;5&#39;, &#39;0&#39;: 0, 7: &#39;7&#39;, 9: &#39;9&#39;, &#39;6&#39;: 6, &#39;4&#39;: 4, &#39;8&#39;: 8}</span>
+
+<span class="n">comprehension_set</span><span class="o">=</span><span class="p">{</span><span class="n">i</span><span class="o">%</span><span class="mi">5</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)}</span>
+<span class="c1">#&gt;&gt;&gt; {0, 1, 2, 3, 4}</span>
+
+<span class="n">zero_set</span><span class="o">=</span><span class="p">{}</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">zero_set</span><span class="p">)</span>
+<span class="c1"># &gt;&gt;&gt; dict</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">comprehension_1</span><span class="p">,</span> <span class="n">comprehension_2</span><span class="p">,</span> <span class="n">comprehension_3</span><span class="p">,</span><span class="n">comprehension_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">comprehension_dict2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">comprehension_dict2_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">comprehension_dict3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">comprehension_set</span><span class="p">)</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;kinoko&quot;</span><span class="p">,</span> <span class="s2">&quot;takenoko&quot;</span><span class="p">,</span> <span class="s2">&quot;suginoko&quot;</span><span class="p">]</span>
+<span class="n">feature</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;yama&quot;</span><span class="p">,</span> <span class="s2">&quot;sato&quot;</span><span class="p">,</span> <span class="s2">&quot;mura&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">({</span><span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="n">feature</span><span class="p">)})</span>
+
+<span class="c1">#動きません</span>
+<span class="c1"># comprehension_dict4 = {str(i):i if i%2==0 else i:str(i) for i in range(10)}</span>
+<span class="c1">#&gt;&gt;&gt; SyntaxError: invalid syntax</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../if/ifnot.html" class="btn btn-neutral float-right" title="if" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../ControlSyntax.html" class="btn btn-neutral" title="制御構文" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+pandas collection np_pandas_ok
+===============================================================================================
+
+.. raw:: html
+   :file: html/np_pandas_ok.html
+

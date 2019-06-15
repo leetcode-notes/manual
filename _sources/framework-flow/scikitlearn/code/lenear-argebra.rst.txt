@@ -1,0 +1,6 @@
+scikitlearn lenear-argebra
+===============================================================================================
+
+.. raw:: html
+   :file: html/lenear-argebra.html
+

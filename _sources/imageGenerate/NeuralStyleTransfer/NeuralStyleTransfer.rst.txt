@@ -1,0 +1,73 @@
+NeuralStyleTransfer
+=============================
+
+Style Transferにおけるスタイルの合成とは、輪郭といったピクセルレベルの合成ではなく、
+画⾵といったより⾼いレベルでの合成。
+これが可能なのは、CNNが低次元から⾼次元への特徴量の変換を⾏っている為。
+
+Tool
+---------
+
+* Google Collaboratory TPUを使用
+
+* tensorflow
+
+* Keras
+
+* vgg19
+
+損失関数
+-----------
+
+Content-Loss
+    合成画像のピクセル値が、元の画像のピクセル値が同じになるような損失関数
+Style-Loss
+    合成画像の画⾵が、スタイル画像の画⾵と似るような損失関数
+
+損失関数の合成
+_______________
+
+L = αLcontent + βLstyle
+
+グラム行列
+_____________
+
+グラム⾏列
+    ⾃⾝の転置⾏列との積で相関のようなものを表す
+
+⼊⼒は(H,W,C)という次元で、チャンネル間の相関（のようなもの）の為、次元を⼊れ替え(C,HW)
+という2次元に落としている。
+
+途中の次元の⼊れ替え
+    K.permute_dimensions
+2次元への変形
+    K.batch_flatten
+
+画像生成コード
+-----------------
+
+.. toctree::
+	code/style_transfer_vgg19_
+
+
+.. list-table::
+    :header-rows: 1
+
+    * - 元画像
+      - スタイル画像
+      - 結果
+
+    * - .. figure:: code/dancing.jpg
+      - .. figure:: code/aurora.jpg
+      - .. figure:: 130.png
+
+
+    * - .. figure:: code/facelady051.jpg
+      - .. figure:: code/ume_col.jpg
+      - .. figure:: 050.png
+
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+

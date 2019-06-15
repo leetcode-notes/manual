@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LightGBM Takami Sato &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="LightGBM" href="../LightGBM.html"/>
+        <link rel="next" title="GBDT XGBoost" href="../../RandomForest/RandomForest.html"/>
+        <link rel="prev" title="LightGBM LightGBM_kuzushiji_GridSearchCV" href="../code/LightGBM_kuzushiji_GridSearchCV.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../GBDT.html">GBDT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../CatBoost/CatBoost.html">Python manual</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../LightGBM.html">LightGBM</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../code/LightGBM_Boston_GridSearchCV.html">LightGBM LightGBM_Boston_GridSearchCV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/LightGBM_iris_cv.html">LightGBM LightGBM_iris_cv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/LightGBM_kuzushiji.html">LightGBM LightGBM_kuzushiji</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/LightGBM_kuzushiji_GridSearchCV.html">LightGBM LightGBM_kuzushiji_GridSearchCV</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">LightGBM Takami Sato</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../RandomForest/RandomForest.html">GBDT XGBoost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../XGBoost/XGBoost.html">XGBoost</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../feature-engineering/feature-engineering.html">feature engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../../GBDT.html">GBDT</a> &raquo;</li>
+      
+        <li><a href="../LightGBM.html">LightGBM</a> &raquo;</li>
+      
+    <li>LightGBM Takami Sato</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/GBDT/LightGBM/net/LightGBM_TakamiSato.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lightgbm-takami-sato">
+<h1>LightGBM Takami Sato<a class="headerlink" href="#lightgbm-takami-sato" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>LightGBM ハンズオン - もう一つのGradient Boostingライブラリ</p>
+<p><a class="reference external" href="https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb">https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb</a></p>
+<p>NIPS2017読み会 LightGBM: A Highly Efficient Gradient Boosting Decision Tree</p>
+<div class="section" id="nips2017">
+<h2>1. NIPS2017論文紹介<a class="headerlink" href="#nips2017" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>LightGBM: A Highly Efficient Gradient Boosting Decision Tree</p>
+<p>Takami Sato NIPS2017論文読み会&#64;クックパッド 2018/1/27NIPS2017論文読み会&#64;クックパッド 1</p>
+<ol class="arabic simple" start="2">
+<li><p>アジェンダ • 導入＆近年の</p></li>
+</ol>
+<p>GBDTの状況</p>
+<ul class="simple">
+<li><p>GBDTとは</p></li>
+<li><p>LightGBMとは</p></li>
+</ul>
+<p>– GOSS (Gradient-based One-side Sampling)</p>
+<p>– EFB (Exclusive Feature Bundling)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>数値実験</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>まとめ＆私見 2018/1/27NIPS2017論文読み会&#64;クックパッド 2</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>宣伝: Kaggler Slackぜひ来てね！ 2018/1/27NIPS2017論文読み会&#64;クックパッド 4 <a class="reference external" href="https://kaggler-ja.herokuapp.com/">https://kaggler-ja.herokuapp.com/</a></p></li>
+<li><p>2018/1/27NIPS2017論文読み会&#64;クックパッド 5 今日はKaggleを席巻するGBDTの実装 LightGBMの論文を紹介します</p></li>
+<li><p>GBDT（Xgboost） がKaggleを席巻 （２０１６年） 2018/1/27NIPS2017論文読み会&#64;クックパッド</p></li>
+</ol>
+<p>6 More than half of the winning solutions in machine learning challenges hosted at Kaggle adopt XGBoost</p>
+<p><a class="reference external" href="http://www.kdnuggets.com/2016/03/xgboost-implementing-winningest-kaggle-algorithm-spark-flink.html">http://www.kdnuggets.com/2016/03/xgboost-implementing-winningest-kaggle-algorithm-spark-flink.html</a></p>
+<ol class="arabic simple" start="7">
+<li><p>Awesome XGBoost • Vlad Sandulescu, Mihai Chiru, 1st place of the KDD Cup 2016 competition. Link to the arxiv paper.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Marios Michailidis, Mathias Müller and HJ van Veen, 1st place of the Dato Truely Native? competition. Link to the Kaggle interview.</p></li>
+<li><p>Vlad Mironov, Alexander Guschin, 1st place of the CERN LHCb experiment Flavour of Physics competition. Link to the Kaggle interview.</p></li>
+<li><p>Josef Slavicek, 3rd place of the CERN LHCb experiment Flavour of Physics competition. Link to the Kaggle interview.</p></li>
+<li><p>Mario Filho, Josef Feigl, Lucas, Gilberto, 1st place of the Caterpillar Tube Pricing competition. Link to the Kaggle interview.</p></li>
+<li><p>Qingchen Wang, 1st place of the Liberty Mutual Property Inspection. Link to the Kaggle interview.</p></li>
+<li><p>Chenglong Chen, 1st place of the Crowdflower Search Results Relevance. Link to the winning solution.</p></li>
+</ul>
+<blockquote>
+<div><ul class="simple">
+<li><p>Alexandre Barachant (“Cat”) and Rafał Cycoń (“Dog”), 1st place of the Grasp-and-Lift EEG Detection. Link to the Kaggle interview.</p></li>
+<li><p>Halla Yang, 2nd place of the Recruit Coupon Purchase Prediction Challenge. Link to the Kaggle interview.</p></li>
+<li><p>Owen Zhang, 1st place of the Avito Context Ad Clicks competition. Link to the Kaggle interview.</p></li>
+<li><p>Keiichi Kuroyanagi, 2nd place of the Airbnb New User Bookings. Link to the Kaggle interview.</p></li>
+<li><p>Marios Michailidis, Mathias Müller and Ning Situ, 1st place Homesite Quote Conversion. Link to the Kaggle interview.</p></li>
+</ul>
+<p>2018/1/27NIPS2017論文読み会&#64;クックパッド</p>
+</div></blockquote>
+<p>7 Awesome XGBoost: Machine Learning Challenge Winning Solutions</p>
+<p><a class="reference external" href="https://github.com/dmlc/xgboost/tree/master/demo#machine-learning-challenge-winning-solutions">https://github.com/dmlc/xgboost/tree/master/demo#machine-learning-challenge-winning-solutions</a></p>
+<ol class="arabic simple" start="8">
+<li><p>現在いろんなGBDT実装が存在</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Scikit-learn • qGBRT • gbm on R • Spark MLLib • H2O • XGBoost • LightGBM • Catboost (本論文では比較されず) 2018/1/27NIPS2017論文読み会&#64;クックパッド 8</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>現在いろんなGBDT実装が存在</p></li>
+</ol>
+<ul class="simple">
+<li><p>Scikit-learn • qGBRT • gbm on R • Spark MLLib • H2O • XGBoost • LightGBM • Catboost (本論文では比較されず) 2018/1/27NIPS2017論文読み会&#64;クックパッド</p></li>
+</ul>
+<p>9 xgboostが元論文で圧勝 [Chen+ 2016] 今回割愛するが、 経験的にはxgboostより遅く、 スコアも劇的に改善した経験はない。</p>
+<ol class="arabic simple" start="10">
+<li><p>LightGBMは2017年末に登場してから一気にメジャーに 2018/1/27NIPS2017論文読み会&#64;クックパッド 10 <a class="reference external" href="https://www.kdnuggets.com/2017/08/lessons-benchmarking-fast-machine-learning-algorithms.html">https://www.kdnuggets.com/2017/08/lessons-benchmarking-fast-machine-learning-algorithms.html</a> 本論文が出る前から検証がされて、速度・精度共にxgboostを上回る</p></li>
+<li><p>LightGBMはいったいなんなのか？ 2018/1/27NIPS2017論文読み会&#64;クックパッド 11 Decision Tree Random Forest Gradient Boosting Tree ?LightGBM 本論文を読み解いて解説します。</p></li>
+<li><p>ここから色々持ってきてます 2018/1/27NIPS2017論文読み会&#64;クックパッド 12 XGBoostとかの詳しい解説はこちらを参照下さい。 <a class="reference external" href="https://www.slideshare.net/tkm2261/overview-of-tree-algorithms-from-decision-tree-to-xgboost">https://www.slideshare.net/tkm2261/overview-of-tree-algorithms-from-decision-tree-to-xgboost</a></p></li>
+<li><p>結論 LightGBM 2018/1/27NIPS2017論文読み会&#64;クックパッド 13 = GBDT (Gradient Boosting Decision Tree) GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling) ＋ ＋ LightGBMはソフトウェア名ではなくアルゴリズム名</p></li>
+<li><p>論文内表記 2018/1/27NIPS2017論文読み会&#64;クックパッド 14 ただ正確にはXGBoost＋GOSS+EFBが正しいかも(後述)</p></li>
+<li><p>論文内表記 2018/1/27NIPS2017論文読み会&#64;クックパッド 15 論文の構成も １章: Introduction ２章: GBDT ３章: GOSS ４章: FEB ５章: 数値実験 なのでGBDTとGOSSとFEBがわかればLightGBMわかったといえる</p></li>
+<li><p>でも、、、 LightGBM 2018/1/27NIPS2017論文読み会&#64;クックパッド 16 = GBDT (Gradient Boosting Decision Tree) GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling) ＋ ＋ GOSSってデフォルトだとoffだったり</p></li>
+<li><p>GBDTとは 2018/1/27NIPS2017論文読み会&#64;クックパッド 17</p></li>
+<li><p>Gradient Boosting Decision Tree (GBDT) とは The Elements of Statistical Learning 2nd edition, p. 359 2018/1/27NIPS2017論文読み会&#64;クックパッド 18 psedo-residual 各反復で負の勾配にフィットする学習を行う</p></li>
+<li><p>決定木の分岐点の求め方 2018/1/27NIPS2017論文読み会&#64;クックパッド 19 Pre-sorted Algorithm 特徴の値の中点やpercentile点など、 分岐となりえる点を列挙し分岐毎に探査。 正確だが重い Histogram-based Algorithm ヒストグラムを作ってそのビンを分岐単位とする。 早いが損失最小の分岐とは限らない。 Pre-sorted Algorithm Histogram-based Algorithm XGBoost ◯ （デフォルト） ◯ LightGBM ✕ ◯ qGBRT ✕ ◯ Scikit-learn ◯ ✕ Gbm on R ◯ ✕ ◆ 対応状況</p></li>
+<li><p>XGBoostとは GBDT自体の提案は２００1年 [Friedman 2001]、それにXGBoostは、 2018/1/27NIPS2017論文読み会&#64;クックパッド 20 • 損失関数から直接の分岐スコアを求める手法を提案 • 疎な特徴に対する高速な分岐手法の提案 • スケールする圧倒的な実装</p></li>
+<li><p>GBDT自体の提案は２００1年 [Friedman 2001]、それにXGBoostは、 • 損失関数から直接の分岐スコアを求める手法を提案 • 疎な特徴に対する高速な分岐手法の提案 • スケールする圧倒的な実装 LightGBMは 2018/1/27NIPS2017論文読み会&#64;クックパッド 21 XGBoostの多分一番の貢献 LightGBMにも引き継がれる LightGBMではまた別の方法で 疎構造を利用（EFB等） 後発の有利を活かしてLightGBMのほう が実装がキレイな気がする。 どちらも凄い開発者たち なのでXGBoost＋GOSS+EFBが感覚的には合う</p></li>
+<li><p>LightGBMとは 2018/1/27NIPS2017論文読み会&#64;クックパッド 22</p></li>
+<li><p>LightGBMの特徴である 2018/1/27NIPS2017論文読み会&#64;クックパッド 23 本発表ではこの後、 を順次解説していきます。 GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling)</p></li>
+<li><p>木系学習器の学習を高速化するには 2018/1/27NIPS2017論文読み会&#64;クックパッド 24 一般論として、木系学習器の学習を高速に行うには の２パターンが存在します • データを減らす • 特徴を減らす</p></li>
+<li><p>木系学習器の学習を高速化するには 2018/1/27NIPS2017論文読み会&#64;クックパッド 25 そのため各手法は こういう対応になっています。 • データを減らす • 特徴を減らす GOSS (Gradient-based One-side Sampling) EFB (Exclusive Feature Bundling)</p></li>
+<li><p>GOSS (Gradient-based One-side Sampling) • AdaBoostみたいにsample weightはGBDTにない • 各反復の勾配（疑似残差）で代用しよう • 十分勾配が小さいデータは無視して良さそう (well-trained) • 単純にデータを取り除くとデータの分布がおかしくなる • サンプリングした分を割り戻して整合性をとろう • 勾配の絶対値の上位𝑎 × 100 %と、 残りのデータの𝑏 × 100%をサンプリングして各反復で使用 サンプリングした側の勾配は 1−𝑎 𝑏 倍して使用 2018/1/27NIPS2017論文読み会&#64;クックパッド 26 GOSSの思想</p></li>
+<li><p>分岐スコアが分散の場合 2018/1/27NIPS2017論文読み会&#64;クックパッド 27 左側分岐の分散 右側分岐の分散 この辺の決定木のアルゴリズムが思い出せない方は 次ページの例を参照 コレが分岐前の分散より 一番下がる分割を分岐点にする</p></li>
+<li><p>参考：分岐スコアが分散の場合の分岐 2018/1/27NIPS2017論文読み会&#64;クックパッド 28 Regression sex survived age female 1 29 male 1 1 female 0 2 male 0 30 female 0 25 male 1 48 female 1 63 male 0 39 female 1 53 male 0 71 Predict age of a person from Titanic Dataset. 491.0 calculate variances weighted average Variance sex Var #people male 524.56 5 female 466.24 5 survived Var #people 0 502.64 5 1 479.36 5 495.4 Varience: 498.29 7.29 Down 2.11 Down</p></li>
+<li><p>GOSSによる近似分岐スコア 2018/1/27NIPS2017論文読み会&#64;クックパッド 29 勾配の大きいデータA 分散の小さいサンプリング されたデータB サンプリングした分 を割り戻し 左側分岐と同様 • 勾配の絶対値の上位𝑎 × 100 %と、 残りのデータの𝑏 × 100%をサンプリングして各反復で使用 サンプリングした側の勾配は 1−𝑎 𝑏 倍して使用</p></li>
+<li><p>GOSSによる近似誤差 2018/1/27NIPS2017論文読み会&#64;クックパッド 30 • 分岐においてデータが両側に𝑂( 𝑛)個以上ある場合は、 第二項が支配的になる • つまり𝑂( 𝑛)で近似誤差は減っていくので、非常に良い近似との こと</p></li>
+<li><p>GOSSによる近似誤差 2018/1/27NIPS2017論文読み会&#64;クックパッド 31 • 𝑎 = 0のときはランダムサンプリングとおなじになるが、 • 基本的に𝐶0,𝛽 &gt; 𝐶 𝑎,𝛽−𝑎となる限りは誤差が小さくなる。 つまり単純なサンプリングよりは大体良い近似となりそう の場合</p></li>
+<li><p>一般的な損失関数について 本論文では分散による分岐スコアしか扱って無いが、 おそらく内部ではXGBoostと同じ分岐スコアをつかってるはずなので 2018/1/27NIPS2017論文読み会&#64;クックパッド 32 Gain of xgboost’s criterion when a node splits to 𝐿 𝐿 and 𝐿 𝑅 恐らくヘッシアンについても 同じ割り戻しの操作をする と思われる</p></li>
+<li><p>EFB (Exclusive Feature Bundling) • 分岐点の探索が一番重い。特徴の数だけやる必要 • 大規模データでは疎な特徴がとても多く、 非ゼロ要素のパターンに全く被りが無いことも多い(exclusive) （one-hot encodingした特徴等） • 非ゼロ要素が被らない特徴はまとめて(bundling)、 一つの特徴と扱っても特に問題は発生しない • まとめれば纏めるほど計算量は下がる 𝑂 #𝑑𝑎𝑡𝑎 × #𝑓𝑒𝑎𝑡𝑢𝑟𝑒 → 𝑂(#𝑑𝑎𝑡𝑎 × #𝑏𝑢𝑛𝑑𝑙𝑒) 2018/1/27NIPS2017論文読み会&#64;クックパッド 33 EFBの思想</p></li>
+<li><p>Bundleの数を一番小さくしたい 出来る限り特徴を纏めるほど計算量は下がるが、 2018/1/27NIPS2017論文読み会&#64;クックパッド 34 グラフ 𝐺 = (𝑉, 𝐸)を、 𝑉 : 特徴の集合 𝑒𝑖𝑗 ∈ 𝐸: 特徴iと特徴ｊの非ゼロ要素のパターンに全く被りが無い とすると、この問題はグラフ彩色問題と等価なのでNP-hard Theorem 4.1</p></li>
+<li><p>Boundle発見の貪欲法 • 基本アイデアはグラフの次数が多い特徴量から順にbundleを 作成していく貪欲法 • 『非ゼロ要素のパターンに全く被りが無い』ではなく、 ある一定の被りまでは許す • グラフの次数は特徴が多い場合に計算コストが重いので、 非ゼロ要素数の少ない順に貪欲法をする 『非ゼロ要素数の少ない』 ≒ 『被りが少ない』 • ヒストグラムのビンをずらしてbundleから各特徴へ復元出来る ようにする • 𝑂 #𝑓𝑒𝑎𝑡𝑢𝑟𝑒2 かかるが最初に一回やるだけなので問題ない 2018/1/27NIPS2017論文読み会&#64;クックパッド 35</p></li>
+<li><p>数値実験 2018/1/27NIPS2017論文読み会&#64;クックパッド 36 LightGBM GBDT + BOSS + FEB lgb_baseline Without BOSS &amp; FEB xgb_his Xgboost with histogram Algorithm xgb_exa Xgboost with Pre-sorted Algorithm • LightGBMが最も高速・高精度 • EFBが速度向上にかなり寄与</p></li>
+<li><p>GOSSとSGB（Stochastic Gradient Boosting）との比較 2018/1/27NIPS2017論文読み会&#64;クックパッド 37 GOSSの方がsampling ratioに関わらず精度が高い</p></li>
+<li><p>まとめ＆私見 • LightGBM は GBDT + GOSS + EFB • GOSSで全データを走査せずに分岐スコアを算出 – でもLightGBMのデフォルトはgossがオフ。これは一体。。。 – 論文の理論解析がGOSSだけなので執筆上の都合かも • EFBで特徴量をまとめて計算量を削減 – EFBはhistogram-based algorithmと結びついているので、 LightGBMにpre-sorted algorithmはない • 速度を可能な限り上げるために実装を考えた感じが、 行間からにじみ出てておりKagglerとして感謝しかない 2018/1/27NIPS2017論文読み会&#64;クックパッド 38</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../RandomForest/RandomForest.html" class="btn btn-neutral float-right" title="GBDT XGBoost" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../code/LightGBM_kuzushiji_GridSearchCV.html" class="btn btn-neutral" title="LightGBM LightGBM_kuzushiji_GridSearchCV" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+restaurant revenue
+=============================
+
+https://www.kaggle.com/c/restaurant-revenue-prediction
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+Root Mean Squared Error (RMSE)
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+1st Place Solution
+
+https://www.kaggle.com/jquesadar/restaurant-revenue-1st-place-solution

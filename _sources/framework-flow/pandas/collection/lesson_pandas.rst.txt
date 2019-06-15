@@ -1,0 +1,6 @@
+pandas collection lesson_pandas
+===============================================================================================
+
+.. raw:: html
+   :file: html/lesson_pandas.html
+

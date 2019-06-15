@@ -1,0 +1,38 @@
+GAN MirrorGAN
+================================================================================
+
+GAN MirrorGAN train
+---------------------------------------------------------------------------
+
+.. literalinclude:: train.py
+
+GAN MirrorGAN pretrain_STREAM
+---------------------------------------------------------------------------
+
+.. literalinclude:: pretrain_STREAM.py
+
+GAN MirrorGAN model_load
+---------------------------------------------------------------------------
+
+.. literalinclude:: model_load.py
+
+GAN MirrorGAN model
+---------------------------------------------------------------------------
+
+.. literalinclude:: model.py
+
+GAN MirrorGAN generator
+---------------------------------------------------------------------------
+
+.. literalinclude:: generator.py
+
+GAN MirrorGAN dataset
+---------------------------------------------------------------------------
+
+.. literalinclude:: dataset.py
+
+GAN MirrorGAN config
+---------------------------------------------------------------------------
+
+.. literalinclude:: config.py
+

@@ -1,0 +1,8 @@
+Data Scientist 統計学
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*

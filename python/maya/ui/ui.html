@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Maya UI &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="maya" href="../maya.html"/>
+        <link rel="next" title="module" href="../../module/module.html"/>
+        <link rel="prev" title="shotgun" href="../shotgun/shotgun.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../maya.html">maya</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../MPlug/MPlug.html">MPlug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../algo/algo.html">algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anim/animLayer.html">animLayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/ls.html">maya ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mayacharm/mayacharm.html">maya charm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modelling/modelling.html">modelling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/render.html">Render Setting Maya</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../setup/setup.html">setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shotgun/shotgun.html">shotgun</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Maya UI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ramp-color">ramp colorの数え方</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#button">button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#separator">separator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text">text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textfield-q">textField q</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textfield-textscrolllist">textField,textScrollList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textscrolllist">textScrollList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textscrolllist-q">textScrollList q</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#textscrolllist-ra">textScrollList ra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#right-click">Right Click</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#option-var">Option var</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#option-var-form">Option var Form</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dialog">dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#radiobuttongrp">radioButtonGrp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablayout">tabLayout</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../maya.html">maya</a> &raquo;</li>
+      
+    <li>Maya UI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/maya/ui/ui.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="maya-ui">
+<h1>Maya UI<a class="headerlink" href="#maya-ui" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="ramp-color">
+<h2>ramp colorの数え方<a class="headerlink" href="#ramp-color" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># rampshaderのcolor の個数を数える。
+ cmds.getAttr(mat + &quot;.color&quot;, size=True)
+ # rampのみのリスト表示
+ cmss.listAttr(ramp=True)
+ # rampmapのcolor数え方
+    string $tempName = `shadingNode -asShader ramp`;
+    string $tj_rampNode = `rename $tempName tj_gradientColour`;
+    string $tj_rampWin = `window -t &quot;tj Ramp Viewer&quot; tj_rampWin`;
+    columnLayout;
+    rampColorPort -node $tj_rampNode;
+    showWindow $tj_rampWin;
+    setAttr ($tj_rampNode + &quot;.colorEntryList[0].color&quot;) -type double3 0.988 1 0.8 ;
+    setAttr ($tj_rampNode + &quot;.colorEntryList[1].color&quot;) -type double3 0 0 0.235 ;
+    setAttr ($tj_rampNode + &quot;.colorEntryList[1].position&quot;) 1.0;
+    removeMultiInstance -break true ($tj_rampNode + &quot;.colorEntryList[2]&quot;);
+    showWindow $tj_rampWin;
+    int $entries = `getAttr -size ($tj_rampNode+&quot;.colorEntryList&quot;)`;
+    vector $entry_colour[];
+    float $entry_pos[];
+    for ($i = 0; $i &lt; $entries; $i ++)
+    {
+    $entry_pos[$i] = `getAttr ($tj_rampNode+&quot;.colorEntryList[&quot;+$i+&quot;].position&quot;)`;
+    float $entryList_colours[] = `getAttr ($tj_rampNode+&quot;.colorEntryList[&quot;+$i+&quot;].color&quot;)`;
+    $entry_colour[$i] = &lt;&lt; $entryList_colours[0],$entryList_colours[1], $entryList_colours[2]&gt;&gt;;
+    }
+</pre></div>
+</div>
+</div>
+<div class="section" id="button">
+<h2>button<a class="headerlink" href="#button" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mes1</span> <span class="o">=</span> <span class="s1">&#39;text1</span><span class="se">\n</span><span class="s1">test2&#39;</span>
+<span class="n">mes1</span> <span class="o">+=</span> <span class="s1">&#39;text3</span><span class="se">\n</span><span class="s1">test4&#39;</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">mes1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">),</span><span class="n">command</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CAG_layer_All</span><span class="p">,</span><span class="bp">self</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="separator">
+<h2>separator<a class="headerlink" href="#separator" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cmds</span><span class="o">.</span><span class="n">separator</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">320</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;out&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="text">
+<h2>text<a class="headerlink" href="#text" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mes1</span> <span class="o">=</span> <span class="s1">&#39;text1</span><span class="se">\n</span><span class="s1">test2&#39;</span>
+<span class="n">mes1</span> <span class="o">+=</span> <span class="s1">&#39;text3</span><span class="se">\n</span><span class="s1">test4&#39;</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="n">mes1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">),</span><span class="n">align</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="textfield-q">
+<h2>textField q<a class="headerlink" href="#textfield-q" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layernum</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textField</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rendname</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tx</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="textfield-textscrolllist">
+<h2>textField,textScrollList<a class="headerlink" href="#textfield-textscrolllist" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">rendname</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textField</span><span class="p">(</span><span class="n">tx</span><span class="o">=</span><span class="s2">&quot;CAG_flyA&quot;</span><span class="p">)</span>
+<span class="c1">#ams シングルセレクションモード</span>
+<span class="c1">#dcc ダブルクリック selectCommand(sc)項目を選択したときに</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">CAGList</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textScrollList</span><span class="p">(</span><span class="n">numberOfRows</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">allowMultiSelection</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">h</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                        <span class="n">append</span><span class="o">=</span><span class="n">KGS_CAGlist</span><span class="p">,</span><span class="n">sc</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">textCAGselect</span><span class="p">,</span><span class="bp">self</span><span class="p">),</span> <span class="n">showIndexedItem</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">textCAGselect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">Args</span><span class="p">):</span>
+   <span class="n">selGrp</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textScrollList</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CAGList</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">si</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+   <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">selGrp</span><span class="p">)</span>
+   <span class="n">nameary</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="k">for</span> <span class="n">sel</span> <span class="ow">in</span> <span class="n">selGrp</span><span class="p">:</span>
+       <span class="n">nameary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sel</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_ANM&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_LAY&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">))</span>
+   <span class="n">cmds</span><span class="o">.</span><span class="n">textField</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rendname</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">nameary</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="textscrolllist">
+<h2>textScrollList<a class="headerlink" href="#textscrolllist" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#ams シングルセレクションモード</span>
+<span class="c1">#dcc ダブルクリック selectCommand(sc)項目を選択したときに</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">scenes</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textScrollList</span><span class="p">(</span><span class="n">ams</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+               <span class="n">dcc</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">OpenFolder1</span><span class="p">,</span><span class="bp">self</span><span class="p">),</span><span class="n">sc</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getScenes</span><span class="p">,</span><span class="bp">self</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="textscrolllist-q">
+<h2>textScrollList q<a class="headerlink" href="#textscrolllist-q" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">selScenes</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textScrollList</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenes</span><span class="p">,</span><span class="n">query</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">si</span><span class="o">=</span><span class="bp">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="textscrolllist-ra">
+<h2>textScrollList ra<a class="headerlink" href="#textscrolllist-ra" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">##一旦リセット####ra 全項目削除</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">textScrollList</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cut</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ra</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>textFieldButtonGrp q</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">getSceneDir</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">textFieldButtonGrp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scenesDir</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">fi</span><span class="o">=</span><span class="n">MenuSave</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="right-click">
+<h2>Right Click<a class="headerlink" href="#right-click" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">UseBackpop</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">popupMenu</span><span class="p">()</span>
+<span class="n">UseBackpopitem</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;help2&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">KGSFX_rendset_c246Q2</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+<span class="n">UseBackpopitem</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">menuItem</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;help3&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">KGSFX_rendset_c246Q3</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="option-var">
+<h2>Option var<a class="headerlink" href="#option-var" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">sv</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Filename&quot;</span><span class="p">,</span><span class="n">selProjectName</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="s2">&quot;Filename&quot;</span><span class="p">):</span>
+     <span class="n">ScenesFilename</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="s2">&quot;Filename&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="option-var-form">
+<h2>Option var Form<a class="headerlink" href="#option-var-form" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">###UI</span>
+<span class="c1">#######form_collapse#####################################################################</span>
+<span class="n">form_smoothsv</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="s2">&quot;rd_form_smooth&quot;</span><span class="p">):</span>
+  <span class="n">form_smoothsv</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="s2">&quot;rd_form_smooth&quot;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">form_smoothsv</span> <span class="o">==</span> <span class="s2">&quot;False&quot;</span><span class="p">:</span>
+      <span class="n">form_smoothsv</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">else</span><span class="p">:</span>
+      <span class="n">form_smoothsv</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">form_smooth</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">frameLayout</span><span class="p">(</span><span class="n">w</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">l</span><span class="o">=</span><span class="s1">&#39;smooth&#39;</span><span class="p">,</span> <span class="n">collapsable</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bv</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">cl</span><span class="o">=</span><span class="n">form_smoothsv</span><span class="p">,</span>
+                                    <span class="n">cc</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optionsave</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="n">ec</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">optionsave</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+<span class="c1">#######form_collapse#####################################################################</span>
+<span class="c1">####def</span>
+<span class="k">def</span> <span class="nf">optionsave</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">Args</span><span class="p">):</span>
+   <span class="n">form_smoothsv</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">frameLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">form_smooth</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">cl</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+   <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">sv</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rd_form_smooth&quot;</span><span class="p">,</span> <span class="n">form_smoothsv</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dialog">
+<h2>dialog<a class="headerlink" href="#dialog" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mes2</span> <span class="o">=</span> <span class="s1">&#39;Sorry Error.&#39;</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">confirmDialog</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">mes2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">message</span><span class="o">=</span><span class="n">mes2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;OK&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>dialog<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dialog</span><span class="p">(</span><span class="n">srcdir</span><span class="p">,</span> <span class="n">dstdir</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">srcdir</span> <span class="o">==</span> <span class="n">dstdir</span><span class="p">:</span>
+        <span class="n">mes1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> samefile&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">srcdir</span><span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">confirmDialog</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Confirm&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">mes1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">dstdir</span><span class="p">):</span>
+            <span class="n">mes1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">srcdir</span><span class="p">)</span>
+            <span class="n">mes1</span> <span class="o">+=</span> <span class="s2">&quot;↓</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="n">mes1</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="s2">overwrite ok?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dstdir</span><span class="p">)</span>
+            <span class="n">check</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">confirmDialog</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Confirm&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">mes1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">],</span>
+                                       <span class="n">defaultButton</span><span class="o">=</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span>
+                                       <span class="n">cancelButton</span><span class="o">=</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="n">dismissString</span><span class="o">=</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">check</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span><span class="p">:</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">srcdir</span><span class="p">,</span> <span class="n">dstdir</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">check</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span><span class="p">:</span>
+                <span class="nb">print</span>
+                <span class="s2">&quot;skip&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">srcdir</span><span class="p">,</span> <span class="n">dstdir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="radiobuttongrp">
+<h2>radioButtonGrp<a class="headerlink" href="#radiobuttongrp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>どのボタンがチェックされているかは q=True, select=True によって調べる</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maya.cmds</span>
+
+<span class="k">def</span> <span class="nf">makePrimitive</span><span class="p">():</span>
+    <span class="n">selected</span> <span class="o">=</span> <span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">radioButtonGrp</span><span class="p">(</span><span class="s1">&#39;radioButtonGrp1&#39;</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">select</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">selected</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">sphere</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">selected</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">nurbsCube</span><span class="p">()</span>
+
+<span class="n">windowName</span> <span class="o">=</span> <span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;radioButtonGrp1&#39;</span><span class="p">)</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">columnLayout</span><span class="p">()</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;make Primitive&#39;</span><span class="p">)</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">radioButtonGrp</span><span class="p">(</span><span class="s1">&#39;radioButtonGrp1&#39;</span><span class="p">,</span> <span class="n">numberOfRadioButtons</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>\
+    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primitive&#39;</span><span class="p">,</span> <span class="n">labelArray2</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;sphere&#39;</span><span class="p">,</span> <span class="s1">&#39;cube&#39;</span><span class="p">),</span> <span class="n">select</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="s1">&#39;makePrimitive()&#39;</span><span class="p">)</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Close&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;maya.cmds.deleteUI(&quot;&#39;</span> <span class="o">+</span> <span class="n">windowName</span> <span class="o">+</span> <span class="s1">&#39;&quot;)&#39;</span><span class="p">))</span>
+<span class="n">maya</span><span class="o">.</span><span class="n">cmds</span><span class="o">.</span><span class="n">showWindow</span><span class="p">()</span>
+
+<span class="c1">####save######</span>
+<span class="n">form_numsv</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">exists</span><span class="o">=</span><span class="s2">&quot;rd_form_num&quot;</span><span class="p">):</span>
+  <span class="n">form_numsv</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="s2">&quot;rd_form_num&quot;</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">form_num</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">radioButtonGrp</span><span class="p">(</span><span class="n">labelArray4</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1-100&#39;</span><span class="p">,</span> <span class="s1">&#39;100-200&#39;</span><span class="p">,</span> <span class="s1">&#39;200-300&#39;</span><span class="p">,</span> <span class="s1">&#39;300-400&#39;</span><span class="p">],</span> <span class="n">select</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">form_numsv</span><span class="p">),</span>
+             <span class="n">cw4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">80</span><span class="p">],</span> <span class="n">numberOfRadioButtons</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">onc</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loadOpenedScnes</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span>
+<span class="c1">####save######</span>
+<span class="n">form_numsv</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">radioButtonGrp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">form_num</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">select</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">optionVar</span><span class="p">(</span><span class="n">sv</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rd_form_num&quot;</span><span class="p">,</span> <span class="n">form_numsv</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tablayout">
+<h2>tabLayout<a class="headerlink" href="#tablayout" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maya.cmds</span> <span class="kn">as</span> <span class="nn">cmds</span>
+
+<span class="k">def</span> <span class="nf">optionsave</span><span class="p">():</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">tabLayout</span><span class="p">(</span><span class="n">tabs</span><span class="p">,</span><span class="n">q</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">sti</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">test</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">window</span><span class="p">(</span> <span class="n">widthHeight</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">form</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">formLayout</span><span class="p">()</span>
+<span class="n">tabs</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">tabLayout</span><span class="p">(</span><span class="n">innerMarginWidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">innerMarginHeight</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">formLayout</span><span class="p">(</span> <span class="n">form</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">attachForm</span><span class="o">=</span><span class="p">((</span><span class="n">tabs</span><span class="p">,</span> <span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">tabs</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">tabs</span><span class="p">,</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">tabs</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="p">)</span>
+
+<span class="n">child1</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">rowColumnLayout</span><span class="p">(</span><span class="n">numberOfColumns</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s1">&#39;..&#39;</span> <span class="p">)</span>
+
+<span class="n">child2</span> <span class="o">=</span> <span class="n">cmds</span><span class="o">.</span><span class="n">rowColumnLayout</span><span class="p">(</span><span class="n">numberOfColumns</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">button</span><span class="p">()</span>
+<span class="n">cmds</span><span class="o">.</span><span class="n">setParent</span><span class="p">(</span> <span class="s1">&#39;..&#39;</span> <span class="p">)</span>
+
+<span class="n">cmds</span><span class="o">.</span><span class="n">tabLayout</span><span class="p">(</span><span class="n">tabs</span><span class="p">,</span><span class="n">cc</span><span class="o">=</span><span class="n">optionsave</span><span class="p">,</span> <span class="n">edit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">tabLabel</span><span class="o">=</span><span class="p">((</span><span class="n">child1</span><span class="p">,</span> <span class="s1">&#39;One&#39;</span><span class="p">),</span> <span class="p">(</span><span class="n">child2</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">)))</span>
+
+
+<span class="n">cmds</span><span class="o">.</span><span class="n">showWindow</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../module/module.html" class="btn btn-neutral float-right" title="module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../shotgun/shotgun.html" class="btn btn-neutral" title="shotgun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

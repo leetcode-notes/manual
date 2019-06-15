@@ -1,0 +1,34 @@
+Unet
+================================
+
+U-Netの実装では、Encoder側はconv1, conv2, …, conv5といったSkip Connectionの
+ためのテンソルを保持している。これらの保持しているテンソルを、Decoder側で逆順にConcatしていき、最終的
+に推論⾊差の「cbcr」を作るというのがU-Netである。最終的なモデルの出⼒は、⾊差に⼊⼒の輝度を加え、YCbCr
+⾊空間からRGB⾊空間に変換をしたカラー画像になる。
+
+Tool
+---------
+
+Google Collaboratory TPU
+
+DataSet
+----------
+
+MyWaifuList https://www.kaggle.com/corollari/waifus
+を使用
+
+前処理
+--------
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+.. figure:: 000.png
+
+.. figure:: 031.png

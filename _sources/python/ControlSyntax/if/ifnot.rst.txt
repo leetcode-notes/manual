@@ -1,0 +1,10 @@
+if
+=======
+
+notの使い所
+-------------
+
+
+.. literalinclude:: ifnot.py
+
+

@@ -1,0 +1,44 @@
+DCGAN keras
+=============================
+
+Tool
+---------
+
+keras=2.2.4
+
+sklearn==0.0
+
+opencv-python==3.4.4.19
+
+前処理
+--------
+
+animdanbol からスクレイピングした画像を顔アップ、80*80、JPGの画像に
+
+画像生成コード
+-----------------
+
+変換して使用
+
+.. toctree::
+
+	code/imagegenerate
+
+生成できた画像
+
+.. figure:: code/train_images/07660.jpg
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://qiita.com/rezoolab/items/5cc96b6d31153e0c86bc
+
+https://qiita.com/mattya/items/e5bfe5e04b9d2f0bbd47
+
+https://qiita.com/triwave33/items/35b4adc9f5b41c5e8141
+
+https://github.com/carpedm20/DCGAN-tensorflow
+
+https://github.com/chainer/chainer/tree/master/examples/dcgan
+
+https://github.com/pytorch/examples/tree/master/dcgan

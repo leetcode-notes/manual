@@ -1,0 +1,38 @@
+code
+======
+
+100knock
+----------
+
+https://github.com/yoyoyo-yo/Gasyori100knock/tree/master/Question_21_30#q29-%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%A4%89%E6%8F%9B%E6%8B%A1%E5%A4%A7%E7%B8%AE%E5%B0%8F
+
+画像半分筒切り出し
+--------------------
+
+.. figure:: dividehalf.py
+
+http://catalina1344.hatenablog.jp/entry/2014/04/05/103947
+
+opnCV リサイズ
+----------------
+
+.. figure:: resize.py
+
+正方形にリサイズ
+-----------------
+
+.. figure:: resize_crop_square.py
+
+kerasで画像操作
+----------------
+
+.. figure:: keras_channel_shift_range.py
+
+
+PIL 余白追加
+-------------------
+
+.. figure:: PILresize_crop_white.py
+
+https://note.nkmk.me/python-pillow-add-margin-expand-canvas/
+

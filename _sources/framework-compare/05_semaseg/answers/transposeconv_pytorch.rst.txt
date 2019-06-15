@@ -1,0 +1,6 @@
+05_semaseg transposeconv_pytorch
+===============================================================================================
+
+.. raw:: html
+   :file: html/transposeconv_pytorch.html
+

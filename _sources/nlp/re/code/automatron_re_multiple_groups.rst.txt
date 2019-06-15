@@ -1,0 +1,6 @@
+re code automatron_re_multiple_groups
+===============================================================================================
+
+.. raw:: html
+   :file: html/automatron_re_multiple_groups.html
+

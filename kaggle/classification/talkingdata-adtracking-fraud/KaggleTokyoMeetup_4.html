@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>KaggleTokyoMeetup_4 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="classification competition" href="../classification.html"/>
+        <link rel="next" title="talking data" href="talking_data.html"/>
+        <link rel="prev" title="quora-question-pairs" href="../quora-question-pairs/quora-question-pairs.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GBDT/GBDT.html">GBDT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../classification.html">classification competition</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../JigsawUnintendedBiasToxicityClassification/JigsawUnintendedBiasToxicity.html">JigsawUnintendedBiasToxicity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../anime-recommendations-database/anime-recommendatison-database.html">anime-recommendatison-database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bnp-paribas-cardif-claims/bnp-paribas-cardif-claims.html">bnp-paribas-cardif-claims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../costa-rican-household/costa-rican-household.html">costa-rican-household-poverty-prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../porto-seguro-safe-driver-prediction/porto-seguro-safe-driver.html">porto-seguro-safe-driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quora-question-pairs/quora-question-pairs.html">quora-question-pairs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">KaggleTokyoMeetup_4</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#talkingdata-adtracking-fraud-detection-challenge-1st-place-solution">4 TalkingData AdTracking Fraud Detection Challenge (1st place solution)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="talking_data.html">talking data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="talking_data_adtec.html">talking_data_adtec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/nikkei_kaggle.html">titanic code nikkei_kaggle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/study.html">titanic code study</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/titanic.html">kaggle titanic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/titanic-data-science-solutions.html">titanic code titanic-data-science-solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/titanic_lightgbm.html">titanic code titanic_lightgbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/titanic_takami.html">titanic code titanic_takami</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../titanic/titanic_takami1.html">titanic code titanic_takami1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video-game-sales-with-ratings/video-game-sales-with-ratings.html">video game sales with rating</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-engineering/feature-engineering.html">feature engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../classification.html">classification competition</a> &raquo;</li>
+      
+    <li>KaggleTokyoMeetup_4</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/classification/talkingdata-adtracking-fraud/KaggleTokyoMeetup_4.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kaggletokyomeetup-4">
+<h1>KaggleTokyoMeetup_4<a class="headerlink" href="#kaggletokyomeetup-4" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="talkingdata-adtracking-fraud-detection-challenge-1st-place-solution">
+<h2>4 TalkingData AdTracking Fraud Detection Challenge (1st place solution)<a class="headerlink" href="#talkingdata-adtracking-fraud-detection-challenge-1st-place-solution" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.slideshare.net/TakanoriHayashi3/talkingdata-adtracking-fraud-detection-challenge-1st-place-solution">https://www.slideshare.net/TakanoriHayashi3/talkingdata-adtracking-fraud-detection-challenge-1st-place-solution</a></p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/2FFDtSmAYPo?list=PLkBjLQIGEjJlciM9lEz1AsuZZ8lDgyxDu" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><ol class="arabic simple">
+<li><p>TalkingData AdTracking Fraud Detection Challenge Winner’s solution（の概要） Team: ['flowlight', 'komaki'].shuffle() &#64;flowlight_ &#64;Komaki__</p></li>
+<li><p>チーム紹介</p></li>
+</ol>
+<blockquote>
+<div><p>● 学生時代はTopCoder, Codeforces, ICPCなどアルゴリズム系コンペを 中心に参加していた</p>
+<p>● 同じ研究室、同じ職場</p>
+<p>● チームを組んだのは初めて Komaki 「毎月2倍、1年で4096倍強くなった。 優勝する気しかしない。」</p>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p>● 広告がクリックされた時にダウンロードされるかを予測</p>
+<p>○ 通常のコンバージョン予測コンペと似たような二値分類</p>
+<p>○ 不正クリックを検出する必要はない ユーザのip, os, device クリックされたappとchannel （広告媒体） クリック時刻 ダウンロードの有無</p>
+</li>
+<li><p>データセットの統計情報・評価指標</p></li>
+</ol>
+<blockquote>
+<div><p>● 評価指標</p>
+<p>○ AUC (Area under the curve)</p>
+<p>● データセット</p>
+<p>○ 訓練データは1.85億件（３日分のクリック）</p>
+<p>○ テストデータは0.58億件（次の１日分）</p>
+<p>■ 特徴量を1つ増やすと約1GBデータが増える感じ</p>
+<p>○ is_attributed = 1となっているデータはわずか0.2%</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>主なアイデア</p></li>
+</ol>
+<blockquote>
+<div><p>● 学習と特徴量作成の高速・省メモリ化</p>
+<p>○ Negative down-sampling</p>
+<p>● 特徴量作成</p>
+<p>○ 未来の情報を用いた特徴量</p>
+<p>○ 全探索的に特徴量を作成</p>
+<p>○ カテゴリ変数の埋め込み</p>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>Negative down-sampling</p></li>
+</ol>
+<blockquote>
+<div><p>● 広告クリックの界隈ではよく知られた手法</p>
+<p>○ Google [McMahan+ ’13], Facebook [He+ ’14]</p>
+<p>● 正例（is_attributed = 1）と負例（is_attributed = 0）の個数が等しく なるように負例だけをdown-sample（99.8%の負例を捨てる）</p>
+<p>○ 訓練データのサイズが約2億から100万程度になる</p>
+<p>○ 数百個の特徴量を作成することが可能に</p>
+<p>● 精度に関しても問題ない</p>
+<p>○ down-samplingで複数のデータセットを作成しモデルをバギング することで全データで訓練したモデルの性能を超えた</p>
+<p>[McMahan+ ’13] Ad Click Prediction: a View from the Trenches [He+ ’14] Practical Lessons from Predicting Clicks on Ads at Facebook</p>
+</div></blockquote>
+<ol class="arabic simple" start="7">
+<li><p>未来の情報を用いた特徴量</p></li>
+</ol>
+<blockquote>
+<div><p>● 全てのデータが一度に与えられるコンペではユーザの未来の行動から 過去の行動を予測（？）することができる</p>
+<p>○ 過去の行動よりも未来の行動に基づく特徴の方が大抵強い</p>
+<p>● 今回は各カテゴリ変数(ip, os, device, channel, app)の値に対して以下 のような特徴量を求めた</p>
+<p>○ 直後（直前）のクリックからの経過時間</p>
+<p>○ 今後一時間以内でのそのカテゴリ変数の値の出現回数</p>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>全探索的な特徴量の作成</p></li>
+</ol>
+<blockquote>
+<div><p>● 同じ特徴量を(ip, os)や(ip, os, channel)などの組にも計算したい</p>
+<p>○ どのような組み合わせを選ぶ？</p>
+<p>● 全ての組み合わせに対して計算（2^5 - 1 = 31通り）</p>
+<p>○ 経験上LightGBMは無意味な特徴量に対してもロバスト</p>
+<p>○ （有用な特徴量による利益）&gt; （無用な特徴量による不利益）</p>
+<p>○ （人間の作業コスト）&gt;（計算コスト）</p>
+</div></blockquote>
+<ol class="arabic simple" start="9">
+<li><p>カテゴリ変数の埋め込み</p></li>
+</ol>
+<blockquote>
+<div><p>● 各カテゴリ変数（ip, app, channel,...）をベクトルに埋め込みたい</p>
+<p>○ NLPでのword embeddingみたいな気持ち</p>
+<p>● カテゴリ変数同士で共起行列を作ってLDA / NMF / tSVDを適用</p>
+<p>○ ここでも全探索的に特徴量を生成</p>
+<p>■ 5P2 = 20通りの組み合わせ</p>
+<p>■ deviceがほとんど役に立たないことがわかり4P2 = 12通りに変更</p>
+<p>○ LDAが一番効果的</p>
+<p>○ 最終的にLDAのトピック数は5, 20を使用</p>
+<p>■ トピック数が5のとき5 * 12 = 60個の特徴量が作成される</p>
+<p>■ NMF, tSVDでは5次元のベクトルのみ計算した</p>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>最終的なモデル</p></li>
+</ol>
+<blockquote>
+<div><p>● シングルモデル</p>
+<p>○ LightGBM (&gt;600 features)</p>
+<p>■ 訓練時間（iteration数の決定＋全データでの訓練）: １時間未満</p>
+<p>■ 使用メモリ: 100GB未満</p>
+<p>■ 計算環境: AWSのr3.8xlarge (32CPUs, 244GB memory)</p>
+<p>○ ５個のdown-samplingされたデータセットで構築して平均を計算</p>
+<p>● アンサンブル</p>
+<p>○ 材料</p>
+<p>■ 異なる特徴量・パラメータのLightGBMモデル</p>
+<p>■ 三層のニューラルネットワーク</p>
+<p>○ 上記の材料でRank averaging (Kaggle Ensembling Guide | MLWave)</p>
+</div></blockquote>
+<ol class="arabic simple" start="11">
+<li><p>実装上の工夫</p></li>
+</ol>
+<blockquote>
+<div><p>● 特徴量は毎回計算せずに一度計算したらファイルでキャッシュする</p>
+<p>○ 全訓練データに対する特徴量をファイルに書いたらディスク不足に</p>
+<p>○ 特徴量を作る前にサンプリングして、そのインデックスに対応する特徴 量だけ保存するように変更</p>
+<p>● データセットも特徴量もfeather形式で保存した</p>
+<p>○ <a class="reference external" href="https://github.com/wesm/feather">https://github.com/wesm/feather</a></p>
+<p>○ 訓練データが数秒で読めるように（CSVだと1分以上）</p>
+<p>● 全探索的な特徴量生成をC++で実装</p>
+<p>○ Pandasでカテゴリ変数の組でのgroupingを高速を行う方法がわからなか った（Click time deltaの計算に必要）</p>
+<p>○ C++では31通りの特徴量の計算がシングルスレッドで1時間程度</p>
+</div></blockquote>
+<ol class="arabic simple" start="12">
+<li><p>最終的な特徴量とモデルのパラメータ 説明しません。雰囲気だけ</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="talking_data.html" class="btn btn-neutral float-right" title="talking data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../quora-question-pairs/quora-question-pairs.html" class="btn btn-neutral" title="quora-question-pairs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

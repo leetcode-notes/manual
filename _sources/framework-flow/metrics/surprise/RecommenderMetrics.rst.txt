@@ -1,0 +1,6 @@
+metrics RecommenderMetrics
+===============================================================================================
+
+.. raw:: html
+   :file: html/RecommenderMetrics.html
+

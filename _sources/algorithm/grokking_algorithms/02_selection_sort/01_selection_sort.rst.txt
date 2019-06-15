@@ -1,0 +1,6 @@
+grokking_algorithms 01_selection_sort
+===============================================================================================
+
+.. raw:: html
+   :file: html/01_selection_sort.html
+

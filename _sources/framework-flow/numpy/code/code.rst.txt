@@ -1,0 +1,32 @@
+code集
+========
+
+配列を連結
+------------
+
+.. literalinclude:: vstack.py
+
+.. literalinclude:: concatenate.py
+
+一次元配列の内積 dot
+----------------------
+
+.. literalinclude:: dot.py
+
+
+整数値のベクトルをone hot表現に変換
+-----------------------------------------
+
+.. literalinclude:: onehot.py
+
+
+reshape 配列の次元を変更
+-----------------------------------------
+
+reshapeの一つのサイズが決まっているとき、
+もう一方を-1とすると、-1には元の形状から推測された値が入る。
+
+.. literalinclude:: reshape.py
+
+
+

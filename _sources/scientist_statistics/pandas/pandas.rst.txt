@@ -1,0 +1,23 @@
+pandas
+=======
+
+
+.. literalinclude:: describe.py
+
+項目名	意味
+
+count	そのカラムの件数
+
+mean	平均
+
+std     標準偏差
+
+min     最小値
+
+25%     第一四分位数
+
+50%     第二四分位数
+
+75%     第三四分位数
+
+max     最大値

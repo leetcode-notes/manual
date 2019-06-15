@@ -1,0 +1,6 @@
+scikitlearn linear_regression
+===============================================================================================
+
+.. raw:: html
+   :file: html/linear_regression.html
+

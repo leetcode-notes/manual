@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第8章: 機械学習 &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="8_ML nlp100_70_1" href="code/nlp100_70_1.html"/>
+        <link rel="prev" title="7_DB nlp100_68_1" href="../7_DB/code/nlp100_68_1.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第8章: 機械学習</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">70. データの入手・整形</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">71. ストップワード</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">72. 素性抽出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">73. 学習</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">74. 予測</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">75. 素性の重み</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">76. ラベル付け</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">77. 正解率の計測</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">78. 5分割交差検定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">79. 適合率-再現率グラフの描画</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_2/9_vec_2.html">第10章: ベクトル空間法 (II)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第8章: 機械学習</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/8_ML/8_ML.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>第8章: 機械学習<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>本章では，Bo Pang氏とLillian Lee氏が公開しているMovie Review Dataのsentence polarity dataset v1.0を用い，文を肯定的（ポジティブ）もしくは否定的（ネガティブ）に分類するタスク（極性分析）に取り組む．</p>
+<div class="section" id="id2">
+<h2>70. データの入手・整形<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>文に関する極性分析の正解データを用い，以下の要領で正解データ（sentiment.txt）を作成せよ．</p>
+<p>rt-polarity.posの各行の先頭に&quot;+1 &quot;という文字列を追加する（極性ラベル&quot;+1&quot;とスペースに続けて肯定的な文の内容が続く）
+rt-polarity.negの各行の先頭に&quot;-1 &quot;という文字列を追加する（極性ラベル&quot;-1&quot;とスペースに続けて否定的な文の内容が続く）
+上述1と2の内容を結合（concatenate）し，行をランダムに並び替える
+sentiment.txtを作成したら，正例（肯定的な文）の数と負例（否定的な文）の数を確認せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_70_1.html">8_ML nlp100_70_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>71. ストップワード<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>英語のストップワードのリスト（ストップリスト）を適当に作成せよ．さらに，引数に与えられた単語（文字列）がストップリストに含まれている場合は真，それ以外は偽を返す関数を実装せよ．さらに，その関数に対するテストを記述せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_71_1.html">8_ML nlp100_71_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>72. 素性抽出<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>極性分析に有用そうな素性を各自で設計し，学習データから素性を抽出せよ．素性としては，レビューからストップワードを除去し，各単語をステミング処理したものが最低限のベースラインとなるであろう．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_72_1.html">8_ML nlp100_72_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>73. 学習<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>72で抽出した素性を用いて，ロジスティック回帰モデルを学習せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_73_1.html">8_ML nlp100_73_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>74. 予測<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>73で学習したロジスティック回帰モデルを用い，与えられた文の極性ラベル（正例なら&quot;+1&quot;，負例なら&quot;-1&quot;）と，その予測確率を計算するプログラムを実装せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_74_1.html">8_ML nlp100_74_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>75. 素性の重み<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>73で学習したロジスティック回帰モデルの中で，重みの高い素性トップ10と，重みの低い素性トップ10を確認せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_75_1.html">8_ML nlp100_75_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>76. ラベル付け<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>学習データに対してロジスティック回帰モデルを適用し，正解のラベル，予測されたラベル，予測確率をタブ区切り形式で出力せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_76_1.html">8_ML nlp100_76_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>77. 正解率の計測<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>76の出力を受け取り，予測の正解率，正例に関する適合率，再現率，F1スコアを求めるプログラムを作成せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_77_1.html">8_ML nlp100_77_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>78. 5分割交差検定<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>76-77の実験では，学習に用いた事例を評価にも用いたため，正当な評価とは言えない．すなわち，分類器が訓練事例を丸暗記する際の性能を評価しており，モデルの汎化性能を測定していない．そこで，5分割交差検定により，極性分類の正解率，適合率，再現率，F1スコアを求めよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_78_1.html">8_ML nlp100_78_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>79. 適合率-再現率グラフの描画<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ロジスティック回帰モデルの分類の閾値を変化させることで，適合率-再現率グラフを描画せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_79_1.html">8_ML nlp100_79_1</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_70_1.html" class="btn btn-neutral float-right" title="8_ML nlp100_70_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../7_DB/code/nlp100_68_1.html" class="btn btn-neutral" title="7_DB nlp100_68_1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

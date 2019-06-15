@@ -1,0 +1,14 @@
+numpy
+=======
+
+.. figure:: NumpyCheat.jpg
+   :width: 800px
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+https://jakevdp.github.io/PythonDataScienceHandbook/

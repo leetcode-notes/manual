@@ -1,0 +1,6 @@
+PRML GaussianMixture_EM
+===============================================================================================
+
+.. raw:: html
+   :file: html/GaussianMixture_EM.html
+

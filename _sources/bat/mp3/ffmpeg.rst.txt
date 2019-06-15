@@ -1,0 +1,15 @@
+ffmpeg
+=============================
+
+https://looooooooop.blog.fc2.com/blog-entry-1021.html
+
+tile
+------
+
+https://nico-lab.net/tile_with_ffmpeg/
+
+
+
+FFmpegで一括処理したい
+
+https://dekirukigasuru.com/blog/2017/08/11/python-ffmpeg/

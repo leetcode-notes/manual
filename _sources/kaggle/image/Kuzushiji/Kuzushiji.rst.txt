@@ -1,0 +1,4 @@
+machine kaggle Kuzushiji
+===========================================================================
+
+https://www.kaggle.com/anokas/kuzushiji-mnist-cat

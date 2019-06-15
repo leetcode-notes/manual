@@ -1,0 +1,45 @@
+.. _stat:
+
+
+stat ファイル更新日時の比較
++++++++++++++++++++++++++++++
+
+stat.ST_MODE
+Iノードの保護モード。
+
+stat.ST_INO
+Iノード番号。
+
+stat.ST_DEV
+Iノードが存在するデバイス。
+
+stat.ST_NLINK
+該当する Iノードへのリンク数。
+
+stat.ST_UID
+ファイルの所持者のユーザ ID。
+
+stat.ST_GID
+ファイルの所持者のグループ ID。
+
+stat.ST_SIZE
+通常ファイルではバイトサイズ; いくつかの特殊ファイルでは処理待ちのデータ量。
+
+stat.ST_ATIME
+最後にアクセスした時刻。
+
+stat.ST_MTIME
+最後に変更された時刻。
+
+stat.ST_CTIME
+オペレーティングシステムから返される"ctime"。
+あるOS(Unixなど)では最後にメタデータが更新された時間となり、
+別のOS(Windowsなど)では作成時間となります
+(詳細については各プラットフォームのドキュメントを参照してください)。
+
+
+.. literalinclude:: stat_ex1.py
+
+.. literalinclude:: stat_maya1.py
+
+.. literalinclude:: stat_maya2.py

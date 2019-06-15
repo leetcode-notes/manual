@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scikitlearn decision tree &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="decisiontree" href="../decisiontree.html"/>
+        <link rel="next" title="scikitlearn make_classification make_classification" href="../../make_classification/make_classification.html"/>
+        <link rel="prev" title="decisiontree decisiontree" href="decisiontree.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../framework.html">framework workflow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../CUDA/CUDA.html">CUDA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Ensemble/Ensemble.html">Ensemble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../GA/GeneticAlgorithm.html">GeneticAlgorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PyTorch/PyTorch.html">PyTorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../TensorFlow/tensorflow.html">TensorFlow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../anaconda/anaconda.html">anaconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collab/collab.html">collaboratory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../jupyter/jupyter.html">jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keras/keras.html">keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../matplotlib/matplotlib.html">matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metrics/metrics.html">metrics 評価関数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../numpy/numpy.html">numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../pandas/pandas.html">pandas</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../scikitlearn.html">scikitlearn</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../CV/CV.html">CV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../category/category.html">category</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../chatsheat/cheatsheat.html">cheatsheat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../cheatsheat/algorythm_cheatsheat.html">algorythm_chatsheat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../code/fit_perceptron.html">scikitlearn fit_perceptron</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../code/lenear-argebra.html">scikitlearn lenear-argebra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../code/linear_regression.html">scikitlearn linear_regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../code/minMatrrixScalor.html">scikitlearn minMatrrixScalor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../code/standardScolor.html">scikitlearn standardScolor</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../decisiontree.html">decisiontree</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DecisionTreeClassifier.html">DecisionTreeClassifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimationtree_codeexa.html">decisiontree decimationtree_codeexa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decisiontree.html">decisiontree decisiontree</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">scikitlearn decision tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../make_classification/make_classification.html">scikitlearn make_classification make_classification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../okanalyst_analyst/lesson_predict_stock.html">scikitlearn lesson_predict_stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../okanalyst_analyst/lesson_sklearn.html">scikitlearn lesson_sklearn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../version/version_error.html">ImportError: No module named 'sklearn.cross_validation'の対処</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../scikitlearn.html#scikit-learn">Scikit-learn で線形回帰</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../seaborn/seaborn.html">seaborn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../yellowbrick/yellowbrick.html">yellowbrick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../framework.html">framework workflow</a> &raquo;</li>
+      
+        <li><a href="../../scikitlearn.html">scikitlearn</a> &raquo;</li>
+      
+        <li><a href="../decisiontree.html">decisiontree</a> &raquo;</li>
+      
+    <li>scikitlearn decision tree</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/framework-flow/scikitlearn/decisiontree/code/decisiontree_mshinoda88.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scikitlearn-decision-tree">
+<h1>scikitlearn decision tree<a class="headerlink" href="#scikitlearn-decision-tree" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="cart">
+<h2>CART<a class="headerlink" href="#cart" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>決定木のアルゴリズムとして最も頻繁に使われるのが「CART」です。</p>
+<p>日本語で「カート」と呼ばれておりClassification and Regression Treeの略です。</p>
+<p>各アルゴリズムではどのように決定木を分割させるかの計算方法や決定木の分岐数等が異なります。CARTでは2分岐のみですが他のアルゴリズム（例：C4.0）では3つ以上の分岐が可能</p>
+<p># Scikit-learnからIrisデータを読み込む</p>
+<p># targetでターゲットへアクセス（0〜5行のデータを表示）</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">Out</span> <span class="p">[</span> <span class="p">]:</span>
+<span class="p">[[</span> <span class="mf">5.1</span>  <span class="mf">3.5</span>  <span class="mf">1.4</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.9</span>  <span class="mf">3.</span>   <span class="mf">1.4</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.7</span>  <span class="mf">3.2</span>  <span class="mf">1.3</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.6</span>  <span class="mf">3.1</span>  <span class="mf">1.5</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">5.</span>   <span class="mf">3.6</span>  <span class="mf">1.4</span>  <span class="mf">0.2</span><span class="p">]]</span>
+<span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>データも揃いましたので決定木のモデルを訓練してみましょう。今回は決定木の概要を理解する目的ですので2階層のシンプルな決定木を構築します。</p>
+<p>モデルの訓練
+通常の機械学習の流れでは訓練データとテストデータに切り分けて評価を行いますが今回は省力します。参考までにですが、下記のclfとはClassification（分類）の略語です。</p>
+<p>In [ ]:
+# 決定木モデルの訓練
+clf = tree.DecisionTreeClassifier(max_depth=2)
+clf = clf.fit(iris.data, iris.target)
+これで決定木の訓練が完了です。2階層の決定木を作りますので、max_depthに「2」と指定をしています。では、訓練した決定木をgraphvizを利用して確認してみましょう。</p>
+<p>In [ ]:
+# 訓練済みの決定木の視覚化</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                         <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>
+                         <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>
+                         <span class="n">rounded</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+                         <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                         <span class="n">special_characters</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>
+<span class="n">graph</span>
+</pre></div>
+</div>
+<p>1行目） データ分割の条件
+最上部のノードを見ていただくと「petal width(cm)
+0.8」と1行目に表記があります。こちらはこのノードにおいてのデータ分割条件です。つまりこのノードではpetal width（花弁の幅）が0.8以下かどうかを振り分けています。</p>
+<p>（2行目） gini = ジニ不純度
+ジニ不純度とは「データがどれだけ上手に分岐できるか」を表す指標となります。Giniは最大を1として値が大きいほど不純度が高い、つまり上手に分岐できていないことを意味します。</p>
+<p>Scikit-learnの決定木ではデフォルトでジニ不純度が使われていますが、パラメーターに「entropy」と指定することで情報エントロピーという異なる種類の指標を利用することも可能です。</p>
+<p>（3行目）samples = 観測数
+最初のノードを見て頂くとsamples=150とあり、2層目の左側（橙色）のノードをみるとsamples＝50とあります。これらのsamplesとは各ノード（またはカテゴリー）に分類された観測数を表します。</p>
+<p>アイリスのデータは全部で150ありましたので、最初のノードのSamplesは150からスタートしています。分岐条件は「花弁の幅が0.8」とあり、その分岐条件の結果、0.8以下のサンプルは50（左オレンジのノード）、0.8より大きいサンプルは100（右白のノード）とデータが分岐しているのが解ります。</p>
+<p>（4行目） value = ノードの分類サマリー
+データセットには3つのクラス（品種）があります。４行目のvalueとは各ノードの分類のサマリーを表しています。最上部のノードを確認してみると[50, 50, 50]とありますが、これはこのノード内のデータの分類が全３品種で50データずつあることを意味しています。</p>
+<p>では実際にこの決定木を紐解いてみましょう。</p>
+<dl class="simple">
+<dt>1層目 ノード</dt><dd><p>決定木の分岐条件はpetal width（花弁の長さ）が0.8cm以下かどうかです
+対象データ数は全部で150個</p>
+</dd>
+<dt>2層目 左ノード</dt><dd><p>1層目の分岐条件が「True」 = 花弁の長さが0.8ｃｍ以下
+50個のデータがこの条件で振り分けられました
+その全てがIris-Setosaの品種
+このノードは結果価値を示す最終地点の結果ノード（Terminal Node）</p>
+</dd>
+<dt>2層目 右ノード</dt><dd><p>1層目の分岐条件が「False」 = 花弁の長さが0.8cmより大きい
+100個のデータがこの条件で振り分けられました
+そのうち50個がIris-versicolorで50個がIris-virginicaの品種です
+このノードの分岐条件はpetal width（花弁の幅）が1.75cm以下かどうか</p>
+</dd>
+<dt>3層目 左ノード</dt><dd><p>2層目の分岐条件が「True」 = 花弁の幅が1.75以下
+54個のデータがこの条件で振り分けられました
+そのうち49個がIris-versicolorで5個がIris-virginicaの品種です
+このノードは結果価値を示す最終地点の結果ノード（Terminal Node）</p>
+</dd>
+<dt>3層目 右ノード</dt><dd><p>2層目の分岐条件が「False」 = 花弁の幅が1.75より大きい
+46個のデータがこの条件で振り分けられました
+そのうち45個がIris-virginicaで1個がIris-versicolorの品種です
+このノードは結果価値を示す最終地点の結果ノード（Terminal Node）</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../make_classification/make_classification.html" class="btn btn-neutral float-right" title="scikitlearn make_classification make_classification" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="decisiontree.html" class="btn btn-neutral" title="decisiontree decisiontree" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

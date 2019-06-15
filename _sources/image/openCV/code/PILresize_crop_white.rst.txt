@@ -1,0 +1,6 @@
+openCV PILresize_crop_white
+===============================================================================================
+
+.. raw:: html
+   :file: html/PILresize_crop_white.html
+

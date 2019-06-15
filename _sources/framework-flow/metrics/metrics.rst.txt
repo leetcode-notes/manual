@@ -1,0 +1,22 @@
+metrics 評価関数
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+http://surpriselib.com/
+
+conda install -c conda-forge scikit-surprise
+
+surprise
+---------
+
+https://ohke.hateblo.jp/entry/2017/10/06/230000
+
+検査の評価指標（再現率、適合率、特異度、正確度、F値）
+-------------------------------------------------------
+
+https://mathwords.net/kensa

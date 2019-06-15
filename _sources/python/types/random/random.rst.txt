@@ -1,0 +1,11 @@
+.. _random:
+
+random
+=======
+
+
+築年数を求める
+----------------------------------
+
+.. literalinclude:: yearrandom.py
+

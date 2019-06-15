@@ -1,0 +1,6 @@
+scikit-image code ImageSegmentation-scikit-image
+===============================================================================================
+
+.. raw:: html
+   :file: html/ImageSegmentation-scikit-image.html
+

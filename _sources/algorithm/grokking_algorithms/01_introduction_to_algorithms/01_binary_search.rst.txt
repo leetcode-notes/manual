@@ -1,0 +1,6 @@
+grokking_algorithms 01_binary_search
+===============================================================================================
+
+.. raw:: html
+   :file: html/01_binary_search.html
+

@@ -1,0 +1,26 @@
+tupple
+########
+
+unpack
+***************
+
+
+unpack () なしでも大丈夫
+===============================================
+
+.. code-block:: python
+
+    def main():
+        python = ('Python', 1991)
+        ruby = ('Ruby', 1995)
+        go = ('Go', 2009)
+
+        programming_lang = python,ruby,go
+
+        for name,year in programming_lang:
+
+            print(name, year, '年生まれ')
+
+
+    if __name__ == "__main__":
+        main()

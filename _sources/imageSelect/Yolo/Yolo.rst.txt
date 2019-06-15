@@ -1,0 +1,33 @@
+Yolo
+=============================
+
+【Darknet】リアルタイムオブジェクト認識 YOLOをTensorflowで試す
+
+https://qiita.com/tttttt/items/a33bc8297c9a03b38c74
+
+Yolo V3 GPU Tutorial - darknet
+
+https://www.youtube.com/playlist?list=PL_Nji0JOuXg1gNDFvJ8xU3dAFw27Oqz3J
+
+https://github.com/reigngt09/yolov3workflow
+
+https://github.com/PacktPublishing/YOLO-v3---Robust-Deep-Learning-Object-Detection-in-1-Hour/tree/master/Section%203
+
+YOLOv3をCPU環境でpython使ってリアルタイム画像認識を動かしてみた -
+
+https://qiita.com/daiarg/items/03c55c82fdc6e623bf07
+
+環境構築
+----------
+
+CUDA 10.0 インストール
+
+https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=7&target_type=exelocal
+
+Open CV 3.40
+
+https://opencv.org/
+
+cuDNN
+
+https://developer.nvidia.com/cudnn

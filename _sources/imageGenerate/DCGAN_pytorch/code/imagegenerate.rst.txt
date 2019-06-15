@@ -1,0 +1,5 @@
+DCGAN_pytorch imagegenerate
+---------------------------------------------------------------------------
+
+.. literalinclude:: imagegenerate.py
+

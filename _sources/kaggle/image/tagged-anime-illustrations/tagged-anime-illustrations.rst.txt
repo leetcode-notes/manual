@@ -1,0 +1,32 @@
+tagged-anime-illustrations
+============================
+
+https://www.kaggle.com/mylesoneill/tagged-anime-illustrations/home
+
+https://www.kaggle.com/do13579/colorizing-binary-image-using-u-net-keras
+
+anime make
+
+https://github.com/dabsdamoon/Anime-Colorization
+
+http://localhost:8888/tree/kaggle/tagged-anime-illustrations/code/colorizing-binary-image-using-u-net-keras_custom.ipynb
+
+http://localhost:8888/tree/kaggle/tagged-anime-illustrations/code/binary-anime-detection.ipynb
+
+
+
+http://localhost:8888/tree/kaggle/tagged-anime-illustrations/code/kernelea4b6a30f5.ipynb
+
+eda only
+
+
+http://localhost:8888/tree/kaggle/tagged-anime-illustrations/code/starter-tagged-anime-illustrations.ipynb
+
+
+anim colorize
+
+https://github.com/dabsdamoon/Anime-Colorization
+
+Original release since 2011 at OpenCVによるアニメ顔検出ならlbpcascade_animeface.xml (in Japanese)
+
+https://github.com/nagadomi/lbpcascade_animeface

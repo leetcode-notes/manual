@@ -1,0 +1,6 @@
+titanic code titanic_takami1
+===============================================================================================
+
+.. raw:: html
+   :file: code/html/titanic_takami1.html
+

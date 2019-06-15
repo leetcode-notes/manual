@@ -1,0 +1,6 @@
+AI0 47_cnn_preparation-checkpoint
+===============================================================================================
+
+.. raw:: html
+   :file: html/47_cnn_preparation-checkpoint.html
+

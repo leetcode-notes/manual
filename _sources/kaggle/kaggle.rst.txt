@@ -1,0 +1,15 @@
+kaggle
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+*個人的都合で分類分けをしております。明確な物ではありません。*
+
+Kaggle Past Solution
+----------------------
+
+https://ndres.me/kaggle-past-solutions/

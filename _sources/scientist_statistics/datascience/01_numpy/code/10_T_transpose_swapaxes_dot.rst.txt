@@ -1,0 +1,6 @@
+01_numpy 10_T_transpose_swapaxes_dot
+===============================================================================================
+
+.. raw:: html
+   :file: html/10_T_transpose_swapaxes_dot.html
+

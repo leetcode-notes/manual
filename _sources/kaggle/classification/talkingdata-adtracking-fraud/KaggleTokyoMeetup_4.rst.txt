@@ -1,0 +1,173 @@
+KaggleTokyoMeetup_4
+======================
+
+4 TalkingData AdTracking Fraud Detection Challenge (1st place solution)
+--------------------------------------------------------------------------
+
+https://www.slideshare.net/TakanoriHayashi3/talkingdata-adtracking-fraud-detection-challenge-1st-place-solution
+
+
+.. raw:: html
+
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/2FFDtSmAYPo?list=PLkBjLQIGEjJlciM9lEz1AsuZZ8lDgyxDu" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+1. TalkingData AdTracking Fraud Detection Challenge Winner’s solution（の概要） Team: ['flowlight', 'komaki'].shuffle() @flowlight_ @Komaki__
+
+2. チーム紹介
+
+ ● 学生時代はTopCoder, Codeforces, ICPCなどアルゴリズム系コンペを 中心に参加していた
+
+ ● 同じ研究室、同じ職場
+
+ ● チームを組んだのは初めて Komaki 「毎月2倍、1年で4096倍強くなった。 優勝する気しかしない。」
+
+3.
+
+ ● 広告がクリックされた時にダウンロードされるかを予測
+
+ ○ 通常のコンバージョン予測コンペと似たような二値分類
+
+ ○ 不正クリックを検出する必要はない ユーザのip, os, device クリックされたappとchannel （広告媒体） クリック時刻 ダウンロードの有無
+
+4. データセットの統計情報・評価指標
+
+ ● 評価指標
+
+ ○ AUC (Area under the curve)
+
+ ● データセット
+
+ ○ 訓練データは1.85億件（３日分のクリック）
+
+ ○ テストデータは0.58億件（次の１日分）
+
+ ■ 特徴量を1つ増やすと約1GBデータが増える感じ
+
+ ○ is_attributed = 1となっているデータはわずか0.2%
+
+5. 主なアイデア
+
+ ● 学習と特徴量作成の高速・省メモリ化
+
+ ○ Negative down-sampling
+
+ ● 特徴量作成
+
+ ○ 未来の情報を用いた特徴量
+
+ ○ 全探索的に特徴量を作成
+
+ ○ カテゴリ変数の埋め込み
+
+6. Negative down-sampling
+
+ ● 広告クリックの界隈ではよく知られた手法
+
+ ○ Google [McMahan+ ’13], Facebook [He+ ’14]
+
+ ● 正例（is_attributed = 1）と負例（is_attributed = 0）の個数が等しく なるように負例だけをdown-sample（99.8%の負例を捨てる）
+
+ ○ 訓練データのサイズが約2億から100万程度になる
+
+ ○ 数百個の特徴量を作成することが可能に
+
+ ● 精度に関しても問題ない
+
+ ○ down-samplingで複数のデータセットを作成しモデルをバギング することで全データで訓練したモデルの性能を超えた
+
+ [McMahan+ ’13] Ad Click Prediction: a View from the Trenches [He+ ’14] Practical Lessons from Predicting Clicks on Ads at Facebook
+
+7. 未来の情報を用いた特徴量
+
+ ● 全てのデータが一度に与えられるコンペではユーザの未来の行動から 過去の行動を予測（？）することができる
+
+ ○ 過去の行動よりも未来の行動に基づく特徴の方が大抵強い
+
+ ● 今回は各カテゴリ変数(ip, os, device, channel, app)の値に対して以下 のような特徴量を求めた
+
+ ○ 直後（直前）のクリックからの経過時間
+
+ ○ 今後一時間以内でのそのカテゴリ変数の値の出現回数
+
+8. 全探索的な特徴量の作成
+
+ ● 同じ特徴量を(ip, os)や(ip, os, channel)などの組にも計算したい
+
+ ○ どのような組み合わせを選ぶ？
+
+ ● 全ての組み合わせに対して計算（2^5 - 1 = 31通り）
+
+ ○ 経験上LightGBMは無意味な特徴量に対してもロバスト
+
+ ○ （有用な特徴量による利益）> （無用な特徴量による不利益）
+
+ ○ （人間の作業コスト）>（計算コスト）
+
+9. カテゴリ変数の埋め込み
+
+ ● 各カテゴリ変数（ip, app, channel,...）をベクトルに埋め込みたい
+
+ ○ NLPでのword embeddingみたいな気持ち
+
+ ● カテゴリ変数同士で共起行列を作ってLDA / NMF / tSVDを適用
+
+ ○ ここでも全探索的に特徴量を生成
+
+ ■ 5P2 = 20通りの組み合わせ
+
+ ■ deviceがほとんど役に立たないことがわかり4P2 = 12通りに変更
+
+ ○ LDAが一番効果的
+
+ ○ 最終的にLDAのトピック数は5, 20を使用
+
+ ■ トピック数が5のとき5 * 12 = 60個の特徴量が作成される
+
+ ■ NMF, tSVDでは5次元のベクトルのみ計算した
+
+10. 最終的なモデル
+
+ ● シングルモデル
+
+ ○ LightGBM (>600 features)
+
+ ■ 訓練時間（iteration数の決定＋全データでの訓練）: １時間未満
+
+ ■ 使用メモリ: 100GB未満
+
+ ■ 計算環境: AWSのr3.8xlarge (32CPUs, 244GB memory)
+
+ ○ ５個のdown-samplingされたデータセットで構築して平均を計算
+
+ ● アンサンブル
+
+ ○ 材料
+
+ ■ 異なる特徴量・パラメータのLightGBMモデル
+
+ ■ 三層のニューラルネットワーク
+
+ ○ 上記の材料でRank averaging (Kaggle Ensembling Guide | MLWave)
+
+11. 実装上の工夫
+
+ ● 特徴量は毎回計算せずに一度計算したらファイルでキャッシュする
+
+ ○ 全訓練データに対する特徴量をファイルに書いたらディスク不足に
+
+ ○ 特徴量を作る前にサンプリングして、そのインデックスに対応する特徴 量だけ保存するように変更
+
+ ● データセットも特徴量もfeather形式で保存した
+
+ ○ https://github.com/wesm/feather
+
+ ○ 訓練データが数秒で読めるように（CSVだと1分以上）
+
+ ● 全探索的な特徴量生成をC++で実装
+
+ ○ Pandasでカテゴリ変数の組でのgroupingを高速を行う方法がわからなか った（Click time deltaの計算に必要）
+
+ ○ C++では31通りの特徴量の計算がシングルスレッドで1時間程度
+
+12. 最終的な特徴量とモデルのパラメータ 説明しません。雰囲気だけ

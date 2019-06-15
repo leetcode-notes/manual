@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CrossValidation &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../index.html"/>
+        <link rel="up" title="kaggle" href="../kaggle.html"/>
+        <link rel="next" title="GBDT" href="../GBDT/GBDT.html"/>
+        <link rel="prev" title="kaggle" href="../kaggle.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CrossValidation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kfold-stratified-kfold-group-kfold">Kfold, Stratified Kfold, Group Kfold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crossvalidation-code-validation-test">CrossValidation code validation_test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">ホールドアウト検証を実行した場合</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../GBDT/GBDT.html">GBDT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feature-engineering/feature-engineering.html">feature engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../kaggle.html">kaggle</a> &raquo;</li>
+      
+    <li>CrossValidation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/CrossValidation/CrossValidation.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="crossvalidation">
+<h1>CrossValidation<a class="headerlink" href="#crossvalidation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="kfold-stratified-kfold-group-kfold">
+<h2>Kfold, Stratified Kfold, Group Kfold<a class="headerlink" href="#kfold-stratified-kfold-group-kfold" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Cross Validationの重要性</p>
+<p>機械学習の文脈における「validation」は、一般的に「モデルの汎化性能の検証」を意味します。</p>
+<p>汎化性能とは「未知のデータに対する性能」のことです。</p>
+<p>validationの重要性を確認するため、「validationがない場合」を想定して、簡単な例を見てみます。</p>
+<p>validationがない場合</p>
+<p>パッケージやデータの準備</p>
+</div>
+<div class="section" id="crossvalidation-code-validation-test">
+<h2>CrossValidation code validation_test<a class="headerlink" href="#crossvalidation-code-validation-test" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># ---</span>
+<span class="c1"># jupyter:</span>
+<span class="c1">#   jupytext:</span>
+<span class="c1">#     text_representation:</span>
+<span class="c1">#       extension: .py</span>
+<span class="c1">#       format_name: light</span>
+<span class="c1">#       format_version: &#39;1.3&#39;</span>
+<span class="c1">#       jupytext_version: 0.8.6</span>
+<span class="c1">#   kernelspec:</span>
+<span class="c1">#     display_name: Python 3</span>
+<span class="c1">#     language: python</span>
+<span class="c1">#     name: python3</span>
+<span class="c1"># ---</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span><span class="p">,</span><span class="n">model_selection</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">GradientBoostingClassifier</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_iris</span><span class="p">()</span>
+<span class="n">iris_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">iris_label</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">model_selection</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">iris_data</span><span class="p">,</span> <span class="n">iris_label</span><span class="p">)</span>
+
+<span class="c1"># 訓練と予測</span>
+
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">y_pred</span>
+
+<span class="c1"># 精度の検証</span>
+
+<span class="c1"># +</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
+
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_valid</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+<span class="c1"># -</span>
+
+<span class="c1"># ホールドアウト検証を実行した場合</span>
+
+
+</pre></div>
+</div>
+<p>y_predとy_testを比較すれば良いと思うかもしれませんが、例えばKaggleではコンペ終了時までy_testの全容は分かりません。一部データはpublic LBに利用されておりスコアを確認できますが、以下の二つの問題があります。</p>
+<p>public LBで良いスコアが出ても、一部のデータのみに過学習した結果の可能性がある
+サブミットできる回数に制限がある
+前者について、public LBに使われているデータはtestのデータセットの10〜30%が一般的で、仮に新しいハイパーパラメータや特徴量を使ってスコアが上がっても、一分のデータのみに効果がある「過学習」に陥っている可能性があります。</p>
+<p>また、public LBにどのようなデータが使われているかも分かりません。極端な例ですが、二値分類の問題で0のラベルが付いたデータのみがpublic LBに使われている可能性もあります。この場合、仮にpublic LBで高いスコアを出すモデルが作成できても、そのモデルは1のラベルを当てる性能がどれだけあるか確認できていません。</p>
+<p>後者について、Kaggleでは1日の提出回収が3〜5回とコンペごとに制限が決まっています。public LBのスコアは提出しないと分からないので、1日の提出回数分しかモデルや特徴量の試行錯誤ができない状況になってしまいます。</p>
+<div class="figure align-center">
+<img alt="../../_images/15.png" src="../../_images/15.png" />
+</div>
+</div>
+<div class="section" id="id1">
+<h2>ホールドアウト検証を実行した場合<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>これらの問題に対応するのが、validationです。</p>
+<p>validationのためのデータセットは、trainのデータセットから分割することで作成します。</p>
+<div class="figure align-center">
+<img alt="../../_images/21.png" src="../../_images/21.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../GBDT/GBDT.html" class="btn btn-neutral float-right" title="GBDT" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../kaggle.html" class="btn btn-neutral" title="kaggle" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.. _pipinstall:
+
+pipinstall
+============
+
+
+.. literalinclude:: package.txt
+
+
+:ref:`sphinx markdown <sphinx_markdown>`
+
+.. literalinclude:: update.txt
+
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

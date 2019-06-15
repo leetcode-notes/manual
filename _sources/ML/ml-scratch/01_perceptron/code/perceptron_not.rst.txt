@@ -1,0 +1,6 @@
+1_perceptron perceptron_not
+===============================================================================================
+
+.. raw:: html
+   :file: html/perceptron_not.html
+

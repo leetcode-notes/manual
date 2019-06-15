@@ -1,0 +1,57 @@
+santa gift matching
+=============================
+
+https://www.kaggle.com/c/santa-gift-matching
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+https://www.kaggle.com/kernels/scriptcontent/2009015/download
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+最小費用流
+
+様々な最適化問題が、最小費用流に帰着して効率 的に解ける（競プロでは頻出）
+
+https://www.slideshare.net/wata_orz/ss-91375739
+
+アルゴリズム
+
+    最短路反復法
+
+    コストスケーリング法
+
+ライブラリ
+
+    LEMON: http://lemon.cs.elte.hu/trac/lemon
+
+    Google OR-Tools: https://developers.google.com/optimization/
+
+私は自前のコストスケーリング法実装を使用した
+
+https://github.com/wata-orz?tab=repositories
+
+https://github.com/wata-orz/santa17
+

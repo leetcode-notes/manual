@@ -1,0 +1,6 @@
+05_semaseg semaseg_test_pytorch
+===============================================================================================
+
+.. raw:: html
+   :file: html/semaseg_test_pytorch.html
+

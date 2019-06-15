@@ -1,0 +1,20 @@
+.. _contents:
+
+machine manual
+=============================
+
+勉強用に作成したSpinxページ
+＊showreel用に抜粋
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

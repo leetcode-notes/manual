@@ -1,0 +1,6 @@
+grokking_algorithms 02_check_voter
+===============================================================================================
+
+.. raw:: html
+   :file: html/02_check_voter.html
+

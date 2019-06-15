@@ -1,0 +1,6 @@
+matplotlib MATPLOTLIB_EXERCISE
+===============================================================================================
+
+.. raw:: html
+   :file: html/MATPLOTLIB_EXERCISE.html
+

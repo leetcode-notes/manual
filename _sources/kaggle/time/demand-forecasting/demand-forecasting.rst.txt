@@ -1,0 +1,40 @@
+demand-forecasting
+=============================
+
+https://www.kaggle.com/c/demand-forecasting-kernels-only
+
+!pip install fbprophet
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+SMAPE
+
+Symmetric mean absolute percentage error
+
+* SMAPE_
+
+.. _SMAPE: https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error
+
+提出方法
+---------
+
+study kernel
+--------------
+
+
+初心者によるKaggleメモ#2 将来の売り上げ予測
+
+https://qiita.com/simonritchie/items/8068a41765a9a43d0fea
+
+http://localhost:8888/tree/kaggle/demand-forecasting/code

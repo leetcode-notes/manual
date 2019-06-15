@@ -1,0 +1,6 @@
+LightGBM LightGBM_kuzushiji
+===============================================================================================
+
+.. raw:: html
+   :file: html/LightGBM_kuzushiji.html
+

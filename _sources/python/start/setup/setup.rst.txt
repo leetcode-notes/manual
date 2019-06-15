@@ -1,0 +1,10 @@
+setup
+========
+
+tools setup.py
+----------------
+
+run setup
+
+sdist
+command line なしでOK

@@ -1,0 +1,6 @@
+math_basic regularization
+===============================================================================================
+
+.. raw:: html
+   :file: html/regularization.html
+

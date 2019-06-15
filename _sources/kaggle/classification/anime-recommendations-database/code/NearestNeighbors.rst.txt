@@ -1,0 +1,6 @@
+anime-recommendations-database NearestNeighbors
+===============================================================================================
+
+.. raw:: html
+   :file: html/NearestNeighbors.html
+

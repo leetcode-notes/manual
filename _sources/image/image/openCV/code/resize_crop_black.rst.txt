@@ -1,0 +1,6 @@
+openCV resize_crop_black
+===============================================================================================
+
+.. raw:: html
+   :file: html/resize_crop_black.html
+

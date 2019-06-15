@@ -1,0 +1,4 @@
+https://qiita.com/yh0sh/items/556b7a5e5b7feb28c944
+
+scikit-learnのRandomForestClassifierで外れ値を特定する
+=========================================================

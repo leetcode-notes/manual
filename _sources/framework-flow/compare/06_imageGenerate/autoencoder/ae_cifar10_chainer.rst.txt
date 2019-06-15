@@ -1,0 +1,6 @@
+06_imageGenerate ae_cifar10_chainer
+===============================================================================================
+
+.. raw:: html
+   :file: html/ae_cifar10_chainer.html
+

@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>第10章: ベクトル空間法 (II) &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="言語処理 knockout" href="../Gesyori.html"/>
+        <link rel="next" title="9_vec_2 nlp100_90_1" href="code/nlp100_90_1.html"/>
+        <link rel="prev" title="9_vec_1 nlp100_89_1" href="../9_vec_1/code/nlp100_89_1.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../nlp.html">nlp 自然言語処理</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../Gesyori.html">言語処理 knockout</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../1_basic/1_basic.html">第1章: 準備運動</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2_unix/2_unix.html">第2章: UNIXコマンドの基礎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_Re/3_Re.html">第3章: 正規表現</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_morpho/4_morpho.html">第4章: 形態素解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_morph/5_morph.html">第5章: 係り受け解析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_english/6_english.html">第6章: 英語テキストの処理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../7_DB/7_DB.html">第7章: データベース</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../8_ML/8_ML.html">第8章: 機械学習</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../9_vec_1/9_vec_1.html">第9章: ベクトル空間法 (I)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第10章: ベクトル空間法 (II)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#word2vec">90. word2vecによる学習</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">91. アナロジーデータの準備</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">92. アナロジーデータへの適用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">93. アナロジータスクの正解率の計算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wordsimilarity-353">94. WordSimilarity-353での類似度計算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">95. WordSimilarity-353での評価</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">96. 国名に関するベクトルの抽出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k-means">97. k-meansクラスタリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ward">98. Ward法によるクラスタリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#t-sne">99. t-SNEによる可視化</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../chatbot/chatbot.html">chatbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../install/install.html">install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../re/re.html">文字列操作 re</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../string/string.html">string</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../nlp.html">nlp 自然言語処理</a> &raquo;</li>
+      
+        <li><a href="../Gesyori.html">言語処理 knockout</a> &raquo;</li>
+      
+    <li>第10章: ベクトル空間法 (II)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/nlp/Gesyori100knock/9_vec_2/9_vec_2.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ii">
+<h1>第10章: ベクトル空間法 (II)<a class="headerlink" href="#ii" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>第10章では，前章に引き続き単語ベクトルの学習に取り組む．</p>
+<div class="section" id="word2vec">
+<h2>90. word2vecによる学習<a class="headerlink" href="#word2vec" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>81で作成したコーパスに対してword2vecを適用し，単語ベクトルを学習せよ．さらに，学習した単語ベクトルの形式を変換し，86-89のプログラムを動かせ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_90_1.html">9_vec_2 nlp100_90_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>91. アナロジーデータの準備<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>単語アナロジーの評価データをダウンロードせよ．このデータ中で&quot;: &quot;で始まる行はセクション名を表す．例えば，&quot;: capital-common-countries&quot;という行は，&quot;capital-common-countries&quot;というセクションの開始を表している．ダウンロードした評価データの中で，&quot;family&quot;というセクションに含まれる評価事例を抜き出してファイルに保存せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_91_1.html">9_vec_2 nlp100_91_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>92. アナロジーデータへの適用<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>91で作成した評価データの各事例に対して，vec(2列目の単語) - vec(1列目の単語) + vec(3列目の単語)を計算し，そのベクトルと類似度が最も高い単語と，その類似度を求めよ．求めた単語と類似度は，各事例の末尾に追記せよ．このプログラムを85で作成した単語ベクトル，90で作成した単語ベクトルに対して適用せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_92_1.html">9_vec_2 nlp100_92_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>93. アナロジータスクの正解率の計算<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>92で作ったデータを用い，各モデルのアナロジータスクの正解率を求めよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_93_1.html">9_vec_2 nlp100_93_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="wordsimilarity-353">
+<h2>94. WordSimilarity-353での類似度計算<a class="headerlink" href="#wordsimilarity-353" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The WordSimilarity-353 Test Collectionの評価データを入力とし，1列目と2列目の単語の類似度を計算し，各行の末尾に類似度の値を追加するプログラムを作成せよ．このプログラムを85で作成した単語ベクトル，90で作成した単語ベクトルに対して適用せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_94_1.html">9_vec_2 nlp100_94_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>95. WordSimilarity-353での評価<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>94で作ったデータを用い，各モデルが出力する類似度のランキングと，人間の類似度判定のランキングの間のスピアマン相関係数を計算せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_95_1.html">9_vec_2 nlp100_95_1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_95_2.html">9_vec_2 nlp100_95_2</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>96. 国名に関するベクトルの抽出<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>word2vecの学習結果から，国名に関するベクトルのみを抜き出せ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_96_1.html">9_vec_2 nlp100_96_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="k-means">
+<h2>97. k-meansクラスタリング<a class="headerlink" href="#k-means" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>96の単語ベクトルに対して，k-meansクラスタリングをクラスタ数k=5として実行せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_97_1.html">9_vec_2 nlp100_97_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="ward">
+<h2>98. Ward法によるクラスタリング<a class="headerlink" href="#ward" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>96の単語ベクトルに対して，Ward法による階層型クラスタリングを実行せよ．さらに，クラスタリング結果をデンドログラムとして可視化せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_98_1.html">9_vec_2 nlp100_98_1</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="t-sne">
+<h2>99. t-SNEによる可視化<a class="headerlink" href="#t-sne" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>96の単語ベクトルに対して，ベクトル空間をt-SNEで可視化せよ．</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/nlp100_99_1.html">9_vec_2 nlp100_99_1</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code/nlp100_90_1.html" class="btn btn-neutral float-right" title="9_vec_2 nlp100_90_1" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../9_vec_1/code/nlp100_89_1.html" class="btn btn-neutral" title="9_vec_1 nlp100_89_1" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

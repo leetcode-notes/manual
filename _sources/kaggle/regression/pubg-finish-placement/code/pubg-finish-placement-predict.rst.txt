@@ -1,0 +1,6 @@
+pubg-finish-placement pubg-finish-placement-predict
+===============================================================================================
+
+.. raw:: html
+   :file: html/pubg-finish-placement-predict.html
+

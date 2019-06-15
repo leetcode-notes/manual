@@ -1,0 +1,44 @@
+pubg-finish-placement-prediction
+===================================
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+Mean Absolute Error
+
+平均絶対誤差
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+PUBG Finish Placement Prediction: playground
+
+https://www.kaggle.com/kernels/scriptcontent/10138138/download
+
+

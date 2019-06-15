@@ -1,0 +1,24 @@
+iter
+=======
+
+
+フィボナッチでiter nextメソッド
+----------------------------------
+
+.. literalinclude:: fib.py
+
+
+名詞を複数形にする規則
+--------------------------
+
+.. literalinclude:: plural6.py
+
+.. literalinclude:: plural6_exec.py
+
+.. literalinclude:: reduce.py
+
+
+* `dive into python iter`_
+
+.. _`dive into python iter`: http://diveintopython3-ja.rdy.jp/iterators.html#a-fibonacci-iterator
+

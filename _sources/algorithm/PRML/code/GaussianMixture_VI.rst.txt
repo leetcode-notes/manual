@@ -1,0 +1,6 @@
+PRML GaussianMixture_VI
+===============================================================================================
+
+.. raw:: html
+   :file: html/GaussianMixture_VI.html
+

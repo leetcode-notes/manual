@@ -1,0 +1,6 @@
+04_model easy_tensorflow_layers
+===============================================================================================
+
+.. raw:: html
+   :file: html/easy_tensorflow_layers.html
+

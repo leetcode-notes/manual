@@ -1,0 +1,24 @@
+unity ml-agents
+-------------------
+
+unity ml-agents setup
+
+conda create -n ml-agents python=3.6
+
+pip install tensorflow==1.7.1
+
+
+project open
+    E:\vfx\ml-agents\UnitySDK
+
+Edit→Project Settings→Player
+
+Other　Settings
+
+Scripting Runtime Version→Experimental or NET 4.6 Equivalent or .NET 4.x Equivalent
+
+Scripting Defined Symbols→ENABLE_TENSORFLOW
+
+TensorFlowSharpプラグインファイルをダブルクリック
+
+インポートが成功したら、Assets > ML-Agents > Plugins > Computerフォルダー内に、TensorFlow関連のファイルが確認できます。

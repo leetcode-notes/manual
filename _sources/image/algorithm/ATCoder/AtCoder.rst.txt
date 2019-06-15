@@ -1,0 +1,34 @@
+.. _AtCoder:
+
+AtCoder
+================
+
+
+Regular C 103
+--------------
+
++ 大きいリストを用意
+
+.. literalinclude:: 103Ckokiy1.py
+
+.. literalinclude:: 103Ckokiy2.py
+
+.. _atcoder103:
+
++ collectios most_common 使用
+
+.. literalinclude:: 103Cikatakos1.py
+
+
+Regular D 103
+----------------
+
+.. figure:: 103Dpic.png
+   :width: 250px
+
+
+.. literalinclude:: 103Dbiu3.py
+
+.. literalinclude:: 103Dikatakos1.py
+
+https://ikatakos.com/pot/programming_algorithm/contest_history/atcoder/2018/0929_arc103

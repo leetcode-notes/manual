@@ -1,0 +1,10 @@
+制御構文
+=============================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+http://localhost:8888/tree/L:/manual/python/ControlSyntax/for/for_comprehension.py

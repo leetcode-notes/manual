@@ -1,0 +1,10 @@
+kaggle titanic
+=================
+
+kaggle competitions download -c titanic
+
+http://localhost:8888/tree/kaggle/titanic/code/nikkei_kaggle.ipynb
+
+http://localhost:8888/tree/kaggle/titanic
+
+http://localhost:8888/tree/kaggle/titanic/curry

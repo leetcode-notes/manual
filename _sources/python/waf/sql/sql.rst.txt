@@ -1,0 +1,31 @@
+SQL
+#################
+
+
+#. **SQL code**：
+
+
+.. code-block:: python
+
+    # 全てのデータを取り出す
+    SELECT * FROM players;
+    # 一部のカラムだけ取得する
+    SELECT name, level FROM players;
+    # 一部の行だけ取得する
+    SELECT * FROM players WHERE level >= 7;
+    # 複数の条件を組み合わせる
+    SELECT * FROM players WHERE level >= 7 AND job_id <> 6;
+    #条件指定とカラム選択を組み合わせる
+    SELECT name, level FROM players WHERE level >= 7;
+    # データを追加する
+    INSERT INTO players(name,level,job_id) VALUES('霧島1号', 1, 1)
+    # データを更新する
+    UPDATE players SET level = 10 WHERE id = 11
+    # データを更新する。1増加
+    UPDATE players SET level = level + 1 WHERE id = 12
+    # データを削除する
+    DELETE FROM players WHERE id = 13
+    # 複数のデータを削除する
+    DELETE FROM players WHERE id >= 11
+    # 左結合
+    SELECT * FROM players LEFT JOIN jobs ON jobs.id = players.job_id

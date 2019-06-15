@@ -1,0 +1,9 @@
+algorithm PRML パターン認識と機械学習
+==========================================
+
+https://qiita.com/amber_kshz/items/e912a59ffc1365cb6adf
+
+PRMLのアルゴリズムをPython(ほぼNumpyだけ)で実装
+
+https://qiita.com/ctgk/items/fc83b224ded1c0059a61
+

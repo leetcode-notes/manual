@@ -1,0 +1,25 @@
+Python manual
+=============================
+
+install
+-----------
+
+conda install spacy
+
+https://githubja.com/explosion/spacy
+
+spaCyとは
+
+spaCyは、pythonで動かす自然言語処理ライブラリです。
+
+特徴は、 事前に訓練された統計モデルと単語ベクトルが付属している点です。
+
+現在33言語をサポート、8言語に対する13個の統計モデルを利用できる。
+
+TensorFlow、PyTorch、scikit-learn、Gensim、その他のPythonのAIエコシステムとシームレスに相互運用可能。
+
+現在のバージョンはv2.x。
+
+SpaCyとNLTKの比較
+
+https://ishitonton.hatenablog.com/entry/2018/11/24/004748

@@ -1,0 +1,53 @@
+Sphinx
+=================
+
+jupyter notebook
++++++++++++++++++++++++++
+
+pip install nbsphinx
+
++ conf編集
+
+.. code-block:: python
+
+    extensions = [
+        'nbsphinx',
+        'sphinx.ext.mathjax',
+    ]
+    exclude_patterns = ['_build', '**.ipynb_checkpoints']
+
+pip install sphinx-markdown-tables
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   jupyter
+
+CSVの表示が可能
++++++++++++++++++++++++++
+
+http://sphinx-users.jp/reverse-dict/table/include.html
+
+.. csv-table::
+   :file: sample.csv
+   :encoding: euc-jp
+   :header-rows: 1
+
+.. _sphinx_markdown:
+
+MDの表示
++++++++++++
+pip install recommonmark
+
+# ファイルの拡張子に .md を追加する
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst' この行はコメントアウトする
+
+# 拡張子 .md のパーサー（構文解析器）に recommonmark を指定する
+
+.. code-block:: python
+
+    source_parsers = {
+        '.md': 'recommonmark.parser.CommonMarkParser'
+    }

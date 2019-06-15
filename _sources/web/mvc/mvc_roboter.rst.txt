@@ -1,0 +1,31 @@
+.. _mvc:
+
+mvc Model View Controller モデル・ビュー・コントローラ
+=========================================================
+
+ユーザーインタフェースをもつアプリケーションソフトウェアを実装するためのデザインパターン
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+pip install pylint
+Graphviz
+
+pyreverse -o png roboter
+
+classese
+-------------
+
+.. figure:: classes.png
+
+.. figure:: packages.png

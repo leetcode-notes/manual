@@ -1,0 +1,6 @@
+numpy Class_Project_1a_Stickeralbum_Solution
+===============================================================================================
+
+.. raw:: html
+   :file: html/Class_Project_1a_Stickeralbum_Solution.html
+

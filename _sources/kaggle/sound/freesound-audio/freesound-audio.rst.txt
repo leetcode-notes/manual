@@ -1,0 +1,26 @@
+freesound-audio
+================
+
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+提出方法
+---------
+
+study kernel
+--------------
+
+https://www.kaggle.com/c/freesound-audio-tagging-2019/data
+
+https://www.kaggle.com/daisukelab/cnn-2d-basic-solution-powered-by-fast-ai

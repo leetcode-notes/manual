@@ -1,0 +1,36 @@
+house-prices
+=====================
+
+https://www.kaggle.com/c/house-prices-advanced-regression-techniques
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+Root-Mean-Squared-Error (RMSE)
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+
+
+https://www.kaggle.com/code1110/houseprice-data-cleaning-visualization

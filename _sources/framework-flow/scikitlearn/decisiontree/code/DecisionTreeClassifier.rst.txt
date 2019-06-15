@@ -1,0 +1,119 @@
+DecisionTreeClassifier
+=============================
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+
+scikit - learnで決定木分析(CART法)
+
+* 決定木分析(DecisionTreeAnalysis) は、機械学習の手法の一つで決定木と呼ばれる、
+
+木を逆にしたようなデータ構造を用いて分類と回帰を行います。なお、決定木分析は、ノンパラメトリックな教師あり学習に分類されます。
+
+* 決定木分析の長所
+
+決定木分析は他の分析手法と比較して、以下の特長があります。
+
+入力データから特徴を学習し、決定木と呼ばれる樹木状の構造で学習結果を視覚化でき、ルールをシンプルに表現できる特徴があります。
+他の多くの手法では、データの標準化(正規化)
+やダミー変数の作成を必要とするのに対し、決定木分析では、このような前処理の手間がほとんど不要です。
+カテゴリカルデータ(名義尺度の変数)
+と数値データ(順序尺度、間隔尺度の変数) の両方を扱うことが可能です。
+ニューラルネットなどのようなブラックボックスのモデルと比較して、決定木はホワイトボックスのモデルだといえ、論理的に解釈することが容易です。
+検定を行って、作成したモデルの正しさを評価することが可能です。
+主要な決定木分析のアルゴリズム
+決定木分析には、いくつかの手法が存在します。各手法の違いについて以下に述べます。
+
+ID3
+    ID3(IterativeDichotomiser3) は、1986年に、RossQuinlanによって開発されました。
+    カテゴリカル変数に対して情報量を用いて、貪欲な手法(≒ あるステップにおいて局所的に評価の高いパターンを選択する) で木を構築します。
+
+C4.5
+    C4.5は、ID3の後継で、数値データの特徴量を動的に離散化するロジックを導入し、全ての特徴量がカテゴリカル変数でなればならないという制約を取り除きました。
+    C4.5は学習済みの木を if -thenで表されるセットに変換し、評価や枝刈り(決定木における不要な部分(枝)を取り除くこと) に用いられます。
+
+C5.0
+    C5.0はC4.5の改善版で、より少ないメモリ消費で動作するよう、パフォーマンスの改善が行われています。
+
+CART
+    CART(Classification and RegressionTrees) は、C4.5によく類似した手法ですが、数値データで表現される目的変数( = 回帰) にも対応している特徴があります。CART
+    は、ルールセットを計算するのではなく、バイナリ・ツリーを構築します。なお、scikit - learnは最適化したバージョンのCARTを実装しています。
+
+scikit - learn
+    に実装されている決定木分析
+    それでは、実際にデータを用いてモデルを作成して、その評価を行いましょう。scikit - learn
+    では決定木を用いた分類器は、sklearn.tree.DecisionTreeClassifier
+    というクラスで実装されています。
+
+sklearn.tree.DecisionTreeClassifier
+クラスの書式
+
+.. code-block:: python
+
+    sklearn.tree.DecisionTreeClassifier(criterion='gini',
+                                        splitter='best', max_depth=None, min_samples_split=2,
+                                        min_samples_leaf=1, min_weight_fraction_leaf=0.0,
+                                        max_features=None, random_state=None,
+                                        max_leaf_nodes=None, class_weight=None, presort=False)
+    sklearn.tree.DecisionTreeClassifier
+
+
+クラスの引数(詳細)
+
+criterion
+    (string, 任意)
+    分割する際に利用する品質。ジニ係数を利用する “gini” と情報量を示す “entropy” のいずれかを指定。(省略時は “gini”)
+
+splitter
+    (string, 任意)
+    各ノードにおいて分割を行う方法を選択。”best” (最適)
+    または “random” (ランダム最適)
+    を選択。(省略時は “best”)
+
+max_features
+    (int, float, string または None, 任意)
+    最適な分割を探索する際に用いる特徴数の最大値。
+
+max_depth
+    (int または None, 任意)
+    作成する決定木の深さの最大値。 (省略時は None)
+
+min_samples_split
+    (int, 任意)
+    サンプルを枝に分割する数の際の枝の数の最小値。 (省略時は 2)
+
+min_samples_leaf
+    (int, 任意)
+    1つのサンプルが属する葉の数の最小値。 (省略時は 1)
+
+min_weight_fraction_leaf
+    (float, 任意)
+    1つの葉に属する必要のあるサンプルの割合の最小値。 (省略時は 0.0)
+
+max_leaf_nodes
+    (int または None, 任意)
+    作成する葉の数の最大値。数値を指定した場合は、max_depth
+    が無視されます。 (省略時は None)
+
+class_weight
+    (dict, list of dicts, “balanced” または None, 任意)
+    各説明変数に対する重み。 (省略時は None)
+
+random_state
+    (int, RandomState instance or None, 任意)
+    乱数のシードを指定。指定しない場合は、 np.random
+    を利用します。 (省略時は None)
+
+presort
+    (bool, 任意)
+    高速化の目的で事前に入力データのソートを行うかどうか。 (省略時は False)
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://pythondatascience.plavox.info/scikit-learn/scikit-learn%E3%81%A7%E6%B1%BA%E5%AE%9A%E6%9C%A8%E5%88%86%E6%9E%90

@@ -1,0 +1,41 @@
+video game sales with rating
+==============================
+
+
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+提出方法
+---------
+
+My Score
+---------------
+
+
+study kernel
+--------------
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+bokehを使用
+
+https://www.kaggle.com/kanncaa1/visualization-bokeh-tutorial-part-1
+
+https://www.kaggle.com/kanncaa1/interactive-bokeh-tutorial-part-2
+
+bokehモジュール
+
+https://qiita.com/yuji38kwmt/items/4edf1d87568a860fc3b8
+

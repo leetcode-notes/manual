@@ -1,0 +1,550 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>about feature engineering &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="feature engineering" href="../feature-engineering.html"/>
+        <link rel="next" title="yagami350 kaggle_memo" href="../study/kaggle_memo.html"/>
+        <link rel="prev" title="feature-engineering code adversarial-validation" href="adversarial-validation.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../GBDT/GBDT.html">GBDT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../feature-engineering.html">feature engineering</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="2-months-train-1-month-public-1-day-private.html">feature-engineering code 2-months-train-1-month-public-1-day-private</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adversarial-validation.html">feature-engineering code adversarial-validation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">about feature engineering</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adversarial-validation">Adversarial Validation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adversarial-validation-test">Adversarial Validation Test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#target-encoding">Target Encoding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">テーブル間の集約</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">テーブル内の集約</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">四則演算</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sub-model-1">Sub-Modelによる特徴量 1) 重要な特徴量の予測</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sub-model-2-transaciton">Sub-Modelによる特徴量 2) Transacitonレベルの予測</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">その他の特徴量</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#link-jupyter">Link(参考リンク・jupyterリンク等)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../study/kaggle_memo.html">yagami350 kaggle_memo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../feature-engineering.html">feature engineering</a> &raquo;</li>
+      
+    <li>about feature engineering</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/feature-engineering/code/study-feature-engineering.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="about-feature-engineering">
+<h1>about feature engineering<a class="headerlink" href="#about-feature-engineering" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><em>特徴量エンジニアリング</em></p>
+<div class="sidebar">
+<p class="sidebar-title">目次</p>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#adversarial-validation" id="id6">Adversarial Validation</a></p></li>
+<li><p><a class="reference internal" href="#adversarial-validation-test" id="id7">Adversarial Validation Test</a></p></li>
+<li><p><a class="reference internal" href="#target-encoding" id="id8">Target Encoding</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id9">テーブル間の集約</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id10">テーブル内の集約</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id11">四則演算</a></p></li>
+<li><p><a class="reference internal" href="#sub-model-1" id="id12">Sub-Modelによる特徴量 1) 重要な特徴量の予測</a></p></li>
+<li><p><a class="reference internal" href="#sub-model-2-transaciton" id="id13">Sub-Modelによる特徴量 2) Transacitonレベルの予測</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id14">その他の特徴量</a></p></li>
+<li><p><a class="reference internal" href="#link-jupyter" id="id15">Link(参考リンク・jupyterリンク等)</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="adversarial-validation">
+<h2><a class="toc-backref" href="#id6">Adversarial Validation</a><a class="headerlink" href="#adversarial-validation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Public LB にもとづいてモデルの良し悪しを評価すると、Private LB で大きく順位が下がることがある。
+この現象は、Public LB の評価で用いられる一部のデータに対して、モデルが過剰適合した状態
+これを防ぐには、Cross Validation (交差検証) などを用いたローカルでの汎化性能の評価 (Local CV) が重要
+この問題を解決するために考案されたAdversarial Validation
+どちらのデータセットに由来するデータなのかという情報を目的変数として付与する。
+例えば学習用データが全て 0 で検証用データは全て 1 といった形で付与する。
+そして、学習用データと検証用データを混ぜた状態で、両者がどちらに由来するものなのかを予測するモデルを作る。
+学習用データと検証用データの分布が異なるほど、どちらに由来するかの予測は容易になる。
+もし、全く同じ分布から得られたデータなのであれば、両者を区別することはそもそもできない。
+この時点で、学習用データと検証用データの分布がどれくらい異なるのかが分かる。
+もし分布が異なるのであれば、学習用データのサブセットを作ることになる。
+サブセットを作る上での基準は、検証用データにより近いデータかどうか。
+これは、先ほど確認した内容にもとづいて作成する。
+つまり、学習用データの中から、検証用データと判断が難しかったものを選び出す。
+具体的には、検証用データかどうかの確率を降順ソートして上から取り出せば良い。
+その基準で取り出した学習用データのサブセットを使って Local CV することで、
+Public LB / Private LB との相関が改善する。 以上が Adversarial Validation という手法の説明になる。</p>
+</div>
+<div class="section" id="adversarial-validation-test">
+<h2><a class="toc-backref" href="#id7">Adversarial Validation Test</a><a class="headerlink" href="#adversarial-validation-test" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adversarial-validation.html">feature-engineering code adversarial-validation</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Adversarial ModelのAUCから過学習のリスクを見積もる</p></li>
+<li><p>Adversarial Modelの予測値がテスト寄りの訓練データを使ってLocalValidationを行う</p></li>
+<li><p>Adversarial Modelが誤分類したデータを重視してEnsemble Weightを決める</p></li>
+<li><p>Adversarial Modelが誤分類したデータを重視してEnsemble Weightを決める</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2-months-train-1-month-public-1-day-private.html">feature-engineering code 2-months-train-1-month-public-1-day-private</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="target-encoding">
+<h2><a class="toc-backref" href="#id8">Target Encoding</a><a class="headerlink" href="#target-encoding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カテゴリ変数を、そのカテゴリにおける目的変数の平均値で置き換える。
+そのまま使うとリークしてしまうので、実装にひと工夫が必要
+例: Out-Of-Fold予測値を使う、事例数に応じて全体と加重平均 (Weight of Evidence)</p>
+<p>どんな時に有効？
+カテゴリ変数の水準数がそれなりに多い場合
+Train/Test間であまり分布に差が無いと期待できる場合
+…とはいえ、大抵やってみないと分からない</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>カテゴリ変数をTargetの期待値に変
+換しているので、期待値がドリフト
+する問題設定では素朴なTarget
+Encodingは有害 (例: Microsoft Malware Prediction)</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><a class="toc-backref" href="#id9">テーブル間の集約</a><a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>テーブルが複数ある場合に、様々な集約関
+数(min, max, sum, mean, std…)を使って情報
+を目的変数がいるテーブルに集める。
+これ自体は基本的だが、集約する際に色々
+な条件を組み合わせると多数のバリエー
+ションを生成することができる。
+マーケティング系だと実務でも良くあるはず</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>SQLでいうWhere句を色々使う</p>
+</div>
+<dl class="simple">
+<dt>例）HomeCredit Default Risk</dt><dd><ul class="simple">
+<li><p>ローンの申し込みに対して、デフォルト（貸し倒れ）のリスクを推定する</p></li>
+<li><p>申し込み1件に対して、同じ人の過去の申し込み履歴のテーブルがN件ある</p></li>
+</ul>
+</dd>
+</dl>
+<p>・色々なローン種別、審査結果が1テーブルに積まれており、これらを切り口
+に集約することで多様な意味合いの情報を抽出できた
+例）直近1年の審査拒否回数、直近5回のキャッシュローンの総借入額</p>
+<dl class="simple">
+<dt>どんな時に有効？</dt><dd><p>トランザクション側の情報が多い場合
+特にカテゴリ変数やタイムスタンプを含む場合</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id10">テーブル内の集約</a><a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>1テーブルしか無い場合でも、カテゴリ変数やその組み合わせの値が同じも
+の同士で統計量を取ることで、色々な特徴量を作ることができる。</p>
+<dl class="simple">
+<dt>例）TalkingData AdTracking Fraud Detection</dt><dd><p>・クリックログから、Appダウンロードの有無を予測するタスク
+・ip/app/device/os/channelという5つのカテゴリ特徴
+・この組み合わせでcount, cumcount等を集計する
+・次の6時間でのcountといった切り方も有効</p>
+</dd>
+<dt>どんな時に有効？</dt><dd><p>ビジネス的に重要な数値特徴量が分かっている場合
+タイムスタンプ or それに相当する列がある場合</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Avito: priceが重要だった
+ので、様々なカテゴリ単位
+でpriceの平均や最大を取
+るのが効いていた</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>近い時間や同じ時間で
+Group-Byした統計量が使
+えそう。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id11">四則演算</a><a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>四則演算、特に特徴量間の差や比率が精度向上につながるケースがある。</p>
+<blockquote>
+<div><p>→GBDTは差や比率を直接表現できない</p>
+</div></blockquote>
+<p>網羅的にやっても良いが、ビジネス的に意味がある量を作ることで精度を上
+げている事例が多い印象。
+元々ある特徴量同士だけでなく、「元の値と集約値の差」といったパターン
+も頻出。</p>
+<dl class="simple">
+<dt>例）HomeCredit Default Risk</dt><dd><p>「借入額と毎月の返済額の比」「利用限度額と月々の利用額の比」「支払い
+予定日と実際の支払日の日数差」「借入額と頭金の比率」など、ビジネス的
+に意味がありそうな組み合わせが実際に効いていた</p>
+</dd>
+<dt>例）Avito Demand Prediction</dt><dd><p>オンライン商品広告の需要予測。商品名、商品
+写真、分類名、価格、説明文等が与えられた
+Multimodalタスク
+「同一カテゴリ内の平均価格と自分の価格との
+差/比」を色々なカテゴリ（商品分類、地域な
+ど）で算出するのが効果的だった。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>たとえば「iPhoneの中で
+は安い」といった特徴を表
+現しているイメージ</p>
+</div>
+<dl class="simple">
+<dt>例）Avito Demand Prediction</dt><dd><p>さらに4位解法(link)によれば、「商品名の中の
+名詞」でグループ化した価格平均を使った特徴
+量が劇的に効いた。
+Avitoのサイトから名詞をキーワードに検索を
+かけ、価格順にソートして上から見るような
+ユーザーの振る舞いをReverse Engineeringし
+ている意味合いになる、という考察がなされて
+いた。</p>
+</dd>
+<dt>例）Microsoft Malware Prediction</dt><dd><ul class="simple">
+<li><p>インストールされたマルウェア対策ソフトのバージョンに関するカテゴリ変数が2つ存在(大きい値＝新しいバージョン)</p></li>
+<li><p>どちらのバージョン番号もTrain/Testで大きく異なる値を取っている</p></li>
+<li><p>Testのほうが新しいデータ→ソフトが更新されているため</p></li>
+<li><p>そのまま特徴量に使うことは事実上できない</p></li>
+</ul>
+</dd>
+</dl>
+<p>片方のバージョン番号を固定してもう片方のバージョ
+ン番号の分布を見ると、必ず一定の範囲に収まる。
+「Version-Aが同一なデータ間での最新のVersion-B」
+と、自分自身のVersion-Bのバージョン数の差が有効
+だった(6th place solution)</p>
+<p>出典: <a class="reference external" href="https://www.kaggle.com/c/microsoft-malware-prediction/discussion/84069">https://www.kaggle.com/c/microsoft-malware-prediction/discussion/84069</a></p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ある時点のユーザー群の中で、相対的
+に何バージョン分古いマルウェア対策
+ソフトを使っているか、という意味合
+いに近いと推測。</p>
+</div>
+<p>どんな時に有効？
+(特にコンペを選ばない印象だが、強いて挙げるなら)
+物理量や意味が明確な数値列が多数ある場合</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>差や割り算が効くのは、同一単
+位系の量同士のことが多い</p>
+</div>
+<p>個人的には、とりあえずpairplot
+等で散布図を見て、比例に近そ
+うな量的変数間で比を取る…み
+たいなアプローチをとることも
+あります</p>
+</div>
+<div class="section" id="sub-model-1">
+<h2><a class="toc-backref" href="#id12">Sub-Modelによる特徴量 1) 重要な特徴量の予測</a><a class="headerlink" href="#sub-model-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sub-Model=本来のタスク以外をターゲットに学習したモデルを使って特徴
+量を作る。
+代表的なのが、重要な特徴量の値を予測するモデルを作り、Out-of-Foldの
+予測値を特徴量に加える方法。</p>
+<dl class="simple">
+<dt>例）Home Credit Default Risk</dt><dd><p>過去のローン履歴では各ローンの利率を算出できるが、予測対象のローンで
+は（列が足りず）算出できない。利率は銀行から見た申込者に対する一種の
+リスク評価値とみなすことができ、重要な特徴量だと考えられた。
+→そこで、過去の履歴情報を使って、今回のローン申し込みの利率を予測するモデルを作成。予測値を特徴量に加えた。 (2nd place, 5th place他)</p>
+</dd>
+<dt>例）Avito Demand Prediction</dt><dd><p>ラベル付きデータの他に、同じ期間の広告のラベル無しデータが主催者から
+提供。
+→ラベル無しデータを使うことで、価格予測モデルを作成できた。価格予測モデルが算出した予測値と実際の価格の差を算出することで、一種の「お得度合い」のような特徴量を作ることができた。(1st place)
+→ Sub-Model + 差の組み合わせ</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>先ほどの「カテゴリ内平均と
+の差」と、考え方は非常に近
+い。推定値をMLベースで求め
+るか、単純な統計量で求める
+かの違い。</p>
+</div>
+<dl class="simple">
+<dt>例）PLAsTiCC Astronomical Classification</dt><dd><p>天体望遠鏡が観測した変光(Variables)から、その正体を分類するタスク。
+時系列観測データと、距離や方角などのメタデータが与えられた。
+メタデータに天体までの距離情報が2種類含まれ、これが非常に重要だった。
+距離A: 精度が低い。全データに値が入っている。
+距離B: 精度が高いが、大半のテストデータで値が欠損。
+→距離Bを予測するモデルを作成し、直接特徴量に加えたり、見かけの明る
+さと距離から光度を計算したりした(2nd, 3rd, 4th place solution)</p>
+</dd>
+<dt>どんな時に有効？</dt><dd><p>重要な特徴量の一部または全部が欠損しているとき
+大量のラベル無しデータが利用できるとき</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="sub-model-2-transaciton">
+<h2><a class="toc-backref" href="#id13">Sub-Modelによる特徴量 2) Transacitonレベルの予測</a><a class="headerlink" href="#sub-model-2-transaciton" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>目的変数をトランザクションにJoinし、そちらで作ったモデルの予測値を特
+徴量として元のテーブルに戻す。</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>目的変数をトランザクション</dt><dd><p>側にJoinし、トランザクション
+単位でモデリング
+※同一IDに由来する行は同一Fold
+で学習する</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>トランザクション側の予測</dt><dd><p>値の各種統計量を、元のテーブ
+ルに特徴量として加える</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Q: これは何をやっているの？</p>
+<p>A: 単純な集計では失われるようなトランザクション側の情報を、Sub-Modelを介
+して拾っていると考えられる</p>
+<blockquote>
+<div><p>→例えばトランザクション側のカテゴリ変数間に交互作用がある場合</p>
+</div></blockquote>
+<dl class="simple">
+<dt>どんな時に有効？</dt><dd><p>トランザクション側に多数の列があるとき</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id14">その他の特徴量</a><a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>他にも、コンペによって色々な特徴量が使われている。
+* 行内でのヒストグラム特徴量 (Santander 1st)
+* Gaussian Processでのフィッティング＋各種統計量 (PLAsTiCC 1st)
+* カテゴリ間の共起行列からのLDA (TalkingData 1st)
+* 特徴量が似た近傍500点での目的変数の平均値 (HomeCredit 1st)</p>
+<p>実際に参加した上で上位者の解法を読むと、ぐっと理解が深まる。</p>
+<p>実務に近い問題設定のコンペに参加してみると、仕事にも役立つかも。</p>
+</div>
+<div class="section" id="link-jupyter">
+<h2><a class="toc-backref" href="#id15">Link(参考リンク・jupyterリンク等)</a><a class="headerlink" href="#link-jupyter" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://www.slideshare.net/mlm_kansai/kaggle-138546659?from_action=save">https://www.slideshare.net/mlm_kansai/kaggle-138546659?from_action=save</a></p>
+<p><a class="reference external" href="https://blog.amedama.jp/entry/adversarial-validation">https://blog.amedama.jp/entry/adversarial-validation</a></p>
+<p><a class="reference external" href="https://www.kaggle.com/rquintino/2-months-train-1-month-public-1-day-private">https://www.kaggle.com/rquintino/2-months-train-1-month-public-1-day-private</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../study/kaggle_memo.html" class="btn btn-neutral float-right" title="yagami350 kaggle_memo" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="adversarial-validation.html" class="btn btn-neutral" title="feature-engineering code adversarial-validation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

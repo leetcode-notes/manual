@@ -1,0 +1,19 @@
+文字列操作 re
+=============================
+
+code
+--------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+参考サイト
+------------
+
+http://localhost:8888/tree//charactor/re/code/automatron_re_7_5_findall.ipynb
+
+http://localhost:8888/tree//charactor/re/code/automatron_re_7_6_文字集合.ipynb

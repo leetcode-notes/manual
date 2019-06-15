@@ -1,0 +1,18 @@
+jupyter notebook
+===================
+
+short cut
+------------
+
+h help
+d sell delete
+a new cell up
+b new cell down
+
+.. literalinclude:: jupyter_cheatseat.py
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
