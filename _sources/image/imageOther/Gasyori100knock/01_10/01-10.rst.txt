@@ -2,7 +2,31 @@
 =============================
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
+   code/answer_01
 
-   */*
+.. toctree::
+   code/answer_02
+
+.. toctree::
+   code/answer_03
+
+.. toctree::
+   code/answer_04
+
+.. toctree::
+   code/answer_05
+
+.. toctree::
+   code/answer_06
+
+.. toctree::
+   code/answer_07
+
+.. toctree::
+   code/answer_08
+
+.. toctree::
+   code/answer_09
+
+.. toctree::
+   code/answer_10

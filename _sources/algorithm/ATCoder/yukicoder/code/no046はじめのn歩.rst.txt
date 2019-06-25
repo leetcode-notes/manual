@@ -1,5 +1,9 @@
 yukicoder no046はじめのn歩
 ---------------------------------------------------------------------------
 
+https://yukicoder.me/problems/43
+
 .. literalinclude:: no046はじめのn歩.py
+
+.. literalinclude:: no046はじめのn歩2.py
 

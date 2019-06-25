@@ -1,0 +1,6 @@
+Materials 1b_Stickeralbum_Numpy_Solution
+===============================================================================================
+
+.. raw:: html
+   :file: html/1b_Stickeralbum_Numpy_Solution.html
+

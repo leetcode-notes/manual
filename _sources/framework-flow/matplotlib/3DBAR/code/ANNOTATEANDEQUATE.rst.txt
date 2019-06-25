@@ -1,0 +1,6 @@
+matplotlib ANNOTATEANDEQUATE
+===============================================================================================
+
+.. raw:: html
+   :file: html/ANNOTATEANDEQUATE.html
+

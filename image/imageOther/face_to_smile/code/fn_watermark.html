@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>face_to_smile fn_watermark &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="face to smile" href="../face_to_smile.html"/>
+        <link rel="next" title="face_to_smile fn_common" href="fn_common.html"/>
+        <link rel="prev" title="face_to_smile fn_smile_watermark" href="fn_smile_watermark.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../image.html">image</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../imageGenerate/imgGene.html">image（画像生成）</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../image.html">image（その他）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../FreeFem/FreeFem.html">Free Fem 流体計算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Gasyori100knock/Gasyori.html">100knockout</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../face_to_smile.html">face to smile</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../face_to_smile.html#ui">UI部分作成用</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../face_to_smile.html#id1">ボタンごとの関数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../face_to_smile.html#id2">共通部分</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageSelect/imageSelect.html">image（画像選択）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../image.html">image</a> &raquo;</li>
+      
+        <li><a href="../../image.html">image（その他）</a> &raquo;</li>
+      
+        <li><a href="../face_to_smile.html">face to smile</a> &raquo;</li>
+      
+    <li>face_to_smile fn_watermark</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/image/imageOther/face_to_smile/code/fn_watermark.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="face-to-smile-fn-watermark">
+<h1>face_to_smile fn_watermark<a class="headerlink" href="#face-to-smile-fn-watermark" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
+
+<span class="kn">import</span> <span class="nn">tkinter</span><span class="o">,</span> <span class="nn">tkinter.filedialog</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="kn">from</span> <span class="nn">fn_common</span> <span class="k">import</span> <span class="n">imread2</span>
+<span class="kn">from</span> <span class="nn">fn_common</span> <span class="k">import</span> <span class="n">Mode</span>
+<span class="kn">from</span> <span class="nn">fn_common</span> <span class="k">import</span> <span class="n">mkdir_dto</span>
+<span class="kn">from</span> <span class="nn">fn_common</span> <span class="k">import</span> <span class="n">make_img</span>
+
+<span class="k">def</span> <span class="nf">watermark</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">):</span>
+    <span class="n">watermark</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">withdraw</span><span class="p">()</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;画像フォルダーを選択してください。&#39;</span>
+    <span class="n">img_dir_path</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">img_dir_path</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;フォルダーを選んでください。&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="n">img_dir_path</span> <span class="o">=</span> <span class="s1">&#39;input&#39;</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;出力先フォルダーを選択してください。&#39;</span>
+    <span class="n">output_dir_path</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">filedialog</span><span class="o">.</span><span class="n">askdirectory</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">output_dir_path</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;フォルダーを選んでください。&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="n">output_dir_path</span> <span class="o">=</span> <span class="s1">&#39;output&#39;</span>
+    <span class="k">for</span> <span class="n">img_file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">img_dir_path</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">img_file</span><span class="p">)</span>
+        <span class="c1"># 元画像読み込み（PIL）</span>
+        <span class="n">img_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">img_dir_path</span><span class="p">,</span> <span class="n">img_file</span><span class="p">)</span>
+        <span class="n">img_pil</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+        <span class="c1"># 顔認識用にOpenCVで元画像をグレースケールで別途読込</span>
+        <span class="n">img_cv</span> <span class="o">=</span> <span class="n">imread2</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+        <span class="n">output_path</span> <span class="o">=</span> <span class="n">mkdir_dto</span><span class="p">(</span><span class="n">img_pil</span><span class="p">,</span> <span class="n">output_dir_path</span><span class="p">)</span>
+        <span class="c1"># ブログ用画像とサムネイル用画像を作成</span>
+        <span class="n">make_img</span><span class="p">(</span><span class="n">img_pil</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">img_file</span><span class="p">,</span> <span class="n">Mode</span><span class="o">.</span><span class="n">BLG</span><span class="p">,</span> <span class="n">watermark</span><span class="p">,</span> <span class="n">output_path</span><span class="p">)</span>
+        <span class="n">make_img</span><span class="p">(</span><span class="n">img_pil</span><span class="p">,</span> <span class="n">img_file</span><span class="p">,</span> <span class="n">Mode</span><span class="o">.</span><span class="n">TMB</span><span class="p">,</span> <span class="n">watermark</span><span class="p">,</span> <span class="n">output_path</span><span class="p">)</span>
+        <span class="n">img_pil</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fn_common.html" class="btn btn-neutral float-right" title="face_to_smile fn_common" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fn_smile_watermark.html" class="btn btn-neutral" title="face_to_smile fn_smile_watermark" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

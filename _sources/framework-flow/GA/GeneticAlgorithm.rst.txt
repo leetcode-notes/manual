@@ -1,10 +1,21 @@
 GeneticAlgorithm
 =============================
 
+OneMax問題をGAで解いてみる
+----------------------------
+
 .. toctree::
-   :maxdepth: 2
-   :glob:
+	code/onemax_ga
 
-   */*
+TSPをGAで解いてみる
+----------------------------
 
-http://localhost:8888/tree/framework-flow/GA/t31903
+.. toctree::
+	code/tsp_ga
+
+TSPを乱数だけで解いてみる
+---------------------------
+
+.. toctree::
+	code/tsp_rand
+

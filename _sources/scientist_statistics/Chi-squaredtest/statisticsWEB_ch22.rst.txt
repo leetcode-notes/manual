@@ -1,0 +1,25 @@
+カイ二乗検定
+==============
+
+Logics of Blue
+-----------------
+
+https://logics-of-blue.com/chi-squared-test/
+
+.. toctree::
+
+   code/Chi-squaredtest
+
+ハンバーガーショップで学ぶ 楽しい統計学
+-------------------------------------------
+
+──平均から分散分析まで──
+
+.. toctree::
+
+   hamberger/hamberger_chi-square_test
+
+統計WEB ch22
+---------------
+
+https://bellcurve.jp/statistics/course/9208.html

@@ -6,3 +6,11 @@ Data Scientist 統計学
    :glob:
 
    */*
+
+統計学の代表的な手法を実践する (1)
+
+https://qiita.com/ynakayama/items/bd0b65716279ae2df957
+
+Pythonで実装する記述統計①（ヒストグラム、平均、分散）｜スクラッチ実装で理解する基礎統計 #1
+
+https://lib-arts.hatenablog.com/entry/stats_scratch1

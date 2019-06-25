@@ -3,14 +3,6 @@ Model View Controller モデル・ビュー・コントローラ
 
 ユーザーインタフェースをもつアプリケーションソフトウェアを実装するためのデザインパターン
 
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   */*
-
-
 classese
 -------------
 

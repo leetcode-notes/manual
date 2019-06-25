@@ -38,7 +38,7 @@
     <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
         <link rel="up" title="100knockout" href="../Gasyori.html"/>
         <link rel="next" title="61_70 answer_61" href="code/answer_61.html"/>
-        <link rel="prev" title="41_50" href="../41_50/41_50.html"/> 
+        <link rel="prev" title="51_60 answer_60" href="../51_60/code/answer_60.html"/> 
 
   
   <script src="../../../../_static/js/modernizr.min.js"></script>
@@ -102,12 +102,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../21_30/21-30.html">21-30</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../31_40/31-40.html">31-40</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../41_50/41_50.html">41_50</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../51_60/51-60.html">51-60</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">61-70</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../71_80/71-80.html">71-80</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../81_90/81-90.html">81-90</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../91_00/91-00.html">91-00</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../face_to_smile/face_to_smile.html">face to smile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
@@ -173,6 +175,26 @@
             
   <div class="section" id="id1">
 <h1>61-70<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>4-連結数<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>-連結数とは近傍との画素の状態を見る値である。
+通常、近傍は注目画素x0(x,y)が0でない場合に対して、次のように定義される。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
+<span class="pre">x4(x-1,y-1)</span> <span class="pre">x3(x,y-1)</span> <span class="pre">x2(x+1,y-1)</span>
+<span class="pre">x5(x-1,y)</span>&#160;&#160; <span class="pre">x0(x,y)</span>&#160;&#160; <span class="pre">x1(x+1,y)</span>
+<span class="pre">x6(x-1,y+1)</span> <span class="pre">x7(x,y+1)</span> <span class="pre">x8(x+1,y+1)</span>
+<span class="pre">`</span></code></p>
+<p>ここで4連結数とは、次式で計算される。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="n">x1</span> <span class="n">x2</span> <span class="n">x3</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x3</span> <span class="o">-</span> <span class="n">x3</span> <span class="n">x4</span> <span class="n">x5</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x5</span> <span class="o">-</span> <span class="n">x5</span> <span class="n">x6</span> <span class="n">x7</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x7</span> <span class="o">-</span> <span class="n">x7</span> <span class="n">x8</span> <span class="n">x1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>S = [0,4]の範囲をとり、
+- S = 0 は内部点
+- S = 1 は端点
+- S = 2 は連結点
+- S = 3 は分岐点
+- S = 4 は交差点
+を示す。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_61.html">61_70 answer_61</a></li>
@@ -225,6 +247,7 @@
 </ul>
 </div>
 </div>
+</div>
 
 
            </div>
@@ -236,7 +259,7 @@
         <a href="code/answer_61.html" class="btn btn-neutral float-right" title="61_70 answer_61" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../41_50/41_50.html" class="btn btn-neutral" title="41_50" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../51_60/code/answer_60.html" class="btn btn-neutral" title="51_60 answer_60" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

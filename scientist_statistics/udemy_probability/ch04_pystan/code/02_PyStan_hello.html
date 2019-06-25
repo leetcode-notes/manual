@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pystan &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="ch_pystan" href="../ch_pystan.html"/>
+        <link rel="next" title="ch_pystan PyStanでのHelloWorld" href="02_PyStanでのHelloWorld.html"/>
+        <link rel="prev" title="pystan" href="01_グラフィカルモデル.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../scientist.html">Data Scientist 統計学</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../Chi-squaredtest/statisticsWEB_ch22.html">カイ二乗検定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../datascience/datascience.html">scientist_statistics datascience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../takitsuba_midoribon/takitsuba_midoribon.html">takitsuba_midoribon</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../udemy_probability.html">udemy_probability</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../ch01_liklyhood/ch01.html">ch01</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch02_montecarro/ch02_montecarro.html">ch02_montecarro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch03_MCMC/ch03_MCMC.html">ch03_MCMC</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ch_pystan.html">ch_pystan</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="01_グラフィカルモデル.html">pystan</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pystan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_PyStanでのHelloWorld.html">ch_pystan PyStanでのHelloWorld</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ベイズ信頼区間・予測区間.html">ch_pystan ベイズ信頼区間・予測区間</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ロジスティック回帰.html">ch_pystan ロジスティック回帰</a></li>
+<li class="toctree-l4"><a class="reference internal" href="単回帰.html">ch_pystan 単回帰</a></li>
+<li class="toctree-l4"><a class="reference internal" href="状態空間モデル.html">ch_pystan 状態空間モデル</a></li>
+<li class="toctree-l4"><a class="reference internal" href="重回帰.html">ch_pystan 重回帰</a></li>
+<li class="toctree-l4"><a class="reference internal" href="階層ベイズモデル.html">ch_pystan 階層ベイズモデル</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../ch05_python/ch_python.html">ch_python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../scientist.html">Data Scientist 統計学</a> &raquo;</li>
+      
+        <li><a href="../../udemy_probability.html">udemy_probability</a> &raquo;</li>
+      
+        <li><a href="../ch_pystan.html">ch_pystan</a> &raquo;</li>
+      
+    <li>pystan</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/scientist_statistics/udemy_probability/ch04_pystan/code/02_PyStan_hello.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pystan">
+<h1>pystan<a class="headerlink" href="#pystan" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0000.png" src="../../../../_images/02_0000.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0001.png" src="../../../../_images/02_0001.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0002.png" src="../../../../_images/02_0002.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0003.png" src="../../../../_images/02_0003.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0004.png" src="../../../../_images/02_0004.png" />
+</div>
+<div class="figure align-center">
+<img alt="../../../../_images/02_0005.png" src="../../../../_images/02_0005.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02_PyStanでのHelloWorld.html" class="btn btn-neutral float-right" title="ch_pystan PyStanでのHelloWorld" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01_グラフィカルモデル.html" class="btn btn-neutral" title="pystan" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

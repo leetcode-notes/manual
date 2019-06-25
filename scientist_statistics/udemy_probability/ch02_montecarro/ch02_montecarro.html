@@ -38,7 +38,7 @@
     <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
         <link rel="up" title="udemy_probability" href="../udemy_probability.html"/>
         <link rel="next" title="ch02_montecarro 04_モンテカルロ法とは" href="code/04_モンテカルロ法とは.html"/>
-        <link rel="prev" title="ch01 階層ベイズモデル" href="../ch01_liklyhood/code/階層ベイズモデル.html"/> 
+        <link rel="prev" title="ch01 MAP推定" href="../ch01_liklyhood/code/MAP推定.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -99,17 +99,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../scientist.html">Data Scientist 統計学</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../Chi-squaredtest/statisticsWEB_ch22.html">カイ二乗検定</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../datascience/datascience.html">scientist_statistics datascience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../takitsuba_midoribon/takitsuba_midoribon.html">takitsuba_midoribon</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../udemy_probability.html">udemy_probability</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../ch01_liklyhood/ch01.html">ch01</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ch02_montecarro</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="code/04_モンテカルロ法とは.html">ch02_montecarro 04_モンテカルロ法とは</a></li>
 <li class="toctree-l4"><a class="reference internal" href="code/05_棄却サンプリング.html">ch02_montecarro 05_棄却サンプリング</a></li>
-<li class="toctree-l4"><a class="reference internal" href="code/ハミルトニアンモンテカルロ.html">ch02_montecarro ハミルトニアンモンテカルロ</a></li>
-<li class="toctree-l4"><a class="reference internal" href="code/モンテカルロ法とは.html">ch01 モンテカルロ法とは</a></li>
-<li class="toctree-l4"><a class="reference internal" href="code/棄却サンプリング.html">ch01 棄却サンプリング</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code/06_次元の呪い.html">ch02_montecarro 06_次元の呪い</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code/0_lsessonmemo_1.html">MCMC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code/scipy_stats.html">ch02_montecarro scipy_stats</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../ch03_MCMC/ch03_MCMC.html">ch03_MCMC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch04_pystan/ch_pystan.html">ch_pystan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ch05_python/ch_python.html">ch_python</a></li>
 </ul>
 </li>
 </ul>
@@ -167,9 +172,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/04_モンテカルロ法とは.html">ch02_montecarro 04_モンテカルロ法とは</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code/05_棄却サンプリング.html">ch02_montecarro 05_棄却サンプリング</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code/ハミルトニアンモンテカルロ.html">ch02_montecarro ハミルトニアンモンテカルロ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code/モンテカルロ法とは.html">ch01 モンテカルロ法とは</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code/棄却サンプリング.html">ch01 棄却サンプリング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/06_次元の呪い.html">ch02_montecarro 06_次元の呪い</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/0_lsessonmemo_1.html">MCMC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code/0_lsessonmemo_1.html#id1">モンテカルロ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/0_lsessonmemo_1.html#id2">棄却サンプリング</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/0_lsessonmemo_1.html#id3">次元の呪い</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code/scipy_stats.html">ch02_montecarro scipy_stats</a></li>
 </ul>
 </div>
 </div>
@@ -184,7 +194,7 @@
         <a href="code/04_モンテカルロ法とは.html" class="btn btn-neutral float-right" title="ch02_montecarro 04_モンテカルロ法とは" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../ch01_liklyhood/code/階層ベイズモデル.html" class="btn btn-neutral" title="ch01 階層ベイズモデル" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../ch01_liklyhood/code/MAP推定.html" class="btn btn-neutral" title="ch01 MAP推定" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

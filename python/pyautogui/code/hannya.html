@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyautogui hannya &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="pyautogui" href="../pyautogui.html"/>
+        <link rel="next" title="pychram" href="../../pycharm/pycharm.html"/>
+        <link rel="prev" title="pyautogui" href="../pyautogui.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Python</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ControlSyntax/ControlSyntax.html">制御構文</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../UI/UI.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../class/class.html">class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../closure/closure.html">closure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../debug/debug.html">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decorator/decorator.html">decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../def/def.html">Python manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file/file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joblib/joblib.html">joblib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../office/office.html">office</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../password/password.html">python password</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../pyautogui.html">pyautogui</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pyautogui hannya</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../set/set.html">set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../start/start.html">start setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../temp/tempfile.html">temp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../time/time.html">time(時間系)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../types/type.html">数値・文字列・型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../walk/walk.html">python walk walk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../index.html">Python</a> &raquo;</li>
+      
+        <li><a href="../pyautogui.html">pyautogui</a> &raquo;</li>
+      
+    <li>pyautogui hannya</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/python/pyautogui/code/hannya.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyautogui-hannya">
+<h1>pyautogui hannya<a class="headerlink" href="#pyautogui-hannya" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!usr/bin/python</span>
+<span class="c1"># -*- coding: UTF-8 -*-</span>
+
+<span class="c1">##PyAutoGUIのモジュール</span>
+<span class="c1"># pip install pyautogui</span>
+<span class="kn">import</span> <span class="nn">pyautogui</span>
+
+<span class="c1"># クリップボードコピペ用</span>
+<span class="c1"># pip install pyperclip</span>
+<span class="kn">import</span> <span class="nn">pyperclip</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="k">def</span> <span class="nf">GijiHenkan</span><span class="p">(</span><span class="n">kanji</span><span class="p">,</span> <span class="n">roumaji</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">):</span>
+    <span class="c1"># roumaji文字列をタイプする（※全角モード前提）</span>
+    <span class="c1"># pyautogui.typewrite(roumaji)</span>
+    <span class="c1"># ↑不自然に早いので不採用</span>
+
+    <span class="c1"># 全部の文字を一文字ずつ打つ</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">roumaji</span><span class="p">:</span>
+        <span class="n">pyautogui</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">presses</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">)</span>
+
+    <span class="c1"># 変換前にひとこきゅう</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">)</span>
+
+    <span class="c1"># クリップボードに漢字をコピーしておく</span>
+    <span class="n">pyperclip</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">kanji</span><span class="p">)</span>
+    <span class="c1"># 消去した瞬間にクリップボードから文字をコピペ</span>
+    <span class="c1"># 消去については環境ごとに異なる可能性があるが、</span>
+    <span class="c1"># escの２回押しにしておく。</span>
+    <span class="n">pyautogui</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;esc&#39;</span><span class="p">,</span> <span class="n">presses</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># コピペ</span>
+    <span class="n">pyautogui</span><span class="o">.</span><span class="n">hotkey</span><span class="p">(</span><span class="s1">&#39;ctrl&#39;</span><span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">)</span>
+    <span class="c1"># ひとこきゅう</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">Kaigyou</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">):</span>
+    <span class="n">pyautogui</span><span class="o">.</span><span class="n">press</span><span class="p">(</span><span class="s1">&#39;enter&#39;</span><span class="p">,</span> <span class="n">presses</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">DoSyakyou</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">,</span> <span class="n">kaigyousleeptime</span><span class="p">):</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;摩&quot;</span><span class="p">,</span> <span class="s2">&quot;ma&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;訶&quot;</span><span class="p">,</span> <span class="s2">&quot;ka&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;心&quot;</span><span class="p">,</span> <span class="s2">&quot;sinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;経&quot;</span><span class="p">,</span> <span class="s2">&quot;gyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;観&quot;</span><span class="p">,</span> <span class="s2">&quot;kann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;自&quot;</span><span class="p">,</span> <span class="s2">&quot;ji&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;在&quot;</span><span class="p">,</span> <span class="s2">&quot;zai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;菩&quot;</span><span class="p">,</span> <span class="s2">&quot;bo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;薩&quot;</span><span class="p">,</span> <span class="s2">&quot;satu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;行&quot;</span><span class="p">,</span> <span class="s2">&quot;gyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;深&quot;</span><span class="p">,</span> <span class="s2">&quot;jinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;時&quot;</span><span class="p">,</span> <span class="s2">&quot;ji&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;照&quot;</span><span class="p">,</span> <span class="s2">&quot;syou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;見&quot;</span><span class="p">,</span> <span class="s2">&quot;ken&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;五&quot;</span><span class="p">,</span> <span class="s2">&quot;go&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蘊&quot;</span><span class="p">,</span> <span class="s2">&quot;unn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;皆&quot;</span><span class="p">,</span> <span class="s2">&quot;kai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;度&quot;</span><span class="p">,</span> <span class="s2">&quot;do&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;一&quot;</span><span class="p">,</span> <span class="s2">&quot;ixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;切&quot;</span><span class="p">,</span> <span class="s2">&quot;sai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;苦&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;厄&quot;</span><span class="p">,</span> <span class="s2">&quot;yaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;舍&quot;</span><span class="p">,</span> <span class="s2">&quot;sya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;利&quot;</span><span class="p">,</span> <span class="s2">&quot;ri&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;子&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;異&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;異&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;即&quot;</span><span class="p">,</span> <span class="s2">&quot;soku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;即&quot;</span><span class="p">,</span> <span class="s2">&quot;soku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;受&quot;</span><span class="p">,</span> <span class="s2">&quot;jyu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;想&quot;</span><span class="p">,</span> <span class="s2">&quot;sou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;行&quot;</span><span class="p">,</span> <span class="s2">&quot;gyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;識&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;亦&quot;</span><span class="p">,</span> <span class="s2">&quot;yaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;復&quot;</span><span class="p">,</span> <span class="s2">&quot;bu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;如&quot;</span><span class="p">,</span> <span class="s2">&quot;nyo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;舍&quot;</span><span class="p">,</span> <span class="s2">&quot;sya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;利&quot;</span><span class="p">,</span> <span class="s2">&quot;ri&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;子&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諸&quot;</span><span class="p">,</span> <span class="s2">&quot;syo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;法&quot;</span><span class="p">,</span> <span class="s2">&quot;hou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;相&quot;</span><span class="p">,</span> <span class="s2">&quot;sou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;生&quot;</span><span class="p">,</span> <span class="s2">&quot;syou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;滅&quot;</span><span class="p">,</span> <span class="s2">&quot;metu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;垢&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;浄&quot;</span><span class="p">,</span> <span class="s2">&quot;jyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;増&quot;</span><span class="p">,</span> <span class="s2">&quot;zou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;減&quot;</span><span class="p">,</span> <span class="s2">&quot;genn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;空&quot;</span><span class="p">,</span> <span class="s2">&quot;kuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;中&quot;</span><span class="p">,</span> <span class="s2">&quot;tyuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;受&quot;</span><span class="p">,</span> <span class="s2">&quot;jyu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;想&quot;</span><span class="p">,</span> <span class="s2">&quot;sou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;行&quot;</span><span class="p">,</span> <span class="s2">&quot;gyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;識&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;眼&quot;</span><span class="p">,</span> <span class="s2">&quot;genn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;耳&quot;</span><span class="p">,</span> <span class="s2">&quot;ni&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;鼻&quot;</span><span class="p">,</span> <span class="s2">&quot;bi&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;舌&quot;</span><span class="p">,</span> <span class="s2">&quot;zextu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;身&quot;</span><span class="p">,</span> <span class="s2">&quot;sinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;意&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;色&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;声&quot;</span><span class="p">,</span> <span class="s2">&quot;syou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;香&quot;</span><span class="p">,</span> <span class="s2">&quot;kou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;味&quot;</span><span class="p">,</span> <span class="s2">&quot;mi&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;触&quot;</span><span class="p">,</span> <span class="s2">&quot;soku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;法&quot;</span><span class="p">,</span> <span class="s2">&quot;hou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;眼&quot;</span><span class="p">,</span> <span class="s2">&quot;genn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;界&quot;</span><span class="p">,</span> <span class="s2">&quot;kai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;乃&quot;</span><span class="p">,</span> <span class="s2">&quot;nai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;至&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;意&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;識&quot;</span><span class="p">,</span> <span class="s2">&quot;siki&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;界&quot;</span><span class="p">,</span> <span class="s2">&quot;kai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;明&quot;</span><span class="p">,</span> <span class="s2">&quot;myou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;亦&quot;</span><span class="p">,</span> <span class="s2">&quot;yaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;明&quot;</span><span class="p">,</span> <span class="s2">&quot;myou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;尽&quot;</span><span class="p">,</span> <span class="s2">&quot;jinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;乃&quot;</span><span class="p">,</span> <span class="s2">&quot;nai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;至&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;老&quot;</span><span class="p">,</span> <span class="s2">&quot;rou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;死&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;亦&quot;</span><span class="p">,</span> <span class="s2">&quot;yaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;老&quot;</span><span class="p">,</span> <span class="s2">&quot;rou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;死&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;尽&quot;</span><span class="p">,</span> <span class="s2">&quot;jinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;苦&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;集&quot;</span><span class="p">,</span> <span class="s2">&quot;syuu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;滅&quot;</span><span class="p">,</span> <span class="s2">&quot;metu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;道&quot;</span><span class="p">,</span> <span class="s2">&quot;dou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;智&quot;</span><span class="p">,</span> <span class="s2">&quot;ti&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;亦&quot;</span><span class="p">,</span> <span class="s2">&quot;yaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;得&quot;</span><span class="p">,</span> <span class="s2">&quot;toku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;以&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;所&quot;</span><span class="p">,</span> <span class="s2">&quot;syo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;得&quot;</span><span class="p">,</span> <span class="s2">&quot;toku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;kou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;菩&quot;</span><span class="p">,</span> <span class="s2">&quot;bo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;提&quot;</span><span class="p">,</span> <span class="s2">&quot;dai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;薩&quot;</span><span class="p">,</span> <span class="s2">&quot;saxtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;埵&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;依&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;心&quot;</span><span class="p">,</span> <span class="s2">&quot;sinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;罣&quot;</span><span class="p">,</span> <span class="s2">&quot;kei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;礙&quot;</span><span class="p">,</span> <span class="s2">&quot;ge&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;罣&quot;</span><span class="p">,</span> <span class="s2">&quot;kei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;礙&quot;</span><span class="p">,</span> <span class="s2">&quot;ge&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;有&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;恐&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;怖&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;遠&quot;</span><span class="p">,</span> <span class="s2">&quot;onn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;離&quot;</span><span class="p">,</span> <span class="s2">&quot;ri&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;一&quot;</span><span class="p">,</span> <span class="s2">&quot;ixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;切&quot;</span><span class="p">,</span> <span class="s2">&quot;sai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;顛&quot;</span><span class="p">,</span> <span class="s2">&quot;tenn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;倒&quot;</span><span class="p">,</span> <span class="s2">&quot;dou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;夢&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;想&quot;</span><span class="p">,</span> <span class="s2">&quot;sou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;究&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;竟&quot;</span><span class="p">,</span> <span class="s2">&quot;kyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;涅&quot;</span><span class="p">,</span> <span class="s2">&quot;ne&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;槃&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;三&quot;</span><span class="p">,</span> <span class="s2">&quot;sann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;世&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諸&quot;</span><span class="p">,</span> <span class="s2">&quot;syo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;仏&quot;</span><span class="p">,</span> <span class="s2">&quot;butu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;依&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;得&quot;</span><span class="p">,</span> <span class="s2">&quot;toku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;阿&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;耨&quot;</span><span class="p">,</span> <span class="s2">&quot;noku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;三&quot;</span><span class="p">,</span> <span class="s2">&quot;sann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;藐&quot;</span><span class="p">,</span> <span class="s2">&quot;myaku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;三&quot;</span><span class="p">,</span> <span class="s2">&quot;sann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;菩&quot;</span><span class="p">,</span> <span class="s2">&quot;bo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;提&quot;</span><span class="p">,</span> <span class="s2">&quot;dai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;知&quot;</span><span class="p">,</span> <span class="s2">&quot;ti&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;大&quot;</span><span class="p">,</span> <span class="s2">&quot;dai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;神&quot;</span><span class="p">,</span> <span class="s2">&quot;jinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;大&quot;</span><span class="p">,</span> <span class="s2">&quot;dai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;明&quot;</span><span class="p">,</span> <span class="s2">&quot;myou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;上&quot;</span><span class="p">,</span> <span class="s2">&quot;jyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;是&quot;</span><span class="p">,</span> <span class="s2">&quot;ze&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;無&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;等&quot;</span><span class="p">,</span> <span class="s2">&quot;tou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;等&quot;</span><span class="p">,</span> <span class="s2">&quot;dou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;能&quot;</span><span class="p">,</span> <span class="s2">&quot;nou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;除&quot;</span><span class="p">,</span> <span class="s2">&quot;jyo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;一&quot;</span><span class="p">,</span> <span class="s2">&quot;ixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;切&quot;</span><span class="p">,</span> <span class="s2">&quot;sai&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;苦&quot;</span><span class="p">,</span> <span class="s2">&quot;ku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;真&quot;</span><span class="p">,</span> <span class="s2">&quot;sinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;実&quot;</span><span class="p">,</span> <span class="s2">&quot;jitu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;不&quot;</span><span class="p">,</span> <span class="s2">&quot;hu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;虚&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;故&quot;</span><span class="p">,</span> <span class="s2">&quot;ko&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;説&quot;</span><span class="p">,</span> <span class="s2">&quot;setu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;蜜&quot;</span><span class="p">,</span> <span class="s2">&quot;mixtu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;多&quot;</span><span class="p">,</span> <span class="s2">&quot;ta&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;即&quot;</span><span class="p">,</span> <span class="s2">&quot;soku&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;説&quot;</span><span class="p">,</span> <span class="s2">&quot;setu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;呪&quot;</span><span class="p">,</span> <span class="s2">&quot;syu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;曰&quot;</span><span class="p">,</span> <span class="s2">&quot;watu&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羯&quot;</span><span class="p">,</span> <span class="s2">&quot;gya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諦&quot;</span><span class="p">,</span> <span class="s2">&quot;tei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羯&quot;</span><span class="p">,</span> <span class="s2">&quot;gya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諦&quot;</span><span class="p">,</span> <span class="s2">&quot;tei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羯&quot;</span><span class="p">,</span> <span class="s2">&quot;gya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諦&quot;</span><span class="p">,</span> <span class="s2">&quot;tei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;波&quot;</span><span class="p">,</span> <span class="s2">&quot;ha&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羅&quot;</span><span class="p">,</span> <span class="s2">&quot;ra&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;僧&quot;</span><span class="p">,</span> <span class="s2">&quot;sou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;羯&quot;</span><span class="p">,</span> <span class="s2">&quot;gya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;諦&quot;</span><span class="p">,</span> <span class="s2">&quot;tei&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;菩&quot;</span><span class="p">,</span> <span class="s2">&quot;bo&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;提&quot;</span><span class="p">,</span> <span class="s2">&quot;ji&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;薩&quot;</span><span class="p">,</span> <span class="s2">&quot;so&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;婆&quot;</span><span class="p">,</span> <span class="s2">&quot;wa&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;訶&quot;</span><span class="p">,</span> <span class="s2">&quot;ka&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;般&quot;</span><span class="p">,</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;若&quot;</span><span class="p">,</span> <span class="s2">&quot;nya&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;心&quot;</span><span class="p">,</span> <span class="s2">&quot;sinn&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">GijiHenkan</span><span class="p">(</span><span class="s2">&quot;経&quot;</span><span class="p">,</span> <span class="s2">&quot;gyou&quot;</span><span class="p">,</span> <span class="n">sleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+    <span class="n">Kaigyou</span><span class="p">(</span><span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="mi">0</span>
+
+
+<span class="c1"># 以下、メインルーチン</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="c1"># 実行前の待機(秒)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5秒後に写経が始まります。&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;心を静かにして&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;テキストエディタを開いて、&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;日本語入力モードにしておきましょう。&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">sleeptime</span> <span class="o">=</span> <span class="mf">0.0015</span>
+    <span class="n">kaigyousleeptime</span> <span class="o">=</span> <span class="mf">0.02</span>
+
+    <span class="c1"># 写経開始</span>
+    <span class="c1"># 強制終了（ctrl+c）するときにキーボード入力が継続されてしまうので</span>
+    <span class="c1"># 実行する際には注意。</span>
+    <span class="c1"># 繰り返し回数は最初は１回だけなどにしておいた方がよい</span>
+    <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="n">DoSyakyou</span><span class="p">(</span><span class="n">sleeptime</span><span class="p">,</span> <span class="n">kaigyousleeptime</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;おつとめおつかれさまでした。&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../pycharm/pycharm.html" class="btn btn-neutral float-right" title="pychram" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../pyautogui.html" class="btn btn-neutral" title="pyautogui" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+matplotlib MATPLOTLIB_SOLUTIONS
+===============================================================================================
+
+.. raw:: html
+   :file: html/MATPLOTLIB_SOLUTIONS.html
+

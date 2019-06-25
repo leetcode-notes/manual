@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>RandomForest visualize_tree &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="GBDT XGBoost" href="../RandomForest.html"/>
+        <link rel="next" title="XGBoost" href="../../XGBoost/XGBoost.html"/>
+        <link rel="prev" title="RandomForest randomforest_mshinoda88" href="randomforest_mshinoda88.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../kaggle.html">kaggle</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../CrossValidation/CrossValidation.html">CrossValidation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../GBDT.html">GBDT</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../CatBoost/CatBoost.html">Python manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../LightGBM/LightGBM.html">LightGBM</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../RandomForest.html">GBDT XGBoost</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="DessitionTree_RandomForest.html">RandomForest DessitionTree_RandomForest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForestClassifier.html">scikit-learnのRandomForestClassifierで外れ値を特定する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForest_FeatureSelection.html">RandomForest RandomForest_FeatureSelection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForest_ex_Classfication.html">RandomForest RandomForest_ex_Classfication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForest_ex_regression.html">RandomForest RandomForest_ex_regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RandomForest_regression.html">RandomForest RandomForest_regression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="randomforest_codeexa.html">RandomForest RandomForest_codeexa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="randomforest_mshinoda88.html">RandomForest randomforest_mshinoda88</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">RandomForest visualize_tree</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../XGBoost/XGBoost.html">XGBoost</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/kaggle-api.html">kaggle-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../classification/classification.html">classification competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../feature-engineering/feature-engineering.html">feature engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../feature-select/featureselect.html">feature select 特徴選択</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../image/image.html">image competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../math/math.html">math algorythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metric/metric.html">metric 評価基準</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../nlp/nlp.html">natural language processing competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../regression/regression.html">regression コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reinforcement/reinforcement.html">強化学習系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../sound/sound.html">sound competition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../time/time.html">時系列系コンペ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../kaggle.html#kaggle-past-solution">Kaggle Past Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../kaggle.html">kaggle</a> &raquo;</li>
+      
+        <li><a href="../../GBDT.html">GBDT</a> &raquo;</li>
+      
+        <li><a href="../RandomForest.html">GBDT XGBoost</a> &raquo;</li>
+      
+    <li>RandomForest visualize_tree</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/kaggle/GBDT/RandomForest/code/visualize_tree.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="randomforest-visualize-tree">
+<h1>RandomForest visualize_tree<a class="headerlink" href="#randomforest-visualize-tree" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># 決定木を描画してみる</span>
+<span class="k">def</span> <span class="nf">visualize_tree</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">boundaries</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;決定木の可視化関数。</span>
+<span class="sd">    INPUTS: 分類モデル, X, y, optional x/y limits.</span>
+<span class="sd">    OUTPUTS: Meshgridを使った決定木の可視化</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># fitを使ったモデルの構築</span>
+    <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+    <span class="c1"># 軸を自動調整</span>
+    <span class="k">if</span> <span class="n">xlim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">xlim</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ylim</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">xlim</span>
+    <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">ylim</span>
+
+    <span class="c1"># meshgridをつくる。</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+
+    <span class="c1"># 分類器の予測を実行</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()])</span>
+
+    <span class="c1"># meshgridを使って整形。</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+    <span class="c1"># 分類ごとに色付け。</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+
+    <span class="c1"># 訓練データの描画。</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_boundaries</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        境界線を描き込みます。</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">tree_</span>
+
+        <span class="c1"># 境界を描画するために、再帰的に呼び出します。</span>
+        <span class="k">if</span> <span class="n">tree</span><span class="o">.</span><span class="n">feature</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">ylim</span><span class="p">,</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+            <span class="n">plot_boundaries</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">[</span><span class="n">xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">ylim</span><span class="p">)</span>
+            <span class="n">plot_boundaries</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">[</span><span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">ylim</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">tree</span><span class="o">.</span><span class="n">feature</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xlim</span><span class="p">,</span> <span class="p">[</span><span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+            <span class="n">plot_boundaries</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">children_left</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">xlim</span><span class="p">,</span>
+                            <span class="p">[</span><span class="n">ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+            <span class="n">plot_boundaries</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">children_right</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">xlim</span><span class="p">,</span>
+                            <span class="p">[</span><span class="n">tree</span><span class="o">.</span><span class="n">threshold</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+
+    <span class="k">if</span> <span class="n">boundaries</span><span class="p">:</span>
+        <span class="n">plot_boundaries</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(),</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../XGBoost/XGBoost.html" class="btn btn-neutral float-right" title="XGBoost" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="randomforest_mshinoda88.html" class="btn btn-neutral" title="RandomForest randomforest_mshinoda88" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

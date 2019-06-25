@@ -1,0 +1,7 @@
+Python manual
+=============================
+
+[UE4] PythonScriptPluginでアセットを整理しよう
+
+
+https://qiita.com/koorinonaka/items/acbd8fde9230cd62ec87

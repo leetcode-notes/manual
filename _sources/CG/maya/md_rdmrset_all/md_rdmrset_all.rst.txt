@@ -368,7 +368,7 @@ Blast Rendaring
    Blastのエンドフレームを変更します。。
 
 
-#. **Save Blast Images's Nmae**：
+#. **Save Blast Images's Name**：
 
    Blastの保存ファイル名を指定します。。
 

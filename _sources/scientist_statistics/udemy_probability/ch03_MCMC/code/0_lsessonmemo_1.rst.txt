@@ -1,0 +1,96 @@
+MCMC
+=============================
+
+.. figure:: 08_流れの定常状態.png
+
+.. figure:: 08_詳細釣り合い状態.png
+
+.. figure:: 08_詳細釣り合い状態2.png
+
+.. figure:: 08_確率分布の変化の式.png
+
+.. figure:: 08_遷移核のバリエーション.png
+
+
+
+M-H アルゴリズムの考え方
+---------------------------
+
+.. figure:: 0000.png
+
+.. figure:: 0001.png
+
+.. figure:: 0002.png
+
+.. figure:: 0003.png
+
+.. figure:: 0004.png
+
+.. figure:: 0005.png
+
+.. figure:: 0006.png
+
+
+Gibbsサンプラー
+------------------
+
+.. figure:: 10_0000.png
+
+.. figure:: 10_0001.png
+
+.. figure:: 10_0002.png
+
+.. figure:: 10_0003.png
+
+ハミルトニアンモンテカルロ
+----------------------------
+
+.. figure:: 11_0000.png
+
+.. figure:: 11_0001.png
+
+.. figure:: 11_0002.png
+
+.. figure:: 11_0003.png
+
+.. figure:: 11_0004.png
+
+.. figure:: 11_0005.png
+
+.. figure:: 11_0006.png
+
+.. figure:: 11_0007.png
+
+.. figure:: 11_0008.png
+
+.. figure:: 11_0009.png
+
+.. figure:: 11_0010.png
+
+.. figure:: 11_0011.png
+
+.. figure:: 11_0012.png
+
+.. figure:: 11_0013.png
+
+.. figure:: 11_0014.png
+
+.. figure:: 11_0015.png
+
+.. figure:: 11_0016.png
+
+.. figure:: 11_0017.png
+
+
+Euler法とLeap-flog法
+----------------------------
+
+.. figure:: 12_0000.png
+
+.. figure:: 12_0001.png
+
+.. figure:: 12_0002.png
+
+.. figure:: 12_0003.png
+
+.. figure:: 12_0004.png

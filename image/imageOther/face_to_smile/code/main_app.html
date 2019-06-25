@@ -1,0 +1,417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>face_to_smile main_app &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="face to smile" href="../face_to_smile.html"/>
+        <link rel="next" title="face_to_smile fn_smile_watermark" href="fn_smile_watermark.html"/>
+        <link rel="prev" title="face to smile" href="../face_to_smile.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../image.html">image</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../imageGenerate/imgGene.html">image（画像生成）</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../image.html">image（その他）</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../FreeFem/FreeFem.html">Free Fem 流体計算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Gasyori100knock/Gasyori.html">100knockout</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../face_to_smile.html">face to smile</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../face_to_smile.html#ui">UI部分作成用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../face_to_smile.html#id1">ボタンごとの関数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../face_to_smile.html#id2">共通部分</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../imageSelect/imageSelect.html">image（画像選択）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../image.html">image</a> &raquo;</li>
+      
+        <li><a href="../../image.html">image（その他）</a> &raquo;</li>
+      
+        <li><a href="../face_to_smile.html">face to smile</a> &raquo;</li>
+      
+    <li>face_to_smile main_app</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/image/imageOther/face_to_smile/code/main_app.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="face-to-smile-main-app">
+<h1>face_to_smile main_app<a class="headerlink" href="#face-to-smile-main-app" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># ---</span>
+<span class="c1"># jupyter:</span>
+<span class="c1">#   jupytext:</span>
+<span class="c1">#     text_representation:</span>
+<span class="c1">#       extension: .py</span>
+<span class="c1">#       format_name: light</span>
+<span class="c1">#       format_version: &#39;1.3&#39;</span>
+<span class="c1">#       jupytext_version: 0.8.6</span>
+<span class="c1">#   kernelspec:</span>
+<span class="c1">#     display_name: Python 3</span>
+<span class="c1">#     language: python</span>
+<span class="c1">#     name: python3</span>
+<span class="c1"># ---</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="kn">import</span> <span class="nn">tkinter.messagebox</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
+
+<span class="kn">import</span> <span class="nn">tkinter</span><span class="o">,</span> <span class="nn">tkinter.filedialog</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="k">import</span> <span class="n">data</span><span class="p">,</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span>
+
+<span class="sd">&quot;&quot;&quot; グローバル変数の定義</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">entry</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">response_area</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">action</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">on_canvas</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">log</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">question</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">FACE_ICON_FILE</span> <span class="o">=</span> <span class="s1">&#39;smile.png&#39;</span>
+<span class="n">WM_FILE</span> <span class="o">=</span> <span class="s1">&#39;watermark.png&#39;</span>
+<span class="n">CASCADE_FILE</span> <span class="o">=</span> <span class="s1">&#39;haarcascade_frontalface_default.xml&#39;</span>
+
+<span class="k">def</span> <span class="nf">face_to_smile</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">fn_smile_watermark</span>
+    <span class="n">fn_smile_watermark</span><span class="o">.</span><span class="n">smile_watermark</span><span class="p">(</span><span class="n">FACE_ICON_FILE</span><span class="p">,</span> <span class="n">WM_FILE</span><span class="p">,</span> <span class="n">CASCADE_FILE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">watermark</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">fn_watermark</span>
+    <span class="n">fn_watermark</span><span class="o">.</span><span class="n">watermark</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sobel</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">fn_sobel</span>
+    <span class="n">fn_sobel</span><span class="o">.</span><span class="n">sobel</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">facerecognition</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">fn_facerecognition</span>
+    <span class="n">fn_facerecognition</span><span class="o">.</span><span class="n">facerecognition</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">color_binarization</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">fn_color_binarization</span>
+    <span class="n">fn_color_binarization</span><span class="o">.</span><span class="n">color_binarization</span><span class="p">(</span><span class="n">WM_FILE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run</span><span class="p">():</span>
+    <span class="c1"># グローバル変数を使用するための記述</span>
+    <span class="k">global</span> <span class="n">entry</span><span class="p">,</span> <span class="n">response_area</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">canvas</span><span class="p">,</span> <span class="n">on_canvas</span><span class="p">,</span> <span class="n">ptyna_images</span>
+
+    <span class="c1"># メインウィンドウを作成</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="c1"># ウィンドウのサイズを設定</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;400x140&#39;</span><span class="p">)</span>
+    <span class="c1"># ウィンドウのタイトルを設定</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Intelligent Agent : &#39;</span><span class="p">)</span>
+    <span class="c1"># フォントの用意</span>
+    <span class="n">font</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Helevetica&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span>
+    <span class="n">font_log</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Helevetica&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">callback</span><span class="p">():</span>
+        <span class="sd">&quot;&quot;&quot; 終了時の処理</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># メッセージボックスの[OK]ボタンクリック時の処理</span>
+        <span class="k">if</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">messagebox</span><span class="o">.</span><span class="n">askyesno</span><span class="p">(</span>
+                <span class="s1">&#39;Quit?&#39;</span><span class="p">,</span> <span class="s1">&#39;終了しますか?&#39;</span><span class="p">):</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+        <span class="c1"># [キャンセル]ボタンクリック</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+
+    <span class="n">root</span><span class="o">.</span><span class="n">protocol</span><span class="p">(</span><span class="s1">&#39;WM_DELETE_WINDOW&#39;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+
+    <span class="c1"># メニューバーの作成</span>
+    <span class="n">menubar</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">menu</span><span class="o">=</span><span class="n">menubar</span><span class="p">)</span>
+    <span class="c1"># 「ファイル」メニュー</span>
+    <span class="n">filemenu</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span><span class="n">menubar</span><span class="p">)</span>
+    <span class="n">menubar</span><span class="o">.</span><span class="n">add_cascade</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;ファイル&#39;</span><span class="p">,</span> <span class="n">menu</span><span class="o">=</span><span class="n">filemenu</span><span class="p">)</span>
+    <span class="n">filemenu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;閉じる&#39;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">callback</span><span class="p">)</span>
+    <span class="c1"># 「オプション」メニュー</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">IntVar</span><span class="p">()</span>
+    <span class="n">optionmenu</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span><span class="n">menubar</span><span class="p">)</span>
+    <span class="n">menubar</span><span class="o">.</span><span class="n">add_cascade</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;オプション&#39;</span><span class="p">,</span> <span class="n">menu</span><span class="o">=</span><span class="n">optionmenu</span><span class="p">)</span>
+    <span class="n">optionmenu</span><span class="o">.</span><span class="n">add_radiobutton</span><span class="p">(</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Responderを表示&#39;</span><span class="p">,</span>  <span class="c1"># アイテム名</span>
+        <span class="n">variable</span><span class="o">=</span><span class="n">action</span><span class="p">,</span>  <span class="c1"># 選択時の値を格納するオブジェクト</span>
+        <span class="n">value</span><span class="o">=</span><span class="mi">0</span>  <span class="c1"># actionの値を0にする</span>
+    <span class="p">)</span>
+    <span class="n">optionmenu</span><span class="o">.</span><span class="n">add_radiobutton</span><span class="p">(</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Responderを表示しない&#39;</span><span class="p">,</span>  <span class="c1"># アイテム名</span>
+        <span class="n">variable</span><span class="o">=</span><span class="n">action</span><span class="p">,</span>  <span class="c1"># 選択時の値を格納するオブジェクト</span>
+        <span class="n">value</span><span class="o">=</span><span class="mi">1</span>  <span class="c1"># actionの値を0にする</span>
+    <span class="p">)</span>
+
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Frame</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">relief</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">RIDGE</span><span class="p">,</span>
+        <span class="n">borderwidth</span><span class="o">=</span><span class="mi">4</span>
+    <span class="p">)</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;watermark+face to smile&#39;</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">face_to_smile</span>
+    <span class="p">)</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+    <span class="n">button2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;watermark&#39;</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">watermark</span>
+    <span class="p">)</span>
+    <span class="n">button2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+
+    <span class="n">button2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;輪郭検出&#39;</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">sobel</span>
+    <span class="p">)</span>
+    <span class="n">button2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+
+    <span class="n">button2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;カラー2値化&#39;</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">color_binarization</span>
+    <span class="p">)</span>
+    <span class="n">button2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+
+    <span class="n">button2</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">root</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;顔検出機能&#39;</span><span class="p">,</span>
+        <span class="n">command</span><span class="o">=</span><span class="n">facerecognition</span>
+    <span class="p">)</span>
+    <span class="n">button2</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>  <span class="c1"># フレームに左詰めで配置する</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">place</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>  <span class="c1"># フレームを画面上に配置</span>
+
+    <span class="c1"># メインループ</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fn_smile_watermark.html" class="btn btn-neutral float-right" title="face_to_smile fn_smile_watermark" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../face_to_smile.html" class="btn btn-neutral" title="face to smile" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

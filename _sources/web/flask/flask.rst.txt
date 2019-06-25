@@ -1,0 +1,48 @@
+flask
+=============================
+
+keras-picselect
+------------------
+
+dataset
+----------
+
+動物(monkey,boar,crow)判定用の画像をスクレイピングを使用してflickerから収集
+
+.. toctree::
+	keras-picselect-make-cnn/getImages
+
+データaugmentation
+-----------------------------
+
+.. toctree::
+	keras-picselect-make-cnn/animal_cnn_aug
+
+aumentationしたデータを学習
+-----------------------------
+
+.. toctree::
+	keras-picselect-make-cnn/animal_cnn
+
+予測テスト
+-----------------------------
+
+.. toctree::
+	keras-picselect-make-cnn/predict
+
+cnnで作成した予測ファイルで画像判定webアプリ
+
+flaskを使用してローカル環境でテスト
+------------------------------------------
+
+.. toctree::
+	keras-picselect/web_predictfile_keras
+
+実行cmd
+set FLASK_APP=web_predictfile_keras.py flask run
+
+
+Link(参考リンク・jupyterリンク等)
+---------------------------------------
+
+https://qiita.com/harupy/items/4fc5809e962832640aa9

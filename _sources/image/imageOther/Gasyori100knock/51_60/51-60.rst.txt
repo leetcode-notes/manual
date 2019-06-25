@@ -1,0 +1,32 @@
+51-60
+=============================
+
+.. toctree::
+   code/answer_51
+
+.. toctree::
+   code/answer_52
+
+.. toctree::
+   code/answer_53
+
+.. toctree::
+   code/answer_54
+
+.. toctree::
+   code/answer_55
+
+.. toctree::
+   code/answer_56
+
+.. toctree::
+   code/answer_57
+
+.. toctree::
+   code/answer_58
+
+.. toctree::
+   code/answer_59
+
+.. toctree::
+   code/answer_60

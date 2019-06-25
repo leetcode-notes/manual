@@ -37,7 +37,7 @@
         <link rel="search" title="検索" href="../../../search.html"/>
     <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
         <link rel="up" title="image（画像選択）" href="../imageSelect.html"/>
-        <link rel="next" title="kaggle" href="../../../kaggle/kaggle.html"/>
+        <link rel="next" title="openpose" href="../openpose/openpose.html"/>
         <link rel="prev" title="image（画像選択）" href="../imageSelect.html"/> 
 
   
@@ -98,8 +98,10 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../imageSelect.html">image（画像選択）</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Yolo</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">環境構築</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#link">参考Link</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../openpose/openpose.html">openpose</a></li>
 </ul>
 </li>
 </ul>
@@ -159,6 +161,32 @@
             
   <div class="section" id="yolo">
 <h1>Yolo<a class="headerlink" href="#yolo" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>環境構築<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>CUDA 10.0 インストール</p>
+<p><a class="reference external" href="https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=7&amp;target_type=exelocal">https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=7&amp;target_type=exelocal</a></p>
+<p>Open CV 3.40</p>
+<p><a class="reference external" href="https://opencv.org/">https://opencv.org/</a></p>
+<dl>
+<dt>C:opencvbuildx64vc14bin</dt><dd><p>opencv_ffmpeg340_64.dll</p>
+<p>opencv_world340.dll</p>
+</dd>
+</dl>
+<p>環境変数に追加</p>
+<p>C:opencvbuildx64vc14bin</p>
+<dl>
+<dt>C:Program FilesNVIDIA GPU Computing ToolkitCUDAv10.0</dt><dd><p>bin</p>
+<p>lib</p>
+<p>include</p>
+</dd>
+</dl>
+<p>C:Userskaoz3chandAppDataLocalTempCUDACUDAVisualStudioIntegrationextrasvisual_studio_integration</p>
+<p>C:Program Files (x86)Microsoft Visual Studio2017CommunityCommon7IDEVCVCTargetsBuildCustomizations</p>
+<p>cuDNN</p>
+<p><a class="reference external" href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></p>
+</div>
+<div class="section" id="link">
+<h2>参考Link<a class="headerlink" href="#link" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>【Darknet】リアルタイムオブジェクト認識 YOLOをTensorflowで試す</p>
 <p><a class="reference external" href="https://qiita.com/tttttt/items/a33bc8297c9a03b38c74">https://qiita.com/tttttt/items/a33bc8297c9a03b38c74</a></p>
 <p>Yolo V3 GPU Tutorial - darknet</p>
@@ -167,14 +195,6 @@
 <p><a class="reference external" href="https://github.com/PacktPublishing/YOLO-v3---Robust-Deep-Learning-Object-Detection-in-1-Hour/tree/master/Section%203">https://github.com/PacktPublishing/YOLO-v3---Robust-Deep-Learning-Object-Detection-in-1-Hour/tree/master/Section%203</a></p>
 <p>YOLOv3をCPU環境でpython使ってリアルタイム画像認識を動かしてみた -</p>
 <p><a class="reference external" href="https://qiita.com/daiarg/items/03c55c82fdc6e623bf07">https://qiita.com/daiarg/items/03c55c82fdc6e623bf07</a></p>
-<div class="section" id="id1">
-<h2>環境構築<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>CUDA 10.0 インストール</p>
-<p><a class="reference external" href="https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=7&amp;target_type=exelocal">https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&amp;target_arch=x86_64&amp;target_version=7&amp;target_type=exelocal</a></p>
-<p>Open CV 3.40</p>
-<p><a class="reference external" href="https://opencv.org/">https://opencv.org/</a></p>
-<p>cuDNN</p>
-<p><a class="reference external" href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></p>
 </div>
 </div>
 
@@ -185,7 +205,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../../kaggle/kaggle.html" class="btn btn-neutral float-right" title="kaggle" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../openpose/openpose.html" class="btn btn-neutral float-right" title="openpose" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../imageSelect.html" class="btn btn-neutral" title="image（画像選択）" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

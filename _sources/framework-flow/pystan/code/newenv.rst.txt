@@ -1,0 +1,27 @@
+newenv
+=============================
+
+https://pystan.readthedocs.io/en/latest/windows.html
+
+conda create -n pystan
+
+activate pystan
+
+pip install pystan
+
+conda install libpython m2w64-toolchain -c msys2
+
+Pythonで使うコンパイラにMinGWを指定する
+--------------------------------------------
+
+https://qiita.com/nocd5/items/a6db920dc86a41b6625d
+
+またPython入れ直した時に忘れてると思うので備忘録
+
+${PYTHON_PATH}/Lib/distutilsにdistutils.cfgを作り
+
+distutils.cfg
+
+[build]
+
+compiler=mingw32

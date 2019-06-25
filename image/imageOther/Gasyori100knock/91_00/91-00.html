@@ -102,12 +102,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../21_30/21-30.html">21-30</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../31_40/31-40.html">31-40</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../41_50/41_50.html">41_50</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../51_60/51-60.html">51-60</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../61_70/61-70.html">61-70</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../71_80/71-80.html">71-80</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../81_90/81-90.html">81-90</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">91-00</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../face_to_smile/face_to_smile.html">face to smile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
@@ -173,21 +175,98 @@
             
   <div class="section" id="id1">
 <h1>91-00<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="k-means-step-1">
+<h2>91. K-meansによる減色処理 (Step.1) 色の距離によるクラス分類<a class="headerlink" href="#k-means-step-1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>imori.jpgをK-meansを用いた減色処理</p>
+<p>減色処理はQ.6でも扱ったが、Q.6では予め決めた色に減色した。
+ここで扱うのはK-meansを用いて動的に減色する色を決定する。</p>
+<p>アルゴリズムは,</p>
+<ol class="arabic simple">
+<li><p>画像からランダムにK個のRGB成分をサンプリングする。（これをクラスと呼ぶことにする。）</p></li>
+<li><p>画像のそれぞれの画素に対して色の距離が最小となるクラスのインデックスを割り振る。</p></li>
+</ol>
+<p>色の距離 dis = sqrt( (R-R')^2 + (G-G')^2 + (B-B')^2)</p>
+<ol class="arabic simple" start="3">
+<li><p>各インデックスに対応する色成分の平均をRGBそれぞれに対して取り、新たなクラスとする。</p></li>
+<li><p>元のクラスと新しいクラスが全く同じならK-meansを終了する。そうでなければ、新しいクラスを元クラスとして2-3を繰り返す。</p></li>
+<li><p>元画像の各画素で色の距離が最小となるクラスのRGBを割り当てる。</p></li>
+</ol>
+<p>1-2を実装</p>
+<ul class="simple">
+<li><p>クラス数はk=5とする</p></li>
+<li><p>ここでは画像をreshape((HxW, 3))にreshapeすると扱いやすくなる。</p></li>
+<li><p>1においてはnp.random.seed(0)として、np.random.choice(np.arrange(画像のWxH), 5, replace=False)</p></li>
+<li><p>まずは3-5のループを考えずに実装せよ</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 最初に選べれた色</span>
+<span class="p">[[</span><span class="mf">140.</span> <span class="mf">121.</span> <span class="mf">148.</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">135.</span> <span class="mf">109.</span> <span class="mf">122.</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">211.</span> <span class="mf">189.</span> <span class="mf">213.</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">135.</span>  <span class="mf">86.</span>  <span class="mf">84.</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">118.</span>  <span class="mf">99.</span>  <span class="mf">96.</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>最初に選ばれた色との色の距離でクラスのインデックスをつけたもの(アルゴリズム2)。
+解答では0-4にインデックスの値をx50にして見やすいようにしている。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_91.html">91_00 answer_91</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="q-92-k-means-step-2">
+<h2>Q.92. K-meansによる減色処理 (Step.2) 減色処理<a class="headerlink" href="#q-92-k-means-step-2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここではアルゴリズム3-5も実装せよ。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 選ばれた色</span>
+<span class="p">[[</span><span class="mf">182.86730957</span> <span class="mf">156.13246155</span> <span class="mf">180.24510193</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">156.75152588</span> <span class="mf">123.88993835</span> <span class="mf">137.39085388</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">227.31060791</span> <span class="mf">199.93135071</span> <span class="mf">209.36465454</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">91.9105835</span>   <span class="mf">57.94448471</span>  <span class="mf">58.26378632</span><span class="p">]</span>
+ <span class="p">[</span><span class="mf">121.8759613</span>   <span class="mf">88.4736557</span>   <span class="mf">96.99688721</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>減色処理したもの。塗り絵イラスト風な画像にできる。k=10にすればある程度の色を保持しながらもイラスト風に減色できる。</p>
+<p>また、k=5にしてmadara.jpgにも試してみよ。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_92.html">91_00 answer_92</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="q-93-step-1-iou">
+<h2>Q.93. 機械学習の学習データの用意 (Step.1) IoUの計算<a class="headerlink" href="#q-93-step-1-iou" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここから機械学習で用いる学習データの準備を行う。</p>
+<p>最終的にはイモリの顔か否かを判別する識別器を作りたい。
+そのためにはイモリの顔の画像とイモリの顔以外の画像が必要になる。
+それらを用意するためのプログラムを作成する。</p>
+<p>そのためにはイモリの顔周辺を一枚の画像から切り抜く必要がある。
+そこで一つの矩形を設定して(GT: Ground-truth, 正解と呼ぶ)、
+ランダムに切り抜いた矩形がGTとある程度重なっていれば、イモリの顔となる。</p>
+<p>その重なり具合を計算するのが、IoU: Intersection over unionであり、次式で計算される。</p>
+<p>ここでは、以下の２つの矩形のIoUを計算せよ。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># [x1, y1, x2, y2] x1,y1...矩形の左上のx,y  x2,y2...矩形の右下のx,y</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">60</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">160</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</pre></div>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_93.html">91_00 answer_93</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="q-94-step-2">
+<h2>Q.94. 機械学習の学習データの用意 (Step.2) ランダムクラッピング<a class="headerlink" href="#q-94-step-2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>次に、imori_1.jpgからランダムに画像を切り抜いて(cropping, クラッピングと呼ぶ)学習データを作成する。</p>
+<p>ここでは画像から60x60のサイズの矩形をランダムに200個切り抜け。</p>
+<p>ただし、以下の条件を満たせ。</p>
+<p>1. np.random.seed(0)として、切り抜く矩形の左上のx1 = np.random.randint(W-60),
+y1=np.random.randint(H-60)で求めよ。
+2. GT (gt = np.array((47, 41, 129, 103),
+dtype=np.float32))とのIoUが0.5以上の時はその矩形に教師ラベル1, 0.5未満の場合はラベル0を与えよ。</p>
+<p>答えは、ラベル1の矩形を赤、ラベル0の矩形を青、GTを緑にしている。</p>
+<p>これでイモリの顔の画像、それ以外の画像を簡易的に用意できた。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_94.html">91_00 answer_94</a></li>
@@ -207,6 +286,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_97.html">91_00 answer_97</a></li>
 </ul>
+</div>
 </div>
 <div class="section" id="q-98-step-2-nn">
 <h2>Q.98. 簡単な物体検出 (Step.2) スライディングウィンドウ + NN<a class="headerlink" href="#q-98-step-2-nn" title="このヘッドラインへのパーマリンク">¶</a></h2>

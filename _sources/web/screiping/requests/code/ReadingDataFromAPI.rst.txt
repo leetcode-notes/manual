@@ -1,0 +1,6 @@
+requests ReadingDataFromAPI
+===============================================================================================
+
+.. raw:: html
+   :file: html/ReadingDataFromAPI.html
+

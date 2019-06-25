@@ -1,0 +1,31 @@
+petfinder-adoption-prediction
+================================
+
+
+
+コンペ概要
+------------
+
+
+
+データの種類とタスク
+---------------------
+
+
+
+評価方法
+-----------
+
+提出方法
+---------
+
+study kernel
+--------------
+
+2nd Place Solution Summary | Kaggle
+
+https://www.kaggle.com/c/petfinder-adoption-prediction/discussion/88773
+
+BaseLineModelling
+
+https://www.kaggle.com/wrosinski/baselinemodeling

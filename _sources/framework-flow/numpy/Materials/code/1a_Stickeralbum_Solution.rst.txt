@@ -1,0 +1,6 @@
+Materials 1a_Stickeralbum_Solution
+===============================================================================================
+
+.. raw:: html
+   :file: html/1a_Stickeralbum_Solution.html
+

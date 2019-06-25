@@ -1,19 +1,12 @@
 collaboratory
 =============================
 
-.. sidebar:: 目次
-
-   .. contents::
-       :depth: 3
-       :local:
-
 study kernel
 --------------
 
 ColabのTPUを使うには、現状tf.kerasを使う。TPU専⽤のモデルに変換が必須。
 
-
-Link(参考リンク・jupyterリンク等)
+Link
 ---------------------------------------
 
 https://qiita.com/koshian2/items/25a6341c035e8a260a01

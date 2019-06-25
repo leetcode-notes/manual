@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>file xml xml &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  <title>xml &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="search" title="検索" href="../../../search.html"/>
     <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
         <link rel="up" title="file" href="../file.html"/>
-        <link rel="next" title="import" href="../../import/import.html"/>
+        <link rel="next" title="xml ReadingDatafromXML" href="code/ReadingDatafromXML.html"/>
         <link rel="prev" title="file open with_open" href="../open/with_open.html"/> 
 
   
@@ -113,13 +113,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../json/ujson.html">file json ujson</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../open/open_text.html">file open open_text</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../open/with_open.html">file open with_open</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">file xml xml</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">xml</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="code/ReadingDatafromXML.html">xml ReadingDatafromXML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="code/etree_ElementTree.html">xml etree_ElementTree</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../import/import.html">import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../joblib/joblib.html">joblib</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../list/list.html">リスト・タプル・辞書</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../maya/maya.html">maya</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../module/module.html">module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../office/office.html">office</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../password/password.html">python password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pyautogui/pyautogui.html">pyautogui</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pycharm/pycharm.html">pychram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../pygame/pygame.html">pygame</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../scope/scope.html">scope</a></li>
@@ -167,7 +175,7 @@
       
         <li><a href="../file.html">file</a> &raquo;</li>
       
-    <li>file xml xml</li>
+    <li>xml</li>
     <li class="wy-breadcrumbs-aside">
       
           <a href="https://github.com/python/file/xml/xml.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -179,16 +187,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="file-xml-xml">
-<h1>file xml xml<a class="headerlink" href="#file-xml-xml" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
-
-<span class="n">req</span> <span class="o">=</span> <span class="s1">&#39;test_zokusei_ari.xml&#39;</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
-</pre></div>
+  <div class="section" id="xml">
+<h1>xml<a class="headerlink" href="#xml" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code/ReadingDatafromXML.html">xml ReadingDatafromXML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/etree_ElementTree.html">xml etree_ElementTree</a></li>
+</ul>
 </div>
 </div>
 
@@ -199,7 +204,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../import/import.html" class="btn btn-neutral float-right" title="import" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="code/ReadingDatafromXML.html" class="btn btn-neutral float-right" title="xml ReadingDatafromXML" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../open/with_open.html" class="btn btn-neutral" title="file open with_open" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

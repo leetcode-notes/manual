@@ -1,0 +1,6 @@
+05_semaseg semaseg_dataset_chainer
+===============================================================================================
+
+.. raw:: html
+   :file: html/semaseg_dataset_chainer.html
+

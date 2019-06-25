@@ -102,12 +102,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../21_30/21-30.html">21-30</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../31_40/31-40.html">31-40</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../41_50/41_50.html">41_50</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../51_60/51-60.html">51-60</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../61_70/61-70.html">61-70</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">71-80</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../81_90/81-90.html">81-90</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../91_00/91-00.html">91-00</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../face_to_smile/face_to_smile.html">face to smile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
@@ -173,6 +175,11 @@
             
   <div class="section" id="id1">
 <h1>71-80<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>マスキング</p>
+<p><strong>imori.jpg</strong> に対してHSVを用いて青色の箇所のみが黒くなるようにマスキングせよ。</p>
+<p>このように白黒のバイナリ画像を用いて黒部分に対応する元画像の画素を黒に変更する操作をマスキングという。</p>
+<p>青色箇所の抽出はHSVで180&lt;=H&lt;=260となる位置が1となるような二値画像を作成し、それの0と1を反転したものと元画像との積をとればよい。</p>
+<p>これによりある程度のイモリの部分の抽出ができる。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_71.html">71_80 answer_71</a></li>

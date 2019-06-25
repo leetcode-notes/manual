@@ -1,6 +1,48 @@
 Yolo
 =============================
 
+環境構築
+----------
+
+CUDA 10.0 インストール
+
+https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=7&target_type=exelocal
+
+Open CV 3.40
+
+https://opencv.org/
+
+C:\opencv\build\x64\vc14\bin
+    opencv_ffmpeg340_64.dll
+
+    opencv_world340.dll
+
+環境変数に追加
+
+C:\opencv\build\x64\vc14\bin
+
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\
+    bin
+
+    lib
+
+    include
+
+C:\Users\kaoz3chand\AppData\Local\Temp\CUDA\CUDAVisualStudioIntegration\extras\visual_studio_integration
+
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\BuildCustomizations
+
+
+cuDNN
+
+https://developer.nvidia.com/cudnn
+
+
+
+
+参考Link
+---------
+
 【Darknet】リアルタイムオブジェクト認識 YOLOをTensorflowで試す
 
 https://qiita.com/tttttt/items/a33bc8297c9a03b38c74
@@ -16,18 +58,3 @@ https://github.com/PacktPublishing/YOLO-v3---Robust-Deep-Learning-Object-Detecti
 YOLOv3をCPU環境でpython使ってリアルタイム画像認識を動かしてみた -
 
 https://qiita.com/daiarg/items/03c55c82fdc6e623bf07
-
-環境構築
-----------
-
-CUDA 10.0 インストール
-
-https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=7&target_type=exelocal
-
-Open CV 3.40
-
-https://opencv.org/
-
-cuDNN
-
-https://developer.nvidia.com/cudnn

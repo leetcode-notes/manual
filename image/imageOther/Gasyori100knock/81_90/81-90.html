@@ -102,12 +102,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../21_30/21-30.html">21-30</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../31_40/31-40.html">31-40</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../41_50/41_50.html">41_50</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../51_60/51-60.html">51-60</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../61_70/61-70.html">61-70</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../71_80/71-80.html">71-80</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">81-90</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../91_00/91-00.html">91-00</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../face_to_smile/face_to_smile.html">face to smile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../musicgenre/musicgenre.html">music jenre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../openCV/openCV.html">openCV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scikit-image/scikit-image.html">scikit-image</a></li>
@@ -175,6 +177,20 @@
 <h1>81-90<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="hessian">
 <h2>Hessianのコーナー検出<a class="headerlink" href="#hessian" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コーナー検出とはエッジにおける角の点を検出することである。</p>
+<p>コーナーは曲率が大きくなる点であり、次式のガウス曲率において、</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>ガウス曲率 K = det(H) / (1 + Ix^2 + Iy^2)^2
+
+det(H) = Ixx Iyy - IxIy^2
+H ... ヘシアン行列。画像の二次微分(グレースケール画像などに対して、Sobelフィルタを掛けて求められる)。画像上の一点に対して、次式で定義される。
+Ix ... x方向のsobelフィルタを掛けたもの。 Iy ... y方向のsobelフィルタ
+H = [ Ix^2  IxIy]
+      IxIy  Iy^2
+</pre></div>
+</div>
+<p>ヘシアンのコーナー検出では、det(H)が極大点をコーナーとみなす。
+極大点は注目画素と8近傍を比較して、注目画素の値が最大であれば極大点として扱う。</p>
+<p>解答ではdet(H)が極大点かつ、max(H)*0.1以上である点をコーナーとしている。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_81.html">81_90 answer_81</a></li>
@@ -183,6 +199,20 @@
 </div>
 <div class="section" id="harris">
 <h2>Harrisのコーナー検出<a class="headerlink" href="#harris" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Harrisのコーナー検出のアルゴリズムは、</p>
+<ol class="arabic simple">
+<li><p>画像をグレースケール化。</p></li>
+<li><p>Sobelフィルタにより、ヘシアン行列を求める。</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Ix^2, Iy^2, IxIyにそれぞれガウシアンフィルターをかける。</p></li>
+<li><p>各ピクセル毎に、R = det(H) - k (trace(H))^2 を計算する。 (kは実験的に0.04 - 0.16らへんが良いとされる)</p></li>
+<li><p>R &gt;= max(R) * th を満たすピクセルがコーナーとなる。  (thは0.1となることが多い)</p></li>
+</ol>
+<ul class="simple">
+<li><p>ガウシアンフィルター(k=3, sigma=3)</p></li>
+<li><p>k = 0.04, th = 0.1</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_82.html">81_90 answer_82</a></li>
@@ -218,11 +248,27 @@
 <li class="toctree-l1"><a class="reference internal" href="code/answer_88.html">81_90 answer_88</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="k-means-step-2">
+<h2>K-means (Step.2) クラスタリング<a class="headerlink" href="#k-means-step-2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここではアルゴリズム4-5も実装して、クラスタリング</p>
+<p>ここで予測クラスが0,1となっているが、Q.85-87と違いラベルの順番はバラバラ
+なので、K-meansはあくまでカテゴリ別に分類する手法であり、それが具体的に何のクラスかまでは分からない。
+また、クラス数は予めこちらが知って置かなければいけない。</p>
+<p><a href="#id2"><span class="problematic" id="id3">**</span></a>K-meansクラスタリングでは最初に割り当てるラベルの状態によって、最後の出力が大きく左右される**ので注意が必要
+また、データ数が少ないと失敗しやすい。これはデータ数が少ないことで、真のデータの分布をサンプリングしにくいことが原因である。
+つまり、データ数が多いほどデータの分布が精度良くえられることによる。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_89.html">81_90 answer_89</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="k-means-step-3">
+<h2>K-means (Step.3) 初期ラベルの変更<a class="headerlink" href="#k-means-step-3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>K-meansを用いて*train_&#64;&#64;&#64;.jpg*の8枚をクラスタリング</p>
+<p>ここでは、np.random.seed()の値やラベルを割り当てる閾値 np.random.random() &lt; thのthを変更して、K-meansでクラスを完璧に予測せよ。
+<a href="#id4"><span class="problematic" id="id5">*</span></a>train_&#64;&#64;&#64;.jpg*はQ.89より画像数が２倍になっているので、クラスタリングしやすくなっている。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="code/answer_90.html">81_90 answer_90</a></li>

@@ -1,0 +1,6 @@
+jupyter jupyter_cheatseat
+===============================================================================================
+
+.. raw:: html
+   :file: html/jupyter_cheatseat.html
+

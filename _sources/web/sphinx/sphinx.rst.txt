@@ -18,12 +18,6 @@ pip install nbsphinx
 
 pip install sphinx-markdown-tables
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   jupyter
-
 CSVの表示が可能
 +++++++++++++++++++++++++
 
