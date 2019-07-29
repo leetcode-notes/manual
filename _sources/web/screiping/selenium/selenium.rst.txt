@@ -11,3 +11,4 @@ https://www.seleniumqref.com/api/webdriver_gyaku.html
 
 https://kurozumi.github.io/selenium-python/navigating.html
 
+https://qiita.com/ryuta69/items/c84501993635c72540a7
