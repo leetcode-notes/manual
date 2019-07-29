@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>landscape LowPolyLandscapeGenerator &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="unity shader" href="../unity.html"/>
+        <link rel="next" title="landscape MeshNormalDisplayer" href="MeshNormalDisplayer.html"/>
+        <link rel="prev" title="landscape FallOffType" href="FallOffType.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../CG.html">CG</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../aftereffects/aftereffects.html">AfterEffectsTool manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../csharp/csharp.html">Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../shaderforge/shaderforge.html">shaderforge</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../unity.html">unity shader</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="AbstractLandscapeMeshGenerator.html">landscape AbstractLandscapeMeshGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AbstractMeshGenerator.html">landscape AbstractMeshGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FallOffType.html">landscape FallOffType</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">landscape LowPolyLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshNormalDisplayer.html">landscape MeshNormalDisplayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshTangentDisplayer.html">landscape MeshTangentDisplayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NoiseGenerator.html">landscape NoiseGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProcGenChunk.html">landscape ProcGenChunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProceduralInfiniteLandscapeGenerator.html">landscape ProceduralInfiniteLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProceduralLandscapeGenerator.html">landscape ProceduralLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TerrainGenerator2D.html">landscape TerrainGenerator2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../CG.html">CG</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../unity.html">unity shader</a> &raquo;</li>
+      
+    <li>landscape LowPolyLandscapeGenerator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CG/shader/unity/landscape/LowPolyLandscapeGenerator.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="landscape-lowpolylandscapegenerator">
+<h1>landscape LowPolyLandscapeGenerator<a class="headerlink" href="#landscape-lowpolylandscapegenerator" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using UnityEngine;
+using System.Collections;
+
+public class LowPolyLandscapeGenerator : AbstractLandscapeMeshGenerator 
+{
+	protected override void SetMeshNums ()
+	{
+		numTriangles = 6 * xResolution * zResolution; //This is 3 ints per geometric triangle * 2 geometric triangles per square * the number of triangles needed in the x direction * in the z direction
+		numVertices = numTriangles; //3 vertices per geometric triangle.
+	}
+
+	protected override void SetVertices ()
+	{
+		NoiseGenerator noise = new NoiseGenerator (octaves, lacunarity, gain, perlinScale);
+
+		int xx = 0;
+		int zz = 0;
+		bool isBottomTriangle = false;
+		for (int vertexIndex = 0; vertexIndex &lt; numVertices; vertexIndex++)
+		{
+			//Increment xx and zz appropriately
+
+			//Check if it&#39;s a bottom or top of a triangle
+			if (IsNewRow (vertexIndex))
+			{
+				isBottomTriangle = !isBottomTriangle;
+			}
+
+			//increase xx by one when it&#39;s a new position
+			if (!IsNewRow (vertexIndex))
+			{
+				if (isBottomTriangle)
+				{
+					if (vertexIndex % 3 == 1)
+					{
+						xx++;
+					}
+				}
+				else
+				{
+					if (vertexIndex % 3 == 2)
+					{
+						xx++;
+					}
+				}
+			}
+
+			//increase zz by one when it&#39;s a new row. Reset xx to zero.
+			if (IsNewRow (vertexIndex))
+			{
+				//reset xx on new row
+				xx = 0;
+
+				//actually go up a level
+				if (!isBottomTriangle)
+				{
+					zz++;
+				}
+			}
+
+			//set vertex
+			float xVal = ((float)xx / xResolution) * meshScale;
+			float zVal = ((float)zz / zResolution) * meshScale; 
+
+			float y = yScale * noise.GetFractalNoise (xVal, zVal);
+			y = FallOff ((float)xx, y, (float)zz);
+			vertices.Add (new Vector3 (xVal, y, zVal));
+		}
+
+	}
+
+	private bool IsNewRow(int vertexIndex)
+	{
+		return vertexIndex % (3 * xResolution) == 0;
+	}
+
+	protected override void SetTriangles ()
+	{
+		int triCount = 0;
+		for (int z = 0; z &lt; zResolution; z++) 
+		{
+			for (int x = 0; x &lt; xResolution; x++) 
+			{
+				triangles.Add (triCount);
+				triangles.Add (triCount + 3*xResolution);
+				triangles.Add (triCount + 1);
+
+				triangles.Add (triCount + 2);
+				triangles.Add (triCount + 3*xResolution + 1);
+				triangles.Add (triCount + 3*xResolution + 2);
+
+				triCount += 3;
+			}
+			triCount += 3 * xResolution;
+		}
+	}
+
+	protected override void SetUVs (){}
+	protected override void SetNormals ()	{	}
+	protected override void SetTangents ()	{	}
+	protected override void SetVertexColours ()	{}
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MeshNormalDisplayer.html" class="btn btn-neutral float-right" title="landscape MeshNormalDisplayer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FallOffType.html" class="btn btn-neutral" title="landscape FallOffType" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

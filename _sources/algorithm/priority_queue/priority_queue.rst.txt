@@ -1,0 +1,17 @@
+priority queue
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+https://img.atcoder.jp/abc127/editorial.pdf
+
+https://www.youtube.com/watch?v=SS6kW-d-rJ0
+
+https://ufcpp.net/study/algorithm/col_heap.html
+
+

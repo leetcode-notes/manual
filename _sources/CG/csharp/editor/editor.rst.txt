@@ -1,0 +1,12 @@
+editor 拡張
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+https://qiita.com/shirasaya0201/items/ee32f35ad3caac428368
+

@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mobile CrossPlatformInputInitialize &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="editor 拡張" href="../editor.html"/>
+        <link rel="next" title="particle CheckPropertyPaths" href="../particle/CheckPropertyPaths .html"/>
+        <link rel="prev" title="editor windowexample" href="../GUI/windowexample.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../CG.html">CG</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../aftereffects/aftereffects.html">AfterEffectsTool manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../csharp.html">Unity</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../editor.html">editor 拡張</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../9-4_hp_save/Character.html">9-4_hp_save Character</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-4_hp_save/CharacterInspector.html">9-4_hp_save CharacterInspector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-5_multipleedit/Character.html">9-5_multipleedit Character</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-5_multipleedit/CharacterInspector.html">9-5_multipleedit CharacterInspector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../GUI/GUI.html">editor GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../GUI/windowexample.html">editor windowexample</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mobile CrossPlatformInputInitialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/CheckPropertyPaths .html">particle CheckPropertyPaths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/CheckPropertyPaths2 .html">particle CheckPropertyPaths2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/SerializedProperty.html">particle SerializedProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/SerializedProperty_param.html">particle SerializedProperty_param</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/effectchecker.html">particle effectchecker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../particle/savetxt.html">particle savetxt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scene_button/scene_button.html">scene_button scene_button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scriptableobject/ExampleAsset.html">scriptableobject ExampleAsset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/TimeControl.html">timeline TimeControl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/TimeControl2.html">timeline TimeControl2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/timeline.html">timeline timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../CG.html">CG</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">Unity</a> &raquo;</li>
+      
+        <li><a href="../editor.html">editor 拡張</a> &raquo;</li>
+      
+    <li>mobile CrossPlatformInputInitialize</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CG/csharp/editor/mobile/CrossPlatformInputInitialize.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mobile-crossplatforminputinitialize">
+<h1>mobile CrossPlatformInputInitialize<a class="headerlink" href="#mobile-crossplatforminputinitialize" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using System;
+using System.Collections.Generic;
+using UnityEditor;
+
+namespace UnityStandardAssets.CrossPlatformInput.Inspector
+{
+    [InitializeOnLoad]
+    public class CrossPlatformInitialize
+    {
+        // Custom compiler defines:
+        //
+        // CROSS_PLATFORM_INPUT : denotes that cross platform input package exists, so that other packages can use their CrossPlatformInput functions.
+        // EDITOR_MOBILE_INPUT : denotes that mobile input should be used in editor, if a mobile build target is selected. (i.e. using Unity Remote app).
+        // MOBILE_INPUT : denotes that mobile input should be used right now!
+
+        static CrossPlatformInitialize()
+        {
+            var defines = GetDefinesList(buildTargetGroups[0]);
+            if (!defines.Contains(&quot;CROSS_PLATFORM_INPUT&quot;))
+            {
+                SetEnabled(&quot;CROSS_PLATFORM_INPUT&quot;, true, false);
+                SetEnabled(&quot;MOBILE_INPUT&quot;, true, true);
+            }
+        }
+
+
+        [MenuItem(&quot;Mobile Input/Enable&quot;)]
+        private static void Enable()
+        {
+            SetEnabled(&quot;MOBILE_INPUT&quot;, true, true);
+            switch (EditorUserBuildSettings.activeBuildTarget)
+            {
+                case BuildTarget.Android:
+                case BuildTarget.iOS:
+                case BuildTarget.PSM:
+                case BuildTarget.Tizen:
+                case BuildTarget.WSAPlayer:
+                    EditorUtility.DisplayDialog(&quot;Mobile Input&quot;,
+                                                &quot;You have enabled Mobile Input. You&#39;ll need to use the Unity Remote app on a connected device to control your game in the Editor.&quot;,
+                                                &quot;OK&quot;);
+                    break;
+
+                default:
+                    EditorUtility.DisplayDialog(&quot;Mobile Input&quot;,
+                                                &quot;You have enabled Mobile Input, but you have a non-mobile build target selected in your build settings. The mobile control rigs won&#39;t be active or visible on-screen until you switch the build target to a mobile platform.&quot;,
+                                                &quot;OK&quot;);
+                    break;
+            }
+        }
+
+
+        [MenuItem(&quot;Mobile Input/Enable&quot;, true)]
+        private static bool EnableValidate()
+        {
+            var defines = GetDefinesList(mobileBuildTargetGroups[0]);
+            return !defines.Contains(&quot;MOBILE_INPUT&quot;);
+        }
+
+
+        [MenuItem(&quot;Mobile Input/Disable&quot;)]
+        private static void Disable()
+        {
+            SetEnabled(&quot;MOBILE_INPUT&quot;, false, true);
+            switch (EditorUserBuildSettings.activeBuildTarget)
+            {
+                case BuildTarget.Android:
+                case BuildTarget.iOS:
+                    EditorUtility.DisplayDialog(&quot;Mobile Input&quot;,
+                                                &quot;You have disabled Mobile Input. Mobile control rigs won&#39;t be visible, and the Cross Platform Input functions will always return standalone controls.&quot;,
+                                                &quot;OK&quot;);
+                    break;
+            }
+        }
+
+
+        [MenuItem(&quot;Mobile Input/Disable&quot;, true)]
+        private static bool DisableValidate()
+        {
+            var defines = GetDefinesList(mobileBuildTargetGroups[0]);
+            return defines.Contains(&quot;MOBILE_INPUT&quot;);
+        }
+
+
+        private static BuildTargetGroup[] buildTargetGroups = new BuildTargetGroup[]
+            {
+                BuildTargetGroup.Standalone,
+                BuildTargetGroup.Android,
+                BuildTargetGroup.iOS,
+                BuildTargetGroup.WSA
+            };
+
+        private static BuildTargetGroup[] mobileBuildTargetGroups = new BuildTargetGroup[]
+            {
+                BuildTargetGroup.Android,
+                BuildTargetGroup.iOS,
+                BuildTargetGroup.PSM,
+                BuildTargetGroup.SamsungTV,
+                BuildTargetGroup.Tizen,
+                BuildTargetGroup.WSA
+            };
+
+
+        private static void SetEnabled(string defineName, bool enable, bool mobile)
+        {
+            //Debug.Log(&quot;setting &quot;+defineName+&quot; to &quot;+enable);
+            foreach (var group in mobile ? mobileBuildTargetGroups : buildTargetGroups)
+            {
+                var defines = GetDefinesList(group);
+                if (enable)
+                {
+                    if (defines.Contains(defineName))
+                    {
+                        return;
+                    }
+                    defines.Add(defineName);
+                }
+                else
+                {
+                    if (!defines.Contains(defineName))
+                    {
+                        return;
+                    }
+                    while (defines.Contains(defineName))
+                    {
+                        defines.Remove(defineName);
+                    }
+                }
+                string definesString = string.Join(&quot;;&quot;, defines.ToArray());
+                PlayerSettings.SetScriptingDefineSymbolsForGroup(group, definesString);
+            }
+        }
+
+
+        private static List&lt;string&gt; GetDefinesList(BuildTargetGroup group)
+        {
+            return new List&lt;string&gt;(PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(&#39;;&#39;));
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../particle/CheckPropertyPaths .html" class="btn btn-neutral float-right" title="particle CheckPropertyPaths" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../GUI/windowexample.html" class="btn btn-neutral" title="editor windowexample" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

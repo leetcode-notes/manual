@@ -1,0 +1,5 @@
+particle CheckPropertyPaths 
+---------------------------------------------------------------------------
+
+.. literalinclude:: CheckPropertyPaths .cs
+

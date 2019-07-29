@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>landscape AbstractMeshGenerator &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="unity shader" href="../unity.html"/>
+        <link rel="next" title="landscape FallOffType" href="FallOffType.html"/>
+        <link rel="prev" title="landscape AbstractLandscapeMeshGenerator" href="AbstractLandscapeMeshGenerator.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../CG.html">CG</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../aftereffects/aftereffects.html">AfterEffectsTool manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../csharp/csharp.html">Unity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../shaderforge/shaderforge.html">shaderforge</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../unity.html">unity shader</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="AbstractLandscapeMeshGenerator.html">landscape AbstractLandscapeMeshGenerator</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">landscape AbstractMeshGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FallOffType.html">landscape FallOffType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LowPolyLandscapeGenerator.html">landscape LowPolyLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshNormalDisplayer.html">landscape MeshNormalDisplayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MeshTangentDisplayer.html">landscape MeshTangentDisplayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NoiseGenerator.html">landscape NoiseGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProcGenChunk.html">landscape ProcGenChunk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProceduralInfiniteLandscapeGenerator.html">landscape ProceduralInfiniteLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ProceduralLandscapeGenerator.html">landscape ProceduralLandscapeGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TerrainGenerator2D.html">landscape TerrainGenerator2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../CG.html">CG</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../unity.html">unity shader</a> &raquo;</li>
+      
+    <li>landscape AbstractMeshGenerator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CG/shader/unity/landscape/AbstractMeshGenerator.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="landscape-abstractmeshgenerator">
+<h1>landscape AbstractMeshGenerator<a class="headerlink" href="#landscape-abstractmeshgenerator" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+[RequireComponent(typeof(MeshFilter)), RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshCollider))]
+//[ExecuteInEditMode]
+public abstract class AbstractMeshGenerator : MonoBehaviour 
+{
+	[SerializeField] protected Material material;
+
+	protected List&lt;Vector3&gt; vertices;
+	protected List&lt;int&gt; triangles;
+
+	protected List&lt;Vector3&gt; normals;
+	protected List&lt;Vector4&gt; tangents;
+	protected List&lt;Vector2&gt; uvs;
+	protected List&lt;Color32&gt; vertexColours;
+
+	protected int numVertices;
+	protected int numTriangles;
+
+	private MeshFilter meshFilter;
+	protected MeshRenderer meshRenderer;
+	private MeshCollider meshCollider;
+	private Mesh mesh;
+
+	//void Update()
+	void Start()
+	{
+		meshFilter = GetComponent&lt;MeshFilter&gt; ();
+		meshRenderer = GetComponent&lt;MeshRenderer&gt; ();
+		meshCollider = GetComponent&lt;MeshCollider&gt; ();
+
+		meshRenderer.material = material;
+
+		//initialise
+		InitMesh();
+		SetMeshNums ();
+
+		//create the mesh
+		CreateMesh();
+	}
+
+	protected abstract void SetMeshNums ();
+
+	private bool ValidateMesh()
+	{
+		//build a string containing errors
+		string errorStr = &quot;&quot;;
+
+		//check there are the correct number of triangles and vertices
+		errorStr += vertices.Count == numVertices ? &quot;&quot; : &quot;Should be &quot; + numVertices + &quot; vertices, but there are &quot; + vertices.Count + &quot;. &quot;;
+		errorStr += triangles.Count == numTriangles ? &quot;&quot; : &quot;Should be &quot; + numTriangles + &quot; triangles, but there are &quot; + triangles.Count + &quot;. &quot;;
+
+		//Check there are the correct number of normals - there should be the same number of normals as there are vertices. If we&#39;re not manually calculating normals, there will be 0.
+		//Similarly for tangents, uvs, vertexColours
+		errorStr += (normals.Count == numVertices || normals.Count == 0) ? &quot;&quot; : &quot;Should be &quot; + numVertices + &quot; normals, but there are &quot; + normals.Count + &quot;. &quot;;
+		errorStr += (tangents.Count == numVertices || tangents.Count == 0) ? &quot;&quot; : &quot;Should be &quot; + numVertices + &quot; tangents, but there are &quot; + tangents.Count + &quot;. &quot;;
+		errorStr += (uvs.Count == numVertices || uvs.Count == 0) ? &quot;&quot; : &quot;Should be &quot; + numVertices + &quot; uvs, but there are &quot; + uvs.Count + &quot;. &quot;;
+		errorStr += (vertexColours.Count == numVertices || vertexColours.Count == 0) ? &quot;&quot; : &quot;Should be &quot; + numVertices + &quot; vertexColours, but there are &quot; + vertexColours.Count + &quot;. &quot;;
+
+		bool isValid = string.IsNullOrEmpty (errorStr);
+		if (!isValid)
+		{
+			Debug.LogError (&quot;Not drawing mesh. &quot; + errorStr);
+		}
+
+		return isValid;
+	}
+
+	private void InitMesh()
+	{
+		vertices = new List&lt;Vector3&gt;();
+		triangles = new List&lt;int&gt; ();
+
+		//optional
+		normals = new List&lt;Vector3&gt; ();
+		tangents = new List&lt;Vector4&gt; ();
+		uvs = new List&lt;Vector2&gt; ();
+		vertexColours = new List&lt;Color32&gt; ();
+	}
+
+	private void CreateMesh()
+	{
+		mesh = new Mesh ();
+
+		SetVertices ();
+		SetTriangles ();
+
+		SetNormals ();
+		SetUVs ();
+		SetTangents ();
+		SetVertexColours ();
+
+		if (ValidateMesh ())
+		{
+			//This should always be done vertices first, triangles second - Unity requires this.
+			mesh.SetVertices (vertices);
+			mesh.SetTriangles (triangles, 0);
+
+			if (normals.Count == 0)
+			{
+				mesh.RecalculateNormals ();
+				normals.AddRange (mesh.normals);
+			}
+
+			mesh.SetNormals (normals);
+			mesh.SetUVs (0, uvs);
+			mesh.SetTangents (tangents);
+			mesh.SetColors (vertexColours);
+
+			meshFilter.mesh = mesh;
+			meshCollider.sharedMesh = mesh;
+		}
+	}
+
+	protected abstract void SetVertices();
+	protected abstract void SetTriangles();
+
+	protected abstract void SetNormals();
+	protected abstract void SetTangents();
+	protected abstract void SetUVs();
+	protected abstract void SetVertexColours();
+
+	protected void SetGeneralNormals()
+	{
+		int numGeometricTriangles = numTriangles / 3;
+		Vector3[] norms = new Vector3[numVertices];
+		int index = 0;
+		for (int i=0; i&lt;numGeometricTriangles; i++)
+		{
+			//the triangle ints that make up a geometric triangle 
+			int triA = triangles [index];
+			int triB = triangles [index + 1];
+			int triC = triangles [index + 2];
+
+			//directions from index-th vertex that make up the triangle
+			Vector3 dirA = vertices[triB] - vertices[triA];
+			Vector3 dirB = vertices[triC] - vertices[triA];
+
+			//Normal needs to come out of the plane - use the left hand rule to work out the order of the cross product
+			Vector3 normal = Vector3.Cross(dirA, dirB);
+
+			//add the normals for each vertex cumulatively so that shared vertices are added together.
+			norms[triA] += normal;
+			norms[triB] += normal;
+			norms[triC] += normal;
+
+			index += 3;
+		}
+
+		//go through the vertices and normalise the norms (as they are sums)
+		for (int i=0; i&lt;numVertices; i++)
+		{
+			normals.Add (norms [i].normalized);
+		}
+	}
+
+	protected void SetGeneralTangents()
+	{
+		if (uvs.Count == 0 || normals.Count == 0)
+		{
+			print (&quot;Set UVs and Normals before adding tangents&quot;);
+			return;
+		}
+
+		int numGeometricTriangles = numTriangles / 3;
+		Vector3[] tans = new Vector3[numVertices];
+		Vector3[] bitans = new Vector3[numVertices];
+		int index = 0;
+		for (int i = 0; i &lt; numGeometricTriangles; i++) 
+		{
+			//the triangle ints that make up a geometric triangle 
+			int triA = triangles [index];
+			int triB = triangles [index + 1];
+			int triC = triangles [index + 2];
+
+			//the corresponding UVs
+			Vector2 uvA = uvs[triA];
+			Vector2 uvB = uvs[triB];
+			Vector2 uvC = uvs[triC];
+
+			//directions from index-th vertex that make up the triangle
+			Vector3 dirA = vertices[triB] - vertices[triA];
+			Vector3 dirB = vertices[triC] - vertices[triA];
+
+			//from matrix equation
+			Vector2 uvDiffA = new Vector2 (uvB.x - uvA.x, uvC.x - uvA.x);
+			Vector2 uvDiffB = new Vector2 (uvB.y - uvA.y, uvC.y - uvA.y);
+
+			float determinant = 1f / (uvDiffA.x * uvDiffB.y - uvDiffA.y * uvDiffB.x);
+			Vector3 sDir = determinant * (new Vector3 (uvDiffB.y * dirA.x - uvDiffB.x * dirB.x, uvDiffB.y * dirA.y - uvDiffB.x * dirB.y, uvDiffB.y * dirA.z - uvDiffB.x * dirB.z));
+			Vector3 tDir = determinant * (new Vector3 (uvDiffA.x * dirB.x - uvDiffA.y * dirA.x, uvDiffA.x * dirB.y - uvDiffA.y * dirA.y, uvDiffA.x * dirB.z - uvDiffA.y * dirA.z));
+
+			//add the tangents for each vertex cumulatively so that all contributions are added
+			tans[triA] += sDir;
+			tans[triB] += sDir;
+			tans[triC] += sDir;
+
+			//and for bitans
+			bitans[triA] += tDir;
+			bitans[triB] += tDir;
+			bitans[triC] += tDir;
+
+			index += 3;
+		}
+
+		//go through the vertices and normalise the tangents (as they are sums)
+		for (int i=0; i&lt;numVertices; i++)
+		{
+			Vector3 normal = normals [i];
+			Vector3 tan = tans [i];
+
+			//Use the Gram-Schmidt algorithm to make normal and tan orthogonal, then normalise
+			Vector3 tangent3 = (tan - Vector3.Dot(normal, tan) * normal).normalized;
+			Vector4 tangent = tangent3;
+
+			//calculate handedness
+			tangent.w = Vector3.Dot(Vector3.Cross(normal, tan), bitans[i]) &lt; 0f ? -1f : 1f;
+			tangents.Add (tangent);
+		}
+	}
+
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="FallOffType.html" class="btn btn-neutral float-right" title="landscape FallOffType" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="AbstractLandscapeMeshGenerator.html" class="btn btn-neutral" title="landscape AbstractLandscapeMeshGenerator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

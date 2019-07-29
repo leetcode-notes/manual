@@ -1,0 +1,10 @@
+HLSL
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+https://ja.wikipedia.org/wiki/High_Level_Shading_Language

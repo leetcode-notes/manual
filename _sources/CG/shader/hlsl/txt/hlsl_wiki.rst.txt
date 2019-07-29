@@ -1,0 +1,337 @@
+Wiki
+=============================
+
+High Level Shading Language（ハイレベル シェーディング ランゲージ、略称: HLSL）はマイクロソフトによって開発された、Direct3D (DirectX) で使われるプログラマブルシェーダーのためのプロプライエタリなシェーディング言語である。かつては High Level Shader Language という呼び方もされていた[1]。ただしMSDNの日本語版では、Direct3D 11がリリースされた後でも上位レベル シェーダー言語（じょういれべるシェーダーげんご）という訳語を使用している[2] [3]。
+
+HLSLはOpenGLで使われるシェーディング言語であるGLSLと（機能的には）類似の物である。また、NVIDIAと協力して開発されたことから、言語文法がCg（C for Graphics）言語に非常によく似ている。
+
+
+目次
+1	開発経緯
+2	プログラマブルパイプラインステージ
+3	言語機能
+4	コード例
+5	対応環境
+6	エフェクト
+7	WPFエフェクト
+8	Direct2Dエフェクト
+9	シェーダーモデル
+9.1	DirectXバージョンと各シェーダーステージ
+9.2	ピクセルシェーダーの比較
+9.3	頂点シェーダーの比較
+9.4	対応ハードウェアの概略
+9.4.1	Shader Model 1.x
+9.4.2	Shader Model 2.0
+9.4.3	Shader Model 3.0
+9.4.4	Shader Model 4.x
+9.4.5	Shader Model 5.0
+9.4.6	Shader Model 6.0
+10	関連項目
+11	脚注
+12	外部リンク
+開発経緯
+Direct3D 7まではグラフィックスカードに実装された固定パイプラインおよびハードウェア機能を駆使して3Dグラフィックスシーンを構築していたが、グラフィックス表現の柔軟性を向上させるべく、Direct3D 8ではプログラマブルシェーダーが搭載された[4]。これによって、グラフィックスアプリケーション開発者がグラフィックス描画アルゴリズムをソフトウェアによってカスタマイズすることが可能となった。しかし、Direct3D 8で使用できるシェーダー言語はアセンブラ（低級言語）であったため、開発効率やプログラムコードの再利用性に限界があった。それを解消するべく、C言語風の宣言文や制御文などの記法を可能とした高級言語HLSLが開発されることとなった。HLSLはDirect3D 9で初めて導入され、その後もDirect3Dとともに機能拡張が続けられている。
+
+GDC 2016ではDirectX 12の今後の発展、そして新たな次期DirectXとシェーダーモデル6の開発に関して言及があり、HLSL言語仕様にも大きな機能追加が予定されていることが発表された[5]。シェーダーモデル6.0ではWaveと呼ばれるSIMT（英語版）スレッドグループの概念と各グループ内でのデータ交換のための組み込み命令が導入され、NVIDIA GPUのWarpおよびAMD GPUのWavefrontを標準化することが予定されている[6]。
+
+プログラマブルパイプラインステージ
+HLSLによってプログラム可能なグラフィックスパイプラインステージは、対応するDirect3Dのバージョンおよびシェーダーモデル（後述）によって異なる。
+
+Direct3D 9の場合（シェーダーモデル1.x-3.0）は、頂点シェーダー（バーテックスシェーダー）およびピクセルシェーダー（OpenGLにおけるフラグメントシェーダーに相当）の2つである。
+Direct3D 10.xの場合（シェーダーモデル4.x）は、頂点シェーダー、ジオメトリシェーダー（OpenGLではプリミティブシェーダーとも呼ばれる）、そしてピクセルシェーダーの3つである。
+Direct3D 11.x/12の場合（シェーダーモデル5.x）は、頂点シェーダー、ハルシェーダー（OpenGLにおけるテッセレーション制御シェーダーに相当）、ドメインシェーダー（OpenGLにおけるテッセレーション評価シェーダーに相当）、ジオメトリシェーダー、ピクセルシェーダー、そしてコンピュートシェーダー（計算シェーダー、演算シェーダー）の6つである。ただしコンピュートシェーダーだけはグラフィックスパイプラインとは独立して動作させることができる。
+頂点シェーダーはアプリケーションによって提供（入力）される頂点それぞれについて実行され、主にオブジェクト空間から視空間への頂点座標変換やテクスチャ座標の生成、また頂点の接線や従法線や法線ベクトルのような光線の係数の計算などの処理を担当する。頂点シェーダーを通して頂点のグループ (三角形であれば通常は3個) が入力された時、出力座標はその領域内で画面上のピクセルを決めるために補間される。この処理はラスタライゼーションとして知られている。これらのピクセルそれぞれがピクセルシェーダーを通ることで、結果としてスクリーン上の各点の色が計算される。
+
+また、Direct3D 10/11/12対応ハードウェアにおいてDirect3D 10/11/12インターフェイスを使うアプリケーションは、頂点シェーダーステージの後にジオメトリシェーダーを指定することもできる。ジオメトリシェーダーはラスタライズの前にプリミティブの増減や種類の変更を行なうことができる。
+
+なお、HLSLで使用可能なパーリンノイズ生成関数であるnoise()は、テクスチャシェーダーと呼ばれる特殊なシェーダーステージでのみ利用が可能となっている。
+
+言語機能
+HLSLの基本的な文法はC/C++に準ずるが、グラフィックスプログラムを記述するのに適した専用のベクトル・行列型や関数を備えている。数学関数の中にはC/C++標準ライブラリと同様のものも含まれる。また、Direct3D 10ではAPIの大幅な設計変更が行なわれたこともあり、Direct3D 9用のHLSLと比較して、Direct3D 10以降用のHLSLではオブジェクト指向に基づいた言語仕様の再設計がなされ、多数の仕様変更が加えられている[7]。
+
+Direct3D 10以降ではHLSLにてクラスを定義し、C++のようにデータ（メンバー変数）と振る舞い（メンバー関数）を関連付けることが可能だが、アクセス指定子によるカプセル化や継承および仮想関数といった機能は備えていない。
+
+Direct3D 11ではシェーダーの組み合わせ爆発問題を解消するべく、HLSLにてインターフェイスの定義と実装によるポリモーフィズムを疑似的に実現する「動的シェーダーリンク（Dynamic Shader Linkage）」と呼ばれる機能が追加された[8]。
+
+コード例
+以下にDirect3D 10/11向けHLSLを用いた、単純なHalf Lambert照明モデルおよびPhong照明モデル（Blinn-Phong）の頂点シェーダーおよびピクセルシェーダーのプログラムを示す。なお分岐によって照明モデルを切り替えているが、これはいわゆるウーバーシェーダー（uber-shader）なので、実行速度効率などは考慮していないことに注意されたい。
+
+// Shader Constants.
+matrix TrWorldViewProj;
+matrix TrWorld;
+float4 LightPosition;
+float3 EyePosition;
+float4 DiffuseColor;
+float4 SpecularColor;
+float SpecularPower;
+bool IsPhongModel;
+
+struct BasicVSOutput
+{
+	float4 Pos : SV_POSITION;
+	float3 WPos : TEXCOORD1;
+	float3 WNormal : NORMAL0;
+};
+typedef BasicVSOutput BasicPSInput;
+
+// Vertex Shader Program.
+BasicVSOutput BasicVS(float3 pos : POSITION0, float3 normal : NORMAL0)
+{
+	BasicVSOutput output = (BasicVSOutput)0;
+	output.Pos = mul(float4(pos, 1), TrWorldViewProj);
+	output.WPos = mul(float4(pos, 1), TrWorld).xyz;
+	output.WNormal = mul(normal, (float3x3)TrWorld);
+	return output;
+}
+
+float4 CalcLambert(float3 light, float3 wnormal)
+{
+	// Half Lambert.
+
+	float lambert = dot(light, wnormal);
+	lambert = lambert * 0.5f + 0.5f;
+	lambert *= lambert;
+	return lambert * DiffuseColor;
+}
+
+float4 BasicLambert(BasicPSInput input)
+{
+	const float3 light = normalize(LightPosition.xyz - input.WPos);
+	const float3 normal = normalize(input.WNormal);
+	return CalcLambert(light, normal);
+}
+
+float4 BasicPhong(BasicPSInput input)
+{
+	// Phong lighting with specular.
+
+	const float3 eye = normalize(EyePosition - input.WPos);
+	const float3 light = normalize(LightPosition.xyz - input.WPos);
+	const float3 halfway = normalize(light + eye);
+	const float3 normal = normalize(input.WNormal);
+	const float specular = pow(max(dot(normal, halfway), 0.0), SpecularPower);
+	return CalcLambert(light, normal) + specular * SpecularColor;
+}
+
+// Pixel Shader Program.
+float4 BasicPS(BasicPSInput input) : SV_TARGET0
+{
+	if (IsPhongModel)
+	{
+		return BasicPhong(input);
+	}
+	else
+	{
+		return BasicLambert(input);
+	}
+}
+例のように、ピクセルシェーダーによってピクセル単位の正規化法線ベクトルを求めることにより、Direct3D 7以前の固定機能シェーダーでは実現が難しかったPer-Pixelライティングが容易に実装可能となっている。 もちろん、使用するシェーダーモデルおよび対応するハードウェアによっては、より複雑で長大なアルゴリズムを実装することもできる。リアルタイムグラフィックスゆえにハードウェア性能に応じたトレードオフにはなるが、単純な局所照明（ローカルイルミネーション）だけでなく、より厳密な物理ベースのレンダリング方程式（英語版）に基づいた、大域照明（グローバルイルミネーション）モデルをHLSLによるプログラマブルシェーダーで実装することで、より現実に近いリアルタイム3Dコンピューターグラフィックスを実現することも可能となる。さらに、Direct3D 11 (DirectCompute) ではコンピュートシェーダーを使って、GPUにグラフィックス用途以外の汎用計算を行なわせるGPGPUプログラムをHLSLで記述することも可能となる。
+
+なお、HLSLソースファイルには通例.hlsl拡張子が付けられ、ヘッダーファイルには.hlsli拡張子が付けられる[9]。
+
+対応環境
+HLSLプログラムは主にホストとなるC++アプリケーションプログラムコードからDirect3D APIを使って入力と出力を管理する必要があるので、単体で動作させることはできない。なお、単体のコンパイラはマイクロソフトから無償提供されているDirectX SDK（あるいはバージョン8.0以降のWindows SDK）に付属する。プロプライエタリなHLSLコンパイラfxc.exeによって出力されるのは、グラフィックスハードウェアのベンダーに依存しない共通バイトコードであるため、一度コンパイルしておけば異なるハードウェアであっても（コンパイル時に想定されていた機能を満たす限り）動作させることができる[10]。HLSLプログラムをサポートするのはDirect3D 9以降をサポートするシステムに限られるため、2015年1月現在ではWindows OS、Xbox 360およびXbox Oneが主な動作環境である。
+
+アプリケーションの実行時にHLSLソースコードをコンパイルしてバイトコードを生成する機能を組み込むためのD3DCompilerランタイムも提供されている[11]。
+
+他に、ゲームエンジンのUnityでは、Windows上でDirectComputeベース (DirectX 11ベース) のコンピュートシェーダーを使用することができるが、コンピュートシェーダーの記述にはCgではなくHLSLを用いる[12]。UnityはCg/HLSLからGLSLへのトランスレーションが可能なため、OpenGL 4.3やOpenGL ES 3.1のコンピュートシェーダーを用いる場合でもGLSLではなくHLSLを使用することが推奨されている。
+
+LLVM/ClangベースのHLSLコンパイラdxc.exeもGitHub上で開発が進められている[13]。こちらはDirectX Intermediate Language (DXIL) と呼ばれる別の中間言語コードを生成するが、これまでのfxc.exeが生成するバイトコードとは互換性がない。
+
+エフェクト
+HLSL自体は、シェーダー関数および各シェーダーステージのエントリーポイント（いわゆるメイン関数）を記述するために使われるが、この複数のシェーダーステージをまとめて管理・適用する「エフェクト」と呼ばれる仕組みも存在する。つまり、例えば2つの頂点シェーダーエントリーポイントVS1(), VS2()と2つのピクセルシェーダーエントリーポイントPS1(), PS2()を単一のHLSLソースプログラムファイル（通例.fx拡張子が付けられ、エフェクトファイルと呼ばれる）に記述し、さらにVS1+PS1, VS2+PS2, VS1+PS2, VS2+PS1といったシェーダーステージの組み合わせ（パス）のほか、各種レンダリングステートの設定をエフェクトファイル中に記述して関連付けることができる。エフェクトを扱うAPIはDirect3D 10のコアライブラリもしくはDirect3D 9/11のエクステンションライブラリ（D3DX）に用意されており、レンダリングパイプラインの管理をC++コードから分離することができる。
+
+WPFエフェクト
+Windowsデスクトップアプリケーションフレームワークの1つであるWPFでは、グラフィックスのレンダリングにDirect3Dが使用されているが、GUIウィジェットにブラー（ぼかし）やドロップシャドウといったエフェクト（フィルター）を適用することが可能となっている。さらにWPFではユーザープログラマーがHLSLで作成したピクセルシェーダーを使用してカスタムエフェクトを適用することもできる[14]。
+
+WPF 3.5まではシェーダーモデル2.0のピクセルシェーダーのみがサポートされていたが、WPF 4ではシェーダーモデル3.0のピクセルシェーダーも使用できるようになった[15] [16]。
+
+Direct2Dエフェクト
+DirectXファミリーの1つ、2次元コンピュータグラフィックスAPIであるDirect2Dでは、バージョン1.1にてエフェクト機能が実装されたが、HLSLによるカスタムエフェクトを作成・利用することも可能となっている[17]。
+
+シェーダーモデル
+「en:High-Level Shading Language」も参照
+Direct3Dプログラマブルシェーダーを実行するには、Direct3D 8以降に対応したハードウェアが必要となる。ただし、Direct3D 9までの場合、頂点シェーダーだけはソフトウェアすなわちCPUでエミュレートすることもできる（D3DCREATE_SOFTWARE_VERTEXPROCESSING）ため、固定機能ピクセルシェーダーと組み合わせることによりDirect3D 7以前の古いハードウェアでプログラマブルシェーダーを実行することも可能である。また、Direct3D 10.1以降では比較的高速なソフトウェアレンダリングエンジンであるWARPデバイスも実装されているため、GPUが対応していなくてもCPUにDirect3Dレンダリングを実行させることもできる。
+
+Direct3D対応ハードウェア（グラフィックスカード）の世代によって、GPU上にてハードウェアレベルで実行可能なシェーダープログラムの仕様（制約、機能など）が異なる。この仕様はシェーダーモデルと呼ばれ、新しい世代のシェーダーモデルをサポートするハードウェアは基本的に古い世代のシェーダーモデルもサポートする[18]が、ベンダーごとに拡張された2.0a/2.0bなどの例外も存在する。 なおHLSLがDirect3Dに搭載されたのはバージョン9以降だが、シェーダーモデル2.0以降でないとHLSLを使えないというようなことはなく、HLSLを使用してシェーダーモデル1.xレベルのプログラムを記述することも可能である。また、Direct3D 10では、アセンブリ言語によるシェーダープログラム開発が廃止され、シェーダーの記述にはHLSLのみが使用できるようになった[19]。
+
+シェーダーモデル3.0には頂点テクスチャフェッチ（Vertex Texture Fetch, VTF）と呼ばれる機能が存在するが、DirectX 9.0c世代で対応したのはNVIDIAのハードウェアのみで、ATIのハードウェアではサポートされなかった。逆に、浮動小数点バッファにおけるアンチエイリアス機能は、NVIDIAハードウェアではサポートされず、ATIハードウェアのみでの対応となっていた[20] [21]。他にも、（DirectX 11で標準化される前の）テッセレーション機能[22]がATIハードウェア上のみでサポートされる[23] [24] [25]など、シェーダーモデル3.0までは（たとえDirectX 9.0c対応を謳っていても）機能面において各社の足並みがそろわない状態にあり、これらの機能を利用するアプリケーション開発者は使用したい機能が実際にハードウェアでサポートされているかどうかをあらかじめDirect3DのCaps (Capabilities) 取得APIを使って一つ一つ調べなければならなかった。このようにベンダーごとに各機能の対応レベルがバラバラとなっていた悲惨な状況は、次のバージョンのDirect3D 10以降で要求仕様が厳格化されたことで、ある程度解消されることになる[26]。
+
+なお、Direct3D 10.1 APIでは4.xプロファイルのシェーダープログラムに加えてダウンレベルの2.0プロファイルが使用可能であり、Direct3D 11/12 APIでは5.xおよび4.xプロファイルに加えてダウンレベルの2.0プロファイルが使用可能だが、いずれも3.0プロファイルに関しては使用できない[27] [28] [29] [30]。
+
+DirectXバージョンと各シェーダーステージ
+以下の表はハードウェアが対応しているDirectXバージョンと、そのハードウェアがサポートする各シェーダーステージの最上位バージョン（プロファイル）間の関係を示している。 後述するように、実行可能なシェーダープログラムの最大命令数やレジスタ数、リソーススロット数などは新しいバージョンのほうが大きくなり、より柔軟で長大なプログラムを記述することができるようになる。
+
+DirectX Version	Pixel Shader	Vertex Shader	Geometry Shader	Hull Shader	Domain Shader	Compute Shader
+8.0	1.0, 1.1	1.0	-	-	-	-
+8.1	1.2, 1.3, 1.4	1.1	-	-	-	-
+9.0	2.0	2.0	-	-	-	-
+9.0a	2.0a	2.0a	-	-	-	-
+9.0b	2.0b	2.0	-	-	-	-
+9.0c	3.0	3.0	-	-	-	-
+10.0	4.0	4.0	4.0	-	-	4.0
+10.1	4.1	4.1	4.1	-	-	4.1
+11.0-11.2	5.0	5.0	5.0	5.0	5.0	5.0
+11.3, 12	5.1	5.1	5.1	5.1	5.1	5.1
+12	6.0	6.0	6.0	6.0	6.0	6.0
+なおコンピュートシェーダー（DirectCompute）はDirectX 11にて導入されたステージであり、DirectX 10 APIを経由して利用することはできないが、ドライバーが対応していればDirectX 10.x世代のハードウェア上でもDirectX 11 APIを経由してダウンレベル（機能制限付き）のコンピュートシェーダーを実行することが可能となる。
+
+シェーダーモデル5.1[31]はDirectX 12 APIをドライバーレベルでサポートするすべてのハードウェア（機能レベル11_0以上が必須）で使用可能だが、Root Signatureに関する機能はDirectX 11.3では使用できず、DirectX 12専用の機能となる[32]。また、ROV (Rasterizer Order View) に関するオブジェクトは、ROV対応ハードウェアでしか使用できない[33]。
+
+シェーダーモデル6.0[34]の組み込み関数は機能レベル12_0の要件として追加されている。
+
+ピクセルシェーダーの比較
+ 	PS 1.0-1.3	PS 1.4	PS 2.0	PS 2.0a	PS 2.0b	PS 3.0[35]	PS 4.0[36], 4.1, 5.0
+依存テクスチャ制限	4	6	8	無制限	4	無制限	無制限
+テクスチャ命令制限	4	6*2	32	無制限	無制限	無制限	無制限
+Position register	No	No	No	No	No	Yes	Yes
+命令スロット数	8 + 4	8 + 4	32 + 64	512	512	≥ 512	≥ 65536
+実行命令数	8+4	6*2+8*2	32 + 64	512	512	65536	無制限
+テクスチャの間接参照数	4	4	4	無制限	4	無制限	無制限
+Interpolated registers	2 + 8	2 + 8	2 + 8	2 + 8	2 + 8	10	32
+命令予測	No	No	No	Yes	No	Yes	No
+Index input registers	No	No	No	No	No	Yes	Yes
+一時レジスタ(Temp registers)	2	6 　	12から32	22	32	32	4096
+定数レジスタ(Constant registers)	8	8	32	32	32	224	16x4096
+Arbitrary swizzling（英語版）	No	No	No	Yes	No	Yes	Yes
+Gradient instructions	No	No	No	Yes	No	Yes	Yes
+Loop count register	No	No	No	No	No	Yes	Yes
+Face register (2-sided lighting)	No	No	No	No	No	Yes	Yes
+動的フロー制御	No	No	No	No	No	24	Yes
+ビット演算	No	No	No	No	No	No	Yes
+整数演算	No	No	No	No	No	No	Yes
+PS 2.0 = DirectX 9.0オリジナルのシェーダーモデル2.0仕様。
+PS 2.0a = NVIDIA GeForce FXに最適化されたモデル。
+PS 2.0b = ATI Radeon X700, X800, X850のシェーダーモデル（DirectX 9.0b）。
+PS 3.0 = シェーダーモデル3.0に含まれる。
+PS 4.0 = シェーダーモデル4.0に含まれる。
+PS 4.1 = シェーダーモデル4.1に含まれる。
+PS 5.0 = シェーダーモデル5.0に含まれる。
+実行命令数において"32 + 64"というのは"32のテクスチャ命令と64の算術命令"を意味する。
+
+頂点シェーダーの比較
+ 	VS 1.1	VS 2.0	VS 2.0a	VS 3.0[35]	VS 4.0[36], 4.1, 5.0
+命令スロット数	128	256	256	≥ 512	4096
+最大命令実行数	不明	65536	65536	65536	65536
+命令予測	No	No	Yes	Yes	Yes
+一時レジスタ(Temp registers)	12	12	13	32	4096
+定数レジスタ(Constant registers)	≥ 96	≥ 256	≥ 256	≥ 256	16x4096
+静的フロー制御	不明	Yes	Yes	Yes	Yes
+動的フロー制御	No	No	Yes	Yes	Yes
+動的フロー制御の深度	No	No	24	24	Yes
+Vertex Texture Fetch	No	No	No	Yes	Yes
+テクスチャサンプラーの数	N/A	N/A	N/A	4	128
+Geometry instancing support	No	No	No	Yes	Yes
+ビット演算	No	No	No	No	Yes
+整数演算	No	No	No	No	Yes
+VS 2.0 = DirectX 9.0オリジナルのシェーダーモデル2.0仕様。
+VS 2.0a = NVIDIA GeForce FXに最適化されたモデル。
+VS 3.0 = シェーダーモデル3.0に含まれる。
+VS 4.0 = シェーダーモデル4.0に含まれる。
+VS 4.1 = シェーダーモデル4.1に含まれる。
+VS 5.0 = シェーダーモデル5.0に含まれる。
+なおVS 2.0bは存在しない[37]。
+
+対応ハードウェアの概略
+Question book-4.svg
+この節は検証可能な参考文献や出典が全く示されていないか、不十分です。出典を追加して記事の信頼性向上にご協力ください。（2015年2月）
+以下の表はDirect3Dプログラマブルシェーダーに対応している各社グラフィックスカードの概略であり、対応するピクセルシェーダーバージョンとDirectXのバージョンを示している。グラフィックスチップは前述のとおり、一般的には上位互換性がある。例えばPS 3.0対応のチップはPS 2.0やPS 1.1にも対応している。
+
+なお開発に専用APIやOpenGL/GLSLを使用するゲーム専用機やモバイル機器は、たとえプログラマブルシェーダー対応であってもDirect3D/HLSLに対応しているとは限らないが、グラフィックスチップの世代を示すときは便宜上シェーダーモデルを使うことがある。
+
+PS version	DirectX version	3Dlabs	AMD (旧ATI)	インテル	Matrox	NVIDIA	S3 Graphics	SiS	XGI
+1.0/1.1	8.0	-	-	-	-	GeForce 3 series	-	Xabre-Series	-
+1.2	8.0a	Wildcat VP	-	-	-	-	-	-	-
+1.3	8.0a	-	-	-	Parhelia-Series	GeForce 4 Ti/Go series	-	Mirage 2（ソフトウェアエミュレーションで対応）	-
+1.4	8.1	-	Radeon R200 (8500-9250)	-	-	-	-	Mirage 3	Volari V3 series （V3XTを除く）
+2.0	9.0	Wildcat Realizm	Radeon R300 (9500-9800, X300-X600)	Intel GMA 900	-	GeForce FX Series	DeltaChrome, GammaChrome, Chrome S2x series, Chrome9 HC	Mirage 3+	Volari V3XT, Volari V5 series, Volari V8 series, Volari 8300, Volari XP10
+2.0a	9.0a	-	-	-	-	GeForce FX Series	-	-	-
+2.0b	9.0b	-	Radeon R420 (X700-X850)	-	-	-	-	-	-
+3.0	9.0c	-	Radeon X1xxx	Intel GMA 950（3.0はソフトウェアエミュレーション）, 3000, 3100	M Series	GeForce 6 series, GeForce 7 series	-	-	-
+4.0	10	-	Radeon HD 2xxx	Intel GMA X3100以降のシリーズ	-	GeForce 8 series, GeForce 9 series	-	-	-
+4.1	10.1	-	Radeon HD 3xxx, Radeon HD 4xxx	HD Graphics 2000/3000	-	GeForce GT 200 Series	Chrome400/500	-	-
+5.0	11	-	Radeon HD 5xxx	HD Graphics 2500/4000	-	GeForce GTX 400 Series	-	-	-
+Shader Model 1.x
+DirectX 8.x世代。
+NVIDIAとATIが際限なく機能拡張を行なった頃のモデル。1.1、1.2、1.3、1.4のマイナーバージョンが存在する。
+対応GPU: AMD Radeonは8xxx、NVIDIA GeForceは3-4Tiシリーズ。
+ゲーム機であるXbox用GPUはSM1.x、またはその派生版と見られる。
+Shader Model 2.0
+DirectX 9世代。
+マイクロソフトとインテルが、両者の利点を生かして作ったスタンダードモデル[要出典]。
+NVIDIA拡張である2.0aと、ATI拡張である2.0bが存在する。
+対応GPU: Radeonは9500-X850、GeForceはFX 5xxxシリーズ。
+Shader Model 3.0
+DirectX 9.0c世代。
+このバージョンより、シェーダープログラム長の制限がほぼ無くなった。
+対応GPU: RadeonはX1000シリーズ、GeForceは6、7シリーズ。
+ゲーム機であるXbox 360、プレイステーション3用GPUは、SM3.0またはその派生版と思われる。
+Shader Model 4.x
+DirectX 10.x世代。
+統合型シェーダーアーキテクチャの採用。なお、GPGPU用APIのCUDAやOpenCLに対応するのはSM 4.0世代以降である。
+定数レジスタ（定数バッファ）容量の大幅な拡張。
+ジオメトリシェーダーの追加。
+追加のテクスチャ命令などをサポートするマイナーバージョン4.1が存在する[38]。
+対応GPU: RadeonはHD 2xxx-HD 4xxxシリーズ、GeForceは8xxx-GT 3xxシリーズ。
+ゲーム機であるWii U用GPUは、SM4.0またはその派生版と思われる[39]。
+Shader Model 5.0
+DirectX 11.x世代。
+ハルシェーダー、ドメインシェーダー、固定機能テッセレータが含まれるテッセレーションステージの追加、およびGPGPU機能であるコンピュートシェーダー（DirectCompute）の対応など。
+対応GPU: RadeonはHD 5xxx-HD 8xxx、Rx 2xx/3xxシリーズ、GeForceはFermi、Kepler、Maxwell第1世代。
+ゲーム機であるXbox One、PlayStation 4用GPUは、SM5.0またはその派生版と思われる[40]。
+Shader Model 6.0
+DirectX 12世代。
+対応GPU: RadeonはGCN第2世代以降、GeForceはMaxwell第2世代以降。
+なおOpenGL対応レベルに関しては、ナンバリングがDirectXのバージョンやシェーダーモデルと正確に対応するわけではなく、細かい機能における差異が多数存在するが、世代としてはおおよそ下記の通りとなる。
+
+OpenGL 2.x - Direct3D 9
+OpenGL 3.x - Direct3D 10
+OpenGL 4.x - Direct3D 11
+関連項目
+Microsoft DirectX
+Direct3D
+DirectCompute
+GLSL
+Cg (プログラミング言語)
+脚注
+[ヘルプ]
+^ Writing HLSL Shaders in Direct3D 9 (Windows)
+^ 上位レベル シェーダ言語 - MSDN
+^ HLSL - MSDN
+^ Shader Models vs Shader Profiles - MSDN
+^ ［GDC 2016］シェーダモデル6.0がやってくる！ Microsoftが語った「次のDirectX」 - 4Gamer.net
+^ HLSL Shader Model 6.0 (Windows)
+^ Direct3D 9 から Direct3D 10 への移行時の考慮事項 (Direct3D 10)
+^ 動的リンク
+^ .hlsli Extension - List of programs that can open .hlsli files
+^ Direct3D 9 でのシェーダーの使用
+^ HLSL, FXC, and D3DCompile – Games for Windows and the DirectX SDK
+^ Unity - Unity Manual
+^ Microsoft/DirectXShaderCompiler: This repo hosts the source for the DirectX Shader Compiler which is based on LLVM/Clang.
+^ ShaderEffect クラス (System.Windows.Media.Effects)
+^ ShaderEffect クラス (System.Windows.Media.Effects)
+^ WPF Version 4 の新機能
+^ Effects (Windows)
+^ シェーダー モデルとシェーダー プロファイル
+^ Direct3D 10 でのシェーダーの使用
+^ 3Dグラフィックス・マニアックス (4) GPUとシェーダ技術の基礎知識(4) | マイナビニュース
+^ 【4Gamer.net】［特集］ATIとNVIDIAが語る2005＆2006年 ATI編
+^ テッセレーション (Direct3D 9)
+^ 4Gamer.net AMD，コードネーム「R600」こと「ATI Radeon HD 2000」を発表
+^ ［連載］［西川善司の3Dゲームエクスタシー］「ATI Radeon HD 2000」シリーズのGPUアーキテクチャ徹底解説
+^ Game Developers Conference（GDC） 2010現地レポート - GAME Watch
+^ "PDC 2008: メインストリーム アプリケーション向け Direct3D10", Microsoft Corporation, 2008年10月
+^ D3D_FEATURE_LEVEL enumeration
+^ Direct3D feature levels
+^ ダウンレベルのハードウェア上の Direct3D 11
+^ 10Level9 リファレンス
+^ Shader Model 5.1
+^ HLSL Shader Model 5.1 Features for Direct3D 12
+^ Hardware Feature Levels
+^ HLSL Shader Model 6.0 (Windows)
+^ a b Shader Model 3.0, Ashu Rege, NVIDIA Developer Technology Group, 2004.
+^ a b The Direct3D 10 System, David Blythe, Microsoft Corporation, 2006.
+^ "Shader Model 3.0 Unleashed", Randima (Randy) Fernando, NVIDIA Developer Technology Group
+^ テクスチャー オブジェクト (DirectX HLSL)
+^ “西川善司の3DゲームファンのためのE3最新ハードウェア講座” (日本語). Impress Watch (2011年6月11日). 2011年6月11日閲覧。
+^ “西川善司の3Dゲームファンのための「プレイステーション 4」グラフィックス」講座（後編）” (日本語). Impress Watch (2013年3月8日). 2014年8月29日閲覧。

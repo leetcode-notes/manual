@@ -1,0 +1,5 @@
+algorithm priority_queue_c#
+---------------------------------------------------------------------------
+
+.. literalinclude:: priority_queue_c#.cs
+

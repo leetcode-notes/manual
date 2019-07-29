@@ -1,0 +1,881 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>particle effectchecker &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="editor 拡張" href="../editor.html"/>
+        <link rel="next" title="particle savetxt" href="savetxt.html"/>
+        <link rel="prev" title="particle SerializedProperty_param" href="SerializedProperty_param.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../CG.html">CG</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../aftereffects/aftereffects.html">AfterEffectsTool manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../csharp.html">Unity</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../editor.html">editor 拡張</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../9-4_hp_save/Character.html">9-4_hp_save Character</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-4_hp_save/CharacterInspector.html">9-4_hp_save CharacterInspector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-5_multipleedit/Character.html">9-5_multipleedit Character</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../9-5_multipleedit/CharacterInspector.html">9-5_multipleedit CharacterInspector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../GUI/GUI.html">editor GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../GUI/windowexample.html">editor windowexample</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mobile/CrossPlatformInputInitialize.html">mobile CrossPlatformInputInitialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CheckPropertyPaths .html">particle CheckPropertyPaths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CheckPropertyPaths2 .html">particle CheckPropertyPaths2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SerializedProperty.html">particle SerializedProperty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SerializedProperty_param.html">particle SerializedProperty_param</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">particle effectchecker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="savetxt.html">particle savetxt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scene_button/scene_button.html">scene_button scene_button</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scriptableobject/ExampleAsset.html">scriptableobject ExampleAsset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/TimeControl.html">timeline TimeControl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/TimeControl2.html">timeline TimeControl2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../timeline/timeline.html">timeline timeline</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../CG.html">CG</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">Unity</a> &raquo;</li>
+      
+        <li><a href="../editor.html">editor 拡張</a> &raquo;</li>
+      
+    <li>particle effectchecker</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CG/csharp/editor/particle/effectchecker.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="particle-effectchecker">
+<h1>particle effectchecker<a class="headerlink" href="#particle-effectchecker" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using UnityEngine;
+using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using System.Collections;
+using System.Collections.Generic;
+
+
+namespace Gluon
+{
+    public class EffectChecker : MonoBehaviour
+    {
+        enum Mode
+        {
+            DEFAULT,
+            SIMULATE,
+            FBF
+        }
+
+        Mode mode = Mode.DEFAULT;
+
+        [SerializeField]
+        GameObject _target = null;
+
+        GameObject cloneObject = null;
+        bool isPause = false;
+
+        bool isAutoRemove = false;
+
+        float defaultScale = 1f;
+
+        float updateSpeed = 0.0f;
+        float simulateSpeed = 1.0f;
+
+        void Start()
+        {
+            isPause = false;
+            updateSpeed = 0;
+        }
+
+        void Update()
+        {
+            if (cloneObject == null)
+            {
+                return;
+            }
+
+            if (isAutoRemove)
+            {
+                if (ConfirmStopedParticles(cloneObject))
+                {
+                    Destroy(cloneObject);
+                    isPause = false;
+                }
+            }
+
+            if (mode != Mode.DEFAULT)
+            {
+                UpdateParticles(cloneObject);
+            }
+        }
+        void LateUpdate()
+        {
+            if (mode == Mode.FBF &amp;&amp; cloneObject != null)
+            {
+                PauseParticles(cloneObject);
+                isPause = true;
+                mode = Mode.DEFAULT;
+            }
+        }
+
+        void PlayEffect()
+        {
+            if (_target != null)
+            {
+                if (cloneObject != null)
+                {
+                    StopParticles(cloneObject);
+                    PlayParticles(cloneObject);
+                    return;
+                }
+
+                GameObject clone = Instantiate&lt;GameObject&gt;(_target);
+                clone.name = clone.name.Remove(clone.name.IndexOf(&quot;(Clone)&quot;));
+                clone.transform.parent = transform;
+                clone.transform.localPosition = Vector3.zero;
+                clone.transform.localScale = Vector3.one;
+                cloneObject = clone;
+
+                isPause = false;
+            }
+        }
+        void PlayEffect(GameObject target)
+        {
+            if (target != null)
+            {
+                if (cloneObject != null)
+                {
+                    StopParticles(cloneObject);
+                    PlayParticles(cloneObject);
+                    return;
+                }
+
+                GameObject clone = Instantiate&lt;GameObject&gt;(target);
+                clone.name = clone.name.Remove(clone.name.IndexOf(&quot;(Clone)&quot;));
+                clone.transform.parent = transform;
+                clone.transform.localPosition = Vector3.zero;
+                clone.transform.localScale = Vector3.one;
+                cloneObject = clone;
+
+                if(defaultScale != 1f)
+                {
+                    SetupParticleScale(cloneObject, defaultScale);
+                }
+
+                isPause = false;
+            }
+        }
+        void PauseEffect()
+        {
+            if (cloneObject == null)
+            {
+                return;
+            }
+            if (!isPause)
+            {
+                PauseParticles(cloneObject);
+                isPause = true;
+            }
+            else
+            {
+                PlayParticles(cloneObject);
+                isPause = false;
+            }
+        }
+        void AddFrameEffect()
+        {
+            if (cloneObject == null)
+            {
+                return;
+            }
+
+            PauseParticles(cloneObject);
+            isPause = true;
+
+            mode = Mode.FBF;
+            updateSpeed = 1f / ClaculateFrameRate();
+        }
+        void StopEffect()
+        {
+            if (cloneObject == null)
+            {
+                return;
+            }
+
+            StopParticles(cloneObject);
+            isPause = false;
+        }
+        void RemoveEffect()
+        {
+            Destroy(cloneObject);
+            isPause = false;
+        }
+
+        void UpdateDefaultScale()
+        {
+            if(cloneObject == null)
+            {
+                return;
+            }
+
+            SetupParticleScale(cloneObject, defaultScale);
+        }
+
+        void SetupParticleScale(GameObject target, float scale)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                target.transform.localScale = Vector3.one * scale;
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                SetupParticleScale(target.transform.GetChild(index).gameObject, scale);
+            }
+        }
+
+        bool ConfirmStopedParticles(GameObject target)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                return system.isStopped;
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                if (ConfirmStopedParticles(target.transform.GetChild(index).gameObject))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        void PlayParticles(GameObject target)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                system.Play(true);
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                PlayParticles(target.transform.GetChild(index).gameObject);
+            }
+        }
+        void PauseParticles(GameObject target)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                system.Pause(true);
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                PauseParticles(target.transform.GetChild(index).gameObject);
+            }
+        }
+        void StopParticles(GameObject target)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                system.Stop(true);
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                StopParticles(target.transform.GetChild(index).gameObject);
+            }
+        }
+        void UpdateParticles(GameObject target)
+        {
+            ParticleSystem system = target.GetComponent&lt;ParticleSystem&gt;();
+            if (system != null)
+            {
+                system.Simulate(updateSpeed, false, false);
+            }
+
+            for (int index = 0; index &lt; target.transform.childCount; index++)
+            {
+                UpdateParticles(target.transform.GetChild(index).gameObject);
+            }
+        }
+        float ClaculateFrameRate()
+        {
+            float frameRate = (float)Application.targetFrameRate;
+            if (frameRate == -1f)
+            {
+                frameRate = 60f;
+            }
+            return frameRate;
+        }
+
+#if UNITY_EDITOR
+        [CustomEditor(typeof(EffectChecker))]
+        class EffectCheckerInspector : Editor
+        {
+            GUIStyle largeCategoryStyle = null;
+
+            public override void OnInspectorGUI()
+            {
+                base.OnInspectorGUI();
+
+                GUILayout.Space(10f);
+
+                if(largeCategoryStyle == null)
+                {
+                    largeCategoryStyle = new GUIStyle(EditorStyles.boldLabel);
+                    largeCategoryStyle.fontSize = 15;
+                }
+
+                EffectChecker checker = target as EffectChecker;
+
+                GUILayout.Label(&quot;コントローラ&quot;, largeCategoryStyle);
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                GUILayout.Label(&quot;再生スピード&quot;, EditorStyles.label);
+                float simulateSpeed = EditorGUILayout.FloatField(checker.simulateSpeed);
+                if (checker.simulateSpeed != simulateSpeed)
+                {
+                    checker.simulateSpeed = simulateSpeed;
+                    if (checker.simulateSpeed != 1f)
+                    {
+                        checker.updateSpeed = checker.simulateSpeed / checker.ClaculateFrameRate();
+                        checker.mode = Mode.SIMULATE;
+                    }
+                    else
+                    {
+                        checker.mode = Mode.DEFAULT;
+                        checker.PlayEffect();
+                    }
+                }
+                GUILayout.EndHorizontal();
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                if (GUILayout.Button(&quot;再生&quot;))
+                {
+                    checker.PlayEffect();
+                }
+                if (GUILayout.Button(&quot;一時停止&quot;))
+                {
+                    checker.PauseEffect();
+                }
+                if (GUILayout.Button(&quot;停止&quot;))
+                {
+                    checker.StopEffect();
+                }
+                GUILayout.EndHorizontal();
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                if (GUILayout.Button(&quot;コマ送り再生&quot;))
+                {
+                    checker.PlayEffect();
+                    checker.AddFrameEffect();
+                }
+                if (GUILayout.Button(&quot;コマ送り&quot;))
+                {
+                    checker.AddFrameEffect();
+                }
+                GUILayout.EndHorizontal();
+
+                GUILayout.Space(10f);
+
+                GUILayout.Label(&quot;削除機能&quot;, largeCategoryStyle);
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                GUILayout.Label(&quot;自動削除機能&quot;, EditorStyles.label);
+                checker.isAutoRemove = EditorGUILayout.Toggle(checker.isAutoRemove);
+                GUILayout.EndHorizontal();
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                if (!checker.isAutoRemove)
+                {
+                    if (GUILayout.Button(&quot;削除&quot;))
+                    {
+                        checker.RemoveEffect();
+                    }
+                }
+                GUILayout.EndHorizontal();
+
+                GUILayout.Space(10f);
+
+                GUILayout.Label(&quot;拡張機能&quot;, largeCategoryStyle);
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                GUILayout.Label(&quot;倍率&quot;, EditorStyles.label);
+                float defaultScale = EditorGUILayout.FloatField(checker.defaultScale);
+                if (defaultScale != checker.defaultScale)
+                {
+                    checker.defaultScale = defaultScale;
+                    if (checker.cloneObject != null)
+                    {
+                        checker.UpdateDefaultScale();
+                    }
+                }
+                GUILayout.EndHorizontal();
+
+                GUILayout.Space(10f);
+
+                GUILayout.BeginHorizontal();
+                GUILayout.Space(15f);
+                if (GUILayout.Button(&quot;リソース反映&quot;))
+                {
+                    ApplayAssets(checker);
+                }
+                GUILayout.EndHorizontal();
+            }
+
+            void ApplayAssets(EffectChecker checker)
+            {
+                if (checker._target == null || checker.cloneObject == null)
+                {
+                    return;
+                }
+
+                string assetPath = AssetDatabase.GetAssetPath(checker._target);
+                checker._target = PrefabUtility.ReplacePrefab(checker.cloneObject, checker._target, ReplacePrefabOptions.ConnectToPrefab);
+            }
+        }
+#endif
+    }
+
+#if UNITY_EDITOR
+    class ParticleTextureView : EditorWindow
+    {
+        [MenuItem(&quot;Gluon/Effect/Open Texture Viewer&quot;)]
+        static void ShowWindow()
+        {
+            ParticleTextureView window = EditorWindow.GetWindow&lt;ParticleTextureView&gt;(&quot;Tiles Texture View&quot;);
+            window.Show();
+        }
+
+        GameObject target = null;
+
+        ParticleSystemRenderer renderer = null;
+        Texture2D texture = null;
+        Texture2D gridTexture = null;
+
+        struct SHEET_DATA
+        {
+            public int x, y;
+            public int width, height;
+
+            public SHEET_DATA(int x, int y, int width, int height)
+            {
+                this.x = x;
+                this.y = y;
+
+                this.width = width;
+                this.height = height;
+            }
+        }
+        List&lt;SHEET_DATA&gt; dataList = new List&lt;SHEET_DATA&gt;();
+
+        int _tilesX = 1, _tilesY = 1;
+
+        bool showNumbers = true;
+
+        GUIStyle fontStyle = null;
+
+        void OnGUI()
+        {
+            float offsetX = 0f, offsetY = 0f;
+
+            const float COMMON_HEIGHT = 25f;
+
+            GUILayout.BeginArea(new Rect(offsetX, offsetY, 500f, COMMON_HEIGHT));
+            GUILayout.BeginHorizontal();
+            GameObject obj = EditorGUILayout.ObjectField(target, typeof(GameObject), true) as GameObject;
+            Texture2D tmpTexture = EditorGUILayout.ObjectField(texture, typeof(Texture2D), true) as Texture2D;
+            GUILayout.EndHorizontal();
+            GUILayout.EndArea();
+
+            offsetX = 0f;
+            offsetY += COMMON_HEIGHT;
+
+            GUILayout.BeginArea(new Rect(offsetX, offsetY, 250f, COMMON_HEIGHT));
+            string loadButtonText = target == null || renderer == null || target != renderer.gameObject ? &quot;読み込み&quot; : &quot;再読み込み&quot;;
+            GUILayout.BeginHorizontal();
+            bool load = GUILayout.Button(loadButtonText);
+            bool remove = GUILayout.Button(&quot;解放&quot;);
+            GUILayout.EndHorizontal();
+            GUILayout.EndArea();
+
+            offsetX = 0f;
+            offsetY += COMMON_HEIGHT;
+
+            bool isChangedTilesNum = false;
+
+            GUILayout.BeginArea(new Rect(offsetX, offsetY, 500f, COMMON_HEIGHT));
+            GUILayout.BeginHorizontal();
+            int tilesX = EditorGUILayout.IntField(&quot;Tiles X&quot;, _tilesX);
+            tilesX = tilesX &lt; 1 ? 1 : tilesX;
+            isChangedTilesNum = tilesX != _tilesX;
+            _tilesX = tilesX;
+
+            int tilesY = EditorGUILayout.IntField(&quot;Tiles Y&quot;, _tilesY);
+            tilesY = tilesY &lt; 1 ? 1 : tilesY;
+            isChangedTilesNum |= tilesY != _tilesY;
+            _tilesY = tilesY;
+            GUILayout.EndHorizontal();
+            GUILayout.EndArea();
+
+            offsetX = 0f;
+            offsetY += COMMON_HEIGHT + 10f;
+
+            if (remove)
+            {
+                target = null;
+                renderer = null;
+
+                tmpTexture = null;
+                texture = null;
+                DestroyImmediate(gridTexture);
+            }
+
+            if(tmpTexture != null &amp;&amp;
+                tmpTexture != texture)
+            {
+                texture = tmpTexture as Texture2D;
+                isChangedTilesNum = true;
+
+                target = null;
+                obj = null;
+            }
+
+            if (load &amp;&amp; obj != null)
+            {
+                if (target == null ||
+                    renderer == null ||
+                    target != renderer.gameObject)
+                {
+                    texture = null;
+
+                    ParticleSystemRenderer r = obj.GetComponent&lt;ParticleSystemRenderer&gt;();
+
+                    if (r != null &amp;&amp;
+                        r != renderer)
+                    {
+                        if (r.material != null)
+                        {
+                            texture = r.material.mainTexture as Texture2D;
+                        }
+                        else if (r.sharedMaterial != null)
+                        {
+                            texture = r.sharedMaterial.mainTexture as Texture2D;
+                        }
+
+                        isChangedTilesNum = true;
+                    }
+
+                    renderer = r;
+                }
+            }
+
+            if (isChangedTilesNum &amp;&amp;
+                texture != null)
+            {
+                dataList.Clear();
+
+                if (gridTexture == null)
+                {
+                    gridTexture = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false, true);
+                }
+                else if (gridTexture.width != texture.width || gridTexture.height != texture.height)
+                {
+                    gridTexture.Resize(texture.width, texture.height);
+                }
+
+
+                int dx = gridTexture.width / _tilesX;
+                int dy = gridTexture.height / _tilesY;
+
+                for (int y = 0; y &lt; gridTexture.height; y++)
+                {
+                    for (int x = 0; x &lt; gridTexture.width; x++)
+                    {
+                        Color color = new Color(0f, 0f, 0f, 0f);
+                        if (x % dx == 0 || y % dy == 0)
+                        {
+                            color = Color.green;
+                        }
+                        gridTexture.SetPixel(x, y, color);
+
+                        if (x == 0 &amp;&amp; y % dy == 0)
+                        {
+                            dataList.Add(new SHEET_DATA(x, y, dx, dy));
+                        }
+                        else if (y == 0 &amp;&amp; x % dx == 0)
+                        {
+                            dataList.Add(new SHEET_DATA(x, y, dx, dy));
+                        }
+                    }
+                }
+                gridTexture.Apply();
+            }
+
+            target = obj;
+
+            if (texture != null)
+            {
+                GUIContent texContent = new GUIContent(texture);
+                Rect rect = GUILayoutUtility.GetRect(texContent, GUI.skin.label, GUILayout.ExpandWidth(true), GUILayout.ExpandHeight(true));
+                rect.y += offsetY;
+
+                GUI.Label(rect, texContent);
+                GUI.Label(rect, new GUIContent(gridTexture));
+
+                if(fontStyle == null)
+                {
+                    fontStyle = new GUIStyle(GUI.skin.label);
+                }
+                Rect labelRect;
+                string labelText = &quot;&quot;;
+
+                float rectWidth = rect.width &lt; texture.width ? rect.width : texture.width;
+                float rectHeight = rectWidth * texture.height / texture.width;
+                float onceWidth = rectWidth / _tilesX, onceHeight = rectHeight / _tilesY;
+
+                fontStyle.fontSize = (int)onceWidth / 3;
+
+                for (int index = 0; index &lt; dataList.Count; index++)
+                {
+                    int gridX = dataList[index].x / dataList[index].width;
+                    int gridY = dataList[index].y / dataList[index].height;
+
+                    float posX = rect.x + onceWidth * gridX;
+                    float posY = rect.y + onceHeight * gridY;
+
+                    labelRect = new Rect(posX, posY, onceWidth, onceHeight);
+
+                    if (dataList[index].x == 0)
+                    {
+                        labelText = string.Format(&quot;{0}&quot;, gridY);
+                    }
+                    else if (dataList[index].y == 0)
+                    {
+                        labelText = string.Format(&quot;{0}&quot;, gridX);
+                    }
+
+                    GUI.Label(labelRect, labelText, fontStyle);
+                }
+            }
+        }
+    }
+#endif
+
+        }  /* namespace Gluon */
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="savetxt.html" class="btn btn-neutral float-right" title="particle savetxt" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SerializedProperty_param.html" class="btn btn-neutral" title="particle SerializedProperty_param" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

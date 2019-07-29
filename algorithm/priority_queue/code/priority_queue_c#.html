@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>algorithm priority_queue_c# &mdash; Machine-Manual-ja 17.06.Beta ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="Machine-Manual-ja 17.06.Beta ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="priority queue" href="../priority_queue.html"/>
+        <link rel="next" title="多重共線性 1(マルチコ)" href="../../多重共線性(マルチコ)/maruchiko.html"/>
+        <link rel="prev" title="priority queue" href="../priority_queue.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Machine-Manual-ja
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                17.06.Beta
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CG/CG.html">CG</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../algorytm.html">algorytm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ATCoder/AtCoder.html">ATCoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grokking_algorithms/NattokuAlgorithms.html">NattokuAlgorythms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../priority_queue.html">priority queue</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">algorithm priority_queue_c#</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../多重共線性(マルチコ)/maruchiko.html">多重共線性 1(マルチコ)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-compare/compare.html">framework 比較</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework-flow/framework.html">framework workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../image/image.html">image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kaggle/kaggle.html">kaggle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ml-scratch/ml-sctatch.html">ml scratch スクラッチでの実装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nlp/nlp.html">nlp 自然言語処理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scientist_statistics/scientist.html">Data Scientist 統計学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Machine-Manual-ja</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../algorytm.html">algorytm</a> &raquo;</li>
+      
+        <li><a href="../priority_queue.html">priority queue</a> &raquo;</li>
+      
+    <li>algorithm priority_queue_c#</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/algorithm/priority_queue/code/priority_queue_c#.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="algorithm-priority-queue-c">
+<h1>algorithm priority_queue_c#<a class="headerlink" href="#algorithm-priority-queue-c" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Collections
+{
+  /// &lt;summary&gt;
+  /// 優先度付き待ち行列
+  /// &lt;/summary&gt;
+  /// &lt;typeparam name=&quot;T&quot;&gt;要素の型&lt;/typeparam&gt;
+  class PriorityQueue&lt;T&gt;
+    where T : IComparable&lt;T&gt;
+  {
+    #region フィールド
+
+    ArrayList&lt;T&gt; buffer;
+
+    #endregion
+    #region 初期化
+
+    public PriorityQueue() { this.buffer = new ArrayList&lt;T&gt;(); }
+    public PriorityQueue(int capacity) { this.buffer = new ArrayList&lt;T&gt;(capacity); }
+
+    #endregion
+    #region ヒープ操作
+
+    /// &lt;summary&gt;
+    /// ヒープ化されている配列リストに新しい要素を追加する。
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;array&quot;&gt;対象の配列リスト&lt;/param&gt;
+    static void PushHeap(ArrayList&lt;T&gt; array, T elem)
+    {
+      int n = array.Count;
+      array.InsertLast(elem);
+
+      while (n != 0)
+      {
+        int i = (n - 1) / 2;
+        if (array[n].CompareTo(array[i]) &gt; 0)
+        {
+          T tmp = array[n]; array[n] = array[i]; array[i] = tmp;
+        }
+        n = i;
+      }
+    }
+
+    /// &lt;summary&gt;
+    /// ヒープから最大値を削除する。
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;array&quot;&gt;対象の配列リスト&lt;/param&gt;
+    static void PopHeap(ArrayList&lt;T&gt; array)
+    {
+      int n = array.Count - 1;
+      array[0] = array[n];
+      array.EraseLast();
+
+      for (int i = 0, j; (j = 2 * i + 1) &lt; n; )
+      {
+        if ((j != n - 1) &amp;&amp; (array[j].CompareTo(array[j + 1]) &lt; 0))
+          j++;
+        if (array[i].CompareTo(array[j]) &lt; 0)
+        {
+          T tmp = array[j]; array[j] = array[i]; array[i] = tmp;
+        }
+        i = j;
+      }
+    }
+
+    #endregion
+    #region 要素の挿入・削除
+
+    /// &lt;summary&gt;
+    /// 要素のプッシュ。
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;elem&quot;&gt;挿入したい要素&lt;/param&gt;
+    public void Push(T elem)
+    {
+      PushHeap(this.buffer, elem);
+    }
+
+    /// &lt;summary&gt;
+    /// 要素を1つポップ。
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// 今回の実装では、先頭要素の読み出しと削除は別に行う。
+    /// この Pop では削除のみ。
+    /// 読み出しには Top プロパティを使う。
+    /// &lt;/remarks&gt;
+    public void Pop()
+    {
+      PopHeap(this.buffer);
+    }
+
+    /// &lt;summary&gt;
+    /// 先頭要素の読み出し。
+    /// &lt;/summary&gt;
+    public T Top
+    {
+      get { return this.buffer[0]; }
+    }
+
+    public int Count
+    {
+      get { return this.buffer.Count; }
+    }
+
+    #endregion
+  }
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../多重共線性(マルチコ)/maruchiko.html" class="btn btn-neutral float-right" title="多重共線性 1(マルチコ)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../priority_queue.html" class="btn btn-neutral" title="priority queue" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, Machine Learnning Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'17.06.Beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

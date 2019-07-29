@@ -1,0 +1,45 @@
+Python manual
+=============================
+
+入門系記事にはない、実践/現場のPythonスクレイピング流儀【2019年最新】
+
+対象が特殊な条件の場合
+ここから先は、先程の『対象がセレクターで選べる場合』の「ch2_base-scraping.py」を元に、一部だけを変えます。
+
+まずは「ch2_base-scraping.py」の冒頭にあるSelectorは、「body」だけを代入してください。
+ここからbeautifulsoupの指定方法だけ変えれば、ありとあらゆるもの全て取得できます。
+
+特定のテキストを含む要素だけ取得したい
+el = soup.find(text="プログラムが上手くなりたい")
+特定のテキストを含む『div』だけ取得したい
+el = soup.find("div", text="プログラムが上手くなりたい")
+正規表現で特定のテキストを含む『div』だけ取得したい
+el = soup.find("div", text=re.compile("^(?=.*円)(?!.*：)"))
+特定のaltを含むimgだけを取得したい
+el = soup.find("img", alt="商品詳細")
+(3/20追記 @megmism さん情報)
+
+# select関数を用いる場合
+el = soup.select('img[alt="商品詳細"]')[0]
+あるリンクのhrefを取得したい
+el = soup.find(~~~ a).get("href")
+ページ内の全てのh2を取得したい
+# 返り値はリスト
+el = soup.find_all("h2")
+ページ内の全てのh2, h3を取得したい
+# 返り値はリスト
+el = soup.find_all(['h2', 'h3'])
+ページ内の全てのh系タグを取得したい
+el = soup.find_all(re.compile("^h[0-9]"))
+ある要素の親要素を取得したい
+el = soup.find(~~~).parent
+ある要素のn番目のdiv子要素を取得したい
+el = soup.find(~~~).select("div:nth-of-type(2)")[0]
+og:imageを取得したい
+el = soup.find('meta', attrs={'property': 'og:image', 'content': True})["content"]
+(3/20追記 @megmism さん情報)
+
+# select関数を用いる場合
+el = soup.select("meta[property='og:image']")[0]
+まだまだどんな方法でも取得する事が可能です。
+もし希望があったら、コメントで希望属性を教えてください。
