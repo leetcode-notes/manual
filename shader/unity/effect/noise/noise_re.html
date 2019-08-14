@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>noise &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="effect" href="../effecgt.html"/>
+        <link rel="next" title="effect BlueNoiseGenerator" href="noise/BlueNoiseGenerator.html"/>
+        <link rel="prev" title="mesh" href="../mesh/mesh.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shaderforge/shaderforge.html">shaderforge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../unity.html">unity shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../basicshader/basicshader.html">basic shader</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../effecgt.html">effect</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../RimEffect/RimEffect.html">effect RimEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extrude/Extrude.html">effect Extrude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/mesh.html">mesh</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">noise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../../unity.html">unity shader</a> &raquo;</li>
+      
+        <li><a href="../effecgt.html">effect</a> &raquo;</li>
+      
+    <li>noise</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/unity/effect/noise/noise_re.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="noise">
+<h1>noise<a class="headerlink" href="#noise" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="noise/BlueNoiseGenerator.html">effect BlueNoiseGenerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise/HaltonNoiseGenerator.html">effect HaltonNoiseGenerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise/HaltonSequence.html">effect HaltonSequence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise/INoiseGenerator.html">effect INoiseGenerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise/WhiteNoiseGenerator.html">effect WhiteNoiseGenerator</a></li>
+</ul>
+</div>
+<div class="section" id="white-noise">
+<h2>ホワイトノイズ (White Noise)<a class="headerlink" href="#white-noise" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>UnityEngine.Random で⽣成する乱数</p>
+<p>標準の UnityEngine.Randomで⽣成した点は、密度が濃いところがあったり、まばらなところがあったりと、偏りが発⽣</p>
+<p>これは、標準の UnityEngine.Random を使って得られる乱数列がホワイトノイズを⽣成するため</p>
+<p>ホワイトノイズの性質上、⼀様な乱数ではあるけども、点同⼠の距離が近くてもお構いなしに点を次々に⽣成</p>
+</div>
+<div class="section" id="halton-sequence">
+<h2>ハルトン数列 (Halton Sequence)<a class="headerlink" href="#halton-sequence" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>偏りが出ない疑似乱数としてハルトン数列というものがある</p>
+<p>まず、底を 2 とした場合、⾃然数 n (1...) を 2 進数で表現します。</p>
+<p>例えば、n = 2 とすると、その2進数表記は 10 です。</p>
+<p>次に得られた 2 進数 10 をビット反転して、⼩数部として扱います。</p>
+<p>結果、2 進数表記で 0.01 という数が得られます。これは 10 進数で 1/4を意味します。</p>
+<p>つまり、n = 2 におけるハルトン数列の値は 1/4 となります。</p>
+<p>では、早速 n (1...9) までの数列を書き出してみましょう。(表 7.1)</p>
+<p>▼表 7.1 底 2 のハルトン数列</p>
+<p>n 2 進数 反転 結果</p>
+<p>1 1 0.1 1/2</p>
+<p>2 10 0.01 1/4</p>
+<p>3 11 0.11 3/4</p>
+<p>4 100 0.001 1/8</p>
+<p>5 101 0.101 5/8</p>
+<p>6 110 0.011 3/8</p>
+<p>7 111 0.111 7/8</p>
+<p>8 1000 0.0001 1/16</p>
+<p>9 1001 0.1001 9/16</p>
+<p>結果をみてみると、n が⼀つ増えるたびに、それ以前の結果同⼠でもっとも広い点間の
+半分の位置に値が得られることがわかります。ちなみに、底が 2 のハルトン数列は、ビット演算
+を使って求められるので、コンピュータの処理と親和性が⾼く、⾼速に計算することができます。</p>
+<p>しかし、x 軸、y 軸に同じ底 2 の数列を使うと望ましい結果にはなりません</p>
+<p>(y = x 直線上にのみプロットされてしまいます)。</p>
+<p>そこで、底が 3 のハルトン数列も計算してみましょう。</p>
+<p>3 進数を⽤いて、先ほどと同様に計算していくだけで求められます。(表 7.2)</p>
+<p>では、x 軸に底が 2 のハルトン数列、y 軸に底が 3 のハルトン数列を使って n(1...1000)</p>
+<p>までの点を実際にプロットしてみましょう。</p>
+</div>
+<div class="section" id="blue-noise">
+<h2>ブルーノイズ (Blue Noise)<a class="headerlink" href="#blue-noise" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>⾼い周波数になるにつれ強くなる周波数特性をもつノイズのことをブルーノイズと呼ぶ。</p>
+<p>ブルーノイズを使うと点間の距離をなるべく広くとるようにプロットすることができます。</p>
+<p>ランダムな点の候補を複数作り、その中で他点からの距離が最も遠いものを⼀つ選択する、
+というアルゴリズムで実装してみました。</p>
+<p>計算に多の時間
+がかかるので、実際ブルーノイズを使うには、事前に計算済みのデータを作っておく必要
+がありそうです。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="noise/BlueNoiseGenerator.html" class="btn btn-neutral float-right" title="effect BlueNoiseGenerator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../mesh/mesh.html" class="btn btn-neutral" title="mesh" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

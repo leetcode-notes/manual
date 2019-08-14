@@ -1,0 +1,7 @@
+automate ch13
+=================
+
+PDFファイルとWord文書
+-------------------------
+
+pip install PyPDF2

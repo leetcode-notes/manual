@@ -1,0 +1,6 @@
+linux rm
+=============================
+
+! rm test01.dat
+
+https://eng-entrance.com/linux_command_rm

@@ -1,0 +1,5 @@
+effect HaltonNoiseGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: HaltonNoiseGenerator.cs
+

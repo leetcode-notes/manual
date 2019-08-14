@@ -1,0 +1,29 @@
+maya Tool　manual
+========================
+
+toolフォルダ構成
+
+.. figure:: img/folder_05_tools.png
+   :width: 300px
+
+
+
+.. warning::
+
+    G:/05_tool/javascript/からの絶対パスで作成しているツールがあります。全機能使用する為には移動しないで下さい。
+
+
+.. note::
+
+    コピーしてシェルフに登録して下さい。
+
+    source "G:/05_tool/maya/KGS_Tools.mel";
+    KGSToolwindow;
+
+
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    */*

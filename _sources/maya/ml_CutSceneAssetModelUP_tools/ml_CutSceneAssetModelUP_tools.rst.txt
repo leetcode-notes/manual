@@ -1,0 +1,126 @@
+CutSceneAssetModle UPTool
+###########################
+
+
+.. figure:: ml_CutSceneAssetModelUP_tools.png
+   :width: 400px
+
+
+機能
+******************************************
+
+
+ * データを所定の位置にアップしてログファイルを作成します。
+ * ログファイルからデータを対応する場所にコピーします。
+ * 赤枠のボタンを押してください。
+
+
+.. |icon1| image:: 0006.png
+            :width: 300px
+.. |icon2| image:: 0007.png
+            :width: 300px
+
+|icon1| |icon2|
+
+.. note::
+
+    * 02_assets/0_dev以下のモデルワークフォルダを開いている場合は左の画像が開きます。
+
+    * 03_shots以下のカットシーンフォルダを開いている場合は右の画像が開きます。
+
+
+
+
+設定名
+ #. BackupPath
+
+    バックアップするマスターの保存先を変更します。
+ #. SvaeFilePath
+
+    バックアップするパス変更します。
+ #. SvaeFilename
+
+    バックアップするファイル名を変更します。
+ #. Group
+
+    データがどの場所からアップされたか、グループを記入してください。
+
+   ``例 Okinawa Gonzo →okinawa　Gonzo → tokyo 等``
+
+ #. Check Current Folder
+
+    現在開いているファイルのフォルダを開きます。
+
+ #. Check Asset Folder
+
+    02_assets /00_devフォルダのファイルを開いている場合、ファイルに対応した02_assetsフォルダを開きます。
+
+ #. texture list
+
+    開いているシーン内で使用されているテクスチャをリストアップしています。コピーしたいデータを選択してください。
+
+ #. Copy To Asset and Master Data
+
+    開いているモデルと選択しているtextureを0_devフォルダから02_assetsフォルダと
+    00_masterフォルダへコピーを実行しログファイルを作成します。
+
+ #. Copy To Master Data
+
+    開いているシーンと選択しているsourceimageを03_shotsフォルダから
+    00_masterフォルダへコピーを実行しログファイルを作成します。
+
+
+.. warning::
+   mayaファイルのみコピー先に同じファイルがある場合は、下記のウィンドウが開きます。YESボタンを押すとコピー先のファイルの名前を今日の日付時間に変更し、コピーを実行します。
+
+    .. figure:: 0008.png
+       :width: 300px
+
+   その他のファイルはコピー先に同じファイルがある場合は、下記のウィンドウが開きます。上書きするかどうかの確認のみ行います。
+
+    .. figure:: 0009.png
+       :width: 300px
+
+保存場所
+***********
+
+.. note:: データのアップ場所は以下のようになります。
+
+.. figure:: upfolder.png
+   :width: 500px
+
+
+ログファイル
+**************
+
+ #. Check Master Folder
+
+    現在開いているファイルに対応した00_masterフォルダを開きます。
+
+ #. Check Log Folder
+
+    ログリストで選択しているファイルに対応したログフォルダを開きます。
+
+ #. Log File List
+
+    確認したいファイルをダブルクリックすると、htmlで作成されているログファイルが表示されます。
+
+.. figure:: 0010.png
+   :width: 300px
+
+.. figure:: 0011.png
+   :width: 700px
+
+
+masetr→copy
+**************
+
+ #. Copy From Select LogFile and Open File
+
+    ログファイルを選択している状態で、ボタンを押すと所定の位置へ00_masterフォルダからコピーします。
+    全ファイル上書き確認を行います。
+
+
+.. warning::
+    Filenameに何も入っていない状態の時は、コピーするファイルを開いてから、scene Reloadボタンを押してください。
+

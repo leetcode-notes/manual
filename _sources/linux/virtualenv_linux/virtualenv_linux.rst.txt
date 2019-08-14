@@ -1,0 +1,40 @@
+virtualenv python
+=============================
+
+
+Linux
+=======
+
+python
+---------
+ python -V
+
+これでバージョンが3.6.1などと表示されればOKです。
+
+では、プロジェクトを作るディレクトリに移動します。
+そして、
+
+virtualenv
+------------
+
+virtualenv -p python3 microblog
+
+と入力します。
+
+少しすると、microblogというディレクトリが作成されます。
+これでmicroblogという環境が作成されました。
+
+次に、この環境を使用できるようにします。
+MacやLinuxではsourceを使うのでした。Windowsでは多分batファイルになっていると思いますので、実行すればOKです。
+
+source microblog/bin/activate
+
+
+git
+-----
+
+sudo apt-get install git
+
+インストールに成功したかどうかをwhichコマンドで確かめる。
+
+which git

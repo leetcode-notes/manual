@@ -1,0 +1,16 @@
+.. _while:
+
+while
+================
+
+
+while
+--------------------------------
+
+.. literalinclude:: while.cs
+
+
+while_RPG
+--------------------------------
+
+.. literalinclude:: while_RPG.cs

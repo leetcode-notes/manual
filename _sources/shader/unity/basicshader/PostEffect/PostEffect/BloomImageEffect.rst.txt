@@ -1,0 +1,5 @@
+PostEffect BloomImageEffect
+---------------------------------------------------------------------------
+
+.. literalinclude:: BloomImageEffect.cs
+

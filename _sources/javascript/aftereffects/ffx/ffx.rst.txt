@@ -1,0 +1,42 @@
+Effect Tool
+################
+
+
+.. figure:: ffx.png
+   :width: 300px
+
+使用方法
+
++ エフェクト編集用のツール
+
+effectsearch
+******************************************
+
+.. figure:: effectsearch.png
+   :width: 300px
+
+* プロジェクト内で使用しているエフェクトの一覧を出力します。
+  エフェクト一覧から、フッテージを選択することも可能です。
+
+
+ffxsetlist
+******************************************
+
+.. figure:: ffxsetlist.png
+   :width: 300px
+
+ffx 共有ツール説明動画
+_________________________
+
+.. raw:: html
+
+    <iframe width="529" height="281" src="https://www.youtube.com/embed/rdwYqJeYO6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+* サーバー上でffxファイルを共有します。
+  以下フォルダに置いてあるffx
+  ファイルを自動で読み込みボタンを押すことで
+  選択フッテージに適応します。
+
+  G:/05_tool/javascript/preset/ffx
+
+

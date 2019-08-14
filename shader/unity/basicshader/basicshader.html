@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>basic shader &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="unity shader" href="../unity.html"/>
+        <link rel="next" title="Fog" href="Fog/Fog.html"/>
+        <link rel="prev" title="unity shader" href="../unity.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shaderforge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../unity.html">unity shader</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">basic shader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Fog/Fog.html">Fog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Lighting/Lighting.html">Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PostEffect/PostEffect.html">PostEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Shadow/Shadow.html">Python manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Texturing/Texturing.html">Texturing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">頂点シェーダー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">フラグメントシェーダー</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../effect/effecgt.html">effect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../unity.html">unity shader</a> &raquo;</li>
+      
+    <li>basic shader</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/unity/basicshader/basicshader.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-shader">
+<h1>basic shader<a class="headerlink" href="#basic-shader" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Fog/Fog.html">Fog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Fog/code/Depth.html">Fog Depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fog/code/Distance.html">Fog Distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fog/code/Height.html">Fog Height</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Lighting/Lighting.html">Lighting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Ambient.html">Lighting Ambient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Blinn-Phong.html">Lighting Blinn-Phong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Cook-Torrance.html">Lighting Cook-Torrance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Diffuse.html">Lighting Diffuse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Oren-Nayar.html">Lighting Oren-Nayar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Phong.html">Lighting Phong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/PointSpot.html">Lighting PointSpot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/PointSpotLUT.html">Lighting PointSpotLUT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Rim.html">Lighting Rim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/SH.html">Lighting SH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Specular.html">Lighting Specular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lighting/Lighting/Toon.html">Lighting Toon</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PostEffect/PostEffect.html">PostEffect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Bloom.html">PostEffect Bloom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/BloomImageEffect.html">PostEffect BloomImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/DOF.html">PostEffect DOF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/DOFImageEffect.html">PostEffect DOFImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/FXAA.html">PostEffect FXAA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Fisheye.html">PostEffect Fisheye</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/GaussianBlur.html">PostEffect GaussianBlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/GaussianBlurImageEffect.html">PostEffect GaussianBlurImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Grayscale.html">PostEffect Grayscale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/ImageEffect.html">PostEffect ImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Kuwahara.html">PostEffect Kuwahara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/LED.html">PostEffect LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Mosaic.html">PostEffect Mosaic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/MotionBlur.html">PostEffect MotionBlur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/MotionBlurImageEffect.html">PostEffect MotionBlurImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Negaposi.html">PostEffect Negaposi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Noise.html">PostEffect Noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Original.html">PostEffect Original</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/SSAO.html">PostEffect SSAO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/SSAOImageEffect.html">PostEffect SSAOImageEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Scanline.html">PostEffect Scanline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Sepia.html">PostEffect Sepia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Sobel.html">PostEffect Sobel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Threshold.html">PostEffect Threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/Twirl.html">PostEffect Twirl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostEffect/PostEffect/ZoomBlur.html">PostEffect ZoomBlur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Shadow/Shadow.html">Python manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/LightCamera.html">Shadow LightCamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/Map.html">Shadow Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/MapCaster.html">Shadow MapCaster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/Projection.html">Shadow Projection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/ShadowVolumeStencil.html">Shadow ShadowVolumeStencil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/Volume.html">Shadow Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Shadow/Shadow/VolumeStencil.html">Shadow VolumeStencil</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Texturing/Texturing.html">Texturing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Bump.html">Texturing Bump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Color.html">Texturing Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Gloss.html">Texturing Gloss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Parallax.html">Texturing Parallax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Reflection.html">Texturing Reflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Texturing/Texturing/Refraction.html">Texturing Refraction</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>頂点シェーダー<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>頂点シェーダーの主な役割は、3Dモデルの頂点座標を2Dの座標に変換することです。</p>
+<p>各頂点の計算はGPUで並列に処理されます。</p>
+<p>な「頂点位置を求める計算」をプログラミングします。</p>
+</div>
+<div class="section" id="id2">
+<h2>フラグメントシェーダー<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>フラグメントシェーダーの主な役割は、ピクセル単位の色を決定することです。各ピクセルの計算はGPUで並列に処理されます。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Fog/Fog.html" class="btn btn-neutral float-right" title="Fog" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../unity.html" class="btn btn-neutral" title="unity shader" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

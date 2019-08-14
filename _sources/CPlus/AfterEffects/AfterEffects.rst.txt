@@ -1,0 +1,8 @@
+AfterEffects Plug-In
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

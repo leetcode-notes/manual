@@ -1,0 +1,5 @@
+9-4_hp_save CharacterInspector
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharacterInspector.cs
+

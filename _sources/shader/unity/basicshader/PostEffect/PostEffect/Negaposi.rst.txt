@@ -1,0 +1,5 @@
+PostEffect Negaposi
+---------------------------------------------------------------------------
+
+.. literalinclude:: Negaposi.shader
+

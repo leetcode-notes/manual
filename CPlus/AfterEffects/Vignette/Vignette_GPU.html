@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AfterEffects Vignette_GPU &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="AfterEffects Plug-In" href="../AfterEffects.html"/>
+        <link rel="next" title="Kasugaccho" href="../../Kasugaccho/Kasugaccho.html"/>
+        <link rel="prev" title="AfterEffects Vignette_CPU" href="Vignette_CPU.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../CPlus.html">C++</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../AfterEffects.html">AfterEffects Plug-In</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Vignette_CPU.html">AfterEffects Vignette_CPU</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AfterEffects Vignette_GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Kasugaccho/Kasugaccho.html">Kasugaccho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../CPlus.html">C++</a> &raquo;</li>
+      
+        <li><a href="../AfterEffects.html">AfterEffects Plug-In</a> &raquo;</li>
+      
+    <li>AfterEffects Vignette_GPU</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CPlus/AfterEffects/Vignette/Vignette_GPU.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aftereffects-vignette-gpu">
+<h1>AfterEffects Vignette_GPU<a class="headerlink" href="#aftereffects-vignette-gpu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;Vignette.h&quot;
+#include &quot;VignetteGPU.h&quot;
+#include &quot;PrGPUFilterModule.h&quot;
+#include &quot;PrSDKVideoSegmentProperties.h&quot;
+
+#if _WIN32
+#include &lt;CL/cl.h&gt;
+#else
+#include &lt;OpenCL/cl.h&gt;
+#endif
+#include &lt;cuda_runtime.h&gt;
+#include &lt;math.h&gt;
+
+//  CUDA KERNEL 
+//  * See SDK_CrossDissolve.cu
+extern void Vignette_CUDA (float *destBuf, int destPitch, int is16f, int width, int height, VigInfoGPU* viP);
+
+//  OPENCL KERNEL
+static const char* kCrossDissolveKernel =
+	&quot;__kernel void CrossDissolveKernel( \n&quot;
+	&quot;	__global float4* inOutgoingImage, \n&quot;
+	&quot;	int inOutgoingPitch, \n&quot;
+	&quot;	__global float4* inIncomingImage, \n&quot;
+	&quot;	int inIncomingPitch, \n&quot;
+	&quot;	__global float4* inDestImage, \n&quot;
+	&quot;	int inDestPitch, \n&quot;
+	&quot;	int in16f, \n&quot;
+	&quot;	int inWidth, \n&quot;
+	&quot;	int inHeight, \n&quot;
+	&quot;	float inProgress, \n&quot;
+	&quot;	int inFlip) \n&quot;
+	&quot;{ \n&quot;
+	&quot;	int x = get_global_id(0); \n&quot;
+	&quot;	int y = get_global_id(1); \n&quot;
+	&quot;	if (x &lt; inWidth &amp;&amp; y &lt; inHeight) \n&quot;
+	&quot;	{ \n&quot;
+	&quot;		float4 outgoing = (float4)(0.0f, 0.0f, 0.0f, 0.0f); \n&quot;
+	&quot;		float4 incoming = (float4)(0.0f, 0.0f, 0.0f, 0.0f); \n&quot;
+	&quot;		if (in16f) \n&quot;
+	&quot;		{ \n&quot;
+	&quot;			if (inOutgoingImage) \n&quot;
+	&quot;			{ \n&quot;
+	&quot;				outgoing = vload_half4(y * inOutgoingPitch + x, (const __global half*)inOutgoingImage); \n&quot;
+	&quot;			} \n&quot;
+	&quot;			if (inIncomingImage) \n&quot;
+	&quot;			{\n&quot;
+	&quot;				incoming = vload_half4(y * inIncomingPitch + x, (const __global half*)inIncomingImage); \n&quot;
+	&quot;			} \n&quot;
+	&quot;		} \n&quot;
+	&quot;		else \n&quot;
+	&quot;		{ \n&quot;
+	&quot;			if (inOutgoingImage) \n&quot;
+	&quot;			{ \n&quot;
+	&quot;				outgoing = inOutgoingImage[y * inOutgoingPitch + x]; \n&quot;
+	&quot;			} \n&quot;
+	&quot;			if (inIncomingImage) \n&quot;
+	&quot;			{ \n&quot;
+	&quot;				incoming = inIncomingImage[y * inIncomingPitch + x]; \n&quot;
+	&quot;			} \n&quot;
+	&quot;		} \n&quot;
+
+	&quot;		float outgoingAlphaWeighted = outgoing.w * (1.0f - inProgress); \n&quot;
+	&quot;		float incomingAlphaWeighted = incoming.w * inProgress; \n&quot;
+	&quot;		float newAlpha = outgoingAlphaWeighted + incomingAlphaWeighted; \n&quot;
+	&quot;		float recipNewAlpha = newAlpha != 0.0f ? 1.0f / newAlpha : 0.0f; \n&quot;
+
+	&quot;		float4 dest; \n&quot;
+	&quot;		dest.x = (outgoing.x * outgoingAlphaWeighted + incoming.x * incomingAlphaWeighted) * recipNewAlpha; \n&quot;
+	&quot;		dest.y = (outgoing.y * outgoingAlphaWeighted + incoming.y * incomingAlphaWeighted) * recipNewAlpha; \n&quot;
+	&quot;		dest.z = (outgoing.z * outgoingAlphaWeighted + incoming.z * incomingAlphaWeighted) * recipNewAlpha; \n&quot;
+	&quot;		dest.w = newAlpha; \n&quot;
+
+	&quot;		if (inFlip) \n&quot;
+	&quot;		{ \n&quot;
+	&quot;			y = inHeight - y - 1; \n&quot;
+	&quot;		} \n&quot;
+
+	&quot;		if (in16f) \n&quot;
+	&quot;		{ \n&quot;
+	&quot;			vstore_half4_rtz(dest, y * inDestPitch + x, (__global half*)inDestImage); \n&quot;
+	&quot;		} \n&quot;
+	&quot;		else \n&quot;
+	&quot;		{ \n&quot;
+	&quot;			inDestImage[y * inDestPitch + x] = dest; \n&quot;
+	&quot;		} \n&quot;
+	&quot;	} \n&quot;
+	&quot;} \n&quot;;
+
+
+static cl_kernel sKernelCache[4];
+
+/*
+**
+*/
+class SDK_CrossDissolve :
+	public PrGPUFilterBase
+{
+public:
+	prSuiteError InitializeCUDA ()
+	{
+		// Nothing to do here. CUDA Kernel statically linked
+
+		return suiteError_NoError;
+		}
+
+	prSuiteError InitializeOpenCL ()
+		{
+		if (mDeviceIndex &gt; sizeof(sKernelCache) / sizeof(cl_kernel))  	{			
+			return suiteError_Fail;		// Exceeded max device count
+		}
+        if (!mTransitionSuite)
+        {
+            // Running in PPro 7.0 in GPU mode, there is a crasher related to GetFrameDependencies
+            // (error message: VideoFrameFactory.cpp-510)
+            // So only use GPU rendering path in 7.1 and later (when TransitionSuite exists)
+			return suiteError_Fail;
+        }
+
+		mCommandQueue = (cl_command_queue)mDeviceInfo.outCommandQueueHandle;
+
+		// Load and compile the kernel - a real plugin would cache binaries to disk
+		mKernel = sKernelCache[mDeviceIndex];
+		if (!mKernel)
+		{
+			cl_int result = CL_SUCCESS;
+			size_t size = strlen(kCrossDissolveKernel);
+			cl_context context = (cl_context)mDeviceInfo.outContextHandle;
+			cl_device_id device = (cl_device_id)mDeviceInfo.outDeviceHandle;
+			cl_program program = clCreateProgramWithSource(context, 1, &amp;kCrossDissolveKernel, &amp;size, &amp;result);
+			if (result != CL_SUCCESS)
+			{
+				return suiteError_Fail;
+			}
+
+			result = clBuildProgram(program, 1, &amp;device, &quot;-cl-single-precision-constant -cl-fast-relaxed-math&quot;, 0, 0);
+			if (result != CL_SUCCESS)
+			{
+				return suiteError_Fail;
+			}
+
+			mKernel = clCreateKernel(program, &quot;CrossDissolveKernel&quot;, &amp;result);
+			if (result != CL_SUCCESS)
+			{
+				return suiteError_Fail;
+			}
+
+			sKernelCache[mDeviceIndex] = mKernel;
+		}
+
+		return suiteError_NoError;
+	}
+
+
+	virtual prSuiteError Initialize( PrGPUFilterInstance* ioInstanceData )
+	{
+		PrGPUFilterBase::Initialize(ioInstanceData);
+
+		if (mDeviceInfo.outDeviceFramework == PrGPUDeviceFramework_CUDA)	
+			return InitializeCUDA();			
+
+		if (mDeviceInfo.outDeviceFramework == PrGPUDeviceFramework_OpenCL)
+			return InitializeOpenCL();			
+
+		return suiteError_Fail;			// GPUDeviceFramework unknown
+	}
+
+	prSuiteError Render(
+		const PrGPUFilterRenderParams* inRenderParams,
+		const PPixHand* inFrames,
+		csSDK_size_t inFrameCount,
+		PPixHand* outFrame)
+	{
+		float progress;
+
+		// Initial steps are independent of CUDA and OpenCL
+
+		if (inFrameCount &lt; 2 || (!inFrames[0] &amp;&amp; !inFrames[1]))
+		{
+			return suiteError_Fail;
+		}
+
+		// read the parameters
+		float brightness = GetParam(SDK_PROCAMP_BRIGHTNESS, inRenderParams-&gt;inClipTime).mFloat32 / 100.0f;
+
+		VigInfoGPU	viP;
+
+		
+
+		void* frameData = 0;
+		mGPUDeviceSuite-&gt;GetGPUPPixData(*outFrame, &amp;frameData);
+
+		PrPixelFormat pixelFormat = PrPixelFormat_Invalid;
+		mPPixSuite-&gt;GetPixelFormat(*outFrame, &amp;pixelFormat);
+
+		prRect bounds = {};
+		mPPixSuite-&gt;GetBounds(*outFrame, &amp;bounds);
+		int width = bounds.right - bounds.left;
+		int height = bounds.bottom - bounds.top;
+
+		// read params
+
+		double featherF = GetParam(VIG_FEATHER, inRenderParams-&gt;inClipTime).mFloat64 / 100.0;
+		featherF = (featherF == 1.0) ? 0.99999 : featherF;
+
+		viP.amountF = static_cast&lt;float&gt;( GetParam(VIG_AMOUNT, inRenderParams-&gt;inClipTime).mFloat64 / 100.0 );
+		double ellipse_aaF = GetParam(VIG_SIZE, inRenderParams-&gt;inClipTime).mFloat64 * width / 200.0;
+		double ellipse_bbF = GetParam(VIG_SIZE, inRenderParams-&gt;inClipTime).mFloat64 * height / 200.0;
+		ellipse_bbF = ellipse_aaF * GetParam(VIG_ROUNDNESS, inRenderParams-&gt;inClipTime).mFloat64 / 100.0 +
+			ellipse_bbF * (100.0 - GetParam(VIG_ROUNDNESS, inRenderParams-&gt;inClipTime).mFloat64) / 100.0;
+
+		viP.outer_aaF = static_cast&lt;float&gt;(ellipse_aaF * (1.0 + featherF));
+		viP.outer_bbF = static_cast&lt;float&gt;(ellipse_bbF * (1.0 + featherF));
+
+		viP.inner_aaF = static_cast&lt;float&gt;(ellipse_aaF * (1.0 - featherF));
+		viP.inner_bbF = static_cast&lt;float&gt;(ellipse_bbF * (1.0 - featherF));
+
+		viP.outer_abF = viP.outer_aaF * viP.outer_bbF;
+		viP.outer_aaF *= viP.outer_aaF;
+		viP.outer_bbF *= viP.outer_bbF;
+		viP.outer_aabbF = viP.outer_aaF * viP.outer_bbF;
+
+		viP.inner_abF = viP.inner_aaF * viP.inner_bbF;
+		viP.inner_aaF *= viP.inner_aaF;
+		viP.inner_bbF *= viP.inner_bbF;
+		viP.inner_aabbF = viP.inner_aaF * viP.inner_bbF;
+
+		viP.x_t = GetParam(VIG_CENTER, inRenderParams-&gt;inClipTime).mPoint.x * width;
+		viP.y_t = GetParam(VIG_CENTER, inRenderParams-&gt;inClipTime).mPoint.y * height;
+
+		csSDK_int32 rowBytes = 0;
+		mPPixSuite-&gt;GetRowBytes(*outFrame, &amp;rowBytes);
+		int pitch = rowBytes / GetGPUBytesPerPixel(pixelFormat);
+		int is16f = pixelFormat != PrPixelFormat_GPU_BGRA_4444_32f;
+
+		// Get dest data
+		void* destFrameData = 0;
+		csSDK_int32 destRowBytes = 0;
+		mGPUDeviceSuite-&gt;GetGPUPPixData(*outFrame, &amp;destFrameData);
+		mPPixSuite-&gt;GetRowBytes(*outFrame, &amp;destRowBytes);
+		int destPitch = destRowBytes / GetGPUBytesPerPixel(pixelFormat);
+
+
+		// Start CUDA or OpenCL specific code
+
+		if (mDeviceInfo.outDeviceFramework == PrGPUDeviceFramework_CUDA) {
+			
+			// CUDA device pointers
+			float* destBuffer = (float*) destFrameData;	
+
+			// Launch CUDA kernel
+			Vignette_CUDA ( destBuffer, 
+							destPitch,
+							is16f, 
+							width, 
+							height, 
+							&amp;viP );
+	
+			if ( cudaPeekAtLastError() != cudaSuccess) 			
+			{
+				return suiteError_Fail;
+			}
+
+		} else {
+			//// OpenCL device pointers
+			//cl_mem destBuffer = (cl_mem)destFrameData;
+
+			//// Set the arguments
+			//clSetKernelArg(mKernel, 0, sizeof(cl_mem), &amp;outgoingBuffer);
+			//clSetKernelArg(mKernel, 1, sizeof(int), &amp;outgoingPitch);
+			//clSetKernelArg(mKernel, 2, sizeof(cl_mem), &amp;incomingBuffer);
+			//clSetKernelArg(mKernel, 3, sizeof(int), &amp;incomingPitch);
+			//clSetKernelArg(mKernel, 4, sizeof(cl_mem), &amp;destBuffer);
+			//clSetKernelArg(mKernel, 5, sizeof(int), &amp;destPitch);
+			//clSetKernelArg(mKernel, 6, sizeof(int), &amp;is16f);
+			//clSetKernelArg(mKernel, 7, sizeof(int), &amp;width);
+			//clSetKernelArg(mKernel, 8, sizeof(int), &amp;height);
+			//clSetKernelArg(mKernel, 9, sizeof(float), &amp;progress);
+			//clSetKernelArg(mKernel, 10, sizeof(int), &amp;flip);
+
+			//// Launch the kernel
+			//size_t threadBlock[2] = { 16, 16 };
+			//size_t grid[2] = { RoundUp(width, threadBlock[0]), RoundUp(height, threadBlock[1] )};
+
+			//cl_int result = clEnqueueNDRangeKernel(
+			//	mCommandQueue,
+			//	mKernel,
+			//	2,
+			//	0,
+			//	grid,
+			//	threadBlock,
+			//	0,
+			//	0,
+			//	0);
+
+			//if ( result != CL_SUCCESS )	
+				return suiteError_Fail;
+		}
+		return suiteError_NoError;
+	}
+
+private:
+	// CUDA
+
+
+	// OpenCL
+	cl_command_queue mCommandQueue;
+	cl_kernel mKernel;
+};
+
+
+/* DECLARE_GPUFILTER_ENTRY(PrGPUFilterModule&lt;SDK_CrossDissolve&gt;) */
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Kasugaccho/Kasugaccho.html" class="btn btn-neutral float-right" title="Kasugaccho" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Vignette_CPU.html" class="btn btn-neutral" title="AfterEffects Vignette_CPU" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

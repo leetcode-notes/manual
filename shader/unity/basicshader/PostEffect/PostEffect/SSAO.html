@@ -1,0 +1,406 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PostEffect SSAO &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../../index.html"/>
+        <link rel="up" title="PostEffect" href="../PostEffect.html"/>
+        <link rel="next" title="PostEffect SSAOImageEffect" href="SSAOImageEffect.html"/>
+        <link rel="prev" title="PostEffect Original" href="Original.html"/> 
+
+  
+  <script src="../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../shaderforge/shaderforge.html">shaderforge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../unity.html">unity shader</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../basicshader.html">basic shader</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../Fog/Fog.html">Fog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Lighting/Lighting.html">Lighting</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../PostEffect.html">PostEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Shadow/Shadow.html">Python manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Texturing/Texturing.html">Texturing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../basicshader.html#id1">頂点シェーダー</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../basicshader.html#id2">フラグメントシェーダー</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../effect/effecgt.html">effect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../../../unity.html">unity shader</a> &raquo;</li>
+      
+        <li><a href="../../basicshader.html">basic shader</a> &raquo;</li>
+      
+        <li><a href="../PostEffect.html">PostEffect</a> &raquo;</li>
+      
+    <li>PostEffect SSAO</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/unity/basicshader/PostEffect/PostEffect/SSAO.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="posteffect-ssao">
+<h1>PostEffect SSAO<a class="headerlink" href="#posteffect-ssao" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shader</span> <span class="s2">&quot;BASICxSHADER/PostEffect/SSAO&quot;</span> <span class="p">{</span>
+  <span class="n">Properties</span> <span class="p">{</span>
+    <span class="n">_MainTex</span> <span class="p">(</span><span class="s2">&quot;Texture&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+    <span class="n">_Radius</span> <span class="p">(</span><span class="s2">&quot;Radius&quot;</span><span class="p">,</span> <span class="n">Range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">_Intensity</span> <span class="p">(</span><span class="s2">&quot;Intensity&quot;</span><span class="p">,</span> <span class="n">Range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.5</span>
+  <span class="p">}</span>
+
+  <span class="n">CGINCLUDE</span>
+  <span class="o">//</span> <span class="n">Vertex</span> <span class="n">Input</span>
+  <span class="n">struct</span> <span class="n">appdata</span> <span class="p">{</span>
+    <span class="n">float4</span> <span class="n">vertex</span> <span class="p">:</span> <span class="n">POSITION</span><span class="p">;</span>
+    <span class="n">float2</span> <span class="n">uv</span>     <span class="p">:</span> <span class="n">TEXCOORD0</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="o">//</span> <span class="n">Vertex</span> <span class="n">to</span> <span class="n">Fragment</span>
+  <span class="n">struct</span> <span class="n">v2f</span> <span class="p">{</span>
+    <span class="n">float4</span> <span class="n">pos</span> <span class="p">:</span> <span class="n">SV_POSITION</span><span class="p">;</span>
+    <span class="n">float2</span> <span class="n">uv</span>  <span class="p">:</span> <span class="n">TEXCOORD0</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="o">//----------------------------------------------------------------------------</span>
+  <span class="o">//</span> <span class="n">Vertex</span> <span class="n">Shader</span>
+  <span class="o">//----------------------------------------------------------------------------</span>
+  <span class="n">v2f</span> <span class="n">vert</span><span class="p">(</span><span class="n">appdata</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">v2f</span> <span class="n">o</span><span class="p">;</span>
+    <span class="n">o</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">UnityObjectToClipPos</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">vertex</span><span class="p">);</span>
+    <span class="n">o</span><span class="o">.</span><span class="n">uv</span>  <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">uv</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">o</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">ENDCG</span>
+
+  <span class="n">SubShader</span> <span class="p">{</span>
+    <span class="n">Cull</span> <span class="n">Off</span> <span class="n">ZWrite</span> <span class="n">Off</span> <span class="n">ZTest</span> <span class="n">Always</span>
+
+    <span class="o">//</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Ambient</span> <span class="n">Occlusion</span>
+    <span class="n">Pass</span> <span class="p">{</span>
+      <span class="n">CGPROGRAM</span>
+      <span class="c1">#pragma vertex vert</span>
+      <span class="c1">#pragma fragment frag</span>
+
+      <span class="c1">#define PI 3.14159265359f</span>
+
+      <span class="o">//</span> <span class="n">Properties</span>
+      <span class="n">uniform</span> <span class="n">half</span>      <span class="n">_Radius</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">half</span>      <span class="n">_Intensity</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_CameraDepthNormalsTexture</span><span class="p">;</span>
+
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="o">//</span> <span class="n">Fragment</span> <span class="n">Shader</span>
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="n">fixed4</span> <span class="n">frag</span><span class="p">(</span><span class="n">v2f</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="n">SV_Target</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Depth</span><span class="p">,</span> <span class="n">Normal</span>
+        <span class="n">half4</span> <span class="n">depthNormals</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_CameraDepthNormalsTexture</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span><span class="p">);</span>
+        <span class="n">half3</span> <span class="n">nn</span> <span class="o">=</span> <span class="n">half3</span><span class="p">((</span><span class="n">depthNormals</span><span class="o">.</span><span class="n">rg</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.7777</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+        <span class="n">half</span>  <span class="n">g</span>  <span class="o">=</span> <span class="mf">2.0</span> <span class="o">/</span> <span class="n">dot</span><span class="p">(</span><span class="n">nn</span><span class="p">,</span> <span class="n">nn</span><span class="p">);</span>
+        <span class="n">half3</span> <span class="n">normal</span> <span class="o">=</span> <span class="n">half3</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">xy</span> <span class="o">*</span> <span class="n">g</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">g</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">));</span>
+        <span class="n">half</span>  <span class="n">depth</span>  <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">depthNormals</span><span class="o">.</span><span class="n">ba</span><span class="p">,</span> <span class="n">half2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">));</span>
+
+        <span class="o">//</span> <span class="n">View</span> <span class="n">Space</span>
+        <span class="n">float3</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">float3</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">uv</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">depth</span> <span class="o">*</span> <span class="n">_ProjectionParams</span><span class="o">.</span><span class="n">z</span><span class="p">);</span>
+        <span class="n">pos</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="p">((</span><span class="n">pos</span><span class="o">.</span><span class="n">xy</span> <span class="o">-</span> <span class="n">unity_CameraProjection</span><span class="o">.</span><span class="n">_13_31</span><span class="p">)</span> <span class="o">/</span> <span class="n">unity_CameraProjection</span><span class="o">.</span><span class="n">_11_22</span><span class="p">)</span> <span class="o">*</span> <span class="n">pos</span><span class="o">.</span><span class="n">z</span><span class="p">;</span>
+
+        <span class="o">//</span> <span class="n">Hemispheric</span> <span class="n">Distribution</span>
+        <span class="nb">float</span> <span class="n">gn</span>    <span class="o">=</span> <span class="n">frac</span><span class="p">(</span><span class="mf">52.9829189</span> <span class="o">*</span> <span class="n">frac</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">uv</span> <span class="o">*</span> <span class="n">_ScreenParams</span><span class="o">.</span><span class="n">xy</span><span class="p">,</span> <span class="n">float2</span><span class="p">(</span><span class="mf">0.06711056</span><span class="p">,</span> <span class="mf">0.00583715</span><span class="p">))));</span>
+        <span class="nb">float</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">gn</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">PI</span><span class="p">;</span>
+        <span class="nb">float</span> <span class="n">u</span>     <span class="o">=</span> <span class="n">gn</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">;</span>
+        <span class="n">float3</span> <span class="n">rand</span> <span class="o">=</span> <span class="n">float3</span><span class="p">(</span><span class="n">float2</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">u</span> <span class="o">*</span> <span class="n">u</span><span class="p">),</span> <span class="n">u</span><span class="p">);</span>
+        <span class="n">rand</span> <span class="o">=</span> <span class="n">faceforward</span><span class="p">(</span><span class="n">rand</span><span class="p">,</span> <span class="o">-</span><span class="n">normal</span><span class="p">,</span> <span class="n">rand</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Ambient</span> <span class="n">Occlusion</span>
+        <span class="n">half</span> <span class="n">ao</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nb">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">float3</span> <span class="n">randPos</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">rand</span> <span class="o">*</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">_Radius</span><span class="p">;</span>
+          <span class="n">float2</span> <span class="n">sampleUv</span> <span class="o">=</span> <span class="p">(</span><span class="n">mul</span><span class="p">(</span><span class="n">unity_CameraProjection</span><span class="p">,</span> <span class="n">randPos</span><span class="p">)</span><span class="o">.</span><span class="n">xy</span> <span class="o">/</span> <span class="n">randPos</span><span class="o">.</span><span class="n">z</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">;</span>
+
+          <span class="n">half4</span> <span class="n">sampleDepthNormals</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_CameraDepthNormalsTexture</span><span class="p">,</span> <span class="n">sampleUv</span><span class="p">);</span>
+          <span class="n">half</span> <span class="n">sampleDepth</span> <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">sampleDepthNormals</span><span class="o">.</span><span class="n">ba</span><span class="p">,</span> <span class="n">half2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">));</span>
+
+          <span class="n">float3</span> <span class="n">samplePos</span> <span class="o">=</span> <span class="n">float3</span><span class="p">(</span><span class="n">sampleUv</span> <span class="o">*</span> <span class="mf">2.0</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">sampleDepth</span> <span class="o">*</span> <span class="n">_ProjectionParams</span><span class="o">.</span><span class="n">z</span><span class="p">);</span>
+          <span class="n">samplePos</span><span class="o">.</span><span class="n">xy</span> <span class="o">=</span> <span class="p">((</span><span class="n">samplePos</span><span class="o">.</span><span class="n">xy</span> <span class="o">-</span> <span class="n">unity_CameraProjection</span><span class="o">.</span><span class="n">_13_31</span><span class="p">)</span> <span class="o">/</span> <span class="n">unity_CameraProjection</span><span class="o">.</span><span class="n">_11_22</span><span class="p">)</span> <span class="o">*</span> <span class="n">samplePos</span><span class="o">.</span><span class="n">z</span><span class="p">;</span>
+          <span class="n">float3</span> <span class="n">v</span> <span class="o">=</span> <span class="n">samplePos</span> <span class="o">-</span> <span class="n">pos</span><span class="p">;</span>
+          <span class="n">ao</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">normal</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">_ProjectionParams</span><span class="o">.</span><span class="n">z</span> <span class="o">/</span> <span class="mf">65536.0</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-4</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">ao</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">ao</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">_Intensity</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">fixed4</span><span class="p">(</span><span class="n">ao</span><span class="p">,</span> <span class="n">ao</span><span class="p">,</span> <span class="n">ao</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">ENDCG</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Bilateral</span> <span class="n">Filter</span>
+    <span class="n">Pass</span> <span class="p">{</span>
+      <span class="n">CGPROGRAM</span>
+      <span class="c1">#pragma vertex vert</span>
+      <span class="c1">#pragma fragment frag</span>
+
+      <span class="o">//</span> <span class="n">Properties</span>
+      <span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_MainTex</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">float4</span>    <span class="n">_MainTex_TexelSize</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">float2</span>    <span class="n">_Direction</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_CameraDepthNormalsTexture</span><span class="p">;</span>
+
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="o">//</span> <span class="n">Fragment</span> <span class="n">Shader</span>
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="n">fixed4</span> <span class="n">frag</span><span class="p">(</span><span class="n">v2f</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="n">SV_Target</span> <span class="p">{</span>
+        <span class="n">fixed4</span> <span class="n">color</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_MainTex</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">Bilateral</span> <span class="n">Filter</span>
+        <span class="nb">float</span> <span class="n">weights</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mf">0.22702702702</span><span class="p">,</span> <span class="mf">0.19459459459</span><span class="p">,</span> <span class="mf">0.12162162162</span><span class="p">,</span> <span class="mf">0.05405405405</span><span class="p">,</span> <span class="mf">0.01621621621</span> <span class="p">};</span>
+        <span class="n">float2</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">_Direction</span> <span class="o">*</span> <span class="n">_MainTex_TexelSize</span><span class="o">.</span><span class="n">xy</span><span class="p">;</span>
+        <span class="n">half</span>   <span class="n">depth</span>  <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">tex2D</span><span class="p">(</span><span class="n">_CameraDepthNormalsTexture</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span><span class="p">)</span><span class="o">.</span><span class="n">ba</span><span class="p">,</span> <span class="n">half2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">));</span>
+
+        <span class="n">half3</span> <span class="n">totalColor</span>  <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*</span> <span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="nb">float</span> <span class="n">totalWeight</span> <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">float2</span> <span class="n">uv1</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span> <span class="o">+</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">j</span><span class="p">;</span>
+          <span class="n">float2</span> <span class="n">uv2</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span> <span class="o">-</span> <span class="n">offset</span> <span class="o">*</span> <span class="n">j</span><span class="p">;</span>
+          <span class="n">half</span>   <span class="n">d1</span>  <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">tex2D</span><span class="p">(</span><span class="n">_CameraDepthNormalsTexture</span><span class="p">,</span> <span class="n">uv1</span><span class="p">)</span><span class="o">.</span><span class="n">ba</span><span class="p">,</span> <span class="n">half2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">));</span>
+          <span class="n">half</span>   <span class="n">d2</span>  <span class="o">=</span> <span class="n">dot</span><span class="p">(</span><span class="n">tex2D</span><span class="p">(</span><span class="n">_CameraDepthNormalsTexture</span><span class="p">,</span> <span class="n">uv2</span><span class="p">)</span><span class="o">.</span><span class="n">ba</span><span class="p">,</span> <span class="n">half2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">));</span>
+          <span class="nb">float</span>  <span class="n">w1</span>  <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">step</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d1</span> <span class="o">-</span> <span class="n">depth</span><span class="p">)</span> <span class="o">*</span> <span class="n">_ProjectionParams</span><span class="o">.</span><span class="n">z</span><span class="p">));</span>
+          <span class="nb">float</span>  <span class="n">w2</span>  <span class="o">=</span> <span class="n">weights</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">step</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d2</span> <span class="o">-</span> <span class="n">depth</span><span class="p">)</span> <span class="o">*</span> <span class="n">_ProjectionParams</span><span class="o">.</span><span class="n">z</span><span class="p">));</span>
+          <span class="n">totalColor</span>  <span class="o">+=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_MainTex</span><span class="p">,</span> <span class="n">uv1</span><span class="p">)</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_MainTex</span><span class="p">,</span> <span class="n">uv2</span><span class="p">)</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*</span> <span class="n">w2</span><span class="p">;</span>
+          <span class="n">totalWeight</span> <span class="o">+=</span> <span class="n">w1</span> <span class="o">+</span> <span class="n">w2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">color</span><span class="o">.</span><span class="n">rgb</span> <span class="o">=</span> <span class="n">totalColor</span> <span class="o">/</span> <span class="n">totalWeight</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="n">color</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">ENDCG</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="mi">2</span><span class="p">:</span> <span class="n">SSAO</span>
+    <span class="n">Pass</span> <span class="p">{</span>
+      <span class="n">CGPROGRAM</span>
+      <span class="c1">#pragma vertex vert</span>
+      <span class="c1">#pragma fragment frag</span>
+
+      <span class="o">//</span> <span class="n">Properties</span>
+      <span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_MainTex</span><span class="p">;</span>
+      <span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_SSAOTex</span><span class="p">;</span>
+
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="o">//</span> <span class="n">Fragment</span> <span class="n">Shader</span>
+      <span class="o">//------------------------------------------------------------------------</span>
+      <span class="n">fixed4</span> <span class="n">frag</span><span class="p">(</span><span class="n">v2f</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="n">SV_Target</span> <span class="p">{</span>
+        <span class="n">fixed4</span> <span class="n">color</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_MainTex</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span><span class="p">);</span>
+
+        <span class="o">//</span> <span class="n">SSAO</span>
+        <span class="n">color</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_SSAOTex</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">uv</span><span class="p">)</span><span class="o">.</span><span class="n">rgb</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="n">color</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="n">ENDCG</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="SSAOImageEffect.html" class="btn btn-neutral float-right" title="PostEffect SSAOImageEffect" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Original.html" class="btn btn-neutral" title="PostEffect Original" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

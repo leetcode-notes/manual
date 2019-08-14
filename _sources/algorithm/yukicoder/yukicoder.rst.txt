@@ -1,0 +1,31 @@
+.. _yukicoder:
+
+================
+yukicoder
+================
+
+
+no046はじめのn歩
+===================
+
+.. literalinclude:: no046はじめのn歩.py
+
+
+no207世界のなんとか
+===================
+
+.. literalinclude:: no207世界のなんとか.py
+
+
+no215素数サイコロと合成数サイコロ
+====================================
+
+.. literalinclude:: no215素数サイコロと合成数サイコロ.py
+
+https://yukicoder.me/submissions/276795
+
+
+no246質問と回答
+===================
+
+.. literalinclude:: no246質問と回答.py

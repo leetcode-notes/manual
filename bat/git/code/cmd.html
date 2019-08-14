@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>cmd Git &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="git" href="../git.html"/>
+        <link rel="next" title="comment" href="comment.html"/>
+        <link rel="prev" title="git" href="../git.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../cmd.html">cmd</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../git.html">git</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">cmd Git</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">ローカルでサーバー作成</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="comment.html">comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diff.html">diff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="log.html">ログ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="registration.html">登録</a></li>
+<li class="toctree-l3"><a class="reference internal" href="return.html">戻す</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html">Python manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../git.html#jetbrains">jetbrains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../linux/rm.html">linux rm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../linux/terminal.html">cmd terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../speech/ffmpeg.html">ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../speech/pydub.html">mp3 pydub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../speech/speech.html">speech</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../youtube/youtube.html">youtube</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../cmd.html">cmd</a> &raquo;</li>
+      
+        <li><a href="../git.html">git</a> &raquo;</li>
+      
+    <li>cmd Git</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/bat/git/code/cmd.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cmd-git">
+<h1>cmd Git<a class="headerlink" href="#cmd-git" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>ローカルでサーバー作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>bare フォルダを作成してクローン作成</p>
+<ul>
+<li><dl>
+<dt>cmd</dt><dd><p>git add .</p>
+<p>git add -i</p>
+<p>git commit -m &quot;first commit&quot;</p>
+<p>git remote add origin &lt;URLアドレス&gt;</p>
+<p>git remote -v</p>
+<p>git push origin master</p>
+<p>git push --help</p>
+<p>vi .gitignore</p>
+<p>git rm -f foo.html~</p>
+<p>※管理対象から削除され同時にファイルも削除される</p>
+<p>git rm --cached -f foo.html~</p>
+<p>※管理対象(インデックス)から削除するだけでファイルはそのままです</p>
+<p>git add -f foo.o</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="server-clone">
+<h3>server clone<a class="headerlink" href="#server-clone" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<blockquote>
+<div><p>git remote add origin <a class="reference external" href="https://github.com/KamezChand/multitask.git">https://github.com/KamezChand/multitask.git</a></p>
+<p>git checkout master</p>
+<p>git push -u origin master</p>
+<p>masterbranch以外の場合</p>
+<p>git checkout feature</p>
+<p>git push origin feature</p>
+</div></blockquote>
+</div>
+<div class="section" id="heroku">
+<h3>heroku<a class="headerlink" href="#heroku" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>heroku login</p>
+<p>heroku create name</p>
+<p>git push heroku master</p>
+<ol class="arabic">
+<li><p>git init</p>
+<p>git add &quot;file&quot;</p>
+<p>git commit -m &quot;メッセージ&quot;</p>
+</li>
+<li><p>オプションを付けないで実行すると、簡易ヘルプが表示される</p>
+<blockquote>
+<div><p>git</p>
+</div></blockquote>
+</li>
+<li><p>バージョンを表示する</p>
+<blockquote>
+<div><p>git --version</p>
+</div></blockquote>
+</li>
+<li><p>名前とメールアドレスを登録する。作業履歴の記録時に、この名前が使われる。</p>
+<blockquote>
+<div><p>git config --global user.name &quot;kirishima&quot;
+git config --global user.email &quot;<a class="reference external" href="mailto:kirishima&#37;&#52;&#48;paiza&#46;jp">kirishima<span>&#64;</span>paiza<span>&#46;</span>jp</a>&quot;</p>
+</div></blockquote>
+</li>
+<li><p>登録情報を確認する。</p>
+<blockquote>
+<div><p>git config --list</p>
+</div></blockquote>
+</li>
+<li><p>myworkディレクトリを作って、そこにリポジトリを作成する。作業履歴は、このディレクトリの「.git」という隠しディレクトリに記録される。</p>
+<blockquote>
+<div><p>mkdir mywork
+cd mywork
+git init</p>
+</div></blockquote>
+</li>
+<li><p>リポジトリやステージングエリアの状態を確認する</p>
+<blockquote>
+<div><p>git status</p>
+</div></blockquote>
+</li>
+</ol>
+<p>git remote set-url origin <a class="reference external" href="https://github.com/mmhns/manual-all.git">https://github.com/mmhns/manual-all.git</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="comment.html" class="btn btn-neutral float-right" title="comment" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../git.html" class="btn btn-neutral" title="git" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

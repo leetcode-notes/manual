@@ -1,0 +1,5 @@
+PostEffect GaussianBlur
+---------------------------------------------------------------------------
+
+.. literalinclude:: GaussianBlur.shader
+

@@ -1,0 +1,5 @@
+effect INoiseGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: INoiseGenerator.cs
+

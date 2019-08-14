@@ -1,0 +1,30 @@
+unity shader
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+プログラマブルなシェーダーステージは、
+
+「頂点シェーダー」
+
+「ハルシェーダー」
+
+「ドメインシェーダー」
+
+「ジオメトリシェーダー」
+
+「フラグメントシェーダー」
+
+の5種類です。
+
+このほかには、描画処理から独立している「コンピュートシェーダー」が存在
+
+midnightSuyama (2019-07-18). BASIC×SHADER: Unityで学ぶシェーダープログラミング (Kindle の位置No.74-76). midnightSuyama. Kindle 版.
+
+7日間でマスターするUnityシェーダ入門
+
+http://nn-hokuson.hatenablog.com/entry/2018/02/15/140037

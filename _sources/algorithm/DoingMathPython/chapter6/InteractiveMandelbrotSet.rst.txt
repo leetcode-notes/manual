@@ -1,0 +1,6 @@
+DoingMathPython chapter6 InteractiveMandelbrotSet
+===============================================================================================
+
+.. raw:: html
+   :file: html/InteractiveMandelbrotSet.html
+

@@ -1,0 +1,14 @@
+mp3 pydub
+============
+
+pydub
+
+https://algorithm.joho.info/programming/python/pydub-install/
+
+ffmpeg
+
+https://kkroening.github.io/ffmpeg-python/index.html
+
+
+
+https://qiita.com/ayumu838/items/4f20d47ca7e9f5fbcfca

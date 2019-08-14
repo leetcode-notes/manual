@@ -1,0 +1,5 @@
+PostEffect SSAOImageEffect
+---------------------------------------------------------------------------
+
+.. literalinclude:: SSAOImageEffect.cs
+

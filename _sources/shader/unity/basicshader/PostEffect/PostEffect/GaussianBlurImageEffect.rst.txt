@@ -1,0 +1,5 @@
+PostEffect GaussianBlurImageEffect
+---------------------------------------------------------------------------
+
+.. literalinclude:: GaussianBlurImageEffect.cs
+

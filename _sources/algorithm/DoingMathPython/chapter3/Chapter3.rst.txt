@@ -1,0 +1,6 @@
+DoingMathPython chapter3 Chapter3
+===============================================================================================
+
+.. raw:: html
+   :file: html/Chapter3.html
+

@@ -1,0 +1,5 @@
+effect HaltonSequence
+---------------------------------------------------------------------------
+
+.. literalinclude:: HaltonSequence.cs
+

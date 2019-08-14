@@ -1,0 +1,5 @@
+Lighting Oren-Nayar
+---------------------------------------------------------------------------
+
+.. literalinclude:: Oren-Nayar.shader
+

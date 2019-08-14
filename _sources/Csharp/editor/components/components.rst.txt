@@ -1,0 +1,15 @@
+Python manual
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+【Unity】コンポーネントのアタッチ時にデフォルト値を自動で設定する
+
+Component.cs
+
+https://qiita.com/beiyuen/items/39956ef1c70c94d6e3ab

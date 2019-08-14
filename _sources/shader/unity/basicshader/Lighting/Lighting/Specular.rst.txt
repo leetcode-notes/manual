@@ -1,0 +1,5 @@
+Lighting Specular
+---------------------------------------------------------------------------
+
+.. literalinclude:: Specular.shader
+

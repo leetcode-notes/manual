@@ -1,0 +1,62 @@
+Linux
+#################
+
+VirtualBox
+******************************************
+
+使用方法
+***********
+
+仮想化
+***********
+
+
+.. figure:: Virtualization.png
+   :width: 250px
+
+
+アプリケーション方式
+***********************
+
+
+.. figure:: application.png
+
+
+hypervisor
+***********************
+
+
+.. figure:: hypervisor.png
+
+
+ubuntu
+******************************************
+
+使用方法
+***********
+
+仮想化
+***********
+
+
+.. figure:: Virtualization.png
+   :width: 250px
+
+
+#. **UseBacksdwoff**：
+
+   選択しているモデルにreflectivity、reflectionLimit、shadowMaskをオフにした UseBackGroundマテリアルを適用します。
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+圧縮
+******
+hogeファイルを圧縮する
+$ gzip hoge
+
+https://tech.nikkeibp.co.jp/it/article/COLUMN/20060227/230791/
+

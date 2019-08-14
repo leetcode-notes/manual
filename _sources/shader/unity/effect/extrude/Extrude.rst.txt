@@ -1,0 +1,8 @@
+effect Extrude
+---------------------------------------------------------------------------
+
+.. figure:: Extrude.png
+	:width: 400px
+
+.. literalinclude:: Extrude.shader
+

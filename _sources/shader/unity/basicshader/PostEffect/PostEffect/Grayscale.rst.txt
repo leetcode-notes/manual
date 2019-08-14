@@ -1,0 +1,5 @@
+PostEffect Grayscale
+---------------------------------------------------------------------------
+
+.. literalinclude:: Grayscale.shader
+

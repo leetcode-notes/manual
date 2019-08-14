@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Car RendSet &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../index.html"/>
+        <link rel="up" title="maya Tool manual" href="../maya.html"/>
+        <link rel="next" title="Charactor RendSet" href="../mg_rdmrset_ch/mg_rdmrset_ch.html"/>
+        <link rel="prev" title="Cagastel RendSet" href="../me_rdmrset_cag/me_rdmrset_cag.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../maya.html">maya Tool　manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ma_newscene_make/ma_newscene_make.html">New Scene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mb_projscenes_load/mb_projscenes_load.html">LOAD SCENE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mc_LoadReference/mc_LoadReference.html">LOAD Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../md_rdmrset_all/md_rdmrset_all.html">Rendaring Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../me_rdmrset_cag/me_rdmrset_cag.html">Cagastel RendSet</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Car RendSet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">機能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">使用方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">共通部分使用方法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mg_rdmrset_ch/mg_rdmrset_ch.html">Charactor RendSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mh_rdmrset_bg/mh_rdmrset_bg.html">BG RendSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mh_rdmrset_bg_garden/mh_rdmrset_bg_garden.html">BG Garden Mario RendSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mi_backburner_set/mi_backburner_set.html">BackBurner Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mj_newscene_replace/mj_newscene_replace.html">NewScene REPLACE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mk_various_tools/mk_various_tools.html">Various Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ml_CutSceneAssetModelUP_tools/ml_CutSceneAssetModelUP_tools.html">CutSceneAssetModle UPTool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mm_VariousDataup_tools/mm_VariousDataup_tools.html">Various Data UPTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mn_rdmrset_txt/mn_rdmrset_txt.html">TextTo Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mo_renamer/mo_renamer.html">Rename Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mp_StudioLibrary/mp_StudioLibrary.html">Studio Library</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../maya.html">maya Tool　manual</a> &raquo;</li>
+      
+    <li>Car RendSet</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/maya/mf_rdmrset_car/mf_rdmrset_car.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="car-rendset">
+<h1>Car RendSet<a class="headerlink" href="#car-rendset" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/mf_rdmrset_car.png"><img alt="../../_images/mf_rdmrset_car.png" src="../../_images/mf_rdmrset_car.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id1">
+<h2>機能<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>車のレンダーレイヤー作成、マスク作成、Smooth設定、Rendaring設定を行うことが出来ます。</p>
+</div>
+<div class="section" id="id2">
+<h2>使用方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/carrendset.png"><img alt="../../_images/carrendset.png" src="../../_images/carrendset.png" style="width: 300px;" /></a>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Select Cagastel</strong>：</p></li>
+</ol>
+<p>　車、戦車などの乗り物一覧が表示されています。
+　レンダーレイヤーに追加したいものを追加してください。</p>
+<ol class="arabic">
+<li><p><strong>Select Light add to sdw render layer</strong>：</p>
+<p>選択しているライトをsdwレイヤーに追加します。</p>
+<p>複数選択が可能です。</p>
+</li>
+<li><p><strong>Select Cmaera Camera connect linemesh</strong></p>
+<p>選択しているカメラをレンダリング可能な状態にします。
+ラインをポリゴンメッシュ化した後、ラインとカメラをコネクトします。</p>
+</li>
+<li><p><strong>RenderLayer Name</strong></p>
+<p>下のBoxの名前を使用してレンダーレイヤーを作成します。
+同じ名前のレンダーレイヤーがある際はそのレイヤーに追加していきます。</p>
+</li>
+<li><p><strong>RenderLayer Kind</strong></p>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>ibl</dt><dd><p>通常は使用しないためデフォルトではオフにしています。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>COL</dt><dd><p>ambient Lightを使用したカラーレンダーレイヤーを作成します。
+Glassモデルは除外します。
+シーン内のambint Lightを全て追加します。
+シーン内にambient Lightがない場合は自動で作成します。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDW</dt><dd><p>ツール内で選択しているモデルに lambetMaterialを適用してレンダーレイヤーを作成します。ツール内で選択している乗り物と、Lightを追加します。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Line</dt><dd><p>ツール内で選択しているモデルのLineをMeshにConvertし、カメラコネクトしたToonLineを作成します。またツール内で選択しているモデルにBlackHoleを適用します。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Glass</dt><dd><p>COLレイヤーを作る際に自動作成します。車をBlackHole設定にして、glassのみのレンダリングを行います。</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>smooth+normal</dt><dd><p>選択しているモデルに法線情報、スムース情報を追加します。</p>
+<p>Rendaring Toolsの <a class="reference internal" href="../md_rdmrset_all/md_rdmrset_all.html#rendertoolsmoothnormal"><span class="std std-ref">Smooth Normal</span></a> と同機能です。</p>
+</dd>
+</dl>
+</li>
+<li id="renderlayersmoothnormal"><dl class="simple">
+<dt>UseBackGround</dt><dd><p>Lineレイヤーを作成する際にキャラに割り当てるBlackholeをUseBackGroundで割り当てます。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>smooth(all mesh)</dt><dd><p>選択しているモデルにスムースを追加します。</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>hide model line remove</dt><dd><p>非表示になっているモデルを、全てラインから削除します。</p>
+<p>Rndaring Toolsの <a class="reference internal" href="../md_rdmrset_all/md_rdmrset_all.html#rendertoolline"><span class="std std-ref">hide model line remove</span></a> と同機能です。</p>
+</dd>
+</dl>
+</li>
+</ol>
+</li>
+<li><p><strong>Make RenderLayer</strong></p>
+<p>設定した状態でレンダーレイヤーを作成します。</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<ul class="simple">
+<li><p>モデル、カメラは必ず選択してください。</p></li>
+<li><p>ライトは、選択しなくても作成が可能です。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>共通部分使用方法<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カガステル、車、キャラクターレンダーレイヤー作成ツールの共通機能です。</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/RendaringLayer_Common1.png"><img alt="../../_images/RendaringLayer_Common1.png" src="../../_images/RendaringLayer_Common1.png" style="width: 300px;" /></a>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Render Layer All Delete</strong>：</p></li>
+</ol>
+<p>　現在作成されているレンダーレイヤーを全て削除します。</p>
+<ol class="arabic simple">
+<li><p><strong>Reset Render Layer</strong>：</p></li>
+</ol>
+<p>　レンダーレイヤーエラーをリセットします。</p>
+<ol class="arabic simple">
+<li><p><strong>Reset Scene</strong>：</p></li>
+</ol>
+<p>　シーンをリセットします。レンダーレイヤーの作成、レンダリングにエラーが出る際に使用してください。</p>
+<blockquote>
+<div><p>VariousToolsの  <a class="reference internal" href="../mk_various_tools/mk_various_tools.html#renderresettool"><span class="std std-ref">Reset Scene</span></a> と同機能です。</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p><strong>File Save</strong>：</p></li>
+</ol>
+<p>　Boxの名前でファイルを保存します。</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/RendaringLayer_Common_mask1.png"><img alt="../../_images/RendaringLayer_Common_mask1.png" src="../../_images/RendaringLayer_Common_mask1.png" style="width: 300px;" /></a>
+</div>
+<ol class="arabic simple">
+<li><p><strong>Render Window Reflesh</strong>：</p></li>
+</ol>
+<p>　レンダーウィンドウをリセットします。</p>
+<ol class="arabic simple">
+<li><p><strong>Add Mask Model</strong>：</p></li>
+</ol>
+<p>　アクティブ状態のレンダーレイヤーに選択しているモデルをマスクモデルとして追加します。
+　マスクモデルにはBlackHoleマテリアルを適応します。</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mg_rdmrset_ch/mg_rdmrset_ch.html" class="btn btn-neutral float-right" title="Charactor RendSet" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../me_rdmrset_cag/me_rdmrset_cag.html" class="btn btn-neutral" title="Cagastel RendSet" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

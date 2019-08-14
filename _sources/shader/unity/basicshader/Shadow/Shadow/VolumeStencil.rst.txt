@@ -1,0 +1,5 @@
+Shadow VolumeStencil
+---------------------------------------------------------------------------
+
+.. literalinclude:: VolumeStencil.shader
+

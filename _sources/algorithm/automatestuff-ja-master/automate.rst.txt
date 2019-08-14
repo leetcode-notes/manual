@@ -1,0 +1,22 @@
+退屈なことはPythonにやらせよう
+================================
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   */*
+
+https://automatetheboringstuff.com/
+
+https://www.oreilly.co.jp/books/9784873117782/
+
+https://github.com/oreilly-japan/automatestuff-ja/
+
+読者の皆様のご要望が多かったため、演習プロジェクトの解答例を追加しました。
+
+(https://github.com/oreilly-japan/automatestuff-ja/blob/master/practice_pj/practice_projects_20170727.zip)
+
+ご購読者の特典とするため、ZIPファイルにはパスワードを設定してあります。
+
+パスワードは、11.3.4節の本文に現れる最初の英単語3つをつなげたものです。

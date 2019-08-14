@@ -1,0 +1,14 @@
+戻す
+******
+
+#. ワーキングディレクトリのファイルを前の状態に戻す
+
+    git checkout readme.txt
+
+#. ステージング上の特定ファイルをひとつ前の状態に戻す
+
+    git reset readme.txt
+
+#. 最新のコミットを打ち消す
+
+    git revert HEAD

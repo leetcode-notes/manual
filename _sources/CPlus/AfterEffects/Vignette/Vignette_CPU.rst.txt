@@ -1,0 +1,5 @@
+AfterEffects Vignette_CPU
+---------------------------------------------------------------------------
+
+.. literalinclude:: Vignette_CPU.cpp
+

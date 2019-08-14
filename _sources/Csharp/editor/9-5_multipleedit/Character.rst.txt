@@ -1,0 +1,5 @@
+9-5_multipleedit Character
+---------------------------------------------------------------------------
+
+.. literalinclude:: Character.cs
+

@@ -1,0 +1,33 @@
+登録
+=======
+
+Registration
+---------------
+
+#. ステージングエリアに仮登録する
+
+    git add readme.txt
+
+#. ステージングエリアにまとめて仮登録する
+
+    git add .
+
+#. ステージングエリアの内容をコミットする
+
+    git commit
+
+#. 仮登録とコミットを同時に実行する
+
+    git commit -a
+
+#. コミットメッセージを同時に指定する
+
+    git commit -m "commit message"
+
+#. 仮登録、コミットメッセージを同時に指定する
+
+    git commit -a -m "commit message"
+
+#. コミット履歴を確認する
+
+    git log

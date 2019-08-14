@@ -1,0 +1,5 @@
+utility CreateScriptableObjectMenu
+---------------------------------------------------------------------------
+
+.. literalinclude:: CreateScriptableObjectMenu.cs
+

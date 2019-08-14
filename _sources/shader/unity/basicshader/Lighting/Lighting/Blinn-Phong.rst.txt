@@ -1,0 +1,5 @@
+Lighting Blinn-Phong
+---------------------------------------------------------------------------
+
+.. literalinclude:: Blinn-Phong.shader
+

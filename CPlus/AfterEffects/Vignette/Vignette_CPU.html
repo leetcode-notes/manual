@@ -1,0 +1,1157 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AfterEffects Vignette_CPU &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="AfterEffects Plug-In" href="../AfterEffects.html"/>
+        <link rel="next" title="AfterEffects Vignette_GPU" href="Vignette_GPU.html"/>
+        <link rel="prev" title="AfterEffects Plug-In" href="../AfterEffects.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../CPlus.html">C++</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../AfterEffects.html">AfterEffects Plug-In</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">AfterEffects Vignette_CPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Vignette_GPU.html">AfterEffects Vignette_GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Kasugaccho/Kasugaccho.html">Kasugaccho</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unreal/unreal.html">Unreal Engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool　manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../CPlus.html">C++</a> &raquo;</li>
+      
+        <li><a href="../AfterEffects.html">AfterEffects Plug-In</a> &raquo;</li>
+      
+    <li>AfterEffects Vignette_CPU</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/CPlus/AfterEffects/Vignette/Vignette_CPU.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aftereffects-vignette-cpu">
+<h1>AfterEffects Vignette_CPU<a class="headerlink" href="#aftereffects-vignette-cpu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#include &quot;Vignette.h&quot;
+
+static PF_FpShort ClipSum32(const PF_FpShort in, const PF_FpLong modF) {
+	return static_cast&lt;PF_FpShort&gt;(MAX(0, modF + in));
+}
+
+static A_u_char ClipSum8(const A_u_char in, const PF_FpLong modF) {
+	return static_cast&lt;A_u_char&gt;(MAX(0, MIN(modF + in, PF_MAX_CHAN8)));
+}
+
+static PF_Err 
+About (	
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output )
+{
+	AEGP_SuiteHandler suites(in_data-&gt;pica_basicP);
+	
+	suites.ANSICallbacksSuite1()-&gt;sprintf(	out_data-&gt;return_msg,
+											&quot;%s v%d.%d\r%s&quot;,
+											strName, 
+											MAJOR_VERSION, 
+											MINOR_VERSION, 
+											strDescription);
+	return PF_Err_NONE;
+}
+
+static PF_Err 
+GlobalSetup (	
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output )
+{
+	out_data-&gt;my_version = PF_VERSION(	MAJOR_VERSION, 
+										MINOR_VERSION,
+										BUG_VERSION, 
+										STAGE_VERSION, 
+										BUILD_VERSION);
+
+	out_data-&gt;out_flags |=	PF_OutFlag_PIX_INDEPENDENT |
+							PF_OutFlag_USE_OUTPUT_EXTENT;
+
+	out_data-&gt;out_flags2 =	PF_OutFlag2_SUPPORTS_SMART_RENDER |
+							PF_OutFlag2_FLOAT_COLOR_AWARE |
+							PF_OutFlag2_DOESNT_NEED_EMPTY_PIXELS;
+
+	// For Premiere - declare supported pixel formats
+	if (in_data-&gt;appl_id == &#39;PrMr&#39;) {
+
+		auto pixelFormatSuite =
+			AEFX_SuiteScoper&lt;PF_PixelFormatSuite1&gt;(in_data,
+												   kPFPixelFormatSuite,
+												   kPFPixelFormatSuiteVersion1,
+												   out_data);
+
+		//	Add the pixel formats we support in order of preference.
+		(*pixelFormatSuite-&gt;ClearSupportedPixelFormats)(in_data-&gt;effect_ref);
+		(*pixelFormatSuite-&gt;AddSupportedPixelFormat)(
+			in_data-&gt;effect_ref,
+			PrPixelFormat_VUYA_4444_32f);
+		(*pixelFormatSuite-&gt;AddSupportedPixelFormat)(
+			in_data-&gt;effect_ref,
+			PrPixelFormat_BGRA_4444_32f);
+		(*pixelFormatSuite-&gt;AddSupportedPixelFormat)(
+			in_data-&gt;effect_ref,
+			PrPixelFormat_VUYA_4444_8u);
+		(*pixelFormatSuite-&gt;AddSupportedPixelFormat)(
+			in_data-&gt;effect_ref,
+			PrPixelFormat_BGRA_4444_8u);
+	}
+	
+	return PF_Err_NONE;
+}
+
+static PF_Err 
+ParamsSetup (	
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output )
+{
+	PF_Err		err		= PF_Err_NONE;
+	PF_ParamDef	def;	
+
+	AEFX_CLR_STRUCT(def);
+
+	PF_ADD_POINT(strCenter_ParamName.c_str(),
+				 VIG_CENTER_DFLT,
+				 VIG_CENTER_DFLT,
+				 FALSE,
+				 CENTER_DISK_ID);
+
+	AEFX_CLR_STRUCT(def);
+
+	PF_ADD_FLOAT_SLIDERX(	strAmount_ParamName.c_str(), 
+							VIG_AMOUNT_MIN,
+							VIG_AMOUNT_MAX,
+							VIG_AMOUNT_MIN,
+							VIG_AMOUNT_MAX,
+							VIG_AMOUNT_DFLT,
+							PF_Precision_TENTHS,
+							0,
+							0,
+							AMOUNT_DISK_ID);
+
+	AEFX_CLR_STRUCT(def);
+
+	PF_ADD_FLOAT_SLIDERX(strSize_ParamName.c_str(),
+						 VIG_SIZE_RANGE_MIN,
+						 VIG_SIZE_RANGE_MAX,
+						 VIG_SIZE_MIN,
+						 VIG_SIZE_MAX,
+						 VIG_SIZE_DFLT,
+						 PF_Precision_TENTHS,
+						 0,
+						 0,
+						 SIZE_DISK_ID);
+
+	AEFX_CLR_STRUCT(def);
+
+	PF_ADD_FLOAT_SLIDERX(strRoundness_ParamName.c_str(),
+						 VIG_ROUNDNESS_MIN,
+						 VIG_ROUNDNESS_MAX,
+						 VIG_ROUNDNESS_MIN,
+						 VIG_ROUNDNESS_MAX,
+						 VIG_ROUNDNESS_DFLT,
+						 PF_Precision_TENTHS,
+						 0,
+						 0,
+						 ROUNDNESS_DISK_ID);
+
+	AEFX_CLR_STRUCT(def);
+
+	PF_ADD_FLOAT_SLIDERX(strFeather_ParamName.c_str(),
+						 VIG_FEATHER_MIN,
+						 VIG_FEATHER_MAX,
+						 VIG_FEATHER_MIN,
+						 VIG_FEATHER_MAX,
+						 VIG_FEATHER_DFLT,
+						 PF_Precision_TENTHS,
+						 0,
+						 0,
+						 FEATHER_DISK_ID);
+
+	out_data-&gt;num_params = VIG_NUM_PARAMS;
+
+	return err;
+}
+
+static PF_FpLong
+CalculateBlendingAmount(
+	void		*refcon,
+	A_long		xL,
+	A_long		yL)
+{
+	A_long	x_tL, y_tL;
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		x_tL = xL - viP-&gt;x_t;
+		y_tL = yL - viP-&gt;y_t;
+
+		if (x_tL == 0 &amp;&amp; y_tL == 0)
+		{
+			return 0.0;
+		}
+
+		if (abs(x_tL) &lt; viP-&gt;innerRect_aL &amp;&amp;
+			abs(y_tL) &lt; viP-&gt;innerRect_bL)
+		{
+			return 0.0;
+		}
+
+		if (viP-&gt;outerCheck &amp;&amp;
+			(y_tL &gt; viP-&gt;outerRect_bL ||
+			y_tL &lt; -viP-&gt;outerRect_bL ||
+			x_tL &gt; viP-&gt;outerRect_aL ||
+			x_tL &lt; -viP-&gt;outerRect_aL))
+		{
+			return 1.0;
+		}
+
+		PF_FpLong xx = x_tL * x_tL;
+		PF_FpLong yy = y_tL * y_tL;
+
+		if (xx*viP-&gt;innerEllipse_bbF + yy * viP-&gt;innerEllipse_aaF &lt; viP-&gt;innerEllipse_aabbF) {
+			return 0.0;
+		}
+		else {
+			if (xx*viP-&gt;outerEllipse_bbF + yy * viP-&gt;outerEllipse_aaF &gt;= viP-&gt;outerEllipse_aabbF) {
+				return 1.0;
+			}
+			else {
+				PF_FpLong R = sqrt(xx + yy),
+					r_i = viP-&gt;innerEllipse_abF / sqrt(viP-&gt;innerEllipse_bbF * xx + viP-&gt;innerEllipse_aaF * yy) * R,
+					r_o = viP-&gt;outerEllipse_abF / sqrt(viP-&gt;outerEllipse_bbF * xx + viP-&gt;outerEllipse_aaF * yy) * R;
+				return (R - r_i) / (r_o - r_i);
+			}
+		}
+	}
+
+	return 0.0;
+}
+
+static PF_Err
+DrawVignette32(
+	void		*refcon,
+	A_long		xL,
+	A_long		yL,
+	PF_PixelFloat	*inP,
+	PF_PixelFloat	*outP)
+{
+	PF_Err		err = PF_Err_NONE;
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outP-&gt;alpha = inP-&gt;alpha;
+		outP-&gt;red = ClipSum32(inP-&gt;red, amountF);
+		outP-&gt;green = ClipSum32(inP-&gt;green, amountF);
+		outP-&gt;blue = ClipSum32(inP-&gt;blue, amountF);
+	}
+
+	return err;
+}
+
+
+static PF_Err
+DrawVignetteBGRA_32f(
+	void			*refcon,
+	A_long			xL,
+	A_long			yL,
+	PF_PixelFloat	*inP,
+	PF_PixelFloat	*outP)
+{
+	PF_Err			err = PF_Err_NONE;
+
+	PF_Pixel_BGRA_32f *inBGRA_32fP, *outBGRA_32fP;
+	inBGRA_32fP = reinterpret_cast&lt;PF_Pixel_BGRA_32f*&gt;(inP);
+	outBGRA_32fP = reinterpret_cast&lt;PF_Pixel_BGRA_32f*&gt;(outP);
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outBGRA_32fP-&gt;alpha = inBGRA_32fP-&gt;alpha;
+		outBGRA_32fP-&gt;red = ClipSum32(inBGRA_32fP-&gt;red, amountF);
+		outBGRA_32fP-&gt;green = ClipSum32(inBGRA_32fP-&gt;green, amountF);
+		outBGRA_32fP-&gt;blue = ClipSum32(inBGRA_32fP-&gt;blue, amountF);
+	}
+	return err;
+}
+
+static PF_Err
+DrawVignetteVUYA_32f(
+	void			*refcon,
+	A_long			xL,
+	A_long			yL,
+	PF_PixelFloat	*inP,
+	PF_PixelFloat	*outP)
+{
+	PF_Err			err = PF_Err_NONE;
+
+	PF_Pixel_VUYA_32f *inVUYA_32fP, *outVUYA_32fP;
+	inVUYA_32fP = reinterpret_cast&lt;PF_Pixel_VUYA_32f*&gt;(inP);
+	outVUYA_32fP = reinterpret_cast&lt;PF_Pixel_VUYA_32f*&gt;(outP);
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outVUYA_32fP-&gt;alpha = inVUYA_32fP-&gt;alpha;
+		outVUYA_32fP-&gt;luma = ClipSum32(inVUYA_32fP-&gt;luma, amountF);
+		outVUYA_32fP-&gt;Pb = inVUYA_32fP-&gt;Pb;
+		outVUYA_32fP-&gt;Pr = inVUYA_32fP-&gt;Pr;
+	}
+	return err;
+}
+
+static PF_Err
+DrawVignette16(
+	void		*refcon,
+	A_long		xL,
+	A_long		yL,
+	PF_Pixel16	*inP,
+	PF_Pixel16	*outP)
+{
+	PF_Err		err = PF_Err_NONE;
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	auto ClipSum16 = [](const A_u_short in, const PF_FpLong modF) {
+		return static_cast&lt;A_u_short&gt;(MAX(0, MIN(modF + in, PF_MAX_CHAN16)));
+	};
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outP-&gt;alpha = inP-&gt;alpha;
+		outP-&gt;red = ClipSum16(inP-&gt;red, amountF);
+		outP-&gt;green = ClipSum16(inP-&gt;green, amountF);
+		outP-&gt;blue = ClipSum16(inP-&gt;blue, amountF);
+	}
+
+	return err;
+}
+
+static PF_Err
+DrawVignette8 (
+	void		*refcon, 
+	A_long		xL, 
+	A_long		yL, 
+	PF_Pixel8	*inP, 
+	PF_Pixel8	*outP)
+{
+	PF_Err		err = PF_Err_NONE;
+
+	VigInfo	*viP	= reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP){
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outP-&gt;alpha		= inP-&gt;alpha;
+		outP-&gt;red		= ClipSum8(inP-&gt;red, amountF);
+		outP-&gt;green		= ClipSum8(inP-&gt;green, amountF);
+		outP-&gt;blue		= ClipSum8(inP-&gt;blue, amountF);
+	}
+
+	return err;
+}
+
+
+static PF_Err
+DrawVignetteBGRA_8u(
+	void		*refcon,
+	A_long		xL,
+	A_long		yL,
+	PF_Pixel8	*inP,
+	PF_Pixel8	*outP)
+{
+	PF_Err			err = PF_Err_NONE;
+
+	PF_Pixel_BGRA_8u *inBGRA_8uP, *outBGRA_8uP;
+	inBGRA_8uP = reinterpret_cast&lt;PF_Pixel_BGRA_8u*&gt;(inP);
+	outBGRA_8uP = reinterpret_cast&lt;PF_Pixel_BGRA_8u*&gt;(outP);
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outBGRA_8uP-&gt;alpha = inBGRA_8uP-&gt;alpha;
+		outBGRA_8uP-&gt;red = ClipSum8(inBGRA_8uP-&gt;red, amountF);
+		outBGRA_8uP-&gt;green = ClipSum8(inBGRA_8uP-&gt;green, amountF);
+		outBGRA_8uP-&gt;blue = ClipSum8(inBGRA_8uP-&gt;blue, amountF);
+	}
+	return err;
+}
+
+static PF_Err
+DrawVignetteVUYA_8u(
+	void		*refcon,
+	A_long		xL,
+	A_long		yL,
+	PF_Pixel8	*inP,
+	PF_Pixel8	*outP)
+{
+	PF_Err			err = PF_Err_NONE;
+
+	PF_Pixel_VUYA_8u *inVUYA_8uP, *outVUYA_8uP;
+	inVUYA_8uP = reinterpret_cast&lt;PF_Pixel_VUYA_8u*&gt;(inP);
+	outVUYA_8uP = reinterpret_cast&lt;PF_Pixel_VUYA_8u*&gt;(outP);
+
+	VigInfo	*viP = reinterpret_cast&lt;VigInfo*&gt;(refcon);
+
+	if (viP) {
+		PF_FpLong amountF = viP-&gt;amountF * CalculateBlendingAmount(refcon, xL, yL);
+
+		outVUYA_8uP-&gt;alpha = inVUYA_8uP-&gt;alpha;
+		outVUYA_8uP-&gt;luma = ClipSum8(inVUYA_8uP-&gt;luma, amountF);
+		outVUYA_8uP-&gt;Pb = inVUYA_8uP-&gt;Pb;
+		outVUYA_8uP-&gt;Pr = inVUYA_8uP-&gt;Pr;
+	}
+	return err;
+}
+
+
+static PF_Err
+IterateFloat(
+	PF_InData			*in_data,
+	long				progress_base,
+	long				progress_final,
+	PF_EffectWorld		*src,
+	void				*refcon,
+	PF_Err(*pix_fn)(void *refcon, A_long x, A_long y, PF_PixelFloat *in, PF_PixelFloat *out),
+	PF_EffectWorld		*dst)
+{
+	PF_Err	err = PF_Err_NONE;
+	char	*localSrc, *localDst;
+	localSrc = reinterpret_cast&lt;char*&gt;(src-&gt;data);
+	localDst = reinterpret_cast&lt;char*&gt;(dst-&gt;data);
+
+	for (int y = progress_base; y &lt; progress_final; y++)
+	{
+		for (int x = 0; x &lt; in_data-&gt;width; x++)
+		{
+			pix_fn(refcon,
+				   static_cast&lt;A_long&gt; (x),
+				   static_cast&lt;A_long&gt; (y),
+				   reinterpret_cast&lt;PF_PixelFloat*&gt;(localSrc),
+				   reinterpret_cast&lt;PF_PixelFloat*&gt;(localDst));
+			localSrc += 16;
+			localDst += 16;
+		}
+		localSrc += (src-&gt;rowbytes - in_data-&gt;width * 16);
+		localDst += (dst-&gt;rowbytes - in_data-&gt;width * 16);
+	}
+
+	return err;
+}
+
+static PF_Err 
+Render (
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output )
+{
+	PF_Err				err		= PF_Err_NONE;
+	AEGP_SuiteHandler	suites(in_data-&gt;pica_basicP);
+
+	/*	Put interesting code here. */
+	VigInfo				viP;
+	AEFX_CLR_STRUCT(viP);
+	A_long				linesL	= 0;
+
+	linesL 		= output-&gt;extent_hint.bottom - output-&gt;extent_hint.top;
+
+	if (params[VIG_AMOUNT]-&gt;u.fs_d.value == 0 ||
+		params[VIG_SIZE]-&gt;u.fs_d.value == 0)
+	{
+		ERR(PF_COPY(&amp;params[VIG_INPUT]-&gt;u.ld, output, NULL, NULL ));
+	}
+	else {
+		// setup VigInfo
+
+		PF_FpLong featherF = params[VIG_FEATHER]-&gt;u.fs_d.value / 100.0;
+		featherF = (featherF == 1.0) ? 0.99999 : featherF;
+
+
+		viP.amountF = params[VIG_AMOUNT]-&gt;u.fs_d.value / 100.0;
+		PF_FpLong ellipse_aaF = params[VIG_SIZE]-&gt;u.fs_d.value * in_data-&gt;width / 200.0;
+		PF_FpLong ellipse_bbF = params[VIG_SIZE]-&gt;u.fs_d.value * in_data-&gt;height / 200.0;
+		ellipse_bbF = ellipse_aaF * params[VIG_ROUNDNESS]-&gt;u.fs_d.value / 100.0 +
+			ellipse_bbF * (100.0 - params[VIG_ROUNDNESS]-&gt;u.fs_d.value) / 100.0;
+
+		PF_FpLong scale_x = in_data-&gt;downsample_x.num / (float)in_data-&gt;downsample_x.den,
+				  scale_y = in_data-&gt;downsample_y.num / (float)in_data-&gt;downsample_y.den;
+
+		ellipse_aaF *= scale_x;
+		ellipse_bbF *= scale_y;
+
+		viP.outerEllipse_aaF = ellipse_aaF * (1 + featherF);
+		viP.outerEllipse_bbF = ellipse_bbF * (1 + featherF);
+
+		viP.innerEllipse_aaF = ellipse_aaF * (1 - featherF);
+		viP.innerEllipse_bbF = ellipse_bbF * (1 - featherF);
+
+		viP.innerRect_aL = static_cast&lt;A_u_long&gt; (floor(viP.innerEllipse_aaF / PF_SQRT2));
+		viP.innerRect_bL = static_cast&lt;A_u_long&gt; (floor(viP.innerEllipse_bbF / PF_SQRT2));
+		viP.outerRect_aL = static_cast&lt;A_u_long&gt; (ceil(viP.outerEllipse_aaF));
+		viP.outerRect_bL = static_cast&lt;A_u_long&gt; (ceil(viP.outerEllipse_bbF));
+
+		if (params[VIG_SIZE]-&gt;u.fs_d.value &gt;= 100.0)
+		{
+			viP.outerCheck = false;
+		}
+		else
+		{
+			viP.outerCheck = true;
+		}
+
+		viP.outerEllipse_abF = viP.outerEllipse_aaF * viP.outerEllipse_bbF;
+		viP.outerEllipse_aaF *= viP.outerEllipse_aaF;
+		viP.outerEllipse_bbF *= viP.outerEllipse_bbF;
+		viP.outerEllipse_aabbF = viP.outerEllipse_aaF * viP.outerEllipse_bbF;
+
+		viP.innerEllipse_abF = viP.innerEllipse_aaF * viP.innerEllipse_bbF;
+		viP.innerEllipse_aaF *= viP.innerEllipse_aaF;
+		viP.innerEllipse_bbF *= viP.innerEllipse_bbF;
+		viP.innerEllipse_aabbF = viP.innerEllipse_aaF * viP.innerEllipse_bbF;
+
+		viP.x_t = static_cast&lt;A_long&gt;(round(FIX_2_FLOAT(params[VIG_CENTER]-&gt;u.td.x_value)));
+		viP.y_t = static_cast&lt;A_long&gt;(round(FIX_2_FLOAT(params[VIG_CENTER]-&gt;u.td.y_value)));
+
+		// Do high-bit depth rendering in Premiere Pro
+		if (in_data-&gt;appl_id == &#39;PrMr&#39;) {
+
+			// Get the Premiere pixel format suite
+			AEFX_SuiteScoper&lt;PF_PixelFormatSuite1&gt; pixelFormatSuite =
+				AEFX_SuiteScoper&lt;PF_PixelFormatSuite1&gt;(in_data,
+													   kPFPixelFormatSuite,
+													   kPFPixelFormatSuiteVersion1,
+													   out_data);
+
+			PrPixelFormat destinationPixelFormat = PrPixelFormat_BGRA_4444_8u;
+
+			pixelFormatSuite-&gt;GetPixelFormat(output, &amp;destinationPixelFormat);
+
+			AEFX_SuiteScoper&lt;PF_Iterate8Suite1&gt; iterate8Suite =
+				AEFX_SuiteScoper&lt;PF_Iterate8Suite1&gt;(in_data,
+													kPFIterate8Suite,
+													kPFIterate8SuiteVersion1,
+													out_data);
+			switch (destinationPixelFormat)
+			{
+
+			case PrPixelFormat_BGRA_4444_8u:
+				viP.amountF *= PF_MAX_CHAN8;
+				iterate8Suite-&gt;iterate(in_data,
+									   0,								// progress base
+									   linesL,							// progress final
+									   &amp;params[VIG_INPUT]-&gt;u.ld,		// src 
+									   NULL,							// area - null for all pixels
+									   (void*)&amp;viP,					// refcon - your custom data pointer
+									   DrawVignetteBGRA_8u,				// pixel function pointer
+									   output);
+
+				break;
+			case PrPixelFormat_VUYA_4444_8u:
+				viP.amountF *= PF_MAX_CHAN8;
+				iterate8Suite-&gt;iterate(in_data,
+									   0,								// progress base
+									   linesL,							// progress final
+									   &amp;params[VIG_INPUT]-&gt;u.ld,		// src 
+									   NULL,							// area - null for all pixels
+									   (void*)&amp;viP,					// refcon - your custom data pointer
+									   DrawVignetteVUYA_8u,				// pixel function pointer
+									   output);
+
+				break;
+			case PrPixelFormat_BGRA_4444_32f:
+				// Premiere doesn&#39;t support IterateFloatSuite1, so we&#39;ve rolled our own
+				IterateFloat(in_data,
+							 0,								// progress base
+							 linesL,							// progress final
+							 &amp;params[VIG_INPUT]-&gt;u.ld,		// src 
+							 (void*)&amp;viP,					// refcon - your custom data pointer
+							 DrawVignetteBGRA_32f,			// pixel function pointer
+							 output);
+
+				break;
+			case PrPixelFormat_VUYA_4444_32f:
+				// Premiere doesn&#39;t support IterateFloatSuite1, so we&#39;ve rolled our own
+				IterateFloat(in_data,
+							 0,								// progress base
+							 linesL,							// progress final
+							 &amp;params[VIG_INPUT]-&gt;u.ld,		// src 
+							 (void*)&amp;viP,					// refcon - your custom data pointer
+							 DrawVignetteVUYA_32f,			// pixel function pointer
+							 output);
+				break;
+			default:
+				//	Return error, because we don&#39;t know how to handle the specified pixel type
+				return PF_Err_UNRECOGNIZED_PARAM_TYPE;
+			}
+		}
+		//if (PF_WORLD_IS_DEEP(output)){
+		//	viP.amountF *= PF_MAX_CHAN16;
+		//	ERR(suites.Iterate16Suite1()-&gt;iterate(	in_data,
+		//											0,								// progress base
+		//											linesL,							// progress final
+		//											&amp;params[VIG_INPUT]-&gt;u.ld,	// src 
+		//											NULL,							// area - null for all pixels
+		//											(void*)&amp;viP,					// refcon - your custom data pointer
+		//											DrawVignette16,				// pixel function pointer
+		//											output));
+		//} else {
+		//	viP.amountF *= PF_MAX_CHAN8;
+
+		//	ERR(suites.Iterate8Suite1()-&gt;iterate(in_data,
+		//										 0,								// progress base
+		//										 linesL,							// progress final
+		//										 &amp;params[VIG_INPUT]-&gt;u.ld,	// src 
+		//										 NULL,							// area - null for all pixels
+		//										 (void*)&amp;viP,					// refcon - your custom data pointer
+		//										 DrawVignette8,				// pixel function pointer
+		//										 output));
+		//}
+	}
+	return err;
+}
+
+static PF_Err
+PreRender(
+	PF_InData				*in_data,
+	PF_OutData				*out_data,
+	PF_PreRenderExtra		*extra)
+{
+	PF_Err err = PF_Err_NONE;
+	PF_RenderRequest req = extra-&gt;input-&gt;output_request;
+	PF_CheckoutResult in_result;
+
+	req.channel_mask = PF_ChannelMask_RED | PF_ChannelMask_GREEN | PF_ChannelMask_BLUE;
+
+	req.preserve_rgb_of_zero_alpha = FALSE;	//	Hey, we don&#39;t care.
+
+	ERR(extra-&gt;cb-&gt;checkout_layer(in_data-&gt;effect_ref,
+								  VIG_INPUT,
+								  VIG_INPUT,
+								  &amp;req,
+								  in_data-&gt;current_time,
+								  in_data-&gt;time_step,
+								  in_data-&gt;time_scale,
+								  &amp;in_result));
+
+	UnionLRect(&amp;in_result.result_rect, &amp;extra-&gt;output-&gt;result_rect);
+	UnionLRect(&amp;in_result.max_result_rect, &amp;extra-&gt;output-&gt;max_result_rect);
+
+	return err;
+}
+
+
+static PF_Err
+SmartRenderProper(
+	PF_InData		*in_data,
+	PF_EffectWorld 	*input,
+	PF_ParamDef		*params[],
+	PF_OutData		*out_data,
+	PF_EffectWorld	*output)
+{
+	PF_Err				err = PF_Err_NONE,
+						err2 = PF_Err_NONE;
+	VigInfo				viP;
+	PF_Point			origin;
+	PF_Rect				areaR;
+	PF_PixelFormat		format = PF_PixelFormat_INVALID;
+	PF_WorldSuite2		*wsP = NULL;
+
+	AEGP_SuiteHandler suites(in_data-&gt;pica_basicP);
+
+	ERR(AEFX_AcquireSuite(in_data,
+						  out_data,
+						  kPFWorldSuite,
+						  kPFWorldSuiteVersion2,
+						  &quot;Couldn&#39;t load suite.&quot;,
+						  (void**)&amp;wsP));
+
+	if (!err) {
+
+		if (params[VIG_AMOUNT]-&gt;u.fs_d.value == 0 ||
+			params[VIG_SIZE]-&gt;u.fs_d.value == 0)
+		{
+			areaR.left = -in_data-&gt;output_origin_x;
+			areaR.top = -in_data-&gt;output_origin_y;
+			areaR.bottom = areaR.top + output-&gt;height;
+			areaR.right = areaR.left + output-&gt;width;
+
+			err = PF_COPY(input, output, &amp;areaR, NULL);
+		}
+		else {
+			// setup VigInfo
+
+			PF_FpLong featherF = params[VIG_FEATHER]-&gt;u.fs_d.value / 100.0;
+			featherF = (featherF == 1.0) ? 0.99999 : featherF;
+
+
+			viP.amountF = params[VIG_AMOUNT]-&gt;u.fs_d.value / 100.0;
+			PF_FpLong ellipse_aaF = params[VIG_SIZE]-&gt;u.fs_d.value * in_data-&gt;width / 200.0;
+			PF_FpLong ellipse_bbF = params[VIG_SIZE]-&gt;u.fs_d.value * in_data-&gt;height / 200.0;
+			ellipse_bbF = ellipse_aaF * params[VIG_ROUNDNESS]-&gt;u.fs_d.value / 100.0 +
+				ellipse_bbF * (100.0 - params[VIG_ROUNDNESS]-&gt;u.fs_d.value) / 100.0;
+
+			PF_FpLong scale_x = in_data-&gt;downsample_x.num / (float)in_data-&gt;downsample_x.den,
+				scale_y = in_data-&gt;downsample_y.num / (float)in_data-&gt;downsample_y.den;
+
+			ellipse_aaF *= scale_x;
+			ellipse_bbF *= scale_y;
+
+			viP.outerEllipse_aaF = ellipse_aaF * (1 + featherF);
+			viP.outerEllipse_bbF = ellipse_bbF * (1 + featherF);
+
+			viP.innerEllipse_aaF = ellipse_aaF * (1 - featherF);
+			viP.innerEllipse_bbF = ellipse_bbF * (1 - featherF);
+
+			viP.innerRect_aL = static_cast&lt;A_u_long&gt; (floor(viP.innerEllipse_aaF / PF_SQRT2));
+			viP.innerRect_bL = static_cast&lt;A_u_long&gt; (floor(viP.innerEllipse_bbF / PF_SQRT2));
+			viP.outerRect_aL = static_cast&lt;A_u_long&gt; (ceil(viP.outerEllipse_aaF));
+			viP.outerRect_bL = static_cast&lt;A_u_long&gt; (ceil(viP.outerEllipse_bbF));
+
+			if (params[VIG_SIZE]-&gt;u.fs_d.value &gt;= 100.0)
+			{
+				viP.outerCheck = false;
+			}
+			else
+			{
+				viP.outerCheck = true;
+			}
+
+			viP.outerEllipse_abF = viP.outerEllipse_aaF * viP.outerEllipse_bbF;
+			viP.outerEllipse_aaF *= viP.outerEllipse_aaF;
+			viP.outerEllipse_bbF *= viP.outerEllipse_bbF;
+			viP.outerEllipse_aabbF = viP.outerEllipse_aaF * viP.outerEllipse_bbF;
+
+			viP.innerEllipse_abF = viP.innerEllipse_aaF * viP.innerEllipse_bbF;
+			viP.innerEllipse_aaF *= viP.innerEllipse_aaF;
+			viP.innerEllipse_bbF *= viP.innerEllipse_bbF;
+			viP.innerEllipse_aabbF = viP.innerEllipse_aaF * viP.innerEllipse_bbF;
+
+			viP.x_t = static_cast&lt;A_long&gt;(round(FIX_2_FLOAT(params[VIG_CENTER]-&gt;u.td.x_value) - input-&gt;origin_x));
+			viP.y_t = static_cast&lt;A_long&gt;(round(FIX_2_FLOAT(params[VIG_CENTER]-&gt;u.td.y_value) - input-&gt;origin_y));
+
+			origin.h = in_data-&gt;output_origin_x;
+			origin.v = in_data-&gt;output_origin_y;
+
+			areaR.top =
+				areaR.left = 0;
+			areaR.right = output-&gt;width;
+			areaR.bottom = output-&gt;height;
+
+			ERR(wsP-&gt;PF_GetPixelFormat(input, &amp;format));
+
+			switch (format) {
+
+			case PF_PixelFormat_ARGB128:
+
+				ERR(suites.IterateFloatSuite1()-&gt;iterate_origin(in_data,
+																0,
+																output-&gt;height,
+																input,
+																&amp;areaR,
+																&amp;origin,
+																(void*)(&amp;viP),
+																DrawVignette32,
+																output));
+				break;
+
+			case PF_PixelFormat_ARGB64:
+				viP.amountF *= PF_MAX_CHAN16;
+				ERR(suites.Iterate16Suite1()-&gt;iterate_origin(in_data,
+															 0,
+															 output-&gt;height,
+															 input,
+															 &amp;areaR,
+															 &amp;origin,
+															 (void*)(&amp;viP),
+															 DrawVignette16,
+															 output));
+				break;
+
+			case PF_PixelFormat_ARGB32:
+				viP.amountF *= PF_MAX_CHAN8;
+
+				ERR(suites.Iterate8Suite1()-&gt;iterate_origin(in_data,
+															0,
+															output-&gt;height,
+															input,
+															&amp;areaR,
+															&amp;origin,
+															(void*)(&amp;viP),
+															DrawVignette8,
+															output));
+				break;
+
+			default:
+				err = PF_Err_BAD_CALLBACK_PARAM;
+				break;
+			}
+		}
+	}
+	ERR2(AEFX_ReleaseSuite(in_data,
+						   out_data,
+						   kPFWorldSuite,
+						   kPFWorldSuiteVersion2,
+						   &quot;Couldn&#39;t release suite.&quot;));
+	return err;
+}
+
+
+static PF_Err
+SmartRender(
+	PF_InData				*in_data,
+	PF_OutData				*out_data,
+	PF_SmartRenderExtra		*extra)
+
+{
+
+	PF_Err			err = PF_Err_NONE,
+					err2 = PF_Err_NONE;
+
+	PF_EffectWorld	*input_worldP = NULL,
+		*output_worldP = NULL;
+
+	PF_ParamDef params[VIG_NUM_PARAMS];
+	PF_ParamDef *paramsP[VIG_NUM_PARAMS];
+
+	AEFX_CLR_STRUCT(params);
+
+	for (int i = 0; i &lt; VIG_NUM_PARAMS; i++)
+	{
+		paramsP[i] = &amp;params[i];
+	}
+
+	// checkout input &amp; output buffers.
+	ERR((extra-&gt;cb-&gt;checkout_layer_pixels(in_data-&gt;effect_ref, VIG_INPUT, &amp;input_worldP)));
+
+	ERR(extra-&gt;cb-&gt;checkout_output(in_data-&gt;effect_ref, &amp;output_worldP));
+
+	// checkout the required params
+	ERR(PF_CHECKOUT_PARAM(in_data,
+						  VIG_CENTER,
+						  in_data-&gt;current_time,
+						  in_data-&gt;time_step,
+						  in_data-&gt;time_scale,
+						  &amp;params[VIG_CENTER]));
+	ERR(PF_CHECKOUT_PARAM(in_data,
+						  VIG_AMOUNT,
+						  in_data-&gt;current_time,
+						  in_data-&gt;time_step,
+						  in_data-&gt;time_scale,
+						  &amp;params[VIG_AMOUNT]));
+	ERR(PF_CHECKOUT_PARAM(in_data,
+						  VIG_FEATHER,
+						  in_data-&gt;current_time,
+						  in_data-&gt;time_step,
+						  in_data-&gt;time_scale,
+						  &amp;params[VIG_FEATHER]));
+	ERR(PF_CHECKOUT_PARAM(in_data,
+						  VIG_ROUNDNESS,
+						  in_data-&gt;current_time,
+						  in_data-&gt;time_step,
+						  in_data-&gt;time_scale,
+						  &amp;params[VIG_ROUNDNESS]));
+	ERR(PF_CHECKOUT_PARAM(in_data,
+						  VIG_SIZE,
+						  in_data-&gt;current_time,
+						  in_data-&gt;time_step,
+						  in_data-&gt;time_scale,
+						  &amp;params[VIG_SIZE]));
+
+
+	ERR(SmartRenderProper(in_data,
+					   input_worldP,
+					   paramsP,
+					   out_data,
+					   output_worldP));
+
+	// Always check in, no matter what the error condition!
+
+	ERR2(PF_CHECKIN_PARAM(in_data, &amp;params[VIG_CENTER]));
+	ERR2(PF_CHECKIN_PARAM(in_data, &amp;params[VIG_SIZE]));
+	ERR2(PF_CHECKIN_PARAM(in_data, &amp;params[VIG_ROUNDNESS]));
+	ERR2(PF_CHECKIN_PARAM(in_data, &amp;params[VIG_FEATHER]));
+	ERR2(PF_CHECKIN_PARAM(in_data, &amp;params[VIG_AMOUNT]));
+
+	return err;
+}
+
+DllExport	
+PF_Err 
+EntryPointFunc (
+	PF_Cmd			cmd,
+	PF_InData		*in_data,
+	PF_OutData		*out_data,
+	PF_ParamDef		*params[],
+	PF_LayerDef		*output,
+	void			*extra)
+{
+	PF_Err		err = PF_Err_NONE;
+	
+	try {
+		switch (cmd) {
+			case PF_Cmd_ABOUT:
+
+				err = About(in_data,
+							out_data,
+							params,
+							output);
+				break;
+				
+			case PF_Cmd_GLOBAL_SETUP:
+
+				err = GlobalSetup(	in_data,
+									out_data,
+									params,
+									output);
+				break;
+				
+			case PF_Cmd_PARAMS_SETUP:
+
+				err = ParamsSetup(	in_data,
+									out_data,
+									params,
+									output);
+				break;
+				
+			case PF_Cmd_RENDER:
+
+				err = Render(	in_data,
+								out_data,
+								params,
+								output);
+				break;
+			case PF_Cmd_SMART_PRE_RENDER:
+				err = PreRender(in_data, out_data, (PF_PreRenderExtra*)extra);
+				break;
+			case PF_Cmd_SMART_RENDER:
+				err = SmartRender(in_data, out_data, (PF_SmartRenderExtra*)extra);
+				break;
+		}
+	}
+	catch(PF_Err &amp;thrown_err){
+		err = thrown_err;
+	}
+	return err;
+}
+
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Vignette_GPU.html" class="btn btn-neutral float-right" title="AfterEffects Vignette_GPU" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../AfterEffects.html" class="btn btn-neutral" title="AfterEffects Plug-In" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

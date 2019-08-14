@@ -1,0 +1,23 @@
+.. _virtualenv_windows:
+
+virtualenv_windows
+=============================
+
+pip install virtualenv
+
+使い方
+-------
+
+python -m virtualenv
+
+作成方法
+---------
+
+virtualenv -p python microblog
+
+仮想環境の起動
+---------------
+bat ファイルが出来上がる
+microblog\Scripts\activate
+
+

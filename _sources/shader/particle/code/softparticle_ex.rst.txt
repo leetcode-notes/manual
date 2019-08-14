@@ -1,0 +1,8 @@
+softparticle
+=============================
+
+Depth Textureは、Deferredレンダリングならば特に設定しなくても動作しますが、
+
+Forwardレンダリングの場合はCameraコンポーネントのdepthTextureMode で明示的にONに設定する必要があります。
+
+PlayerSettingsのQuality SettingsでSoft Particleを設定すれば準備完了です。

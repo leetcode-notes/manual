@@ -1,0 +1,6 @@
+DoingMathPython chapter6 InteractiveBarnsleyFern
+===============================================================================================
+
+.. raw:: html
+   :file: html/InteractiveBarnsleyFern.html
+

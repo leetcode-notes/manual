@@ -1,0 +1,28 @@
+Rendaring Tools
+#################
+
+
+.. figure:: rend.png
+   :width: 300px
+
+backburner_job
+---------------------
+
+.. figure:: backburner_job.png
+    :width: 200px
+
+* 現在開いているファイルのレンダーキューがONのものを
+  BackBurnerJobに送信します。
+
+background_rend
+---------------------
+
+
+.. figure:: background_rend.png
+   :width: 200px
+
+
+* 現在開いているファイルのレンダーキューがONのものを
+  レンダリングします。
+　
+

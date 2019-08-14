@@ -1,0 +1,94 @@
+BackBurner Set
+#####################
+
+
+.. figure:: mi_backburner_set.png
+   :width: 400px
+
+
+機能
+******************************************
+
+
+背景レンダーレイヤー作成、Rendaring設定を行うことが出来ます。
+CTRL_LightCustomに設定がある場合、lightset(morning、morningライト有り、night、nightライト有り)
+の設定が可能です。
+
+
+
+.. note::
+
+    ガーデンマリオのレンダリングに関する詳細は、以下テキストの確認をお願い致します。
+    G:/01_PM/workflow/ガーデンマリオレンダリング.txt
+
+
+使用方法
+***********
+
+
+.. figure:: 0000.png
+   :width: 300px
+
+
+#. **Select RenderLayer**：
+
+    バックバーナージョブに送信したいレンダーレイヤーを選択してください。
+
+
+#. **manager name**
+
+    マネージャーの名前を変更してください。デフォルト値=okinawa-3
+    名前を変更して一度送信すると設定値を保存します。
+
+
+#. **Frame Start**
+
+   バックバーナージョブレンダリングを開始するフレーム
+
+
+#. **Frame End**
+
+   バックバーナージョブレンダリングを終了するフレーム
+
+
+#. **Timeout**
+
+   ジョブがタイムアウトする時間
+
+#. **Priority**
+
+   ジョブの優先順位
+
+#. **Tasksize**
+
+   ジョブを分割するサイズ
+
+.. warning::
+
+    Lineレンダリングに関して**tasksizeを1**以上の値を使用すると以下レンダリングエラーが
+    発生しやすくなります。
+
+    backburner exit code 1073741819
+
+
+.. warning::
+
+    JOB名が長すぎるとWindowsの文字制限のため、エラーが出ます。
+    文字制限対策のため、本ツールではジョブ名が40文字以上の物は送信できないようにしております。
+    ジョブ名を短くしてから、再度送信を行ってください。
+
+#. **Send To BackBurner with upper Box's Name**
+
+    Select RenderLayer：ツール内で選択しているRenderLayerをMaya Scene save nameの名前で保存しJOBを送信します。
+    _jobnameの名前を任意の名前に変更しください。
+
+
+
+#. **2 Send To BackBurner with upper Box's Name**
+
+    上のBoxに書かれている名前をもとにジョブを送信します。
+    propであれば、propが含まれているrenderLayer全てを送信します。
+    prop,KDOと区切ればpropとKDOが含まれているrenderLayer全てを送信します。
+　　
+
+

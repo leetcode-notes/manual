@@ -1,0 +1,5 @@
+PostEffect ZoomBlur
+---------------------------------------------------------------------------
+
+.. literalinclude:: ZoomBlur.shader
+

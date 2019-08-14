@@ -1,0 +1,5 @@
+particle SerializedProperty
+---------------------------------------------------------------------------
+
+.. literalinclude:: SerializedProperty.cs
+

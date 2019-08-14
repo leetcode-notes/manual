@@ -1,0 +1,6 @@
+DoingMathPython chapter6 InteractiveSierpinskiTriangle
+===============================================================================================
+
+.. raw:: html
+   :file: html/InteractiveSierpinskiTriangle.html
+

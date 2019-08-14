@@ -1,0 +1,5 @@
+utility HierarchyScriptViewerWindow
+---------------------------------------------------------------------------
+
+.. literalinclude:: HierarchyScriptViewerWindow.cs
+

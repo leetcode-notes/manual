@@ -1,0 +1,5 @@
+Lighting PointSpotLUT
+---------------------------------------------------------------------------
+
+.. literalinclude:: PointSpotLUT.shader
+
