@@ -1,4 +1,4 @@
-priority queue
+Python manual
 =============================
 
 .. toctree::

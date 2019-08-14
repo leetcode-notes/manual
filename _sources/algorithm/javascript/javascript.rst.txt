@@ -1,4 +1,4 @@
-javascript
+Python manual
 =============================
 
 .. toctree::
