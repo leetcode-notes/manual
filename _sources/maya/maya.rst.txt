@@ -1,5 +1,12 @@
-maya Tool　manual
+maya Tool manual
 ========================
+
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    */*
+
 
 toolフォルダ構成
 
@@ -17,13 +24,7 @@ toolフォルダ構成
 
     コピーしてシェルフに登録して下さい。
 
-    source "G:/05_tool/maya/KGS_Tools.mel";
+    source "KGS_Tools.mel";
     KGSToolwindow;
 
 
-
-.. toctree::
-    :maxdepth: 1
-    :glob:
-
-    */*

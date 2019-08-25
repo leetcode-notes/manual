@@ -14,6 +14,12 @@ New Scene
 
 新規シーン作成
 
+必要なデータセットが自動的に作成されます。
+
+* aftereffects
+* substance designer,photoshop等必要なデータ
+* カットシーンフレーム等の必要な情報 = サーバー上のシートと同期 = maya aftereffectsも同期
+
 設定名
 --------
 

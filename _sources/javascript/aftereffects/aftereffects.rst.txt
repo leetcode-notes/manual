@@ -1,24 +1,17 @@
 AfterEffectsTool manual
 ========================
 
-toolフォルダ構成
+tool起動画面
 
-.. figure:: img/folder_05_tools.png
-   :width: 300px
-
-
-
-.. warning::
-
-    G:/05_tool/javascript/からの絶対パスで作成しているツールがあります。
-    全機能使用する為には移動しないで下さい。
+.. figure:: ae_tools.png
+   :width: 400px
 
 
 .. note::
 
     以下ツールを使用して設定を行ってください。
 
-    G:/05_tool/javascript/jsxsetup/jsxsetup.exe
+    */tool/javascript/jsxsetup/jsxsetup.exe
 
 :ref:`ツール使用方法 <AESETUP>`
 
@@ -28,7 +21,6 @@ toolフォルダ構成
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/8HXehi-xQ_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 
 ツールセット使用方法

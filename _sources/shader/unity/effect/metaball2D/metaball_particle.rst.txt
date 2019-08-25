@@ -1,0 +1,5 @@
+metaball metaball_particle
+---------------------------------------------------------------------------
+
+.. literalinclude:: metaball_particle.shader
+

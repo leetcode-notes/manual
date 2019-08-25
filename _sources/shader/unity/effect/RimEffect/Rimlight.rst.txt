@@ -1,0 +1,8 @@
+RimEffect Rimlight
+---------------------------------------------------------------------------
+
+.. figure:: Rimlight.png
+	:width: 400px
+
+.. literalinclude:: Rimlight.shader
+

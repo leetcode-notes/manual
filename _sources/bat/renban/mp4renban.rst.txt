@@ -1,0 +1,4 @@
+mp4 renban
+=============================
+
+https://note.nkmk.me/python-opencv-video-to-still-image/

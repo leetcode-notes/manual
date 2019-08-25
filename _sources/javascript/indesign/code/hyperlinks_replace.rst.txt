@@ -1,0 +1,5 @@
+code hyperlinks_replace
+---------------------------------------------------------------------------
+
+.. literalinclude:: hyperlinks_replace.jsx
+

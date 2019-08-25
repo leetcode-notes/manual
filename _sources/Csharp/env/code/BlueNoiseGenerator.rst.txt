@@ -1,0 +1,5 @@
+R: BlueNoiseGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: BlueNoiseGenerator.cs
+

@@ -1,0 +1,39 @@
+
+input
+##########
+
+stdout,stderr
+**************
+
+
+.. code-block:: python
+
+     x = input('Enter:')
+     print(x)
+
+     ###inputより低いレイヤー
+     for line in sys.stdin:
+         print(line)
+
+     print('hello')
+     sys.stdout.write('hello')
+
+     logging.error('Eroor!')
+     sys.stderr.write('Error!')
+
+
+
+ontextlib(stdout,stderr)
+*************************
+
+
+
+.. code-block:: python
+
+     with open('stdout.log', 'w') as f:
+         with contextlib.redirect_stdout(f):
+             help(sys.stdout)
+
+     with open('stderr.log', 'w') as f:
+         with contextlib.redirect_stderr(f):
+             logging.error('Error!')

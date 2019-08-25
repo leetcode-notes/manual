@@ -1,0 +1,5 @@
+motiongraphics circlearray
+---------------------------------------------------------------------------
+
+.. literalinclude:: circlearray.shader
+

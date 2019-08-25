@@ -1,0 +1,5 @@
+R: WhiteNoiseGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: WhiteNoiseGenerator.cs
+

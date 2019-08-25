@@ -1,0 +1,5 @@
+make_mesh TrianglePrimitiveGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: TrianglePrimitiveGenerator.cs
+

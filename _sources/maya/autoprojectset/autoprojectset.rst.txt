@@ -1,0 +1,22 @@
+AutoProjectSet
+################
+
+.. figure:: AutoProjectSet.png
+   :width: 400px
+
+
+機能
+******************************************
+
++ ツールを起動すると自動的に監視状態となります。監視を外したい場合は上記画像の自動設定を行うのチェックを外してください。
+
++ 「シーンを開く」、「シーンを保存」、「シーンを別名で保存」を行った後、自動的に現在のプロジェクトを変更します
+
++ プロジェクト構造を持っているファイルに関しては、開くだけでプロジェクト設定を行います。
+
++ プロジェクトフォルダにテクスチャがある場合、自動的に絶対パスのテクスチャを相対パスに変更します。
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JpQC4n3Rylo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

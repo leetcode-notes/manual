@@ -1,0 +1,5 @@
+make_mesh QuadPrimitiveGenerator
+---------------------------------------------------------------------------
+
+.. literalinclude:: QuadPrimitiveGenerator.cs
+

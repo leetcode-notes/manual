@@ -1,0 +1,10 @@
+autoupdate
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+http://mikan-daisuki.hatenablog.com/entry/2015/01/24/102805

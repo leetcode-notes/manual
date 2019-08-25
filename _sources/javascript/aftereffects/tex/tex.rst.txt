@@ -1,0 +1,30 @@
+tex make
+=================
+
+使用動画
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1i4-yA86CUo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+使用方法
+
+
++ 選択しているコンポからテクスチャシートを作成します。
+
+size
+-----------------
+
+* ポップアップにいち
+
+png
+------------------------
+
+* ボタンで実行後所定の位置にpngが書き出されます。
+
+.. figure:: ShockwaveMuzzleFront_tex.png
+   :width: 400px
+
+.. figure:: ShockwaveMuzzleSide_tex.png
+   :width: 400px
+

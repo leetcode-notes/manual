@@ -7,3 +7,7 @@
 
    */*
 
+
+Python で "in list" の処理はめちゃくちゃ遅い
+
+https://qiita.com/kitadakyou/items/6f877edd263f097e78f4
