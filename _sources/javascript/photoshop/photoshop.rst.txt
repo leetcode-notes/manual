@@ -1,6 +1,12 @@
 photoshop
 =============================
 
+tool起動画面
+
+.. figure:: photoshop_tools.png
+   :width: 400px
+
+
 .. toctree::
    :maxdepth: 2
    :glob:
