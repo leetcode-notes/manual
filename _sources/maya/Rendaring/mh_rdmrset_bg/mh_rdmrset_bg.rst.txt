@@ -1,0 +1,80 @@
+BG RendSet
+#################
+
+
+.. figure:: mh_rdmrset_bg.png
+   :width: 400px
+
+
+機能
+******************************************
+
+
+背景レンダーレイヤー作成、Rendaring設定を行うことが出来ます。
+CTRL_LightCustomに設定がある場合、lightset(morning、morningライト有り、night、nightライト有り)
+の設定が可能です。
+
+
+
+.. note::
+
+    ガーデンマリオのレンダリングに関する詳細は、以下テキストの確認をお願い致します。
+    G:/01_PM/workflow/ガーデンマリオレンダリング.txt
+
+
+使用方法
+***********
+
+
+.. figure:: bgrendset.png
+   :width: 300px
+
+
+#. **Select Charactor**：
+
+　背景モデルの一覧が表示されています。
+　
+　レンダーレイヤーに追加したいものを追加してください。
+
+
+#. **Select Cmaera Camera connect linemesh**
+
+   選択しているカメラをレンダリング可能な状態にします。
+
+
+#. **RenderLayer Name**
+
+   下のBoxの名前を使用してレンダーレイヤーを作成します。
+   同じ名前のレンダーレイヤーがある際はそのレイヤーに追加していきます。
+
+
+#. **RenderLayer Kind**
+
+   #. Morning　昼
+
+      CTRL_LightCustom： counter:OFF、FanLight:OFF、skydome:Morning
+
+   #. morning_ligh　昼（照明有り）
+
+      CTRL_LightCustom： skydome:MorningLight、counter:ON、FanLight:ON
+
+   #. Night　夜
+
+      CTRL_LightCustom： skydome:night、counter:OFF、FanLight:OFF
+
+   #. night_light　夜（照明有り）
+
+      CTRL_LightCustom： skydome:nightLight、counter:ON、FanLight:ON、
+
+
+#. **Make RenderLayer**
+
+    設定した状態でレンダーレイヤーを作成します。
+
+    * Final gather on
+
+    * Accuracy 50
+
+    * Point density 0.5
+
+    * Point interpolation 50 等

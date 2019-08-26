@@ -1,0 +1,26 @@
+CreateControlRig
+#################
+
+
+.. figure:: CreateControlRig.png
+   :width: 400px
+
+
+
+機能
+******************************************
+
+
+リグの作成
+
+使用方法
+***********
+
+
+
+.. figure:: CreateControlRig_tool.png
+   :width: 800px
+
+
+
+

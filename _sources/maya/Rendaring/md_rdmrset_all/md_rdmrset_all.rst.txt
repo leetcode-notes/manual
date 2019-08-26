@@ -1,0 +1,384 @@
+Rendaring Tools
+#################
+
+
+.. sidebar:: 目次
+
+   .. contents::
+       :depth: 3
+       :local:
+
+
+.. figure:: md_rdmrset_all.png
+   :width: 300px
+
+
+機能
+******************************************
+
+
+Material設定、Line設定、Smooth設定、Rendaring設定を行うことが出来ます。
+
+
+使用方法
+***********
+
+Material
+***********
+
+
+
+.. figure:: RendaringTools_material.png
+   :width: 250px
+
+
+#. **UseBacksdwoff**：
+
+   選択しているモデルにreflectivity、reflectionLimit、shadowMaskをオフにした UseBackGroundマテリアルを適用します。
+
+#. **UseBacksdwON**：
+
+   選択しているモデルにreflectivity、reflectionLimitをオフにした UseBackGroundマテリアルを適用します。
+
+#. **BlackSurface**
+
+   選択しているモデルに黒色のSurfaceShaderマテリアルを適用します。
+
+#. **GreenSurface**
+
+   選択しているモデルに緑色のSurfaceShaderマテリアルを適用します。
+
+#. **WhiteSurface**
+
+   選択しているモデルに白色のSurfaceShaderマテリアルを適用します。
+
+#. **BlackHole**
+
+   選択しているモデルかマテリアルに、BlackHoleを設定します。
+   MiaMaterial、SurfaceShaderの場合はLambert materialを適応しBlackHoleの設定を行います。
+   RenderLayerにOverRideの設定を追加するためDefaultRenderLayerでは使用ができません。
+
+    .. _Material_Ramp:
+
+#. **random ramp**
+
+    選択しているモデルのRamp Shaderに影の色指定用撮影
+    素材RGBColorを設定します。
+    現在割り当てられているマテリアル名にアンダーバー2つ
+    (__)を追加し新しいマテリアルを適応します。
+
+    .. note::
+        選択した順番に応じて色が割り当てられます。
+        同じ選択順であれば、毎回同じ色割り当てとなります。
+
+    .. _GreenMatAlphaTex:
+
+#. **Green Mat Alpha Tex**
+
+    選択しているモデルのマテリアルに透明度テクスチャが、
+    使用されている場合、透明度テクスチャのついた輝度Max
+    のランバートマテリアルを適応します。
+
+    .. note::
+        選択しているモデルから下のモデル全てに適応します。
+
+    .. _RenderToolLine:
+
+#. **Reset Material**
+
+    マテリアルが壊れている場合再設定を行います。
+
+Line
+***********
+
+
+.. figure:: line.png
+   :width: 250px
+
+
+#. **Select Render Camera**：
+
+   Scene内のperspカメラをリストアップします。
+
+#. **Toon Line To Poly**
+
+   選択しているLineをポリゴン化します。
+
+#. **Camera Connect**
+
+   ConnectするLineとCameraを選択してCamera Connectボタンを押してください。
+
+#. **Toon Line List Window**
+
+   Lineの一覧を表示して選択することが可能です。
+
+#. **ラインサイズ変更**
+
+    #. All
+        boxの数値に応じてシーン内全てのラインをサイズ変更する事ができます。
+        xボタンでbox入力の必要なしに変更が可能です。
+
+    #. Select
+        boxの数値に応じて選択しているもののみサイズ変更が可能です。
+        xボタンでbox入力の必要なしに変更が可能です。
+
+#. **Camera Connect**
+
+   ConnectするLineとCameraを選択してCamera Connectボタンを押してください。
+
+#. **Line Remove**
+
+   選択しているモデルのラインを削除することが出来ます。
+
+
+#. **Remove line of hiden model below from Selected Model**
+
+   選択しているモデルから下の非表示になっているモデルを、全てラインから削除します
+
+
+Line Tools
+***********
+
+.. figure:: line_tools.png
+   :width: 250px
+
+
+#. **line name**
+
+   文字検索を行う事が可能です。文字を入力することで文字が含まれているラインのみがリストアップされていきます。
+
+    ＊大文字、小文字の区別はありません
+
+
+#. **Show Line,Hide Line**
+
+    上のBoxで選択しているラインの表示、非表示を行うことが出来ます。
+
+#. **Line Set**
+
+    上のBoxで選択しているラインの設定をコピーします。このボタンを押すとCreate Line、Selected Lines Paste Settingsに設定が反映されます。
+
+#. **Select Model**
+
+    上のBoxで選択しているラインに含まれているメッシュを選択します。
+
+#. **Create Line**
+
+    ラインを作成します。with Defaultの場合はデフォルト設定のラインを作成します。
+
+#. **Selected Lines Paste Settings**
+
+    ラインを設定をコピーします。with Defaultの場合はデフォルト設定のラインをペーストします。
+
+
+.. _RenderToolSmoothNormal:
+
+
+Set Smooth and Normal Transfer
+*******************************
+
+
+.. figure:: RendaringTools_smooth.png
+   :width: 250px
+
+
+#. **charactor model list Reload**：
+
+   シーン内にキャラモデルが有り、何も表示されていない場合はReloadボタンを押してください。
+
+#. **Set Smooth and Normal Transfer**：
+
+   キャラ毎のtxtデータを参照してSmoothとNormal Transferを適応します。
+   KDOの場合：G:/02_assets/chara/KDO/renderSet_normal.txt
+   KDOの場合：G:/02_assets/chara/KDO/renderSet_smooth.txt
+
+    :ref:`RenderLayer <RenderLayerSmoothNormal>` 作成時も適応が可能です。
+
+#. **Set Smooth**：
+
+   選択しているモデルにsmoothを適用します。
+
+#. **Toon Line To Poly**
+
+   選択しているLineをポリゴン化します。
+
+#. **Camera Connect**
+
+   ConnectするLineとCameraを選択してCamera Connectボタンを押してください。
+
+
+
+rendaring (prefix name,camera,frame set)
+*****************************************
+
+
+.. figure:: name_cam_frame.png
+   :width: 250px
+
+
+#. **get takeNo from scenes file name**：
+
+   シーンファイル名からtakNoを取得します。下のboxに反映します。
+
+.. note::
+    上記のボタンだけではファイル名は変更されません。
+    下のSetボタンで変更を確定します。
+
+#. **Set Image File Name Prefix**：
+
+   上記のboxの名前をレンダリングファイル名に適応します。
+
+
+#. **Frame/AnimationSet+PngSet+CurentScence Frame Start and End Set**：
+
+   シーンのタイムラインをレンダリングフレームにセットします。
+
+#. **Set Actiview Camera (RightClick Set Select Camera)**
+
+    アクティブビューポートをレンダリングカメラにセットします。
+    右クリックで選択しているカメラをレンダリングカメラにセットします。
+
+
+
+rendaring (resolution)
+*****************************************
+
+
+
+.. figure:: RendaringTools_rendaring_resolution.png
+   :width: 250px
+
+
+#. **Change UnderBoxs 2304,1296(Default) right click 16:9 list**：
+
+   下のBoxに基本解像度の2304*1296を反映します。
+   右クリックで16:9リストを確認、反映することが出来ます。
+
+.. note::
+    上記のボタンだけではシーン解像度は変更されません。
+    下のSetボタンで変更を確定します。
+
+#. **Change UnderBoxs from scenes file resolution**：
+
+   シーン解像度を下のBoxに反映します。
+
+
+#. **×1.1**：
+
+   Boxの縦、横の解像度を1.1倍に変更します。
+
+#. **÷1.1**
+
+   Boxの縦、横の解像度を0.9倍に変更します。
+
+#. **Set Render Image Resolustion**
+
+   Boxの解像度をレンダリング設定に反映します。
+
+
+rendaring (MentalRay Binarization,Anti Setting)
+************************************************
+
+
+
+.. figure:: RendaringTools_rendaring_Binari_Anti.png
+   :width: 250px
+
+
+#. **Binarization**：
+
+   アクティブなレンダーレイヤーにキャラクターカラー設定と同じ2値化設定を行います。
+
+#. **Anti**：
+
+   アクティブなレンダーレイヤーにキャラクターライン設定と同じアンチ設定を行います。
+
+
+
+rendaring (Back Ground Rendaring)
+************************************************
+
+
+.. figure:: RendaringTools_BackGroundRendaring.png
+   :width: 250px
+
+
+#. **RenderLayer list Reload**：
+
+   シーン内のレンダーレイヤーが表示されていなければ、上記のボタンを押してReloadしてください。
+
+#. **RenderLayer Select**：
+
+   レンダリングを行いたいレンダーレイヤーを選択してください。
+
+
+
+#. **Save Name Under Box's Name**：
+
+   レンダージョブを投げる際に下のBox名でファイルを保存することができます。
+
+#. **FrameStart**：
+
+   レンダージョブのスタートフレームを変更します。
+
+#. **FrameEnd**：
+
+   レンダージョブのエンドフレームを変更します。。
+
+#. **machine priority low,high'**：
+
+   レンダージョブのCPU優先度を決めることが出来ます。
+
+
+#. **Back Ground Rendaring**：
+
+   選択しているレンダーレイヤーを上のBox名でファイルを保存しバックグラウンドレンダリングを行います。
+
+.. note::
+
+    レンダーレイヤージョブからレンダーレイヤーの指定、フレーム開始位置、終了位置を決定しています。
+    レンダーレイヤーの変更、フレームの変更でファイルを分ける必要はありません。
+
+
+Blast Rendaring
+************************************************
+
+
+.. figure:: blast.png
+   :width: 250px
+
+　選択しているレンダーレイヤーを一括で
+　PlayBlastを作成出来るツールです。
+
+#. **RenderLayer list Reload**：
+
+   シーン内のレンダーレイヤーが表示されていなければ、上記のボタンを押してReloadしてください。
+
+#. **RenderLayer Select**：
+
+   レンダリングを行いたいレンダーレイヤーを選択してください。
+
+
+#. **FrameStart**：
+
+   Blastのスタートフレームを変更します。
+
+#. **FrameEnd**：
+
+   Blastのエンドフレームを変更します。。
+
+
+#. **Save Blast Images's Name**：
+
+   Blastの保存ファイル名を指定します。。
+
+　
+#. **viewport2.0 texture**
+
+　チェックを入れることで、以下状態でBlastを行います。
+
+    #. アンチ最高設定
+    #. 透過最高設定
+    #. テクスチャオン
+    #. シェーディング状態に変更
+    #. viewport2.0に変更

@@ -1,0 +1,28 @@
+LOAD Reference
+################
+
+リファレンスモデル読み込みツール
+**********************************
+
+.. |Item0000| image:: mc_LoadReference.png
+    :width: 400px
+
+|Item0000|
+
+使用方法
+------------
+
+* Cut Scene作成時以下ツールからリファレンスモデルを読み込むことが出来ます。
+
+
+
+
+
+.. |Item0001| image:: loadReference.png
+    :width: 400px
+
+|Item0001|
+
+* 日付や**takeNo**のついたファイルが有る際は、無記名のファイルを読み込んでください。
+* 例：KDOモデルであれば、KDO_A_ANM.mb
+

@@ -1,30 +1,63 @@
 maya Tool manual
 ========================
 
+
+
 .. toctree::
     :maxdepth: 1
-    :glob:
 
-    */*
+    Scene/Scene.rst
 
-
-toolフォルダ構成
-
-.. figure:: img/folder_05_tools.png
-   :width: 300px
+.. figure:: mayatools1.png
+    :width: 400px
 
 
 
-.. warning::
+.. toctree::
+    :maxdepth: 1
 
-    G:/05_tool/javascript/からの絶対パスで作成しているツールがあります。全機能使用する為には移動しないで下さい。
+    Rendaring/Rendaring.rst
+
+
+.. figure:: mayatools2.png
+    :width: 400px
+
+
+
+.. toctree::
+    :maxdepth: 1
+
+    Anim/Anim.rst
+
+.. figure:: mayatools3.png
+   :width: 400px
+
+
+
+.. toctree::
+    :maxdepth: 1
+
+    Export/Export.rst
+
+.. figure:: mayatools4.png
+   :width: 400px
+
+
+
+.. toctree::
+    :maxdepth: 1
+
+    Other/Other.rst
+
+.. figure:: mayatools5.png
+   :width: 400px
+
 
 
 .. note::
 
     コピーしてシェルフに登録して下さい。
 
-    source "KGS_Tools.mel";
-    KGSToolwindow;
-
+    source "pj_Tools.mel";
+    pjToolwindow;
 

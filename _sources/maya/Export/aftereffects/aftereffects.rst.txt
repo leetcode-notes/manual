@@ -1,0 +1,18 @@
+aftereffects
+=============================
+
+.. figure:: AfterEffects.png
+   :width: 400px
+
+機能
+------
+
+mayaの以下データを出力可能です。
+
++ Camera
++ キャラクターなどのアニメーションしたもの
++ Light
+
+
+.. figure:: AfterEffects_tool.png
+   :width: 400px

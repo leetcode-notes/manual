@@ -1,0 +1,60 @@
+LOAD SCENE
+############
+
+
+.. figure:: mb_projscenes_load.png
+   :width: 400px
+
+機能
+******************************************
+
+シーン読み込みツール
+
+
+設定名
+--------
+
+* 赤枠をクリックしてください。以下設定ウィンドウが開きます。
+* LOAD CUT SCENE
+* ProjectsをKGS_shotに設定してください。
+
+
+.. figure:: 0000.png
+   :width: 400px
+
+
+* 上記ツールからシーンを開くことで、プロジェクト設定された状態で開くことが出来ます。
+* s03_c100の場合　→　G:/03_shots/s03/c100/maya　（プロジェクト設定フォルダ）
+
+
+
+
+
+#. **low_viewRender**：
+
+    ファイルをlegacy Default Viewport、wireframe状態でファイル高速に開きます。
+    レンダリング作業等のviewでの確認があまり必要ない際に使用してください。
+
+
+#. **low_viewRender**：
+
+    ポリゴンのみ表示の状態で開きます。
+    レンダリング作業等のviewでの確認があまり必要ない際に使用してください。
+
+
+#. **low_viewRender**：
+
+    vfx作業に必要な物のみ表示の状態で開きます。
+    vfx作業用に使用してください。
+
+.. warning::
+
+    以下設定はモデル作成用に使用します。
+
+    **LOAD Model**
+
+    Asset Modelを編集する際はProjctをKGS_modelにスクロールしてください。
+
+    **LOAD Work Model**
+
+    Asset Modelを編集する前のデータ編集はProjctをKGS_workにスクロールしてください。

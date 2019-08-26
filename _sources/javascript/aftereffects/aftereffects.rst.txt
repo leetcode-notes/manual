@@ -11,7 +11,7 @@ tool起動画面
 
     以下ツールを使用して設定を行ってください。
 
-    */tool/javascript/jsxsetup/jsxsetup.exe
+    /tool/javascript/jsxsetup/jsxsetup.exe
 
 :ref:`ツール使用方法 <AESETUP>`
 
