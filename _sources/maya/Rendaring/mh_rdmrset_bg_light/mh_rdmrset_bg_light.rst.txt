@@ -26,7 +26,12 @@ CTRL_LightCustomに設定がある場合、lightset(morning、morningライト�
 ***********
 
 
-.. figure:: bgrendset.png
+.. figure:: mh_rdmrset_bg_light_tool.png
+   :width: 300px
+
+
+
+.. figure:: mh_rdmrset_bg_light_tool2.png
    :width: 300px
 
 
@@ -50,31 +55,5 @@ CTRL_LightCustomに設定がある場合、lightset(morning、morningライト�
 
 #. **RenderLayer Kind**
 
-   #. Morning　昼
-
-      CTRL_LightCustom： counter:OFF、FanLight:OFF、skydome:Morning
-
-   #. morning_ligh　昼（照明有り）
-
-      CTRL_LightCustom： skydome:MorningLight、counter:ON、FanLight:ON
-
-   #. Night　夜
-
-      CTRL_LightCustom： skydome:night、counter:OFF、FanLight:OFF
-
-   #. night_light　夜（照明有り）
-
-      CTRL_LightCustom： skydome:nightLight、counter:ON、FanLight:ON、
 
 
-#. **Make RenderLayer**
-
-    設定した状態でレンダーレイヤーを作成します。
-
-    * Final gather on
-
-    * Accuracy 50
-
-    * Point density 0.5
-
-    * Point interpolation 50 等

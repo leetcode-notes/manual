@@ -1,0 +1,25 @@
+Synoptic Button
+=============================
+
+
+.. figure:: Synoptic_Button.png
+   :width: 400px
+
+
+
+機能
+******************************************
+
+
+Animation ToolSet
+
+使用方法
+***********
+
+
+
+.. figure:: Synoptic_Button_tool.png
+   :width: 800px
+
+
+

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>fancy scrollview &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  <title>AI MazePopulationManager &mdash; All-Tool-Manual 0.00 ドキュメント</title>
   
 
   
@@ -36,9 +36,9 @@
               href="../../../../genindex.html"/>
         <link rel="search" title="検索" href="../../../../search.html"/>
     <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
-        <link rel="up" title="effect" href="../effecgt.html"/>
-        <link rel="next" title="metaball Metaball" href="code/Metaball.html"/>
-        <link rel="prev" title="effect Extrude" href="../extrude/Extrude.html"/> 
+        <link rel="up" title="effect" href="../AI.html"/>
+        <link rel="next" title="basic shader" href="../../basicshader/basicshader.html"/>
+        <link rel="prev" title="effect" href="../AI.html"/> 
 
   
   <script src="../../../../_static/js/modernizr.min.js"></script>
@@ -105,23 +105,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../shaderforge/shaderforge.html">shaderforge</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../unity.html">unity shader</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../AI/AI.html">effect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../basicshader/basicshader.html">basic shader</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../effecgt.html">effect</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../Distortion/KriptoFXRFX1distortion.html">Distortion KriptoFXRFX1distortion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../RimEffect/RimEffect.html">RimEffect RimEffect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../RimEffect/Rimlight.html">RimEffect Rimlight</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../effbg/effbg3D.html">Python manual</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../extrude/Extrude.html">effect Extrude</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">fancy scrollview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../mesh/mesh.html">mesh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../metaball2D/metaball_particle.html">metaball metaball_particle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../motiongraphics/circlearray.html">motiongraphics circlearray</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../motiongraphics/circlearray2.html">motiongraphics circlearray2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../motiongraphics/circlearray3.html">motiongraphics circlearray3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../noise/noise_re.html">noise</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../AI.html">effect</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AI MazePopulationManager</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../basicshader/basicshader.html">basic shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../effect/effecgt.html">effect</a></li>
 </ul>
 </li>
 </ul>
@@ -162,12 +151,12 @@
       
         <li><a href="../../unity.html">unity shader</a> &raquo;</li>
       
-        <li><a href="../effecgt.html">effect</a> &raquo;</li>
+        <li><a href="../AI.html">effect</a> &raquo;</li>
       
-    <li>fancy scrollview</li>
+    <li>AI MazePopulationManager</li>
     <li class="wy-breadcrumbs-aside">
       
-          <a href="https://github.com/shader/unity/effect/fancyscrollview/fancyscrollview.rst" class="fa fa-github"> Edit on GitHub</a>
+          <a href="https://github.com/shader/unity/AI/AI/MazePopulationManager.rst" class="fa fa-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -176,13 +165,104 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="fancy-scrollview">
-<h1>fancy scrollview<a class="headerlink" href="#fancy-scrollview" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="code/Metaball.html">metaball Metaball</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code/Metaballhlsl.html">metaball Metaballhlsl</a></li>
-</ul>
+  <div class="section" id="ai-mazepopulationmanager">
+<h1>AI MazePopulationManager<a class="headerlink" href="#ai-mazepopulationmanager" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Linq;
+
+public class PopulationManager : MonoBehaviour {
+
+	public GameObject personPrefab;
+	public int populationSize = 10;
+	List&lt;GameObject&gt; population = new List&lt;GameObject&gt;();
+	public static float elapsed = 0;
+	int trialTime = 10;
+	int generation = 1;
+
+	GUIStyle guiStyle = new GUIStyle();
+	void OnGUI()
+	{
+		guiStyle.fontSize = 50;
+		guiStyle.normal.textColor = Color.white;
+		GUI.Label(new Rect(10, 10, 100, 20), &quot;Generation: &quot; + generation, guiStyle);
+		GUI.Label(new Rect(10, 65, 100, 20), &quot;Trial Time: &quot; + (int)elapsed, guiStyle);
+	}
+
+	// Use this for initialization
+	void Start () {
+		for(int i = 0; i &lt; populationSize; i++)
+		{
+			Vector3 pos = new Vector3(Random.Range(-9,9),Random.Range(-4.5f,4.5f),0);
+			GameObject go = Instantiate(personPrefab, pos, Quaternion.identity);
+			go.GetComponent&lt;DNA&gt;().r = Random.Range(0.0f,1.0f);
+			go.GetComponent&lt;DNA&gt;().g = Random.Range(0.0f,1.0f);
+			go.GetComponent&lt;DNA&gt;().b = Random.Range(0.0f,1.0f);
+			go.GetComponent&lt;DNA&gt;().s = Random.Range(0.1f,0.3f);
+			population.Add(go);
+		}
+	}
+
+	GameObject Breed(GameObject parent1, GameObject parent2)
+	{
+		Vector3 pos = new Vector3(Random.Range(-9,9),Random.Range(-4.5f,4.5f),0);
+		GameObject offspring = Instantiate(personPrefab, pos, Quaternion.identity);
+		DNA dna1 = parent1.GetComponent&lt;DNA&gt;();
+		DNA dna2 = parent2.GetComponent&lt;DNA&gt;();
+		//swap parent dna
+		if(Random.Range(0,1000) &gt; 5)
+		{
+			offspring.GetComponent&lt;DNA&gt;().r = Random.Range(0,10) &lt; 5 ? dna1.r : dna2.r;
+			offspring.GetComponent&lt;DNA&gt;().g = Random.Range(0,10) &lt; 5 ? dna1.g : dna2.g;
+			offspring.GetComponent&lt;DNA&gt;().b = Random.Range(0,10) &lt; 5 ? dna1.b : dna2.b;
+			offspring.GetComponent&lt;DNA&gt;().s = Random.Range(0,10) &lt; 5 ? dna1.s : dna2.s;
+		}
+		else
+		{
+			offspring.GetComponent&lt;DNA&gt;().r = Random.Range(0.0f,1.0f);
+			offspring.GetComponent&lt;DNA&gt;().g = Random.Range(0.0f,1.0f);
+			offspring.GetComponent&lt;DNA&gt;().b = Random.Range(0.0f,1.0f);
+			offspring.GetComponent&lt;DNA&gt;().s = Random.Range(0.1f,0.3f);
+		}
+		return offspring;
+	}
+
+	void BreedNewPopulation()
+	{
+		List&lt;GameObject&gt; newPopulation = new List&lt;GameObject&gt;();
+		//get rid of unfit individuals
+		List&lt;GameObject&gt; sortedList = population.OrderByDescending(o =&gt; o.GetComponent&lt;DNA&gt;().timeToDie).ToList();
+
+		population.Clear();
+		//breed upper half of sorted list
+		for(int i = (int)(sortedList.Count/2.0f); i &lt; sortedList.Count-1; i++)
+		{
+			for(int j = (int)(sortedList.Count/2.0f) + 1; i &lt; sortedList.Count; i++)
+			{
+				population.Add(Breed(sortedList[i], sortedList[j]));
+				population.Add(Breed(sortedList[j], sortedList[i]));
+			}
+		}
+		//destroy all parents and previous population
+		for(int i = 0; i &lt; sortedList.Count; i++)
+		{
+			Destroy(sortedList[i]);
+		}
+		generation++;
+	}
+
+	// Update is called once per frame
+	void Update () {
+		elapsed += Time.deltaTime;
+		if(elapsed &gt; trialTime)
+		{
+			BreedNewPopulation();
+			elapsed = 0;
+		}
+	}
+}
+</pre></div>
 </div>
 </div>
 
@@ -193,10 +273,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="code/Metaball.html" class="btn btn-neutral float-right" title="metaball Metaball" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../basicshader/basicshader.html" class="btn btn-neutral float-right" title="basic shader" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../extrude/Extrude.html" class="btn btn-neutral" title="effect Extrude" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../AI.html" class="btn btn-neutral" title="effect" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

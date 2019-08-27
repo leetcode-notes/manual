@@ -26,7 +26,7 @@ CTRL_LightCustomに設定がある場合、lightset(morning、morningライト�
 ***********
 
 
-.. figure:: bgrendset.png
+.. figure:: mh_rdmrset_bg_garden_tool.png
    :width: 300px
 
 
