@@ -1,0 +1,10 @@
+XJINE basic shader
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
