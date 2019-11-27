@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code Rotator &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="GrbArt Sample" href="../GrbArt.html"/>
+        <link rel="next" title="code ShaderChanger" href="ShaderChanger.html"/>
+        <link rel="prev" title="code ProjectileMover" href="ProjectileMover.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AI/AI.html">AI</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../GrbArt.html">GrbArt Sample</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="DemoShooting.html">code DemoShooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ParticleCollisionInstance.html">code ParticleCollisionInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ProjectileMover.html">code ProjectileMover</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code Rotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShaderChanger.html">code ShaderChanger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Add_CenterGlow.html">shader Add_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Add_DistortTexture.html">shader Add_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Add_Trail.html">shader Add_Trail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Blend_CenterGlow.html">shader Blend_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Blend_DistortTexture.html">shader Blend_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/Electricity.html">shader Electricity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Add_CenterGlow.html">shader LWRP_Add_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Add_DistortTexture.html">shader LWRP_Add_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Add_Trail.html">shader LWRP_Add_Trail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Blend_CenterGlow.html">shader LWRP_Blend_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Blend_DistortTexture.html">shader LWRP_Blend_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../shader/LWRP_Electricity.html">shader LWRP_Electricity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../effect/effect.html">effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../GrbArt.html">GrbArt Sample</a> &raquo;</li>
+      
+    <li>code Rotator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/GrbArt/code/Rotator.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-rotator">
+<h1>code Rotator<a class="headerlink" href="#code-rotator" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">UnityEngine</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">Rotator</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+	<span class="n">public</span> <span class="nb">float</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">public</span> <span class="nb">float</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">public</span> <span class="nb">float</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="n">void</span> <span class="n">OnEnable</span><span class="p">()</span>
+    <span class="p">{</span>
+		<span class="n">InvokeRepeating</span><span class="p">(</span><span class="s2">&quot;Rotate&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">,</span> <span class="mf">0.0167</span><span class="n">f</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">void</span> <span class="n">OnDisable</span><span class="p">()</span>
+    <span class="p">{</span>
+		<span class="n">CancelInvoke</span><span class="p">();</span>
+	<span class="p">}</span>
+	<span class="n">void</span> <span class="n">Rotate</span><span class="p">()</span>
+    <span class="p">{</span>
+		<span class="n">this</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">localEulerAngles</span> <span class="o">+=</span> <span class="n">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ShaderChanger.html" class="btn btn-neutral float-right" title="code ShaderChanger" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ProjectileMover.html" class="btn btn-neutral" title="code ProjectileMover" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

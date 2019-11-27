@@ -1,0 +1,5 @@
+manager GameManager
+---------------------------------------------------------------------------
+
+.. literalinclude:: GameManager.cs
+

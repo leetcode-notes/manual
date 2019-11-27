@@ -1,0 +1,1349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>resource resourcechecker &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="utility" href="../utility.html"/>
+        <link rel="next" title="utility CreateScriptableObjectMenu" href="../utility/CreateScriptableObjectMenu.html"/>
+        <link rel="prev" title="utility ObjectPostprocessor" href="../CreateEmptyAtZero/ObjectPostprocessor.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AssetBundle/AssetBundle.html">Asset Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../decal/decal.html">decal</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../editor.html">editor 拡張</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../9-3_/Inspector.html">UnityのInspectorを拡張する。</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9-4_hp_save/Character.html">9-4_hp_save Character</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9-4_hp_save/CharacterInspector.html">9-4_hp_save CharacterInspector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9-5_multipleedit/Character.html">9-5_multipleedit Character</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../9-5_multipleedit/CharacterInspector.html">9-5_multipleedit CharacterInspector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../GUI/GUI.html">editor GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../GUI/windowexample.html">editor windowexample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../animation/AnimationCopy.html">editor AnimationCopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/components.html">Python manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mobile/CrossPlatformInputInitialize.html">mobile CrossPlatformInputInitialize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../particle/particle.html">Particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../scene_button/scene_button.html">scene_button scene_button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../scriptableobject/ExampleAsset.html">scriptableobject ExampleAsset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../serialized/serialized.html">serialized</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../timeline/TimeControl.html">timeline TimeControl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../timeline/TimeControl2.html">timeline TimeControl2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../timeline/timeline.html">timeline timeline</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../utility.html">utility</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../CreateEmptyAtZero/CreateEmptyAtZeroPosition.html">utility CreateEmptyAtZeroPosition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../CreateEmptyAtZero/ObjectPostprocessor.html">utility ObjectPostprocessor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">resource resourcechecker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utility/CreateScriptableObjectMenu.html">utility CreateScriptableObjectMenu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utility/DependencyChecker.html">utility DependencyChecker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utility/HierarchyScriptViewerWindow.html">utility HierarchyScriptViewerWindow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../effect/effect.html">effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../../editor.html">editor 拡張</a> &raquo;</li>
+      
+        <li><a href="../utility.html">utility</a> &raquo;</li>
+      
+    <li>resource resourcechecker</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/editor/utility/resource/resourcechecker.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="resource-resourcechecker">
+<h1>resource resourcechecker<a class="headerlink" href="#resource-resourcechecker" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Resource Checker
+// (c) 2012 Simon Oliver / HandCircus / hello@handcircus.com
+// (c) 2015 Brice Clocher / Mangatome / hello@mangatome.net
+// Public domain, do with whatever you like, commercial or not
+// This comes with no warranty, use at your own risk!
+// https://github.com/handcircus/Unity-Resource-Checker
+
+using System;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEditor;
+using System.Collections.Generic;
+using System.Reflection;
+using Object = UnityEngine.Object;
+
+public class TextureDetails : IEquatable&lt;TextureDetails&gt;
+{
+	public bool isCubeMap;
+	public int memSizeKB;
+	public Texture texture;
+	public TextureFormat format;
+	public int mipMapCount;
+	public List&lt;Object&gt; FoundInMaterials=new List&lt;Object&gt;();
+	public List&lt;Object&gt; FoundInRenderers=new List&lt;Object&gt;();
+	public List&lt;Object&gt; FoundInAnimators = new List&lt;Object&gt;();
+	public List&lt;Object&gt; FoundInScripts = new List&lt;Object&gt;();
+	public List&lt;Object&gt; FoundInGraphics = new List&lt;Object&gt;();
+	public List&lt;Object&gt; FoundInButtons = new List&lt;Object&gt;();
+	public bool isSky;
+	public bool instance;
+	public bool isgui;
+	public TextureDetails()
+	{
+
+	}
+
+    public bool Equals(TextureDetails other)
+    {
+        return texture != null &amp;&amp; other.texture != null &amp;&amp;
+			texture.GetNativeTexturePtr() == other.texture.GetNativeTexturePtr();
+    }
+
+    public override int GetHashCode()
+    {
+		return (int)texture.GetNativeTexturePtr();
+    }
+
+    public override bool Equals(object obj)
+    {
+        return Equals(obj as TextureDetails);
+    }
+};
+
+public class MaterialDetails
+{
+
+	public Material material;
+
+	public List&lt;Renderer&gt; FoundInRenderers=new List&lt;Renderer&gt;();
+	public List&lt;Graphic&gt; FoundInGraphics=new List&lt;Graphic&gt;();
+	public bool instance;
+	public bool isgui;
+	public bool isSky;
+
+	public MaterialDetails()
+	{
+		instance = false;
+		isgui = false;
+		isSky = false;
+	}
+};
+
+public class MeshDetails
+{
+
+	public Mesh mesh;
+
+	public List&lt;MeshFilter&gt; FoundInMeshFilters=new List&lt;MeshFilter&gt;();
+	public List&lt;SkinnedMeshRenderer&gt; FoundInSkinnedMeshRenderer=new List&lt;SkinnedMeshRenderer&gt;();
+	public bool instance;
+
+	public MeshDetails()
+	{
+		instance = false;
+	}
+};
+
+public class MissingGraphic{
+	public Transform Object;
+	public string type;
+	public string name;
+}
+
+public class ResourceChecker : EditorWindow {
+
+
+	string[] inspectToolbarStrings = {&quot;Textures&quot;, &quot;Materials&quot;,&quot;Meshes&quot;};
+	string[] inspectToolbarStrings2 = {&quot;Textures&quot;, &quot;Materials&quot;,&quot;Meshes&quot;, &quot;Missing&quot;};
+
+	enum InspectType
+	{
+		Textures,Materials,Meshes,Missing
+	};
+
+	bool IncludeDisabledObjects=true;
+	bool IncludeSpriteAnimations=true;
+	bool IncludeScriptReferences=true;
+	bool IncludeGuiElements=true;
+	bool thingsMissing = false;
+
+	InspectType ActiveInspectType=InspectType.Textures;
+
+	float ThumbnailWidth=40;
+	float ThumbnailHeight=40;
+
+	List&lt;TextureDetails&gt; ActiveTextures=new List&lt;TextureDetails&gt;();
+	List&lt;MaterialDetails&gt; ActiveMaterials=new List&lt;MaterialDetails&gt;();
+	List&lt;MeshDetails&gt; ActiveMeshDetails=new List&lt;MeshDetails&gt;();
+	List&lt;MissingGraphic&gt; MissingObjects = new List&lt;MissingGraphic&gt; ();
+
+	Vector2 textureListScrollPos=new Vector2(0,0);
+	Vector2 materialListScrollPos=new Vector2(0,0);
+	Vector2 meshListScrollPos=new Vector2(0,0);
+	Vector2 missingListScrollPos = new Vector2 (0,0);
+
+	int TotalTextureMemory=0;
+	int TotalMeshVertices=0;
+
+	bool ctrlPressed=false;
+
+	static int MinWidth=475;
+	Color defColor;
+
+	bool collectedInPlayingMode;
+
+	[MenuItem (&quot;Window/Resource Checker&quot;)]
+	static void Init ()
+	{
+		ResourceChecker window = (ResourceChecker) EditorWindow.GetWindow (typeof (ResourceChecker));
+		window.CheckResources();
+		window.minSize=new Vector2(MinWidth,475);
+	}
+
+	void OnGUI ()
+	{
+		defColor = GUI.color;
+		IncludeDisabledObjects = GUILayout.Toggle(IncludeDisabledObjects, &quot;Include disabled objects&quot;, GUILayout.Width(300));
+		IncludeSpriteAnimations = GUILayout.Toggle(IncludeSpriteAnimations, &quot;Look in sprite animations&quot;, GUILayout.Width(300));
+		GUI.color = new Color (0.8f, 0.8f, 1.0f, 1.0f);
+		IncludeScriptReferences = GUILayout.Toggle(IncludeScriptReferences, &quot;Look in behavior fields&quot;, GUILayout.Width(300));
+		GUI.color = new Color (1.0f, 0.95f, 0.8f, 1.0f);
+		IncludeGuiElements = GUILayout.Toggle(IncludeGuiElements, &quot;Look in GUI elements&quot;, GUILayout.Width(300));
+		GUI.color = defColor;
+		GUILayout.BeginArea(new Rect(position.width-85,5,100,65));
+		if (GUILayout.Button(&quot;Calculate&quot;,GUILayout.Width(80), GUILayout.Height(40)))
+			CheckResources();
+		if (GUILayout.Button(&quot;CleanUp&quot;,GUILayout.Width(80), GUILayout.Height(20)))
+			Resources.UnloadUnusedAssets();
+		GUILayout.EndArea();
+		RemoveDestroyedResources();
+
+		GUILayout.Space(30);
+		if (thingsMissing == true) {
+			EditorGUI.HelpBox (new Rect(8,75,300,25),&quot;Some GameObjects are missing graphical elements.&quot;, MessageType.Error);
+		}
+		GUILayout.BeginHorizontal();
+		GUILayout.Label(&quot;Textures &quot;+ActiveTextures.Count+&quot; - &quot;+FormatSizeString(TotalTextureMemory));
+		GUILayout.Label(&quot;Materials &quot;+ActiveMaterials.Count);
+		GUILayout.Label(&quot;Meshes &quot;+ActiveMeshDetails.Count+&quot; - &quot;+TotalMeshVertices+&quot; verts&quot;);
+		GUILayout.EndHorizontal();
+		if (thingsMissing == true) {
+			ActiveInspectType = (InspectType)GUILayout.Toolbar ((int)ActiveInspectType, inspectToolbarStrings2);
+		} else {
+			ActiveInspectType = (InspectType)GUILayout.Toolbar ((int)ActiveInspectType, inspectToolbarStrings);
+		}
+
+		ctrlPressed=Event.current.control || Event.current.command;
+
+		switch (ActiveInspectType)
+		{
+		case InspectType.Textures:
+			ListTextures();
+			break;
+		case InspectType.Materials:
+			ListMaterials();
+			break;
+		case InspectType.Meshes:
+			ListMeshes();
+			break;
+		case InspectType.Missing:
+			ListMissing();
+			break;
+		}
+	}
+
+	private void RemoveDestroyedResources()
+	{
+		if (collectedInPlayingMode != Application.isPlaying)
+		{
+			ActiveTextures.Clear();
+			ActiveMaterials.Clear();
+			ActiveMeshDetails.Clear();
+			MissingObjects.Clear ();
+			thingsMissing = false;
+			collectedInPlayingMode = Application.isPlaying;
+		}
+
+		ActiveTextures.RemoveAll(x =&gt; !x.texture);
+		ActiveTextures.ForEach(delegate(TextureDetails obj) {
+			obj.FoundInAnimators.RemoveAll(x =&gt; !x);
+			obj.FoundInMaterials.RemoveAll(x =&gt; !x);
+			obj.FoundInRenderers.RemoveAll(x =&gt; !x);
+			obj.FoundInScripts.RemoveAll(x =&gt; !x);
+			obj.FoundInGraphics.RemoveAll(x =&gt; !x);
+		});
+
+		ActiveMaterials.RemoveAll(x =&gt; !x.material);
+		ActiveMaterials.ForEach(delegate(MaterialDetails obj) {
+			obj.FoundInRenderers.RemoveAll(x =&gt; !x);
+			obj.FoundInGraphics.RemoveAll(x =&gt; !x);
+		});
+
+		ActiveMeshDetails.RemoveAll(x =&gt; !x.mesh);
+		ActiveMeshDetails.ForEach(delegate(MeshDetails obj) {
+			obj.FoundInMeshFilters.RemoveAll(x =&gt; !x);
+			obj.FoundInSkinnedMeshRenderer.RemoveAll(x =&gt; !x);
+		});
+
+		TotalTextureMemory = 0;
+		foreach (TextureDetails tTextureDetails in ActiveTextures) TotalTextureMemory += tTextureDetails.memSizeKB;
+
+		TotalMeshVertices = 0;
+		foreach (MeshDetails tMeshDetails in ActiveMeshDetails) TotalMeshVertices += tMeshDetails.mesh.vertexCount;
+	}
+
+	int GetBitsPerPixel(TextureFormat format)
+	{
+		switch (format)
+		{
+		case TextureFormat.Alpha8: //	 Alpha-only texture format.
+			return 8;
+		case TextureFormat.ARGB4444: //	 A 16 bits/pixel texture format. Texture stores color with an alpha channel.
+			return 16;
+		case TextureFormat.RGBA4444: //	 A 16 bits/pixel texture format.
+			return 16;
+		case TextureFormat.RGB24:	// A color texture format.
+			return 24;
+		case TextureFormat.RGBA32:	//Color with an alpha channel texture format.
+			return 32;
+		case TextureFormat.ARGB32:	//Color with an alpha channel texture format.
+			return 32;
+		case TextureFormat.RGB565:	//	 A 16 bit color texture format.
+			return 16;
+		case TextureFormat.DXT1:	// Compressed color texture format.
+			return 4;
+		case TextureFormat.DXT5:	// Compressed color with alpha channel texture format.
+			return 8;
+			/*
+			case TextureFormat.WiiI4:	// Wii texture format.
+			case TextureFormat.WiiI8:	// Wii texture format. Intensity 8 bit.
+			case TextureFormat.WiiIA4:	// Wii texture format. Intensity + Alpha 8 bit (4 + 4).
+			case TextureFormat.WiiIA8:	// Wii texture format. Intensity + Alpha 16 bit (8 + 8).
+			case TextureFormat.WiiRGB565:	// Wii texture format. RGB 16 bit (565).
+			case TextureFormat.WiiRGB5A3:	// Wii texture format. RGBA 16 bit (4443).
+			case TextureFormat.WiiRGBA8:	// Wii texture format. RGBA 32 bit (8888).
+			case TextureFormat.WiiCMPR:	//	 Compressed Wii texture format. 4 bits/texel, ~RGB8A1 (Outline alpha is not currently supported).
+				return 0;  //Not supported yet
+			*/
+		case TextureFormat.PVRTC_RGB2://	 PowerVR (iOS) 2 bits/pixel compressed color texture format.
+			return 2;
+		case TextureFormat.PVRTC_RGBA2://	 PowerVR (iOS) 2 bits/pixel compressed with alpha channel texture format
+			return 2;
+		case TextureFormat.PVRTC_RGB4://	 PowerVR (iOS) 4 bits/pixel compressed color texture format.
+			return 4;
+		case TextureFormat.PVRTC_RGBA4://	 PowerVR (iOS) 4 bits/pixel compressed with alpha channel texture format
+			return 4;
+		case TextureFormat.ETC_RGB4://	 ETC (GLES2.0) 4 bits/pixel compressed RGB texture format.
+			return 4;
+		case TextureFormat.BGRA32://	 Format returned by iPhone camera
+			return 32;
+			#if !UNITY_5 &amp;&amp; !UNITY_5_3_OR_NEWER
+			case TextureFormat.ATF_RGB_DXT1://	 Flash-specific RGB DXT1 compressed color texture format.
+			case TextureFormat.ATF_RGBA_JPG://	 Flash-specific RGBA JPG-compressed color texture format.
+			case TextureFormat.ATF_RGB_JPG://	 Flash-specific RGB JPG-compressed color texture format.
+			return 0; //Not supported yet
+			#endif
+		}
+		return 0;
+	}
+
+	int CalculateTextureSizeBytes(Texture tTexture)
+	{
+
+		int tWidth=tTexture.width;
+		int tHeight=tTexture.height;
+		if (tTexture is Texture2D)
+		{
+			Texture2D tTex2D=tTexture as Texture2D;
+			int bitsPerPixel=GetBitsPerPixel(tTex2D.format);
+			int mipMapCount=tTex2D.mipmapCount;
+			int mipLevel=1;
+			int tSize=0;
+			while (mipLevel&lt;=mipMapCount)
+			{
+				tSize+=tWidth*tHeight*bitsPerPixel/8;
+				tWidth=tWidth/2;
+				tHeight=tHeight/2;
+				mipLevel++;
+			}
+			return tSize;
+		}
+		if (tTexture is Texture2DArray)
+		{
+			Texture2DArray tTex2D=tTexture as Texture2DArray;
+			int bitsPerPixel=GetBitsPerPixel(tTex2D.format);
+			int mipMapCount=10;
+			int mipLevel=1;
+			int tSize=0;
+			while (mipLevel&lt;=mipMapCount)
+			{
+				tSize+=tWidth*tHeight*bitsPerPixel/8;
+				tWidth=tWidth/2;
+				tHeight=tHeight/2;
+				mipLevel++;
+			}
+			return tSize*((Texture2DArray)tTex2D).depth;
+		}
+		if (tTexture is Cubemap) {
+			Cubemap tCubemap = tTexture as Cubemap;
+			int bitsPerPixel = GetBitsPerPixel (tCubemap.format);
+			return tWidth * tHeight * 6 * bitsPerPixel / 8;
+		}
+		return 0;
+	}
+
+
+	void SelectObject(Object selectedObject,bool append)
+	{
+		if (append)
+		{
+			List&lt;Object&gt; currentSelection=new List&lt;Object&gt;(Selection.objects);
+			// Allow toggle selection
+			if (currentSelection.Contains(selectedObject)) currentSelection.Remove(selectedObject);
+			else currentSelection.Add(selectedObject);
+
+			Selection.objects=currentSelection.ToArray();
+		}
+		else Selection.activeObject=selectedObject;
+	}
+
+	void SelectObjects(List&lt;Object&gt; selectedObjects,bool append)
+	{
+		if (append)
+		{
+			List&lt;Object&gt; currentSelection=new List&lt;Object&gt;(Selection.objects);
+			currentSelection.AddRange(selectedObjects);
+			Selection.objects=currentSelection.ToArray();
+		}
+		else Selection.objects=selectedObjects.ToArray();
+	}
+
+	void ListTextures()
+	{
+		textureListScrollPos = EditorGUILayout.BeginScrollView(textureListScrollPos);
+
+		foreach (TextureDetails tDetails in ActiveTextures)
+		{
+
+			GUILayout.BeginHorizontal ();
+			Texture tex =tDetails.texture;
+			if(tDetails.texture.GetType() == typeof(Texture2DArray) || tDetails.texture.GetType() == typeof(Cubemap)){
+				tex = AssetPreview.GetMiniThumbnail(tDetails.texture);
+			}
+			GUILayout.Box(tex, GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight));
+
+			if (tDetails.instance == true)
+				GUI.color = new Color (0.8f, 0.8f, defColor.b, 1.0f);
+			if (tDetails.isgui == true)
+				GUI.color = new Color (defColor.r, 0.95f, 0.8f, 1.0f);
+			if (tDetails.isSky)
+				GUI.color = new Color (0.9f, defColor.g, defColor.b, 1.0f);
+			if(GUILayout.Button(tDetails.texture.name,GUILayout.Width(150)))
+			{
+				SelectObject(tDetails.texture,ctrlPressed);
+			}
+			GUI.color = defColor;
+
+			string sizeLabel=&quot;&quot;+tDetails.texture.width+&quot;x&quot;+tDetails.texture.height;
+			if (tDetails.isCubeMap) sizeLabel+=&quot;x6&quot;;
+			if (tDetails.texture.GetType () == typeof(Texture2DArray))
+				sizeLabel+= &quot;[]\n&quot; + ((Texture2DArray)tDetails.texture).depth+&quot;depths&quot;;
+			sizeLabel+=&quot; - &quot;+tDetails.mipMapCount+&quot;mip\n&quot;+FormatSizeString(tDetails.memSizeKB)+&quot; - &quot;+tDetails.format;
+
+			GUILayout.Label (sizeLabel,GUILayout.Width(120));
+
+			if(GUILayout.Button(tDetails.FoundInMaterials.Count+&quot; Mat&quot;,GUILayout.Width(50)))
+			{
+				SelectObjects(tDetails.FoundInMaterials,ctrlPressed);
+			}
+
+			HashSet&lt;Object&gt; FoundObjects = new HashSet&lt;Object&gt;();
+			foreach (Renderer renderer in tDetails.FoundInRenderers) FoundObjects.Add(renderer.gameObject);
+			foreach (Animator animator in tDetails.FoundInAnimators) FoundObjects.Add(animator.gameObject);
+			foreach (Graphic graphic in tDetails.FoundInGraphics) FoundObjects.Add(graphic.gameObject);
+			foreach (Button button in tDetails.FoundInButtons) FoundObjects.Add(button.gameObject);
+			foreach (MonoBehaviour script in tDetails.FoundInScripts) FoundObjects.Add(script.gameObject);
+			if (GUILayout.Button(FoundObjects.Count+&quot; GO&quot;,GUILayout.Width(50)))
+			{
+				SelectObjects(new List&lt;Object&gt;(FoundObjects),ctrlPressed);
+			}
+
+			GUILayout.EndHorizontal();
+		}
+		if (ActiveTextures.Count&gt;0)
+		{
+			EditorGUILayout.Space();
+			GUILayout.BeginHorizontal ();
+			//GUILayout.Box(&quot; &quot;,GUILayout.Width(ThumbnailWidth),GUILayout.Height(ThumbnailHeight));
+			if(GUILayout.Button(&quot;Select \n All&quot;,GUILayout.Width(ThumbnailWidth*2)))
+			{
+				List&lt;Object&gt; AllTextures=new List&lt;Object&gt;();
+				foreach (TextureDetails tDetails in ActiveTextures) AllTextures.Add(tDetails.texture);
+				SelectObjects(AllTextures,ctrlPressed);
+			}
+			EditorGUILayout.EndHorizontal();
+		}
+		EditorGUILayout.EndScrollView();
+	}
+
+	void ListMaterials()
+	{
+		materialListScrollPos = EditorGUILayout.BeginScrollView(materialListScrollPos);
+
+		foreach (MaterialDetails tDetails in ActiveMaterials)
+		{
+			if (tDetails.material!=null)
+			{
+				GUILayout.BeginHorizontal ();
+
+				GUILayout.Box(AssetPreview.GetAssetPreview(tDetails.material), GUILayout.Width(ThumbnailWidth), GUILayout.Height(ThumbnailHeight));
+
+				if (tDetails.instance == true)
+					GUI.color = new Color (0.8f, 0.8f, defColor.b, 1.0f);
+				if (tDetails.isgui == true)
+					GUI.color = new Color (defColor.r, 0.95f, 0.8f, 1.0f);
+				if (tDetails.isSky)
+					GUI.color = new Color (0.9f, defColor.g, defColor.b, 1.0f);
+				if(GUILayout.Button(tDetails.material.name,GUILayout.Width(150)))
+				{
+					SelectObject(tDetails.material,ctrlPressed);
+				}
+				GUI.color = defColor;
+
+				string shaderLabel = tDetails.material.shader != null ? tDetails.material.shader.name : &quot;no shader&quot;;
+				GUILayout.Label (shaderLabel, GUILayout.Width(200));
+
+				if(GUILayout.Button((tDetails.FoundInRenderers.Count + tDetails.FoundInGraphics.Count) +&quot; GO&quot;,GUILayout.Width(50)))
+				{
+					List&lt;Object&gt; FoundObjects=new List&lt;Object&gt;();
+					foreach (Renderer renderer in tDetails.FoundInRenderers) FoundObjects.Add(renderer.gameObject);
+					foreach (Graphic graphic in tDetails.FoundInGraphics) FoundObjects.Add(graphic.gameObject);
+					SelectObjects(FoundObjects,ctrlPressed);
+				}
+
+
+				GUILayout.EndHorizontal();
+			}
+		}
+		EditorGUILayout.EndScrollView();
+	}
+
+	void ListMeshes()
+	{
+		meshListScrollPos = EditorGUILayout.BeginScrollView(meshListScrollPos);
+
+		foreach (MeshDetails tDetails in ActiveMeshDetails)
+		{
+			if (tDetails.mesh!=null)
+			{
+				GUILayout.BeginHorizontal ();
+				string name = tDetails.mesh.name;
+				if (name == null || name.Count() &lt; 1)
+					name = tDetails.FoundInMeshFilters[0].gameObject.name;
+				if (tDetails.instance == true)
+					GUI.color = new Color (0.8f, 0.8f, defColor.b, 1.0f);
+				if(GUILayout.Button(name,GUILayout.Width(150)))
+				{
+					SelectObject(tDetails.mesh,ctrlPressed);
+				}
+				GUI.color = defColor;
+				string sizeLabel=&quot;&quot;+tDetails.mesh.vertexCount+&quot; vert&quot;;
+
+				GUILayout.Label (sizeLabel,GUILayout.Width(100));
+
+
+				if(GUILayout.Button(tDetails.FoundInMeshFilters.Count + &quot; GO&quot;,GUILayout.Width(50)))
+				{
+					List&lt;Object&gt; FoundObjects=new List&lt;Object&gt;();
+					foreach (MeshFilter meshFilter in tDetails.FoundInMeshFilters) FoundObjects.Add(meshFilter.gameObject);
+					SelectObjects(FoundObjects,ctrlPressed);
+				}
+				if (tDetails.FoundInSkinnedMeshRenderer.Count &gt; 0) {
+					if (GUILayout.Button (tDetails.FoundInSkinnedMeshRenderer.Count + &quot; skinned mesh GO&quot;, GUILayout.Width (140))) {
+						List&lt;Object&gt; FoundObjects = new List&lt;Object&gt; ();
+						foreach (SkinnedMeshRenderer skinnedMeshRenderer in tDetails.FoundInSkinnedMeshRenderer)
+							FoundObjects.Add (skinnedMeshRenderer.gameObject);
+						SelectObjects (FoundObjects, ctrlPressed);
+					}
+				} else {
+					GUI.color = new Color (defColor.r, defColor.g, defColor.b, 0.5f);
+					GUILayout.Label(&quot;   0 skinned mesh&quot;);
+					GUI.color = defColor;
+				}
+
+
+				GUILayout.EndHorizontal();
+			}
+		}
+		EditorGUILayout.EndScrollView();
+	}
+
+	void ListMissing(){
+		missingListScrollPos = EditorGUILayout.BeginScrollView(missingListScrollPos);
+		foreach (MissingGraphic dMissing in MissingObjects) {
+			GUILayout.BeginHorizontal ();
+			if (GUILayout.Button (dMissing.name, GUILayout.Width (150)))
+				SelectObject (dMissing.Object, ctrlPressed);
+			GUILayout.Label (&quot;missing &quot;, GUILayout.Width(48));
+			switch (dMissing.type) {
+			case &quot;mesh&quot;:
+				GUI.color = new Color (0.8f, 0.8f, defColor.b, 1.0f);
+				break;
+			case &quot;sprite&quot;:
+				GUI.color = new Color (defColor.r, 0.8f, 0.8f, 1.0f);
+				break;
+			case &quot;material&quot;:
+				GUI.color = new Color (0.8f, defColor.g, 0.8f, 1.0f);
+				break;
+			}
+			GUILayout.Label (dMissing.type);
+			GUI.color = defColor;
+			GUILayout.EndHorizontal ();
+		}
+		EditorGUILayout.EndScrollView();
+	}
+
+	string FormatSizeString(int memSizeKB)
+	{
+		if (memSizeKB&lt;1024) return &quot;&quot;+memSizeKB+&quot;k&quot;;
+		else
+		{
+			float memSizeMB=((float)memSizeKB)/1024.0f;
+			return memSizeMB.ToString(&quot;0.00&quot;)+&quot;Mb&quot;;
+		}
+	}
+
+
+	TextureDetails FindTextureDetails(Texture tTexture)
+	{
+		foreach (TextureDetails tTextureDetails in ActiveTextures)
+		{
+			if (tTextureDetails.texture==tTexture) return tTextureDetails;
+		}
+		return null;
+
+	}
+
+	MaterialDetails FindMaterialDetails(Material tMaterial)
+	{
+		foreach (MaterialDetails tMaterialDetails in ActiveMaterials)
+		{
+			if (tMaterialDetails.material==tMaterial) return tMaterialDetails;
+		}
+		return null;
+
+	}
+
+	MeshDetails FindMeshDetails(Mesh tMesh)
+	{
+		foreach (MeshDetails tMeshDetails in ActiveMeshDetails)
+		{
+			if (tMeshDetails.mesh==tMesh) return tMeshDetails;
+		}
+		return null;
+
+	}
+
+
+	void CheckResources()
+	{
+		ActiveTextures.Clear();
+		ActiveMaterials.Clear();
+		ActiveMeshDetails.Clear();
+		MissingObjects.Clear ();
+		thingsMissing = false;
+
+		Renderer[] renderers = FindObjects&lt;Renderer&gt;();
+
+		MaterialDetails skyMat = new MaterialDetails ();
+		skyMat.material = RenderSettings.skybox;
+		skyMat.isSky = true;
+		ActiveMaterials.Add (skyMat);
+
+		//Debug.Log(&quot;Total renderers &quot;+renderers.Length);
+		foreach (Renderer renderer in renderers)
+		{
+			//Debug.Log(&quot;Renderer is &quot;+renderer.name);
+			foreach (Material material in renderer.sharedMaterials)
+			{
+
+				MaterialDetails tMaterialDetails = FindMaterialDetails(material);
+				if (tMaterialDetails == null)
+				{
+					tMaterialDetails = new MaterialDetails();
+					tMaterialDetails.material = material;
+					ActiveMaterials.Add(tMaterialDetails);
+				}
+				tMaterialDetails.FoundInRenderers.Add(renderer);
+			}
+
+			if (renderer is SpriteRenderer)
+			{
+				SpriteRenderer tSpriteRenderer = (SpriteRenderer)renderer;
+
+				if (tSpriteRenderer.sprite != null) {
+					var tSpriteTextureDetail = GetTextureDetail (tSpriteRenderer.sprite.texture, renderer);
+					if (!ActiveTextures.Contains (tSpriteTextureDetail)) {
+						ActiveTextures.Add (tSpriteTextureDetail);
+					}
+				} else if (tSpriteRenderer.sprite == null) {
+					MissingGraphic tMissing = new MissingGraphic ();
+					tMissing.Object = tSpriteRenderer.transform;
+					tMissing.type = &quot;sprite&quot;;
+					tMissing.name = tSpriteRenderer.transform.name;
+					MissingObjects.Add (tMissing);
+					thingsMissing = true;
+				}
+			}
+		}
+
+		if (IncludeGuiElements)
+		{
+			Graphic[] graphics = FindObjects&lt;Graphic&gt;();
+
+			foreach(Graphic graphic in graphics)
+			{
+				if (graphic.mainTexture)
+				{
+					var tSpriteTextureDetail = GetTextureDetail(graphic.mainTexture, graphic);
+					if (!ActiveTextures.Contains(tSpriteTextureDetail))
+					{
+						ActiveTextures.Add(tSpriteTextureDetail);
+					}
+				}
+
+				if (graphic.materialForRendering)
+				{
+					MaterialDetails tMaterialDetails = FindMaterialDetails(graphic.materialForRendering);
+					if (tMaterialDetails == null)
+					{
+						tMaterialDetails = new MaterialDetails();
+						tMaterialDetails.material = graphic.materialForRendering;
+						tMaterialDetails.isgui = true;
+						ActiveMaterials.Add(tMaterialDetails);
+					}
+					tMaterialDetails.FoundInGraphics.Add(graphic);
+				}
+			}
+
+			Button[] buttons = FindObjects&lt;Button&gt;();
+			foreach (Button button in buttons)
+			{
+				CheckButtonSpriteState(button, button.spriteState.disabledSprite);
+				CheckButtonSpriteState(button, button.spriteState.highlightedSprite);
+				CheckButtonSpriteState(button, button.spriteState.pressedSprite);
+			}
+		}
+
+		foreach (MaterialDetails tMaterialDetails in ActiveMaterials)
+		{
+			Material tMaterial = tMaterialDetails.material;
+			if (tMaterial != null)
+			{
+				var dependencies = EditorUtility.CollectDependencies(new UnityEngine.Object[] { tMaterial });
+				foreach (Object obj in dependencies)
+				{
+					if (obj is Texture)
+					{
+						Texture tTexture = obj as Texture;
+						var tTextureDetail = GetTextureDetail(tTexture, tMaterial, tMaterialDetails);
+						tTextureDetail.isSky = tMaterialDetails.isSky;
+						tTextureDetail.instance = tMaterialDetails.instance;
+						tTextureDetail.isgui = tMaterialDetails.isgui;
+						ActiveTextures.Add(tTextureDetail);
+					}
+				}
+
+				//if the texture was downloaded, it won&#39;t be included in the editor dependencies
+				if (tMaterial.HasProperty (&quot;_MainTex&quot;)) {
+					if (tMaterial.mainTexture != null &amp;&amp; !dependencies.Contains (tMaterial.mainTexture)) {
+						var tTextureDetail = GetTextureDetail (tMaterial.mainTexture, tMaterial, tMaterialDetails);
+						ActiveTextures.Add (tTextureDetail);
+					}
+				}
+			}
+		}
+
+
+		MeshFilter[] meshFilters = FindObjects&lt;MeshFilter&gt;();
+
+		foreach (MeshFilter tMeshFilter in meshFilters)
+		{
+			Mesh tMesh = tMeshFilter.sharedMesh;
+			if (tMesh != null)
+			{
+				MeshDetails tMeshDetails = FindMeshDetails(tMesh);
+				if (tMeshDetails == null)
+				{
+					tMeshDetails = new MeshDetails();
+					tMeshDetails.mesh = tMesh;
+					ActiveMeshDetails.Add(tMeshDetails);
+				}
+				tMeshDetails.FoundInMeshFilters.Add(tMeshFilter);
+			} else if (tMesh == null &amp;&amp; tMeshFilter.transform.GetComponent(&quot;TextContainer&quot;)== null) {
+				MissingGraphic tMissing = new MissingGraphic ();
+				tMissing.Object = tMeshFilter.transform;
+				tMissing.type = &quot;mesh&quot;;
+				tMissing.name = tMeshFilter.transform.name;
+				MissingObjects.Add (tMissing);
+				thingsMissing = true;
+			}
+
+			var meshRenderrer = tMeshFilter.transform.GetComponent&lt;MeshRenderer&gt;();
+
+			if (meshRenderrer == null || meshRenderrer.sharedMaterial == null) {
+				MissingGraphic tMissing = new MissingGraphic ();
+				tMissing.Object = tMeshFilter.transform;
+				tMissing.type = &quot;material&quot;;
+				tMissing.name = tMeshFilter.transform.name;
+				MissingObjects.Add (tMissing);
+				thingsMissing = true;
+			}
+		}
+
+		SkinnedMeshRenderer[] skinnedMeshRenderers = FindObjects&lt;SkinnedMeshRenderer&gt;();
+
+		foreach (SkinnedMeshRenderer tSkinnedMeshRenderer in skinnedMeshRenderers)
+		{
+			Mesh tMesh = tSkinnedMeshRenderer.sharedMesh;
+			if (tMesh != null)
+			{
+				MeshDetails tMeshDetails = FindMeshDetails(tMesh);
+				if (tMeshDetails == null)
+				{
+					tMeshDetails = new MeshDetails();
+					tMeshDetails.mesh = tMesh;
+					ActiveMeshDetails.Add(tMeshDetails);
+				}
+				tMeshDetails.FoundInSkinnedMeshRenderer.Add(tSkinnedMeshRenderer);
+			} else if (tMesh == null) {
+				MissingGraphic tMissing = new MissingGraphic ();
+				tMissing.Object = tSkinnedMeshRenderer.transform;
+				tMissing.type = &quot;mesh&quot;;
+				tMissing.name = tSkinnedMeshRenderer.transform.name;
+				MissingObjects.Add (tMissing);
+				thingsMissing = true;
+			}
+			if (tSkinnedMeshRenderer.sharedMaterial == null) {
+				MissingGraphic tMissing = new MissingGraphic ();
+				tMissing.Object = tSkinnedMeshRenderer.transform;
+				tMissing.type = &quot;material&quot;;
+				tMissing.name = tSkinnedMeshRenderer.transform.name;
+				MissingObjects.Add (tMissing);
+				thingsMissing = true;
+			}
+		}
+
+		if (IncludeSpriteAnimations)
+		{
+			Animator[] animators = FindObjects&lt;Animator&gt;();
+			foreach (Animator anim in animators)
+			{
+				#if UNITY_4_6 || UNITY_4_5 || UNITY_4_4 || UNITY_4_3
+				UnityEditorInternal.AnimatorController ac = anim.runtimeAnimatorController as UnityEditorInternal.AnimatorController;
+				#elif UNITY_5 || UNITY_5_3_OR_NEWER
+				UnityEditor.Animations.AnimatorController ac = anim.runtimeAnimatorController as UnityEditor.Animations.AnimatorController;
+				#endif
+
+				//Skip animators without layers, this can happen if they don&#39;t have an animator controller.
+				if (!ac || ac.layers == null || ac.layers.Length == 0)
+					continue;
+
+				for (int x = 0; x &lt; anim.layerCount; x++)
+				{
+					#if UNITY_4_6 || UNITY_4_5 || UNITY_4_4 || UNITY_4_3
+					UnityEditorInternal.StateMachine sm = ac.GetLayer(x).stateMachine;
+					int cnt = sm.stateCount;
+					#elif UNITY_5 || UNITY_5_3_OR_NEWER
+					UnityEditor.Animations.AnimatorStateMachine sm = ac.layers[x].stateMachine;
+					int cnt = sm.states.Length;
+					#endif
+
+					for (int i = 0; i &lt; cnt; i++)
+					{
+						#if UNITY_4_6 || UNITY_4_5 || UNITY_4_4 || UNITY_4_3
+						UnityEditorInternal.State state = sm.GetState(i);
+						Motion m = state.GetMotion();
+						#elif UNITY_5 || UNITY_5_3_OR_NEWER
+						UnityEditor.Animations.AnimatorState state = sm.states[i].state;
+						Motion m = state.motion;
+						#endif
+                        if (m != null)
+						{
+							AnimationClip clip = m as AnimationClip;
+
+						    if (clip != null)
+						    {
+						        EditorCurveBinding[] ecbs = AnimationUtility.GetObjectReferenceCurveBindings(clip);
+
+						        foreach (EditorCurveBinding ecb in ecbs)
+						        {
+						            if (ecb.propertyName == &quot;m_Sprite&quot;)
+						            {
+						                foreach (ObjectReferenceKeyframe keyframe in AnimationUtility.GetObjectReferenceCurve(clip, ecb))
+						                {
+						                    Sprite tSprite = keyframe.value as Sprite;
+
+						                    if (tSprite != null)
+						                    {
+						                        var tTextureDetail = GetTextureDetail(tSprite.texture, anim);
+						                        if (!ActiveTextures.Contains(tTextureDetail))
+						                        {
+						                            ActiveTextures.Add(tTextureDetail);
+						                        }
+						                    }
+						                }
+						            }
+						        }
+						    }
+						}
+					}
+				}
+
+			}
+		}
+
+		if (IncludeScriptReferences)
+		{
+			MonoBehaviour[] scripts = FindObjects&lt;MonoBehaviour&gt;();
+			foreach (MonoBehaviour script in scripts)
+			{
+				BindingFlags flags = BindingFlags.Public | BindingFlags.Instance; // only public non-static fields are bound to by Unity.
+				FieldInfo[] fields = script.GetType().GetFields(flags);
+
+				foreach (FieldInfo field in fields)
+				{
+					System.Type fieldType = field.FieldType;
+					if (fieldType == typeof(Sprite))
+					{
+						Sprite tSprite = field.GetValue(script) as Sprite;
+						if (tSprite != null)
+						{
+							var tSpriteTextureDetail = GetTextureDetail(tSprite.texture, script);
+							if (!ActiveTextures.Contains(tSpriteTextureDetail))
+							{
+								ActiveTextures.Add(tSpriteTextureDetail);
+							}
+						}
+					}if (fieldType == typeof(Mesh))
+					{
+						Mesh tMesh = field.GetValue(script) as Mesh;
+						if (tMesh != null)
+						{
+							MeshDetails tMeshDetails = FindMeshDetails(tMesh);
+							if (tMeshDetails == null)
+							{
+								tMeshDetails = new MeshDetails();
+								tMeshDetails.mesh = tMesh;
+								tMeshDetails.instance = true;
+								ActiveMeshDetails.Add(tMeshDetails);
+							}
+						}
+					}if (fieldType == typeof(Material))
+					{
+						Material tMaterial = field.GetValue(script) as Material;
+						if (tMaterial != null)
+						{
+							MaterialDetails tMatDetails = FindMaterialDetails(tMaterial);
+							if (tMatDetails == null)
+							{
+								tMatDetails = new MaterialDetails();
+								tMatDetails.instance = true;
+								tMatDetails.material = tMaterial;
+								if(!ActiveMaterials.Contains(tMatDetails))
+									ActiveMaterials.Add(tMatDetails);
+							}
+							if (tMaterial.mainTexture)
+							{
+								var tSpriteTextureDetail = GetTextureDetail(tMaterial.mainTexture);
+								if (!ActiveTextures.Contains(tSpriteTextureDetail))
+								{
+									ActiveTextures.Add(tSpriteTextureDetail);
+								}
+							}
+							var dependencies = EditorUtility.CollectDependencies(new UnityEngine.Object[] { tMaterial });
+							foreach (Object obj in dependencies)
+							{
+								if (obj is Texture)
+								{
+									Texture tTexture = obj as Texture;
+									var tTextureDetail = GetTextureDetail(tTexture, tMaterial, tMatDetails);
+									if(!ActiveTextures.Contains(tTextureDetail))
+										ActiveTextures.Add(tTextureDetail);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		TotalTextureMemory = 0;
+		foreach (TextureDetails tTextureDetails in ActiveTextures) TotalTextureMemory += tTextureDetails.memSizeKB;
+
+		TotalMeshVertices = 0;
+		foreach (MeshDetails tMeshDetails in ActiveMeshDetails) TotalMeshVertices += tMeshDetails.mesh.vertexCount;
+
+		// Sort by size, descending
+		ActiveTextures.Sort(delegate(TextureDetails details1, TextureDetails details2) { return details2.memSizeKB - details1.memSizeKB; });
+	    ActiveTextures = ActiveTextures.Distinct().ToList();
+		ActiveMeshDetails.Sort(delegate(MeshDetails details1, MeshDetails details2) { return details2.mesh.vertexCount - details1.mesh.vertexCount; });
+
+		collectedInPlayingMode = Application.isPlaying;
+	}
+
+	private void CheckButtonSpriteState(Button button, Sprite sprite)
+	{
+		if (sprite == null) return;
+
+		var texture = sprite.texture;
+		var tButtonTextureDetail = GetTextureDetail(texture, button);
+		if (!ActiveTextures.Contains(tButtonTextureDetail))
+		{
+			ActiveTextures.Add(tButtonTextureDetail);
+		}
+	}
+
+    private static GameObject[] GetAllRootGameObjects()
+    {
+#if !UNITY_5 &amp;&amp; !UNITY_5_3_OR_NEWER
+        return UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects().ToArray();
+#else
+        List&lt;GameObject&gt; allGo = new List&lt;GameObject&gt;();
+        for (int sceneIdx = 0; sceneIdx &lt; UnityEngine.SceneManagement.SceneManager.sceneCount; ++sceneIdx){
+            allGo.AddRange( UnityEngine.SceneManagement.SceneManager.GetSceneAt(sceneIdx).GetRootGameObjects().ToArray() );
+        }
+        return allGo.ToArray();
+#endif
+    }
+
+	private T[] FindObjects&lt;T&gt;() where T : Object
+	{
+		if (IncludeDisabledObjects) {
+			List&lt;T&gt; meshfilters = new List&lt;T&gt; ();
+			GameObject[] allGo = GetAllRootGameObjects();
+			foreach (GameObject go in allGo) {
+				Transform[] tgo = go.GetComponentsInChildren&lt;Transform&gt; (true).ToArray ();
+				foreach (Transform tr in tgo) {
+					if (tr.GetComponent&lt;T&gt; ())
+						meshfilters.Add (tr.GetComponent&lt;T&gt; ());
+				}
+			}
+			return (T[])meshfilters.ToArray ();
+		}
+		else
+			return (T[])FindObjectsOfType(typeof(T));
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, Material tMaterial, MaterialDetails tMaterialDetails)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		tTextureDetails.FoundInMaterials.Add(tMaterial);
+		foreach (Renderer renderer in tMaterialDetails.FoundInRenderers)
+		{
+			if (!tTextureDetails.FoundInRenderers.Contains(renderer)) tTextureDetails.FoundInRenderers.Add(renderer);
+		}
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, Renderer renderer)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		tTextureDetails.FoundInRenderers.Add(renderer);
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, Animator animator)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		tTextureDetails.FoundInAnimators.Add(animator);
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, Graphic graphic)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		tTextureDetails.FoundInGraphics.Add(graphic);
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, MonoBehaviour script)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		tTextureDetails.FoundInScripts.Add(script);
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture, Button button)
+	{
+		TextureDetails tTextureDetails = GetTextureDetail(tTexture);
+
+		if (!tTextureDetails.FoundInButtons.Contains(button))
+		{
+			tTextureDetails.FoundInButtons.Add(button);
+		}
+		return tTextureDetails;
+	}
+
+	private TextureDetails GetTextureDetail(Texture tTexture)
+	{
+		TextureDetails tTextureDetails = FindTextureDetails(tTexture);
+		if (tTextureDetails == null)
+		{
+			tTextureDetails = new TextureDetails();
+			tTextureDetails.texture = tTexture;
+			tTextureDetails.isCubeMap = tTexture is Cubemap;
+
+			int memSize = CalculateTextureSizeBytes(tTexture);
+
+			TextureFormat tFormat = TextureFormat.RGBA32;
+			int tMipMapCount = 1;
+			if (tTexture is Texture2D)
+			{
+				tFormat = (tTexture as Texture2D).format;
+				tMipMapCount = (tTexture as Texture2D).mipmapCount;
+			}
+			if (tTexture is Cubemap)
+			{
+				tFormat = (tTexture as Cubemap).format;
+				memSize = 8 * tTexture.height * tTexture.width;
+			}
+			if(tTexture is Texture2DArray){
+				tFormat = (tTexture as Texture2DArray).format;
+				tMipMapCount = 10;
+			}
+
+			tTextureDetails.memSizeKB = memSize / 1024;
+			tTextureDetails.format = tFormat;
+			tTextureDetails.mipMapCount = tMipMapCount;
+
+		}
+
+		return tTextureDetails;
+	}
+
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../utility/CreateScriptableObjectMenu.html" class="btn btn-neutral float-right" title="utility CreateScriptableObjectMenu" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../CreateEmptyAtZero/ObjectPostprocessor.html" class="btn btn-neutral" title="utility ObjectPostprocessor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

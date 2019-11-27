@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>forgamer ［CEDEC2019］AIが音声データからリア &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="西川善司" href="../西川善司.html"/>
+        <link rel="next" title="forgamer ［CEDEC2019］SIEが振り返る「Pla" href="［CEDEC2019］SIEが振り返る「Pla.html"/>
+        <link rel="prev" title="forgamer 西川善司連載完全理解「3DMarkVan" href="西川善司連載完全理解「3DMarkVan.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../homepagelink.html">homepage backup</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../西川善司.html">西川善司</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="VR向けリュック型PC「背負えラブルパソコン」の.html">forgamer VR向けリュック型PC「背負えラブルパソコン」の</a></li>
+<li class="toctree-l3"><a class="reference internal" href="西川善司の3DGE：現状のレイトレ要素全部入りと.html">forgamer 西川善司の3DGE：現状のレイトレ要素全部入りと</a></li>
+<li class="toctree-l3"><a class="reference internal" href="西川善司連載完全理解「3DMarkVan.html">forgamer 西川善司連載完全理解「3DMarkVan</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">forgamer ［CEDEC2019］AIが音声データからリア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="［CEDEC2019］SIEが振り返る「Pla.html">forgamer ［CEDEC2019］SIEが振り返る「Pla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="［CEDEC2019］スクエニが開発したパスト.html">forgamer ［CEDEC2019］スクエニが開発したパスト</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../homepagelink.html">homepage backup</a> &raquo;</li>
+      
+        <li><a href="../西川善司.html">西川善司</a> &raquo;</li>
+      
+    <li>forgamer ［CEDEC2019］AIが音声データからリア</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/paste/西川善司/forgamer/［CEDEC2019］AIが音声データからリア.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="forgamer-cedec2019-ai">
+<h1>forgamer ［CEDEC2019］AIが音声データからリア<a class="headerlink" href="#forgamer-cedec2019-ai" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+ライター：西川善司
+
+
+
+CEDEC 2019会場のCRI・ミドルウェアブース
+
+画像(002)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　声優がしゃべった台詞に合わせて，ゲーム内のキャラクターが口を動かす「口パク」は，今や当たり前の表現だ。しかし，グラフィックスの表現力が向上している現在では，8bit～16bit世代のクラシックなゲームのように口を開け閉めするだけの単純な2パターンアニメーションは，むしろ不自然で，キャラクターの感情を巧みに表現する声優の演技に比べて，アンバランスに見える。可能であれば，人間らしい，あるいは演技に見合った口のアニメーションが必要だ。
+
+　しかし，口パクアニメーション制作は実のところ面倒なもので，制作効率を向上する技術が望まれているテーマでもある。
+
+
+
+　その難題に取り組んだのが，音声・音響系ミドルウェアの開発を得意とするCRI・ミドルウェアだ。本稿では，同社がCEDEC 2019で行った「キャラクターをより魅力的に！ゲーム向けリップシンクミドルウェア」と「ニューラルネットワークを用いた音声信号によるリップシンク（口パク生成）技術」という2つのセッションを簡単にまとめてみたい。
+
+
+
+
+
+音声データから口パクアニメを生成する方法とは？
+
+
+
+　素人考えでは，台詞の音声データがあるのなら，それを解析して口パクアニメのデータを自動出力する仕組みが作れそうだ。実際，この考え方で口パクアニメを制作手法は，すでにいろいろと存在する。最もシンプルな手法は，波形データの音量変化に応じて口の開け具合（開口度）を変化させるというものだ。これは言語を選ばず利用できるのが利点であるものの，発音する音素の種類，つまり口の形は考慮しないので，品質面は今ひとつである。
+
+
+
+音量変化に連動するだけの口パク。スライドは，CRI・ミドルウェア提供の資料より引用（以下同）
+
+画像(003)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　シンプルな方式よりも自然な口パクアニメを生成できるのが，「最尤（さいゆう）エントロピー法」という方式を用いた「フォルマント」認識ベースのアプローチだ。
+
+　フォルマントとは，音声の波形における周波数のピークを示す。人間が発する声は，ピークが複数出ることがあり，低い周波数から第1フォルマント（F1），第2フォルマント（F2）と呼ばれる。このF1とF2をグラフの横軸と縦軸に割り当てると，その組み合わせで，音声におけるおおよその母音を推測できることが知られている。
+
+
+
+音声を周波数領域に変換し，音高（ピッチ）成分を除去して得られる2つのピークが，周波数の低いほうからF1，F2と呼ばれる
+
+画像(004)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　アイウエオの母音は，大まかな口の開け方を決定するもので，入力音声を解析して母音を推測すれば，母音を発声しているときの口の形状が決まるので，それに合わせてキャラクタの口を動かすことで，かなりリアルな口パクアニメが生成できる。
+
+
+
+F1とF2，母音の関係を示したスライド
+
+画像(005)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+CRI・ミドルウェア代表取締役社長の押見正雄氏
+
+画像(006)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　CRI・ミドルウェアの代表取締役社長で，今でもプログラムコードを書くという押見正雄氏も，2000年代前後に，音声データから口パクアニメを効率的に生成する技術の開発に取り組んだ経験があるそうだ。
+
+　当時は，計算量が少なめで相応のフォルマント認識が行える線形予測分析手法として最尤エントロピー法を採用したと押見氏は述べる。
+
+
+
+最尤エントロピー法の概念図
+
+画像(007)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　この手法を使うとF1の推定はうまくいくのだが，F2の推定が困難であるという。そこで推定精度を上げるため，あらかじめ生成しておく話者特有の母音辞書を用意して組み合わせることで，母音を推測する仕組みを採用していた。
+
+
+
+事前生成した母音辞書と，最尤エントロピー法で検出したF1で母音を推定する
+
+画像(008)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　ただ，音声の種類によっては推測精度が安定しなかったという。それ以上に，母音辞書の生成が大変で，生成した母音辞書の信頼性もよくなかったのだとか。母音辞書は話者固有の辞書なので，不特定多数の音声に対応しにくいという問題点もあったそうだ。
+
+
+
+　こうした経験を踏まえてCRI・ミドルウェアが開発したのが，機械学習型AI（ニューラルネットワーク）ベースの口パクアニメ生成ミドルウェア「ADX LipSync」だ。なお，ADXはCRI・ミドルウェアの音声関連ミドルウェアのブランド名であり，LipSyncは，「声と口の動きを同期させる」という意味の「Lip sync」から取っている。
+
+
+
+
+
+ADX LipSyncは何ができるのか
+
+
+
+CRI・ミドルウェア 研究開発本部の上田賢次郎氏
+
+画像(009)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　技術的な背景について説明した研究開発本部の上田賢次郎氏によると，ADX LipSyncで採用した機械学習型AIの主な役割は，前出の最尤エントロピー法で行っていた母音の判別であるという。つまり，連続した音声をAIに分析させて，1音ごとにどの母音が近いのかを推測するのがADX LipSyncの基本的な役目だ。
+
+
+
+　製品としてのADX LipSyncは，最尤エントロピー法のアプローチとは異なり母音辞書は不要で，すでに学習済みのAIを搭載しているので，基本的にはどんな話者の音声に対しても対応できるそうだ。
+
+　また，リアルタイム動作も可能で不特定多数の話者にも対応可能であり，マイク入力したリアルタイム音声から口パクアニメを生成できるとのこと。たとえば，VTuberのキャラクターを喋らせるのにも使えるわけだ。
+
+
+
+　音声をADX LipSyncに入力すると，どのようなデータが出てくるのだろうか。口パクデータで動かしたいキャラクターは，ゲームや場面によって当然異なるわけで，アニメ調の美少女キャラと無精髭のマッチョ系オヤジキャラとでは，口周りのボーン構造がかなり違ってくる。そのため，ADX LipSyncでは，直接3Dモデルを駆動するデータを返すわけではないという。
+
+
+
+　具体的には，以下に示すスライドのような流れで，入力音声をリアルタイム解析して，流れる音声が「あ，い，う，え，お」である確率を母音ごとに返す。
+
+
+
+入力した音声をAIが解析する
+
+画像(010)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+解析結果を確率変数として返す
+
+画像(011)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+横軸を時間に見立てて，連続した音声の中で，どれが「あいうえお」であるかを確率で返すわけだ
+
+画像(012)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　ADX LipSyncが出力する口パクアニメデータは，音声の流れに合わせて並んだ確率変数なので，「あ」が1.0だけでなく0.8になったり，「い」が0.2になったりすることもあり得る。我々が言葉を話しているときも，「あ」の発音から「い」の発音へ推移することや，「あ」と「い」の中間的な音を発することもあるので，ADX LipSyncの出力は理に適っていると言えよう。
+
+
+
+　ゲーム側で出力データを使うには，あらかじめ，キャラクターが「あいうえお」の各母音を発音したときの口パクアニメーションを用意しておき，ADX LipSyncが出力した確率変数に合わせてアニメーションを再生することになる。「あ＝0.8」「い＝0.2」という場合，どう処理するかはゲーム側の実装次第となるが，たとえば「あ」と「い」のアニメーションを適度にブレンドするといった対応が考えられるだろう。
+
+
+
+　またADX LipSyncは，母音の推定確率以外にも，口の形状を縦開き具合（Height）と横開き具合（Width）の2軸で表現する「Height-Widthパラメータ」で返すこともできるそうだ。たとえば，「あ」ならHeightが強めの変数を返し，「い」ならばWidthが強め，「う」ではHeightとWidthが同じくらいで，おちょぼ口っぽくなるような変数を返す。自分の口で試してみると，縦横の具合をイメージできるだろう。
+
+
+
+ADX LipSyncは2タイプの口パクデータを出力できる
+
+画像(013)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+Height-Widthのイメージ
+
+画像(014)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　Height-Widthの値も，顔のボーンを直接駆動する変数ではなく抽象的な推論値であるため，キャラクターモデルのボーン構造には依存しない。値をもとにして，どう3Dモデルの口を動かすかはゲーム開発者に委ねられるのだ。
+
+
+
+　さて，実際に人間が発声するとき，口の動きは母音だけに連動するわけではない。上田氏はその好例として「毛虫」（ケムシ）を挙げた。
+
+　ケムシの母音は「えうい」だが，母音の前に子音があり，それが「ケムシ」の音を決定している。「ケ」や「シ」は，舌使いなどが発音に深く関係した子音が母音の前にあり，「ム」も唇を閉じて出す子音が母音よりも先に来る。
+
+
+
+「ケムシ」の母音は「えうい」（eui）だが，それだけで口の動きを正しく表せるわけではない。自分で発声してみると分かる
+
+画像(015)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+子音についてはどう表現すべきか？
+
+画像(016)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　たとえば「ム」のように，唇を閉じて出す音は唇音（しんおん）と呼ばれている。ADX LipSyncは，音声から唇音の存在を認識した場合，「唇を閉じよ」という口パクデータを出力するそうだ。また，「ケ」や「シ」は，その他と分類して，直前における口の状態から，適切に補間する口パクデータを返すという。
+
+
+
+「ム」には唇音の子音を含むので，口を閉じる動きとなる
+
+画像(017)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　これらに加えて，まだ完成形ではないそうだが，実験的に「舌の高さ」を口パクデータとして返す仕様も盛り込んでいるそうだ。今のところ，舌の高さ情報しか出力していないそうだが，「将来的には，舌の動き（情報）を拡張していきたい」と上田氏は述べていた。舌の動きを推測する精度が上がると，上下の歯で舌を挟み込むような英語の「TH」発音に対応した口パクデータを出力できるかもしれないそうだ。
+
+
+
+西川善司，ADX LipSyncを体験する
+
+
+
+Clik to PlayClik to Play
+
+
+
+マイクを持った筆者のしゃべりに合わせて，画面に映るキャラクターの口が動いている
+
+
+
+
+
+ADX LipSyncにおけるAIの教育
+
+
+
+CRI・ミドルウェア 組み込み事業部の飯島健太氏
+
+画像(018)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　ADX LipSyncの開発において，AI（Deep Neural Network，以下 DNN）の学習をどう行ったかについては，CRI・ミドルウェアの組み込み事業部に所属する飯島健太氏が説明した。
+
+
+
+　ADX LipSyncにおけるAIの学習は，いわゆる「教師あり学習」として行ったという。
+
+　まず，音声データに相当する入力特徴量と，教師データとなる口の形状データをDNNに入力して，DNNが予測した口の形状データが教師データとどれくらい誤差があるかを算出する。そのうえでDNNに誤差を与えて（逆伝播），推測データと教師データの差が小さくなるようにDNNの係数を更新していく。これを繰り返すことで学習データが洗練されていき，AIとしての精度が高まっていくということだ。
+
+　なお，入力特徴量としての音声データは，PCM的な音圧データではなく，時間方向に音声スペクトラムが変化する周波数的なものである。
+
+
+
+ADX LipSyncのAI部は「教師あり学習」を用いる
+
+画像(019)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+教師データとDNNの予測にどれくらい誤差があるかを算出。DNNに誤差を与えて，予測データと教師データの差が小さくなるように係数を更新していく
+
+画像(020)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　飯島氏は，ADX LipSyncの開発にあたって，学習用データの作成が最も大変だったと振り返っていた。質の悪いデータで学習させてしまうと，正しい推論ができなくなるし，データ量が少なくても同様だ。
+
+
+
+大量の音声（発話）データを，入力特徴量と口の形状でペアにする。これが学習用データとなる
+
+画像(021)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+データセットの制作はもはや苦行と飯島氏（左）。最終的に作成した学習データセットは，母音が約100万，子音が約7万データフレームになった
+
+画像(022)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート	画像(023)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+既存の学習データに細工をして，別データとして水増しすることも行った
+
+画像(024)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　幸いなことに，CRI・ミドルウェアは，音声データ加工技術に長けていたので，学習データを加工して別のデータにする水増しも行ったとのこと。たとえば，ある学習用音声データの音程を上げ下げしたり，ノイズを重ねたりして別の学習データであるかのように学習させるといった具合だ。
+
+
+
+　なお，ADX LipSyncで使う音声解析AIの学習は，CRI・ミドルウェアが済ませているので，ゲーム開発者側で新たに行う必要はないとのこと。とはいえ，開発者向けのミドルウェアなので，開発側の都合や要望に即した特別な学習データを提供してもらう，といったことはあるのかもしれない。
+
+
+
+
+
+あえてリアルタイム活用しない選択もあり
+
+
+
+先に口パクデータを生成しておくことのメリットとデメリット
+
+画像(025)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート　ADX LipSyncは，マイクの入力音声からも口パクデータを自動出力できるリアルタイム性がウリではある。しかし，こだわりたいシーンにおける台詞回しでは，ADX LipSyncが出力した口パクとは異なる動きをさせたいこともあるかもしれない。
+
+　そうしたニーズを考慮してADX LipSyncでは，台詞の音声データを入力して口パクデータを一括生成したうえで，データを開発者が編集するといった使いかたも可能であるそうだ。
+
+
+
+先に口パクデータを作る場合，リアルタイム音声解析は使わないので，システムにかかる負荷は軽い
+
+画像(026)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　このユースケースでは，CRI・ミドルウェアが提供するもう1つのサウンド系ミドルウェアである「ADX2」と連動させる。
+
+　具体的には，あらかじめADX LipSyncで出力した口パクデータを，ADX2のツール上で台詞の音声とともに読み込ませて，音声を聴きながら編集するのだ。
+
+
+
+ADX2ツールを使った口パクデータの編集。編集対象にHeight-Widthモデルを使ったサンプル画像だ
+
+画像(027)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　口パクデータの編集は，ADX LipSyncが返すHeight-Width式のデータに対応しているのはもちろんのこと，「あいうえお」＋唇音の音素形式によるデータにも対応している。
+
+
+
+こちらは編集対象が音素モデルのデータを編集している様子だ
+
+画像(028)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　以下に示す動画では，「あいうえお」の台詞に対する口パクデータを編集して，「い」の発音で口を上下に大きく開けるようにしている。ADX2による編集のプロセスが分かるだろう。
+
+
+
+ADX2：口パクデータの編集デモ
+
+
+
+Clik to PlayClik to Play
+
+
+
+
+
+
+
+さらに高い精度を目指すには，日本語と英語以外の言語も学習する必要が
+
+
+
+　ADX LipSyncは，音声データを解析して口パクデータを出力するツールなので，基本的には音声データがどの言語であっても，人間がその声を出すときに使うであろう口の形状に合わせた口パクデータを出力できる。言うなれば，全言語対応型の口パクデータ生成ミドルウェアというわけだ。
+
+　現在開発中のAI学習データは，英語音声をベースに学習させたものだそうだが，今のところ，日本語の入力に対しても問題ない口パクデータを出力できているとのこと。
+
+
+
+　ただ今後は，口パクデータの出力精度を高めていくにあたって，さまざまな言語の音声データを学習に組み込むことも検討中であるそうだ。
+
+　人間が発声できる音声のうち，実際の言語で使われている子音と母音を記号化した「国際音声記号」の表から，日本語の子音と英語の子音を異なる色で塗りつぶしてみると，片方の言語にしかなかったり，どちらの言語でも使われていなかったりする子音があるのが分かる。
+
+
+
+国際音声記号の表から，上は英語，下は日本語に出てくる子音を塗りつぶしたもの
+
+画像(029)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+画像(030)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　子音を絡めた口パクデータの精度を上げるためには，より多彩な言語の学習に取り組むべきなのかもしれないと，CRI・ミドルウェアは考えているわけだ。
+
+
+
+　ADX LipSyncは2019年秋に正式リリースの予定で，上述した精度向上への取り組みは，今後のバージョンアップで反映していくことになるだろう。ちなみに，すでにADX LipSyncの採用事例も決まっているそうで，カラオケ事業大手の第一興商が採用するそうだ（関連リンク，リンク先はPDF）。
+
+　具体的には，第一興商が10月1日に発売予定のカラオケ採点システム「LIVE DAM Ai」で，「シンプル採点 3D」というモードにADX LipSyncを使っているという。シンプル採点 3Dでは，ユーザーの歌声にあわせて画面上の3Dキャラクターが歌う演出があり，これにADX LipSyncを使っているそうだ。
+
+
+
+　ちなみに，シンプル採点 3Dに出てくるゆるキャラ風の3Dキャラクターは，CEDEC 2019会場で披露していた美少女キャラクターによるデモよりも，アグレッシブに口を動かすだけでなく，顔全体を振るわせてこぶしを効かせるような表現もあって，なかなか見応えがあった。
+
+
+
+3Dキャラクターが豊かな表情で歌うLIVE DAM Aiのデモ。にこやかな表情だけでなく，顔を赤くして声を振り絞るようにして歌う様子も。余談だが，頭にリンゴを載せた猫のキャラクターは，CRI・ミドルウェアのマスコットキャラクタである「りんごちゃん」だ。シンプル採点 3Dの製品版でも，実際にりんごちゃんが登場するというので，社内では「リンゴちゃんがついにメジャーデビューをはたした！」と喜ばれているそうな
+
+画像(031)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート	画像(032)［CEDEC 2019］AIが音声データからリアルタイムに口パクを生成。CRIの音声ミドルウェア「ADX LipSync」をレポート
+
+
+
+　そのうちCRI・ミドルウェアのYouTubeチャンネルで公開する予定だそうなので，興味のある人は，力の入った歌いっぷりを披露するキャラクターを見てほしい。爆笑すると思う。
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="［CEDEC2019］SIEが振り返る「Pla.html" class="btn btn-neutral float-right" title="forgamer ［CEDEC2019］SIEが振り返る「Pla" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="西川善司連載完全理解「3DMarkVan.html" class="btn btn-neutral" title="forgamer 西川善司連載完全理解「3DMarkVan" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

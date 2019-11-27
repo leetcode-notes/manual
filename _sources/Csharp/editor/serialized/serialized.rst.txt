@@ -1,0 +1,11 @@
+serialized
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+https://qiita.com/daria_sieben/items/2cd44eefbec6d6c30d69

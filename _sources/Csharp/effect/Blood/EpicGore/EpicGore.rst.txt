@@ -1,0 +1,16 @@
+EpicGore
+=============================
+
+EFX_Spawner.cs
+-------------------
+
+impact Gore
+
+EFX_ParticleSetting.cs
+-------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

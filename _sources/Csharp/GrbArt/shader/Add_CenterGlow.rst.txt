@@ -1,0 +1,5 @@
+shader Add_CenterGlow
+---------------------------------------------------------------------------
+
+.. literalinclude:: Add_CenterGlow.shader
+

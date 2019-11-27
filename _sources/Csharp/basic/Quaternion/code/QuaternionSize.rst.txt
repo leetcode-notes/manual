@@ -1,0 +1,5 @@
+code QuaternionSize
+---------------------------------------------------------------------------
+
+.. literalinclude:: QuaternionSize.cs
+

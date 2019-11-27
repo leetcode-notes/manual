@@ -1,0 +1,8 @@
+GrbArt Sample
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

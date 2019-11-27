@@ -1,0 +1,28 @@
+ghost spawn
+=============================
+
+
+.. literalinclude:: EFX_tailspawner.cs
+
+TrailRender
+
+Light
+
+Particle Ghost Spirit
+
+移動
+
+.. literalinclude:: EFX_tailtransformer.cs
+
+destroy →　prefab生成　SpiritBtreak
+
+.. literalinclude:: EFX_ParticleSetting.cs
+
+
+.. literalinclude:: EFX_tailspawner.cs
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

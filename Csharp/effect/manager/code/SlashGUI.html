@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>manager SlashGUI &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="manager" href="../manager.html"/>
+        <link rel="next" title="manager AssetViewer" href="../geometryparticle/AssetViewer.html"/>
+        <link rel="prev" title="manager OneshotParticleSystemsManager" href="OneshotParticleSystemsManager.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AssetBundle/AssetBundle.html">Asset Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../effect.html">effect</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Blood/Blood.html">Blood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction.html">effect LinePrediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction2.html">effect LinePrediction2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/camera.html">Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../destruction/BreakableSurface.html">effect BreakableSurface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../effcttools/effecttools.html">effcttools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ghostspawn/ghostspawn.html">ghost spawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../light/light.html">Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lightnning/lightnning.html">Lightning</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../manager.html">manager</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../EnvironmentWeatherEffect/fxController.html">EnvironmentWeatherEffect fxController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnimationEventsEffect.html">manager AnimationEventsEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FX_simple_sword.html">manager FX_simple_sword</a></li>
+<li class="toctree-l4"><a class="reference internal" href="GameManager.html">manager GameManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OneshotParticleSystemsManager.html">manager OneshotParticleSystemsManager</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">manager SlashGUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geometryparticle/AssetViewer.html">manager AssetViewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../../effect.html">effect</a> &raquo;</li>
+      
+        <li><a href="../manager.html">manager</a> &raquo;</li>
+      
+    <li>manager SlashGUI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/effect/manager/code/SlashGUI.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="manager-slashgui">
+<h1>manager SlashGUI<a class="headerlink" href="#manager-slashgui" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using System;
+using UnityEngine;
+using System.Collections;
+using System.Runtime.Serialization.Formatters;
+
+public class Slash_DemoGUI : MonoBehaviour
+{
+	public GameObject[] Prefabs;
+    public float[] ReactivationTimes;
+    public Light Sun;
+    public ReflectionProbe ReflectionProbe;
+    public Light[] NightLights = new Light[0];
+    public Texture HUETexture;
+    public bool isDay;
+    //public RFX4_DistortionAndBloom RFX4_DistortionAndBloom;
+
+    private int currentNomber;
+	private GameObject currentInstance;
+	 GUIStyle guiStyleHeader = new GUIStyle();
+    GUIStyle guiStyleHeaderMobile = new GUIStyle();
+    float dpiScale;
+
+    private float colorHUE;
+    private float startSunIntensity;
+    private Quaternion startSunRotation;
+    private Color startAmbientLight;
+    private float startAmbientIntencity;
+    private float startReflectionIntencity;
+    private LightShadows startLightShadows;
+
+	void Start () {
+        if (Screen.dpi &lt; 1) dpiScale = 1;
+        if (Screen.dpi &lt; 200) dpiScale = 1;
+        else dpiScale = Screen.dpi / 200f;
+        guiStyleHeader.fontSize = (int)(15f * dpiScale);
+		    //guiStyleHeader.normal.textColor = new Color(0.15f,0.15f,0.15f);
+        guiStyleHeaderMobile.fontSize = (int)(17f * dpiScale);
+
+        ChangeCurrent(0);
+
+        startSunIntensity = Sun.intensity;
+	    startSunRotation = Sun.transform.rotation;
+	    startAmbientLight = RenderSettings.ambientLight;
+	    startAmbientIntencity = RenderSettings.ambientIntensity;
+	    startReflectionIntencity = RenderSettings.reflectionIntensity;
+	    startLightShadows = Sun.shadows;
+
+	    ChangeDayNight();
+
+	}
+
+    bool isButtonPressed;
+
+    private void OnGUI()
+    {
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.DownArrow))
+            isButtonPressed = false;
+
+        if (GUI.Button(new Rect(10*dpiScale, 15*dpiScale, 135*dpiScale, 37*dpiScale), &quot;PREVIOUS EFFECT&quot;) || (!isButtonPressed &amp;&amp; Input.GetKeyDown(KeyCode.LeftArrow)))
+        {
+            isButtonPressed = true;
+            ChangeCurrent(-1);
+        }
+        if (GUI.Button(new Rect(160*dpiScale, 15*dpiScale, 135*dpiScale, 37*dpiScale), &quot;NEXT EFFECT&quot;) || (!isButtonPressed &amp;&amp; Input.GetKeyDown(KeyCode.RightArrow)))
+        {
+            isButtonPressed = true;
+            ChangeCurrent(+1);
+        }
+        var offset = 0f;
+
+        if (GUI.Button(new Rect(10*dpiScale, 63*dpiScale + offset, 285*dpiScale, 37*dpiScale), &quot;Day / Night&quot;) || (!isButtonPressed &amp;&amp; Input.GetKeyDown(KeyCode.DownArrow)))
+        {
+            ChangeDayNight();
+        }
+
+        GUI.Label(new Rect(350 * dpiScale, 15 * dpiScale + offset / 2, 500 * dpiScale, 20 * dpiScale),
+            &quot;press left mouse button for the camera rotating and scroll wheel for zooming&quot;, guiStyleHeader);
+        GUI.Label(new Rect(350*dpiScale, 35*dpiScale + offset / 2, 160*dpiScale, 20*dpiScale),
+            &quot;prefab name is: &quot; + Prefabs[currentNomber].name, guiStyleHeader);
+
+
+       // GUI.DrawTexture(new Rect(12*dpiScale, 120*dpiScale + offset, 285*dpiScale, 15*dpiScale), HUETexture, ScaleMode.StretchToFill, false, 0);
+
+
+        //        float oldColorHUE = colorHUE;
+        //colorHUE = GUI.HorizontalSlider(new Rect(12*dpiScale, 140*dpiScale + offset, 285*dpiScale, 15*dpiScale), colorHUE, 0, 360);
+        //if (Mathf.Abs(oldColorHUE - colorHUE) &gt; 0.001)
+        //{
+        //    RFX4_ColorHelper.ChangeObjectColorByHUE(currentInstance, colorHUE / 360f);
+        //    var transformMotion = currentInstance.GetComponentInChildren&lt;RFX4_PhysicsMotion&gt;(true);
+        //    if (transformMotion != null)
+        //    {
+        //        transformMotion.HUE = colorHUE / 360f;
+        //        //foreach (var collidedInstance in transformMotion.CollidedInstances)
+        //        //{
+        //        //    if(collidedInstance!=null) RFX4_ColorHelper.ChangeObjectColorByHUE(collidedInstance, colorHUE / 360f);
+        //        //}
+        //    }
+
+        //    var rayCastCollision = currentInstance.GetComponentInChildren&lt;RFX4_RaycastCollision&gt;(true);
+        //    if (rayCastCollision != null)
+        //    {
+        //        rayCastCollision.HUE = colorHUE / 360f;
+        //        foreach (var collidedInstance in rayCastCollision.CollidedInstances)
+        //        {
+        //            if (collidedInstance != null) RFX4_ColorHelper.ChangeObjectColorByHUE(collidedInstance, colorHUE / 360f);
+        //        }
+        //    }
+        //}
+    }
+
+    private void ChangeDayNight()
+    {
+        isButtonPressed = true;
+        if (ReflectionProbe != null) ReflectionProbe.RenderProbe();
+        Sun.intensity = !isDay ? 0.05f : startSunIntensity;
+        Sun.shadows = isDay ? startLightShadows : LightShadows.None;
+        foreach (var nightLight in NightLights)
+        {
+            if (nightLight != null) nightLight.shadows = !isDay ? startLightShadows : LightShadows.None;
+        }
+
+        Sun.transform.rotation = isDay ? startSunRotation : Quaternion.Euler(350, 30, 90);
+        RenderSettings.ambientLight = !isDay ? new Color(0.1f, 0.1f, 0.1f) : startAmbientLight;
+        RenderSettings.ambientIntensity = isDay ? startAmbientIntencity : 1;
+        RenderSettings.reflectionIntensity = isDay ? startReflectionIntencity : 0.2f;
+        isDay = !isDay;
+    }
+
+
+    void ChangeCurrent(int delta) {
+		currentNomber+=delta;
+		if (currentNomber&gt; Prefabs.Length - 1)
+			currentNomber = 0;
+		else if (currentNomber &lt; 0)
+			currentNomber = Prefabs.Length - 1;
+
+        if (currentInstance != null)
+        {
+            Destroy(currentInstance);
+            RemoveClones();
+        }
+
+        currentInstance = Instantiate(Prefabs[currentNomber]);
+
+       // if (!UsePCVersion)
+       // {
+       //     currentInstance.transform.rotation = transform.rotation;
+       //     currentInstance.transform.position = transform.position;
+       // }
+        if (ReactivationTimes.Length == Prefabs.Length)
+        {
+            CancelInvoke();
+            if (ReactivationTimes[currentNomber] &gt; 0.1f) InvokeRepeating(&quot;Reactivate&quot;, ReactivationTimes[currentNomber], ReactivationTimes[currentNomber]);
+        }
+    }
+
+
+    void RemoveClones()
+    {
+        var allGO = FindObjectsOfType&lt;GameObject&gt;();
+        foreach (var go in allGO)
+        {
+            if(go.name.Contains(&quot;(Clone)&quot;)) Destroy(go);
+        }
+    }
+
+    void Reactivate()
+    {
+        currentInstance.SetActive(false);
+        currentInstance.SetActive(true);
+    }
+
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../geometryparticle/AssetViewer.html" class="btn btn-neutral float-right" title="manager AssetViewer" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OneshotParticleSystemsManager.html" class="btn btn-neutral" title="manager OneshotParticleSystemsManager" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

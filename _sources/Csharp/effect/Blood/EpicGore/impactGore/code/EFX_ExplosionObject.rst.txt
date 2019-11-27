@@ -1,0 +1,5 @@
+impactGore EFX_ExplosionObject
+---------------------------------------------------------------------------
+
+.. literalinclude:: EFX_ExplosionObject.cs
+

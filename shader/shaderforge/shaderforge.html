@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>shaderforge &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  <title>shadergraph shaderforge &mdash; All-Tool-Manual 0.00 ドキュメント</title>
   
 
   
@@ -37,7 +37,7 @@
         <link rel="search" title="検索" href="../../search.html"/>
     <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../index.html"/>
         <link rel="up" title="shader" href="../shader.html"/>
-        <link rel="next" title="unity shader" href="../unity/unity.html"/>
+        <link rel="next" title="shadergraph" href="shadergraph/shadergraph.html"/>
         <link rel="prev" title="softparticle" href="../particle/code/softparticle_ex.html"/> 
 
   
@@ -90,21 +90,34 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../CPlus/CPlus.html">C++</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ZScript/Zscript.html">ZScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bat/cmd.html">cmd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../houdini/houdini.html">Houdini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../javascript/javascript.html">javascript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/linux.html">Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../maya/maya.html">maya Tool　manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../grass/grass.html">grass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hlsl/HLSL.html">HLSL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../olsl/OLSL.html">OLSL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../particle/particle.html">particle</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">shaderforge</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">shadergraph shaderforge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="shadergraph/shadergraph.html">shadergraph</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../unity/unity.html">unity shader</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
 </ul>
 
@@ -138,7 +151,7 @@
       
         <li><a href="../shader.html">shader</a> &raquo;</li>
       
-    <li>shaderforge</li>
+    <li>shadergraph shaderforge</li>
     <li class="wy-breadcrumbs-aside">
       
           <a href="https://github.com/shader/shaderforge/shaderforge.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -150,8 +163,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="shaderforge">
-<h1>shaderforge<a class="headerlink" href="#shaderforge" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <div class="section" id="shadergraph-shaderforge">
+<h1>shadergraph shaderforge<a class="headerlink" href="#shadergraph-shaderforge" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="shadergraph/shadergraph.html">shadergraph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shadergraph/vertex_alpha_add/vertex_alpha_add.html">shadergraph</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p><a class="reference external" href="http://acegikmo.com/shaderforge/">http://acegikmo.com/shaderforge/</a></p>
 </div>
 
@@ -162,7 +183,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../unity/unity.html" class="btn btn-neutral float-right" title="unity shader" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="shadergraph/shadergraph.html" class="btn btn-neutral float-right" title="shadergraph" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../particle/code/softparticle_ex.html" class="btn btn-neutral" title="softparticle" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -1,0 +1,34 @@
+UV fitrange
+===============
+
+attribpromote
+---------------------
+
+
+uvのmax min の取得
+
+.. image:: attribpromote1.png
+
+.. image:: attribpromote2.png
+
+.. image:: spreadsheet.png
+
+.. image:: getattribute1.png
+
+.. image:: runover1.png
+
+
+まずUV TransformノードでUVを90度回転させます。
+
+後ほど、UnityでUVスクロールを縦方向に流すのでそれにUVを合わせる関係で行っています。
+
+次にConvertノードでポリゴンに変換します。ポリゴンに変換した際に、メッシュの継ぎ目
+
+の部分に切れ目ができてしまうため、Fuseノードでポイントを結合します。最後に
+
+Transformノードを追加してスケールを100に設定しています。なお、Fuseノードは
+
+初期設定から変更する必要はありません。
+
+
+.. image:: fuse1.png

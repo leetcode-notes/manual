@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>manager GameManager &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="manager" href="../manager.html"/>
+        <link rel="next" title="manager OneshotParticleSystemsManager" href="OneshotParticleSystemsManager.html"/>
+        <link rel="prev" title="manager FX_simple_sword" href="FX_simple_sword.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AssetBundle/AssetBundle.html">Asset Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../effect.html">effect</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Blood/Blood.html">Blood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction.html">effect LinePrediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction2.html">effect LinePrediction2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/camera.html">Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../destruction/BreakableSurface.html">effect BreakableSurface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../effcttools/effecttools.html">effcttools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ghostspawn/ghostspawn.html">ghost spawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../light/light.html">Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lightnning/lightnning.html">Lightning</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../manager.html">manager</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../EnvironmentWeatherEffect/fxController.html">EnvironmentWeatherEffect fxController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AnimationEventsEffect.html">manager AnimationEventsEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FX_simple_sword.html">manager FX_simple_sword</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">manager GameManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="OneshotParticleSystemsManager.html">manager OneshotParticleSystemsManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SlashGUI.html">manager SlashGUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geometryparticle/AssetViewer.html">manager AssetViewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../../effect.html">effect</a> &raquo;</li>
+      
+        <li><a href="../manager.html">manager</a> &raquo;</li>
+      
+    <li>manager GameManager</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/effect/manager/code/GameManager.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="manager-gamemanager">
+<h1>manager GameManager<a class="headerlink" href="#manager-gamemanager" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="o">.</span><span class="n">Generic</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">UnityEngine</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">GameManager</span> <span class="p">:</span> <span class="n">MonoBehaviour</span> <span class="p">{</span>
+	<span class="n">public</span> <span class="n">TextMesh</span> <span class="n">text_fx_name</span><span class="p">;</span>
+	<span class="n">public</span> <span class="n">GameObject</span><span class="p">[]</span> <span class="n">fx_prefabs</span><span class="p">;</span>
+	<span class="n">public</span> <span class="nb">int</span> <span class="n">index_fx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">private</span> <span class="n">Ray</span> <span class="n">ray</span><span class="p">;</span>
+	<span class="n">private</span> <span class="n">RaycastHit2D</span> <span class="n">ray_cast_hit</span><span class="p">;</span>
+
+	<span class="n">void</span> <span class="n">Start</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">text_fx_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">index_fx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;] &quot;</span> <span class="o">+</span> <span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="n">void</span> <span class="n">Update</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">Input</span><span class="o">.</span><span class="n">GetMouseButtonDown</span> <span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+		<span class="p">{</span>
+			<span class="n">ray</span> <span class="o">=</span> <span class="n">Camera</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">ScreenPointToRay</span><span class="p">(</span><span class="n">Input</span><span class="o">.</span><span class="n">mousePosition</span><span class="p">);</span>
+			<span class="n">ray_cast_hit</span> <span class="o">=</span> <span class="n">Physics2D</span><span class="o">.</span><span class="n">Raycast</span><span class="p">(</span><span class="n">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="n">ray</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">ray</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">new</span> <span class="n">Vector2</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">));</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">ray_cast_hit</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">switch</span><span class="p">(</span><span class="n">ray_cast_hit</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">name</span><span class="p">){</span>
+				<span class="n">case</span> <span class="s2">&quot;BG&quot;</span><span class="p">:</span>
+					<span class="n">Instantiate</span><span class="p">(</span><span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">],</span> <span class="n">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="n">ray</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">ray</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Quaternion</span><span class="o">.</span><span class="n">identity</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="n">case</span> <span class="s2">&quot;UI-arrow-right&quot;</span><span class="p">:</span>
+					<span class="n">ray_cast_hit</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">SendMessage</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">);</span>
+					<span class="n">index_fx</span><span class="o">++</span><span class="p">;</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">index_fx</span> <span class="o">&gt;=</span> <span class="n">fx_prefabs</span><span class="o">.</span><span class="n">Length</span><span class="p">)</span>
+						<span class="n">index_fx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+					<span class="n">text_fx_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">index_fx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;] &quot;</span> <span class="o">+</span> <span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="n">case</span> <span class="s2">&quot;UI-arrow-left&quot;</span><span class="p">:</span>
+					<span class="n">ray_cast_hit</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">SendMessage</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">);</span>
+					<span class="n">index_fx</span><span class="o">--</span><span class="p">;</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">index_fx</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+						<span class="n">index_fx</span> <span class="o">=</span> <span class="n">fx_prefabs</span><span class="o">.</span><span class="n">Length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+					<span class="n">text_fx_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">index_fx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;] &quot;</span> <span class="o">+</span> <span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="n">case</span> <span class="s2">&quot;Instructions&quot;</span><span class="p">:</span>
+					<span class="n">Destroy</span><span class="p">(</span><span class="n">ray_cast_hit</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">gameObject</span><span class="p">);</span>
+					<span class="k">break</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="o">//</span><span class="n">Change</span><span class="o">-</span><span class="n">FX</span> <span class="n">keyboard</span><span class="o">..</span>
+		<span class="k">if</span> <span class="p">(</span> <span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span> <span class="o">||</span> <span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span> <span class="p">){</span>
+			<span class="n">GameObject</span><span class="o">.</span><span class="n">Find</span><span class="p">(</span><span class="s2">&quot;UI-arrow-left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">SendMessage</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">);</span>
+			<span class="n">index_fx</span><span class="o">--</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">index_fx</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+				<span class="n">index_fx</span> <span class="o">=</span> <span class="n">fx_prefabs</span><span class="o">.</span><span class="n">Length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+			<span class="n">text_fx_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">index_fx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;] &quot;</span> <span class="o">+</span> <span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span> <span class="o">||</span> <span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)){</span>
+			<span class="n">GameObject</span><span class="o">.</span><span class="n">Find</span><span class="p">(</span><span class="s2">&quot;UI-arrow-right&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">SendMessage</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">);</span>
+			<span class="n">index_fx</span><span class="o">++</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">index_fx</span> <span class="o">&gt;=</span> <span class="n">fx_prefabs</span><span class="o">.</span><span class="n">Length</span><span class="p">)</span>
+				<span class="n">index_fx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+			<span class="n">text_fx_name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;[&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">index_fx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;] &quot;</span> <span class="o">+</span> <span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">if</span> <span class="p">(</span> <span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="s2">&quot;space&quot;</span><span class="p">)</span> <span class="p">){</span>
+			<span class="n">Instantiate</span><span class="p">(</span><span class="n">fx_prefabs</span><span class="p">[</span> <span class="n">index_fx</span> <span class="p">],</span> <span class="n">new</span> <span class="n">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">Quaternion</span><span class="o">.</span><span class="n">identity</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="OneshotParticleSystemsManager.html" class="btn btn-neutral float-right" title="manager OneshotParticleSystemsManager" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FX_simple_sword.html" class="btn btn-neutral" title="manager FX_simple_sword" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

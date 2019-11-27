@@ -1,0 +1,5 @@
+shader LWRP_Add_Trail
+---------------------------------------------------------------------------
+
+.. literalinclude:: LWRP_Add_Trail.shader
+

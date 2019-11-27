@@ -1,0 +1,5 @@
+code QuaternionXcross
+---------------------------------------------------------------------------
+
+.. literalinclude:: QuaternionXcross.cs
+

@@ -1,0 +1,5 @@
+impactGore EFX_ParticleSetting
+---------------------------------------------------------------------------
+
+.. literalinclude:: EFX_ParticleSetting.cs
+

@@ -1,0 +1,42 @@
+Lightnning Main
+=============================
+
+main
+------
+
+EFX_Spawner.cs
+
+EFX_ParticleSetting.cs
+
+.. literalinclude:: EFX_Spawner.cs
+
+Light
+
+Particle Thunder
+
+
+EFX_ExplosionObject
+---------------------
+
+prefab thunderline_light.prefab を発火
+
+force y移動
+--------------
+
+.. literalinclude:: EFX_ExplosionObject.cs
+
+
+
+EFX_ParticleSetting
+----------------------
+
+ライトの時間をtimedeltaで制御
+
+.. literalinclude:: EFX_ParticleSetting.cs
+
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

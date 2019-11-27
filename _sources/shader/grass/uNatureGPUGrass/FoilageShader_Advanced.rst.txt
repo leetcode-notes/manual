@@ -1,0 +1,5 @@
+code FoilageShader_Advanced
+---------------------------------------------------------------------------
+
+.. literalinclude:: FoilageShader_Advanced.shader
+

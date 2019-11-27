@@ -1,0 +1,18 @@
+EffectLight EffectLight
+---------------------------------------------------------------------------
+
+Duration
+
+Looping
+
+Delay
+
+Lifetime
+
+Intesity Over Lifetime  __ Bezier Curve
+
+Color Over Lifetime __ GradientLamp
+
+
+.. literalinclude:: EffectLight.cs
+

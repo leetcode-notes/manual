@@ -1,0 +1,5 @@
+serialized SerializedPropertyNamePreviewWindow
+---------------------------------------------------------------------------
+
+.. literalinclude:: SerializedPropertyNamePreviewWindow.cs
+

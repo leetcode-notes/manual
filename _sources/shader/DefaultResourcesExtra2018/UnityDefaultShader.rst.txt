@@ -1,0 +1,8 @@
+Unity Default Shader
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

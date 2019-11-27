@@ -1,0 +1,13 @@
+OrderByDescending
+=============================
+
+並べ替える
+
+　配列やリスト内の要素を昇順や降順に並べ替えるのは面倒くさいですよね。
+　そんなときはLINQのOrderBy()とOrderByDescending()が便利です。
+
+
+参考サイト
+-------------
+
+https://www.urablog.xyz/entry/2018/06/28/070000

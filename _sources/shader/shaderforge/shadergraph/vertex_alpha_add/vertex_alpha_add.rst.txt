@@ -1,0 +1,13 @@
+shadergraph
+=============================
+
+.. image:: vertex_alpha_add.png
+
+vertex でパーティクルの頂点カラーを抽出
+
+multiplyではAlpha成分が来ないためsplitして
+
+からmultiplyを行う
+
+
+.. image:: vertex_alpha_uvscroll.png

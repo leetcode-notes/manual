@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>forgamer 西川善司の3DGE：現状のレイトレ要素全部入りと &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="西川善司" href="../西川善司.html"/>
+        <link rel="next" title="forgamer 西川善司連載完全理解「3DMarkVan" href="西川善司連載完全理解「3DMarkVan.html"/>
+        <link rel="prev" title="forgamer VR向けリュック型PC「背負えラブルパソコン」の" href="VR向けリュック型PC「背負えラブルパソコン」の.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../homepagelink.html">homepage backup</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../西川善司.html">西川善司</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="VR向けリュック型PC「背負えラブルパソコン」の.html">forgamer VR向けリュック型PC「背負えラブルパソコン」の</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">forgamer 西川善司の3DGE：現状のレイトレ要素全部入りと</a></li>
+<li class="toctree-l3"><a class="reference internal" href="西川善司連載完全理解「3DMarkVan.html">forgamer 西川善司連載完全理解「3DMarkVan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="［CEDEC2019］AIが音声データからリア.html">forgamer ［CEDEC2019］AIが音声データからリア</a></li>
+<li class="toctree-l3"><a class="reference internal" href="［CEDEC2019］SIEが振り返る「Pla.html">forgamer ［CEDEC2019］SIEが振り返る「Pla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="［CEDEC2019］スクエニが開発したパスト.html">forgamer ［CEDEC2019］スクエニが開発したパスト</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../homepagelink.html">homepage backup</a> &raquo;</li>
+      
+        <li><a href="../西川善司.html">西川善司</a> &raquo;</li>
+      
+    <li>forgamer 西川善司の3DGE：現状のレイトレ要素全部入りと</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/paste/西川善司/forgamer/西川善司の3DGE：現状のレイトレ要素全部入りと.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="forgamer-3dge">
+<h1>forgamer 西川善司の3DGE：現状のレイトレ要素全部入りと<a class="headerlink" href="#forgamer-3dge" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+ライター：西川善司
+
+
+
+画像(001)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する　古くは「Max Payne」シリーズ，近年は「Alan Wake」や「Quantum Break」などのミステリースタイルで進行するSFアクション系ゲームの開発を得意とするRemedy Entertainment（以下Remedy）の新作「CONTROL」（PC）が，8月27日にリリースされた。海外ではWindows/PlayStation 4（以下，PS4）/Xbox One版がラインナップされているが，日本では，Windows版は英語版がすでにEpic Games Storeで入手可能になっているものの，PS4向け日本語版は12月にマーベラスから発売される予定である。
+
+
+
+　さて，このゲーム，SIGGRAPH 2019でもNVIDIAのMorgan McGuire氏が登壇した「今後のゲームグラフィックスの進化を展望する」主旨の講演（関連記事）の中で，「CONTROLはGeForce RTXから始まったリアルタイムレイトレーシング技術をほどよくオールラウンドに活用したゲームである」として取り上げられたこともあって業界から熱い視線を注がれている。
+
+　そこで本稿では，このCONTROLのグラフィックスの見どころを紹介していこうと思う。
+
+
+
+NVIDIAが公開したCONTROL公式予告編動画
+
+
+
+Clik to PlayClik to Play
+
+
+
+
+
+
+
+今後の定番レイトレフィーチャーとなりそうな3つの要素をすべて実装
+
+
+
+　2018年3月にMicrosoftがリアルタイムレイトレーシング技術として「DirectX Raytracing」（DXR）を発表し，これに対応した最初のGPUとしてNVIDIAが，同年8月に「Quadro RTX」シリーズ，9月に「GeForce RTX」シリーズを発表した。
+
+　その後，同年秋に登場した「Battlefield V」がDXRベースのリアルタイムレイトレーシングの広告塔的なタイトルとなり，さまざまなメディアで取り上げられた。同作では，ツルツルした表面における鏡像生成のためにレイトレーシングを利用し，視界外のゲーム世界が視界内のゲームオブジェクトに映り込んでいる様子をアピールしている。
+
+
+
+　それまでこうした表現は，事前生成しておいた静的なテクスチャによる環境マップと，レンダリング済みのフレーム内のピクセルをいわば転写するようなイメージの画面座標系ポストエフェクトである「Screen-Space Reflection」（以下，SSR）との組み合わせで実現されることが多かった。
+
+　ただし，SSRだけでは，視界外のオブジェクトを映り込ませることはできず，画面外周は映り込みが消失する問題がある。また，ちゃんと映り込んでいるケースでも，その鏡像の整合性はかなり怪しいものであった。対するレイトレーシング技術による鏡像ではそうした問題が起こらない。
+
+
+
+Battlefield Vは鏡像生成にリアルタイムレイトレーシング技術を使用している
+
+画像(002)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　Battlefield Vと同じくらいのタイミングで登場した「Shadow of the Tomb Raider」では，直接光による影生成のためにリアルタイムレイトレーシングを利用した。視界内近景のゲーム世界や画面中央の主人公キャラクターに対して，近景に存在するオブジェクトの影生成をレイトレーシングで行うものであった。
+
+
+
+Shadow of the Tomb Raiderでは影生成にリアルタイムレイトレーシング技術を使用
+
+画像(003)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　年が開けて2019年2月に登場した「Metro Exodus」では，1バウンスの拡散光による大局照明のためにレイトレーシングを利用した。こちらも，視界内のゲーム世界や画面中央の主人公キャラクターに対して，近景の拡散光の伝搬をリアルタイムにレイトレーシングで計算する実装となっていた。
+
+
+
+Metro Exodusでは，1バウンスの拡散光の大局照明実現のためにリアルタイムレイトレーシング技術を使用している。この画面はその効果を比較したもので，左がオフ，右がオンの状態だ
+
+画像(005)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(004)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　つまり，これら3作では，「表現したい単一のグラフィックス要素」に対してレイトレーシング技術を利用していた感じであった。いうなればワンポイントリリーフ的な活用だったということである。こうなってしまったのは，もともとこれら3作は，リアルタイムレイトレーシング対応前提で開発を進められていたものではなく，急造対応となったからであろう。
+
+
+
+　対して，今回取り上げるCONTROLは，前出の3タイトルに比べれば比較的開発に時間が取れたためなのだろう，「映り込み鏡像生成」「影生成」「1バウンスの拡散光の大局照明」のすべてに同時対応したものとなっている。
+
+　ここからは本作で「レイトレーシングによって実装された3つの表現要素」のそれぞれについて細かく見ていくことにしたい。
+
+
+
+
+
+CONTROLにおける映り込み鏡像生成
+
+ガラス上への映り込みに注目
+
+
+
+　CONTROLでは，レイトレーシングを使った映り込み鏡像生成の典型とも言える「視界外の情景が映り込む表現」がそこかしこで普通に行われている。水たまりやツルツルな床に映り込んだ天井方向の情景などはとくに分かりやすい事例だ。
+
+　CONTROLでの鏡像生成は，レイトレーシング法の活用としては最も分かりやすい処理系で実装されている。具体的には，着目しているピクセルから，視線の反射方向にレイをキャストし，レイがオブジェクトに衝突した場合は，その部分の色を持って帰って鏡像として描画するだけだ。何にも衝突しない場合は，代わりに事前生成しておいた最遠景の環境マップテクスチャを参照して，その色を持って帰って鏡像とする。
+
+　本作では，映り込んだ情景の「粗さ」が，その映り込み面の材質に依存したものになっているところにも注目してほしい。当たり前のことなのだが，水面のようなほぼ完全な鏡面反射をする材質では鮮明な鏡像が出るが，ザラザラとした材質においては歪んだり，ザラっとした鏡像となっている。
+
+
+
+水たまり上の鏡像。レイトレーシング・オフ（左）では静的な環境マップとSSRが利用される。レイトレーシング・オン（右）では天井の情景が映り込んでいる点に注目
+
+画像(006)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(007)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　このあたりの表現を実際のゲームプレイで動画にしてまとめたのが下のムービーである。
+
+
+
+Clik to PlayClik to Play
+
+
+
+視界外の鏡像がリアルに描き出されているシーンをまとめたプレイ動画。「RTX ON」がレイトレーシング・オン，「RTX OFF」がレイトレーシング・オフに対応する（以下，同）
+
+
+
+　そして，映り込み関係ではRemedyとNVIDIAは「Ray-Traced Translucent Reflections」（リアルタイムレイトレーシングを使った透明材質における反射表現）を「業界初！」と強くアピールしている。
+
+　これは，簡単に言えば「ガラス面における映り込み表現」である。
+
+　現実世界において透明なガラスは，ガラス越しの情景とガラス面に映り込んだ鏡像の両方が見えるが，こうした情景を本作ではかなり正しく再現できていることを両社はアピールしているのだ。
+
+　たしかに，CONTROLのゲーム世界のガラスには，主人公キャラの顔や姿だけでなく，ちゃんとその主人公キャラの背後方向に広がる視界外の室内情景までもが映り込んでいる。しかも，ガラス越しの情景が暗ければ暗いほど鏡像は鮮明に出ており，逆にガラス越しの情景が明るければ鏡像はうっすらとしてちゃんと見にくくなっている。
+
+
+
+ガラスの表現。レイトレーシング・オフ（左）ではガラスの向こう側の情景が見えているだけだが，レイトレーシング・オン（右）では主人公キャラの背後側，すなわち視界外の情景（タービンのようなオレンジの機械）の映り込みが見える
+
+画像(009)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(010)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+CONTROLにおけるガラスへの映り込み表現
+
+
+
+Clik to PlayClik to Play
+
+
+
+ガラス上の映り込み（鏡像）は，現実世界と同じく，ガラスの向こう側が明るいと見えにくく，暗いと見えやすい。途中でカメラを回転しているのは，ガラスに映り込んでいた情景の「ホンモノ」を見せるためだ。なお，ガラスに動的なオブジェクトである主人公の顔を含む正面姿が映っている表現は，静的な環境マップやSSRでは実現できないものである
+
+
+
+
+
+CONTROLにおける大局照明
+
+間接光で明るくなるだけでなく，遮蔽で暗くなる表現も
+
+
+
+　RemedyがCONTROLで採用した同社独自のゲームエンジン「Northlight Engine」における大局照明処理では，シーン内に最小で25cm間隔のグリッド状に配置した無数の探査点（プローブ）における全方位放射光を，パストレーシングにて事前計算したデータをもとに処理しているという。
+
+　レイトレーシング非対応環境では，グリッド単位の放射光情報を直接読み出してシーン内のオブジェクトをライティングする。この際，シーン内の動的オブジェクトでの遮蔽は考慮せずに描画されることとなる。
+
+　一方，レイトレーシング対応環境においても，この事前計算済みの全方位放射光情報を利用して大局照明を行う方針は変わらない。ただ，その実行の際にシーン内の動的オブジェクト間の遮蔽が考慮される。そう，その「シーン内のオブジェクト間の遮蔽調査」にレイトレーシングが用いられるのである。
+
+
+
+レイトレーシング非対応環境では着目しているピクセルから一番近いグリッドにある全方位放射光の間接照明データを回収してきてライティングする。レイトレーシング環境でも基本方針は同じだが，レイトレーシングでは動的オブジェクトの影響もある程度反映される。このスライドはGDC 2018におけるRemedyのNorthlight Engineにおけるレイトレーシング機能の実装に関する解説講演のときのものである
+
+画像(011)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　これだけだとちょっと芸がないので，もう少しレイトレーシングのありがたみが反映されるフィーチャーも盛り込んでいる。
+
+　それは，遮蔽関係にあるオブジェクトがとても近い場合は，そのオブジェクトのリアルタイムライティング結果の拡散反射項（Diffuse Term）を回収して大局照明処理に反映させるという処理系だ。グリッド参照の際に複数のレイを一定距離キャストして，オブジェクト同士の遮蔽をある程度考慮するわけだ。
+
+　これにより，より大局照明の結果の正確性が増すというのがRemedyの主張である。隣接するオブジェクト同士の色が互いに反映された「いかにも大局照明」的なColor Transmission（色伝搬）効果が得られることになる。いうなれば，局所的な隣接部分に影色っぽい効果を与えるAmbient Occlusion（AO：環境光遮蔽）の「影色（黒色）付与処理」を「相手の3Dオブジェクトの色（≒直接光のライティング結果）の影響も考慮する拡張版AO処理」としたものと考えるとイメージしやすいかもしれない。
+
+
+
+着目しているピクセルからキャストされたレイが，一定距離進む前にほかのオブジェクトに衝突した場合，そこは「遮蔽されている」と見なす。この場合，全方位放射光の間接照明データは回収せず，衝突したオブジェクトの色を持って帰る。その衝突部分が暗ければ事実上のScreen Space Anbient Occlusion（SSAO）的な「陰」色となるわけだ
+
+画像(012)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　事前計算ベースの大局照明は，管理単位が大ざっぱなグリッドとなっているため，不当に明るくなりがちなのだが，本作の場合は，上で述べた処理系の効果で，柔らかい間接光的な表現と，じんわりと暗い遮蔽感が両立できていてとてもリアルである。
+
+
+
+　以下に示したシーンでは，ベースが同じ事前計算済みの全方位放射光の間接照明データを利用した大局照明なので描画結果のテイストはよく似ているのだが，遮蔽が考慮された間接照明の結果での濃淡のでき方と，隣接するもの同士の色伝搬に違いが出ている。左側の通常レンダリングによる画像と比べると，右側のレイトレーシングを使った状態での画像では，画面左側のノートの表紙にクリーム色の電話機の色が伝搬していることが見て取れるだろう。
+
+
+
+左がレイトレーシング・オフ，右がレイトレーシング・オン
+
+画像(014)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(013)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+Clik to PlayClik to Play
+
+
+
+間接光の効果で全体が明るくなるシーンを集めてみた。最後の赤の照明のシーンでは，レイトレーシング・オフでは黒っぽい調度品などが，オンとすると赤味を帯び出すのが分かる
+
+
+
+
+
+CONTROLにおける影生成
+
+微細な凹凸一つ一つにハイディテールな影が
+
+
+
+　CONTROLの影生成は，多くのゲームで採用されているデプスシャドウ技法（シャドウマップ技法）を主に使用している。レイトレーシング非対応環境では，これをそのままシーン内のすべての影生成に利用するが，レイトレーシング対応環境では，デプスシャドウ技法の影を使用しつつも，一定条件下のオブジェクトの影についてはレイトレーシングによって生成している。
+
+　その条件とは「視点から近い位置にあるオブジェクト」というシンプルなもの。つまり，視界内に描かれる影のうち，距離の近いものはレイトレーシングで描画し，遠いものはデプスシャドウ技法の影生成が採択されるということである。
+
+　デプスシャドウ技法では，影の解像度がシャドウマップテクスチャ解像度に依存する特性があるので，広大なゲーム世界に存在するすべてのオブジェクトに対し高精度な影を生成することは最初から諦めている。たとえば，人物のシルエット的な影はデプスシャドウ技法で生成できるが，衣服の襟先の影や鼻の穴の中の影は無理だ。ゲームグラフィックスでは，そうした微細な影は，画面座標系のポストエフェクト処理であるSSAOなどで代行することが多い。
+
+
+
+　それに対してレイトレーシングにおける影生成は，着目しているピクセルから光源に対してレイをキャストして，なにかオブジェクトに衝突したら「そこは影」と判断できるのでピクセル単位での影生成が行える。
+
+　本作のレイトレーシング処理では，主人公をはじめとしたキャラクターはもちろん，調度品のセルフシャドウまでがレイトレーシングで生成される。
+
+
+
+レイトレーシング使用時（右）は，本棚の各棚のセルフシャドウに加え，本1冊1冊の影が生成されているのが分かる
+
+画像(015)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(016)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+レイトレーシング使用時（右）は，目のくぼみ，睫毛，鼻の穴，髪の毛の影のほか，衣服のセルフシャドウが生成されている
+
+画像(018)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する	画像(017)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+CONTROLにおけるレイトレーシングの影表現
+
+
+
+Clik to PlayClik to Play
+
+
+
+レイトレーシングを使わなくても，おおよその影はちゃんと生成されている。しかし，細かい部位の影は投射距離が短い場合でもぼんやりとしてはっきりしない。レイトレーシング・オン時には，タービンのような機械のバルブハンドルの影や主人公キャラのセルフシャドウがくっきりと描かれるようになる
+
+
+
+　リアルタイムレイトレーシングに対応したGPUのGeForce RTXシリーズであっても，現実的なゲームプレイが可能なフレームレートでレイトレーシングを行おうとすると，フルHD（1920×1080ピクセル）解像度時に1ピクセルあたりせいぜい2桁台の数のレイをキャストするのが限界だ（関連記事）。当面は，ゲームグラフィックスの全要素をリアルタイムレイトレーシング技術でカバーするのは難しい。その意味ではしばらくの間，CONTROLはリアルタイムレイトレーシングの基準としてみなされることだろう。
+
+　実際，冒頭で触れたNVIDIAのMcGuire氏の講演でも，CONTROLをGeForce RTXシリーズが提供するリアルタイムレイトレーシング技術の模範的な活用事例として取り上げていた。
+
+
+
+NVIDIAのMorgan McGuire氏の講演「From Raster To Rays In Games」（筆者意訳：ゲームグラフィックスにおけるラスタライズ法からレイトレーシング法への変革）のスライドより（関連記事）
+
+画像(020)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+　まだ多くのGeForce RTXユーザーは，GeForce RTXのレイトレーシング機能をフル活用できていないと思うので，ぜひともこのCONTROLで自身のGeForce RTXのRTコアに活を入れていただきたい。
+
+
+
+NVIDIAとRemedyが発表している「CONTROL」動作環境要件
+
+画像(019)西川善司の3DGE：現状のレイトレ要素全部入りといわれる新作ゲーム「CONTROL」のグラフィックスの魅力を検証する
+
+
+
+（参考）インタラクティブにレイトレーシングのオン/オフを比較できるページ
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="西川善司連載完全理解「3DMarkVan.html" class="btn btn-neutral float-right" title="forgamer 西川善司連載完全理解「3DMarkVan" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="VR向けリュック型PC「背負えラブルパソコン」の.html" class="btn btn-neutral" title="forgamer VR向けリュック型PC「背負えラブルパソコン」の" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

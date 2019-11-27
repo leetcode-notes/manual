@@ -1,0 +1,5 @@
+prefab thunderline_light_child
+---------------------------------------------------------------------------
+
+.. literalinclude:: thunderline_light_child.prefab
+

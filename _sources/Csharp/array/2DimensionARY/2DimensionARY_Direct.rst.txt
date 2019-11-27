@@ -1,0 +1,5 @@
+2DimensionARY 2DimensionARY_Direct
+---------------------------------------------------------------------------
+
+.. literalinclude:: 2DimensionARY_Direct.cs
+

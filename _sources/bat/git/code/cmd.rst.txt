@@ -8,15 +8,23 @@ _________________________
 bare フォルダを作成してクローン作成
 
 * cmd
+    git init
+
     git add .
 
     git add -i
+
+    git commit
+
+    ＊エディタが立ち上がる
 
     git commit -m "first commit"
 
     git remote add origin <URLアドレス>
 
     git remote -v
+
+    ＊変更内容を確認できる
 
     git push origin master
 

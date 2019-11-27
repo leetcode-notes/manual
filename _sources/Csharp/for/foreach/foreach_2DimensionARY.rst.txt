@@ -1,0 +1,5 @@
+foreach foreach_2DimensionARY
+---------------------------------------------------------------------------
+
+.. literalinclude:: foreach_2DimensionARY.cs
+

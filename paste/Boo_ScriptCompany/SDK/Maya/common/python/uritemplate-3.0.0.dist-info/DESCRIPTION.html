@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>uritemplate &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../../../../index.html"/> 
+
+  
+  <script src="../../../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>uritemplate</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/paste/Boo_ScriptCompany/SDK/Maya/common/python/uritemplate-3.0.0.dist-info/DESCRIPTION.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="uritemplate">
+<h1>uritemplate<a class="headerlink" href="#uritemplate" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="http://uritemplate.rtfd.org/">Documentation</a> -- <a class="reference external" href="https://github.com/sigmavirus24/uritemplate">GitHub</a> -- <a class="reference external" href="https://bitbucket.org/icordasc/uritemplate">BitBucket</a> -- <a class="reference external" href="https://travis-ci.org/sigmavirus24/uritemplate">Travis-CI</a></p>
+<p>Simple python library to deal with <a class="reference external" href="http://tools.ietf.org/html/rfc6570">URI Templates</a>. The API looks like</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">uritemplate</span> <span class="kn">import</span> <span class="n">URITemplate</span><span class="p">,</span> <span class="n">expand</span>
+
+<span class="c1"># NOTE: URI params must be strings not integers</span>
+
+<span class="n">gist_uri</span> <span class="o">=</span> <span class="s1">&#39;https://api.github.com/users/sigmavirus24/gists{/gist_id}&#39;</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">URITemplate</span><span class="p">(</span><span class="n">gist_uri</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">gist_id</span><span class="o">=</span><span class="s1">&#39;123456&#39;</span><span class="p">))</span>
+<span class="c1"># =&gt; https://api.github.com/users/sigmavirus24/gists/123456</span>
+
+<span class="c1"># or</span>
+<span class="k">print</span><span class="p">(</span><span class="n">expand</span><span class="p">(</span><span class="n">gist_uri</span><span class="p">,</span> <span class="n">gist_id</span><span class="o">=</span><span class="s1">&#39;123456&#39;</span><span class="p">))</span>
+
+<span class="c1"># also</span>
+<span class="n">t</span><span class="o">.</span><span class="n">expand</span><span class="p">({</span><span class="s1">&#39;gist_id&#39;</span><span class="p">:</span> <span class="s1">&#39;123456&#39;</span><span class="p">})</span>
+<span class="k">print</span><span class="p">(</span><span class="n">expand</span><span class="p">(</span><span class="n">gist_uri</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;gist_id&#39;</span><span class="p">:</span> <span class="s1">&#39;123456&#39;</span><span class="p">}))</span>
+</pre></div>
+</div>
+<p>Where it might be useful to have a class</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">class</span> <span class="nc">GitHubUser</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">URITemplate</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/user{/login}&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_url</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">login</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api_url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>When the module containing this class is loaded, <code class="docutils literal notranslate"><span class="pre">GitHubUser.url</span></code> is
+evaluated and so the template is created once. It's often hard to notice in
+Python, but object creation can consume a great deal of time and so can the
+<code class="docutils literal notranslate"><span class="pre">re</span></code> module which uritemplate relies on. Constructing the object once should
+reduce the amount of time your code takes to run.</p>
+<div class="section" id="installing">
+<h2>Installing<a class="headerlink" href="#installing" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">uritemplate</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Modified BSD <a class="reference external" href="https://github.com/sigmavirus24/uritemplate/blob/master/LICENSE">license</a></p>
+</div>
+</div>
+<div class="section" id="changelog-uritemplate">
+<h1>Changelog - uritemplate<a class="headerlink" href="#changelog-uritemplate" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>2.0.0 - 2016-08-29<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Merge uritemplate.py into uritemplate</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="changelog-uritemplate-py">
+<h1>Changelog - uritemplate.py<a class="headerlink" href="#changelog-uritemplate-py" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id3">
+<h2>2.0.0 - 2016-08-20<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Relicense uritemplate.py as Apache 2 and BSD (See
+<a class="reference external" href="https://github.com/sigmavirus24/uritemplate/pull/23">https://github.com/sigmavirus24/uritemplate/pull/23</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>1.0.1 - 2016-08-18<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Fix some minor packaging problems.</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>1.0.0 - 2016-08-17<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Fix handling of Unicode values on Python 2.6 and 2.7 for urllib.quote.</p></li>
+<li><p>Confirm public stable API via version number.</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>0.3.0 - 2013-10-22<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">#partial</span></code> to partially expand templates and return new instances of
+<code class="docutils literal notranslate"><span class="pre">URITemplate</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h2>0.2.0 - 2013-07-26<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Refactor the library a bit and add more tests.</p></li>
+<li><p>Backwards incompatible with 0.1.x if using <code class="docutils literal notranslate"><span class="pre">URIVariable</span></code> directly from
+<code class="docutils literal notranslate"><span class="pre">uritemplate.template</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>0.1.1 - 2013-05-19<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Add ability to get set of variable names in the current URI</p></li>
+<li><p>If there is no value or default given, simply return an empty string</p></li>
+<li><p>Fix sdist</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>0.1.0 - 2013-05-14<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Initial Release</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

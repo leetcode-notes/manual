@@ -1,0 +1,5 @@
+EpicGore EFX_Spawner
+---------------------------------------------------------------------------
+
+.. literalinclude:: EFX_Spawner.cs
+

@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>manager AssetViewer &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="manager" href="../manager.html"/>
+        <link rel="next" title="enviroment" href="../../../env/enviroment.html"/>
+        <link rel="prev" title="manager SlashGUI" href="../code/SlashGUI.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AssetBundle/AssetBundle.html">Asset Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../effect.html">effect</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Blood/Blood.html">Blood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction.html">effect LinePrediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction2.html">effect LinePrediction2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/camera.html">Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../destruction/BreakableSurface.html">effect BreakableSurface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../effcttools/effecttools.html">effcttools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ghostspawn/ghostspawn.html">ghost spawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../light/light.html">Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lightnning/lightnning.html">Lightning</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../manager.html">manager</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../EnvironmentWeatherEffect/fxController.html">EnvironmentWeatherEffect fxController</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/AnimationEventsEffect.html">manager AnimationEventsEffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/FX_simple_sword.html">manager FX_simple_sword</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/GameManager.html">manager GameManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/OneshotParticleSystemsManager.html">manager OneshotParticleSystemsManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../code/SlashGUI.html">manager SlashGUI</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">manager AssetViewer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../../effect.html">effect</a> &raquo;</li>
+      
+        <li><a href="../manager.html">manager</a> &raquo;</li>
+      
+    <li>manager AssetViewer</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/effect/manager/geometryparticle/AssetViewer.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="manager-assetviewer">
+<h1>manager AssetViewer<a class="headerlink" href="#manager-assetviewer" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using System;
+using UnityEngine;
+
+public sealed class AssetsViewer : MonoBehaviour
+{
+	[Serializable]
+	public class AssetsGroup
+	{
+		public string Name;
+		public KeyCode SelectGroupKey;
+		public GameObject[] Items;
+	}
+
+	private enum NavigationButtonMode
+	{
+		ChangeItem,
+		ChangeGroup,
+	}
+
+	[SerializeField]
+	private float m_controlsHeight;
+
+	[SerializeField]
+	private Vector2 m_controlsOffset;
+
+	[SerializeField]
+	private Vector2 m_controlsSpacing;
+
+	[SerializeField]
+	private float m_groupButtonWidth;
+
+	[SerializeField]
+	private AssetsGroup[] m_groups;
+
+	[SerializeField]
+	private bool m_GUIEnabled;
+
+	[SerializeField]
+	private NavigationButtonMode m_navigationButtonMode;
+
+	[SerializeField]
+	private float m_navigationButtonWidth;
+
+	[SerializeField]
+	private KeyCode m_switchNextItemKey;
+
+	[SerializeField]
+	private KeyCode m_switchPrevItemKey;
+
+	[SerializeField]
+	private Vector2 m_timeScaleRange;
+
+	[SerializeField]
+	private KeyCode m_toggleGUIKey;
+
+	private int m_currentGroupIndex;
+	private int m_currentItemIndex;
+
+	private GameObject CurrentItem
+	{
+		get
+		{
+			if (m_groups == null || m_groups.Length &lt;= m_currentGroupIndex)
+			{
+				return null;
+			}
+
+			GameObject[] items = m_groups[m_currentGroupIndex].Items;
+			return items != null &amp;&amp; items.Length &gt; m_currentItemIndex ? items[m_currentItemIndex] : null;
+		}
+	}
+
+	private int CurrentGroupItemsCount
+	{
+		get
+		{
+			if (m_groups == null || m_groups.Length &lt;= m_currentGroupIndex)
+			{
+				return 0;
+			}
+
+			GameObject[] items = m_groups[m_currentGroupIndex].Items;
+			return items != null ? items.Length : 0;
+		}
+	}
+
+	private string CurrentGroupName
+	{
+		get
+		{
+			if (m_groups == null || m_groups.Length &lt;= m_currentGroupIndex)
+			{
+				return &quot;&quot;;
+			}
+
+			return m_groups[m_currentGroupIndex].Name;
+		}
+	}
+
+	#region Unity core events.
+	private void Awake()
+	{
+		m_currentGroupIndex = 0;
+		m_currentItemIndex = 0;
+
+		if (m_groups != null)
+		{
+			foreach (AssetsGroup group in m_groups)
+			{
+				if (group.Items != null)
+				{
+					foreach (GameObject item in group.Items)
+					{
+						if (item != null)
+						{
+							item.SetActive(false);
+						}
+					}
+				}
+			}
+		}
+
+		SetActiveCurrentItem(true);
+	}
+
+	private void LateUpdate()
+	{
+		if (m_groups == null || m_groups.Length == 0)
+		{
+			return;
+		}
+
+		if (Input.GetKeyUp(m_toggleGUIKey))
+		{
+			m_GUIEnabled = !m_GUIEnabled;
+		}
+
+		if (Input.GetKeyUp(m_switchPrevItemKey))
+		{
+			ConditionalSwitchToPrevItem();
+		}
+
+		if (Input.GetKeyUp(m_switchNextItemKey))
+		{
+			ConditionalSwitchToNextItem();
+		}
+
+		for (int i = 0; i &lt; m_groups.Length; ++i)
+		{
+			if (Input.GetKeyUp(m_groups[i].SelectGroupKey))
+			{
+				ChangeCurrentGroup(i);
+			}
+		}
+	}
+
+	private void OnGUI()
+	{
+		if (!m_GUIEnabled || m_groups == null || m_groups.Length == 0)
+		{
+			return;
+		}
+
+		float currentVerticalOffset = m_controlsOffset.y;
+
+		GUIContent labelContent = new GUIContent(&quot;Time scale&quot;);
+		Vector2 labelSize = GUI.skin.label.CalcSize(labelContent);
+		GUI.Label(new Rect(m_controlsOffset.x, currentVerticalOffset, labelSize.x, labelSize.y), labelContent);
+
+		currentVerticalOffset += labelSize.y + m_controlsSpacing.y;
+
+		Time.timeScale = GUI.HorizontalSlider(new Rect(m_controlsOffset.x, currentVerticalOffset, m_groupButtonWidth, m_controlsHeight),
+			Time.timeScale, m_timeScaleRange.x, m_timeScaleRange.y);
+
+		currentVerticalOffset += m_controlsHeight + m_controlsSpacing.y;
+
+		labelContent = new GUIContent(CurrentGroupName);
+		labelSize = GUI.skin.label.CalcSize(labelContent);
+		GUI.Label(new Rect(m_controlsOffset.x, currentVerticalOffset, labelSize.x, labelSize.y), labelContent);
+
+		currentVerticalOffset += labelSize.y + m_controlsSpacing.y;
+
+		if (GUI.Button(new Rect(m_controlsOffset.x, currentVerticalOffset,
+			m_navigationButtonWidth, m_controlsHeight), &quot;&lt;&quot;))
+		{
+			ConditionalSwitchToPrevItem();
+		}
+
+		if (GUI.Button(new Rect(m_controlsOffset.x + m_navigationButtonWidth + m_controlsSpacing.x, currentVerticalOffset,
+			m_navigationButtonWidth, m_controlsHeight), &quot;&gt;&quot;))
+		{
+			ConditionalSwitchToNextItem();
+		}
+
+		for (int i = 0; i &lt; m_groups.Length; ++i)
+		{
+			currentVerticalOffset += m_controlsHeight + m_controlsSpacing.y;
+
+			if (GUI.Button(new Rect(m_controlsOffset.x, currentVerticalOffset, m_groupButtonWidth, m_controlsHeight), m_groups[i].Name))
+			{
+				ChangeCurrentGroup(i);
+			}
+		}
+	}
+	#endregion //Unity core events.
+
+	#region Class functions.
+	private void ChangeCurrentGroup(int index)
+	{
+		SetActiveCurrentItem(false);
+		m_currentGroupIndex = Mathf.Clamp(index, 0, m_groups != null ? Mathf.Max(m_groups.Length - 1, 0) : 0);
+		m_currentItemIndex = 0;
+		SetActiveCurrentItem(true);
+	}
+
+	private void ConditionalSwitchToNextItem()
+	{
+		if (m_navigationButtonMode == NavigationButtonMode.ChangeGroup)
+		{
+			ChangeCurrentGroup(m_currentGroupIndex + 1);
+		}
+		else
+		{
+			SwitchToNextItem();
+		}
+	}
+
+	private void ConditionalSwitchToPrevItem()
+	{
+		if (m_navigationButtonMode == NavigationButtonMode.ChangeGroup)
+		{
+			ChangeCurrentGroup(m_currentGroupIndex - 1);
+		}
+		else
+		{
+			SwitchToPrevItem();
+		}
+	}
+
+	private void SwitchToNextItem()
+	{
+		SetActiveCurrentItem(false);
+		m_currentItemIndex = Mathf.Min(m_currentItemIndex + 1, Mathf.Max(CurrentGroupItemsCount, 1) - 1);
+		SetActiveCurrentItem(true);
+	}
+
+	private void SwitchToPrevItem()
+	{
+		SetActiveCurrentItem(false);
+		m_currentItemIndex = Mathf.Max(m_currentItemIndex - 1, 0);
+		SetActiveCurrentItem(true);
+	}
+
+	private void SetActiveCurrentItem(bool state)
+	{
+		GameObject currentItem = CurrentItem;
+		if (currentItem != null)
+		{
+			currentItem.SetActive(state);
+		}
+	}
+	#endregion //Class functions.
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../env/enviroment.html" class="btn btn-neutral float-right" title="enviroment" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../code/SlashGUI.html" class="btn btn-neutral" title="manager SlashGUI" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

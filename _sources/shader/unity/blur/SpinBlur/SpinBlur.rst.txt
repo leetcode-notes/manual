@@ -1,0 +1,8 @@
+2D Sprite Spin BLur
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

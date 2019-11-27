@@ -1,0 +1,20 @@
+snapdoragon
+=============================
+
+android
+------------
+
+snapdoragon820 ～
+
+2016年モデルから採用
+
+OPEN GL ES3.0
+
+GPU instancingのサポートが必須
+
+ios
+-----
+
+iphone 6s
+
+Metal

@@ -1,0 +1,5 @@
+shader Blend_CenterGlow
+---------------------------------------------------------------------------
+
+.. literalinclude:: Blend_CenterGlow.shader
+

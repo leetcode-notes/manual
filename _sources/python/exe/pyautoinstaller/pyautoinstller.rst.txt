@@ -1,0 +1,7 @@
+pyautoinstller.rst
+=============================
+
+pyinstaller test.py --onefile
+
+
+https://www.sejuku.net/blog/65881

@@ -1,0 +1,5 @@
+code FoliageShader_Mobile
+---------------------------------------------------------------------------
+
+.. literalinclude:: FoliageShader_Mobile.shader
+

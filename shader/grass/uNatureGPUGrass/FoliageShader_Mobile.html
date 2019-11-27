@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code FoliageShader_Mobile &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="grass" href="../grass.html"/>
+        <link rel="next" title="HLSL" href="../../hlsl/HLSL.html"/>
+        <link rel="prev" title="code FoilageShader_Basic" href="FoilageShader_Basic.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../grass.html">grass</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="FoilageShader_Advanced.html">code FoilageShader_Advanced</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FoilageShader_Basic.html">code FoilageShader_Basic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code FoliageShader_Mobile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shadergraph shaderforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/unity.html">unity shader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../grass.html">grass</a> &raquo;</li>
+      
+    <li>code FoliageShader_Mobile</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/grass/uNatureGPUGrass/FoliageShader_Mobile.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-foliageshader-mobile">
+<h1>code FoliageShader_Mobile<a class="headerlink" href="#code-foliageshader-mobile" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shader</span> <span class="s2">&quot;uNature/FoliageShader_Mobile&quot;</span>
+<span class="p">{</span>
+	<span class="n">Properties</span>
+	<span class="p">{</span>
+		<span class="n">_MainTex</span><span class="p">(</span><span class="s2">&quot;Base (RGB) Trans (A)&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{</span> <span class="p">}</span>
+
+		<span class="n">_Color</span><span class="p">(</span><span class="s2">&quot;Main Color&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+		<span class="o">///</span><span class="n">UNATURE</span> <span class="n">PROPERTIES</span> <span class="n">BEGIN</span>
+		<span class="n">_Cutoff</span><span class="p">(</span><span class="s2">&quot;Alpha cutoff&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.3</span>
+		<span class="n">_WindSpeed</span><span class="p">(</span><span class="s2">&quot;Wind Speed&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.2</span>
+		<span class="n">_WindBending</span><span class="p">(</span><span class="s2">&quot;Wind Bending&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.1</span>
+		<span class="n">_DensityMultiplier</span><span class="p">(</span><span class="s2">&quot;Density Multiplier&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_NoiseMultiplier</span><span class="p">(</span><span class="s2">&quot;Noise Multiplier&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">MaxDensity</span><span class="p">(</span><span class="s2">&quot;Max Density&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">10</span>
+
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_GrassMap</span><span class="p">(</span><span class="s2">&quot;Grass Map&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_WorldMap</span><span class="p">(</span><span class="s2">&quot;Foliage World Map&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+
+		<span class="n">_MinimumWidth</span><span class="p">(</span><span class="s2">&quot;Min Width&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.5</span>
+		<span class="n">_MaximumWidth</span><span class="p">(</span><span class="s2">&quot;Max Width&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span>
+
+		<span class="n">_MinimumHeight</span><span class="p">(</span><span class="s2">&quot;Min Height&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_MaximumHeight</span><span class="p">(</span><span class="s2">&quot;Max Height&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.2</span>
+
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_RotateNormals</span><span class="p">(</span><span class="s2">&quot;Rotate Normals&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="n">lods_Enabled</span><span class="p">(</span><span class="s2">&quot;LOD Enabled&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+
+		<span class="n">lod0_Distance</span><span class="p">(</span><span class="s2">&quot;LOD 0 Distance&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">50</span>
+		<span class="n">lod0_Value</span><span class="p">(</span><span class="s2">&quot;LOD 0 Distance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.8</span>
+
+		<span class="n">lod1_Distance</span><span class="p">(</span><span class="s2">&quot;LOD 1 Distance&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">100</span>
+		<span class="n">lod1_Value</span><span class="p">(</span><span class="s2">&quot;LOD 1 Distance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.6</span>
+
+		<span class="n">lod2_Distance</span><span class="p">(</span><span class="s2">&quot;LOD 2 Distance&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">120</span>
+		<span class="n">lod2_Value</span><span class="p">(</span><span class="s2">&quot;LOD 2 Distance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.4</span>
+
+		<span class="n">lod3_Distance</span><span class="p">(</span><span class="s2">&quot;LOD 3 Distance&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">200</span>
+		<span class="n">lod3_Value</span><span class="p">(</span><span class="s2">&quot;LOD 3 Distance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_FoliageAreaSize</span><span class="p">(</span><span class="s2">&quot;Grass Area Size&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1024</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_FoliageAreaResolution</span><span class="p">(</span><span class="s2">&quot;Grass Area Resolution&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2048</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_FoliageAreaPosition</span><span class="p">(</span><span class="s2">&quot;Grass Area Position&quot;</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_FoliageWorldMapResolution</span><span class="p">(</span><span class="s2">&quot;WorldMap Resolution&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1024</span>
+
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_FoliageInteractionPosition</span><span class="p">(</span><span class="s2">&quot;Interaction Position&quot;</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span>
+		<span class="n">_InteractionMapRadius</span><span class="p">(</span><span class="s2">&quot;Interaction Map Radius&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">124</span>
+
+		<span class="n">_healthyColor</span><span class="p">(</span><span class="s2">&quot;Healthy Color&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+		<span class="n">_dryColor</span><span class="p">(</span><span class="s2">&quot;Dry Color&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+		<span class="n">fadeDistance</span><span class="p">(</span><span class="s2">&quot;Fade Distance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span> <span class="o">=</span> <span class="mi">100</span>
+
+		<span class="n">touchBendingEnabled</span><span class="p">(</span><span class="s2">&quot;Touch Bending Enabled&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">touchBendingStrength</span><span class="p">(</span><span class="s2">&quot;Touch Bending Strength&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.97</span>
+		<span class="o">///</span><span class="n">UNATURE</span> <span class="n">PROPERTIES</span> <span class="n">END</span>
+	<span class="p">}</span>
+
+		<span class="n">SubShader</span><span class="p">{</span>
+		<span class="n">Tags</span><span class="p">{</span> <span class="s2">&quot;RenderType&quot;</span> <span class="o">=</span> <span class="s2">&quot;Geometry&quot;</span> <span class="s2">&quot;IgnoreProjector&quot;</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span> <span class="p">}</span>
+
+		<span class="n">Cull</span> <span class="n">Off</span>
+
+		<span class="n">CGPROGRAM</span>
+
+		<span class="c1">#define UNATURE_MOBILE</span>
+		<span class="c1">#include &quot;uNature_Foliage_Base.cginc&quot;</span>
+		
+		<span class="c1">#pragma surface surf Lambert vertex:vert</span>
+		
+		<span class="c1">#pragma target 3.0</span>
+
+		<span class="c1">#include &quot;UnityCG.cginc&quot;</span>
+
+		<span class="n">struct</span> <span class="n">Input</span>
+		<span class="p">{</span>
+			<span class="n">float2</span> <span class="n">uv_MainTex</span><span class="p">;</span>
+			<span class="n">float4</span> <span class="n">color</span> <span class="p">:</span> <span class="n">COLOR</span><span class="p">;</span>
+		<span class="p">};</span>
+
+	<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">_MainTex</span><span class="p">;</span>
+	<span class="n">uniform</span> <span class="n">half4</span> <span class="n">_Color</span><span class="p">;</span>
+
+	<span class="n">void</span> <span class="n">vert</span><span class="p">(</span><span class="n">inout</span> <span class="n">uNature_Foliage_appdata</span> <span class="n">v</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">CalculateGPUVertex</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">void</span> <span class="n">surf</span><span class="p">(</span><span class="n">Input</span> <span class="n">IN</span><span class="p">,</span> <span class="n">inout</span> <span class="n">SurfaceOutput</span> <span class="n">o</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">fixed4</span> <span class="n">c</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span><span class="n">_MainTex</span><span class="p">,</span> <span class="n">IN</span><span class="o">.</span><span class="n">uv_MainTex</span><span class="p">)</span> <span class="o">*</span> <span class="n">_Color</span><span class="p">;</span>
+
+		<span class="n">o</span><span class="o">.</span><span class="n">Albedo</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*</span> <span class="n">IN</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">rgb</span><span class="p">;</span>
+		<span class="n">o</span><span class="o">.</span><span class="n">Alpha</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">IN</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">a</span><span class="p">;</span>
+
+		<span class="n">clip</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">Alpha</span> <span class="o">-</span> <span class="n">_Cutoff</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="n">ENDCG</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../hlsl/HLSL.html" class="btn btn-neutral float-right" title="HLSL" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FoilageShader_Basic.html" class="btn btn-neutral" title="code FoilageShader_Basic" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>shader Add_DistortTexture &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="GrbArt Sample" href="../GrbArt.html"/>
+        <link rel="next" title="shader Add_Trail" href="Add_Trail.html"/>
+        <link rel="prev" title="shader Add_CenterGlow" href="Add_CenterGlow.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AI/AI.html">AI</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../GrbArt.html">GrbArt Sample</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../code/DemoShooting.html">code DemoShooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/ParticleCollisionInstance.html">code ParticleCollisionInstance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/ProjectileMover.html">code ProjectileMover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/Rotator.html">code Rotator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/ShaderChanger.html">code ShaderChanger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Add_CenterGlow.html">shader Add_CenterGlow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">shader Add_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Add_Trail.html">shader Add_Trail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Blend_CenterGlow.html">shader Blend_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Blend_DistortTexture.html">shader Blend_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Electricity.html">shader Electricity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Add_CenterGlow.html">shader LWRP_Add_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Add_DistortTexture.html">shader LWRP_Add_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Add_Trail.html">shader LWRP_Add_Trail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Blend_CenterGlow.html">shader LWRP_Blend_CenterGlow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Blend_DistortTexture.html">shader LWRP_Blend_DistortTexture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LWRP_Electricity.html">shader LWRP_Electricity</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../effect/effect.html">effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../GrbArt.html">GrbArt Sample</a> &raquo;</li>
+      
+    <li>shader Add_DistortTexture</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/GrbArt/shader/Add_DistortTexture.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shader-add-distorttexture">
+<h1>shader Add_DistortTexture<a class="headerlink" href="#shader-add-distorttexture" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Shader &quot;ErbGameArt/Particles/Add_DistortTexture&quot; {
+    Properties {
+        _MainTex (&quot;MainTex&quot;, 2D) = &quot;white&quot; {} 
+        _TintColor (&quot;Color&quot;, Color) = (0.5,0.5,0.5,1)
+		_Emission (&quot;Emission&quot;, Float ) = 2
+		_Noise (&quot;Noise&quot;, 2D) = &quot;white&quot; {}
+        _NoisespeedUV (&quot;Noise speed U/V&quot;, Vector) = (0,0,0,0)
+		_Mask (&quot;Mask&quot;, 2D) = &quot;white&quot; {}
+		_Distortionpower (&quot;Distortion power&quot;, Float ) = 1
+        [MaterialToggle] _Usedepth (&quot;Use depth?&quot;, Float ) = 0
+        _Depthpower (&quot;Depth power&quot;, Float ) = 1
+    }
+    SubShader {
+        Tags {
+            &quot;IgnoreProjector&quot;=&quot;True&quot;
+            &quot;Queue&quot;=&quot;Transparent&quot;
+            &quot;RenderType&quot;=&quot;Transparent&quot;
+			&quot;PreviewType&quot;=&quot;Plane&quot;
+        }
+        Pass {
+            Name &quot;FORWARD&quot;
+            Tags {
+                &quot;LightMode&quot;=&quot;ForwardBase&quot;
+            }
+            Blend One One
+            Cull Off
+            ZWrite Off
+            
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include &quot;UnityCG.cginc&quot;
+            #pragma multi_compile_fwdbase
+            uniform sampler2D _CameraDepthTexture;
+            uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
+            uniform float4 _TintColor;
+            uniform float _Emission;
+            uniform sampler2D _Noise; uniform float4 _Noise_ST;
+            uniform float4 _NoisespeedUV;
+            uniform float _Depthpower;
+            uniform fixed _Usedepth;
+            uniform sampler2D _Mask; uniform float4 _Mask_ST;
+			uniform float _Distortionpower;
+            struct VertexInput {
+                float4 vertex : POSITION;
+                float4 texcoord0 : TEXCOORD0;
+                float4 vertexColor : COLOR;
+            };
+            struct VertexOutput {
+                float4 pos : SV_POSITION;
+                float4 uv0 : TEXCOORD0;
+                float4 vertexColor : COLOR;
+                float4 projPos : TEXCOORD1;
+                UNITY_FOG_COORDS(2)
+            };
+            VertexOutput vert (VertexInput v) {
+                VertexOutput o = (VertexOutput)0;
+                o.uv0 = v.texcoord0;
+                o.vertexColor = v.vertexColor;
+                o.pos = UnityObjectToClipPos( v.vertex );
+                UNITY_TRANSFER_FOG(o,o.pos);
+                o.projPos = ComputeScreenPos (o.pos);
+                COMPUTE_EYEDEPTH(o.projPos.z);
+                return o;
+            }
+            float4 frag(VertexOutput i, float facing : VFACE) : COLOR {
+                float isFrontFace = ( facing &gt;= 0 ? 1 : 0 );
+                float faceSign = ( facing &gt;= 0 ? 1 : -1 );
+                float sceneZ = max(0,LinearEyeDepth (UNITY_SAMPLE_DEPTH(tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)))) - _ProjectionParams.g);
+                float partZ = max(0,i.projPos.z - _ProjectionParams.g);
+                float4 _Mask_var = tex2D(_Mask,TRANSFORM_TEX(i.uv0, _Mask));
+                float2 Time = ((_Time.g*float2(_NoisespeedUV.r,_NoisespeedUV.g))+i.uv0);
+                float4 _Noise_var = tex2D(_Noise,TRANSFORM_TEX(Time, _Noise));
+                float2 Mask = (((_Mask_var.rgb*_Noise_var.rgb).rg*i.uv0*_Distortionpower)+i.uv0);
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(Mask, _MainTex));
+                float3 Main = ((_MainTex_var.rgb*i.vertexColor.rgb*_TintColor.rgb)*_MainTex_var.a*i.vertexColor.a*_TintColor.a);
+                float3 emissive = (lerp( Main, (Main*saturate((sceneZ-partZ)/_Depthpower)), _Usedepth )*_Emission);
+                fixed4 finalRGBA = fixed4(emissive,1);
+                UNITY_APPLY_FOG_COLOR(i.fogCoord, finalRGBA, fixed4(0,0,0,1));
+                return finalRGBA;
+            }
+            ENDCG
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Add_Trail.html" class="btn btn-neutral float-right" title="shader Add_Trail" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Add_CenterGlow.html" class="btn btn-neutral" title="shader Add_CenterGlow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

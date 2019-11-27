@@ -1,0 +1,1211 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Requests: HTTP for Humans &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../../../../index.html"/> 
+
+  
+  <script src="../../../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../mindmap/mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>Requests: HTTP for Humans</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/paste/Boo_ScriptCompany/SDK/Maya/common/python/requests-2.5.0.dist-info/DESCRIPTION.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="requests-http-for-humans">
+<h1>Requests: HTTP for Humans<a class="headerlink" href="#requests-http-for-humans" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<a class="reference external image-reference" href="http://badge.fury.io/py/requests"><img alt="https://badge.fury.io/py/requests.png" src="https://badge.fury.io/py/requests.png" /></a>
+<a class="reference external image-reference" href="https://crate.io/packages/requests/"><img alt="https://pypip.in/d/requests/badge.png" src="https://pypip.in/d/requests/badge.png" /></a>
+<p>Requests is an Apache2 Licensed HTTP library, written in Python, for human
+beings.</p>
+<p>Most existing Python modules for sending HTTP requests are extremely
+verbose and cumbersome. Python's builtin urllib2 module provides most of
+the HTTP capabilities you should need, but the api is thoroughly broken.
+It requires an enormous amount of work (even method overrides) to
+perform the simplest of tasks.</p>
+<p>Things shouldn't be this way. Not in Python.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+<span class="go">204</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;content-type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://gist.github.com/973705">the same code, without Requests</a>.</p>
+<p>Requests allow you to send HTTP/1.1 requests. You can add headers, form data,
+multipart files, and parameters with simple Python dictionaries, and access the
+response data in the same way. It's powered by httplib and <a class="reference external" href="https://github.com/shazow/urllib3">urllib3</a>, but it does all the hard work and crazy
+hacks for you.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>International Domains and URLs</p></li>
+<li><p>Keep-Alive &amp; Connection Pooling</p></li>
+<li><p>Sessions with Cookie Persistence</p></li>
+<li><p>Browser-style SSL Verification</p></li>
+<li><p>Basic/Digest Authentication</p></li>
+<li><p>Elegant Key/Value Cookies</p></li>
+<li><p>Automatic Decompression</p></li>
+<li><p>Unicode Response Bodies</p></li>
+<li><p>Multipart File Uploads</p></li>
+<li><p>Connection Timeouts</p></li>
+<li><p>Thread-safety</p></li>
+<li><p>HTTP(S) proxy support</p></li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To install Requests, simply:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ pip install requests
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Documentation is available at <a class="reference external" href="http://docs.python-requests.org/">http://docs.python-requests.org/</a>.</p>
+</div>
+<div class="section" id="contribute">
+<h2>Contribute<a class="headerlink" href="#contribute" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug. There is a <a class="reference external" href="https://github.com/kennethreitz/requests/issues?direction=desc&amp;labels=Contributor+Friendly&amp;page=1&amp;sort=updated&amp;state=open">Contributor Friendly</a> tag for issues that should be ideal for people who are not very familiar with the codebase yet.</p></li>
+<li><p>If you feel uncomfortable or uncertain about an issue or your changes, feel free to email &#64;sigmavirus24 and he will happily help you via email, Skype, remote pairing or whatever you are comfortable with.</p></li>
+<li><p>Fork <a class="reference external" href="http://github.com/kennethreitz/requests">the repository</a> on GitHub to start making your changes to the <strong>master</strong> branch (or branch off of it).</p></li>
+<li><p>Write a test which shows that the bug was fixed or that the feature works as expected.</p></li>
+<li><p>Send a pull request and bug the maintainer until it gets merged and published. :) Make sure to add yourself to <a class="reference external" href="https://github.com/kennethreitz/requests/blob/master/AUTHORS.rst">AUTHORS</a>.</p></li>
+</ol>
+</div>
+<div class="section" id="release-history">
+<h2>Release History<a class="headerlink" href="#release-history" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id1">
+<h3>2.5.0 (2014-12-01)<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>Improvements</strong></p>
+<ul class="simple">
+<li><p>Allow usage of urllib3's Retry object with HTTPAdapters (#2216)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">iter_lines</span></code> method on a response now accepts a delimiter with which
+to split the content (#2295)</p></li>
+</ul>
+<p><strong>Behavioural Changes</strong></p>
+<ul class="simple">
+<li><p>Add deprecation warnings to functions in requests.utils that will be removed
+in 3.0 (#2309)</p></li>
+<li><p>Sessions used by the functional API are always closed (#2326)</p></li>
+<li><p>Restrict requests to HTTP/1.1 and HTTP/1.0 (stop accepting HTTP/0.9) (#2323)</p></li>
+</ul>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>Only parse the URL once (#2353)</p></li>
+<li><p>Allow Content-Length header to always be overriden (#2332)</p></li>
+<li><p>Properly handle files in HTTPDigestAuth (#2333)</p></li>
+<li><p>Cap redirect_cache size to prevent memory abuse (#2299)</p></li>
+<li><p>Fix HTTPDigestAuth handling of redirects after authenticating successfully
+(#2253)</p></li>
+<li><p>Fix crash with custom method parameter to Session.request (#2317)</p></li>
+<li><p>Fix how Link headers are parsed using the regular expression library (#2271)</p></li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul class="simple">
+<li><p>Add more references for interlinking (#2348)</p></li>
+<li><p>Update CSS for theme (#2290)</p></li>
+<li><p>Update width of buttons and sidebar (#2289)</p></li>
+<li><p>Replace references of Gittip with Gratipay (#2282)</p></li>
+<li><p>Add link to changelog in sidebar (#2273)</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>2.4.3 (2014-10-06)<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>Unicode URL improvements for Python 2.</p></li>
+<li><p>Re-order JSON param for backwards compat.</p></li>
+<li><p>Automatically defrag authentication schemes from host/pass URIs. (<a class="reference external" href="https://github.com/kennethreitz/requests/issues/2249">#2249</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>2.4.2 (2014-10-05)<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>Improvements</strong></p>
+<ul class="simple">
+<li><p>FINALLY! Add json parameter for uploads! (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2258">#2258</a>)</p></li>
+<li><p>Support for bytestring URLs on Python 3.x (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2238">#2238</a>)</p></li>
+</ul>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>Avoid getting stuck in a loop (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2244">#2244</a>)</p></li>
+<li><p>Multiple calls to iter* fail with unhelpful error. (<a class="reference external" href="https://github.com/kennethreitz/requests/issues/2240">#2240</a>, <a class="reference external" href="https://github.com/kennethreitz/requests/issues/2241">#2241</a>)</p></li>
+</ul>
+<p><strong>Documentation</strong></p>
+<ul class="simple">
+<li><p>Correct redirection introduction (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2245/">#2245</a>)</p></li>
+<li><p>Added example of how to send multiple files in one request. (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2227/">#2227</a>)</p></li>
+<li><p>Clarify how to pass a custom set of CAs (<a class="reference external" href="https://github.com/kennethreitz/requests/pull/2248/">#2248</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h3>2.4.1 (2014-09-09)<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Now has a &quot;security&quot; package extras set, <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">requests[security]</span></code></p></li>
+<li><p>Requests will now use Certifi if it is available.</p></li>
+<li><p>Capture and re-raise urllib3 ProtocolError</p></li>
+<li><p>Bugfix for responses that attempt to redirect to themselves forever (wtf?).</p></li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h3>2.4.0 (2014-08-29)<a class="headerlink" href="#id14" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>Behavioral Changes</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Connection:</span> <span class="pre">keep-alive</span></code> header is now sent automatically.</p></li>
+</ul>
+<p><strong>Improvements</strong></p>
+<ul class="simple">
+<li><p>Support for connect timeouts! Timeout now accepts a tuple (connect, read) which is used to set individual connect and read timeouts.</p></li>
+<li><p>Allow copying of PreparedRequests without headers/cookies.</p></li>
+<li><p>Updated bundled urllib3 version.</p></li>
+<li><p>Refactored settings loading from environment — new <cite>Session.merge_environment_settings</cite>.</p></li>
+<li><p>Handle socket errors in iter_content.</p></li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h3>2.3.0 (2014-05-16)<a class="headerlink" href="#id15" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>API Changes</strong></p>
+<ul class="simple">
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Response</span></code> property <code class="docutils literal notranslate"><span class="pre">is_redirect</span></code>, which is true when the
+library could have processed this response as a redirection (whether
+or not it actually did).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">timeout</span></code> parameter now affects requests with both <code class="docutils literal notranslate"><span class="pre">stream=True</span></code> and
+<code class="docutils literal notranslate"><span class="pre">stream=False</span></code> equally.</p></li>
+<li><p>The change in v2.0.0 to mandate explicit proxy schemes has been reverted.
+Proxy schemes now default to <code class="docutils literal notranslate"><span class="pre">http://</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">CaseInsensitiveDict</span></code> used for HTTP headers now behaves like a normal
+dictionary when references as string or viewed in the interpreter.</p></li>
+</ul>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>No longer expose Authorization or Proxy-Authorization headers on redirect.
+Fix CVE-2014-1829 and CVE-2014-1830 respectively.</p></li>
+<li><p>Authorization is re-evaluated each redirect.</p></li>
+<li><p>On redirect, pass url as native strings.</p></li>
+<li><p>Fall-back to autodetected encoding for JSON when Unicode detection fails.</p></li>
+<li><p>Headers set to <code class="docutils literal notranslate"><span class="pre">None</span></code> on the <code class="docutils literal notranslate"><span class="pre">Session</span></code> are now correctly not sent.</p></li>
+<li><p>Correctly honor <code class="docutils literal notranslate"><span class="pre">decode_unicode</span></code> even if it wasn't used earlier in the same
+response.</p></li>
+<li><p>Stop advertising <code class="docutils literal notranslate"><span class="pre">compress</span></code> as a supported Content-Encoding.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">Response.history</span></code> parameter is now always a list.</p></li>
+<li><p>Many, many <code class="docutils literal notranslate"><span class="pre">urllib3</span></code> bugfixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3>2.2.1 (2014-01-23)<a class="headerlink" href="#id16" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>Fixes incorrect parsing of proxy credentials that contain a literal or encoded '#' character.</p></li>
+<li><p>Assorted urllib3 fixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h3>2.2.0 (2014-01-09)<a class="headerlink" href="#id17" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>API Changes</strong></p>
+<ul class="simple">
+<li><p>New exception: <code class="docutils literal notranslate"><span class="pre">ContentDecodingError</span></code>. Raised instead of <code class="docutils literal notranslate"><span class="pre">urllib3</span></code>
+<code class="docutils literal notranslate"><span class="pre">DecodeError</span></code> exceptions.</p></li>
+</ul>
+<p><strong>Bugfixes</strong></p>
+<ul class="simple">
+<li><p>Avoid many many exceptions from the buggy implementation of <code class="docutils literal notranslate"><span class="pre">proxy_bypass</span></code> on OS X in Python 2.6.</p></li>
+<li><p>Avoid crashing when attempting to get authentication credentials from ~/.netrc when running as a user without a home directory.</p></li>
+<li><p>Use the correct pool size for pools of connections to proxies.</p></li>
+<li><p>Fix iteration of <code class="docutils literal notranslate"><span class="pre">CookieJar</span></code> objects.</p></li>
+<li><p>Ensure that cookies are persisted over redirect.</p></li>
+<li><p>Switch back to using chardet, since it has merged with charade.</p></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h3>2.1.0 (2013-12-05)<a class="headerlink" href="#id18" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Updated CA Bundle, of course.</p></li>
+<li><p>Cookies set on individual Requests through a <code class="docutils literal notranslate"><span class="pre">Session</span></code> (e.g. via <code class="docutils literal notranslate"><span class="pre">Session.get()</span></code>) are no longer persisted to the <code class="docutils literal notranslate"><span class="pre">Session</span></code>.</p></li>
+<li><p>Clean up connections when we hit problems during chunked upload, rather than leaking them.</p></li>
+<li><p>Return connections to the pool when a chunked upload is successful, rather than leaking it.</p></li>
+<li><p>Match the HTTPbis recommendation for HTTP 301 redirects.</p></li>
+<li><p>Prevent hanging when using streaming uploads and Digest Auth when a 401 is received.</p></li>
+<li><p>Values of headers set by Requests are now always the native string type.</p></li>
+<li><p>Fix previously broken SNI support.</p></li>
+<li><p>Fix accessing HTTP proxies using proxy authentication.</p></li>
+<li><p>Unencode HTTP Basic usernames and passwords extracted from URLs.</p></li>
+<li><p>Support for IP address ranges for no_proxy environment variable</p></li>
+<li><p>Parse headers correctly when users override the default <code class="docutils literal notranslate"><span class="pre">Host:</span></code> header.</p></li>
+<li><p>Avoid munging the URL in case of case-sensitive servers.</p></li>
+<li><p>Looser URL handling for non-HTTP/HTTPS urls.</p></li>
+<li><p>Accept unicode methods in Python 2.6 and 2.7.</p></li>
+<li><p>More resilient cookie handling.</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">Response</span></code> objects pickleable.</p></li>
+<li><p>Actually added MD5-sess to Digest Auth instead of pretending to like last time.</p></li>
+<li><p>Updated internal urllib3.</p></li>
+<li><p>Fixed &#64;Lukasa's lack of taste.</p></li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h3>2.0.1 (2013-10-24)<a class="headerlink" href="#id19" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Updated included CA Bundle with new mistrusts and automated process for the future</p></li>
+<li><p>Added MD5-sess to Digest Auth</p></li>
+<li><p>Accept per-file headers in multipart file POST messages.</p></li>
+<li><p>Fixed: Don't send the full URL on CONNECT messages.</p></li>
+<li><p>Fixed: Correctly lowercase a redirect scheme.</p></li>
+<li><p>Fixed: Cookies not persisted when set via functional API.</p></li>
+<li><p>Fixed: Translate urllib3 ProxyError into a requests ProxyError derived from ConnectionError.</p></li>
+<li><p>Updated internal urllib3 and chardet.</p></li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h3>2.0.0 (2013-09-24)<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>API Changes:</strong></p>
+<ul class="simple">
+<li><p>Keys in the Headers dictionary are now native strings on all Python versions,
+i.e. bytestrings on Python 2, unicode on Python 3.</p></li>
+<li><p>Proxy URLs now <em>must</em> have an explicit scheme. A <code class="docutils literal notranslate"><span class="pre">MissingSchema</span></code> exception
+will be raised if they don't.</p></li>
+<li><p>Timeouts now apply to read time if <code class="docutils literal notranslate"><span class="pre">Stream=False</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RequestException</span></code> is now a subclass of <code class="docutils literal notranslate"><span class="pre">IOError</span></code>, not <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>.</p></li>
+<li><p>Added new method to <code class="docutils literal notranslate"><span class="pre">PreparedRequest</span></code> objects: <code class="docutils literal notranslate"><span class="pre">PreparedRequest.copy()</span></code>.</p></li>
+<li><p>Added new method to <code class="docutils literal notranslate"><span class="pre">Session</span></code> objects: <code class="docutils literal notranslate"><span class="pre">Session.update_request()</span></code>. This
+method updates a <code class="docutils literal notranslate"><span class="pre">Request</span></code> object with the data (e.g. cookies) stored on
+the <code class="docutils literal notranslate"><span class="pre">Session</span></code>.</p></li>
+<li><p>Added new method to <code class="docutils literal notranslate"><span class="pre">Session</span></code> objects: <code class="docutils literal notranslate"><span class="pre">Session.prepare_request()</span></code>. This
+method updates and prepares a <code class="docutils literal notranslate"><span class="pre">Request</span></code> object, and returns the
+corresponding <code class="docutils literal notranslate"><span class="pre">PreparedRequest</span></code> object.</p></li>
+<li><p>Added new method to <code class="docutils literal notranslate"><span class="pre">HTTPAdapter</span></code> objects: <code class="docutils literal notranslate"><span class="pre">HTTPAdapter.proxy_headers()</span></code>.
+This should not be called directly, but improves the subclass interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httplib.IncompleteRead</span></code> exceptions caused by incorrect chunked encoding
+will now raise a Requests <code class="docutils literal notranslate"><span class="pre">ChunkedEncodingError</span></code> instead.</p></li>
+<li><p>Invalid percent-escape sequences now cause a Requests <code class="docutils literal notranslate"><span class="pre">InvalidURL</span></code>
+exception to be raised.</p></li>
+<li><p>HTTP 208 no longer uses reason phrase <code class="docutils literal notranslate"><span class="pre">&quot;im_used&quot;</span></code>. Correctly uses
+<code class="docutils literal notranslate"><span class="pre">&quot;already_reported&quot;</span></code>.</p></li>
+<li><p>HTTP 226 reason added (<code class="docutils literal notranslate"><span class="pre">&quot;im_used&quot;</span></code>).</p></li>
+</ul>
+<p><strong>Bugfixes:</strong></p>
+<ul class="simple">
+<li><p>Vastly improved proxy support, including the CONNECT verb. Special thanks to
+the many contributors who worked towards this improvement.</p></li>
+<li><p>Cookies are now properly managed when 401 authentication responses are
+received.</p></li>
+<li><p>Chunked encoding fixes.</p></li>
+<li><p>Support for mixed case schemes.</p></li>
+<li><p>Better handling of streaming downloads.</p></li>
+<li><p>Retrieve environment proxies from more locations.</p></li>
+<li><p>Minor cookies fixes.</p></li>
+<li><p>Improved redirect behaviour.</p></li>
+<li><p>Improved streaming behaviour, particularly for compressed data.</p></li>
+<li><p>Miscellaneous small Python 3 text encoding bugs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.netrc</span></code> no longer overrides explicit auth.</p></li>
+<li><p>Cookies set by hooks are now correctly persisted on Sessions.</p></li>
+<li><p>Fix problem with cookies that specify port numbers in their host field.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BytesIO</span></code> can be used to perform streaming uploads.</p></li>
+<li><p>More generous parsing of the <code class="docutils literal notranslate"><span class="pre">no_proxy</span></code> environment variable.</p></li>
+<li><p>Non-string objects can be passed in data values alongside files.</p></li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h3>1.2.3 (2013-05-25)<a class="headerlink" href="#id21" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Simple packaging fix</p></li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h3>1.2.2 (2013-05-23)<a class="headerlink" href="#id22" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Simple packaging fix</p></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h3>1.2.1 (2013-05-20)<a class="headerlink" href="#id23" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>301 and 302 redirects now change the verb to GET for all verbs, not just
+POST, improving browser compatibility.</p></li>
+<li><p>Python 3.3.2 compatibility</p></li>
+<li><p>Always percent-encode location headers</p></li>
+<li><p>Fix connection adapter matching to be most-specific first</p></li>
+<li><p>new argument to the default connection adapter for passing a block argument</p></li>
+<li><p>prevent a KeyError when there's no link headers</p></li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h3>1.2.0 (2013-03-31)<a class="headerlink" href="#id24" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed cookies on sessions and on requests</p></li>
+<li><p>Significantly change how hooks are dispatched - hooks now receive all the
+arguments specified by the user when making a request so hooks can make a
+secondary request with the same parameters. This is especially necessary for
+authentication handler authors</p></li>
+<li><p>certifi support was removed</p></li>
+<li><p>Fixed bug where using OAuth 1 with body <code class="docutils literal notranslate"><span class="pre">signature_type</span></code> sent no data</p></li>
+<li><p>Major proxy work thanks to &#64;Lukasa including parsing of proxy authentication
+from the proxy url</p></li>
+<li><p>Fix DigestAuth handling too many 401s</p></li>
+<li><p>Update vendored urllib3 to include SSL bug fixes</p></li>
+<li><p>Allow keyword arguments to be passed to <code class="docutils literal notranslate"><span class="pre">json.loads()</span></code> via the
+<code class="docutils literal notranslate"><span class="pre">Response.json()</span></code> method</p></li>
+<li><p>Don't send <code class="docutils literal notranslate"><span class="pre">Content-Length</span></code> header by default on <code class="docutils literal notranslate"><span class="pre">GET</span></code> or <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>
+requests</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">elapsed</span></code> attribute to <code class="docutils literal notranslate"><span class="pre">Response</span></code> objects to time how long a request
+took.</p></li>
+<li><p>Fix <code class="docutils literal notranslate"><span class="pre">RequestsCookieJar</span></code></p></li>
+<li><p>Sessions and Adapters are now picklable, i.e., can be used with the
+multiprocessing library</p></li>
+<li><p>Update charade to version 1.0.3</p></li>
+</ul>
+<p>The change in how hooks are dispatched will likely cause a great deal of
+issues.</p>
+</div>
+<div class="section" id="id25">
+<h3>1.1.0 (2013-01-10)<a class="headerlink" href="#id25" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>CHUNKED REQUESTS</p></li>
+<li><p>Support for iterable response bodies</p></li>
+<li><p>Assume servers persist redirect params</p></li>
+<li><p>Allow explicit content types to be specified for file data</p></li>
+<li><p>Make merge_kwargs case-insensitive when looking up keys</p></li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h3>1.0.3 (2012-12-18)<a class="headerlink" href="#id26" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Fix file upload encoding bug</p></li>
+<li><p>Fix cookie behavior</p></li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h3>1.0.2 (2012-12-17)<a class="headerlink" href="#id27" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Proxy fix for HTTPAdapter.</p></li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h3>1.0.1 (2012-12-17)<a class="headerlink" href="#id28" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Cert verification exception bug.</p></li>
+<li><p>Proxy fix for HTTPAdapter.</p></li>
+</ul>
+</div>
+<div class="section" id="id29">
+<h3>1.0.0 (2012-12-17)<a class="headerlink" href="#id29" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Massive Refactor and Simplification</p></li>
+<li><p>Switch to Apache 2.0 license</p></li>
+<li><p>Swappable Connection Adapters</p></li>
+<li><p>Mountable Connection Adapters</p></li>
+<li><p>Mutable ProcessedRequest chain</p></li>
+<li><p>/s/prefetch/stream</p></li>
+<li><p>Removal of all configuration</p></li>
+<li><p>Standard library logging</p></li>
+<li><p>Make Response.json() callable, not property.</p></li>
+<li><p>Usage of new charade project, which provides python 2 and 3 simultaneous chardet.</p></li>
+<li><p>Removal of all hooks except 'response'</p></li>
+<li><p>Removal of all authentication helpers (OAuth, Kerberos)</p></li>
+</ul>
+<p>This is not a backwards compatible change.</p>
+</div>
+<div class="section" id="id30">
+<h3>0.14.2 (2012-10-27)<a class="headerlink" href="#id30" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Improved mime-compatible JSON handling</p></li>
+<li><p>Proxy fixes</p></li>
+<li><p>Path hack fixes</p></li>
+<li><p>Case-Insensistive Content-Encoding headers</p></li>
+<li><p>Support for CJK parameters in form posts</p></li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h3>0.14.1 (2012-10-01)<a class="headerlink" href="#id31" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Python 3.3 Compatibility</p></li>
+<li><p>Simply default accept-encoding</p></li>
+<li><p>Bugfixes</p></li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h3>0.14.0 (2012-09-02)<a class="headerlink" href="#id32" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>No more iter_content errors if already downloaded.</p></li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h3>0.13.9 (2012-08-25)<a class="headerlink" href="#id33" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Fix for OAuth + POSTs</p></li>
+<li><p>Remove exception eating from dispatch_hook</p></li>
+<li><p>General bugfixes</p></li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h3>0.13.8 (2012-08-21)<a class="headerlink" href="#id34" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Incredible Link header support :)</p></li>
+</ul>
+</div>
+<div class="section" id="id35">
+<h3>0.13.7 (2012-08-19)<a class="headerlink" href="#id35" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Support for (key, value) lists everywhere.</p></li>
+<li><p>Digest Authentication improvements.</p></li>
+<li><p>Ensure proxy exclusions work properly.</p></li>
+<li><p>Clearer UnicodeError exceptions.</p></li>
+<li><p>Automatic casting of URLs to tsrings (fURL and such)</p></li>
+<li><p>Bugfixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id36">
+<h3>0.13.6 (2012-08-06)<a class="headerlink" href="#id36" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Long awaited fix for hanging connections!</p></li>
+</ul>
+</div>
+<div class="section" id="id37">
+<h3>0.13.5 (2012-07-27)<a class="headerlink" href="#id37" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Packaging fix</p></li>
+</ul>
+</div>
+<div class="section" id="id38">
+<h3>0.13.4 (2012-07-27)<a class="headerlink" href="#id38" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>GSSAPI/Kerberos authentication!</p></li>
+<li><p>App Engine 2.7 Fixes!</p></li>
+<li><p>Fix leaking connections (from urllib3 update)</p></li>
+<li><p>OAuthlib path hack fix</p></li>
+<li><p>OAuthlib URL parameters fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id39">
+<h3>0.13.3 (2012-07-12)<a class="headerlink" href="#id39" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Use simplejson if available.</p></li>
+<li><p>Do not hide SSLErrors behind Timeouts.</p></li>
+<li><p>Fixed param handling with urls containing fragments.</p></li>
+<li><p>Significantly improved information in User Agent.</p></li>
+<li><p>client certificates are ignored when verify=False</p></li>
+</ul>
+</div>
+<div class="section" id="id40">
+<h3>0.13.2 (2012-06-28)<a class="headerlink" href="#id40" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Zero dependencies (once again)!</p></li>
+<li><p>New: Response.reason</p></li>
+<li><p>Sign querystring parameters in OAuth 1.0</p></li>
+<li><p>Client certificates no longer ignored when verify=False</p></li>
+<li><p>Add openSUSE certificate support</p></li>
+</ul>
+</div>
+<div class="section" id="id41">
+<h3>0.13.1 (2012-06-07)<a class="headerlink" href="#id41" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Allow passing a file or file-like object as data.</p></li>
+<li><p>Allow hooks to return responses that indicate errors.</p></li>
+<li><p>Fix Response.text and Response.json for body-less responses.</p></li>
+</ul>
+</div>
+<div class="section" id="id42">
+<h3>0.13.0 (2012-05-29)<a class="headerlink" href="#id42" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Removal of Requests.async in favor of <a class="reference external" href="https://github.com/kennethreitz/grequests">grequests</a></p></li>
+<li><p>Allow disabling of cookie persistiance.</p></li>
+<li><p>New implimentation of safe_mode</p></li>
+<li><p>cookies.get now supports default argument</p></li>
+<li><p>Session cookies not saved when Session.request is called with return_response=False</p></li>
+<li><p>Env: no_proxy support.</p></li>
+<li><p>RequestsCookieJar improvements.</p></li>
+<li><p>Various bug fixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id43">
+<h3>0.12.1 (2012-05-08)<a class="headerlink" href="#id43" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Response.json</span></code> property.</p></li>
+<li><p>Ability to add string file uploads.</p></li>
+<li><p>Fix out-of-range issue with iter_lines.</p></li>
+<li><p>Fix iter_content default size.</p></li>
+<li><p>Fix POST redirects containing files.</p></li>
+</ul>
+</div>
+<div class="section" id="id44">
+<h3>0.12.0 (2012-05-02)<a class="headerlink" href="#id44" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>EXPERIMENTAL OAUTH SUPPORT!</p></li>
+<li><p>Proper CookieJar-backed cookies interface with awesome dict-like interface.</p></li>
+<li><p>Speed fix for non-iterated content chunks.</p></li>
+<li><p>Move <code class="docutils literal notranslate"><span class="pre">pre_request</span></code> to a more usable place.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">pre_send</span></code> hook.</p></li>
+<li><p>Lazily encode data, params, files.</p></li>
+<li><p>Load system Certificate Bundle if <code class="docutils literal notranslate"><span class="pre">certify</span></code> isn't available.</p></li>
+<li><p>Cleanups, fixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id45">
+<h3>0.11.2 (2012-04-22)<a class="headerlink" href="#id45" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Attempt to use the OS's certificate bundle if <code class="docutils literal notranslate"><span class="pre">certifi</span></code> isn't available.</p></li>
+<li><p>Infinite digest auth redirect fix.</p></li>
+<li><p>Multi-part file upload improvements.</p></li>
+<li><p>Fix decoding of invalid %encodings in URLs.</p></li>
+<li><p>If there is no content in a response don't throw an error the second time that content is attempted to be read.</p></li>
+<li><p>Upload data on redirects.</p></li>
+</ul>
+</div>
+<div class="section" id="id46">
+<h3>0.11.1 (2012-03-30)<a class="headerlink" href="#id46" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>POST redirects now break RFC to do what browsers do: Follow up with a GET.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">strict_mode</span></code> configuration to disable new redirect behavior.</p></li>
+</ul>
+</div>
+<div class="section" id="id47">
+<h3>0.11.0 (2012-03-14)<a class="headerlink" href="#id47" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Private SSL Certificate support</p></li>
+<li><p>Remove select.poll from Gevent monkeypatching</p></li>
+<li><p>Remove redundant generator for chunked transfer encoding</p></li>
+<li><p>Fix: Response.ok raises Timeout Exception in safe_mode</p></li>
+</ul>
+</div>
+<div class="section" id="id48">
+<h3>0.10.8 (2012-03-09)<a class="headerlink" href="#id48" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Generate chunked ValueError fix</p></li>
+<li><p>Proxy configuration by environment variables</p></li>
+<li><p>Simplification of iter_lines.</p></li>
+<li><p>New <cite>trust_env</cite> configuration for disabling system/environment hints.</p></li>
+<li><p>Suppress cookie errors.</p></li>
+</ul>
+</div>
+<div class="section" id="id49">
+<h3>0.10.7 (2012-03-07)<a class="headerlink" href="#id49" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p><cite>encode_uri</cite> = False</p></li>
+</ul>
+</div>
+<div class="section" id="id50">
+<h3>0.10.6 (2012-02-25)<a class="headerlink" href="#id50" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Allow '=' in cookies.</p></li>
+</ul>
+</div>
+<div class="section" id="id51">
+<h3>0.10.5 (2012-02-25)<a class="headerlink" href="#id51" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Response body with 0 content-length fix.</p></li>
+<li><p>New async.imap.</p></li>
+<li><p>Don't fail on netrc.</p></li>
+</ul>
+</div>
+<div class="section" id="id52">
+<h3>0.10.4 (2012-02-20)<a class="headerlink" href="#id52" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Honor netrc.</p></li>
+</ul>
+</div>
+<div class="section" id="id53">
+<h3>0.10.3 (2012-02-20)<a class="headerlink" href="#id53" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>HEAD requests don't follow redirects anymore.</p></li>
+<li><p>raise_for_status() doesn't raise for 3xx anymore.</p></li>
+<li><p>Make Session objects picklable.</p></li>
+<li><p>ValueError for invalid schema URLs.</p></li>
+</ul>
+</div>
+<div class="section" id="id54">
+<h3>0.10.2 (2012-01-15)<a class="headerlink" href="#id54" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Vastly improved URL quoting.</p></li>
+<li><p>Additional allowed cookie key values.</p></li>
+<li><p>Attempted fix for &quot;Too many open files&quot; Error</p></li>
+<li><p>Replace unicode errors on first pass, no need for second pass.</p></li>
+<li><p>Append '/' to bare-domain urls before query insertion.</p></li>
+<li><p>Exceptions now inherit from RuntimeError.</p></li>
+<li><p>Binary uploads + auth fix.</p></li>
+<li><p>Bugfixes.</p></li>
+</ul>
+</div>
+<div class="section" id="id55">
+<h3>0.10.1 (2012-01-23)<a class="headerlink" href="#id55" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>PYTHON 3 SUPPORT!</p></li>
+<li><p>Dropped 2.5 Support. (<em>Backwards Incompatible</em>)</p></li>
+</ul>
+</div>
+<div class="section" id="id56">
+<h3>0.10.0 (2012-01-21)<a class="headerlink" href="#id56" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Response.content</span></code> is now bytes-only. (<em>Backwards Incompatible</em>)</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Response.text</span></code> is unicode-only.</p></li>
+<li><p>If no <code class="docutils literal notranslate"><span class="pre">Response.encoding</span></code> is specified and <code class="docutils literal notranslate"><span class="pre">chardet</span></code> is available, <code class="docutils literal notranslate"><span class="pre">Respoonse.text</span></code> will guess an encoding.</p></li>
+<li><p>Default to ISO-8859-1 (Western) encoding for &quot;text&quot; subtypes.</p></li>
+<li><p>Removal of <cite>decode_unicode</cite>. (<em>Backwards Incompatible</em>)</p></li>
+<li><p>New multiple-hooks system.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">Response.register_hook</span></code> for registering hooks within the pipeline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Response.url</span></code> is now Unicode.</p></li>
+</ul>
+</div>
+<div class="section" id="id57">
+<h3>0.9.3 (2012-01-18)<a class="headerlink" href="#id57" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>SSL verify=False bugfix (apparent on windows machines).</p></li>
+</ul>
+</div>
+<div class="section" id="id58">
+<h3>0.9.2 (2012-01-18)<a class="headerlink" href="#id58" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Asynchronous async.send method.</p></li>
+<li><p>Support for proper chunk streams with boundaries.</p></li>
+<li><p>session argument for Session classes.</p></li>
+<li><p>Print entire hook tracebacks, not just exception instance.</p></li>
+<li><p>Fix response.iter_lines from pending next line.</p></li>
+<li><p>Fix but in HTTP-digest auth w/ URI having query strings.</p></li>
+<li><p>Fix in Event Hooks section.</p></li>
+<li><p>Urllib3 update.</p></li>
+</ul>
+</div>
+<div class="section" id="id59">
+<h3>0.9.1 (2012-01-06)<a class="headerlink" href="#id59" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>danger_mode for automatic Response.raise_for_status()</p></li>
+<li><p>Response.iter_lines refactor</p></li>
+</ul>
+</div>
+<div class="section" id="id60">
+<h3>0.9.0 (2011-12-28)<a class="headerlink" href="#id60" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>verify ssl is default.</p></li>
+</ul>
+</div>
+<div class="section" id="id61">
+<h3>0.8.9 (2011-12-28)<a class="headerlink" href="#id61" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Packaging fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id62">
+<h3>0.8.8 (2011-12-28)<a class="headerlink" href="#id62" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>SSL CERT VERIFICATION!</p></li>
+<li><p>Release of Cerifi: Mozilla's cert list.</p></li>
+<li><p>New 'verify' argument for SSL requests.</p></li>
+<li><p>Urllib3 update.</p></li>
+</ul>
+</div>
+<div class="section" id="id63">
+<h3>0.8.7 (2011-12-24)<a class="headerlink" href="#id63" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>iter_lines last-line truncation fix</p></li>
+<li><p>Force safe_mode for async requests</p></li>
+<li><p>Handle safe_mode exceptions more consistently</p></li>
+<li><p>Fix iteration on null responses in safe_mode</p></li>
+</ul>
+</div>
+<div class="section" id="id64">
+<h3>0.8.6 (2011-12-18)<a class="headerlink" href="#id64" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Socket timeout fixes.</p></li>
+<li><p>Proxy Authorization support.</p></li>
+</ul>
+</div>
+<div class="section" id="id65">
+<h3>0.8.5 (2011-12-14)<a class="headerlink" href="#id65" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Response.iter_lines!</p></li>
+</ul>
+</div>
+<div class="section" id="id66">
+<h3>0.8.4 (2011-12-11)<a class="headerlink" href="#id66" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Prefetch bugfix.</p></li>
+<li><p>Added license to installed version.</p></li>
+</ul>
+</div>
+<div class="section" id="id67">
+<h3>0.8.3 (2011-11-27)<a class="headerlink" href="#id67" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Converted auth system to use simpler callable objects.</p></li>
+<li><p>New session parameter to API methods.</p></li>
+<li><p>Display full URL while logging.</p></li>
+</ul>
+</div>
+<div class="section" id="id68">
+<h3>0.8.2 (2011-11-19)<a class="headerlink" href="#id68" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>New Unicode decoding system, based on over-ridable <cite>Response.encoding</cite>.</p></li>
+<li><p>Proper URL slash-quote handling.</p></li>
+<li><p>Cookies with <code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>, and <code class="docutils literal notranslate"><span class="pre">_</span></code> allowed.</p></li>
+</ul>
+</div>
+<div class="section" id="id69">
+<h3>0.8.1 (2011-11-15)<a class="headerlink" href="#id69" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>URL Request path fix</p></li>
+<li><p>Proxy fix.</p></li>
+<li><p>Timeouts fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id70">
+<h3>0.8.0 (2011-11-13)<a class="headerlink" href="#id70" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Keep-alive support!</p></li>
+<li><p>Complete removal of Urllib2</p></li>
+<li><p>Complete removal of Poster</p></li>
+<li><p>Complete removal of CookieJars</p></li>
+<li><p>New ConnectionError raising</p></li>
+<li><p>Safe_mode for error catching</p></li>
+<li><p>prefetch parameter for request methods</p></li>
+<li><p>OPTION method</p></li>
+<li><p>Async pool size throttling</p></li>
+<li><p>File uploads send real names</p></li>
+<li><p>Vendored in urllib3</p></li>
+</ul>
+</div>
+<div class="section" id="id71">
+<h3>0.7.6 (2011-11-07)<a class="headerlink" href="#id71" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Digest authentication bugfix (attach query data to path)</p></li>
+</ul>
+</div>
+<div class="section" id="id72">
+<h3>0.7.5 (2011-11-04)<a class="headerlink" href="#id72" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Response.content = None if there was an invalid repsonse.</p></li>
+<li><p>Redirection auth handling.</p></li>
+</ul>
+</div>
+<div class="section" id="id73">
+<h3>0.7.4 (2011-10-26)<a class="headerlink" href="#id73" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Session Hooks fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id74">
+<h3>0.7.3 (2011-10-23)<a class="headerlink" href="#id74" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Digest Auth fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id75">
+<h3>0.7.2 (2011-10-23)<a class="headerlink" href="#id75" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>PATCH Fix.</p></li>
+</ul>
+</div>
+<div class="section" id="id76">
+<h3>0.7.1 (2011-10-23)<a class="headerlink" href="#id76" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Move away from urllib2 authentication handling.</p></li>
+<li><p>Fully Remove AuthManager, AuthObject, &amp;c.</p></li>
+<li><p>New tuple-based auth system with handler callbacks.</p></li>
+</ul>
+</div>
+<div class="section" id="id77">
+<h3>0.7.0 (2011-10-22)<a class="headerlink" href="#id77" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Sessions are now the primary interface.</p></li>
+<li><p>Deprecated InvalidMethodException.</p></li>
+<li><p>PATCH fix.</p></li>
+<li><p>New config system (no more global settings).</p></li>
+</ul>
+</div>
+<div class="section" id="id78">
+<h3>0.6.6 (2011-10-19)<a class="headerlink" href="#id78" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Session parameter bugfix (params merging).</p></li>
+</ul>
+</div>
+<div class="section" id="id79">
+<h3>0.6.5 (2011-10-18)<a class="headerlink" href="#id79" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Offline (fast) test suite.</p></li>
+<li><p>Session dictionary argument merging.</p></li>
+</ul>
+</div>
+<div class="section" id="id80">
+<h3>0.6.4 (2011-10-13)<a class="headerlink" href="#id80" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Automatic decoding of unicode, based on HTTP Headers.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">decode_unicode</span></code> setting.</p></li>
+<li><p>Removal of <code class="docutils literal notranslate"><span class="pre">r.read/close</span></code> methods.</p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">r.faw</span></code> interface for advanced response usage.*</p></li>
+<li><p>Automatic expansion of parameterized headers.</p></li>
+</ul>
+</div>
+<div class="section" id="id81">
+<h3>0.6.3 (2011-10-13)<a class="headerlink" href="#id81" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Beautiful <code class="docutils literal notranslate"><span class="pre">requests.async</span></code> module, for making async requests w/ gevent.</p></li>
+</ul>
+</div>
+<div class="section" id="id82">
+<h3>0.6.2 (2011-10-09)<a class="headerlink" href="#id82" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>GET/HEAD obeys allow_redirects=False.</p></li>
+</ul>
+</div>
+<div class="section" id="id83">
+<h3>0.6.1 (2011-08-20)<a class="headerlink" href="#id83" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Enhanced status codes experience <code class="docutils literal notranslate"><span class="pre">\o/</span></code></p></li>
+<li><p>Set a maximum number of redirects (<code class="docutils literal notranslate"><span class="pre">settings.max_redirects</span></code>)</p></li>
+<li><p>Full Unicode URL support</p></li>
+<li><p>Support for protocol-less redirects.</p></li>
+<li><p>Allow for arbitrary request types.</p></li>
+<li><p>Bugfixes</p></li>
+</ul>
+</div>
+<div class="section" id="id84">
+<h3>0.6.0 (2011-08-17)<a class="headerlink" href="#id84" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>New callback hook system</p></li>
+<li><p>New persistient sessions object and context manager</p></li>
+<li><p>Transparent Dict-cookie handling</p></li>
+<li><p>Status code reference object</p></li>
+<li><p>Removed Response.cached</p></li>
+<li><p>Added Response.request</p></li>
+<li><p>All args are kwargs</p></li>
+<li><p>Relative redirect support</p></li>
+<li><p>HTTPError handling improvements</p></li>
+<li><p>Improved https testing</p></li>
+<li><p>Bugfixes</p></li>
+</ul>
+</div>
+<div class="section" id="id85">
+<h3>0.5.1 (2011-07-23)<a class="headerlink" href="#id85" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>International Domain Name Support!</p></li>
+<li><p>Access headers without fetching entire body (<code class="docutils literal notranslate"><span class="pre">read()</span></code>)</p></li>
+<li><p>Use lists as dicts for parameters</p></li>
+<li><p>Add Forced Basic Authentication</p></li>
+<li><p>Forced Basic is default authentication type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python-requests.org</span></code> default User-Agent header</p></li>
+<li><p>CaseInsensitiveDict lower-case caching</p></li>
+<li><p>Response.history bugfix</p></li>
+</ul>
+</div>
+<div class="section" id="id86">
+<h3>0.5.0 (2011-06-21)<a class="headerlink" href="#id86" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>PATCH Support</p></li>
+<li><p>Support for Proxies</p></li>
+<li><p>HTTPBin Test Suite</p></li>
+<li><p>Redirect Fixes</p></li>
+<li><p>settings.verbose stream writing</p></li>
+<li><p>Querystrings for all methods</p></li>
+<li><p>URLErrors (Connection Refused, Timeout, Invalid URLs) are treated as explicity raised
+<code class="docutils literal notranslate"><span class="pre">r.requests.get('hwe://blah');</span> <span class="pre">r.raise_for_status()</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id87">
+<h3>0.4.1 (2011-05-22)<a class="headerlink" href="#id87" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Improved Redirection Handling</p></li>
+<li><p>New 'allow_redirects' param for following non-GET/HEAD Redirects</p></li>
+<li><p>Settings module refactoring</p></li>
+</ul>
+</div>
+<div class="section" id="id88">
+<h3>0.4.0 (2011-05-15)<a class="headerlink" href="#id88" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Response.history: list of redirected responses</p></li>
+<li><p>Case-Insensitive Header Dictionaries!</p></li>
+<li><p>Unicode URLs</p></li>
+</ul>
+</div>
+<div class="section" id="id89">
+<h3>0.3.4 (2011-05-14)<a class="headerlink" href="#id89" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Urllib2 HTTPAuthentication Recursion fix (Basic/Digest)</p></li>
+<li><p>Internal Refactor</p></li>
+<li><p>Bytes data upload Bugfix</p></li>
+</ul>
+</div>
+<div class="section" id="id90">
+<h3>0.3.3 (2011-05-12)<a class="headerlink" href="#id90" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Request timeouts</p></li>
+<li><p>Unicode url-encoded data</p></li>
+<li><p>Settings context manager and module</p></li>
+</ul>
+</div>
+<div class="section" id="id91">
+<h3>0.3.2 (2011-04-15)<a class="headerlink" href="#id91" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Automatic Decompression of GZip Encoded Content</p></li>
+<li><p>AutoAuth Support for Tupled HTTP Auth</p></li>
+</ul>
+</div>
+<div class="section" id="id92">
+<h3>0.3.1 (2011-04-01)<a class="headerlink" href="#id92" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Cookie Changes</p></li>
+<li><p>Response.read()</p></li>
+<li><p>Poster fix</p></li>
+</ul>
+</div>
+<div class="section" id="id93">
+<h3>0.3.0 (2011-02-25)<a class="headerlink" href="#id93" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Automatic Authentication API Change</p></li>
+<li><p>Smarter Query URL Parameterization</p></li>
+<li><p>Allow file uploads and POST data together</p></li>
+<li><dl class="simple">
+<dt>New Authentication Manager System</dt><dd><ul>
+<li><p>Simpler Basic HTTP System</p></li>
+<li><p>Supports all build-in urllib2 Auths</p></li>
+<li><p>Allows for custom Auth Handlers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id94">
+<h3>0.2.4 (2011-02-19)<a class="headerlink" href="#id94" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Python 2.5 Support</p></li>
+<li><p>PyPy-c v1.4 Support</p></li>
+<li><p>Auto-Authentication tests</p></li>
+<li><p>Improved Request object constructor</p></li>
+</ul>
+</div>
+<div class="section" id="id95">
+<h3>0.2.3 (2011-02-15)<a class="headerlink" href="#id95" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>New HTTPHandling Methods</dt><dd><ul>
+<li><p>Response.__nonzero__ (false if bad HTTP Status)</p></li>
+<li><p>Response.ok (True if expected HTTP Status)</p></li>
+<li><p>Response.error (Logged HTTPError if bad HTTP Status)</p></li>
+<li><p>Response.raise_for_status() (Raises stored HTTPError)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id96">
+<h3>0.2.2 (2011-02-14)<a class="headerlink" href="#id96" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Still handles request in the event of an HTTPError. (Issue #2)</p></li>
+<li><p>Eventlet and Gevent Monkeypatch support.</p></li>
+<li><p>Cookie Support (Issue #1)</p></li>
+</ul>
+</div>
+<div class="section" id="id97">
+<h3>0.2.1 (2011-02-14)<a class="headerlink" href="#id97" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Added file attribute to POST and PUT requests for multipart-encode file uploads.</p></li>
+<li><p>Added Request.url attribute for context and redirects</p></li>
+</ul>
+</div>
+<div class="section" id="id98">
+<h3>0.2.0 (2011-02-14)<a class="headerlink" href="#id98" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Birth!</p></li>
+</ul>
+</div>
+<div class="section" id="id99">
+<h3>0.0.1 (2011-02-13)<a class="headerlink" href="#id99" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Frustration</p></li>
+<li><p>Conception</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

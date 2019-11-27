@@ -1,0 +1,5 @@
+manager AssetViewer
+---------------------------------------------------------------------------
+
+.. literalinclude:: AssetViewer.cs
+

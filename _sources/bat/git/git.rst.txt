@@ -1,6 +1,10 @@
 git
 =============================
 
+cd change directory
+
+
+
 .. toctree::
    :maxdepth: 1
    :glob:

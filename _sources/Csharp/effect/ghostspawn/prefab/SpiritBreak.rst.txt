@@ -1,0 +1,5 @@
+prefab SpiritBreak
+---------------------------------------------------------------------------
+
+.. literalinclude:: SpiritBreak.prefab
+

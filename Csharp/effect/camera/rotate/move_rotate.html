@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>rotate move_rotate &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../../index.html"/>
+        <link rel="up" title="Camera" href="../camera.html"/>
+        <link rel="next" title="effect BreakableSurface" href="../../destruction/BreakableSurface.html"/>
+        <link rel="prev" title="Camera" href="../camera.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../AssetBundle/AssetBundle.html">Asset Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../effect.html">effect</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Blood/Blood.html">Blood</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction.html">effect LinePrediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beam/LinePrediction2.html">effect LinePrediction2</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../camera.html">Camera</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">rotate move_rotate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../destruction/BreakableSurface.html">effect BreakableSurface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../effcttools/effecttools.html">effcttools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ghostspawn/ghostspawn.html">ghost spawn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../light/light.html">Light</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lightnning/lightnning.html">Lightning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../manager/manager.html">manager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particle/particle.html">particle control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mindmap/_mindmap.html">mindmap png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../../effect.html">effect</a> &raquo;</li>
+      
+        <li><a href="../camera.html">Camera</a> &raquo;</li>
+      
+    <li>rotate move_rotate</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/effect/camera/rotate/move_rotate.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rotate-move-rotate">
+<h1>rotate move_rotate<a class="headerlink" href="#rotate-move-rotate" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>using UnityEngine;
+using System.Collections;
+
+public class CameraRotate : MonoBehaviour
+{
+    public Transform targetObject;
+    public Vector3 targetOffset;
+    public float averageDistance = 5.0f;
+    public float maxDistance = 20;
+    public float minDistance = .6f;
+    public float xSpeed = 200.0f;
+    public float ySpeed = 200.0f;
+    public int yMinLimit = -80;
+    public int yMaxLimit = 80;
+    public int zoomSpeed = 40;
+    public float panSpeed = 0.3f;
+    public float zoomDampening = 5.0f;
+	public float rotateOnOff = 1;
+
+    private float xDeg = 0.0f;
+    private float yDeg = 0.0f;
+    private float currentDistance;
+    private float desiredDistance;
+    private Quaternion currentRotation;
+    private Quaternion desiredRotation;
+    private Quaternion rotation;
+    private Vector3 position;
+	private float idleTimer = 0.0f;
+	private float idleSmooth = 0.0f;
+
+    void Start() { Init(); }
+    void OnEnable() { Init(); }
+
+    public void Init()
+    {
+		if (!targetObject)
+        {
+            GameObject go = new GameObject(&quot;Cam Target&quot;);
+			go.transform.position = transform.position + (transform.forward * averageDistance);
+			targetObject = go.transform;
+        }
+
+		currentDistance = averageDistance;
+		desiredDistance = averageDistance;
+
+        position = transform.position;
+        rotation = transform.rotation;
+        currentRotation = transform.rotation;
+        desiredRotation = transform.rotation;
+
+        xDeg = Vector3.Angle(Vector3.right, transform.right );
+        yDeg = Vector3.Angle(Vector3.up, transform.up );
+		position = targetObject.position - (rotation * Vector3.forward * currentDistance + targetOffset);
+    }
+
+    void LateUpdate()
+    {
+        if (Input.GetMouseButton(2) &amp;&amp; Input.GetKey(KeyCode.LeftAlt) &amp;&amp; Input.GetKey(KeyCode.LeftControl))
+        {
+			desiredDistance -= Input.GetAxis(&quot;Mouse Y&quot;) * 0.02f  * zoomSpeed*0.125f * Mathf.Abs(desiredDistance);
+        }
+        else if (Input.GetMouseButton(0) )
+        {
+            xDeg += Input.GetAxis(&quot;Mouse X&quot;) * xSpeed * 0.02f;
+            yDeg -= Input.GetAxis(&quot;Mouse Y&quot;) * ySpeed * 0.02f;
+            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
+
+            desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
+            currentRotation = transform.rotation;
+           	rotation = Quaternion.Lerp(currentRotation, desiredRotation, 0.02f  * zoomDampening);
+        	transform.rotation = rotation;
+			idleTimer=0;
+            idleSmooth=0;
+
+		}else{
+			idleTimer+=0.02f ;
+			if(idleTimer &gt; rotateOnOff &amp;&amp; rotateOnOff &gt; 0){
+				idleSmooth+=(0.02f +idleSmooth)*0.005f;
+				idleSmooth = Mathf.Clamp(idleSmooth, 0, 1);
+				xDeg += xSpeed * 0.001f * idleSmooth;
+			}
+
+            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
+            desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
+            currentRotation = transform.rotation;
+           	rotation = Quaternion.Lerp(currentRotation, desiredRotation, 0.02f  * zoomDampening*2);
+        	transform.rotation = rotation;
+		}
+
+		desiredDistance -= Input.GetAxis(&quot;Mouse ScrollWheel&quot;) * 0.02f  * zoomSpeed * Mathf.Abs(desiredDistance);
+        desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
+        currentDistance = Mathf.Lerp(currentDistance, desiredDistance, 0.02f  * zoomDampening);
+		position = targetObject.position - (rotation * Vector3.forward * currentDistance + targetOffset);
+        transform.position = position;
+    }
+
+    private static float ClampAngle(float angle, float min, float max)
+    {
+        if (angle &lt; -360)
+            angle += 360;
+        if (angle &gt; 360)
+            angle -= 360;
+        return Mathf.Clamp(angle, min, max);
+    }
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../destruction/BreakableSurface.html" class="btn btn-neutral float-right" title="effect BreakableSurface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../camera.html" class="btn btn-neutral" title="Camera" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+Lightning Child1
+=============================
+
+TrailRender
+
+EFX_Randommove
+---------------------
+
+LTGrandommove y移動
+______________________
+
+-50 0 -50
+50 100 50
+
+velocity random ____ off
+
+zigzax ___ off
+
+.. literalinclude:: EFX_Randommove.cs
+
+
+EFX_Spawner
+----------------------
+
+枝分かれ用
+
+.. literalinclude:: EFX_Spawner.cs
+
+
+prefab thunderline_light_child.prefab
+-------------------------------------------
+
+EFX_Randommove.cs
+
+
+TrailRender
+
+EFX_Randommove
+---------------------
+
+LTGrandommove y移動
+______________________
+
+-50 -50 -50
+50 50 50
+
+velocity random ____ off
+
+zigzax ___ on
+
+.. literalinclude:: EFX_Randommove.cs
+
+
+EFX_Spawner
+----------------------
+
+枝分かれ用
+
+.. literalinclude:: EFX_Spawner.cs
+
+
+EFX_Randommove.cs
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

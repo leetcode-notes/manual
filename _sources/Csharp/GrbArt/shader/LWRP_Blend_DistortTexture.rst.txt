@@ -1,0 +1,5 @@
+shader LWRP_Blend_DistortTexture
+---------------------------------------------------------------------------
+
+.. literalinclude:: LWRP_Blend_DistortTexture.shader
+

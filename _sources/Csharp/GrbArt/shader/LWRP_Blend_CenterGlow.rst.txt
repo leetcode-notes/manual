@@ -1,0 +1,5 @@
+shader LWRP_Blend_CenterGlow
+---------------------------------------------------------------------------
+
+.. literalinclude:: LWRP_Blend_CenterGlow.shader
+

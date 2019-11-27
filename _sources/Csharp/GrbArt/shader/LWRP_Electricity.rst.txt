@@ -1,0 +1,5 @@
+shader LWRP_Electricity
+---------------------------------------------------------------------------
+
+.. literalinclude:: LWRP_Electricity.shader
+
