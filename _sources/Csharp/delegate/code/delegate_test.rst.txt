@@ -1,0 +1,5 @@
+code delegate_test
+---------------------------------------------------------------------------
+
+.. literalinclude:: delegate_test.cs
+

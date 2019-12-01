@@ -1,45 +1,73 @@
-mindmap png
-=============================
+manual mindmap
+================================================================================
 
-mindmapを使用した系統整理
-
-mindmap .algo
+manual mindmap .algo
 ---------------------------------------------------------------------------
 
-.. figure:: .algo.png
+.. figure:: .algo.png
 
-mindmap .C#
+manual mindmap .charactor
 ---------------------------------------------------------------------------
 
-.. figure:: .Csharp.png
+.. figure:: .charactor.png
 
-mindmap shader
+manual mindmap .com
 ---------------------------------------------------------------------------
 
-.. figure:: .shader.png
+.. figure:: .com.png
 
-mindmap .everyday
+manual mindmap .Csharp
 ---------------------------------------------------------------------------
 
-.. figure:: .everyday.png
+.. figure:: .Csharp.png
 
-mindmap .kaggle
+manual mindmap .editor
 ---------------------------------------------------------------------------
 
-.. figure:: .kaggle.png
+.. figure:: .editor.png
 
-mindmap .machine
+manual mindmap .effect
 ---------------------------------------------------------------------------
 
-.. figure:: .machine.png
+.. figure:: .effect.png
 
-mindmap .maya
+manual mindmap .everyday
 ---------------------------------------------------------------------------
 
-.. figure:: .maya.png
+.. figure:: .everyday.png
 
-mindmap .study
+manual mindmap .game
 ---------------------------------------------------------------------------
 
-.. figure:: .study.png
+.. figure:: .game.png
+
+manual mindmap .maya
+---------------------------------------------------------------------------
+
+.. figure:: .maya.png
+
+manual mindmap .movie
+---------------------------------------------------------------------------
+
+.. figure:: .movie.png
+
+manual mindmap .render
+---------------------------------------------------------------------------
+
+.. figure:: .render.png
+
+manual mindmap .shader
+---------------------------------------------------------------------------
+
+.. figure:: .shader.png
+
+manual mindmap .study
+---------------------------------------------------------------------------
+
+.. figure:: .study.png
+
+manual mindmap .twitter
+---------------------------------------------------------------------------
+
+.. figure:: .twitter.png
 

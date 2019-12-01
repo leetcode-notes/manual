@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code delegate_test &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="delegate" href="../delegate.html"/>
+        <link rel="next" title="editor 拡張" href="../../editor/editor.html"/>
+        <link rel="prev" title="delegate" href="../delegate.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Asset/Asset.html">Asset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decal/decal.html">decal</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../delegate.html">delegate</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code delegate_test</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor/editor.html">editor 拡張</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../effect/effect.html">effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git/git.html">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../player/player.html">player script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../delegate.html">delegate</a> &raquo;</li>
+      
+    <li>code delegate_test</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/delegate/code/delegate_test.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-delegate-test">
+<h1>code delegate_test<a class="headerlink" href="#code-delegate-test" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">UnityEngine</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">Learn6_1</span> <span class="p">:</span> <span class="n">MonoBehaviour</span> <span class="p">{</span>
+
+	<span class="o">//</span>　<span class="n">デリゲートを宣言</span>
+	<span class="n">public</span> <span class="n">delegate</span> <span class="nb">bool</span> <span class="n">DelegateMethod</span><span class="p">(</span><span class="nb">float</span> <span class="n">floatValue</span><span class="p">);</span>
+	<span class="o">//</span>　<span class="n">合計値を入れるフィールド</span>
+	<span class="n">private</span> <span class="nb">float</span> <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="o">//</span> <span class="n">Use</span> <span class="n">this</span> <span class="k">for</span> <span class="n">initialization</span>
+	<span class="n">void</span> <span class="n">Start</span> <span class="p">()</span> <span class="p">{</span>
+		<span class="o">//</span>　<span class="n">float型の配列宣言</span>
+		<span class="nb">float</span><span class="p">[]</span> <span class="n">floatValues</span> <span class="o">=</span> <span class="n">new</span> <span class="nb">float</span><span class="p">[]{</span> <span class="mf">1.5</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.5</span><span class="n">f</span><span class="p">,</span> <span class="mf">4.5</span><span class="n">f</span> <span class="p">};</span>
+		<span class="o">//</span>　<span class="n">DelegateMethod型の変数宣言と初期化</span>
+		<span class="n">DelegateMethod</span> <span class="n">delegateMethod1</span> <span class="o">=</span> <span class="n">Check1</span><span class="p">;</span>
+		<span class="n">DelegateMethod</span> <span class="n">delegateMethod2</span> <span class="o">=</span> <span class="n">Check2</span><span class="p">;</span>
+
+		<span class="o">//</span>　<span class="n">配列数分繰り返して該当する数値を数える</span>
+		<span class="n">foreach</span> <span class="p">(</span><span class="n">var</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">floatValues</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">Count</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">delegateMethod1</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">Debug</span><span class="o">.</span><span class="n">Log</span> <span class="p">(</span><span class="s2">&quot;正の値の合計値は &quot;</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">);</span>
+
+		<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="o">//</span>　<span class="n">配列数分繰り返して該当する数値を数える</span>
+		<span class="n">foreach</span> <span class="p">(</span><span class="n">var</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">floatValues</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">Count</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">delegateMethod2</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">Debug</span><span class="o">.</span><span class="n">Log</span> <span class="p">(</span><span class="s2">&quot;負の値の合計値は &quot;</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">);</span>
+
+	<span class="p">}</span>
+	<span class="o">//</span>　<span class="n">該当する数値だけを足すCountメソッド</span>
+	<span class="n">void</span> <span class="n">Count</span><span class="p">(</span><span class="nb">float</span> <span class="n">floatValue</span><span class="p">,</span> <span class="n">DelegateMethod</span> <span class="n">delegateMethod</span><span class="p">)</span> <span class="p">{</span>
+
+		<span class="k">if</span> <span class="p">(</span><span class="n">delegateMethod</span><span class="p">(</span><span class="n">floatValue</span><span class="p">))</span> <span class="p">{</span>
+			<span class="nb">sum</span> <span class="o">+=</span> <span class="n">floatValue</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="o">//</span>　<span class="n">数値が0より上の数値かどうか</span>
+	<span class="nb">bool</span> <span class="n">Check1</span><span class="p">(</span><span class="nb">float</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="o">//</span>　<span class="n">数値が0より下の数値かどうか</span>
+	<span class="nb">bool</span> <span class="n">Check2</span><span class="p">(</span><span class="nb">float</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="n">f</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../editor/editor.html" class="btn btn-neutral float-right" title="editor 拡張" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../delegate.html" class="btn btn-neutral" title="delegate" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+collsion
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+
+敵キャラの鼻先に判定をつけたら崖から落ちなくなったよの巻　サイドビューアクションゲームの作り方編
+
+http://simanezumi1989.hatenablog.com/entry/2019/07/10/080000
+
+.. code-block::
+
+    bool IsGround()
+    {
+        Vector3 startVec = transform.position + transform.right * 0.5f* transform.localScale.x;
+        Vector3 endVec = startVec - transform.up * 0.5f;
+        Debug.DrawLine(startVec, endVec);
+        return Physics2D.Linecast(startVec, endVec, blockLayer);
+    }

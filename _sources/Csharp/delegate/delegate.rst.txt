@@ -1,0 +1,13 @@
+delegate
+=============================
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*
+
+C#でデリゲートとラムダ式を使ってみる
+
+https://gametukurikata.com/csharp/delegateramda
+
