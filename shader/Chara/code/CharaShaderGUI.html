@@ -1,0 +1,1171 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code CharaShaderGUI &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="Chara Shader" href="../CharaShader.html"/>
+        <link rel="next" title="code CharaShaderOutLine" href="CharaShaderOutLine.html"/>
+        <link rel="prev" title="code CharaShaderEyebrows" href="CharaShaderEyebrows.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../CharaShader.html">Chara Shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chara.html">code Chara</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShader.html">code CharaShader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderEyebrows.html">code CharaShaderEyebrows</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code CharaShaderGUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderOutLine.html">code CharaShaderOutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderOutLineShadow.html">code CharaShaderOutLineShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderShadow.html">code CharaShaderShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol.html">code CharaShaderVcol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EyeAnm.html">code EyeAnm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OutLine.html">code OutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol.html">codeURP CharaShaderVcol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_MKG.html">codeURP CharaShaderVcol_MKG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencil_line_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencil_line_trans_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_trans_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilmask.html">codeURP CharaShaderVcol_comp_stencilmask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilmask_2_col2.html">codeURP CharaShaderVcol_comp_stencilmask_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilout_line_2_col2.html">codeURP CharaShaderVcol_comp_stencilout_line_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/Outline_MKGLight.html">codeURP Outline_MKGLight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../URP/URP.html">URP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grass/grass.html">grass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../manner/manner.html">manner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shadergraph shaderforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/unity.html">unity shader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../CharaShader.html">Chara Shader</a> &raquo;</li>
+      
+    <li>code CharaShaderGUI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/Chara/code/CharaShaderGUI.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-charashadergui">
+<h1>code CharaShaderGUI<a class="headerlink" href="#code-charashadergui" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#if UNITY_EDITOR
+using System;
+using UnityEngine;
+using UnityEditor;
+using System.Collections.Generic;
+
+public class CharaShaderGUI : ShaderGUI
+{
+    public enum CullMode
+    {
+        Off,
+        Front,
+        Back
+    }
+
+    public enum ZTestMode
+    {
+        Disabled,
+        Never,
+        Less,
+        Equal,
+        LessEqual,
+        Greater,
+        NotEqual,
+        GreaterEqual,
+        Always
+    }
+
+    public enum BlendMode
+    {
+        Opaque,
+        Cutout,
+        Fade,
+        Transparent,
+        Additive,
+        Subtractive,
+        Modulate,
+        Overlay,
+        AdditiveOverlay
+    }
+
+    public enum CharaMode
+    {
+        Ch,
+        Chara,
+        CharaShader,
+        CharaOutLine,
+        CharaShadow,
+        CharaOutLineShadow,
+        Eyebrows,
+        Eye
+    }
+
+    public enum AnimeLineArithmetic
+    {
+        Addition,
+        Subtraction,
+    }
+
+    private static class Styles
+    {
+        public static readonly string[] charaModeNames = new string[]
+        {
+            null,
+            &quot;Chara&quot;,
+            null,
+            &quot;Chara + OutLine&quot;,
+            null,
+            null,
+            &quot;Eyebrows&quot;,
+            &quot;Eye&quot;
+        };
+
+        public static readonly string[] cullNames = Enum.GetNames(typeof(CullMode));
+
+        public static readonly string[] zTestNames = Enum.GetNames(typeof(ZTestMode));
+
+        public static readonly string[] blendNames = Enum.GetNames(typeof(BlendMode));
+    }
+
+    private static MaterialProperty cullMode = null;
+    private static MaterialProperty zTestMode = null;
+    private static MaterialProperty zWrite = null;
+    private static MaterialProperty blendMode = null;
+
+    private static MaterialProperty stencilRef = null;
+
+    private static MaterialProperty is_Shadow = null;
+
+    private static MaterialProperty useCutout = null;
+    private static MaterialProperty alphaCutout = null;
+
+    private static MaterialProperty charaMode = null;
+
+    private static MaterialProperty maintex = null;
+
+    private static MaterialProperty is_parallaxmap = null;
+
+    private static MaterialProperty is_parallaxmap_back = null;
+    private static MaterialProperty parallaxtex_back = null;
+    private static MaterialProperty parallaxmasktex_back = null;
+    private static MaterialProperty parallaxnormalmap_back = null;
+    private static MaterialProperty parallaxheightmap_back = null;
+    private static MaterialProperty heightadjustment_back = null;
+    private static MaterialProperty pseudolight_back = null;
+
+    private static MaterialProperty is_parallaxmap_front = null;
+    private static MaterialProperty parallaxtex_front = null;
+    private static MaterialProperty parallaxmasktex_front = null;
+    private static MaterialProperty parallaxnormalmap_front = null;
+    private static MaterialProperty parallaxheightmap_front = null;
+    private static MaterialProperty heightadjustment_front = null;
+    private static MaterialProperty pseudolight_front = null;
+
+    private static MaterialProperty is_gradation = null;
+    private static MaterialProperty gradationtex = null;
+    private static MaterialProperty gradationpower = null;
+    private static MaterialProperty subtractioncolor = null;
+
+    private static MaterialProperty is_rimlight = null;
+    private static MaterialProperty rimmasktex = null;
+
+    private static MaterialProperty is_lightcolor = null;
+    private static MaterialProperty rimcolor = null;
+    private static MaterialProperty rimwidth = null;
+    private static MaterialProperty rimpower = null;
+    private static MaterialProperty rimrearadjustment = null;
+    private static MaterialProperty is_rimbias = null;
+    private static MaterialProperty rimbias = null;
+
+    private static MaterialProperty is_angelring = null;
+    private static MaterialProperty angelring_Sampler = null;
+    private static MaterialProperty angelringColor = null;
+    private static MaterialProperty angelringPower = null;
+    private static MaterialProperty angelringAdjustment = null;
+    private static MaterialProperty angelringOffsetX = null;
+    private static MaterialProperty angelringOffsetY = null;
+    private static MaterialProperty angelringMoveSpeed = null;
+    private static MaterialProperty angelringUpperLimit = null;
+    private static MaterialProperty angelringLowerLimit = null;
+
+    private static MaterialProperty is_SpecularMask = null;
+    private static MaterialProperty specularMaskTex = null;
+    private static MaterialProperty specularColor = null;
+    private static MaterialProperty specularRoughness = null;
+    private static MaterialProperty fresnelReflectance = null;
+
+    private static MaterialProperty outlineMaskTex = null;
+    private static MaterialProperty outlineMainColor = null;
+    private static MaterialProperty outlineColor = null;
+    private static MaterialProperty outline = null;
+    private static MaterialProperty outlineMax = null;
+    private static MaterialProperty outlineZWrite = null;
+    //瞳ウルウルシェーダープロパティ記述
+    private static MaterialProperty flat = null;
+    private static MaterialProperty scale = null;
+
+    //頂点シェーダープロパティ記述
+    private static MaterialProperty is_VertexColorMulti = null;
+    private static MaterialProperty vcolPower = null;
+
+    private MaterialEditor materialEditor;
+    private MaterialProperty[] materialProperties;
+
+    private bool isFirstTimeApply = true;
+    //シェーダータイプの判定、各種条件にあったシェーダーを引っ張ってくる。
+
+    private static Shader Chara = Shader.Find(&quot;RS_Shader/Chara&quot;);
+    private static Shader CharaShader = Shader.Find(&quot;Hidden/CharaShaderVcol&quot;);
+    private static Shader CharaShaderOutLine = Shader.Find(&quot;Hidden/CharaShaderOutLine&quot;);
+    private static Shader CharaShaderShadow = Shader.Find(&quot;Hidden/CharaShaderShadow&quot;);
+    private static Shader CharaShaderOutLineShadow = Shader.Find(&quot;Hidden/CharaShaderOutLineShadow&quot;);
+    private static Shader CharaShaderEyebrows = Shader.Find(&quot;Hidden/CharaShaderEyebrows&quot;);
+    private static Shader CharaShaderEye = Shader.Find(&quot;Hidden/EyeShader&quot;);
+
+    public void FindProperties(MaterialProperty[] props)
+    {
+        cullMode = FindProperty(&quot;_CullMode&quot;, props);
+        zTestMode = FindProperty(&quot;_ZTestMode&quot;, props);
+        zWrite = FindProperty(&quot;_ZWriteParam&quot;, props);
+        blendMode = FindProperty(&quot;_BlendMode&quot;, props);
+
+        stencilRef = FindProperty(&quot;_StencilRef&quot;, props);
+
+        is_Shadow = FindProperty(&quot;_Is_Shadow&quot;, props);
+
+        alphaCutout = FindProperty(&quot;_Cutoff&quot;, props);
+        useCutout = FindProperty(&quot;_UseCutout&quot;, props);
+
+        charaMode = FindProperty(&quot;_Mode&quot;, props);
+
+        maintex = FindProperty(&quot;_MainTex&quot;, props);
+
+        is_parallaxmap = FindProperty(&quot;_Is_ParallaxMap&quot;, props);
+
+        is_parallaxmap_back = FindProperty(&quot;_Is_ParallaxMap_Back&quot;, props);
+        parallaxtex_back = FindProperty(&quot;_ParallaxTex_Back&quot;, props);
+        parallaxmasktex_back = FindProperty(&quot;_ParallaxMaskTex_Back&quot;, props);
+        parallaxnormalmap_back = FindProperty(&quot;_ParallaxNormalMap_Back&quot;, props);
+        parallaxheightmap_back = FindProperty(&quot;_ParallaxHeightMap_Back&quot;, props);
+        heightadjustment_back = FindProperty(&quot;_HeightAdjustment_Back&quot;, props);
+        pseudolight_back = FindProperty(&quot;_PseudoLight_Back&quot;, props);
+
+        is_parallaxmap_front = FindProperty(&quot;_Is_ParallaxMap_Front&quot;, props);
+        parallaxtex_front = FindProperty(&quot;_ParallaxTex_Front&quot;, props);
+        parallaxmasktex_front = FindProperty(&quot;_ParallaxMaskTex_Front&quot;, props);
+        parallaxnormalmap_front = FindProperty(&quot;_ParallaxNormalMap_Front&quot;, props);
+        parallaxheightmap_front = FindProperty(&quot;_ParallaxHeightMap_Front&quot;, props);
+        heightadjustment_front = FindProperty(&quot;_HeightAdjustment_Front&quot;, props);
+        pseudolight_front = FindProperty(&quot;_PseudoLight_Front&quot;, props);
+
+        is_gradation = FindProperty(&quot;_Is_Gradation&quot;, props);
+        gradationtex = FindProperty(&quot;_GradationTex&quot;, props);
+        gradationpower = FindProperty(&quot;_GradationPower&quot;, props);
+        subtractioncolor = FindProperty(&quot;_SubtractionColor&quot;, props);
+
+        is_rimlight = FindProperty(&quot;_Is_RimLight&quot;, props);
+
+        rimmasktex = FindProperty(&quot;_RimMaskTex&quot;, props);
+
+        is_lightcolor = FindProperty(&quot;_Is_LightColor&quot;, props);
+        rimcolor = FindProperty(&quot;_RimColor&quot;, props);
+        rimwidth = FindProperty(&quot;_RimWidth&quot;, props);
+        rimpower = FindProperty(&quot;_RimPower&quot;, props);
+        rimrearadjustment = FindProperty(&quot;_RimRearAdjustment&quot;, props);
+        is_rimbias = FindProperty(&quot;_Is_RimBias&quot;, props);
+        rimbias = FindProperty(&quot;_RimBias&quot;, props);
+
+        is_angelring = FindProperty(&quot;_Is_AngelRing&quot;, props);
+        angelring_Sampler = FindProperty(&quot;_AngelRing_Sampler&quot;, props);
+        angelringColor = FindProperty(&quot;_AngelRingColor&quot;, props);
+        angelringPower = FindProperty(&quot;_AngelRingPower&quot;, props);
+        angelringAdjustment = FindProperty(&quot;_AngelRingAdjustment&quot;, props);
+        angelringOffsetX = FindProperty(&quot;_AngelRingOffsetX&quot;, props);
+        angelringOffsetY = FindProperty(&quot;_AngelRingOffsetY&quot;, props);
+        angelringMoveSpeed = FindProperty(&quot;_AngelRingMoveSpeed&quot;, props);
+        angelringUpperLimit = FindProperty(&quot;_AngelRingUpperLimit&quot;, props);
+        angelringLowerLimit = FindProperty(&quot;_AngelRingLowerLimit&quot;, props);
+
+        is_SpecularMask = FindProperty(&quot;_Is_SpecularMask&quot;, props);
+        specularMaskTex = FindProperty(&quot;_SpecularMaskTex&quot;, props);
+        specularColor = FindProperty(&quot;_SpecularColor&quot;, props);
+        specularRoughness = FindProperty(&quot;_SpecularRoughness&quot;, props);
+        fresnelReflectance = FindProperty(&quot;_FresnelReflectance&quot;, props);
+
+        outlineMaskTex = FindProperty(&quot;_OutlineMaskTex&quot;, props);
+        outlineMainColor = FindProperty(&quot;_OutlineMainColor&quot;, props);
+        outlineColor = FindProperty(&quot;_OutlineColor&quot;, props);
+        outline = FindProperty(&quot;_Outline&quot;, props);
+        outlineMax = FindProperty(&quot;_OutlineMax&quot;, props);
+        outlineZWrite = FindProperty(&quot;_OutlineZWrite&quot;, props);
+
+        //ウルウルパラメーター記述
+        flat = FindProperty(&quot;_Flat&quot;, props);
+        scale = FindProperty(&quot;_Scale&quot;, props);
+        //頂点シェーダーパラメーター記述
+        is_VertexColorMulti = FindProperty(&quot;_Is_VertexColorMulti&quot;, props);
+        vcolPower = FindProperty(&quot;_VcolPower&quot;, props);
+    }
+
+    public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] props)
+    {
+        this.materialEditor = materialEditor;
+        this.materialProperties = props;
+        Material material = this.materialEditor.target as Material;
+
+        FindProperties(this.materialProperties);
+
+        if (this.isFirstTimeApply)
+        {
+            MaterialChanged(material);
+            this.isFirstTimeApply = false;
+        }
+
+        ShaderPropertiesGUI(material);
+    }
+
+    public void ShaderPropertiesGUI(Material material)
+    {
+        EditorGUIUtility.labelWidth = 0f;
+
+        EditorGUI.BeginChangeCheck();
+
+        ModePopup();
+
+        var charaModeValue = (CharaMode)charaMode.floatValue;
+
+        if (charaModeValue == CharaMode.Ch)
+        {
+            SetShaderIfNeeded(material, Chara);
+            return;
+        }
+
+        if (charaModeValue != CharaMode.Eyebrows)
+        {
+            GUILayout.Box(&quot;&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(2.0f) });
+
+            CullModePopup();
+            ZTestModePopup();
+            this.materialEditor.ShaderProperty(zWrite, &quot;ZWrite&quot;);
+            BlendModePopup();
+        }
+
+        //Eyeシェーダーポップアップ
+        if (charaModeValue == CharaMode.Eye)
+        {
+            SetShaderIfNeeded(material, CharaShaderEye);
+
+            this.materialEditor.TextureProperty(maintex, &quot;Texture&quot;);
+
+            this.materialEditor.ShaderProperty(flat, &quot;Noise&quot;);
+
+            this.materialEditor.ShaderProperty(scale, &quot;Amount&quot;);
+            return;
+        }
+
+        GUILayout.Box(&quot;&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(2.0f) });
+
+        var blendModeValue = (BlendMode)blendMode.floatValue;
+
+        if (blendModeValue == BlendMode.Cutout)
+        {
+            this.materialEditor.ShaderProperty(alphaCutout, &quot;CutOutThreshold&quot;, MaterialEditor.kMiniTextureFieldLabelIndentLevel);
+        }
+        else if (blendModeValue == BlendMode.Opaque)
+        {
+            material.SetFloat(&quot;_Cutoff&quot;, 0.0f);
+        }
+        else
+        {
+            material.SetFloat(&quot;_Cutoff&quot;, 0.5f);
+        }
+
+        GUILayout.Box(&quot;&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(2.0f) });
+
+        if (charaModeValue == CharaMode.Chara)
+        {
+            this.materialEditor.ShaderProperty(stencilRef, &quot;StencilRef&quot;);
+            this.materialEditor.ShaderProperty(is_Shadow, &quot;Is_Shadow&quot;);
+
+            if (is_Shadow.floatValue &gt; 0)
+            {
+                SetShaderIfNeeded(material, CharaShaderShadow);
+            }
+            else
+            {
+                SetShaderIfNeeded(material, CharaShader);
+            }
+
+            this.materialEditor.TextureProperty(maintex, &quot;Main&quot;);
+
+            //パララックスマップ-------------------
+            GUILayout.Box(&quot;ParallaxMap&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_parallaxmap, &quot;Is_ParallaxMap&quot;);
+
+            if (material.GetFloat(&quot;_Is_ParallaxMap&quot;) == 1)
+            {
+                this.materialEditor.ShaderProperty(is_parallaxmap_back, &quot;Is_ParallaxMap_Back&quot;, 1);
+
+                if (material.GetFloat(&quot;_Is_ParallaxMap_Back&quot;) == 1)
+                {
+                    this.materialEditor.TextureProperty(parallaxtex_back, &quot;ParallaxTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxmasktex_back, &quot;ParallaxMaskTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxnormalmap_back, &quot;ParallaxNormalMap&quot;);
+                    this.materialEditor.TextureProperty(parallaxheightmap_back, &quot;ParallaxHeightMap&quot;);
+                    this.materialEditor.ShaderProperty(heightadjustment_back, &quot;HeightAdjustment&quot;);
+                    this.materialEditor.ShaderProperty(pseudolight_back, &quot;PseudoLight&quot;);
+                }
+
+                this.materialEditor.ShaderProperty(is_parallaxmap_front, &quot;Is_ParallaxMap_Front&quot;, 1);
+
+                if (material.GetFloat(&quot;_Is_ParallaxMap_Front&quot;) == 1)
+                {
+                    this.materialEditor.TextureProperty(parallaxtex_front, &quot;ParallaxTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxmasktex_front, &quot;ParallaxMaskTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxnormalmap_front, &quot;ParallaxNormalMap&quot;);
+                    this.materialEditor.TextureProperty(parallaxheightmap_front, &quot;ParallaxHeightMap&quot;);
+                    this.materialEditor.ShaderProperty(heightadjustment_front, &quot;HeightAdjustment&quot;);
+                    this.materialEditor.ShaderProperty(pseudolight_front, &quot;PseudoLight&quot;);
+                }
+            }
+
+            //グラデーション-------------------
+            GUILayout.Box(&quot;Gradation&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_gradation, &quot;Is_Gradation&quot;);
+
+            if (material.GetFloat(&quot;_Is_Gradation&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(gradationtex, &quot;Gradation&quot;);
+                this.materialEditor.ShaderProperty(gradationpower, &quot;GradationPower&quot;);
+                this.materialEditor.ColorProperty(subtractioncolor, &quot;SubtractionColor&quot;);
+            }
+
+            //リムライト-----------------------
+            GUILayout.Box(&quot;RimLight&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_rimlight, &quot;Is_RimLight&quot;);
+
+            if (material.GetFloat(&quot;_Is_RimLight&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(rimmasktex, &quot;RimMaskTex&quot;);
+                this.materialEditor.ShaderProperty(is_lightcolor, &quot;Is_LightColor&quot;);
+
+                if (material.GetFloat(&quot;_Is_LightColor&quot;) == 0)
+                {
+                    this.materialEditor.ColorProperty(rimcolor, &quot;RimColor&quot;);
+                }
+
+                this.materialEditor.ShaderProperty(rimwidth, &quot;RimWidth&quot;);
+                this.materialEditor.ShaderProperty(rimpower, &quot;RimPower&quot;);
+                this.materialEditor.ShaderProperty(rimrearadjustment, &quot;RimRearAdjustment&quot;);
+                this.materialEditor.ShaderProperty(is_rimbias, &quot;Is_RimBias&quot;);
+
+                if (material.GetFloat(&quot;_Is_RimBias&quot;) == 1)
+                {
+                    this.materialEditor.ShaderProperty(rimbias, &quot;RimBias&quot;);
+                }
+            }
+
+            //天使の輪-------------------------
+            GUILayout.Box(&quot;AngelRing&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_angelring, &quot;Is_AngelRing&quot;);
+
+            if (material.GetFloat(&quot;_Is_AngelRing&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(angelring_Sampler, &quot;AngelRing_Sampler&quot;);
+                this.materialEditor.ColorProperty(angelringColor, &quot;AngelRingColor&quot;);
+                this.materialEditor.ShaderProperty(angelringPower, &quot;AngelRingPower&quot;);
+                this.materialEditor.ShaderProperty(angelringAdjustment, &quot;AngelRingAdjustment&quot;);
+                this.materialEditor.ShaderProperty(angelringOffsetX, &quot;AngelRingOffsetX&quot;);
+                this.materialEditor.ShaderProperty(angelringOffsetY, &quot;AngelRingOffsetY&quot;);
+                this.materialEditor.ShaderProperty(angelringMoveSpeed, &quot;AngelRingMoveSpeed&quot;);
+                this.materialEditor.ShaderProperty(angelringUpperLimit, &quot;AngelRingUpperLimit&quot;);
+                this.materialEditor.ShaderProperty(angelringLowerLimit, &quot;AngelRingLowerLimit&quot;);
+            }
+
+            //スペキュラーマスク-------------------
+            GUILayout.Box(&quot;SpecularMask&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_SpecularMask, &quot;Is_SpecularMask&quot;);
+
+            if (material.GetFloat(&quot;_Is_SpecularMask&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(specularMaskTex, &quot;SpecularMaskTex&quot;);
+                this.materialEditor.ColorProperty(specularColor, &quot;SpecularColor&quot;);
+                this.materialEditor.ShaderProperty(specularRoughness, &quot;SpecularRoughness&quot;);
+                this.materialEditor.ShaderProperty(fresnelReflectance, &quot;FresnelReflectance&quot;);
+            }
+
+            //頂点シェーダー-------------------
+            GUILayout.Box(&quot;VertexColor&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_VertexColorMulti, &quot;Is_VertexColorMulti&quot;);
+
+            if (material.GetFloat(&quot;_Is_VertexColorMulti&quot;) == 1)
+            {
+                this.materialEditor.ShaderProperty(vcolPower, &quot;VcolPower&quot;);
+            }
+        }
+        else if (charaModeValue == CharaMode.CharaOutLine)
+        {
+            this.materialEditor.ShaderProperty(stencilRef, &quot;StencilRef&quot;);
+            this.materialEditor.ShaderProperty(is_Shadow, &quot;Is_Shadow&quot;);
+
+            if (is_Shadow.floatValue &gt; 0)
+            {
+                SetShaderIfNeeded(material, CharaShaderOutLineShadow);
+            }
+            else
+            {
+                SetShaderIfNeeded(material, CharaShaderOutLine);
+            }
+
+            this.materialEditor.TextureProperty(maintex, &quot;Main&quot;);
+
+            //パララックスマップ-------------------
+            GUILayout.Box(&quot;ParallaxMap&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_parallaxmap, &quot;Is_ParallaxMap&quot;);
+
+            if (material.GetFloat(&quot;_Is_ParallaxMap&quot;) == 1)
+            {
+                this.materialEditor.ShaderProperty(is_parallaxmap_back, &quot;Is_ParallaxMap_Back&quot;, 1);
+
+                if (material.GetFloat(&quot;_Is_ParallaxMap_Back&quot;) == 1)
+                {
+                    this.materialEditor.TextureProperty(parallaxtex_back, &quot;ParallaxTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxmasktex_back, &quot;ParallaxMaskTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxnormalmap_back, &quot;ParallaxNormalMap&quot;);
+                    this.materialEditor.TextureProperty(parallaxheightmap_back, &quot;ParallaxHeightMap&quot;);
+                    this.materialEditor.ShaderProperty(heightadjustment_back, &quot;HeightAdjustment&quot;);
+                    this.materialEditor.ShaderProperty(pseudolight_back, &quot;PseudoLight&quot;);
+                }
+
+                this.materialEditor.ShaderProperty(is_parallaxmap_front, &quot;Is_ParallaxMap_Front&quot;, 1);
+
+                if (material.GetFloat(&quot;_Is_ParallaxMap_Front&quot;) == 1)
+                {
+                    this.materialEditor.TextureProperty(parallaxtex_front, &quot;ParallaxTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxmasktex_front, &quot;ParallaxMaskTex&quot;);
+                    this.materialEditor.TextureProperty(parallaxnormalmap_front, &quot;ParallaxNormalMap&quot;);
+                    this.materialEditor.TextureProperty(parallaxheightmap_front, &quot;ParallaxHeightMap&quot;);
+                    this.materialEditor.ShaderProperty(heightadjustment_front, &quot;HeightAdjustment&quot;);
+                    this.materialEditor.ShaderProperty(pseudolight_front, &quot;PseudoLight&quot;);
+                }
+            }
+
+            //グラデーション-------------------
+            GUILayout.Box(&quot;Gradation&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_gradation, &quot;Is_Gradation&quot;);
+
+            if (material.GetFloat(&quot;_Is_Gradation&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(gradationtex, &quot;Gradation&quot;);
+                this.materialEditor.ShaderProperty(gradationpower, &quot;GradationPower&quot;);
+                this.materialEditor.ColorProperty(subtractioncolor, &quot;SubtractionColor&quot;);
+            }
+
+            //リムライト-----------------------
+            GUILayout.Box(&quot;RimLight&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_rimlight, &quot;Is_RimLight&quot;);
+
+            if (material.GetFloat(&quot;_Is_RimLight&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(rimmasktex, &quot;RimMaskTex&quot;);
+                this.materialEditor.ShaderProperty(is_lightcolor, &quot;Is_LightColor&quot;);
+
+                if (material.GetFloat(&quot;_Is_LightColor&quot;) == 0)
+                {
+                    this.materialEditor.ColorProperty(rimcolor, &quot;RimColor&quot;);
+                }
+
+                this.materialEditor.ShaderProperty(rimwidth, &quot;RimWidth&quot;);
+                this.materialEditor.ShaderProperty(rimpower, &quot;RimPower&quot;);
+                this.materialEditor.ShaderProperty(rimrearadjustment, &quot;RimRearAdjustment&quot;);
+
+                this.materialEditor.ShaderProperty(is_rimbias, &quot;Is_RimBias&quot;);
+
+                if (material.GetFloat(&quot;_Is_RimBias&quot;) == 1)
+                {
+                    this.materialEditor.ShaderProperty(rimbias, &quot;RimBias&quot;);
+                }
+            }
+
+            //天使の輪-------------------------
+            GUILayout.Box(&quot;AngelRing&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_angelring, &quot;Is_AngelRing&quot;);
+
+            if (material.GetFloat(&quot;_Is_AngelRing&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(angelring_Sampler, &quot;AngelRing_Sampler&quot;);
+                this.materialEditor.ColorProperty(angelringColor, &quot;AngelRingColor&quot;);
+                this.materialEditor.ShaderProperty(angelringPower, &quot;AngelRingPower&quot;);
+                this.materialEditor.ShaderProperty(angelringAdjustment, &quot;AngelRingAdjustment&quot;);
+                this.materialEditor.ShaderProperty(angelringOffsetX, &quot;AngelRingOffsetX&quot;);
+                this.materialEditor.ShaderProperty(angelringOffsetY, &quot;AngelRingOffsetY&quot;);
+                this.materialEditor.ShaderProperty(angelringMoveSpeed, &quot;AngelRingMoveSpeed&quot;);
+                this.materialEditor.ShaderProperty(angelringUpperLimit, &quot;AngelRingUpperLimit&quot;);
+                this.materialEditor.ShaderProperty(angelringLowerLimit, &quot;AngelRingLowerLimit&quot;);
+            }
+
+            //スペキュラーマスク-------------------
+            GUILayout.Box(&quot;SpecularMask&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_SpecularMask, &quot;Is_SpecularMask&quot;);
+
+            if (material.GetFloat(&quot;_Is_SpecularMask&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(specularMaskTex, &quot;SpecularMaskTex&quot;);
+                this.materialEditor.ColorProperty(specularColor, &quot;SpecularColor&quot;);
+                this.materialEditor.ShaderProperty(specularRoughness, &quot;SpecularRoughness&quot;);
+                this.materialEditor.ShaderProperty(fresnelReflectance, &quot;FresnelReflectance&quot;);
+            }
+
+            //頂点シェーダー-------------------
+            GUILayout.Box(&quot;VertexColor&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_VertexColorMulti, &quot;Is_VertexColorMulti&quot;);
+
+            if (material.GetFloat(&quot;_Is_VertexColorMulti&quot;) == 1)
+            {
+
+                this.materialEditor.ShaderProperty(vcolPower, &quot;VcolPower&quot;);
+            }
+
+            //アウトライン-------------------------
+            GUILayout.Box(&quot;OutLine&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.TextureProperty(outlineMaskTex, &quot;OutlineMaskTex&quot;);
+            this.materialEditor.ColorProperty(outlineMainColor, &quot;OutlineMainColor&quot;);
+            this.materialEditor.ColorProperty(outlineColor, &quot;OutlineColor&quot;);
+            this.materialEditor.ShaderProperty(outline, &quot;Outline&quot;);
+            this.materialEditor.ShaderProperty(outlineMax, &quot;OutlineMax&quot;);
+            this.materialEditor.ShaderProperty(outlineZWrite, &quot;OutlineZWrite&quot;);
+        }
+        else if (charaModeValue == CharaMode.Eyebrows)
+        {
+            SetShaderIfNeeded(material, CharaShaderEyebrows);
+
+            this.materialEditor.ShaderProperty(stencilRef, &quot;StencilRef&quot;);
+
+            this.materialEditor.TextureProperty(maintex, &quot;Main&quot;);
+
+            //グラデーション-------------------
+            GUILayout.Box(&quot;Gradation&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_gradation, &quot;Is_Gradation&quot;);
+
+            if (material.GetFloat(&quot;_Is_Gradation&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(gradationtex, &quot;Gradation&quot;);
+                this.materialEditor.ShaderProperty(gradationpower, &quot;GradationPower&quot;);
+                this.materialEditor.ColorProperty(subtractioncolor, &quot;SubtractionColor&quot;);
+            }
+
+            //リムライト-----------------------
+            GUILayout.Box(&quot;RimLight&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_rimlight, &quot;Is_RimLight&quot;);
+
+            if (material.GetFloat(&quot;_Is_RimLight&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(rimmasktex, &quot;RimMaskTex&quot;);
+
+                this.materialEditor.ShaderProperty(is_lightcolor, &quot;Is_LightColor&quot;);
+
+                if (material.GetFloat(&quot;_Is_LightColor&quot;) == 0)
+                {
+                    this.materialEditor.ColorProperty(rimcolor, &quot;RimColor&quot;);
+                }
+
+                this.materialEditor.ShaderProperty(rimwidth, &quot;RimWidth&quot;);
+                this.materialEditor.ShaderProperty(rimpower, &quot;RimPower&quot;);
+                this.materialEditor.ShaderProperty(rimrearadjustment, &quot;RimRearAdjustment&quot;);
+                this.materialEditor.ShaderProperty(is_rimbias, &quot;Is_RimBias&quot;);
+
+                if (material.GetFloat(&quot;_Is_RimBias&quot;) == 1)
+                {
+                    this.materialEditor.ShaderProperty(rimbias, &quot;RimBias&quot;);
+                }
+            }
+
+            //スペキュラーマスク-------------------
+            GUILayout.Box(&quot;SpecularMask&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_SpecularMask, &quot;Is_SpecularMask&quot;);
+
+            if (material.GetFloat(&quot;_Is_SpecularMask&quot;) == 1)
+            {
+                this.materialEditor.TextureProperty(specularMaskTex, &quot;SpecularMaskTex&quot;);
+                this.materialEditor.ColorProperty(specularColor, &quot;SpecularColor&quot;);
+                this.materialEditor.ShaderProperty(specularRoughness, &quot;SpecularRoughness&quot;);
+                this.materialEditor.ShaderProperty(fresnelReflectance, &quot;FresnelReflectance&quot;);
+            }
+
+            //頂点シェーダー-------------------
+            GUILayout.Box(&quot;VertexColor&quot;, new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(20.0f) });
+
+            this.materialEditor.ShaderProperty(is_VertexColorMulti, &quot;Is_VertexColorMulti&quot;);
+
+            if (material.GetFloat(&quot;_Is_VertexColorMulti&quot;) == 1)
+            {
+
+                this.materialEditor.ShaderProperty(vcolPower, &quot;VcolPower&quot;);
+            }
+        }
+        else
+        {
+            material.SetFloat(&quot;_Mode&quot;, (int)CharaMode.Ch);
+        }
+
+        //レンダーキュー指定
+        this.materialEditor.RenderQueueField();
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            // CutoutのONOFF ===================================================
+            if (blendModeValue == BlendMode.Opaque)
+            {
+                useCutout.floatValue = 0;
+                material.DisableKeyword(&quot;_USECUTOUT_ON&quot;);
+            }
+            else if (blendModeValue == BlendMode.Cutout)
+            {
+                useCutout.floatValue = 1.0f;
+                material.EnableKeyword(&quot;_USECUTOUT_ON&quot;);
+            }
+            else
+            {
+                useCutout.floatValue = 0;
+                material.DisableKeyword(&quot;_USECUTOUT_ON&quot;);
+            }
+
+            this.materialEditor.PropertiesChanged();
+
+            if (this.materialEditor.targets != null &amp;&amp; this.materialEditor.targets.Length &gt; 0)
+            {
+                foreach (UnityEngine.Object t in this.materialEditor.targets)
+                {
+                    EditorUtility.SetDirty(t);
+                }
+            }
+            else
+            {
+                EditorUtility.SetDirty(material);
+            }
+        }
+    }
+
+    static void MaterialChanged(Material material)
+    {
+        SetupMaterialWithMode(material, (CharaMode)material.GetFloat(&quot;_Mode&quot;));
+        SetupMaterialWithBlendMode(material, (BlendMode)material.GetFloat(&quot;_BlendMode&quot;));
+    }
+
+    void SetShaderIfNeeded(Material material, Shader shader)
+    {
+        if (material.shader.name != shader.name)
+        {
+            this.materialEditor.SetShader(shader);
+            FindProperties(this.materialProperties);
+        }
+    }
+
+    void CullModePopup()
+    {
+        EditorGUI.showMixedValue = cullMode.hasMixedValue;
+        var mode = (CullMode)cullMode.floatValue;
+
+        EditorGUI.BeginChangeCheck();
+        mode = (CullMode)EditorGUILayout.Popup(&quot;Cull Mode&quot;, (int)mode, Styles.cullNames);
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            this.materialEditor.RegisterPropertyChangeUndo(&quot;Cull Mode&quot;);
+            cullMode.floatValue = (float)mode;
+        }
+
+        EditorGUI.showMixedValue = false;
+    }
+
+    void ZTestModePopup()
+    {
+        EditorGUI.showMixedValue = zTestMode.hasMixedValue;
+        var mode = (ZTestMode)zTestMode.floatValue;
+
+        EditorGUI.BeginChangeCheck();
+        mode = (ZTestMode)EditorGUILayout.Popup(&quot;ZTest Mode&quot;, (int)mode, Styles.zTestNames);
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            this.materialEditor.RegisterPropertyChangeUndo(&quot;ZTest Mode&quot;);
+            zTestMode.floatValue = (float)mode;
+        }
+
+        EditorGUI.showMixedValue = false;
+    }
+
+    void BlendModePopup()
+    {
+        EditorGUI.showMixedValue = blendMode.hasMixedValue;
+        var mode = (BlendMode)blendMode.floatValue;
+
+        EditorGUI.BeginChangeCheck();
+        mode = (BlendMode)EditorGUILayout.Popup(&quot;Rendering Mode&quot;, (int)mode, Styles.blendNames);
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            this.materialEditor.RegisterPropertyChangeUndo(&quot;Rendering Mode&quot;);
+            blendMode.floatValue = (float)mode;
+        }
+
+        EditorGUI.showMixedValue = false;
+    }
+
+    void ModePopup()
+    {
+        EditorGUI.showMixedValue = charaMode.hasMixedValue;
+        var mode = (CharaMode)charaMode.floatValue;
+
+        EditorGUI.BeginChangeCheck();
+        mode = (CharaMode)EditorGUILayout.Popup(&quot;CharaMode&quot;, (int)mode, Styles.charaModeNames);
+
+        if (EditorGUI.EndChangeCheck())
+        {
+            this.materialEditor.RegisterPropertyChangeUndo(&quot;CharaMode&quot;);
+            charaMode.floatValue = (float)mode;
+        }
+
+        EditorGUI.showMixedValue = false;
+    }
+
+    private static void SetupMaterialWithMode(Material material, CharaMode mode)
+    {
+        switch (mode)
+        {
+            case CharaMode.Chara:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.Chara);
+                break;
+            case CharaMode.CharaOutLine:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.CharaOutLine);
+                break;
+            case CharaMode.CharaShadow:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.CharaShadow);
+                break;
+            case CharaMode.CharaOutLineShadow:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.CharaOutLineShadow);
+                break;
+            case CharaMode.Eyebrows:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.Eyebrows);
+                break;
+            case CharaMode.Eye:
+                material.SetFloat(&quot;_Mode&quot;, (float)CharaMode.Eye);
+                break;
+        }
+    }
+
+    public override void AssignNewShaderToMaterial(Material material, Shader oldShader, Shader newShader)
+    {
+        base.AssignNewShaderToMaterial(material, oldShader, newShader);
+
+        if (oldShader != newShader)
+        {
+            if (oldShader == null)
+            {
+                SetupMaterialWithMode(material, (CharaMode)material.GetFloat(&quot;_Mode&quot;));
+                return;
+            }
+            //if (oldShader.name == &quot;Hidden/CharaShader&quot; || oldShader.name == &quot;Hidden/CharaShaderOutLine&quot; &amp;&amp; oldShader.name == &quot;Hidden/CharaShaderShadow&quot; || oldShader.name == &quot;Hidden/CharaShaderOutLineShadow&quot;)
+            //{
+            //    return;
+            //}
+        }
+
+        MaterialChanged(material);
+    }
+
+    private static void SetupMaterialWithBlendMode(Material material, BlendMode blendMode)
+    {
+        switch (blendMode)
+        {
+            case BlendMode.Opaque:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Opaque&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.One);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.Zero);
+               // material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Geometry - 1;
+                break;
+            case BlendMode.Cutout:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;TransparentCutout&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.One);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.Zero);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.AlphaTest;
+                break;
+            case BlendMode.Fade:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.Transparent:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.One);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.Additive:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.One);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.Subtractive:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.Zero);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.OneMinusSrcColor);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.Modulate:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.DstColor);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.Overlay:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+            case BlendMode.AdditiveOverlay:
+                material.SetOverrideTag(&quot;RenderType&quot;, &quot;Transparent&quot;);
+                material.SetInt(&quot;_SrcBlend&quot;, (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                material.SetInt(&quot;_DstBlend&quot;, (int)UnityEngine.Rendering.BlendMode.One);
+                material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+                break;
+        }
+    }
+}
+#endif
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CharaShaderOutLine.html" class="btn btn-neutral float-right" title="code CharaShaderOutLine" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CharaShaderEyebrows.html" class="btn btn-neutral" title="code CharaShaderEyebrows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

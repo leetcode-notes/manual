@@ -95,6 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../bat/cmd.html">cmd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../git/git.html">manual git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../houdini/houdini.html">Houdini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../javascript/javascript.html">javascript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../linux/linux.html">Linux</a></li>
@@ -102,20 +103,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">manual mindmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Chara/CharaShader.html">Chara Shader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../URP/URP.html">URP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../grass/grass.html">grass</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manner/manner.html">manner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../olsl/OLSL.html">OLSL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../particle/particle.html">particle</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">shadergraph shaderforge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="shadergraph/shadergraph.html">shadergraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arithmetic">Arithmetic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constant-vectors">Constant Vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vector-operations">Vector Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uv-operations">UV Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometry-data">Geometry Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lighting">Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#external-data">External Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scene-data">Scene Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#math-constants">Math Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trigonometry">Trigonometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utility">Utility</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../unity/unity.html">unity shader</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../shotgun/shotgun.html">Shotgun manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial/com.html">tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
@@ -174,6 +192,178 @@
 </ul>
 </div>
 <p><a class="reference external" href="http://acegikmo.com/shaderforge/">http://acegikmo.com/shaderforge/</a></p>
+<p>dot     dot(x, y)       2ベクトルの内積を求める</p>
+<p>floor   floor(x)        小数値の整数部分を返す</p>
+<p>frac    frac(x) 小数値の小数部分を返す     fract</p>
+<p>abs     abs(x)  絶対値を返す</p>
+<p>saturate        saturate(x)     xを0 ~ 1にクランプ</p>
+<p>clamp   clamp(x, a, b)  xをa ~ bにクランプ    clamp</p>
+<p>lerp    lerp(x, y, s)   線形補間 x + s(y - x)       mix</p>
+<p>sqrt    sqrt(x) 平方根 √x</p>
+<p>mul     mul(x, y)       行列乗算</p>
+<p>step    step(y, x)      y&lt;=xなら1,y&gt;xなら0</p>
+<p>min     min(x, y)       xかyを比べ小さい方を返す</p>
+<p>max     max(x, y)       xかyを比べ大きい方を返す</p>
+<div class="section" id="arithmetic">
+<h2>Arithmetic<a class="headerlink" href="#arithmetic" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Abs
+Add
+Blend
+Cell
+Clamp
+Clamp 0-1
+Clamp (Simple)
+Divide
+Exp
+Floor
+Fmod
+Frac
+HSV to RGB
+Hue
+If
+Inverse Lerp
+Lerp
+Lerp (Simple)
+Log
+Max
+Min
+Multiply
+Multiply Matrix
+Negate
+Noise
+One Minus
+Posterize
+Power
+Reciprocal
+Remap
+Remap (Simple)
+RGB to HSV
+Round
+Sign
+Smoothstep
+Sqrt
+Step (A &lt;= B)
+Subtract
+Trunc</p>
+</div>
+<div class="section" id="constant-vectors">
+<h2>Constant Vectors<a class="headerlink" href="#constant-vectors" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Value
+Vector 2
+Vector 3
+Vector 4
+Matrix 4*4</p>
+</div>
+<div class="section" id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Color
+Cubemap
+Matrix 4*4
+Slider
+Switch
+Texture 2D
+Texture Asset
+Toggle
+Value
+Vectgor 4</p>
+</div>
+<div class="section" id="vector-operations">
+<h2>Vector Operations<a class="headerlink" href="#vector-operations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Append
+Channel Blend
+Component Mask
+Cross Product
+Desaturate
+DDX
+DDXY
+DDY
+Distance
+Dot Product
+Length
+Normalize
+Normal Blend
+Reflect
+Transform
+Transpose
+Vector Projection
+Vector Rejection</p>
+</div>
+<div class="section" id="uv-operations">
+<h2>UV Operations<a class="headerlink" href="#uv-operations" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Panner
+Parallax
+Rotator
+UV Tile</p>
+</div>
+<div class="section" id="geometry-data">
+<h2>Geometry Data<a class="headerlink" href="#geometry-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Bitangent Dic
+Depth
+Face Sign
+Fresnel
+Normal Dic
+Object Position
+Object Scale
+Screen Position
+Tangent Dic
+UV Coordinates
+Vertex Color
+View Dic
+View Reft Dic.
+World Poison</p>
+</div>
+<div class="section" id="lighting">
+<h2>Lighting<a class="headerlink" href="#lighting" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Ambient Light
+Half Direction
+Light Attenuation
+Light Color
+Light Directgion
+Light Position</p>
+</div>
+<div class="section" id="external-data">
+<h2>External Data<a class="headerlink" href="#external-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Pixel Size
+Projection Parameters
+Screeen Parameters
+Time
+View Position</p>
+</div>
+<div class="section" id="scene-data">
+<h2>Scene Data<a class="headerlink" href="#scene-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Depth Blend
+Fog Color
+Scene Color
+Scene Depth</p>
+</div>
+<div class="section" id="math-constants">
+<h2>Math Constants<a class="headerlink" href="#math-constants" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>e
+Phi
+Pi
+Root 2
+Tau (2 Pi)</p>
+</div>
+<div class="section" id="trigonometry">
+<h2>Trigonometry<a class="headerlink" href="#trigonometry" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ArcCos
+ArcSin
+ArcTan
+ArcTan2
+Cos
+Sin
+Tan</p>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Code</p>
+</div>
+<div class="section" id="utility">
+<h2>Utility<a class="headerlink" href="#utility" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Relay
+Get
+Set</p>
+</div>
 </div>
 
 

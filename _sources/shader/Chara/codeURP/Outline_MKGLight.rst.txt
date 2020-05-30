@@ -1,0 +1,5 @@
+codeURP Outline_MKGLight
+---------------------------------------------------------------------------
+
+.. literalinclude:: Outline_MKGLight.cginc
+

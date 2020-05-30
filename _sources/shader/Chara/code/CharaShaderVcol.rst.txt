@@ -1,0 +1,5 @@
+code CharaShaderVcol
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderVcol.shader
+

@@ -1,0 +1,627 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code CharaShader &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>code CharaShader</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/inspix/code/CharaShader.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-charashader">
+<h1>code CharaShader<a class="headerlink" href="#code-charashader" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Shader &quot;Hidden/CharaShader&quot;
+{
+Properties {
+		[HideInInspector] _Mode (&quot;__mode&quot;, Float) = 1.0
+		
+		[Enum(UnityEngine.Rendering.CullMode)]_CullMode(&quot;Cull Mode&quot;, Float) = 2
+		[Enum(UnityEngine.Rendering.CompareFunction)]_ZTestMode(&quot;ZTest Mode&quot;, Float) = 4
+		[Toggle]_ZWriteParam(&quot;ZWrite&quot;, Float) = 1
+		[HideInInspector] _BlendMode (&quot;__blendmode&quot;, Float) = 0.0
+		[Enum(UnityEngine.Rendering.BlendMode)]_SrcBlend(&quot;Blend Src&quot;, Float) = 5
+		[Enum(UnityEngine.Rendering.BlendMode)]_DstBlend(&quot;Blend Dst&quot;, Float) = 10
+
+		_StencilRef(&quot;StencilRef&quot;, Int) = 0
+
+		 [Toggle] _Is_Shadow(&quot;Is_Shadow&quot;, Float) = 0
+
+		_Cutoff(&quot;Alpha Cutoff&quot;, Range(0.0, 1.0)) = 0.5
+		[HideInInspector][Toggle] _UseCutout(&quot;__useCutout&quot;, Float) = 0
+
+		_MainTex (&quot;Main&quot;, 2D) = &quot;black&quot; {}
+
+		//パララックスマップ
+		[Toggle(_IS_PARALLAXMAP)]
+		_Is_ParallaxMap (&quot;_Is_ParallaxMap&quot;, Float ) = 0
+		[Toggle(_IS_PARALLAXMAP_BACK)]
+		_Is_ParallaxMap_Back (&quot;_Is_ParallaxMap_Back&quot;, Float ) = 0
+		_ParallaxTex_Back (&quot;ParallaxTex_Back&quot;, 2D) = &quot;white&quot; {}
+		_ParallaxMaskTex_Back (&quot;ParallaxMaskTex_Back&quot;, 2D) = &quot;white&quot; {}
+		_ParallaxNormalMap_Back (&quot;ParallaxNormalMap_Back&quot;, 2D) = &quot;white&quot; {}
+        _ParallaxHeightMap_Back (&quot;ParallaxHeightMap_Back&quot;, 2D) = &quot;white&quot; {}
+		_HeightAdjustment_Back (&quot;HeightAdjustment_Back&quot;, Range(0.0, 0.5)) = 0.02
+		_PseudoLight_Back (&quot;PseudoLight_Back&quot;, Vector) = (0, 0, 0)
+		[Toggle(_IS_PARALLAXMAP_FRONT)]
+		_Is_ParallaxMap_Front (&quot;_Is_ParallaxMap_Front&quot;, Float ) = 0
+		_ParallaxTex_Front (&quot;ParallaxTex_Front&quot;, 2D) = &quot;white&quot; {}
+		_ParallaxMaskTex_Front (&quot;ParallaxMaskTex_Front&quot;, 2D) = &quot;white&quot; {}
+		_ParallaxNormalMap_Front (&quot;ParallaxNormalMap_Front&quot;, 2D) = &quot;white&quot; {}
+        _ParallaxHeightMap_Front (&quot;ParallaxHeightMap_Front&quot;, 2D) = &quot;white&quot; {}
+		_HeightAdjustment_Front (&quot;HeightAdjustment_Front&quot;, Range(0.0, 0.5)) = 0.02
+		_PseudoLight_Front (&quot;PseudoLight_Front&quot;, Vector) = (0, 0, 0)
+		
+		//グラデーション
+		[Toggle(_IS_GRADATION)]
+		_Is_Gradation (&quot;Is_Gradation&quot;, Float ) = 0
+		_GradationTex(&quot;Gradation&quot;, 2D) = &quot;black&quot; {}
+		_GradationPower (&quot;GradationPower&quot;, Range(0, 10)) = 1
+		_SubtractionColor(&quot;SubtractionColor&quot;, Color) = (0, 0, 0, 0)
+
+		//リムライト
+		[Toggle(_IS_RIMLIGHT)]
+		_Is_RimLight (&quot;Is_RimLight&quot;, Float ) = 0
+		_RimMaskTex (&quot;RimMaskTex&quot;, 2D) = &quot;white&quot; {}
+		[Toggle(_IS_LIGHTCOLOR)]
+		_Is_LightColor (&quot;Is_LightColor&quot;, Float ) = 1
+        _RimColor (&quot;RimColor&quot;, Color) = (1, 1, 1, 1)
+		_RimWidth(&quot;RimWidth&quot;, Range(0, 1)) = 0
+		_RimPower(&quot;RimPower&quot;, Range(0, 1)) = 1
+		_RimRearAdjustment(&quot;RimRearAdjustment&quot;, Range(0, 1)) = 0.1
+		[Toggle(_IS_RIMBIAS)]
+		_Is_RimBias (&quot;Is_RimBias&quot;, Float ) = 0
+		_RimBias(&quot;RimBias&quot;, Range(-1, 1)) = 0
+
+		//天使の輪
+		[Toggle(_IS_ANGELRING)]
+		_Is_AngelRing (&quot;Is_AngelRing&quot;, Float ) = 0
+		_AngelRing_Sampler (&quot;AngelRing_Sampler&quot;, 2D) = &quot;black&quot; {}
+		_AngelRingColor (&quot;AngelRingColor&quot;, Color) = (1, 1, 1, 0)
+		_AngelRingPower (&quot;AngelRingPower&quot;, Range(0, 10)) = 1
+		_AngelRingAdjustment (&quot;AngelRingAdjustment&quot;, Range(-0.5, 0.5)) = 0
+		_AngelRingOffsetX (&quot;AngelRingOffsetX&quot;, Range(-0.5, 0.5)) = 0
+		_AngelRingOffsetY (&quot;AngelRingOffsetY&quot;, Range(-0.5, 0.5)) = 0
+		_AngelRingMoveSpeed(&quot;AngelRingMoveSpeed&quot;, Range(0, 1)) = 0.5
+		_AngelRingUpperLimit(&quot;AngelRingUpperLimit&quot;, Range(-1, 1)) = 1
+		_AngelRingLowerLimit(&quot;AngelRingLowerLimit&quot;, Range(-1, 1)) = -1
+		
+		//スペキュラーマスク
+		[Toggle(_IS_SPECULARMASK)]
+		_Is_SpecularMask (&quot;_Is_SpecularMask&quot;, Float ) = 0
+		_SpecularMaskTex (&quot;SpecularMaskTex&quot;, 2D) = &quot;white&quot; {}
+		_SpecularColor (&quot;SpecularColor&quot;, Color) = (1, 1, 1, 1)
+		_SpecularRoughness(&quot;_SpecularRoughness&quot;, Range(0, 1)) = 0.5
+		_FresnelReflectance(&quot;FresnelReflectance&quot;, Range(0, 1)) = 0.5
+
+		//アウトライン
+		[HideInInspector] _OutlineMaskTex (&quot;OutlineMaskTex&quot;, 2D) = &quot;white&quot; {}
+		[HideInInspector]_OutlineMainColor (&quot;OutlineMainColor&quot;, Color) = (.5,.5,.5,1)
+		[HideInInspector]_OutlineColor (&quot;OutlineColor&quot;, Color) = (0, 0, 0, 1)
+        [HideInInspector]_Outline  (&quot;Outline&quot;, float) = .005
+		[HideInInspector]_OutlineMax(&quot;OutlineMax&quot;, Range(0.0, 10.0)) = .1
+		[HideInInspector][Toggle(OUTLINEZWRITE)]_OutlineZWrite(&quot;OutlineZWrite&quot;, Float) = 1
+
+        //頂点カラー頬染め
+        [Toggle(_IS_VERTEXCOLORMULTI)]  
+        _Is_VertexColorMulti (&quot;_Is_VertexColorMulti&quot;, Float ) = 0
+        _VertexColor (&quot;VcolColor&quot;, Color ) =  (1, 1, 1, 1)
+        _VcolPower(&quot;VcolPower&quot;, Range(0, 1)) = 1
+		//瞳ウルウル
+        [HideInInspector]_Flat (&quot;_Flat&quot;, Range(0, 1)) = 1
+		[HideInInspector]_Scale (&quot;_Scale&quot;, Range(0, 0001)) = 0				
+	}
+    SubShader
+    {
+		Tags {&quot;IgnoreProjector&quot;=&quot;True&quot; &quot;LightMode&quot;=&quot;ForwardBase&quot; }
+		Cull [_CullMode]
+		ZTest [_ZTestMode]
+		ZWrite [_ZWriteParam]
+		Blend [_SrcBlend] [_DstBlend]
+
+        Pass
+        {
+			Name &quot;BASE&quot;
+
+			//ステンシルバッファに指定値を書き込む
+			Stencil
+            {
+				Ref [_StencilRef]
+                Comp Always
+                Pass Replace
+            }
+			
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+			#pragma shader_feature _ _USECUTOUT_ON
+			#pragma shader_feature _ _IS_SPECULAR
+			#pragma shader_feature _ _IS_RIMLIGHT
+			#pragma shader_feature _ _IS_ANGELRING
+			#pragma shader_feature _ _IS_LIGHTCOLOR
+			#pragma shader_feature _ _IS_GRADATION
+			#pragma shader_feature _ _IS_RIMBIAS
+			#pragma shader_feature _ _IS_ANIMELINE
+			#pragma shader_feature _ _IS_PARALLAXMAP
+			#pragma shader_feature _ _IS_PARALLAXMAP_BACK
+			#pragma shader_feature _ _IS_PARALLAXMAP_FRONT
+			#pragma shader_feature _ _IS_SPECULARMASK
+
+            #include &quot;UnityCG.cginc&quot;
+			#include &quot;AutoLight.cginc&quot;
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                half3 normal : NORMAL;
+				float2 uv : TEXCOORD0;
+				#ifdef _IS_PARALLAXMAP
+				float4 tangent : TANGENT;
+				#endif
+            };
+
+            struct v2f
+            {
+                float4 pos : SV_POSITION;
+				float2 uv : TEXCOORD0;
+                half3 normal : TEXCOORD1;
+				#ifdef _IS_SPECULARMASK
+                half3 halfDir : TEXCOORD3;
+				#endif
+				half3 eyeDir : TEXCOORD2;
+				half3 lightDir : TEXCOORD4;
+				#ifdef _IS_PARALLAXMAP
+				half3 objeyeDir : TEXCOORD5;
+				#endif
+				#ifdef _IS_ANGELRING
+				half3 viewforward : TEXCOORD6;
+				#endif
+            };
+            
+			sampler2D _MainTex;
+			float4 _MainTex_ST;
+
+
+			//パララックスマップ
+			#ifdef _IS_PARALLAXMAP
+			sampler2D _ParallaxTex_Back;
+			float4 _ParallaxTex_Back_ST;
+			sampler2D _ParallaxHeightMap_Back;
+			float4 _ParallaxHeightMap_Back_ST;
+			sampler2D _ParallaxNormalMap_Back;
+			float4 _ParallaxNormalMap_Back_ST;
+			sampler2D _ParallaxMaskTex_Back;
+			float4 _ParallaxMaskTex_Back_ST;
+
+			sampler2D _ParallaxTex_Front;
+			float4 _ParallaxTex_Front_ST;
+			sampler2D _ParallaxMaskTex_Front;
+			float4 _ParallaxMaskTex_Front_ST;
+			sampler2D _ParallaxNormalMap_Front;
+			float4 _ParallaxNormalMap_Front_ST;
+			sampler2D _ParallaxHeightMap_Front;
+			float4 _ParallaxHeightMap_Front_ST;
+
+			uniform fixed _HeightAdjustment_Back;
+			uniform fixed4 _PseudoLight_Back;
+			uniform fixed _HeightAdjustment_Front;
+			uniform fixed4 _PseudoLight_Front;
+			#endif
+
+			#ifdef _IS_GRADATION
+			//グラデーション
+			sampler2D _GradationTex;
+			float4 _GradationTex_ST;
+			uniform fixed _GradationPower;
+			uniform half4 _SubtractionColor;
+			#endif
+
+			#ifdef _IS_RIMLIGHT
+			//リムライト
+			sampler2D _RimMaskTex;
+			float4 _RimMaskTex_ST;
+			uniform half4 _RimColor;
+			uniform fixed _RimWidth;
+			uniform fixed _RimPower;
+			uniform fixed _RimRearAdjustment;
+			uniform fixed _RimBias;
+			#endif
+
+			#ifdef _IS_ANGELRING
+			//天使の輪
+			sampler2D _AngelRing_Sampler;
+			float4 _AngelRing_Sampler_ST;
+			uniform half4 _AngelRingColor;
+			uniform fixed _AngelRingPower;
+			uniform fixed _AngelRingAdjustment;
+			uniform fixed _AngelRingOffsetX;
+			uniform fixed _AngelRingOffsetY;
+			uniform fixed _AngelRingUpperLimit;
+			uniform fixed _AngelRingLowerLimit;
+			uniform fixed _AngelRingMoveSpeed;
+			#endif
+
+			#ifdef _IS_SPECULARMASK
+			sampler2D _SpecularMaskTex;
+			float4 _SpecularMaskTex_ST;
+			uniform half4 _SpecularColor;
+			uniform fixed _SpecularRoughness;
+			uniform fixed _FresnelReflectance;
+			#endif
+
+			//ライトカラー
+			uniform half4 _LightColor0;
+
+			#ifdef _USECUTOUT_ON
+                fixed _Cutoff;
+            #endif
+
+            v2f vert (appdata v)
+            {
+                v2f o = (v2f)0;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.normal = UnityObjectToWorldNormal(v.normal);
+				o.eyeDir = normalize(WorldSpaceViewDir(v.vertex));
+
+				#ifdef _IS_SPECULARMASK
+				o.lightDir = WorldSpaceLightDir(v.vertex);
+				#endif
+
+				#ifdef _IS_PARALLAXMAP
+				TANGENT_SPACE_ROTATION;
+				o.objeyeDir = normalize(mul(rotation, ObjSpaceViewDir(v.vertex)));
+				#endif
+
+				#ifdef _IS_ANGELRING
+				o.viewforward = mul((float3x3)unity_CameraToWorld, float3(0,0,1));
+				#endif
+
+				#ifdef _IS_SPECULARMASK
+                // ハーフベクトルを求める
+                o.halfDir = normalize(_WorldSpaceLightPos0.xyz + o.eyeDir);
+				#endif
+
+				o.uv = v.uv; // そのままのTexcoord
+
+                return o;
+            }
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+
+				half4 col = tex2D( _MainTex, TRANSFORM_TEX( i.uv, _MainTex ) );
+				
+				//パララックスマップ(視差マッピング)
+				#ifdef _IS_PARALLAXMAP
+
+					#ifdef _IS_PARALLAXMAP_BACK
+						// ハイトマップをサンプリングしてUVをずらす
+						fixed4 height_back = tex2D(_ParallaxHeightMap_Back, i.uv);
+						float2 parallaxuv_back = -i.objeyeDir.xy * height_back.r * _HeightAdjustment_Back;
+						//パララックステクスチャ
+						half4 parallaxtex_back = tex2D( _ParallaxTex_Back, i.uv + parallaxuv_back);
+
+						fixed3 normal = UnpackNormal(tex2D(_ParallaxNormalMap_Back, i.uv + parallaxuv_back));
+						fixed4 diff = saturate(dot(normal, _PseudoLight_Back.xyz)) * _LightColor0;
+				
+						//マスクパララックス
+						parallaxtex_back *= tex2D( _ParallaxMaskTex_Back, i.uv + parallaxuv_back).r;
+						fixed MaskJudg_back = tex2D( _ParallaxMaskTex_Back, i.uv + parallaxuv_back).r;
+						
+						if(MaskJudg_back != 0) col.rgb *= parallaxtex_back.rgb * diff;
+					#endif
+
+					#ifdef _IS_PARALLAXMAP_FRONT
+						// ハイトマップをサンプリングしてUVをずらす
+						fixed4 height_front = tex2D(_ParallaxHeightMap_Front, i.uv);
+						float2 parallaxuv_front = i.objeyeDir.xy * height_front.r * _HeightAdjustment_Front;
+						//パララックステクスチャ
+						half4 parallaxtex_front = tex2D( _ParallaxTex_Front, i.uv + parallaxuv_front);
+
+						fixed3 normal_front = UnpackNormal(tex2D(_ParallaxNormalMap_Front, i.uv + parallaxuv_front));
+						fixed4 diff_front = saturate(dot(normal_front, _PseudoLight_Front.xyz)) * _LightColor0;
+
+						//マスクパララックス
+						parallaxtex_front *= tex2D( _ParallaxMaskTex_Front, i.uv + parallaxuv_front).r;
+						fixed MaskJudg_front = tex2D( _ParallaxMaskTex_Front, i.uv + parallaxuv_front).r;
+				
+						if(MaskJudg_front != 0) col.rgb += parallaxtex_front.rgb * diff;
+					#endif
+				#endif
+
+				//グラデーションテクスチャーを減算
+				#ifdef _IS_GRADATION
+					half4 AddGradation = tex2D(_GradationTex, i.uv) * float4(_SubtractionColor.rgb, 0) * _GradationPower;
+					
+					col -= AddGradation;
+				#endif
+
+				//天使の輪
+				#ifdef _IS_ANGELRING
+					//ライトベクトルとカメラベクトルの内積
+					half lightcameradot = clamp(-i.viewforward.y * _AngelRingMoveSpeed, _AngelRingLowerLimit, _AngelRingUpperLimit);
+					//調整
+					half2 f2_uvangel = i.uv + float2( _AngelRingOffsetX, _AngelRingOffsetY) - float2( 0, lightcameradot * _AngelRingAdjustment);
+
+					half4 AddAngelRing = tex2D(_AngelRing_Sampler, f2_uvangel) * float4(_AngelRingColor.rgb, 0) *_AngelRingPower;
+
+					//天使の輪を加算
+					col += AddAngelRing;
+				#endif
+
+				//ライト色を反映
+				col.rgb *= _LightColor0.rgb;
+
+				//リムライト
+				#ifdef _IS_RIMLIGHT
+					
+					half3 ViewNormalDir = normalize(mul((float3x3)UNITY_MATRIX_V, i.normal));
+					half4 rimcol = tex2D( _RimMaskTex, i.uv);
+					fixed rim = 0.0;
+					fixed bias = 0.0; 
+
+					#ifdef _IS_RIMBIAS
+						bias = _RimBias;
+					#endif
+
+					//リムライトを裏側に描画しない
+					if(dot(i.eyeDir, i.normal) &gt;= -_RimRearAdjustment)
+					{
+						rim = 1.0 - saturate(dot (float3(i.eyeDir.x + bias, i.eyeDir.y, i.eyeDir.z), i.normal));
+					}
+
+					half4 color = 0;
+					#ifdef _IS_LIGHTCOLOR
+						//リムライトの色をディクショナルライトの色にする。						
+						color.rgb = smoothstep(_RimWidth, _RimPower, rim) * _LightColor0.rgb * rimcol.r;
+					#else
+						//リムライトの色を指定色にする。
+						color.rgb = smoothstep(_RimWidth, _RimPower, rim) * _LightColor0.rgb * _RimColor * rimcol.r;
+					#endif
+
+					col.rgb += color.rgb;
+				#endif
+
+				//スペキュラーマスク
+				#ifdef _IS_SPECULARMASK
+					half4 Spec = tex2D( _SpecularMaskTex, i.uv);
+
+					float NdotH = dot(i.normal, i.halfDir);	//NormalVector dot HalfVector
+					float NdotV = dot(i.normal, i.eyeDir);	//NormalVector dot ViewVector
+					float NdotL = dot(i.normal, i.lightDir);//NormalVector dot LightVector
+					float VdotH = dot(i.eyeDir, i.halfDir);	//ViewVector   dot HalfVector
+
+					float alpha = _SpecularRoughness * _SpecularRoughness;
+					float alpha2 = alpha * alpha;
+					float t = ((NdotH * NdotH) * (alpha2 - 1.0) + 1.0);
+					float PI = 3.1415926535897;
+					float D = alpha2 / (PI * t * t);
+
+					float F = pow(1.0 - VdotH, 5.0);
+					F *= (1.0 - _FresnelReflectance);
+					F += _FresnelReflectance;
+
+					float NH2 = 2.0 * NdotH;
+					float g1 = (NH2 * NdotV) / VdotH;
+					float g2 = (NH2 * NdotL) / VdotH;
+					float G = min(1.0, min(g1, g2));
+
+					float specularReflection = (D * F * G) / (4.0 * NdotV * NdotL + 0.000001);
+
+					col.rgb += (_SpecularColor.rgb * specularReflection) * Spec.r;
+				#endif
+
+				#ifdef _USECUTOUT_ON
+                    clip( col.a - _Cutoff);
+                #endif
+
+				/// END ///			
+                return col;
+            }
+            ENDCG
+        }
+    }
+	CustomEditor &quot;CharaShaderGUI&quot;
+}
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+codeURP CharaShaderVcol_MKG
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderVcol_MKG.shader
+

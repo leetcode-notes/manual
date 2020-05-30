@@ -1,0 +1,5 @@
+code CharaShaderGUI
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderGUI.cs
+

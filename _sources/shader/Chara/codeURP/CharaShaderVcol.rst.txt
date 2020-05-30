@@ -1,0 +1,5 @@
+codeURP CharaShaderVcol
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderVcol.shader
+

@@ -1,0 +1,5 @@
+outline ghosteffect
+---------------------------------------------------------------------------
+
+.. literalinclude:: ghosteffect.shader
+

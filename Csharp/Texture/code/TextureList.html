@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code TextureList &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="Texture" href="../Texture.html"/>
+        <link rel="next" title="array" href="../../array/array.html"/>
+        <link rel="prev" title="code ImportProcess" href="ImportProcess.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../csharp.html">C#</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../AI/AI.html">AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Asset/Asset.html">Asset</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Texture.html">Texture</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ImportProcess.html">code ImportProcess</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code TextureList</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../array/array.html">array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../autoupdate/autoupdate.html">autoupdate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../basic/basic.html">Basic Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../code/Csharp.html">Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../crowd/crowd.html">群衆系スクリプト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../decal/decal.html">decal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../delegate/delegate.html">delegate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../effect/effect.html">effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../env/enviroment.html">enviroment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../for/for.html">for</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../new/new.html">new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../player/player.html">player script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../csharp.html">C#</a> &raquo;</li>
+      
+        <li><a href="../Texture.html">Texture</a> &raquo;</li>
+      
+    <li>code TextureList</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/Csharp/Texture/code/TextureList.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-texturelist">
+<h1>code TextureList<a class="headerlink" href="#code-texturelist" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">UnityEngine</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">UnityEditor</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="o">.</span><span class="n">Generic</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">TextureListMaker</span>
+<span class="p">{</span>
+    <span class="n">struct</span> <span class="n">Item</span>
+    <span class="p">{</span>
+        <span class="n">public</span> <span class="n">override</span> <span class="n">string</span> <span class="n">ToString</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">Format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="se">\t</span><span class="si">{1}</span><span class="s2">x</span><span class="si">{2}</span><span class="se">\t</span><span class="si">{3}</span><span class="se">\t</span><span class="s2">mips=</span><span class="si">{4}</span><span class="se">\t</span><span class="s2">faces=</span><span class="si">{5}</span><span class="se">\t</span><span class="s2">readable=</span><span class="si">{6}</span><span class="se">\t</span><span class="si">{7}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">byteSize</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">mipmapCount</span><span class="p">,</span> <span class="n">faceCount</span><span class="p">,</span> <span class="n">readable</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">public</span> <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">int</span> <span class="n">width</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">int</span> <span class="n">height</span><span class="p">;</span>
+        <span class="n">public</span> <span class="n">TextureFormat</span> <span class="nb">format</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">int</span> <span class="n">mipmapCount</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">int</span> <span class="n">faceCount</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">bool</span> <span class="n">readable</span><span class="p">;</span>
+        <span class="n">public</span> <span class="nb">int</span> <span class="n">byteSize</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="p">[</span><span class="n">MenuItem</span><span class="p">(</span><span class="s2">&quot;Kayac/MakeTextureList&quot;</span><span class="p">)]</span>
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">MakeTextureList</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">var</span> <span class="n">guids</span> <span class="o">=</span> <span class="n">AssetDatabase</span><span class="o">.</span><span class="n">FindAssets</span><span class="p">(</span><span class="s2">&quot;t: texture&quot;</span><span class="p">);</span>
+        <span class="n">var</span> <span class="n">items</span> <span class="o">=</span> <span class="n">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="n">EditorUtility</span><span class="o">.</span><span class="n">DisplayProgressBar</span><span class="p">(</span><span class="s2">&quot;テクスチャ検索中&quot;</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">0</span><span class="n">f</span><span class="p">);</span>
+        <span class="k">try</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">guids</span><span class="o">.</span><span class="n">Length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">EditorUtility</span><span class="o">.</span><span class="n">DisplayProgressBar</span><span class="p">(</span><span class="s2">&quot;テクスチャ検索中&quot;</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="n">i</span> <span class="o">/</span> <span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="n">guids</span><span class="o">.</span><span class="n">Length</span><span class="p">);</span>
+                <span class="n">var</span> <span class="n">path</span> <span class="o">=</span> <span class="n">AssetDatabase</span><span class="o">.</span><span class="n">GUIDToAssetPath</span><span class="p">(</span><span class="n">guids</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">StartsWith</span><span class="p">(</span><span class="s2">&quot;Assets/&quot;</span><span class="p">,</span> <span class="n">System</span><span class="o">.</span><span class="n">StringComparison</span><span class="o">.</span><span class="n">Ordinal</span><span class="p">))</span>
+                <span class="p">{</span>
+                    <span class="n">var</span> <span class="n">item</span> <span class="o">=</span> <span class="n">GetInfo</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+                    <span class="n">items</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">EditorUtility</span><span class="o">.</span><span class="n">DisplayProgressBar</span><span class="p">(</span><span class="s2">&quot;ソート中&quot;</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">);</span>
+            <span class="n">items</span><span class="o">.</span><span class="n">Sort</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">byteSize</span><span class="o">.</span><span class="n">CompareTo</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">byteSize</span><span class="p">));</span>
+
+            <span class="n">EditorUtility</span><span class="o">.</span><span class="n">DisplayProgressBar</span><span class="p">(</span><span class="s2">&quot;書き込み中&quot;</span><span class="p">,</span> <span class="n">null</span><span class="p">,</span> <span class="mi">1</span><span class="n">f</span><span class="p">);</span>
+            <span class="n">var</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">new</span> <span class="n">System</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">StreamWriter</span><span class="p">(</span><span class="s2">&quot;textureList.txt&quot;</span><span class="p">);</span>
+            <span class="n">long</span> <span class="n">bytesSum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">foreach</span> <span class="p">(</span><span class="n">var</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">writer</span><span class="o">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">ToString</span><span class="p">());</span>
+                <span class="n">bytesSum</span> <span class="o">+=</span> <span class="n">item</span><span class="o">.</span><span class="n">byteSize</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">Close</span><span class="p">();</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">LogFormat</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> textures. total size: </span><span class="si">{1}</span><span class="s2"> (</span><span class="si">{2}</span><span class="s2">MB)&quot;</span><span class="p">,</span> <span class="n">items</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="n">bytesSum</span><span class="p">,</span> <span class="p">((</span><span class="nb">float</span><span class="p">)</span><span class="n">bytesSum</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">))</span><span class="o">.</span><span class="n">ToString</span><span class="p">(</span><span class="s2">&quot;F2&quot;</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="n">catch</span> <span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="o">//</span> <span class="n">どこかで例外こくとプログレスバーが出しっぱになって操作不能になるのでケアが必要</span>
+        <span class="p">{</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">LogException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">EditorUtility</span><span class="o">.</span><span class="n">ClearProgressBar</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">static</span> <span class="n">Item</span> <span class="n">GetInfo</span><span class="p">(</span><span class="n">string</span> <span class="n">path</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">var</span> <span class="n">texture</span> <span class="o">=</span> <span class="n">AssetDatabase</span><span class="o">.</span><span class="n">LoadAssetAtPath</span><span class="o">&lt;</span><span class="n">Texture</span><span class="o">&gt;</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
+        <span class="n">Item</span> <span class="n">item</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">Remove</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Assets/&quot;</span><span class="o">.</span><span class="n">Length</span><span class="p">);</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">width</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">height</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">readable</span> <span class="o">=</span> <span class="n">texture</span><span class="o">.</span><span class="n">isReadable</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">mipmapCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">faceCount</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ARGB32</span><span class="p">;</span> <span class="o">//</span> <span class="n">とりあえず仮定</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">byteSize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">var</span> <span class="n">tex2d</span> <span class="o">=</span> <span class="n">texture</span> <span class="k">as</span> <span class="n">Texture2D</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">tex2d</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">mipmapCount</span> <span class="o">=</span> <span class="n">tex2d</span><span class="o">.</span><span class="n">mipmapCount</span><span class="p">;</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="n">tex2d</span><span class="o">.</span><span class="n">format</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">var</span> <span class="n">texCube</span> <span class="o">=</span> <span class="n">texture</span> <span class="k">as</span> <span class="n">Cubemap</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">texCube</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">mipmapCount</span> <span class="o">=</span> <span class="n">texCube</span><span class="o">.</span><span class="n">mipmapCount</span><span class="p">;</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">faceCount</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="n">texCube</span><span class="o">.</span><span class="n">format</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">item</span><span class="o">.</span><span class="n">byteSize</span> <span class="o">=</span> <span class="n">CalcTextureByteSize</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">faceCount</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">mipmapCount</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">format</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">item</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">static</span> <span class="nb">int</span> <span class="n">CalcTextureByteSize</span><span class="p">(</span><span class="nb">int</span> <span class="n">width</span><span class="p">,</span> <span class="nb">int</span> <span class="n">height</span><span class="p">,</span> <span class="nb">int</span> <span class="n">faceCount</span><span class="p">,</span> <span class="nb">int</span> <span class="n">mipmapCount</span><span class="p">,</span> <span class="n">TextureFormat</span> <span class="nb">format</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">var</span> <span class="n">pixelsPerFaceLevel</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="n">height</span><span class="p">;</span>
+        <span class="n">var</span> <span class="n">bitsPerFace</span> <span class="o">=</span> <span class="n">pixelsPerFaceLevel</span><span class="p">;</span>
+        <span class="n">switch</span> <span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">PVRTC_RGB2</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">PVRTC_RGBA2</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">BC4</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">DXT1</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">EAC_R</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">EAC_R_SIGNED</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ETC2_RGB</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ETC2_RGBA1</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ETC_RGB4</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">PVRTC_RGB4</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">PVRTC_RGBA4</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">4</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">Alpha8</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_4x4</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_4x4</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">BC5</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">BC7</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">DXT5</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">EAC_RG</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">EAC_RG_SIGNED</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ETC2_RGBA8</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">R8</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">8</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ARGB4444</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">BC6H</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">R16</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGB565</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGBA4444</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RHalf</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">16</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ARGB32</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">BGRA32</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RFloat</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RG16</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGB24</span><span class="p">:</span> <span class="o">//</span> <span class="n">どうせメモリの中で32bitにふくれるだろうからこの扱い</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGB9e5Float</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGBA32</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGHalf</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">32</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGBAHalf</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGFloat</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">64</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">RGBAFloat</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_5x5</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_5x5</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span>
+                <span class="n">bitsPerFace</span> <span class="o">/=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_6x6</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_6x6</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span>
+                <span class="n">bitsPerFace</span> <span class="o">/=</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">6</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_8x8</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_8x8</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span>
+                <span class="n">bitsPerFace</span> <span class="o">/=</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_10x10</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_10x10</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span>
+                <span class="n">bitsPerFace</span> <span class="o">/=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGBA_12x12</span><span class="p">:</span>
+            <span class="n">case</span> <span class="n">TextureFormat</span><span class="o">.</span><span class="n">ASTC_RGB_12x12</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">128</span><span class="p">;</span>
+                <span class="n">bitsPerFace</span> <span class="o">/=</span> <span class="mi">12</span> <span class="o">*</span> <span class="mi">12</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="n">default</span><span class="p">:</span>
+                <span class="n">bitsPerFace</span> <span class="o">*=</span> <span class="mi">32</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span> <span class="o">//</span> <span class="n">雑</span>
+        <span class="p">}</span>
+        <span class="n">var</span> <span class="n">bytesPerFace</span> <span class="o">=</span> <span class="n">bitsPerFace</span> <span class="o">/</span> <span class="mi">8</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">mipmapCount</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="n">何枚あろうが大差ないので1</span><span class="o">.</span><span class="mi">333</span><span class="n">倍固定でいいよね</span>
+        <span class="p">{</span>
+            <span class="n">bytesPerFace</span> <span class="o">*=</span> <span class="mi">4</span><span class="p">;</span>
+            <span class="n">bytesPerFace</span> <span class="o">/=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">bytesPerFace</span> <span class="o">*</span> <span class="n">faceCount</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../array/array.html" class="btn btn-neutral float-right" title="array" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ImportProcess.html" class="btn btn-neutral" title="code ImportProcess" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

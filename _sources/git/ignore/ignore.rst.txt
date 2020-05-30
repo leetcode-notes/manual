@@ -1,0 +1,18 @@
+git ignore
+================================================================================
+
+git ignore gitignore
+---------------------------------------------------------------------------
+
+.. literalinclude:: gitignore.txt
+
+git ignore gitignore_inspix
+---------------------------------------------------------------------------
+
+.. literalinclude:: gitignore_inspix.txt
+
+git ignore gitignore_ip
+---------------------------------------------------------------------------
+
+.. literalinclude:: gitignore_ip.txt
+

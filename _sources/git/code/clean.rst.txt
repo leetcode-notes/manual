@@ -1,0 +1,8 @@
+clean
+=============================
+
+git checkout .
+
+git clean -df .
+
+git reset HEAD .

@@ -1,0 +1,5 @@
+codemkg CharaShaderVcol_Stencil
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderVcol_Stencil.shader
+

@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>codeURP Outline_MKGLight &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="Chara Shader" href="../CharaShader.html"/>
+        <link rel="next" title="Unity Default Shader" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html"/>
+        <link rel="prev" title="codeURP CharaShaderVcol_comp_stencilout_line_2_col2" href="CharaShaderVcol_comp_stencilout_line_2_col2.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../CharaShader.html">Chara Shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../code/Chara.html">code Chara</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShader.html">code CharaShader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderEyebrows.html">code CharaShaderEyebrows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderGUI.html">code CharaShaderGUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderOutLine.html">code CharaShaderOutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderOutLineShadow.html">code CharaShaderOutLineShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderShadow.html">code CharaShaderShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/CharaShaderVcol.html">code CharaShaderVcol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/EyeAnm.html">code EyeAnm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/OutLine.html">code OutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol.html">codeURP CharaShaderVcol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_MKG.html">codeURP CharaShaderVcol_MKG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_comp_stencil_line_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_comp_stencil_line_trans_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_trans_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_comp_stencilmask.html">codeURP CharaShaderVcol_comp_stencilmask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_comp_stencilmask_2_col2.html">codeURP CharaShaderVcol_comp_stencilmask_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol_comp_stencilout_line_2_col2.html">codeURP CharaShaderVcol_comp_stencilout_line_2_col2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">codeURP Outline_MKGLight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../URP/URP.html">URP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grass/grass.html">grass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../manner/manner.html">manner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shadergraph shaderforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/unity.html">unity shader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../CharaShader.html">Chara Shader</a> &raquo;</li>
+      
+    <li>codeURP Outline_MKGLight</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/Chara/codeURP/Outline_MKGLight.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="codeurp-outline-mkglight">
+<h1>codeURP Outline_MKGLight<a class="headerlink" href="#codeurp-outline-mkglight" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//UCTS_Outline.cginc
+//Unitychan Toon Shader ver.2.0
+//v.2.0.7.5
+//nobuyuki@unity3d.com
+//https://github.com/unity3d-jp/UnityChanToonShaderVer2_Project
+//(C)Unity Technologies Japan/UCL
+// 2018/08/23 N.Kobayashi (Unity Technologies Japan)
+// カメラオフセット付きアウトライン（BaseColorライトカラー反映修正版）
+// 2017/06/05 PS4対応版
+// Ver.2.0.4.3
+// 2018/02/05 Outline Tex対応版
+// #pragma multi_compile _IS_OUTLINE_CLIPPING_NO _IS_OUTLINE_CLIPPING_YES 
+// _IS_OUTLINE_CLIPPING_YESは、Clippigマスクを使用するシェーダーでのみ使用できる. OutlineのブレンドモードにBlend SrcAlpha OneMinusSrcAlphaを追加すること.
+//
+            uniform float4 _LightColor0;
+            uniform float4 _BaseColor;
+            //v.2.0.7.5
+            uniform float _Unlit_Intensity;
+            uniform fixed _Is_Filter_LightColor;
+            uniform fixed _Is_LightColor_Outline;
+            //v.2.0.5
+            uniform float4 _Color;
+            uniform sampler2D _MainTex; uniform float4 _MainTex_ST;
+            uniform float _Outline_Width;
+            uniform float _Farthest_Distance;
+            uniform float _Nearest_Distance;
+            uniform sampler2D _Outline_Sampler; uniform float4 _Outline_Sampler_ST;
+            uniform float4 _Outline_Color;
+            uniform fixed _Is_BlendBaseColor;
+            uniform float _Offset_Z;
+            //v2.0.4
+            uniform sampler2D _OutlineTex; uniform float4 _OutlineTex_ST;
+            uniform fixed _Is_OutlineTex;
+            //Baked Normal Texture for Outline
+            uniform sampler2D _BakedNormal; uniform float4 _BakedNormal_ST;
+            uniform fixed _Is_BakedNormal;
+
+            uniform float _ZOverDrawMode;
+            //
+//v.2.0.4
+            uniform sampler2D _ClippingMask; uniform float4 _ClippingMask_ST;
+            uniform float _Clipping_Level;
+            uniform fixed _Inverse_Clipping;
+            uniform fixed _IsBaseMapAlphaAsClippingMask;
+
+            struct VertexInput {
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                float4 tangent : TANGENT;
+                float2 texcoord0 : TEXCOORD0;
+            };
+            struct VertexOutput {
+                float4 pos : SV_POSITION;
+                float2 uv0 : TEXCOORD0;
+                float3 normalDir : TEXCOORD1;
+                float3 tangentDir : TEXCOORD2;
+                float3 bitangentDir : TEXCOORD3;
+            };
+            VertexOutput vert (VertexInput v) {
+                VertexOutput o = (VertexOutput)0;
+                o.uv0 = v.texcoord0;
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
+                float2 Set_UV0 = o.uv0;
+                float4 _Outline_Sampler_var = tex2Dlod(_Outline_Sampler,float4(TRANSFORM_TEX(Set_UV0, _Outline_Sampler),0.0,0));
+                //v.2.0.4.3 baked Normal Texture for Outline
+                o.normalDir = UnityObjectToWorldNormal(v.normal);
+                o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
+                o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
+                float3x3 tangentTransform = float3x3( o.tangentDir, o.bitangentDir, o.normalDir);
+                //UnpackNormal()が使えないので、以下で展開。使うテクスチャはBump指定をしないこと.
+                float4 _BakedNormal_var = (tex2Dlod(_BakedNormal,float4(TRANSFORM_TEX(Set_UV0, _BakedNormal),0.0,0)) * 2 - 1);
+                float3 _BakedNormalDir = normalize(mul(_BakedNormal_var.rgb, tangentTransform));
+                //ここまで.
+                float Set_Outline_Width = (_Outline_Width*0.001*smoothstep( _Farthest_Distance, _Nearest_Distance, distance(objPos.rgb,_WorldSpaceCameraPos) )*_Outline_Sampler_var.g).r;
+                Set_Outline_Width *= (1.0f - _ZOverDrawMode);
+                //v.2.0.7.5
+                float4 _ClipCameraPos = mul(UNITY_MATRIX_VP, float4(_WorldSpaceCameraPos.xyz, 1));
+                //v.2.0.7
+                #if defined(UNITY_REVERSED_Z)
+                    //v.2.0.4.2 (DX)
+                    _Offset_Z = _Offset_Z * -0.01;
+                #else
+                    //OpenGL
+                    _Offset_Z = _Offset_Z * 0.01;
+                #endif
+//v2.0.4
+#ifdef _OUTLINE_NML
+                //v.2.0.4.3 baked Normal Texture for Outline
+                o.pos = UnityObjectToClipPos(lerp(float4(v.vertex.xyz + v.normal*Set_Outline_Width,1), float4(v.vertex.xyz + _BakedNormalDir*Set_Outline_Width,1),_Is_BakedNormal));
+#elif _OUTLINE_POS
+                Set_Outline_Width = Set_Outline_Width*2;
+                float signVar = dot(normalize(v.vertex),normalize(v.normal))&lt;0 ? -1 : 1;
+                o.pos = UnityObjectToClipPos(float4(v.vertex.xyz + signVar*normalize(v.vertex)*Set_Outline_Width, 1));
+#endif
+                //v.2.0.7.5
+                o.pos.z = o.pos.z + _Offset_Z * _ClipCameraPos.z;
+                return o;
+            }
+            float4 frag(VertexOutput i) : SV_Target{
+                //v.2.0.5
+                if (_ZOverDrawMode &gt; 0.99f)
+                {
+                    return float4(1.0f, 1.0f, 1.0f, 1.0f);  // but nothing should be drawn except Z value as colormask is set to 0
+                }
+                _Color = _BaseColor;
+                float4 objPos = mul ( unity_ObjectToWorld, float4(0,0,0,1) );
+                //v.2.0.7.5
+                half3 ambientSkyColor = unity_AmbientSky.rgb&gt;0.05 ? unity_AmbientSky.rgb*_Unlit_Intensity : half3(0.05,0.05,0.05)*_Unlit_Intensity;
+                float3 lightColor = _LightColor0.rgb &gt;0.05 ? _LightColor0.rgb : ambientSkyColor.rgb;
+                float lightColorIntensity = (0.299*lightColor.r + 0.587*lightColor.g + 0.114*lightColor.b);
+                lightColor = lightColorIntensity&lt;1 ? lightColor : lightColor/lightColorIntensity;
+                lightColor = lerp(half3(1.0,1.0,1.0), lightColor, _Is_LightColor_Outline);
+                float2 Set_UV0 = i.uv0;
+                float4 _MainTex_var = tex2D(_MainTex,TRANSFORM_TEX(Set_UV0, _MainTex));
+                float3 Set_BaseColor = _BaseColor.rgb*_MainTex_var.rgb;
+                float3 _Is_BlendBaseColor_var = lerp( _Outline_Color.rgb*lightColor, (_Outline_Color.rgb*Set_BaseColor*Set_BaseColor*lightColor), _Is_BlendBaseColor );
+                //
+                float3 _OutlineTex_var = tex2D(_OutlineTex,TRANSFORM_TEX(Set_UV0, _OutlineTex));
+//v.2.0.7.5
+#ifdef _IS_OUTLINE_CLIPPING_NO
+                float3 Set_Outline_Color = lerp(_Is_BlendBaseColor_var, _OutlineTex_var.rgb*_Outline_Color.rgb*lightColor, _Is_OutlineTex );
+                return float4(Set_Outline_Color,1.0);
+#elif _IS_OUTLINE_CLIPPING_YES
+                float4 _ClippingMask_var = tex2D(_ClippingMask,TRANSFORM_TEX(Set_UV0, _ClippingMask));
+                float Set_MainTexAlpha = _MainTex_var.a;
+                float _IsBaseMapAlphaAsClippingMask_var = lerp( _ClippingMask_var.r, Set_MainTexAlpha, _IsBaseMapAlphaAsClippingMask );
+                float _Inverse_Clipping_var = lerp( _IsBaseMapAlphaAsClippingMask_var, (1.0 - _IsBaseMapAlphaAsClippingMask_var), _Inverse_Clipping );
+                float Set_Clipping = saturate((_Inverse_Clipping_var+_Clipping_Level));
+                clip(Set_Clipping - 0.5);
+                float4 Set_Outline_Color = lerp( float4(_Is_BlendBaseColor_var,Set_Clipping), float4((_OutlineTex_var.rgb*_Outline_Color.rgb*lightColor),Set_Clipping), _Is_OutlineTex );
+                return Set_Outline_Color;
+#endif
+            }
+// UCTS_Outline.cginc ここまで.
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../DefaultResourcesExtra2018/UnityDefaultShader.html" class="btn btn-neutral float-right" title="Unity Default Shader" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CharaShaderVcol_comp_stencilout_line_2_col2.html" class="btn btn-neutral" title="codeURP CharaShaderVcol_comp_stencilout_line_2_col2" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

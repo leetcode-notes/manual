@@ -1,0 +1,5 @@
+codemkg CharaForwardBase_Stencil_Color
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaForwardBase_Stencil_Color.hlsl
+

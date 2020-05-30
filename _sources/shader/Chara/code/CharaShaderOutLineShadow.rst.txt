@@ -1,0 +1,5 @@
+code CharaShaderOutLineShadow
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderOutLineShadow.shader
+

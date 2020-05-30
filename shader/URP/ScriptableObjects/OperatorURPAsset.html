@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ScriptableObjects OperatorURPAsset &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="URP" href="../URP.html"/>
+        <link rel="next" title="UnityDistanceBasedTess" href="../../command/UnityDistanceBasedTess.html"/>
+        <link rel="prev" title="URP" href="../URP.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../URP.html">URP</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ScriptableObjects OperatorURPAsset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grass/grass.html">grass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../manner/manner.html">manner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shadergraph shaderforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/unity.html">unity shader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../URP.html">URP</a> &raquo;</li>
+      
+    <li>ScriptableObjects OperatorURPAsset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/URP/ScriptableObjects/OperatorURPAsset.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scriptableobjects-operatorurpasset">
+<h1>ScriptableObjects OperatorURPAsset<a class="headerlink" href="#scriptableobjects-operatorurpasset" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &amp;11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
+  m_Name: OperatorURPAsset
+  m_EditorClassIdentifier:
+  k_AssetVersion: 5
+  k_AssetPreviousVersion: 5
+  m_RendererType: 1
+  m_RendererData: {fileID: 0}
+  m_RendererDataList:
+  - {fileID: 11400000, guid: cb7aaa714de0447248a3418dd92b4120, type: 2}
+  m_DefaultRendererIndex: 0
+  m_RequireDepthTexture: 1
+  m_RequireOpaqueTexture: 1
+  m_OpaqueDownsampling: 3
+  m_SupportsTerrainHoles: 1
+  m_SupportsHDR: 1
+  m_MSAA: 1
+  m_RenderScale: 1
+  m_MainLightRenderingMode: 1
+  m_MainLightShadowsSupported: 1
+  m_MainLightShadowmapResolution: 4096
+  m_AdditionalLightsRenderingMode: 2
+  m_AdditionalLightsPerObjectLimit: 2
+  m_AdditionalLightShadowsSupported: 0
+  m_AdditionalLightsShadowmapResolution: 512
+  m_ShadowDistance: 200
+  m_ShadowCascades: 2
+  m_Cascade2Split: 0.25
+  m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
+  m_ShadowDepthBias: 0.001
+  m_ShadowNormalBias: 0.5
+  m_SoftShadowsSupported: 1
+  m_UseSRPBatcher: 1
+  m_SupportsDynamicBatching: 1
+  m_MixedLightingSupported: 0
+  m_DebugLevel: 0
+  m_PostProcessingFeatureSet: 0
+  m_ColorGradingMode: 0
+  m_ColorGradingLutSize: 32
+  m_ShadowType: 1
+  m_LocalShadowsSupported: 0
+  m_LocalShadowsAtlasResolution: 256
+  m_MaxPixelLights: 0
+  m_ShadowAtlasResolution: 256
+  m_ShaderVariantLogLevel: 0
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../command/UnityDistanceBasedTess.html" class="btn btn-neutral float-right" title="UnityDistanceBasedTess" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../URP.html" class="btn btn-neutral" title="URP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

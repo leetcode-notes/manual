@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>code EyeAnm &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../../genindex.html"/>
+        <link rel="search" title="検索" href="../../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../../index.html"/>
+        <link rel="up" title="Chara Shader" href="../CharaShader.html"/>
+        <link rel="next" title="code OutLine" href="OutLine.html"/>
+        <link rel="prev" title="code CharaShaderVcol" href="CharaShaderVcol.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../git/git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../python/index.html">Python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../shader.html">shader</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../CharaShader.html">Chara Shader</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chara.html">code Chara</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShader.html">code CharaShader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderEyebrows.html">code CharaShaderEyebrows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderGUI.html">code CharaShaderGUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderOutLine.html">code CharaShaderOutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderOutLineShadow.html">code CharaShaderOutLineShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderShadow.html">code CharaShaderShadow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CharaShaderVcol.html">code CharaShaderVcol</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">code EyeAnm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OutLine.html">code OutLine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol.html">codeURP CharaShaderVcol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_MKG.html">codeURP CharaShaderVcol_MKG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencil_line_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencil_line_trans_2_col2.html">codeURP CharaShaderVcol_comp_stencil_line_trans_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilmask.html">codeURP CharaShaderVcol_comp_stencilmask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilmask_2_col2.html">codeURP CharaShaderVcol_comp_stencilmask_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/CharaShaderVcol_comp_stencilout_line_2_col2.html">codeURP CharaShaderVcol_comp_stencilout_line_2_col2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../codeURP/Outline_MKGLight.html">codeURP Outline_MKGLight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../DefaultResourcesExtra2018/UnityDefaultShader.html">Unity Default Shader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ErbGameArt/ErbGameArt.html">shader ErbGameArt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../URP/URP.html">URP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../command/UnityDistanceBasedTess.html">UnityDistanceBasedTess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../grass/grass.html">grass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hlsl/HLSL.html">HLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../manner/manner.html">manner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../olsl/OLSL.html">OLSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particle/particle.html">particle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shaderforge/shaderforge.html">shadergraph shaderforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../unity/unity.html">unity shader</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+        <li><a href="../../shader.html">shader</a> &raquo;</li>
+      
+        <li><a href="../CharaShader.html">Chara Shader</a> &raquo;</li>
+      
+    <li>code EyeAnm</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/shader/Chara/code/EyeAnm.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-eyeanm">
+<h1>code EyeAnm<a class="headerlink" href="#code-eyeanm" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shader</span> <span class="s2">&quot;Hidden/EyeShader&quot;</span>
+<span class="p">{</span>
+	<span class="n">Properties</span>
+	<span class="p">{</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span> <span class="n">_Mode</span> <span class="p">(</span><span class="s2">&quot;__mode&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+		<span class="p">[</span><span class="n">Enum</span><span class="p">(</span><span class="n">UnityEngine</span><span class="o">.</span><span class="n">Rendering</span><span class="o">.</span><span class="n">CullMode</span><span class="p">)]</span><span class="n">_CullMode</span><span class="p">(</span><span class="s2">&quot;Cull Mode&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">2</span>
+		<span class="p">[</span><span class="n">Enum</span><span class="p">(</span><span class="n">UnityEngine</span><span class="o">.</span><span class="n">Rendering</span><span class="o">.</span><span class="n">CompareFunction</span><span class="p">)]</span><span class="n">_ZTestMode</span><span class="p">(</span><span class="s2">&quot;ZTest Mode&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">4</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">]</span><span class="n">_ZWriteParam</span><span class="p">(</span><span class="s2">&quot;ZWrite&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span> <span class="n">_BlendMode</span> <span class="p">(</span><span class="s2">&quot;__blendmode&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0</span>
+		<span class="p">[</span><span class="n">Enum</span><span class="p">(</span><span class="n">UnityEngine</span><span class="o">.</span><span class="n">Rendering</span><span class="o">.</span><span class="n">BlendMode</span><span class="p">)]</span><span class="n">_SrcBlend</span><span class="p">(</span><span class="s2">&quot;Blend Src&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">5</span>
+		<span class="p">[</span><span class="n">Enum</span><span class="p">(</span><span class="n">UnityEngine</span><span class="o">.</span><span class="n">Rendering</span><span class="o">.</span><span class="n">BlendMode</span><span class="p">)]</span><span class="n">_DstBlend</span><span class="p">(</span><span class="s2">&quot;Blend Dst&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">10</span>
+
+		<span class="n">_StencilRef</span><span class="p">(</span><span class="s2">&quot;StencilRef&quot;</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_MainTex</span> <span class="p">(</span><span class="s2">&quot;Texture&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>		
+
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_EYEANM</span><span class="p">)]</span>
+
+		<span class="n">_Flat</span> <span class="p">(</span><span class="s2">&quot;_Flat&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_Scale</span> <span class="p">(</span><span class="s2">&quot;_Scale&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">]</span> <span class="n">_Is_Shadow</span><span class="p">(</span><span class="s2">&quot;Is_Shadow&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="n">_Cutoff</span><span class="p">(</span><span class="s2">&quot;Alpha Cutoff&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.5</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">][</span><span class="n">Toggle</span><span class="p">]</span> <span class="n">_UseCutout</span><span class="p">(</span><span class="s2">&quot;__useCutout&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="o">//</span><span class="n">パララックスマップ</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_PARALLAXMAP</span><span class="p">)]</span>
+		<span class="n">_Is_ParallaxMap</span> <span class="p">(</span><span class="s2">&quot;_Is_ParallaxMap&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_PARALLAXMAP_BACK</span><span class="p">)]</span>
+		<span class="n">_Is_ParallaxMap_Back</span> <span class="p">(</span><span class="s2">&quot;_Is_ParallaxMap_Back&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_ParallaxTex_Back</span> <span class="p">(</span><span class="s2">&quot;ParallaxTex_Back&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxMaskTex_Back</span> <span class="p">(</span><span class="s2">&quot;ParallaxMaskTex_Back&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxNormalMap_Back</span> <span class="p">(</span><span class="s2">&quot;ParallaxNormalMap_Back&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxHeightMap_Back</span> <span class="p">(</span><span class="s2">&quot;ParallaxHeightMap_Back&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_HeightAdjustment_Back</span> <span class="p">(</span><span class="s2">&quot;HeightAdjustment_Back&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.02</span>
+		<span class="n">_PseudoLight_Back</span> <span class="p">(</span><span class="s2">&quot;PseudoLight_Back&quot;</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_PARALLAXMAP_FRONT</span><span class="p">)]</span>
+		<span class="n">_Is_ParallaxMap_Front</span> <span class="p">(</span><span class="s2">&quot;_Is_ParallaxMap_Front&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_ParallaxTex_Front</span> <span class="p">(</span><span class="s2">&quot;ParallaxTex_Front&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxMaskTex_Front</span> <span class="p">(</span><span class="s2">&quot;ParallaxMaskTex_Front&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxNormalMap_Front</span> <span class="p">(</span><span class="s2">&quot;ParallaxNormalMap_Front&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_ParallaxHeightMap_Front</span> <span class="p">(</span><span class="s2">&quot;ParallaxHeightMap_Front&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_HeightAdjustment_Front</span> <span class="p">(</span><span class="s2">&quot;HeightAdjustment_Front&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.02</span>
+		<span class="n">_PseudoLight_Front</span> <span class="p">(</span><span class="s2">&quot;PseudoLight_Front&quot;</span><span class="p">,</span> <span class="n">Vector</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+		
+		<span class="o">//</span><span class="n">グラデーション</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_GRADATION</span><span class="p">)]</span>
+		<span class="n">_Is_Gradation</span> <span class="p">(</span><span class="s2">&quot;Is_Gradation&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_GradationTex</span><span class="p">(</span><span class="s2">&quot;Gradation&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span> <span class="p">{}</span>
+		<span class="n">_GradationPower</span> <span class="p">(</span><span class="s2">&quot;GradationPower&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_SubtractionColor</span><span class="p">(</span><span class="s2">&quot;SubtractionColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+		<span class="o">//</span><span class="n">リムライト</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_RIMLIGHT</span><span class="p">)]</span>
+		<span class="n">_Is_RimLight</span> <span class="p">(</span><span class="s2">&quot;Is_RimLight&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_RimMaskTex</span> <span class="p">(</span><span class="s2">&quot;RimMaskTex&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_LIGHTCOLOR</span><span class="p">)]</span>
+		<span class="n">_Is_LightColor</span> <span class="p">(</span><span class="s2">&quot;Is_LightColor&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_RimColor</span> <span class="p">(</span><span class="s2">&quot;RimColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="n">_RimWidth</span><span class="p">(</span><span class="s2">&quot;RimWidth&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_RimPower</span><span class="p">(</span><span class="s2">&quot;RimPower&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_RimRearAdjustment</span><span class="p">(</span><span class="s2">&quot;RimRearAdjustment&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.1</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_RIMBIAS</span><span class="p">)]</span>
+		<span class="n">_Is_RimBias</span> <span class="p">(</span><span class="s2">&quot;Is_RimBias&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_RimBias</span><span class="p">(</span><span class="s2">&quot;RimBias&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="o">//</span><span class="n">天使の輪</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_ANGELRING</span><span class="p">)]</span>
+		<span class="n">_Is_AngelRing</span> <span class="p">(</span><span class="s2">&quot;Is_AngelRing&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_AngelRing_Sampler</span> <span class="p">(</span><span class="s2">&quot;AngelRing_Sampler&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span> <span class="p">{}</span>
+		<span class="n">_AngelRingColor</span> <span class="p">(</span><span class="s2">&quot;AngelRingColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+		<span class="n">_AngelRingPower</span> <span class="p">(</span><span class="s2">&quot;AngelRingPower&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_AngelRingAdjustment</span> <span class="p">(</span><span class="s2">&quot;AngelRingAdjustment&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_AngelRingOffsetX</span> <span class="p">(</span><span class="s2">&quot;AngelRingOffsetX&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_AngelRingOffsetY</span> <span class="p">(</span><span class="s2">&quot;AngelRingOffsetY&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_AngelRingMoveSpeed</span><span class="p">(</span><span class="s2">&quot;AngelRingMoveSpeed&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.5</span>
+		<span class="n">_AngelRingUpperLimit</span><span class="p">(</span><span class="s2">&quot;AngelRingUpperLimit&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="n">_AngelRingLowerLimit</span><span class="p">(</span><span class="s2">&quot;AngelRingLowerLimit&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+		
+		<span class="o">//</span><span class="n">スペキュラーマスク</span>
+		<span class="p">[</span><span class="n">Toggle</span><span class="p">(</span><span class="n">_IS_SPECULARMASK</span><span class="p">)]</span>
+		<span class="n">_Is_SpecularMask</span> <span class="p">(</span><span class="s2">&quot;_Is_SpecularMask&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="n">_SpecularMaskTex</span> <span class="p">(</span><span class="s2">&quot;SpecularMaskTex&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="n">_SpecularColor</span> <span class="p">(</span><span class="s2">&quot;SpecularColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="n">_SpecularRoughness</span><span class="p">(</span><span class="s2">&quot;_SpecularRoughness&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.5</span>
+		<span class="n">_FresnelReflectance</span><span class="p">(</span><span class="s2">&quot;FresnelReflectance&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+		<span class="o">//</span><span class="n">アウトライン</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_OutlineMaskTex</span> <span class="p">(</span><span class="s2">&quot;OutlineMaskTex&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span> <span class="p">{}</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_OutlineMainColor</span> <span class="p">(</span><span class="s2">&quot;OutlineMainColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_OutlineColor</span> <span class="p">(</span><span class="s2">&quot;OutlineColor&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_Outline</span>  <span class="p">(</span><span class="s2">&quot;Outline&quot;</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span> <span class="o">=</span> <span class="o">.</span><span class="mi">005</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_OutlineMax</span><span class="p">(</span><span class="s2">&quot;OutlineMax&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">))</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">][</span><span class="n">Toggle</span><span class="p">(</span><span class="n">OUTLINEZWRITE</span><span class="p">)]</span><span class="n">_OutlineZWrite</span><span class="p">(</span><span class="s2">&quot;OutlineZWrite&quot;</span><span class="p">,</span> <span class="n">Float</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+		<span class="o">//</span><span class="n">頂点カラー頬染め</span>
+		
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_Is_VertexColorMulti</span> <span class="p">(</span><span class="s2">&quot;_Is_VertexColorMulti&quot;</span><span class="p">,</span> <span class="n">Float</span> <span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_VertexColor</span> <span class="p">(</span><span class="s2">&quot;VcolColor&quot;</span><span class="p">,</span> <span class="n">Color</span> <span class="p">)</span> <span class="o">=</span>  <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="p">[</span><span class="n">HideInInspector</span><span class="p">]</span><span class="n">_VcolPower</span><span class="p">(</span><span class="s2">&quot;VcolPower&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+	<span class="p">}</span>
+	<span class="n">SubShader</span>
+	<span class="p">{</span>
+		<span class="n">Tags</span> <span class="p">{</span><span class="s2">&quot;IgnoreProjector&quot;</span><span class="o">=</span><span class="s2">&quot;True&quot;</span> <span class="s2">&quot;LightMode&quot;</span><span class="o">=</span><span class="s2">&quot;ForwardBase&quot;</span> <span class="p">}</span>
+		<span class="n">Cull</span> <span class="p">[</span><span class="n">_CullMode</span><span class="p">]</span>
+		<span class="n">ZTest</span> <span class="p">[</span><span class="n">_ZTestMode</span><span class="p">]</span>
+		<span class="n">ZWrite</span> <span class="p">[</span><span class="n">_ZWriteParam</span><span class="p">]</span>
+		<span class="n">Blend</span> <span class="p">[</span><span class="n">_SrcBlend</span><span class="p">]</span> <span class="p">[</span><span class="n">_DstBlend</span><span class="p">]</span>
+
+		<span class="n">Pass</span>
+		<span class="p">{</span>
+			
+			<span class="n">Tags</span> <span class="p">{</span> <span class="s2">&quot;LightMode&quot;</span> <span class="o">=</span> <span class="s2">&quot;Always&quot;</span> <span class="p">}</span>
+			
+
+			<span class="o">//</span><span class="n">ステンシルバッファに指定値を書き込む</span>
+			<span class="n">Stencil</span>
+			<span class="p">{</span>
+				<span class="n">Ref</span> <span class="p">[</span><span class="n">_StencilRef</span><span class="p">]</span>
+				<span class="n">Comp</span> <span class="n">Always</span>
+				<span class="n">Pass</span> <span class="n">Replace</span>
+			<span class="p">}</span>
+			
+			<span class="n">Fog</span> <span class="p">{</span> <span class="n">Mode</span> <span class="n">Off</span> <span class="p">}</span>
+			<span class="n">ZWrite</span> <span class="n">On</span>
+			<span class="n">ZTest</span> <span class="n">LEqual</span>
+			<span class="n">Cull</span> <span class="n">Back</span>
+			<span class="n">Lighting</span> <span class="n">Off</span>
+			
+			<span class="n">CGPROGRAM</span>
+			<span class="c1">#pragma vertex vert</span>
+			<span class="c1">#pragma fragment frag</span>
+			<span class="c1">#pragma shader_feature _ _IS_LIGHTCOLOR			</span>
+
+			<span class="c1">#include &quot;UnityCG.cginc&quot;</span>
+
+			<span class="n">uniform</span> <span class="nb">float</span> <span class="n">_Flat</span><span class="p">;</span>
+			<span class="n">uniform</span> <span class="nb">float</span> <span class="n">_Scale</span><span class="p">;</span>
+			<span class="n">sampler2D</span> <span class="n">_MainTex</span><span class="p">;</span>
+			<span class="n">uniform</span> <span class="n">float4</span> <span class="n">_MainTex_ST</span><span class="p">;</span>
+			<span class="n">uniform</span> <span class="n">half4</span> <span class="n">_Color</span><span class="p">;</span>
+
+			<span class="o">//</span><span class="n">ライトカラー</span>
+			<span class="n">uniform</span> <span class="n">half4</span> <span class="n">_LightColor0</span><span class="p">;</span>
+			
+
+
+			
+
+			<span class="n">struct</span> <span class="n">appdata</span>
+			<span class="p">{</span>
+
+				<span class="n">float4</span> <span class="n">pos</span> <span class="p">:</span> <span class="n">POSITION</span><span class="p">;</span>
+				<span class="n">float2</span> <span class="n">uv</span> <span class="p">:</span> <span class="n">TEXCOORD0</span><span class="p">;</span>
+				<span class="n">float3</span> <span class="n">normal</span> <span class="p">:</span> <span class="n">NORMAL</span><span class="p">;</span>
+				<span class="n">float4</span> <span class="n">color</span><span class="p">:</span> <span class="n">COLOR</span><span class="p">;</span>
+			<span class="p">};</span>
+
+			<span class="n">struct</span> <span class="n">v2g</span>
+			<span class="p">{</span>
+				<span class="n">float2</span> <span class="n">uv</span> <span class="p">:</span> <span class="n">TEXCOORD0</span><span class="p">;</span>
+				<span class="n">float4</span> <span class="n">pos</span> <span class="p">:</span> <span class="n">SV_POSITION</span><span class="p">;</span>
+				<span class="n">float3</span> <span class="n">worldPos</span> <span class="p">:</span> <span class="n">TEXCOORD2</span><span class="p">;</span>
+				<span class="n">float3</span> <span class="n">normal</span> <span class="p">:</span> <span class="n">TEXCOORD1</span><span class="p">;</span>
+				<span class="n">float4</span> <span class="n">color</span><span class="p">:</span> <span class="n">COLOR</span><span class="p">;</span>
+			<span class="p">};</span>
+
+			<span class="n">struct</span> <span class="n">g2f</span>
+			<span class="p">{</span>
+				<span class="n">float2</span> <span class="n">uv</span> <span class="p">:</span> <span class="n">TEXCOORD0</span><span class="p">;</span>
+				<span class="n">float4</span> <span class="n">pos</span> <span class="p">:</span> <span class="n">SV_POSITION</span><span class="p">;</span>
+				<span class="n">float3</span> <span class="n">normal</span> <span class="p">:</span> <span class="n">TEXCOORD1</span><span class="p">;</span>  
+				<span class="n">float4</span> <span class="n">color</span><span class="p">:</span> <span class="n">COLOR</span><span class="p">;</span>
+			<span class="p">};</span>
+
+			<span class="n">v2g</span> <span class="n">vert</span> <span class="p">(</span><span class="n">appdata</span> <span class="n">v</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">v2g</span> <span class="n">o</span><span class="p">;</span>
+				<span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span> <span class="o">+=</span> <span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span>  <span class="o">+</span> <span class="n">_Time</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="mi">600</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span>  <span class="o">+</span> <span class="n">_Time</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">200</span><span class="o">*</span><span class="n">_Flat</span><span class="p">;</span>
+				<span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span><span class="o">/</span><span class="mi">100</span>  <span class="o">+</span> <span class="n">_Time</span><span class="o">.</span><span class="n">y</span><span class="o">*</span><span class="mi">600</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span><span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">_Time</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">200</span><span class="o">*</span><span class="n">_Flat</span><span class="p">;</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">UnityObjectToClipPos</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="p">);</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">color</span><span class="p">;</span>
+
+				<span class="n">half</span> <span class="n">rand</span> <span class="o">=</span> <span class="n">frac</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">uv</span><span class="p">,</span> <span class="n">fixed2</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">78</span><span class="p">)))</span> <span class="o">*</span> <span class="mi">43758</span><span class="p">);</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">worldPos</span> <span class="o">=</span> <span class="n">mul</span><span class="p">(</span><span class="n">unity_ObjectToWorld</span><span class="p">,</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="p">)</span><span class="o">.</span><span class="n">xyz</span><span class="p">;</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">normal</span> <span class="o">=</span> <span class="n">UnityObjectToWorldNormal</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">normal</span><span class="p">);</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">normal</span><span class="o">.</span><span class="n">xyz</span> <span class="o">=</span><span class="n">v</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">b</span><span class="o">+</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">g</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+				
+				<span class="n">_Scale</span> <span class="o">*=</span> <span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">x</span>  <span class="o">+</span> <span class="p">(</span><span class="n">_Time</span><span class="o">.</span><span class="n">x</span><span class="o">*</span><span class="mi">300</span><span class="o">*</span><span class="n">rand</span><span class="p">))</span><span class="o">/</span><span class="mi">200</span><span class="o">*</span><span class="n">rand</span><span class="p">;</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">pos</span><span class="o">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">UnityObjectToClipPos</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">pos</span> <span class="o">-</span> <span class="n">o</span><span class="o">.</span><span class="n">normal</span> <span class="o">*</span><span class="n">_Scale</span><span class="p">);</span>
+				<span class="n">o</span><span class="o">.</span><span class="n">uv</span> <span class="o">=</span> <span class="n">TRANSFORM_TEX</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">uv</span><span class="p">,</span> <span class="n">_MainTex</span><span class="p">);</span>
+
+				<span class="k">return</span> <span class="n">o</span><span class="p">;</span>
+			<span class="p">}</span>
+
+			<span class="n">fixed4</span> <span class="n">frag</span> <span class="p">(</span><span class="n">g2f</span> <span class="n">i</span><span class="p">)</span> <span class="p">:</span> <span class="n">SV_Target</span>
+			<span class="p">{</span>
+				<span class="n">fixed4</span> <span class="n">col</span> <span class="o">=</span> <span class="n">tex2D</span><span class="p">(</span> <span class="n">_MainTex</span><span class="p">,</span><span class="n">i</span><span class="o">.</span><span class="n">uv</span> <span class="p">);</span>
+				<span class="o">//</span><span class="n">ライト色を反映</span>
+				<span class="n">col</span><span class="o">.</span><span class="n">rgb</span> <span class="o">*=</span> <span class="n">_LightColor0</span><span class="o">.</span><span class="n">rgb</span><span class="p">;</span>		
+				<span class="o">//</span><span class="k">return</span> <span class="n">fixed4</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">normal</span> <span class="o">*</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+				
+				<span class="k">return</span> <span class="n">col</span><span class="p">;</span>
+
+			<span class="p">}</span>
+			<span class="n">ENDCG</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">CustomEditor</span> <span class="s2">&quot;CharaShaderGUI&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="OutLine.html" class="btn btn-neutral float-right" title="code OutLine" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="CharaShaderVcol.html" class="btn btn-neutral" title="code CharaShaderVcol" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

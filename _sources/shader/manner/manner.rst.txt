@@ -1,0 +1,52 @@
+manner
+=============================
+
+
+
+文字列を使って設定するのではなくShader.PropertyToIDを使うようにする
+https://docs.unity3d.com/ja/540/ScriptReference/Shader.PropertyToID.html
+
+c#
+----
+//NG
+
+void Update()
+
+{
+
+    material.SetColor("_MainColor", color);    //文字列を使っているのでGCが出やすい＋パフォーマンスも悪い
+
+}
+
+
+//OK
+
+readonbly int MainColorID = Shader.PropertyToID("_MainColor");
+
+void Update()
+
+{
+
+    material.SetColor(MainColorID , color);
+
+}
+
+
+MaterialPropertyBlockを使ってInstance Materialが増えないようにする
+
+UnityはRendererのMaterialにアクセスした瞬間にMaterialがInstance化され、メモリ使用量が増えてしまう
+
+MaterialPropertyBlockを使うと、Instance Materialを増やさずにMaterialの値を変えられる
+
+※Draw Callが増えないわけではない
+
+c#
+----
+
+var renderer = GetComponent<Renderer>();
+
+var mpb = new MaterialPropertyBlock();
+
+mpb.SetColor(ColorID, Color.red);
+
+renderer.SetPropertyBlock(mpb);

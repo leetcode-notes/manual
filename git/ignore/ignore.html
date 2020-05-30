@@ -1,0 +1,351 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>git ignore &mdash; All-Tool-Manual 0.00 ドキュメント</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/showreel.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="索引"
+              href="../../genindex.html"/>
+        <link rel="search" title="検索" href="../../search.html"/>
+    <link rel="top" title="All-Tool-Manual 0.00 ドキュメント" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> All-Tool-Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CPlus/CPlus.html">C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Csharp/csharp.html">C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Render/Rendaring.html">Rendaring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ZScript/Zscript.html">ZScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorytm.html">algorytm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bat/cmd.html">cmd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../game/game.html">game memo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">manual git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../houdini/houdini.html">Houdini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/javascript.html">javascript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../linux/linux.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../maya/maya.html">maya Tool manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mindmap/mindmap.html">manual mindmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../python/index.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shader/shader.html">shader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../shotgun/shotgun.html">Shotgun manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial/com.html">tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web/web.html">web application framework etc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">All-Tool-Manual</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>git ignore</li>
+    <li class="wy-breadcrumbs-aside">
+      
+          <a href="https://github.com/git/ignore/ignore.rst" class="fa fa-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git-ignore">
+<h1>git ignore<a class="headerlink" href="#git-ignore" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="git-ignore-gitignore">
+<h2>git ignore gitignore<a class="headerlink" href="#git-ignore-gitignore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Library</span>
+<span class="n">Temp</span>
+<span class="n">Build</span>
+<span class="n">Obj</span>
+<span class="o">*.</span><span class="n">pidb</span>
+<span class="o">*.</span><span class="n">unityproj</span>
+<span class="o">*.</span><span class="n">sln</span>
+<span class="o">*.</span><span class="n">userprefs</span>
+<span class="o">*.</span><span class="n">swp</span>
+<span class="o">*.</span><span class="n">csproj</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-ignore-gitignore-inspix">
+<h2>git ignore gitignore_inspix<a class="headerlink" href="#git-ignore-gitignore-inspix" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Capture/
+
+# 全ての大文字小文字を区別しないlibraryフォルダが無視対象になるため、UnityのLibraryフォルダのみを無視対象にする
+#Library/
+/InspixAtelier/Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+InspixAtelier/.vs/
+AssetBundle/
+Binary/
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============ #
+# for others   #
+# ============ #
+
+*.log #log files, for some plugins
+*.pyc #python bytecode cache, for some plugins.
+sysinfo.txt #Unity3D Generated File On Crash Reports
+
+# VSCodeを使えるようにするためのファイル等がコミット対象にならないようにしている
+VSCode/
+VSCode.meta
+.vscode
+InspixAtelier/Log/
+InspixAtelier/AssetBundles/
+InspixAtelier/Assets/StreamingAssets/Assetbundle/
+InspixAtelier/Assets/StreamingAssets/Assetbundle.meta
+InspixAtelier/Logs/
+InspixAtelier/.gradle/
+InspixAtelier/Assets/StreamingAssets/google-services-desktop.json
+InspixAtelier/Assets/StreamingAssets/google-services-desktop.json.meta
+InspixAtelier/Assets/StreamingAssets/OpenJTalk.meta
+InspixAtelier/Assets/StreamingAssets/OpenJTalk/tmp.meta
+InspixAtelier/Assets/Core/*
+!InspixAtelier/Assets/Core/.gitkeep
+
+# ============ #
+# Rider        #
+# ============ #
+InspixAtelier/.idea/
+InspixAtelier/Assets/Plugins/Editor/JetBrains.meta
+InspixAtelier/Assets/Plugins/Editor/JetBrains/
+
+# ip定義ファイル
+InspixAtelier/Assets/StreamingAssets/ip
+InspixAtelier/Assets/StreamingAssets/ip.meta
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-ignore-gitignore-ip">
+<h2>git ignore gitignore_ip<a class="headerlink" href="#git-ignore-gitignore-ip" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Ll</span><span class="p">]</span><span class="n">ibrary</span><span class="o">/</span>
+<span class="p">[</span><span class="n">Tt</span><span class="p">]</span><span class="n">emp</span><span class="o">/</span>
+<span class="p">[</span><span class="n">Oo</span><span class="p">]</span><span class="n">bj</span><span class="o">/</span>
+<span class="p">[</span><span class="n">Bb</span><span class="p">]</span><span class="n">uild</span><span class="o">/</span>
+<span class="p">[</span><span class="n">Bb</span><span class="p">]</span><span class="n">uilds</span><span class="o">/</span>
+<span class="n">Assets</span><span class="o">/</span><span class="n">AssetStoreTools</span><span class="o">*</span>
+
+<span class="c1"># Visual Studio cache directory</span>
+<span class="o">.</span><span class="n">vs</span><span class="o">/</span>
+
+<span class="c1"># Autogenerated VS/MD/Consulo solution and project files</span>
+<span class="n">ExportedObj</span><span class="o">/</span>
+<span class="o">.</span><span class="n">consulo</span><span class="o">/</span>
+<span class="o">*.</span><span class="n">csproj</span>
+<span class="o">*.</span><span class="n">unityproj</span>
+<span class="o">*.</span><span class="n">sln</span>
+<span class="o">*.</span><span class="n">suo</span>
+<span class="o">*.</span><span class="n">tmp</span>
+<span class="o">*.</span><span class="n">user</span>
+<span class="o">*.</span><span class="n">userprefs</span>
+<span class="o">*.</span><span class="n">pidb</span>
+<span class="o">*.</span><span class="n">booproj</span>
+<span class="o">*.</span><span class="n">svd</span>
+<span class="o">*.</span><span class="n">pdb</span>
+<span class="o">*.</span><span class="n">opendb</span>
+
+<span class="c1"># Unity3D generated meta files</span>
+<span class="o">*.</span><span class="n">pidb</span><span class="o">.</span><span class="n">meta</span>
+<span class="o">*.</span><span class="n">pdb</span><span class="o">.</span><span class="n">meta</span>
+
+<span class="c1"># Unity3D Generated File On Crash Reports</span>
+<span class="n">sysinfo</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="c1"># Builds</span>
+<span class="o">*.</span><span class="n">apk</span>
+<span class="o">*.</span><span class="n">unitypackage</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015-2019, All Tool Manual.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.00',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

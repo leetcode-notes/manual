@@ -1,0 +1,5 @@
+codeURP CharaShaderVcol_comp_stencilmask_2_col2
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShaderVcol_comp_stencilmask_2_col2.shader
+

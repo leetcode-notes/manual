@@ -1,0 +1,108 @@
+cmd Git
+============
+
+
+ローカルでサーバー作成
+_________________________
+
+bare フォルダを作成してクローン作成
+
+* cmd
+    git init
+
+    git add .
+
+    git add -i
+
+    git commit
+
+    ＊エディタが立ち上がる
+
+    git commit -m "first commit"
+
+    git remote add origin <URLアドレス>
+
+    git remote -v
+
+    ＊変更内容を確認できる
+
+    git push origin master
+
+    git push --help
+
+    vi .gitignore
+
+    git rm -f foo.html~
+
+    ※管理対象から削除され同時にファイルも削除される
+
+    git rm --cached -f foo.html~
+
+    ※管理対象(インデックス)から削除するだけでファイルはそのままです
+
+    git add -f foo.o
+
+server clone
+--------------
+
+    git remote add origin https://github.com/KamezChand/multitask.git
+
+    git checkout master
+
+    git push -u origin master
+
+    masterbranch以外の場合
+
+    git checkout feature
+
+    git push origin feature
+
+
+heroku
+-----------------
+
+heroku login
+
+heroku create name
+
+git push heroku master
+
+#.
+
+    git init
+
+    git add "file"
+
+    git commit -m "メッセージ"
+
+
+#. オプションを付けないで実行すると、簡易ヘルプが表示される
+
+    git
+
+
+#. バージョンを表示する
+
+    git --version
+
+#. 名前とメールアドレスを登録する。作業履歴の記録時に、この名前が使われる。
+
+    git config --global user.name "kirishima"
+    git config --global user.email "kirishima@paiza.jp"
+
+#. 登録情報を確認する。
+
+    git config --list
+
+#. myworkディレクトリを作って、そこにリポジトリを作成する。作業履歴は、このディレクトリの「.git」という隠しディレクトリに記録される。
+
+    mkdir mywork
+    cd mywork
+    git init
+
+#. リポジトリやステージングエリアの状態を確認する
+
+    git status
+
+
+git remote set-url origin https://github.com/mmhns/manual-all.git

@@ -1,0 +1,6 @@
+comment
+==========
+
+直前のコミットを修正できるamend機能
+
+git commit ―amend

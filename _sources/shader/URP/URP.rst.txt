@@ -1,0 +1,12 @@
+URP
+=============================
+
+m_ShadowDistance
+
+ジャギー感をなくすには、Shadow Distance を20ぐらいまで調整
+
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   */*

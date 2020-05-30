@@ -1,0 +1,5 @@
+code CharaShader
+---------------------------------------------------------------------------
+
+.. literalinclude:: CharaShader.shader
+
