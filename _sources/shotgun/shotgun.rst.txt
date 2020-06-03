@@ -1,4 +1,4 @@
-Shotgun manual
+Shotgun
 =============================
 
 .. toctree::
