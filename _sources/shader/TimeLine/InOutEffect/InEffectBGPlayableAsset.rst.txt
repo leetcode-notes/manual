@@ -1,0 +1,5 @@
+InOutEffect InEffectBGPlayableAsset
+---------------------------------------------------------------------------
+
+.. literalinclude:: InEffectBGPlayableAsset.cs
+

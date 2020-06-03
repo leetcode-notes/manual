@@ -1,5 +1,5 @@
 ScriptableObjects LiveURPAsset
 ---------------------------------------------------------------------------
 
-.. literalinclude:: LiveURPAsset.asset
+.. literalinclude:: LiveURPAsset.asset
 

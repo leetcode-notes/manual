@@ -1,0 +1,5 @@
+ShaderColor ShaderColorBehaviour
+---------------------------------------------------------------------------
+
+.. literalinclude:: ShaderColorBehaviour.cs
+

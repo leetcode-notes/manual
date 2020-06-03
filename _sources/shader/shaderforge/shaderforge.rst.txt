@@ -8,3 +8,202 @@ shadergraph shaderforge
    */*
 
 http://acegikmo.com/shaderforge/
+
+dot	dot(x, y)	2ベクトルの内積を求める
+
+floor	floor(x)	小数値の整数部分を返す
+
+frac	frac(x)	小数値の小数部分を返す	fract
+
+abs	abs(x)	絶対値を返す
+
+saturate	saturate(x)	xを0 ~ 1にクランプ
+
+clamp	clamp(x, a, b)	xをa ~ bにクランプ	clamp
+
+lerp	lerp(x, y, s)	線形補間 x + s(y - x)	mix
+
+sqrt	sqrt(x)	平方根 √x
+
+mul	mul(x, y)	行列乗算
+
+step	step(y, x)	y<=xなら1,y>xなら0
+
+min	min(x, y)	xかyを比べ小さい方を返す
+
+max	max(x, y)	xかyを比べ大きい方を返す
+
+
+Arithmetic
+-------------
+
+Abs
+Add
+Blend
+Cell
+Clamp
+Clamp 0-1
+Clamp (Simple)
+Divide
+Exp
+Floor
+Fmod
+Frac
+HSV to RGB
+Hue
+If
+Inverse Lerp
+Lerp
+Lerp (Simple)
+Log
+Max
+Min
+Multiply
+Multiply Matrix
+Negate
+Noise
+One Minus
+Posterize
+Power
+Reciprocal
+Remap
+Remap (Simple)
+RGB to HSV
+Round
+Sign
+Smoothstep
+Sqrt
+Step (A <= B)
+Subtract
+Trunc
+
+
+Constant Vectors
+------------------
+
+Value
+Vector 2
+Vector 3
+Vector 4
+Matrix 4*4
+
+Properties
+------------
+
+Color
+Cubemap
+Matrix 4*4
+Slider
+Switch
+Texture 2D
+Texture Asset
+Toggle
+Value
+Vectgor 4
+
+Vector Operations
+-------------------
+
+Append
+Channel Blend
+Component Mask
+Cross Product
+Desaturate
+DDX
+DDXY
+DDY
+Distance
+Dot Product
+Length
+Normalize
+Normal Blend
+Reflect
+Transform
+Transpose
+Vector Projection
+Vector Rejection
+
+UV Operations
+---------------
+
+Panner
+Parallax
+Rotator
+UV Tile
+
+Geometry Data
+-----------------
+
+Bitangent Dic
+Depth
+Face Sign
+Fresnel
+Normal Dic
+Object Position
+Object Scale
+Screen Position
+Tangent Dic
+UV Coordinates
+Vertex Color
+View Dic
+View Reft Dic.
+World Poison
+
+Lighting
+------------
+
+Ambient Light
+Half Direction
+Light Attenuation
+Light Color
+Light Directgion
+Light Position
+
+External Data
+--------------
+
+Pixel Size
+Projection Parameters
+Screeen Parameters
+Time
+View Position
+
+Scene Data
+-----------
+
+Depth Blend
+Fog Color
+Scene Color
+Scene Depth
+
+Math Constants
+----------------
+
+e
+Phi
+Pi
+Root 2
+Tau (2 Pi)
+
+Trigonometry
+----------------
+
+ArcCos
+ArcSin
+ArcTan
+ArcTan2
+Cos
+Sin
+Tan
+
+Code
+------
+
+Code
+
+Utility
+--------
+
+Relay
+Get
+Set

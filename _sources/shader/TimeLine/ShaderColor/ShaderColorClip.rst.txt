@@ -1,0 +1,5 @@
+ShaderColor ShaderColorClip
+---------------------------------------------------------------------------
+
+.. literalinclude:: ShaderColorClip.cs
+

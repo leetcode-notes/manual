@@ -2,3 +2,7 @@ clone
 =============================
 
 git clone --depth 1 https://github.com/git/git
+
+git clone git@github.com:ignis-ltd/inspix-ip0007-asset.git
+
+

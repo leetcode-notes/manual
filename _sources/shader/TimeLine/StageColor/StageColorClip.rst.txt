@@ -1,0 +1,5 @@
+StageColor StageColorClip
+---------------------------------------------------------------------------
+
+.. literalinclude:: StageColorClip.cs
+

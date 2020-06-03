@@ -1,5 +1,5 @@
 ScriptableObjects OperatorURPAsset
 ---------------------------------------------------------------------------
 
-.. literalinclude:: OperatorURPAsset.asset
+.. literalinclude:: OperatorURPAsset.asset
 

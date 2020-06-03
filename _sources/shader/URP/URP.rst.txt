@@ -5,6 +5,13 @@ m_ShadowDistance
 
 ジャギー感をなくすには、Shadow Distance を20ぐらいまで調整
 
+m_ShadowDepthBias: 0.001
+m_ShadowNormalBias: 0.5
+
+LiveShareResourcesPath.csのデフォルトでの
+
+シーン読み込み設定をmic用にOperatorURPAsset.asset
+
 .. toctree::
    :maxdepth: 2
    :glob:

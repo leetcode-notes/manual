@@ -1,0 +1,5 @@
+InOutEffect InEffectBGPlayableBehaviour
+---------------------------------------------------------------------------
+
+.. literalinclude:: InEffectBGPlayableBehaviour.cs
+

@@ -1,0 +1,5 @@
+StageColor StageColorMixerBehaviour
+---------------------------------------------------------------------------
+
+.. literalinclude:: StageColorMixerBehaviour.cs
+
